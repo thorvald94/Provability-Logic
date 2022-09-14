@@ -1,0 +1,372 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+In this section we will prove a lot of different properties about \textbf{GL},
+that will be used in the following chapters. 
+Further in the end we will introduce the system $\text{\textbf{GLS}}$.
+
+But first we will look at a more general modal logic called $\textbf{K4}$.
+
+\subsection{The modal logic \Kfour}
+
+We will start of by defining the modal logic \textbf{K}.
+
+\begin{defi}
+	The modal logic \textbf{K} is the modal logic that has the following
+	axioms and rules of inferences:
+	\begin{align*}
+		&\text{Axioms} &A1:\ \text{All propositional tautologies.}\\
+		& &A2:
+	\end{align*}
+\end{defi}
+We can now define the modal logic \Kfour.
+
+\begin{defi}
+	\Kfour\ is \textbf{K} with the following axiom added:
+	\[\Box\varphi\rightarrow\Box\Box\varphi\]
+\end{defi}
+We will start of by defining the system \textbf{GL}. 
+
+\begin{defi} \textbf{GL} is the modal system with the following axioms and
+	rules of inferences:
+	\begin{enumerate}
+		\item [A1] All propositional tautologies.
+		\item [A2]
+			$\Box\varphi\wedge\Box(\varphi\rightarrow\psi)\rightarrow\Box\psi$
+		\item [A3]
+			$\Box(\Box\varphi\rightarrow\varphi)\rightarrow\Box\varphi$
+		\item [R1] $\varphi,\varphi\rightarrow\psi\vdash\psi$
+		\item [R2] $\varphi\vdash\Box\varphi$
+	\end{enumerate}
+\end{defi}
+Further a Kripke model $\mathcal{K}$ of \GL is a tuple such that
+$\mathcal{K}=\la W,R,\phi\ra$ where $W=\{0,\ldots,n\}$ and where $R$ is a
+conversely well-founded transitive relation on $W$. Further the valuation
+function $\phi$ is defined in the usual way.
+:
+\section{Tress and \GL}
+
+In [Tsss] it was shown that \textbf{GL} was complete with resect to conversely
+well-founded transitive frames. We will first start of by defining the notion
+of a tree.
+
+\begin{defi}
+	A tree is a tuple $(W,<,w_0)$ where $(W,<)$ where:
+	\begin{enumerate}
+		\item $<$ is transitive and asymmetric.
+		\item $w_0$ is the minimal element of $<$. I.e $w_0
+			<w$ for all $w\in W$.
+		\item The set of predecessors of any element is finite and
+			linearly ordered byh $<$.
+	\end{enumerate}
+\end{defi}
+It is clear that finite trees are conversely well-founded frames. This fact is crucial
+in the proof of the following theorem:
+\begin{thm}
+	Let $\varphi$ be a modal sentence. Then the followig are equivalent:
+	\begin{enumerate}
+		\item $\vdash_\GL\varphi$
+		\item $\varphi$ is true in all models on finite tress
+		\item $\varphi$ is valid in all models on finite tress
+	\end{enumerate}
+\end{thm}
+\begin{proof}
+	The implications $(1)\Rightarrow (2)$ and $(1)\Rightarrow(3)$ follows
+	by the completeness theorem. We also have that $(2)\Leftrightarrow (3)$
+	is true [Kom med et kort argument]. Thus we will just have to show $(2)\Rightarrow(1)$
+
+We will show this by contraposition. Assume that $\vdash_{GL}\varphi$ and
+let $\mathcal{K}$ be the following model $\mathcal{K}=\la W,R,w_0,\phi\ra $ be a counter model i.e
+	$\not\vDash_{w_0}^{K'}\varphi$. The goal is now to define a finite tree
+	model: $\mathcal{K}_T=\la W_T,<_T,\phi_T\ra$. We will do this be
+	letting $W_T$ consists of finite $R$-increasing sequences form $K$.
+
+	\textbf{Stage 0:} Let the sequence $w_0$ be a part of $K_T$.
+
+	\textbf{Stage $n+1$:} For each sequence $(w_0,\ldots w_n)\in W_T$ we
+	will look at $\Gamma=\{\Box\psi\in S(\varphi):\ \vDash_{w_n}\Box\psi\}$.
+	If $\Gamma=\emptyset$ then we do not extend the sequence $(w_0,\ldots
+	w_n)$. Otherwise we will for each $\Box\psi\in\Gamma$ choose a node
+	$v\in W$ such that $w_0Rv$ and such that we have:
+	$$\vDash_v\Box\psi,\ \not\vDash_v\psi$$
+	We can do this because of axiom 3. We will then add the sequence
+	$(w_0,\ldots w_n,v)$ to the set $W_T$
+
+	The model $\mathcal{K}_T$ then further consists of $<_T$ is the strict
+	ordering by extension of finite sequences. $\phi_T$ is the defined in
+	the following way:
+	$$(w_0,\ldots,w_n)\in \phi_T(p)\Leftrightarrow w_n\in\phi(p)$$
+	This leads way to the following notation that we will use in the rest
+	of the proof:
+	$$\vDash_{(w_0,\ldots,w_n)}^{\mathcal{K}_T}p\Leftrightarrow\vDash_{w_n}^\mathcal{K} p$$
+	We will now prove two claims, by which the theorem will follow 
+
+	\textbf{Claim 1:} $(W_T,<_T,w_0)$ is a finite tree with origin $(w_0)$.
+	It is clear that that is a finite tree with origin $(w_0)$.
+	\textbf{Udfyld og forstå resten}
+
+	\textbf{Claim 2:} For all $\psi\in S(\varphi)$ and for all $(w_0,\ldots
+	w_n)\in W_T$ we have:
+	$$\vDash^{\mathcal{K}_T}_{(w_0,\ldots,w_n)}\psi\Leftrightarrow\ \vDash_{w_n}^\mathcal{K}\psi$$
+	This proof is done by induction on the complexity of $\psi$. We will
+	only look at the case $\psi=\Box\theta$. So we have by the induction
+	hypothesis:
+	\begin{align*}
+		\vDash_{w_0}\Box\theta&\Rightarrow\forall v(w_0Rv\Rightarrow\ 
+		\vDash_v\theta)\\
+				      &\Rightarrow\forall v((w_0,\ldots
+				      w_n,v)\in W_T\Rightarrow\
+				      \vDash_v\theta)\\
+				      &\Rightarrow\forall v((w_0,\ldots
+				      w_n,v)\in W_T\Rightarrow\
+				      \vDash_{(w_0,\ldots w_n,v)}^{\mathcal{K}_T}\theta)
+	\end{align*}
+	And the last line is the same as $\vDash_{(w_0,\ldots,w_n)}\Box\theta$
+	For the other way, we will use contraposition:
+	\begin{align*}
+		\not\vDash_{w_0}\Box\theta&\Rightarrow \exists v(w_0Rv\ \&\
+		\not\vDash_v\theta)\\
+					  &\Rightarrow\exists v((w_0,\ldots
+					  w_n,v)\in W_T\ \&\
+					  \not\vDash_v\theta)\\
+					  &\Rightarrow\exists v((w_0,\ldots
+					  w_n,v)\in W_T\ \&\
+					  \not\vDash_{(w_0,\ldots,w_n,v)}^{\mathcal{K}_T}\theta)
+	\end{align*}
+	And the last line is the same as
+	$\not\vDash_{(w_0,\ldots,w_n)}\Box\theta$. 
+
+	The theorem now follows since we have:
+	$$\not\vDash_{w_0}\varphi\Rightarrow\
+	\not\vDash_{[w_0)}^{\mathcal{K}_T}\varphi$$
+\end{proof}
+\section{The system \text{\textbf{GLS}}}
+In this section we will define the modal logic \textbf{GLS}. Before we can do
+this in a smart way, we will define the notion of a $R2$ free axiomation; i.e a
+system that is not closed under $R2$.
+
+\subsection{Avoiding \textit{R2}}
+
+\textbf{Metatekst}
+
+We will need the following notation to
+define this. Given a set $\Gamma$:
+\begin{enumerate}
+	\item $\Gamma\vdash\varphi$ if $\varphi$ is derivable form $\Gamma$ by
+		only using $R1$
+	\item $\Gamma\vdash_2\varphi$ if $\varphi$ is derivable form $\Gamma$ by
+		using $R1$ and $R2$.
+\end{enumerate}
+We will further define the following set for any set $\Gamma$:
+\[
+	\Gamma^2=\Gamma\cup\{\Box\psi:\psi\in\Gamma\}
+\]
+This set allows us to avoid $R2$. Why?
+We can now state and prove the following lemma:
+\begin{lem}
+	Let $\Gamma$ include all the instanceses of $A1-A3$. THen:
+	\[
+		\Gamma\vdash_2\varphi\Leftrightarrow\Gamma^2\vdash\varphi
+	\]
+\end{lem}
+\begin{proof}
+	The way $\Leftarrow$ is trivial. So we will only show $\Rightarrow$.
+	To prove this, it is enough to show that the set of theorems of
+	$\Gamma^2$ is closed under $R2$; i.e to show that:
+
+	$$\Gamma^2\vdash\varphi\Rightarrow\Gamma\vdash\Box\varphi$$
+
+	Let $\Gamma^2\vdash\varphi$. Then we have a sequence
+	$\varphi_1,\ldots,\varphi_n=\varphi$, where for each $1\leq i\leq n$ we
+	have that $\varphi_i$ is one of the following three:
+	\begin{enumerate}
+		\item We have that it is an axiom $\varphi_i\in\Gamma$ 
+		\item It is the necessitation  $\Box\psi_1$ of an axiom
+			$\psi_1\in\Gamma$
+		\item It is a consequence of $R1$ of
+			$\varphi_j,\varphi_k=\varphi_j\rightarrow\varphi_i$
+			where $j,k<i$.
+	\end{enumerate}
+	We will show  by induction on the lenght $i$ of a 'intial' segment
+	$\varphi_1,\ldots,\varphi_i$ that $\Gamma^2\vdash \Box\varphi_i$. 
+	\begin{enumerate}
+		\item If we have that $\varphi_i\in\Gamma$. Then by definition
+			we have that $\Box\varphi_i\in\Gamma^2$ and thus
+			$\Gamma^2\vdash\Box\varphi_i$.
+		\item If $\varphi_i=\Box\psi_i$ for some $\psi_i\in\Gamma$,
+			then we can make the following deduction:
+			\begin{align*}
+				\Gamma^2&\vdash\Box\psi_i &\text{Since}\
+				\Box\psi_i\in\Gamma^2\\
+					&\vdash\Box\psi_i\rightarrow\Box\Box\psi_i
+					&\text{By}\ A3\\
+					&\vdash\Box\Box\psi_i\ (=\Box\varphi_i) 
+					&\text{By}\ R1
+			\end{align*}
+			Which shows the result.
+		\item If $\varphi_i$ follows form
+			$\varphi_j,\varphi_k=\varphi_j\rightarrow\varphi_i$ by
+			$R1$ we have by the induction hypothesis that
+			$\Gamma^2\vdash\Box\varphi_j$ and
+			$\Gamma^2\vdash\Box(\varphi_j\rightarrow\varphi_i)$. By
+			$A2$ we also have that
+			$\Gamma^2\vdash\Box\varphi_j\wedge\Box(\varphi_j\rightarrow\varphi_i)\rightarrow\Box\varphi_i$
+			and by propositional logic we get that:
+			$\Gamma^2\vdash\Box\varphi_i$.
+	\end{enumerate}
+	This ends the induction and the lemma will follow.
+\end{proof}
+By this lemma we can get a $R2$ free definition of \GL that we will call
+$\GL^2$. We can further by the deduction theorem from propositional logic get
+the following:
+
+\begin{lem}
+	$\Gamma\vdash\varphi$ iff there is a finite set
+$\{\theta_0,\ldots,\theta_{n-1}\}\subseteq \Gamma$ such that:
+$K\vdash\wedge\theta_i\rightarrow\varphi$
+\end{lem}
+
+\subsection{Definition of \textbf{GLS}}
+\begin{defi}
+	The system of modal logic \text{\textbf{GLS}} is defined as the system
+	of propositional modal logic that have all the theorems of $\GL$ and
+	 all the sentences $\Box\varphi\rightarrow\varphi$ as its axioms and which sole
+	rule of inference is \textit{modus ponens}. 
+\end{defi}
+It should be noted that this modal logic is not a \textit{normal} one.
+The main theorem about this modal logic is the following:
+\begin{thm}
+	\label{thm:MainGLS}
+	Let $\varphi$ be a modal sentences. Define the following set: $S_\Box(\varphi)=\{\Box\psi:\
+	\Box\psi\ \text{ is a subformula of}\ \varphi\}$ the set of
+	subformulas of $\varphi$ that is boxed. Then the following to
+	statements are equivalent:
+	\begin{enumerate}
+		\item $\vdash_\GLS\varphi$
+		\item $\vdash_\GL\bigwedge_{\Box\psi\in
+			S_\Box(\varphi)}(\Box\psi\rightarrow\psi)\rightarrow\varphi$
+	\end{enumerate}
+\end{thm}
+
+\textbf{Decidudud???}
+
+\begin{defi}
+	A model $\mathcal{K}=\la W,R,\phi\ra$ with start node $w_0$ is $\varphi$-sound if for every
+	$\Box\psi\in S_\Box(\varphi)$  we have:
+	$\vDash_{w_0}\Box\psi\rightarrow\psi$
+\end{defi}
+We can reduce theorem \ref{thm:MainGLS} to the following:
+\begin{thm}
+	\label{thm:lll}
+	Let $\varphi$ be a modal sentences. Then:
+	\begin{enumerate}
+		\item $\vdash_\GLS\varphi$ iff $\varphi$ is true in all
+			$\varphi$-sound models of $\GL$
+		\item $\vdash_\GL\varphi$ iff $\varphi$ is valid in all
+			$\varphi$-sound models of $\GL$
+	\end{enumerate}
+\end{thm}
+\begin{proof}[Proof that \ref{thm:lll}\ \Rightarrow\ \ref{thm:MainGLS}:]
+	Assume \ref{thm:lll}.1. We hen have that $\vdash_\GLS\varphi$ iff $\varphi$ is true in all
+	$\varphi$-sound models of $\GL$; which is the same all models of
+	$\GL+\bigwedge_{\Box\psi\in S_\Box(\varphi)}(\Box\psi\rightarrow\psi)=\GL^s$ and hence:
+	$$\vdash_\GLS\varphi\Leftrightarrow\vdash_{\GL^s}\varphi$$
+\end{proof}
+
+For the proof of \ref{thm:lll} we will make use of the following usefull
+construction:
+
+\begin{defi}
+	Let $\mathcal{K}=\la W,R,\phi\ra$ be a Kripke Model. The derived model
+	$\mathcal{K'}$ is defined as follows: $W'=W\cup \{w'\}$, where
+	$w'\not\in W$. We further have that $R'$ is defined as $wR'v$ iff $WRv$
+	for $w,v\in W$; $w'$ is the new minimum element. Lastly we have that
+	$w\in\phi'(p)$ iff $w\in\phi(p)$ for $w\in K$, where $p$ is any atomic
+	formula. Further we have that $w'\in\phi'(p)$ iff $w_0\in\phi(p)$.
+\end{defi}
+We can further define the notion of a sequences of successive derived models:
+$\mathcal{K}^{(1)},\mathcal{K}^{(2)},\ldots$ that have $w_1,w_2,\ldots$ as
+their minima. We define $\mathcal{K}^{(1)}=\mathcal{K}$ and
+$\mathcal{K}^{(n+1)}=(\mathcal{K}^{(n)})'$ and let $w_n$ denote the minimum of
+$\mathcal{K}^{(n)}$. This can graphically been seen as the following:
+
+\textbf{Indfør tegninger}
+
+It should be noted that for $w\in\mathcal{K}$ and for any sentence $\theta$
+that we have:
+$$\vDash_w\theta\ \text{in}\ \mathcal{K}\Leftrightarrow\ \vDash_w^{(n)}\theta\
+\text{in}\ \mathcal{K}^{(n)}$$
+For the rest of this project we will omit the annoying superscripts.
+
+The following lemma will explain a bit deeper how these derived models works:
+
+\begin{lem}
+	\label{lem:GLS}
+	Let $\mathcal{K}$ be a $\varphi$-sound model, $S(\varphi)$ the set of
+	subformulas of $\varphi$ and $\mathcal{K}^{(n)}$ be the $n$-derived
+	model. Then for all $\psi\in S(\varphi)$ we have:
+	$$\vDash_{w_0}\psi\Leftrightarrow\vDash_{w_n}\psi$$
+\end{lem}
+\begin{proof}
+	We will prove this by induction on $n$. The lemma will follow from the
+	case $n=1$ [Why?], and this will be proven by induction om complexity
+	of $\psi$. The only non trivial case is the case where
+	$\psi=\Box\theta$, so this is the only case that will be shown:
+
+	Let $\psi=\Box\theta\in S(\varphi)$. 
+
+	\textbf{($\Rightarrow$)}\ The following is clear for
+	$\Box\theta\in S(\varphi)$:
+	$$\vDash_{w_0}\Box\theta\Rightarrow\vDash_{w_0}\theta$$
+	This follows since our model is $\varphi$-sound. Therefore we have:
+	$\forall v>w_1(\vDash_{w_1}\theta)$ and thus $\vDash_{w_1}\Box\theta$
+
+	\textbf{($\Leftarrow$)} Here we can make the following deduction:
+	\begin{align*}
+		\vDash_{w_1}\Box\theta&\Rightarrow\forall
+		v>w_1(\vDash_v\theta)\\
+				      &\Rightarrow\forall
+				      v>w_0(\vDash_v\theta)\\
+				      &\Rightarrow\vDash_{w_0}\Box\theta
+	\end{align*}
+\end{proof}
+We can now return to our proof of the main theorem of this section by proving
+\ref{thm:lll}
+\begin{proof}[Proof of \ref{thm:lll}]
+	We will start of by proving (1). One way is easy:
+
+	\textbf{($\Leftarrow$)} If $\varphi$ is true in all $\varphi$-sound
+	models $\mathcal{K}$ of $\GL$ then:
+	$$\vdash_{\GL^s}\varphi$$
+	And therefore we have $\vdash_\GLS\varphi$.
+
+	\textbf{($\Rightarrow$)} This way takes a bit more work; it will be
+	proven by contraposition. So suppose that $\varphi$ is false in
+	$\varphi$-sound model $\mathcal{K}=\la W,R,\phi\ra$. Then we have:
+	$$\vDash_w\bigwedge_{\Box\psi\in
+	S_\Box(\varphi)}(\Box\psi\rightarrow\psi)$$
+	But still also have: $\not\vDash_{w_0}\varphi$. We will show that
+	$\not\vdash_\GLS\varphi$ by showing that for any finite set $\Gamma$
+	that for the system
+	$\GL^\Gamma=\GL+\bigwedge_{\theta\in\Gamma}(\Box\theta\rightarrow\theta)$
+	that we have:
+	$$\not\vdash_{\GL^\Gamma}\varphi$$
+	By lemma \ref{lem:GLS} we have that every  model in the sequence
+	$\mathcal{K}^{(0)},\mathcal{K}^{(1)},\ldots$ is an $\varphi$-sound
+	model, wherein $\varphi$ is false. We will just have to show that for
+	any finite set $\Gamma$ that is a number $m$ such that:
+	$$\vDash_{w_m}\bigwedge_{\theta\in\Gamma}(\Box\theta\rightarrow\theta)$$
+	This can be shown by showing that there is a $m$ such that for each
+	$n>m$ that the following holds:
+	$$\vDash_{w_n}\Box\theta\rightarrow\theta$$
+	But we either have that $\vDash_{w_m}\Box\theta$ for all $n$, thus
+	$\vDash_{w_n}\theta$ for all $n$; or we have
+	$\not\vDash_{w_m}\Box\theta$ for some $m$ and thus
+	$\not\vDash_{w_n}\Box\theta$ and
+	$\vDash_{w_n}\Box\theta\rightarrow\theta$ for al $n>m$. This shows (1).
+	We will now prove (2).\textbf{Bevis dette i hånden}
+	
+	The implication $\Rightarrow$ is trivial. 
+\end{proof}
+\end{document}

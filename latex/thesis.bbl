@@ -1,0 +1,116 @@
+\begin{thebibliography}{20}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Blackburn(2002)]{Blackburn2002}
+P.~Blackburn.
+\newblock \emph{{Modal logic}}.
+\newblock Cambridge tracts in theoretical computer science ; 53. Cambridge
+  University Press, Cambridge, 2002.
+
+\bibitem[Blackburn et~al.(2007)Blackburn, van Benthem, and Wolter]{handbook}
+P.~Blackburn, J.~van Benthem, and F.~Wolter, editors.
+\newblock \emph{Handbook of modal logic: 1st ed}, volume~3 of \emph{Studies in
+  logic and practical reasoning}.
+\newblock Elsevier, Amsterdam, 2007.
+
+\bibitem[Cohen(1966)]{Cohen1966}
+P.~Cohen.
+\newblock \emph{Set Theory and the Continuum Hypothesis}.
+\newblock W. A. Benjamin, Inc., 1966.
+
+\bibitem[Enderton(2001)]{Ender2001}
+H.~B. Enderton.
+\newblock \emph{A Mathematical Introduction to Logic}.
+\newblock Academic Press, 2001.
+
+\bibitem[Garson(2006)]{Garson2006}
+J.~W. Garson.
+\newblock \emph{{Modal Logic for Philosophers}}.
+\newblock Cambridge University Press, Cambridge, 2006.
+
+\bibitem[Goldblatt(2003)]{Goldblatt2003}
+R.~Goldblatt.
+\newblock {Mathematical modal logic: A view of its evolution}.
+\newblock \emph{Journal of applied logic}, 1, 2003.
+
+\bibitem[Hendricks and Andur~Pedersen(2011)]{Hendricks2011}
+V.~F. Hendricks and S.~Andur~Pedersen.
+\newblock \emph{{Moderne element{\ae}r logik.}}
+\newblock Automatic Press, Kbh, 2. revider edition, 2011.
+
+\bibitem[Hintikka(1962)]{Hintikka1962}
+K.~J.~J. Hintikka.
+\newblock \emph{{Knowledge and belief}}.
+\newblock Contemporary philosophy. Cornell Univ. Press, Ithaca, N. J, 1962.
+
+\bibitem[Hintikka(1969)]{Hintikka1969}
+K.~J.~J. Hintikka.
+\newblock \emph{{Models for modalities : Selected essays.}}
+\newblock D. Reidel, Dordrecht, 1969.
+
+\bibitem[Hughes and Cresswell(1971)]{Hughes1971}
+G.~Hughes and M.~Cresswell.
+\newblock \emph{An introduction to modal logic}.
+\newblock Methuen, 1971.
+
+\bibitem[Kripke(1963)]{Kripke1963}
+S.~A. Kripke.
+\newblock {Semantical Analysis of Modal Logic I Normal Modal Propositional
+  Calculi}.
+\newblock \emph{Mathematical logic quarterly}, 9, 1963.
+
+\bibitem[Lemmon(1977)]{Lemmon1977}
+E.~J. Lemmon.
+\newblock \emph{{An introduction to modal logic : the "Lemmon notes" }}.
+\newblock American philosophical quarterly. Monograph series ; monograph no.
+  11. Basil Blackwell, Oxford, 1977.
+
+\bibitem[Liu(2013)]{Liu}
+Y.~Liu.
+\newblock Incompleteness result and provability logic, 2013.
+
+\bibitem[Mendelson(1964)]{Mendel1964}
+E.~Mendelson.
+\newblock \emph{Introduction to Mathematical Logic}.
+\newblock Van Norstrand, 1964.
+
+\bibitem[Raatikainen(2022)]{sep-goedel-incompleteness}
+P.~Raatikainen.
+\newblock {Gödel’s Incompleteness Theorems}.
+\newblock In E.~N. Zalta, editor, \emph{The {Stanford} Encyclopedia of
+  Philosophy}. Metaphysics Research Lab, Stanford University, {S}pring 2022
+  edition, 2022.
+
+\bibitem[Segerberg(1971)]{Sgerberg1971}
+K.~Segerberg.
+\newblock \emph{An Essay in Classical Modal Logic}.
+\newblock Filosofska Studier, vol.13. Uppsala Universitet, 1971.
+
+\bibitem[Smorynski(1977)]{SmorHand}
+C.~Smorynski.
+\newblock The incompleteness theorems.
+\newblock In J.~Barwise, editor, \emph{The Handbook of Mathematical logic}.
+  North-Holland Publishing Company, 1977.
+
+\bibitem[Smorynski(1985)]{Smor1985}
+C.~Smorynski.
+\newblock \emph{Self-Rference and modal logic}.
+\newblock Springer-verlag, 1985.
+
+\bibitem[Solovay(1976)]{solovay976}
+R.~M. Solovay.
+\newblock Provability interpretations of modal logic.
+\newblock \emph{Israel journal of mathematics}, 25\penalty0 (3-4), 1976.
+
+\bibitem[Verbrugge(2017)]{sep-logic-provability}
+R.~L. Verbrugge.
+\newblock {Provability Logic}.
+\newblock In E.~N. Zalta, editor, \emph{The {Stanford} Encyclopedia of
+  Philosophy}. Metaphysics Research Lab, Stanford University, {F}all 2017
+  edition, 2017.
+
+\end{thebibliography}

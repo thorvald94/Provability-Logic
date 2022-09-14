@@ -1,0 +1,13 @@
+PWD /home/thorvald/Documents/Uni/Master_Thesis/latex
+INPUT /etc/texmf/web2c/texmf.cnf
+INPUT /usr/share/texmf/web2c/texmf.cnf
+INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf
+INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
+INPUT Complete.tex
+OUTPUT Complete.log
+INPUT /usr/share/texlive/texmf-dist/tex/latex/subfiles/subfiles.cls
+INPUT /usr/share/texlive/texmf-dist/tex/latex/subfiles/subfiles.cls
+INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/import/import.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/import/import.sty

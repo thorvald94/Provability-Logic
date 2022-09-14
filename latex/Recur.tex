@@ -1,0 +1,597 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+We will begin this section with define two classes of functions;
+the \textit{Partial Recursive Functions} and  the \textit{Turing Computable
+functions}. These two classes of functions gives rise to the same class of
+functions The idea behind these two classes of functions is to define what
+we intuitively mean with a computable function. The proofs in this section will
+be rather informal. The goal of this section will be to state and prove
+Kleene's recursion theorem, which will play a crucial role in our proof of the
+Solovay's completeness theorems. Further there will also be a few results and
+comments on the so called arithmetical hierarchy 
+
+\section{Partial Recursive Functions and Recursive Functions}
+The partial recursive functions is an enlargement of the primitive recursive
+functions. The primitive recursive functions is defined in the following way:
+\begin{defi}
+	The class of primitive recursive functions is the smallest class closed
+	under the following schemata:
+	\begin{enumerate}[label=\Roman*.]
+		\item $S(x)=x+1$ is primitive recursive.
+		\item $C(x)=k$ is primitive recursive.
+		\item $P^n_i(\x)=x_i$ is primitive recursive.
+		\item If $g,h_1,\ldots h_m$ are primitive recursive then so
+			is
+			$$f(\x)=g(h_1(\x),\ldots,h_m(\x)$$
+		\item If $g$ and $h$ are primitive recursive and $n\geq 1$ then
+			$f$ is also primitive recursive where:
+			\begin{align*}
+				f(0,\x)&=g(\x)\\
+				f(x_1+1,x_2,\ldots,x_n)&=h(x_1,f(\x),x_2,\ldots,x_n)
+			\end{align*}
+	\end{enumerate}
+\end{defi}
+In the appendix there is a collection of functions that are
+primitive recursive.
+
+The primitive recursive functions do not include all computable
+functions, so we have to expand them in the following way:
+\begin{defi}
+		The class of \textit{partial recursive} (from now on some times
+		called (p.r) functions is the least class closed under schemata
+		I through V and the following VI schema. 
+		\begin{enumerate}[label=\Roman*., start=6]
+			\item If $\theta(\x,y)$ is a partial recursive function
+				of $n+1$ variables and 
+				\begin{align*}
+					\psi(\x)=\mu
+					y&[\theta(\x,y)\downarrow=0\\
+						&\wedge \forall z\leq y
+					[\theta(\x,z)\downarrow]
+				\end{align*}
+				Then $\psi$ is a partial recursive function of
+				$n$ variables
+		\end{enumerate}
+		A partial recursive function that is total is called a total
+		recursive function; abbreviated to recursive function.
+\end{defi}
+
+We will end this section with the following definition:
+\begin{defi}
+	A relation $R\subset\omega^n$ where $n\geq 1$, is recursive (primtive
+	recursive) if its characteristic function $\chi_R$ is recursive
+	(primitive recursive). The case where $n=1$ is the case where $R$ is a
+	set $A\subset\omega$ so we also have the definition of a set being
+	recursive.
+\end{defi}
+
+\section{Turing Computable Functions}
+
+Another way to describe the intuitively computable functions is via a Turing
+machine. 
+\begin{defi}
+	A \textit{Turing machine} $M$ consists of a two-way infinite tape that
+	is dived into different cells and a finite set of internal states $Q=\{
+	q_0,\ldots, g_n\}$, $n\geq 1$. Each is either blank: B or has a 1
+	written on them. The following three things can happen in a single
+	step:
+	\begin{enumerate}
+		\item Change form one state to another.
+		\item Change the scanned symbol $s$ to another symbol
+			$s'\in S=\{1,B\}$
+		\item Move the reading head one cell to the right R or the left
+			L.
+	\end{enumerate}
+	The operation of $M$ is controlled by a partial map:
+	$$\delta:Q\times S\rightarrow Q\times S\times\{R,L\}$$
+	Which may not be defined for all arguments.
+\end{defi}
+The way to understand this definition is the following: if
+$(q,s,q',s',X)\in\delta$ it means that the machine $M$ is in stage $q$ where it
+scans symbol $s$ then changes to state $q'$ and replaces $s$ by $s'$. Lastly it
+moves to the right if $X=R$ and the left if $X=L$. The map $\delta$ is called a
+Turing program if it can be views as a finite set of quintuples. If the input
+integer is $x$ then it will be represented by a string of $x+1$ consecutive
+$1's$, where all other cells are blank.
+
+Further the machine $M$ start in the state $q_1$ scanning the left-mst cell
+that contains a $1$. The machine stops if it reaches the halting state $q_0$,
+and it will then output the number $y$ which is the total number of $1$'s on
+the tape in the this state. If $M$ with input $x$ halts and outputs $y$ we
+say that $M$ computes the partial function $\psi(x)=y$
+
+The conditi [Indfør noget mere tekst her]on a is determined by:
+\begin{enumerate}
+	\item The current state $q_i$
+	\item The symbol $s_0$ that is being scanned.
+	\item The symbols on the tape to the right of $s_0$ up to the last $1$.
+		Denote this sequence by $s_1,s_2,\ldots s_n$
+	\item The symbols on the tape to the left of $s_0$ op to the first $1$.
+		Denote this sequence by $s_{-1},s_{-2},\ldots s_{-m}$
+\end{enumerate}
+This is called the configuration of the machine and we can write it as follows:
+$$s_{-m}\cdots s_{-1}q_0s_0s_1\cdots c_n$$
+
+\begin{defi}
+	A Turing computation according to to the Turing program $P$ with input
+	$x$ is a sequence of configurations $c_0,c_1,\ldots, c_n$ such that
+	$c_0$ represent the machine in the halting state $q_0$, and the
+	transition $c_i\rightarrow c_{i+1}$ for all $i<n$ is giving by the
+	Turing program $P$.
+\end{defi}
+
+\begin{prop}
+	Each Turing program $P_e$ can be assigned a Gödel number $e$.
+\end{prop}
+\begin{proof}
+	We will use the fact that each $x\in\omega$ has a unique
+	prime decomposition:
+	$$x=p_0^{x_0}\cdots p_n^{x_n}\cdots$$
+	We can assign a number to each quintuple $(q_i,_j,q_k,s_l,r_m)$ in a
+	Turing program $P$ in the following way[Omformuler denne sætning]:
+	$$p_0^{1+i}p_1^{1+j}p_2^{1+k}p_3^{1+l}p_4^{1+m}$$
+	Where we have that $r_0=R$ and $r_1=L$. Since the prime decomposition
+	is unique, each different state of the program has a unique code. Each Turing
+	is a sequence of different states and we can thus for an arbitrary
+	Turing program $P_e$ we let $e_0,\ldots e_n$ denote the Gödel number of
+	each different state and set:
+	$$e=p_0^{e_0}\cdots p_n^{e_n}$$
+	Thus each Turing program $P_e$ has a unique Gödel number $e$.
+\end{proof}
+Since each Turing program has a unique code we can list them and be able to
+find any program $P_e$ by its code $e$. This gives the following definition:
+\begin{defi}
+	The $P_e$ be the Turing program with Gödel number $e$ in the list and
+	let $a_e^{(n)}$ be the function of $n$ variables computed by $P_e$.
+	Further let $a_e$ abbreviate $a_e^{(1)}$.
+\end{defi}
+\section{Auxiliary Results}
+
+It can be proven that the two classes of functions; partial recursive and Turing
+computable functions gives rise to the same class of partial functions. This
+can be seen as evidence for \textit{Church's Thesis} which states that this
+class of functions coincide with the function that we see as intuitively
+computable. In the rest of this project we will assume that the Church's Thesis
+is true.
+
+We will being by proving the padding lemma, which states that each partial
+function $\varphi_x$ has an infitine amount of indices.
+\begin{lem}
+	Each partial recursive function $\varphi_i$ has $\aleph_0$ indicies,
+	and for each $x$ we can \textit{effectively} find an infinite set $A_x$
+	of indices for the same partial function.
+\end{lem}
+\begin{proof}
+	For any program $P_x$ that have internal states: $\{q_0,\ldots, q_n\}$
+	we can add extra instructions $q_{n+1}B\ R ,q_{n+2}B\ R,\ldots$ such
+	that we get a new program for the same computation.
+\end{proof}
+
+The following theorem will show that each Turing computable function is in fact
+partial recursive. Latter we will prove that the converse also holds.
+
+\begin{thm}
+	There exist a predicate $T(e,x,y)$ and a function $U(y)$ that are
+	primitive recursive such that:
+	$$\varphi_e(x)=U(\mu yT(e,x,y))$$
+\end{thm}
+\begin{proof}
+	We showing that the predicate $T(e,x,y)$ exists and is primitive
+	recursive. This predicate informally
+	states that $y$ is the code of Turing program $P_e$ with input $x$. For
+	each possible configuration $c$, we can assign a code:
+	$$\#(c)=2^{1+i}3^{1+\#(s_0)}5^r7^l$$
+	Where $\#(s)=0$ if $s=B$ and is equal to $1$ otherwise, $r=\prod_{j\geq
+	1}p_j^{\#(s_j)}$ and $l=\prod_{j\leq -1}p_j^{\#(s_j)}$
+	 We can now define the code of a Turing computation
+	$c_0,c_1,\ldots c_n$ according to $P_e$ to be:
+	$$y=2^e\prod_{i\leq n}p_{i+1}^{\#(s_i)}$$
+	We can now define $T(e,x,y)$ to be [Læs i Kleene]
+	Having defined the predicate $T$ we can check if it holds. By
+	proposition 2.1 we can "recover" the program $P_e$ form $e$. Then we
+	can recover the computation $c_0,c_1,\ldots c_n$ form $y$ if $y$ codes
+	such a thing. We can now check if $c_0,c_1,\ldots,c_n$ is a computation
+	according to $P_e$ with $x$ as the input in the first configuration
+	$c_0$. If this is true, then $U(y)$ just outputs the number of $1$'s in
+	the final configuration $c_n$. [Læs mere i Klenne]
+\end{proof}
+This theorem also gives us that each partial recursive function can be created
+by two primitive recursive functions, with a single application of the
+$\mu$-operator.
+
+
+We will need the following notation in the next proof:
+\begin{defi}
+	Set $\la x,y\ra$ to be the image of $(x,y)$ under the injective
+	recursive  pairing function:
+	$$\frac{1}{2}(x^2+2xy+y^2+3x+y)$$
+	This function is from $\omega\times\omega$ onto $\omega$.[Måske let
+	mere?]
+\end{defi}
+\begin{thm}
+	For every $m,n\geq 1$ there exists an injective recursive function
+	$s_n^m$ of $m+1$ variable such that for all $x,y_1,\ldots,y_m$
+	$$\varphi^{(n)}_{s^m_n(x,y_1,\ldots,y_m)}=\lambda z_1,\ldots
+	z_n[\varphi^{(m+n)}_x(y_1,\ldots,y_m,z_1,\ldots,z_n)]$$
+\end{thm}
+\begin{proof}
+	I will follow Soare and only proof the case where $m=n=1$. I.e the case
+	where we have to proof:
+	$$a_{s^1_1(x,y)}(z)=[a_x^{2}(y,z)]$$
+	Let $x$ and $y$ på given. Then $s^1_1(x,y)$ can be described as
+	follows:
+	\begin{enumerate}
+		\item Let $P_x$ the Turing program with code $x$.
+		\item Change $P_x$ into another Turing program $P_{x'}$ such
+			that: $P_{x'}$ writes $y+1$ "1" left of the input, such
+			that there is a B between these 1 and the other input.
+			Further i places the head to the left of the new input
+			and proceeds to \textit{run} $P_x$.
+		\item outputs $x'$
+	\end{enumerate}
+	it is clear that $P_{x'}$ on input $z$ compute the same as $p_e$ would
+	on input $(x,y)$; i.e $\varphi_{x'}=\varphi_x^{(2)}(y,z)$. Further we
+	have that $x'=s^1_s(x,y)$
+	By Church's Thesis the function $s=s^1_1$ is recursive, since it can be
+	computed effectively. If it is not injective it can be replaced by a
+	injective recursive function $s'$ such that
+	$\varphi_{s(x,y)}=\varphi_{s'(x,y)}$ by using the padding lemma and by
+	defining $s'(x,y)$ in increasing order of $\la x,y\ra$.
+\end{proof}
+
+\section{Recursively Enumerable sets and the Graph of a function}
+In this section we will introduce the two concepts \textit{recursive
+enumerable} sets and the \textit{graph} of a function. We will further show
+that there is connection between these two concepts.
+\begin{defi}
+	A set $A$ is recursively enumerable (r.e.) if $A$ is the domain of some
+	primitive recursive function. Further we define the following two sets:
+	\begin{enumerate}
+		\item We let the $e$th r.e set be denoted by:
+			$$W_e=\text{dom}\ f_e= \{x:f(x)\downarrow\}=\{x:\exists
+			y T(e,x,y)\}$$
+		\item $W_{e,s}=f_{e,s}$
+	\end{enumerate}
+\end{defi}
+We asd???
+\begin{defi}
+	A set $A$ is the projection of some relation $R\subseteq
+	\omega\times\omega$ if $A=\{x:\exists y: R(x,y)\}$. We further say that
+	a set $A$ is in $\Sigma_1$ form, if $A$ is the projection of some
+	recursive relation $R\subseteq\omega\times\omega$.
+\end{defi}
+We can now show the following theorem:
+\begin{thm}
+	A set $A$ is r.e iff $A$ is $\Sigma_1$.
+\end{thm}
+\begin{proof}
+	($\Rightarrow$) Since $A$ is r.e we have that $A=W_e=\text{dom} f_e$
+	for some $e$. This means that:
+	$$x\in W_e\Leftrightarrow\exists s(x\in W_{e,s})\Leftrightarrow \exists
+	s(T(e,x,s))$$
+	Since the relation $T$ is primitive recursive and have that the set $A$
+	is the projection a recursive relation.
+
+	($\Leftarrow$) Let $A=\{x:\exists y(Rx,y)\}$ where $R$ is recursive. We
+	then have that $A=\text{dom} f$ where $f(x)=\mu y(R(x,y))$ and thus $A$
+	is r.e
+\end{proof}
+We can say?
+\begin{thm}
+	If there is a recursive relation $R\subseteq\omega^{n+1}$ and if we
+	have the following set:
+	$$A=\{x|\exists y_1\ldots\exists  y_n R(x,\y)\}$$
+	Then the set $A$ is $\Sigma_1$
+\end{thm}
+\begin{proof}
+	We will start of by defining the relation $S\subseteq\omega^2$ as
+	follows:
+	$$S(x,z)\Leftrightarrow R(x,(z)_1,\ldots,(z)_n)$$
+	Where we have the following prime decomposition of $z$:
+	$$z=p_1^{(z)_1}\cdots p_k^{(z)_k}$$
+	Then the following equivalences holds:
+	\begin{align*}
+		\exists zS(x,z)&\Leftrightarrow \exists z R(x,(z)_1,\ldots
+		(z)_n)\\
+			       &\Leftrightarrow \exists y_1\cdots \exists y_n
+			       R(x,\y)
+	\end{align*}
+	And thus the set $A$ is clearly $\Sigma_1$.
+\end{proof}
+From this theorem we can easily get the following corollary:
+\begin{cor}
+	The projection of an r.e relation is r.e
+\end{cor}
+
+The next definition will also play a role in our proof of Solovay's
+completeness theorems.
+
+\begin{defi}
+	The graph of a function $f$ is the relation:
+	$$(x,y)\in\text{graph} f\Leftrightarrow f(x)=y$$
+\end{defi}
+\textbf{Text}
+\begin{thm}
+	If $R\subseteq\omega^2$ is an r.e relation, then there is a p.r
+	function $\text{sel}$ called the selector function for $R$ such that:
+	$$\text{sel}(x)\ \text{is defined}\ \Leftrightarrow\ \exists y(R(x,y))$$
+	and if this is the case we have that $(x,f(x))\in R$
+\end{thm}
+\begin{proof}
+	Since $R$ is r.e it is $\Sigma_1$. This means that there is a recursive
+	relation $S$ such that $R(x,y)$ holds iff $\exists z (S(x,y,z))$. Thus
+	we can define the following primitive recursive function:
+	$$g(x)=\mu u(S(x,(u)_1,(u)_2))$$
+	And now we put $f(x)=(g(x))_1$
+\end{proof}
+It will be the following theorem we will use in our proof later on.
+\begin{thm}
+	A partial function $f$ is partial recursive iff its graph is recursive
+	enumerable.
+\end{thm}
+\begin{proof}
+	($\Rightarrow$) The graph of $f_e$ is r.e by theorem ??? and the
+	definition of a graph.
+
+	($\Leftarrow$) Since the graph of $f$ is assumed to be r.e we can
+	conclude that $f$ is its own prmitive recursive selector function. This
+	is that $R=\text{graph} f$ can only have $f$ as its selector function.
+	[Whyyy?]
+\end{proof}
+\section{The Recursion Theorem}
+In this section we will state and prove the recursion theorem. It will be
+crucial in the next [chapter?], since we will need it to define a function.
+\begin{thm}
+	For every recursive function $f$ there exists a fixed point $n$ such
+	that $\varphi_n=\varphi_{f(x)}$
+\end{thm}
+\begin{proof}
+	We will start of be defining the following \textit{diagonal} function
+	$d(u)$ as:
+	\begin{align}\varphi_{d(u)}(z)=\begin{cases}
+		\varphi_{\varphi_u(u)}(z)& \text{if}\ \varphi_u(u)\
+		\text{converges}\\
+		\text{undefined} & \text{else}
+	\end{cases}
+	\end{align}
+	By the $s-m-n$ theorem we have that the function $d$ is injective and
+	total. Further it is clearly seen that $d$ is independent of $f$.
+
+	Given an arbitrary $f$ we will choose an index $v$ such that:
+	\begin{align}
+		\varphi_v=f\circ d
+	\end{align}
+	Now set $n=d(v)$. We will show that this is a fixed point for the
+	function $f$. Since $f$ is total we also have that $f\circ d$ is total.
+	This means that $\varphi_v(v)$ converges and that
+	$\varphi_{d(v)}=\varphi_{\varphi_v(v)}$. Thus we have:
+	$$\varphi_n=\varphi_{d(v)}=\varphi_{\varphi_v(v)}=\varphi_{f\circ
+	d(v)}=\varphi_{f(n)}$$
+	The second equality sign follows from (2.1) and the third follows from (2.2).
+\end{proof}
+Following [Owens, find ref], the argument in the proof can be seen as a
+digitalization argument that fails. Commonly when we apply a digitalization
+argument, we have a class of sequences, with terms from an set $A$, that we arranges as the rows in a square
+matrix. We then have a map $h:A\rightarrow A$ that induces a operation $h^*$ on
+the set of sequences such that if $\la s(i),i\in I\ra$ is a sequences in our
+matrix then 
+$$h^*(\la s(i),i\in I\ra)=\la h(s(i)),i\in I\ra$$
+After having defined this map we will use it on the sequences that consists of
+the elements of the  diagonal of the matrix and
+show that the resulting sequences is not one of the original sequences. 
+
+The digitalization argument "fails" in our case, since the sequences of the
+diagonal is already already one of the rows and thus the image $h^*$ of this
+sequences will also be one of the rows; i.e the $h$ has a fixed point.
+
+The start of the proof can be seen as the following lemma:
+\begin{lem}
+	There is a diaognal function $d(u)$ such that:
+	\begin{align}\varphi_{d(u)}(z)=\begin{cases}
+		\varphi_{\varphi_u(u)}(z)& \text{if}\ \varphi_u(u)\
+		\text{converges}\\
+		\text{undefined} & \text{else}
+	\end{cases}
+	\end{align}
+\end{lem}
+
+Most of the times where one uses the Recursion Theorem, one actually uses this
+lemma to construct the given function.
+
+\subsection{Application of the Recursion Theorem}
+The recursion theorem is a "powerful" tool. It enables us to define a partial
+recursive function, which uses its own index as part of its definition. This
+The recursion theorem overrides this "self-reference" because we are using the
+$s-m-n$ theorem to define a function $f(x)$ and
+$\varphi_{f(x)}(z)=(\ldots,x\ldots)$ and then taking a fixed point:
+$\varphi_n=\varphi_{f(n)}$.  When we are making constructions like this the
+only thing we cannot do is use specific properties of the function $\varphi_n$.
+We will use the theorem in this way in our proof of Solovay's Completeness
+Theorems to define a function with help of the functions own Gödel number; and
+the recursion theorem makes this a viable tactic.
+
+The
+following examples will show a few uses of this theorem.
+\begin{exmp}
+	We will show that there is a $n$ such that:
+	$$W_n=\{n\}$$
+	We start of by using the $s-m-n$ theorem to define $W_{f(x)}=\{x\}$
+	then by the recursion theorem we can choose $n$ such that we have:
+	$$W_n=W_{f(n)}=\{n\}$$
+\end{exmp}
+\section{The Arithmetical Hierarchy}
+\textbf{Noget klort her} :w
+
+\begin{defi}
+	We define the sets $\Sigma_n$ and $\Pi_n$ in the following way:
+	\begin{enumerate}
+		\item A set $A$ is in $\Sigma_0$ ($\Pi_0$) if and only if $A$
+			is recursive.
+		\item For $n\geq 1$ the set $A$ is in $\Sigma_n$ if there is a
+			recursive relation $R(x,\y)$ such that:
+			$$x\in A\ \text{iff}\ \exists y_1\forall y_2\exists
+			y_3\cdots Qy_nR(x,\y)$$
+			Here $Q$ is $\exists$ if $n$ is odd and $Q$ is
+			$\forall$ if $n$ is even. We define $A$ being in
+			$\Pi_n$ likewise. $A$ is in $\Pi_n$ if:
+			$$x\in A\ \text{iff}\ \forall y_1\exists y_2\forall
+			y_3\cdots Qy_nR(x,\y)$$
+		\item $A$ is in $\Delta_n$ if $A\in\Sigma_n\cap\Pi_n$
+	\end{enumerate}
+	We further say that a formula $\varphi$ is $\Sigma_n$ ($\Pi_n$) if it
+	is $\Sigma_n$ ($\Pi_n$) as a relation of the variables that are free in
+	it. 
+\end{defi}
+In the rest of this project we will mostly look at formulas that are either
+$\Sigma_n$ or $\Pi_n$ and not sets, that have this property.
+
+We can show a few properties of these sets.
+\begin{prop}
+	\begin{enumerate}
+		\item $A\in\Sigma_n\Leftrightarrow\ol A\in\Pi_n$
+		\item $A\in\Sigma_n (\Pi_n)\Rightarrow(\forall
+			m>n)(A\in\Sigma_m\cap\Pi_m)$
+		\item $A,B\in\Sigma_n(\Pi_n)\Rightarrow A\cup B,A\cap
+			B\in\Sigma_n(\Pi_n)$
+		\item $(R\in \Sigma_n\wedge n>0\wedge A=\{x:\exists y
+			R(x,y)\})\Rightarrow A\in\Sigma_n$
+		\item $(B\leq_m A\wedge A\in\Sigma_n)\Rightarrow B\in \Sigma_n$
+		\item If $R\in\Sigma_n(\Pi_n)$ and $A$ and $B$ are defined by:
+			$$\la x,y\ra \in A \Leftrightarrow \forall z<y
+			R(x,y,z)$$
+			and
+			$$\la x,y\ra \in B \Leftrightarrow \exists z<y
+			R(x,y,z)$$
+			Then we have $A,B\in\Sigma_n(\Pi_n)$
+	\end{enumerate}
+\end{prop}
+\begin{proof}
+	\begin{enumerate}
+		\item If we have that:
+			\[
+				A=\{x:\exists y_1\forall y_2\cdots
+				R(x,y_1,\ldots)\}
+			\]
+			Then we have:
+			\[
+				\ol A=\{x:\forall y_1\exists y_2\cdots
+				\neg R(x,y_1,\ldots)\}
+			\]
+			Which is clearly $\Pi_n$.
+		\item If for example $A=\{x:\exists y_1\forall y_2
+			R(x,y_1,y_2)$\}, then we can make the following
+			reformulation of $A$:
+			\[
+				A=\{x:\exists y_1\forall y_2\exists
+				y_3(Rx,y_1,y_2)\wedge y_3=y_3)\}
+			\]
+			This kind of reformulation can be done for any set in
+			$\Sigma_n$ ($\Pi_n$)
+		\item Let the following to sets be defined:
+			\[
+				A=\{x:\exists y_1\forall y_2\cdots
+				R(x,y_1,y_2,\ldots)\}\\
+			\]
+			\[
+				B=\{x:\exists  z_1\forall z_2\cdots
+				S(x,z_1,z_2,\ldots)\}\\
+			\]
+			Then we have:
+			\begin{align*}
+				x\in A\cup B&\Leftrightarrow \exists y_1\forall
+				y_2\cdots R(x,y_1,y_2,\ldots)\vee \exists
+				z_1\forall y_2\cdots S(x,z_1,z_2\ldots)\\
+					    &\Leftrightarrow \exists y_1\exists z_1\forall
+				y_2\forall z_2\cdots (R(x,y_1,y_2,\ldots)\vee
+				S(x,z_1,z_2,\ldots))\\
+					    &\Leftrightarrow \exists u_1\forall
+					    u_2\cdots
+					    (R,(u_1)_0,(u_2)_0,\ldots)\vee
+					    S(x,(u_1)_1,(u_2)_1,\ldots))
+			\end{align*}
+			Which is clearly $\Sigma_n$. The same argument can be
+			made for
+			$A\cap B$ and for $\Pi_n$ sets.
+		\item This follows by quantifier contraction, in the same way
+			as (3)
+		\item Let 
+			\[ 
+				A=\{x:\exists y_1\forall y_2\cdots
+				R(x,y_1,y_2,\ldots)\}
+			\]
+			And let $B\leq_m A$ via the function $f$. Then we have:
+			\[
+				B=\{ x:\exists y_1\forall y_2\cdots
+				R(f(x),y_1,y_2,\ldots)\}
+			\]
+		\item We will prove this by induction on $n$.
+
+			\textbf{Base case:} Let $n=0$. Then $A$ and $B$ are
+			clearly recursive. 
+
+			\textbf{Induction step:} Now assume that $n>0$ and
+			suppose that $R\in\Sigma_n$. Our induction hypothesis
+			says that (6) is true for all $m<n$. Then by (4) we
+			have that $B\in\Sigma_n$. Further we have
+			$S\in\Pi_{n+1}$ such that the following holds:
+			\begin{align*}
+				\la x,y\ra \in A&\Leftrightarrow(\forall z<y)
+				R(x,y,z)\\
+						&\Leftrightarrow(\forall z<y)
+						\exists u S(x,y,z,u)\\
+						&\Leftrightarrow \exists
+						\sigma(\forall z<y)
+						S(x,y,z,\sigma(z))
+			\end{align*}
+			WE have that $\sigma$ range is in $\omega^{<\omega}$.
+			By the indction hypothesis we have that $(\forall
+			z<y)S\Pi_{n+1}$ but by the above deduction we must then
+			have that $A\in\Sigma_n$.
+	\end{enumerate}
+\end{proof}
+
+
+\section{Sigma completeness, put ind hvor dette passer i overstående}
+We can make a generalization of $D3$ by using [Lemma fra fagprojekt]. We use
+these genieralization in some of our proofs later on.
+\begin{thm}
+	\label{thm:DemoSiga}
+	Let $fv_0\ldots v_{n-1}$ be a $\Sigma_1$ formula with free variables.
+	Then:
+	$$\PRA\vdash fv_0\ldots
+	v_{n-1}\rightarrow\text{Pr}(\Godelnum{fv_0\ldots v_{n-1}})$$
+\end{thm}
+\begin{proof}
+	By [ja, fra hvad?] we have that there is a $\Sigma_1$ formula $\exists
+	v(gvv_0\ldots v_{n-1}=\ol 0$ such that we have:
+	\begin{equation}
+		\label{eq:Com1}
+		\PRA\vdash fv_0\ldots v_{n-1}\leftrightarrow\exists v(gvv_0\ldots
+		v_{n-1}=\ol 0)
+	\end{equation}
+	and by $D1$ we have:
+	\begin{equation}
+		\label{eq:Com2}
+		\PRA\vdash\text{Pr}(\Godelnum{fv_0\ldots
+		v_{n-1}\leftrightarrow\exists v(gvv_0\ldots v_{n-1}=\ol 0)})
+	\end{equation}
+	We can now make the following deductions:
+	\begin{align*}
+		\PRA\vdash fv_0\ldots v_{n-1}&\rightarrow\exists v (gvv_0\ldots
+		v_{n-1}=\ol 0) 
+					     &&\text{By \ref{eq:Com1}}\\
+					     &\rightarrow\exists v\text{Pr}(
+					     \Godelnum{hvv_0\ldots v_{n-1}=\ol
+					     0}
+					     &&\text{By theorem fagprojekt?})\\
+					     &\rightarrow\text{Pr}(\Godelnum{
+						     \exists v(hvv_0\ldots
+					     v_{n-1}=\ol 0)})
+					     &&\text{By D1 and D2}\\
+					     &\rightarrow\text{Pr}(\Godelnum{
+					     fv_0\ldots v_{n-1}})
+					     &&\text{By \ref{eq:Com2}}
+	\end{align*}
+\end{proof}
+\end{document}

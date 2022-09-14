@@ -1,0 +1,96 @@
+\documentclass[../main.tex]{subfiles}
+
+In this section it will be shown how much induction there is in \PRA and other
+arithmetical theories. We will look at different axioatizable subtheories of
+first order arithmetic called fragments. These fragments can be categories in
+the following three categories:
+
+\textbf{Strong fragments:} The fragments that can prove the arithmetized cut elimination theorem.
+
+\textbf{Weak fragments:}
+Those fragments that can not prove the arithmetized cut-elimination theorem.
+
+\textbf{Very weak fragments:} The fragments which do not contain any induction
+axioms
+
+We will start of by defining a very weak fragment called Robinson's theory.
+This fragments was first considered in [Ref]. We
+will denote this theory with $Q$
+This theory have the following axioms:
+\begin{align*}
+	&\forall x(\neg Sx\not =0)\\
+	&\forall x\forall y (Sx=Sy\rightarrow x=y)\\
+	&\forall x(x\not =0\rightarrow\exists y(Sy=x)\\
+	&\forall x(x+0=x)\\
+	&\forall x\forall y(x+Sy=S(x+y)\\
+	&\forall x(x\cdot 0=0)\\
+	&\forall (x\cdot Sy=x\cdot y+x)
+\end{align*}
+This theory dose not have the inequality symbol. We will extend $Q$ with the
+following axiom:
+$$x\leq y\leftrightarrow \exists z(x+z=y)$$
+This extension of $Q$ is denoted by $Q_\leq$
+\begin{defi}
+	Giving a class $\Gamma$ of either $\Sigma_n$ or $\Pi_n$ formulas we define
+	$\Gamma$-\textit{induction} ($\Gamma$-\textit{ind}) to be the following
+	schema:
+	$$\varphi(0)\wedge\forall v(\varphi (x)\rightarrow\varphi(Sx))\rightarrow \forall
+	v\varphi (v)$$
+	for $\varphi\in\Gamma$. Further we define $\Gamma$-\textit{Least Number
+	Principle} ($\Gamma$-\textit{MIN}) to be the following schema:
+	$$\exists x\varphi(x)\rightarrow\exists(\varphi(x)\wedge\neg\exists
+	y(y<x\wedge\varphi(y)))$$
+	For $\varphi\in\Gamma$. Lastly we will define the replacement axioms
+	for $\Gamma$, ($\Gamma$-REPL) as the following formulas:
+	$$(\forall x\leq t)\exists y\varphi(x,y)\rightarrow\exists z(\forall
+	x\leq t)(\exists y\leq z)\varphi(x,y)$$?
+\end{defi}
+
+From the above axioms we can create a hierarchy of different strong fragments
+of arithmetics. We will define the following theories:
+
+\begin{defi} We define the following fragments:
+
+	\begin{enumerate} 
+		\item The theory $I\Sigma_n$ is the theory that is axiomatized by the axioms
+			of $Q_\leq$ and the $\Sigma_n$-IND axioms. 
+		\item The theory $I\Delta_0$ is
+			$Q_\leq$ plus the $\Delta_0$-IND axioms. 
+		\item The theory $L\Sigma_n$ is defined by the theory
+			$I\Delta_0$ plus the $\Sigma_n$-MIN axioms
+		\item The theory $B\Sigma_n$ is defined by the theory
+			$I\Delta_0$ plus the $\Sigma_n$-REPL axioms.
+		\item 
+	Lastly the theory Peano arithmetics is defined as the theory $Q$ plus
+	induction for all first order formulas.
+	\end{enumerate}
+\end{defi}
+From the definition it is clear that the theory $I\Delta_0$ plays a crucial
+role. It can be shown that in $Q$ a lot of the basic facts about arithmetic can
+be shown. These facts will not be shown here, but a list of them can be found
+in [Buss].
+
+\begin{defi}
+	A predicate symbol
+\end{defi}
+\begin{defi}
+	A function symbol.
+\end{defi}
+\section{\PRA}
+\begin{prop}
+	\PRA\ is the thoery?
+\end{prop}
+We will further define $\PRA^-$ as being the sub-theory of \PRA\ where we
+restrict us self to only having induction for p.r formulas. Then we get the
+following result:
+\begin{prop}
+	Over $\PRA^-$ the following schemata are equivalent:
+	\begin{enumerate}
+		\item $\Sigma_n$-\textit{Ind}
+		\item $\Pi_n$-\textit{Ind}
+		\item $\Sigma_n$-\textit{LNP}
+		\item $\Pi_n$-\textit{LNP}
+	\end{enumerate}
+\end{prop}
+\begin{proof}
+\end{proof}

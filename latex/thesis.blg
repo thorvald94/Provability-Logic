@@ -1,0 +1,52 @@
+This is BibTeX, Version 0.99d (TeX Live 2019/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: thesis.aux
+The style file: abbrvnat.bst
+Database file #1: ThesisBib.bib
+Warning--can't use both author and editor fields in Blackburn2002
+Warning--can't use both author and editor fields in Hendricks2011
+Warning--can't use both author and editor fields in Hintikka1962
+Warning--can't use both author and editor fields in Hintikka1969
+Warning--can't use both author and editor fields in Lemmon1977
+You've used 20 entries,
+            2773 wiz_defined-function locations,
+            733 strings with 7202 characters,
+and the built_in function-call counts, 6527 in all, are:
+= -- 533
+> -- 255
+< -- 20
++ -- 95
+- -- 75
+* -- 396
+:= -- 1066
+add.period$ -- 66
+call.type$ -- 20
+change.case$ -- 74
+chr.to.int$ -- 20
+cite$ -- 45
+duplicate$ -- 408
+empty$ -- 670
+format.name$ -- 99
+if$ -- 1372
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 31
+newline$ -- 107
+num.names$ -- 87
+pop$ -- 210
+preamble$ -- 1
+purify$ -- 64
+quote$ -- 0
+skip$ -- 254
+stack$ -- 0
+substring$ -- 40
+swap$ -- 27
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 155
+warning$ -- 5
+while$ -- 63
+width$ -- 0
+write$ -- 266
+(There were 5 warnings)

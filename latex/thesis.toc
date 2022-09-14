@@ -1,0 +1,29 @@
+\contentsline {chapter}{\numberline {1}Introduction:}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Notation}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Historical Introduction}{1}{section.1.2}%
+\contentsline {chapter}{\numberline {2}Preliminary}{3}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Recursion Theory}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Partial Recursive Functions and Recursive Functions}{5}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Turing Computable Functions}{6}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Auxiliary Results}{8}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Recursively Enumerable sets and the Graph of a function}{10}{section.3.4}%
+\contentsline {section}{\numberline {3.5}The Recursion Theorem}{12}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Application of the Recursion Theorem}{13}{subsection.3.5.1}%
+\contentsline {section}{\numberline {3.6}The Arithmetical Hierarchy}{14}{section.3.6}%
+\contentsline {section}{\numberline {3.7}Sigma completeness, put ind hvor dette passer i overstående}{16}{section.3.7}%
+\contentsline {chapter}{\numberline {4}Fragments of Arithmetics}{19}{chapter.4}%
+\contentsline {section}{\numberline {4.1}\text {\textbf {PRA}}}{20}{section.4.1}%
+\contentsline {chapter}{\numberline {5}General results on GL}{23}{chapter.5}%
+\contentsline {subsection}{\numberline {5.0.1}The modal logic \text {\textbf {K4}}}{23}{subsection.5.0.1}%
+\contentsline {section}{\numberline {5.1}Tress and \text {\textbf {GL}}}{24}{section.5.1}%
+\contentsline {section}{\numberline {5.2}The system \text {\textbf {GLS}}}{26}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Avoiding \textit {R2}}{26}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Definition of \textbf {GLS}}{27}{subsection.5.2.2}%
+\contentsline {chapter}{\numberline {6}Fixed point lemma}{31}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Solovays completeness theorems}{35}{chapter.7}%
+\contentsline {section}{\numberline {7.1}The First Theorem}{35}{section.7.1}%
+\contentsline {section}{\numberline {7.2}The Second Theorem}{42}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}Using the Second Completeness Theorem}{44}{subsection.7.2.1}%
+\contentsline {section}{\numberline {7.3}Further Completeness Results}{45}{section.7.3}%
+\contentsline {chapter}{\numberline {8}Further results in Provability logic}{47}{chapter.8}%
+\contentsline {chapter}{\numberline {9}Bibliography}{49}{chapter.9}%

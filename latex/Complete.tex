@@ -1,0 +1,534 @@
+%! TeX program = lualatex
+
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+In this section we will prove Solovay's completeness theorems. The proof of
+these theorems follows a technique invented by Robert Solovay, which today is
+known as \textit{Solovay construction}. This technique is a way of embedding
+Kripke models into arithmetic
+
+\section{The First Theorem}
+
+\begin{lem}
+	For all modal sentences $\varphi$ we have that :
+	$$GL\vdash\varphi\Rightarrow\forall ^*(\PRA\vdash\varphi^*)$$
+\end{lem}
+\begin{proof}
+	The proof will be done as an induction proof.
+\end{proof}
+\begin{thm}[Solovay's first completeness theorem]
+	For all modal sentences $\varphi$ we have that:
+	$$\forall ^* (\PRA\vdash \varphi^*)\Rightarrow \GL\vdash \varphi$$
+\end{thm}
+This theorem will be shown by contraposition: If $\GL\not\vdash \varphi$ then we
+have one $^*$ such that $\PRA\vdash\varphi^*$. This will be a rather complex
+construction, and will take the rest of this subsection to prove. So for the
+rest of this subsection fix a sentence $\varphi$ such that $GL\vdash \varphi$
+and let $\ol{K}=(W,R,\phi)$ be a Kripke model such that $w_0\vdash\varphi$.
+
+We will assume that $K=\{0,\ldots, n\}$ for some finite $n$ and that $w_0=1$.
+$R$ can be extended by setting $0Ri$ for each $i$ in $W$. Is shall be noted
+that $0$ is not part of our Kripke model.
+
+Further we will first intuitively define a function $F\omega\rightarrow\{0,\ldots, n\}$ in the
+following way: Set $F(0)=0$. Further we define $F(x+1)$ in the following way:
+If $x+1$ is the code of a proof that $\lim_{k\rightarrow\infty}(k)\not =z$ for
+some $z$ accessible to $F(x)$ we set $F(x+1)=z$ otherwise we have that
+$F(x+1)=F(x)$.
+
+The way this function works can be explained intuitively by the following
+quote:
+\begin{displayquote}
+	Imagine a refugee who is admitted from one country to another only if
+	he/she provides a proof not to stay there forever. If the refugee is
+	also never allowed to go to one of the previously visited countries,
+	he/she must eventually stop somewhere. So, an honest refugee will never
+	be able to leave his/her country of origin. [Beklemeishev og artemov,
+	find biktex reference]
+\end{displayquote}
+
+Before we can give a formal definition of the function $F$, we will have to do
+some work, and introduce some notation. First of we will let $G$ be a partial
+recursive function with the following $\Sigma_1$ graph: $\psi v_0v_1$. From
+this graph we can obtain the following $\Sigma_2$ formula:
+$$\exists v_0\forall v_1>v_0:\psi v_1v$$
+
+Which says that $G$ has limit $v$. We will abbreviate this as $L=v$. We will
+use this notation to define $F$ in the following way:
+$$F(v_0)=v_1\leftrightarrow\begin{cases}
+	(v_0=\0\wedge v_1=\0)\ \vee \\
+	(v_0>\0\wedge Prov(v_0,\Godelnum{L\not =\0})\wedge F(v_0-\ol 1)\ol
+	Rv_2)\ \vee\\
+	(v_0>\0\wedge \forall v_2\leq v_0\neg(Prov(v_0,\Godelnum{\not
+	=v_2})\wedge\ol{F}(v_0-\ol{1})\ol{R}v_2\ \wedge\\
+	v_1=\ol{F}(v_0-\ol{1}))
+	\\
+	\end{cases}
+$$
+\textbf{Mere formelt defi:}
+
+Thus we have that $F$ have the following properties:
+\begin{enumerate}
+	\item $F(0)=0$
+	\item If $x+1$ proves that $L\not =\ol z$ and we have that $F(x)Rz$,
+		then $F(x+1)=z$
+	\item Else we have that $F(x+1)=F(x)$
+\end{enumerate}
+By the Recursion theorem this function exists. Further it is a total function
+since it is defined by recursion.
+
+Further we will expand the langauge with a new function constant (This can be
+done, since $\psi$ is the graph of a total function) $\ol F$ with the following
+defining axiom:
+$$\ol F(v_0)=v_1\leftrightarrow\psi (v_0)=v_1$$
+We will now prove and state a few lemmas before proving the main theorem.
+
+
+\begin{lem}
+	\label{lem:2}
+	The following three statements holds:
+	\begin{enumerate}
+		\item $\PRA\vdash\forall v_0(\ol Fv_0\leq \ol n)$
+		\item For all $x\in\omega$ we have that:\ $$\PRA\vdash\forall
+			v_o(\ol
+			Fv_0=\ol x\rightarrow\forall v_1>v_0(\ol Fv_1=\ol x\vee
+			\ol x\ol R\ol Fv_1))$$
+		\item $\PRA\vdash\exists v_0v_1\forall v_2>v_0(\ol Fv_2=v_1)$. 
+	\end{enumerate}
+	Where (3) just means that $\PRA\vdash\exists v_1(L=v_1)$.
+\end{lem}
+\begin{proof}
+	\textbf{Dette bevis er ikke helt "færdigt". Færdiggør det selv senere}
+
+	We will prove each part separately 
+
+	\begin{enumerate}
+
+		\item We will prove this part by induction.
+
+			\textbf{Base case:} $F(0)=0\leq n$ is is clearly true.
+
+			\textbf{Induction step:} Assume that $F(x)\leq n$ is
+			true.Then we have that $F(x+1)$ is in the range of $F$
+			and this $\leq n$ or we have that $F(x+1)\leq n$ so the
+			induction is complete.
+		\item We will start of by write the formula we have to prove as
+			the following equivalent formula:
+			$$\forall v_1\forall v_0(\ol{F}v_0=\ol x\rightarrow
+			F(v_0 + v_1+\ol 1)=\ol x\vee \ol x\ol R\ol
+			F(v_0+v_1+1))$$
+			To prove this we will use induction on $v_1$. This is
+			an induction on a $\Pi_1$ formula; which is a possible
+			induction for \PRA\ by [Ref] 
+
+			\textbf{Base case} if $v_1=0$ then we have that 
+
+			\textbf{Induction step} bla
+
+			\textbf{Kom tilabe til dette sted}
+
+		\item Here we will first prove the following:
+			$$\forall v_0(\exists v_1(\ol
+			Fv_1=v_0)\rightarrow\exists v_1(L=v_1))$$
+			This is clearly true for $v_0\leq n$. \textbf{Kig på
+			dette senere}.
+\end{enumerate}
+\end{proof}
+\textbf{Kommenter på Inductionen brugt ovenover.}
+\begin{cor}
+	$\PRA\vdash L\leq \ol n$, i.e $\PRA\vdash \bigvee_{x\leq n} L=\ol x$
+\end{cor}
+\begin{proof}
+	By lemma \ref{lem:2} 1) and 3) and the following implication:
+	$$\PRA\vdash v \leq \ol n\rightarrow \bigvee_{x\leq n} v=\ol x$$
+	The corollary follows.
+\end{proof}
+\begin{lem}
+	\label{lem:4}
+	For all $x,y\leq n$ we have that:
+	\begin{enumerate}
+		\item $L=\ol x\wedge \ol x \ol R\ol y\rightarrow
+			\Con_{\PRA+L=\ol y}$
+		\item $\PRA\vdash L=\ol x\wedge \ol x\not = \ol y\wedge \neq
+			\ol x \ol R\ol y\rightarrow\neg \Con_{\PRA+L=\ol y}$
+		\item $\PRA\vdash L=\ol x\wedge \ol x >\0\rightarrow
+			\Pr(\Godelnum{L=\neg x})$
+	\end{enumerate}
+
+\end{lem}
+\begin{proof}
+		We will prove each statement separately:
+
+		\textbf{1)} Let $xRy$ and assume for contradiction that $L
+			=\ol x\wedge \text{Pr}(\Godelnum{L\not =\ol y})$. Since we
+			have that $L=\ol x$ we can chose a $v_0$ such that
+			$\forall v_2(v_2>v_0\rightarrow \ol Fv_2=\ol x)$ and we
+			can also chose $v_1+\ol 1>v_0$ such that
+			$\text{Prov}(v_1+\ol 1,\Godelnum{L\not =\ol y})$
+			But we also have the following:
+			$$\PRA\vdash\text{Prov}(v_1+\ol 1,\Godelnum{L\not
+			=y})\wedge\ol Fv_1=\ol \x\wedge \ol x\ol R\ol
+			y\rightarrow\ol F(v_1+\ol 1)=\ol y$$
+			This contradicts with $\forall v_2>v_0(\ol Fv_0=\ol x)$
+			which came from the assumption that $L=\ol x$ so we con
+			conclude:
+			$$\PRA\vdash L=\ol x\wedge\ol x\ol R\ol
+			y\rightarrow\neg\text{Pr}(\Godelnum{L\not =\ol y})$$
+			Where we have that $\neg\text{Pr}(L\not =\ol y)$ is
+			equivalent to $\text{Con}_{\PRA+L=\ol y}$ and 1)
+			follows.
+
+			\textbf{2)}
+		  By [ref???] We have the following deduction:
+			\begin{align}
+				\PRA\vdash L=\ol x&\rightarrow \exists v_0(\ol
+				Fv_0=\ol x)\\
+						  &\rightarrow\text{Pr}(\Godelnum{
+						  \exists v_0(\ol
+					  Fv_0=\ol x)})\label{eq:21}
+			\end{align} 
+			Further we have from lemma \ref{lem:2}.2 and [D2, lob?]  that:
+			\begin{align}
+				\PRA&\vdash\forall v_0(\ol Fv_0=\ol
+				x\rightarrow(L=\ol x\vee \ol x\ol RL))\\
+				\PRA&\vdash(\Godelnum{\forall v_0(\ol Fv_0=\ol
+					x\rightarrow (L=\ol x\vee \ol x\ol
+				RL))})\label{eq:22}
+			\end{align}
+			From \ref{eq:21} and \ref{eq:22} we have the following:
+			\begin{equation}
+				\label{eq:23}
+				\PRA\vdash L=\ol x
+				\rightarrow\text{Pr}(\Godelnum{L=\ol x\vee \ol
+				x\ol RL})
+			\end{equation}
+			asd?
+
+			Which gives us [Why?]
+			$$\PRA\vdash \ol x\not =\ol y\wedge \neg (\ol x\ol R\ol
+			y)\rightarrow \text{Pr}(\Godelnum{\ol x\not =y\wedge
+			\neg (\ol x\ol R\ol y)})$$
+			This with \ref{eq:23} gives us:
+			
+			$$
+				\PRA\vdash L=\ol x\wedge \ol x\not =\ol y\wedge
+			\neg\ol x\ol R\ol
+			y\rightarrow\text{Pr}(\Godelnum{L=\ol x\vee \ol x\ol
+			RL})\wedge \text{Pr}(\Godelnum{\ol x\not =\ol y\wedge
+			\neg\ol x\ol  R\ol y})$$
+			From which we can deduce:
+			$$\PRA\vdash L\ol x\wedge \ol x\not =\ol y\wedge \neg
+			\ol x\ol R\ol y\rightarrow \text{Pr}(\Godelnum{L\not
+			=\ol y})$$
+			Which gives us 2)
+
+			\textbf{3)} From the least number princible we have
+			that:
+			$$\PRA\vdash L=\ol x\wedge\ol x>\ol 0\rightarrow
+			\exists v(\ol F(v+\ol 1)=\ol x\wedge \ol Fv\not =\ol
+			x)$$
+			By the definition of $F$ we have for such a $v$ the
+			following:
+			$$\PRA\vdash \ol F(v+\ol 1)=\ol x\ol Fv\not =\ol
+			x\rightarrow \text{Prov}(v+\ol 1,\Godelnum{L\not =\ol
+			x})$$
+			And thus we have the following:
+			$$\PRA\vdash L=\ol x\wedge \ol x> \ol 0\rightarrow
+			\text{Pr}(\Godelnum{L\not =\ol x})$$
+\end{proof}
+Lemma \ref{lem:2} and \ref{lem:4} gives us the most of the basic fact we need
+about $L$ and $F$; at least the facts about them that we can prove in $\PRA$.
+We will also need the following result, which cannot be proven i $\PRA$.
+\begin{lem}
+	\label{lem:5}
+	The following two statements are true, but they cannot be proven in
+	\PRA.
+	\begin{enumerate}
+		\item $L=\0$
+		\item For $0\leq x\leq n$ we have that $\PRA+L=\ol x$ is
+			consistent.
+	\end{enumerate}
+\end{lem}
+\begin{proof}
+	\textbf{1)} By lemma \ref{lem:2}.3 the limit $L$ exists. If $x>0$ we have by lemma
+	\ref{lem:5} that:
+	\begin{align*}
+		L=\ol x &\Rightarrow \PRA\vdash L\not =\ol x\\
+		     &\Rightarrow L\not = \ol x
+	\end{align*}
+	Since \PRA\ is sound. But this is a contradiction and we must conclude
+	that $L=0$.
+
+	\textbf{2)} Since we have that $L=\ol 0$ is true and we have that \PRA\
+	is sound, we have  that $\PRA+L=\ol 0$ is consistent. For $x>0$ we will
+	apply lemma \ref{lem:5}.1 and get:
+	$$\PRA\vdash L=\ol 0\wedge \ol 0\ol R\ol x\rightarrow
+	\text{Con}_{\PRA+L=\ol x}$$
+	We have that the antecedent is true and hence that
+	$\text{Con}_{PRA+L=\ol x}$ is true, which proves this part of the
+	lemma.
+\end{proof}
+
+We have now shown all the important basic properties that $F$ and $L$ holds. In
+the next part of the proof we will simulate the Kripke model $\mathcal{K}=\la
+W,R,\phi\ra$, where $\mathcal{K}_1\not\vdash \varphi$. For this end we will let $L=\ol x$ assume the nodes of
+$W=\{1,\ldots n\}$. We will start of by defining the interpretation $^*$.We
+will start of by defining the interpretation $^*$.  So for any $p$ let:
+$$p^*=\bigvee\{L=\ol x:1\leq x\leq n\ \text{and}\ x\in \phi(p)\}$$
+If this disjunction is empty, we will set it to be $\ol 0=\ol 1$. Further we
+are only interested the sentence $\varphi$; i.e the set:
+$$S(\varphi)=\{\psi:\ \psi\ \text{is a subformula of }\ \varphi\}$$
+We will not look at $p\not\in S(\varphi)$
+
+The following lemma is the crucial result about this interpretation, and the
+theorem will follow easily from this result:
+\begin{lem}
+	\label{lem:10}
+	Let $1\leq x\leq n$. For any $\psi$ and $^*$ as defined just above we
+	have that:
+	\begin{enumerate}
+		\item $x\vdash \psi\Rightarrow\PRA\vdash L=\ol x\rightarrow
+			\psi^*$
+		\item $x\not\vdash\psi\Rightarrow\PRA\vdash L=\ol
+			x\rightarrow \neg \psi^*$
+	\end{enumerate}
+\end{lem}
+\begin{proof}
+We will use induction on complexity of $\psi$. If $\psi=p$, then since $p$ is a
+disjunct of $p^*$ we get:
+$$\vdash_x\varphi\Rightarrow\PRA\vdash L=\ol x\rightarrow p^*$$
+Which proves 1, for $\psi$ atomic. For 2 observe that if $\not\vdash_x p$, then
+$L=\ol x$ contradicts over disjunct of $p^*$ and thus:
+$$\not\vdash_x p\rightarrow\PRA\vdash L=\ol x\rightarrow\neg p^*$$
+The cases where  $\psi$ is $\neg\theta,\theta\wedge\sigma,\theta\vee\sigma$ and
+$\theta\rightarrow\sigma$ are trivial. So we will just look at the case where
+$\psi=\Box\theta$. Here we make the following deductions:
+\begin{align*}
+	\vdash_x\Box\theta&\Rightarrow \forall
+	y(xRy\Rightarrow\vdash_y\theta)\\
+			  &\Rightarrow \forall(xR\Rightarrow\PRA\vdash L=\ol
+			  y\rightarrow\theta^*)\\
+			  &\Rightarrow\bigwedge_{xRy}(\PRA\vdash L=\ol
+			  y\rightarrow\theta^*)\\
+			  &\Rightarrow\PRA\vdash\bigvee_{xRy} L=\ol
+			  y\rightarrow \theta^*\\
+			  &\Rightarrow\PRA\vdash\text{Pr}(\Godelnum{\bigvee_{xRy} L=\ol
+			  y})\rightarrow\text{Pr}(\Godelnum{\theta^*})
+\end{align*}
+And by the last line we can get the following by using the axioms of \GL
+\begin{equation}
+	\label{eq:1}
+			 \vdash_x\Box\theta\Rightarrow \PRA\vdash\text{Pr}(\Godelnum{\bigvee_{xRy} L=\ol
+			  y})\rightarrow\text{Pr}(\Godelnum{\theta^*})
+\end{equation}
+We can now invoke lemma \ref{lem:5} 2 and 3 and get:
+\begin{equation}
+	\label{eq:2}
+	\PRA\vdash L=\ol
+	x\rightarrow\bigwedge_{\neg(xRz)}\text{Pr}(\Godelnum{L\not =z})
+\end{equation}
+and therfore [Hvorfor?]
+\begin{equation}
+	\label{eq:3}
+	\PRA\vdash L=\ol x\rightarrow \text{Pr}(\Godelnum{\bigvee_{xRy}L=\ol y})
+\end{equation}
+Now by \ref{eq:1} and \ref{eq:3} we get that:
+\begin{align*}
+	\vdash_x\Box\theta&\Rightarrow\PRA\vdash L=\ol x\rightarrow
+	\text{Pr(\Godelnum{\theta^*})}\\
+			  &\Rightarrow\PRA\vdash L=\ol x\rightarrow
+			  (\Box\theta)^*
+\end{align*}
+I.e we have proven part 1 of the lemma. Similarly we can do the following
+deduction:
+\begin{align*}
+	\not\vdash_x\Box\theta&\Rightarrow\exists y(xRy\wedge
+	\not\vdash_y\theta)\\
+			      &\Rightarrow \exists y(xRy\wedge\PRA\vdash L=\ol
+			      y\rightarrow\neg\theta^*)\\
+			      &\Rightarrow\exists y(xRy\wedge\PRA\vdash
+			      \theta^*\rightarrow L \not =\ol y)\\
+			      &\Rightarrow\exists
+			      y(xRy\wedge\PRA\vdash\text{Pr}(\Godelnum{
+			      \theta^*})\rightarrow\text{Pr}(\Godelnum{L\not
+		      =\ol y})
+\end{align*}
+But by lemma \ref{lem:5} we get that if $xRy$:
+$$\PRA\vdash L=\ol x\rightarrow\neg \text{Pr}(\Godelnum{L\not =\ol y})$$
+all in all this gives us:
+$$\PRA\vdash L=\ol x\rightarrow\neg\text{Pr}(\Godelnum{\theta^*})$$
+Which just is the following we where trying to show:
+$$\PRA\vdash L=\ol x\rightarrow\neg(\Box\theta)^*$$
+\end{proof}
+We can now finally prove Solovay's first completeness theorem:
+\begin{proof}[Proof of Solovay's first completeness theorem]
+	By lemma \ref{lem:10} we have that
+	$$\vdash_1\varphi\Rightarrow\PRA\vdash L=\ol 1\rightarrow\varphi^*$$
+	But by lemma [Hvad?] we have that $\PRA\ +L=1$ is consistent, from
+	which it follows that $\PRA+\neg\varphi^*$ is consistent; so $\varphi^*$
+	is not a theorem af $\PRA$ and thus we have:
+	$\PRA\not\vdash\varphi^*$ and the theorem follows by contraposition.
+\end{proof}
+
+\section{The Second Theorem}
+Solovay's Second Completeness Theorem is a strengthening of the first one,
+[How?]
+\begin{thm}
+	For all modal sentences $\varphi$, the following is equivalent:
+	\begin{enumerate}
+		\item $\textbf{GLS}\vdash\varphi$
+		\item $\GL\vdash\displaystyle\bigwedge_{\Box \psi\in
+			S(\varphi)}(\Box\psi\rightarrow\psi)\varphi$
+		\item $\varphi$ is true in all $\varphi$-sound Kripke models
+		\item $\forall^*(\varphi^*\ \text{is true})$
+	\end{enumerate}
+\end{thm}
+Some parts of this theorem has already been proven. We have
+$(1)\Leftrightarrow(2)$ by theorem [asd?] and we have $(2)\Leftrightarrow(3)$
+by theorem [asd?]. \textbf{Udbyd dette senere}
+
+For proving $(4)\Rightarrow(3)$ we will again make use of contraposition. Let
+$\mathcal{\ol K}=((1,\ldots,n),R,\phi)$ be given and let $1$ be the root.
+Further let $\varphi$ be such that $\not\vdash_1\varphi$.
+We
+will assume that $\mathcal{\ol K}$ is $\varphi$-sound. This means that we have:
+$\vdash_1\Box\psi\rightarrow\psi$ for all $\psi\in S(\varphi)$
+
+We will set $0Rw$ for all $w\in W$. We will now create a new model
+$\mathcal{K'}$ where we have added $0$. We will create this new model in the
+following way:
+\begin{align*}
+	&W'=\{0,1\ldots,n\}\\
+	&R'\ \text{extends}\ R\ \text{by assuming that}\ 0R'x\ \text{for all}\
+	x\in W\\
+	&\alpha_0=0\\
+	&\phi'\ \text{extends}\ \phi\ \text{by putting}\ 0\in\phi(p)\
+	\text{iff}\ 1\in\phi(p)\ \text{for all}\ p\in S(\varphi)
+\end{align*}
+We will abuse notation and let $R$ denote $R'$ and $\phi$ denote $\phi'$.
+\begin{lem}
+	For all $\psi\in S(\varphi)$ we have that:
+	$$0\vdash\psi\ \text{iff}\ 1\vdash \psi$$
+\end{lem}
+\begin{proof}
+\end{proof}
+\begin{lem}
+	Let $0\leq x\leq n$. For any $\psi\in S(\varphi)$ and any $^*$ as
+	defined we have that:
+	\begin{enumerate}
+		\item $x\vdash\psi\Rightarrow\PRA\vdash L=\ol
+			x\rightarrow\psi^*$
+		\item $x\not\vdash\varphi\Rightarrow \PRA\vdash \ol x\rightarrow
+			\neg\psi^*$
+	\end{enumerate}
+\end{lem}
+\begin{proof}
+\end{proof}
+
+We will now define a function $F$ in the same way as before.
+\begin{align*}
+	F(0)&=0\\
+	F(x+1)&=\begin{cases}
+		y &\ \text{Prov}(\ol x+\ol 1,\Godelnum{L\not =\ol y})\wedge
+			xRy\\
+			F(x) &\ \text{else}
+		\end{cases}
+\end{align*}
+All the Lemmas about $F$ and $L$ still holds. But the behavior $\phi$ has
+changed, since we must added the node  $0$ and we can only use sub formulas of
+$\varphi$. So we define:
+$$p^*=\bigvee\{L=\ol x: 0\leq x\leq n\wedge x\in\phi(p)\}$$
+For $p\in S(\varphi)$ and let $p^*$ be random for all $p$'s that is not a
+subformula of $\varphi$. We now prove and state the following lemma (that
+reminds of what?):
+\begin{lem}
+	Let $0\leq x\leq n$. For any $\psi\in S(\varphi)$ and $^*$ as defined
+	above we have:
+	\begin{enumerate}
+		\item $\vdash_x\psi\Rightarrow\PRA\vdash L=\ol
+			x\rightarrow\psi^*$
+		\item $\not\vdash_x\psi\Rightarrow\PRA\not\vdash L=\ol
+			x\rightarrow\psi^*$
+	\end{enumerate}
+\end{lem}
+\begin{proof}
+	For $0<x$ the proof is identical to the proof of [ref?]. So we will
+	only prove the case where $x=0$. The is again an induction on the
+	complexity of $\psi$. We will only prove the cases where
+	$\psi=\Box\theta$.
+
+	Let $\psi=\Box\theta$. We then have:
+	\begin{align*}
+		\vdash_0\Box\theta&\Rightarrow\forall x(1\leq x\leq
+		n\Rightarrow \vdash_x\theta)\\
+				  &\Rightarrow \forall x(1\leq x\leq
+				  n\Rightarrow \PRA\vdash L=\ol
+				  x\rightarrow\theta^*)
+	\end{align*}
+	Since $x>1$ and this case of the lemma has been proven. We can also
+	make the following deduction by the induction hypothesis:
+	\begin{align*}
+		\vdash_0\Box\theta&\Rightarrow\vdash_1\theta\\
+				  &\Rightarrow\vdash_0\theta\\
+				  &\Rightarrow\PRA\vdash L=\ol
+				  0\rightarrow\theta^*
+	\end{align*}
+	By combing these two we get:
+	\begin{align*}
+		\vdash_0\Box\theta&\Rightarrow\bigwedge_{x\leq n}(\PRA\vdash
+		L=\ol x\rightarrow\theta^*)\\
+				  &\Rightarrow\PRA\vdash(\bigvee_{x\leq n}L=\ol
+				  x)\rightarrow\theta^*\\
+				  &=\PRA\vdash\text{Pr}(\Godelnum{\bigvee L=\ol
+				  x})\rightarrow\text{Pr}(\Godelnum{\theta^*})
+	\end{align*}
+	But by corollary [<ref?] we have that $\PRA\vdash\bigvee L=\ol x$ and
+	thus $\PRA\vdash\text{Pr}(\Godelnum{\bigvee L=\ol x})$ so all in all we
+	have:
+	\begin{align*}
+		\vdash_0\Box\theta&\Rightarrow \PRA\vdash
+		\text{Pr}(\Godelnum{\theta^*})
+				  &\Rightarrow\PRA\vdash L=\ol
+				  0\rightarrow\text{Pr}(\Godelnum{\theta^*})
+	\end{align*}
+	This proves (1). The proof of (2) is a bit easier. We have:
+	\begin{align*}
+		\not\vdash_0\Box\theta&\Rightarrow\exists x(1\leq x\leq n\wedge
+		\not\vdash_x\theta)\\
+				      &\Rightarrow\exists x(1\leq x\leq
+				      n\wedge\PRA\vdash L=\ol x\rightarrow
+				      \neg\theta^*)\\
+				      &\Rightarrow\exists x(1\leq x\leq n\wedge
+				      \PRA\vdash\theta^*\rightarrow L\not =\ol
+				      x)\\
+				      &\Rightarrow\PRA\vdash L=\ol 0\rightarrow
+				      \neg \text{Pr}(\Godelnum{\theta^*})
+	\end{align*}
+	And thus by Lemma [Ref?] we have that $\PRA\vdash L=\ol
+	0\rightarrow\neg\text{Pr}(\Godelnum{L\not =\ol x})$ for $x>0$
+\end{proof}
+We thus have that $L=\ol 0$ is true, and we  can now finally prove the second completeness theorem:
+\begin{proof}[Proof of the Second Completeness theorem]
+	Assume that $\varphi$ is false in $\mathcal{\ol K}$ i.e
+	$\not\vdash_1\varphi$. Then by lemma [asd] we get $\not\vdash_0\varphi$
+	and the just proven lemma gives:
+	$$\PRA\vdash L=\ol 0\rightarrow\neg\varphi^*$$
+	Since we have that $L=\ol 0$ is true we then get $\neg\varphi^*$ which
+	just means that $\varphi^*$ is false.
+\end{proof}
+\subsection{Using the Second Completeness Theorem}
+We can use the second completeness theorem to prove the following theorem named
+after Rosser:
+\begin{thm}
+	There is a $\Sigma_1$-sentences $\varphi$ such that:
+	\begin{enumerate}
+		\item $\PRA\not\vdash\varphi$
+		\item $\PRA\not\vdash\not\varphi$
+		\item $\PRA\vdash \Con\rightarrow\neg \Pr(\Godelnum{\varphi})$
+		\item $\PRA\vdash \Con\rightarrow\neg
+			PPr(\Godelnum{\neg\varphi})$
+	\end{enumerate}
+\end{thm}
+\section{Further Completeness Results}
+\end{document}

@@ -1,0 +1,189 @@
+%! TeX program = lualatex
+
+\documentclass[12pt,a4paper,dvipsnames,bibliography=totocnumbered]{scrbook}
+\usepackage{silence}
+\WarningFilter{latex}{You have requested package} %For silence a strange error	
+\usepackage{KUstyle}				  %Front pgage
+\usepackage{geometry}				  %Page setup
+\usepackage{amsthm}				  %Theorems enviroments
+\usepackage{setspace}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{luacolor}
+\usepackage[headsepline,automark]{scrlayer-scrpage}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{fontspec}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{cancel}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{lastpage}
+\usepackage{nd3}				  %Lemmon style proof
+\usepackage{proof}
+\usepackage{subfiles}				  % For subfiles	
+\usepackage{accents}
+\usepackage{bookmark}
+\usepackage{csquotes}
+
+%Biblo
+\usepackage{natbib}
+\bibliographystyle{abbrvnat}
+\setcitestyle{authoryear,open={[},close={]}} %Citation-related commands
+
+
+
+%Koma options
+\addtokomafont{headsepline}{\color{OliveGreen}}
+\renewcommand{\headfont}{\color{OliveGreen}}
+
+
+%New Commands
+\definecolor{dg}{RGB}{10,90,60} %Denne skal skiftes.
+\newcommand\nmodels{\mathbin{\cancel{\models}}}
+
+
+%New Theorems.
+\newtheoremstyle{dotlessS}{}{}{}{}{\color{dg}\bfseries}{}{ }{}
+
+\theoremstyle{dotlessS}
+\newtheorem{defi/}{Definition}[chapter]
+
+\theoremstyle{dotlessS}
+\newtheorem{thm}{Theorem}[chapter]
+
+\theoremstyle{dotlessS}
+\newtheorem{lem}{Lemma}[chapter]
+
+\theoremstyle{dotlessS}
+\newtheorem{prop}{Proposition}[chapter]
+
+\theoremstyle{dotlessS}
+\newtheorem{cor}{Corollary}[chapter]
+\newtheorem{lemma}[thm]{Lemma}
+\newtheorem{remark}{Remark}[chapter]
+
+\theoremstyle{dotlessS}
+\newtheorem{exmp/}{Example}[chapter]
+
+%\theoremstyle{definition}
+%\newtheorem{defi/}{Definition}
+
+\newenvironment{defi}
+  {\renewcommand{\qedsymbol}{$\dashv$}%
+   \pushQED{\qed}\begin{defi/}}
+  {\popQED\end{defi/}}
+
+\newenvironment{exmp}
+  {\renewcommand{\qedsymbol}{$\dashv$}%
+   \pushQED{\qed}\begin{exmp/}}
+  {\popQED\end{exmp/}}
+
+%Turnstile instead of box in end of proof
+\renewcommand\qedsymbol{$\dashv$}
+\renewcommand*{\proofname}{\color{dg}Proof}
+\newcommand*{\footcite}[1]{\footnote{\cite{#1}}}
+
+
+%Different shortcuts for symbols
+\newcommand{\Su}{\boldsymbol{S}}
+\newcommand{\0}{\overline{0}}
+\newcommand{\E}{\boldsymbol{E}}
+\newcommand{\PRA}{\text{\textbf{PRA}}}
+\newcommand{\Kfour}{\text{\textbf{K4}}}
+\newcommand{\PA}{\text{\textbf{PA}}}
+\newcommand{\R}{\text{\textbf{R}}}
+\newcommand{\Q}{\text{\textbf{Q}}}
+\newcommand{\Con}{\text{Con}}
+\newcommand{\GL}{\text{\textbf{GL}}}
+\newcommand{\GLS}{\text{\textbf{GLS}}}
+\newcommand{\ol}{\overline}
+\newcommand{\x}{x_1,\ldots,x_n}
+\newcommand{\y}{y_1,\ldots,y_n}
+\newcommand{\la}{\langle}
+\newcommand{\ra}{\rangle}
+\newcommand*{\dt}[1]{%
+  \accentset{\mbox{\large\bfseries .}}{#1}}
+
+%Godel number
+\newbox\gnBoxA
+\newdimen\gnCornerHgt
+\setbox\gnBoxA=\hbox{$\ulcorner$}
+\global\gnCornerHgt=\ht\gnBoxA
+\newdimen\gnArgHgt
+\def\Godelnum #1{%
+\setbox\gnBoxA=\hbox{$#1$}%
+\gnArgHgt=\ht\gnBoxA%
+\ifnum     \gnArgHgt<\gnCornerHgt \gnArgHgt=0pt%
+\else \advance \gnArgHgt by -\gnCornerHgt%
+\fi \raise\gnArgHgt\hbox{$\ulcorner$} \box\gnBoxA %
+\raise\gnArgHgt\hbox{$\urcorner$}}
+
+
+%Strong Box
+\makeatletter
+\newcommand*\bigcdot{\mathpalette\bigcdot@{.5}}
+\newcommand*\bigcdot@[2]{\mathbin{\vcenter{\hbox{\scalebox{#2}{$\m@th#1\bullet$}}}}}
+\makeatother
+\newcommand{\Bigcdot}{\raisebox{\dimexpr1.09ex- \height}{$\bigcdot$}}
+\newcommand{\sBox}{\mathrel{\Box\!\!\!\boldsymbol{\Bigcdot}}}
+
+\pagenumbering{roman}
+
+
+%Color scheme
+\addtokomafont{chapter}{\color{OliveGreen}}
+\addtokomafont{section}{\color{OliveGreen}}
+\addtokomafont{subsection}{\color{OliveGreen}}
+
+\AfterTOCHead[toc]{\hypersetup{linkcolor=.}}% use current color as linkcolor in TOC
+\addtokomafont{disposition}{\color{OliveGreen}}% blue headings
+
+%Info for frontpage
+\ptype{Master Thesis}
+\author{Thorvald Demuth Jørgensen}
+\title{Provability Logic}
+\subtitle{-}
+\date{Date: {\today}}
+\advisor{Advisor: {Asger Dag Törnquist}}
+
+\setlength{\headheight}{52pt}% ...at least 51.60004pt
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+%Page setup
+\pagenumbering{arabic}
+
+%Main text
+\chapter{Introduction:}
+\subfile{intro}
+
+\chapter{Preliminary}
+\subfile{Pre}
+
+\chapter{Recursion Theory}
+\subfile{Recur}
+
+\chapter{Fragments of Arithmetics}
+\subfile{PRA}
+
+\chapter{General results on GL}
+\subfile{GL}
+
+\chapter{Fixed point lemma}
+\subfile{Fixed}
+
+\chapter{Solovays completeness theorems}
+\subfile{Complete}
+
+\chapter{Further results in Provability logic}
+\subfile{Further}
+\nocite{*}
+%\printbibliography
+\bibliography{ThesisBib}
+\end{document}
+
