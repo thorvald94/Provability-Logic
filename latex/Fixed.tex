@@ -2,130 +2,166 @@
 
 \begin{document}
 In this section we will prove the so called \textit{fixed point theorem} for
-\GL. Before stating this theorem, we will have to use the following two
+\GL.  This theorems says that there for some sentences of \GL\ exists fixed
+points. There has been a lot of different ways to prove this theorem. Here we
+will follow the proof from \cite{Olson1990}.
+
+
+Before stating the theorem, we will have to state the following 
 definitions:
 
 \begin{defi}
-	We abbreviate $\Box\varphi\wedge\varphi$ as $\sBox\varphi$ for every
-	$\varphi$ in our langauge.
+	We abbreviate $\Box\alpha\wedge\alpha$ as $\sBox\alpha$ for every
+	$\alpha$ in our langauge.
 \end{defi}
+$\sBox$ is called "strong box".
 \begin{remark}
 	\label{rem:acc}
-By our semantic of modal logic, this we have that $\vDash_w\sBox\varphi$ is true iff $\vDash_v\varphi$
-for all $v\in\{w\}\cup\text{acc}(w), where $\text{acc}(w) are $\text{acc}(w)$
+By our semantic of modal logic, this we have that $\vDash_w\sBox\alpha$ is true iff $\vDash_v\alpha$
+for all $v\in\{w\}\cup\text{acc}(w)$, where $\text{acc}(w)$ are $\text{acc}(w)$
 is the collection of "states" that can be "seen" from $w$, i.e:
 $\text{acc}=\{v\in W:wRv\}$
 \end{remark}
-\begin{lem}
-	Måske Olsons lemma 3.
-\end{lem}
 Another useful definition that we can make, since we for every Kripke model
-$\mathcal{K}=\la W,R,\phi\ra$ have that $W$ is a finite set is the following:
+$\mathcal{K}=\la W,R,\phi\ra$ of \GL\  have that $W$ is a finite set is the following:
 \begin{defi}
-	Let $\mathcal{K}=\la W,R,\phi\ra$ be a Kripke model. The
-	$\mathcal{K}$-rank of the notes $w\in W$ is defined in the following
-	way: $\mathcal{K}-\text{rank}(w)=0$ iff there is no world $v$ such that
+	Let $\mathcal{K}=\la W,R,\phi\ra$ be a Kripke model of \GL. The
+	\textit{rank} of the notes $w\in W$ is defined in the following
+	way: $\text{rank}(w)=0$ iff there is no world $v$ such that
 	$wRv$. Otherwise we have that
-	$\mathcal{K}-\text{rank}(w)=1+\text{max}\{\mathcal{K}-\text{rank}(v):wRv\}$.
+	$\text{rank}(w)=1+\text{max}\text{rank}(v):wRv\}$.
 \end{defi}
 Since $W$ is finite and that $R$ is irreflexive we have that the for each $w\in
 W$ the $\mathcal{K}$-rank of $w$ is unique.
 \begin{defi}
-	A sentence $\varphi$ is called modalized in $p$ if every occurence of
-	$p$ in  $\varphi$ is under the scope of $\Box$.
+	A sentence $\alpha$ is called modalized in $p$ if every occurence of
+	$p$ in  $\alpha$ is under the scope of $\Box$.
 \end{defi}
 We will also need the following definition:
 \begin{defi}
-	A sentence $\varphi$ is said to be $n$-decomposable iff for some
+	A sentence $\alpha$ is said to be $n$-\textit{decomposable} iff for some
 	sequence $q_1,\ldots,q_n$ consisting of distinct senctence letters that
-	do not occur in $\varphi$ we have some sentence $\psi(q_1,\ldots,q_n)$
+	do not occur in $\alpha$ we have some sentence $\beta(q_1,\ldots,q_n)$
 	that do not contain $p$ and another sequence of distinct sentences 
-	$\theta_1(p),\ldots,\theta_n(p)$, which each contains $p$ that we have
-	$$\varphi=\psi(\theta_1(p),\ldots,\theta_n(p))$$.
+	$\gamma_1(p),\ldots,\gamma_n(p)$, which each contains $p$ that we have
+	$$\alpha=\beta(\gamma_1(p),\ldots,\gamma_n(p))$$.
 \end{defi}
-It should be noted that if $\varphi$ is modalized in $p$ that we then have that
-$\varphi$ is $n$-decomposable for some $n$.
+It should be noted that if $\alpha$ is modalized in $p$ that we then have that
+$\alpha$ is $n$-decomposable for some $n$.
 We can now state the following theorem:
-\begin{thm}
-	For very sentence $\varphi$ modalized in $p$, there exists a sentence
-	$\sigma$ that only contains sentence letters that are contained in
-	$\varphi$, but where $p$ is not a sentence letter in $\sigma$, and such that:
-	$$\GL\vdash\sBox(p\leftrightarrow\varphi)\rightarrow p\leftrightarrow\sigma)$$
-	Every such sentence $\sigma$ is called a fixed point of $\varphi$.
-\end{thm}
-We can specify this theorem. Since the fixed point $\sigma$ dose not contain a
-$p$. So if we write $\varphi(p)$ instead of $\varphi$ we get that:
-$$\GL\vdash \sBox(\sigma\leftrightarrow \varphi(p))\leftrightarrow\sBox
-(\sigma\leftrightarrow\sigma)$$
-by substituting $p$ with $\sigma$ in the theorem, and this finally gives us:
-$$\GL\vdash\sigma\leftrightarrow\varphi(\psi)$$
-The first proofs of this theorem was found independently by Dick de Jongh [Ref] and
-Giovanni Sambin [Ref]. The proof I will follow here is due to Lisa
-Reidhaar-Olsona [Ref]. This proof is a semantical one and makes use of the
-Kripke model of \GL.
 
 We will need the following three lemmas in our proof of the Fixed Point Theorem:
 \begin{lem}
 	\label{lem:acc}
-	Given any Kripke model $\mathcal{K})\la W,R,\phi\ra$, $w\in W$ and
-	sentence $\varphi$, we have that if $\vDash_w\Box\varphi$ then
-	$\vDash_v\Box\varphi$ for any $v\in\text{acc}(w)$. Further we have that
-	$\vDash_v\sBox\varphi$ for all $x\in\text{acc}(w)$.
+	Given any Kripke model $\mathcal{K})\la W,R,\phi\ra$ of \GL, $w\in W$ and
+	sentence $\alpha$, we have that if $\vDash_w\Box\alpha$ then
+	$\vDash_v\Box\alpha$ for any $v\in\text{acc}(w)$. Further we have that
+	$\vDash_v\sBox\alpha$ for all $x\in\text{acc}(w)$.
 \end{lem}
 \begin{proof}
-	Assume that we have $\vDash_w\Box\varphi$, $w$ is connected to $v$ and
-	$v$ is connected $v'$. Since $R$ is transitive we have that $w$ is also
-	connected to $v'$ and thus we have that $\vDash_{v'}\varphi$. Since
-	$v'$ was chosen at random we have that $\vDash_v\Box\varphi$. We also
-	have that $\vDash_v\varphi$ and thus we have $\vDash_v\sBox\varphi$.
+	Assume that we have $\vDash_w\Box\alpha$, $w$ sees  $v$ and
+	$v$ sees $v'$. Since $R$ is transitive we have that $w$ is also
+	connected to $v'$ and thus we have that $\vDash_{v'}\alpha$. Since
+	$v'$ was chosen at random we have that $\vDash_v\Box\alpha$. We also
+	have that $\vDash_v\alpha$ and thus we have $\vDash_v\sBox\alpha$.
 \end{proof}
 \begin{lem}
 	\label{lem:con}
 	Given any Kripke model $\mathcal{K}=\la W,R,\phi\ra$, $w\in W$ and
-	sentence $\varphi$, if $\not\vDash_w\Box\varphi$ then there is "notes"
-	$v$ connected to $w$ such that $\vDash_v\Box\varphi$ and
-	$\not\vDash_v\varphi$.
+	sentence $\alpha$, if $\not\vDash_w\Box\alpha$ then there is "notes"
+	$v$ connected to $w$ such that $\vDash_v\Box\alpha$ and
+	$\not\vDash_v\alpha$.
 \end{lem}
 \begin{proof}
-	Assume that $\not\vDash_w\Box\varphi$ then there is a notes $v$
-	connected to $w$ such that $\not\vDash_v\varphi$. Let $v$ be the notes
+	Assume that $\not\vDash_w\Box\alpha$ then there is a notes $v$
+	connected to $w$ such that $\not\vDash_v\alpha$. Let $v$ be the notes
 	with the least rank with this property and suppose that $vRv'$. Since
-	$v'$ is of less rank than $v$ we have that $\vDash_{v'}\varphi$. Now
-	since $v'$ was chosen arbitrarily we have that $\vDash_v\Box\varphi$ and
+	$v'$ is of less rank than $v$ we have that $\vDash_{v'}\alpha$. Now
+	since $v'$ was chosen arbitrarily we have that $\vDash_v\Box\alpha$ and
 	the lemma is proven.
 \end{proof}
-\begin{lem}
+The next lemma will be crucial in the proof of the fixed-point theorem.
+\begin{lem}[Semantic Substitution Lemma]
 	\label{lem:sem}
-	For any sentences $\varphi,\psi$ and $\theta$ we have that the
-	following formula is valid:
-	$$\sBox(\psi\leftrightarrow\theta)\rightarrow(\varphi(\psi)\leftrightarrow\varphi(\theta))$$
+	For any sentences $\alpha,\beta$ and $\gamma$ we have that the
+	following formula is valid in all models of \GL:
+	$$\sBox(\beta\leftrightarrow\gamma)\rightarrow(\alpha(\beta)\leftrightarrow\alpha(\gamma))$$
 \end{lem}
-bevis as fixed punkt
-
+The meaning of $\alpha(\beta)$ is that we replace every occurrences of $p$ in
+$\alpha$ with $\beta$; the meaning of $\alpha(\gamma)$ is similar.
 
 \begin{proof}
-	We will prove this by showing that if $\varphi$ is $n$-decomposable
+	We start of by fixing $\beta$ and $\gamma$. The proof will be by
+	induction on the complexity of $\alpha$. We will only proof the part
+	where $\alpha$ is $\Box\sigma$.
+
+	So suppose that $\alpha$ is $\Box\sigma$, where
+	$\sBox(\beta\leftrightarrow\gamma)\rightarrow(\sigma(\beta)\leftrightarrow\sigma(\gamma))$
+	is valid. Let $\mathcal{K}$ be any model of \GL\ and let $w\in W$.
+	Suppose that $\vDash_w\sBox(\beta\leftrightarrow\gamma)$. Let $v$ be
+	any world seen by $w$. Then by lemma \ref{lem:acc} we have
+	$\vDash_v\sBox(\beta\leftrightarrow\gamma)$. Since 
+	$\sBox(\beta\leftrightarrow\gamma)\rightarrow(\sigma(\beta)\leftrightarrow\sigma(\gamma))$
+	is valid we get that
+	$\vDash_v\sigma(\beta)\leftrightarrow\sigma(\gamma)$ and since
+	$v$ was chosen arbitrary we get
+	$\vDash_w\Box(\sigma(\beta)\leftrightarrow\sigma(\gamma))$. By
+	proposition \ref{prop:GL} and weak completeness we can conclude
+	$\vDash_w\Box\sigma(\beta)\leftrightarrow\sigma(\gamma)$.
+\end{proof}
+
+We are now almost ready to state state and prove the fixed-point theorem. We
+will just need the next to definitions:
+\begin{defi}
+	A sentence $\alpha$ is called modalized in $p$ if every occurence of
+	$p$ in  $\alpha$ is under the scope of $\Box$.
+\end{defi}
+We will also need the following definition:
+\begin{defi}
+	A sentence $\alpha$ is said to be $n$-\textit{decomposable} iff for some
+	sequence $q_1,\ldots,q_n$ consisting of distinct senctence letters that
+	do not occur in $\alpha$ we have some sentence $\beta(q_1,\ldots,q_n)$
+	that do not contain $p$ and another sequence of distinct sentences 
+	$\gamma_1(p),\ldots,\gamma_n(p)$, which each contains $p$ that we have
+	$$\alpha=\beta(\gamma_1(p),\ldots,\gamma_n(p))$$.
+\end{defi}
+It should be noted that if $\alpha$ is modalized in $p$ that we then have that
+$\alpha$ is $n$-decomposable for some $n$.
+
+
+We can now state the fixed point theorem.
+\begin{thm}
+	If $\alpha$ is modalized in $p$, then there exists a formula $\sigma$
+	in which the only sentence letters that occurs are these other than $p$
+	that occur in $\alpha$, and such that:
+	\[\sBox(p\leftrightarrow\alpha)\rightarrow(p\leftrightarrow\sigma)\]
+	The formula $\sigma$ is called a \textit{fixed-point} of $\alpha$.
+\end{thm}
+We will later on proof that $\vdash_\GL\sigma\leftrightarrow\alpha(\sigma)$ for
+such a $\sigma$ and thus the name fixed point makes sense.
+\begin{proof}
+	We will prove this by showing that if $\alpha$ is $n$-decomposable
 	then it has a fixed point. We will show this by induction on $n$.
 
-	\textbf{Base case:} Suppose that $\varphi$ is $0$-decomposable. Then we
-	have that $p$ dose not occur in $\varphi$ and it can thus itself be the
-	sentence $\psi$.
+	\textbf{Base case:} Suppose that $\alpha$ is $0$-decomposable. Then we
+	have that $p$ dose not occur in $\alpha$ and it can thus itself be the
+	sentence $\beta$.
 
 	\textbf{Induction step:}
 	Assume that every sentence that is $n$-decomposable has a fixed point.
 	We now have to show that every sentence that is $(n+1)$-decomposable
 	also has a fixed point. To show this we will assume the following:
-	$$\varphi(P)=\psi(\Box\theta_1(p),\ldots,\Box_{n+1}(p))$$
+	$$\alpha(P)=\beta(\Box\gamma_1(p),\ldots,\Box_{n+1}(p))$$
 	Further for each $i$ let:
-	$$\varphi_i(p)=\psi(\Box\theta_1(p),\ldots,\Box\theta_{i-1},\top,\Box\theta_{i+1},\ldots,\Box\theta_{n+1}(p))$$
-	Thus we have that for each $i$ that $\varphi(p)$ is $n$-decomposable,
+	$$\alpha_i(p)=\beta(\Box\gamma_1(p),\ldots,\Box\gamma_{i-1},\top,\Box\gamma_{i+1},\ldots,\Box\gamma_{n+1}(p))$$
+	Thus we have that for each $i$ that $\alpha(p)$ is $n$-decomposable,
 	so it has a fixed point, that we call $\sigma_i$. Lastly we define:
-	$$\sigma=\psi(\Box\theta_1(\sigma_1),\ldots,\Box\theta_{n+1}(\sigma_{n+1}))$$
-	Our goal is to show that $\sigma$ is a fixed point of $\varphi$.
+	$$\sigma=\beta(\Box\gamma_1(\sigma_1),\ldots,\Box\gamma_{n+1}(\sigma_{n+1}))$$
+	Our goal is to show that $\sigma$ is a fixed point of $\alpha$.
 	\begin{lem}
 		\label{lem:fix}
 		For each $i$ we have that:
-		$$\vdash_\GL\sBox(p\leftrightarrow\varphi)\rightarrow\sBox\Box\theta_i(p)\leftrightarrow\theta_i(\sigma_i))$$
+		$$\vdash_\GL\sBox(p\leftrightarrow\alpha)\rightarrow\sBox\Box\gamma_i(p)\leftrightarrow\gamma_i(\sigma_i))$$
 	\end{lem}
 	\begin{proof}
 		Since we have that \GL\ is complete, we just ave to show that
@@ -133,88 +169,156 @@ bevis as fixed punkt
 		that:
 		\begin{equation}
 		\label{eqn:1}
-			\mathcal{K}\vDash\sBox(p\leftrightarrow\varphi)\rightarrow\sBox(\Box\theta_i(p)\leftrightarrow
-		\Box\theta_i(\sigma_i))
+			\mathcal{K}\vDash\sBox(p\leftrightarrow\alpha)\rightarrow\sBox(\Box\gamma_i(p)\leftrightarrow
+		\Box\gamma_i(\sigma_i))
 	\end{equation}
 		So we will start of by fixing $i$, $\mathcal{K}$ and $w\in W$.
 		We will show \ref{eqn:1} by assuming
-		$\vDash_w\sBox(p\leftrightarrow\varphi)$ and then deduce:
-		$\vDash_w\sBox(\Box\theta_i(p)\leftrightarrow\Box\theta_i(\sigma_i))$;
+		$\vDash_w\sBox(p\leftrightarrow\alpha)$ and then deduce:
+		$\vDash_w\sBox(\Box\gamma_i(p)\leftrightarrow\Box\gamma_i(\sigma_i))$;
 		this is equivalent to $\vDash_v\Box
-		\theta_i(p)\leftrightarrow\Box\theta_i(\sigma_i)$ for all
+		\gamma_i(p)\leftrightarrow\Box\gamma_i(\sigma_i)$ for all
 		$v\in\{w\}\sup\text{acc}(w)$ by remark \ref{rem:acc}. So let
 		$v\in\{w\}\cup\text{acc}(w)$ and assume that
-		$\vDash\Box\theta_i(p)$, i.e
-		$\vDash_v\Box\theta_i(p)\leftrightarrow\top$. By lemma
+		$\vDash\Box\gamma_i(p)$, i.e
+		$\vDash_v\Box\gamma_i(p)\leftrightarrow\top$. By lemma
 		\ref{lem:acc} we have that for any $v'\in\text{acc}(v)$ that
-		$\vDash_{v'}\Box\theta_i(p)$ and thus
-		$\vDash_{v'}(\Box\theta_i(p)\leftrightarrow\top$. This means
+		$\vDash_{v'}\Box\gamma_i(p)$ and thus
+		$\vDash_{v'}(\Box\gamma_i(p)\leftrightarrow\top$. This means
 		that we have:
-		$$\vDash_v\sBox(\Box\theta_i(p)\leftrightarrow\top)$$
+		$$\vDash_v\sBox(\Box\gamma_i(p)\leftrightarrow\top)$$
 		And thus by lemma \ref{lem:sem} we get that
-		$\vDash_v\varphi_i\leftrightarrow\varphi$ and since our $v$ was
+		$\vDash_v\alpha_i\leftrightarrow\alpha$ and since our $v$ was
 		chosen arbitrarily we have that
-		$\vDash_w\Box(\varphi_i\leftrightarrow\varphi)$ and thus by
+		$\vDash_w\Box(\alpha_i\leftrightarrow\alpha)$ and thus by
 		lemma \ref{lem:acc} we get that:
-		$\vDash_v\sBox(\varphi_i\leftrightarrow\varphi)$. Since we have
-		assumed that $\vDash_w\sBox(p\leftrightarrow\varphi)$ we again
+		$\vDash_v\sBox(\alpha_i\leftrightarrow\alpha)$. Since we have
+		assumed that $\vDash_w\sBox(p\leftrightarrow\alpha)$ we again
 		have by lemma \ref{lem:acc} that
-		$\vDash_v\sBox(p\leftrightarrow\varphi)$, and hence we have
-		$\vDash_v\sBox(p\leftrightarrow\varphi_i)$. Since our logic is
+		$\vDash_v\sBox(p\leftrightarrow\alpha)$, and hence we have
+		$\vDash_v\sBox(p\leftrightarrow\alpha_i)$. Since our logic is
 		complete and we have assumed by the induction hypothesis that
-		$\varphi_i$ has a fixed point $\sigma_i$ we have that
-		$\vDash_v(p\leftrightarrow\theta_i)$, and thus, since $v$ was
+		$\alpha_i$ has a fixed point $\sigma_i$ we have that
+		$\vDash_v(p\leftrightarrow\gamma_i)$, and thus, since $v$ was
 		chosen arbitrarily we have that
-		$\vDash_w\Box(p\leftrightarrow\theta_i)$. So by using
+		$\vDash_w\Box(p\leftrightarrow\gamma_i)$. So by using
 		\ref{lem:acc} again we get that
-		$\vDash_v\sBox(p\leftrightarrow\theta_i)$. We will now use
+		$\vDash_v\sBox(p\leftrightarrow\gamma_i)$. We will now use
 		lemma \ref{lem:sem} again and get that:
 		\begin{equation}
 			\label{eqn:sub1}
-			\vDash_v\theta_i(p)\leftrightarrow\theta_i(\sigma_i)
+			\vDash_v\gamma_i(p)\leftrightarrow\gamma_i(\sigma_i)
 		\end{equation}
 		and
 		\begin{equation}
 			\label{eqn:sub2}
-			\vDash_v\Box\theta_i(p)\leftrightarrow\Box\theta_i(\sigma_i)
+			\vDash_v\Box\gamma_i(p)\leftrightarrow\Box\gamma_i(\sigma_i)
 		\end{equation}
 		Notice that these two holds for any $v\in\{w\}\cup\text{acc}(w)$ such that
-		$\vDash_v\Box\theta_i(p)$.
+		$\vDash_v\Box\gamma_i(p)$.
 		Further by \ref{eqn:sub2} we can deduce
-		$\vDash_v\Box\theta_i(p)\rightarrow\Box\theta_i(\sigma_i)$
+		$\vDash_v\Box\gamma_i(p)\rightarrow\Box\gamma_i(\sigma_i)$
 
 		For the next step of the prove of this lemma we will assume that
-		$\not\vDash_v\Box\theta_i(p)$. This means by lemma
+		$\not\vDash_v\Box\gamma_i(p)$. This means by lemma
 		\ref{lem:con} that there is some world $v'$ where
-		$v'\in\text{acc}(v)$, such that $\not\vDash_{v'}\theta_i(p)$
-		and $\vDash_{v'}\Box\theta_i(p)$. \ref{eqn:sub1} holds for $v'$
+		$v'\in\text{acc}(v)$, such that $\not\vDash_{v'}\gamma_i(p)$
+		and $\vDash_{v'}\Box\gamma_i(p)$. \ref{eqn:sub1} holds for $v'$
 		since $v'\in\{w\}\cup\text{acc}(w)$ and thus we have
-		$\vDash_{v'}\theta_i(p)\leftrightarrow\theta_i(\sigma_i)$. This
-		gives that $\not\vDash_{v'}\theta_i(\sigma_i)$ and thus since
-		$vRv'$ we have that $\not\vDash_v\Box\theta_i(\sigma_i)$. By
+		$\vDash_{v'}\gamma_i(p)\leftrightarrow\gamma_i(\sigma_i)$. This
+		gives that $\not\vDash_{v'}\gamma_i(\sigma_i)$ and thus since
+		$vRv'$ we have that $\not\vDash_v\Box\gamma_i(\sigma_i)$. By
 		contraposition we then get:
-		$\vDash_v\Box\theta_i(\sigma_i)\rightarrow\Box\theta_i(p)$, and
+		$\vDash_v\Box\gamma_i(\sigma_i)\rightarrow\Box\gamma_i(p)$, and
 		thus we have shown that:
-		$$\vDash_v\Box\theta_i(p)\leftrightarrow\Box\theta_i(\sigma_i)$$
+		$$\vDash_v\Box\gamma_i(p)\leftrightarrow\Box\gamma_i(\sigma_i)$$
 		We have now shown the lemma.
 	\end{proof}
 	We now go back and finish our proof of the fixed point theorem. Suppose
 	that $\mathcal{K}$ is a model and that $w\in W$ such that
-	$\vDash_w\sBox(p\leftrightarrow\varphi)$. By lemma \ref{lem:fix} and
+	$\vDash_w\sBox(p\leftrightarrow\alpha)$. By lemma \ref{lem:fix} and
 	completeness we get
-	$\vDash_w\sBox(\Box\theta_i(p)\leftrightarrow\Box\theta_i(\sigma_i))$.
+	$\vDash_w\sBox(\Box\gamma_i(p)\leftrightarrow\Box\gamma_i(\sigma_i))$.
 	By using lemma \ref{lem:sem} $(n+1)$ times we can deduce that:
-	$$\vDash_w\psi(\Box\theta_i(p),\ldots,\Box\theta_{n+1}(p))\leftrightarrow\psi(
-	\Box\theta_1(\sigma_1),\ldots,\Box\theta_{n+1}(\sigma_{n+1}))$$
-	i.e $\vDash_w\varphi\leftrightarrow\sigma$. 
+	$$\vDash_w\beta(\Box\gamma_i(p),\ldots,\Box\gamma_{n+1}(p))\leftrightarrow\beta(
+	\Box\gamma_1(\sigma_1),\ldots,\Box\gamma_{n+1}(\sigma_{n+1}))$$
+	i.e $\vDash_w\alpha\leftrightarrow\sigma$. 
 
-	Since we have $\vDash_w p\leftrightarrow\varphi$ we get $\vDash_w
+	Since we have $\vDash_w p\leftrightarrow\alpha$ we get $\vDash_w
 	p\leftrightarrow\sigma$, we can obtain
-	$\vDash_w\sBox(p\leftrightarrow\varphi)\rightarrow(p\leftrightarrow\sigma)$.
+	$\vDash_w\sBox(p\leftrightarrow\alpha)\rightarrow(p\leftrightarrow\sigma)$.
 	Since our $\mathcal{K}$ and $w$ was chosen at random we have that
-	$\sBox(p\leftrightarrow\varphi)\rightarrow(p\leftrightarrow\sigma)$ is
+	$\sBox(p\leftrightarrow\alpha)\rightarrow(p\leftrightarrow\sigma)$ is
 	valid. By completeness we then have:
-	$\vdash_\GL\sBox(p\leftrightarrow\varphi)\rightarrow(p\leftrightarrow
+	$\vdash_\GL\sBox(p\leftrightarrow\alpha)\rightarrow(p\leftrightarrow
 	\sigma)$
+\end{proof}
+The following result follows from the fixed-point theorem.
+\begin{thm}\label{thm:exi}
+	Let $\alpha(p)$ be modalized in $p$, and let $\sigma$ be a fixed-point
+	of $\alpha$. Then:
+	\[\vdash_\GL\sBox(p\leftrightarrow\sigma)\rightarrow(p\leftrightarrow\alpha)\]
+\end{thm}
+\begin{proof}
+	Suppose that $\mathcal{K}=\la W,R,\phi\ra$ is a finite transitive and irreflexive model
+	in which
+	$\sBox(p\leftrightarrow\sigma)\rightarrow(p\leftrightarrow\alpha)$ is
+	invalid. This means that for some $w\in W$ of least rank that we have:
+	$\vDash_w\sBox(p\leftrightarrow\sigma)$ and thus $\vDash_w
+	p\leftrightarrow\sigma$ and $\not\vDash_w p\leftrightarrow\alpha$. If $wRv$
+	then $\vDash_v\sBox(p\leftrightarrow\sigma)$ and since $x$ of lower
+	rank than $w$ we also have $\vDash_v p\leftrightarrow\alpha$. Let
+	$\varphi'$ be like $\varphi$ expect that $p\in\phi'(w)$ if and only if
+	not $p\in\phi(w)$. Set $\mathcal{K}'=\la W,R,\phi'\ra$, and this model
+	is clearly transitive and irreflexive.
+
+	In the rest of this prove we will use theorem: \textbf{State og bevis:
+	Continuty heorem}. 
+
+
+	The formula $\alpha$ is a truth-functional compound (\textbf{Hvad
+	betyder dette?} of closed formulas $\Box\beta$ and proportional letters $q$
+	such that each $q$ is not $p$. We have that
+	$\vDash_w^\mathcal{K}\Box\beta$ if and only if
+	$\vDash_v^\mathcal{K}\beta$ for all $v$ such that $wRv$, if and only if
+	$\vDash_v^{\mathcal{K}'}$ for all $v$ such that $wRv$ (by continuity),
+	if and only if $\vDash_w^{\mathcal{K}'}\Box\beta$. We further have by
+	the definition of $\mathcal{K}'$ that $\vDash_w^\mathcal{K}\alpha$ if
+	and only iff $\vDash_w^{\mathcal{K}'}$ and $\vDash_w^\mathcal{K}p$ if
+	and only if not $\vDash_w^{\mathcal{K}'}p$. Thus we have
+	$\vDash_w^{\mathcal{K}'}p\leftrightarrow\alpha$ and b the conti theorem
+	we again get $\vDash_v^{\mathcal{K}'}p\leftrightarrow\alpha$ for all
+	$v$ such that $wRv$. But this means that we get
+	$\vDash_w^{\mathcal{K}'}\sBox(p\leftrightarrow\alpha)$.
+	
+	Since $\sigma$ does not contain $p$ we get by the conti them that
+	$\vDash_w^\mathcal{K}\sigma$ if and only if
+	$\vDash_w^{\mathcal{K}'}\sigma$. Since we have that
+	$\vDash_w^\mathcal{K} p$ if and only if not $\vDash_w^{\mathcal{K}'}p$
+	we get $\not\vDash_w^{\mathcal{K}'}p\leftrightarrow \sigma$ and thus
+	$\sBox(p\leftrightarrow\sigma)\rightarrow(p\leftrightarrow\sigma)$ is
+	invalid.
+
+	By soundness and completeness of \GL\ we thus get that if
+	$\vdash_\GL\sBox(p\leftrightarrow\alpha)\rightarrow(p\leftrightarrow\sigma)$
+	then
+	$\vdash_\GL\sBox(p\leftrightarrow\sigma)\rightarrow(p\leftrightarrow\alpha)$.
+\end{proof}
+From this we can prove the following corollary that show that the name
+fixed-point is appropriate:
+\begin{cor}
+	Let $\alpha(p)$ be modalized in $p$ and let $\sigma$ be a fixed-point
+	of $\alpha$. Then:
+	\[\vdash_G\sigma\leftrightarrow\alpha(\sigma)\]
+\end{cor}
+\begin{proof}
+	Since we have assumed uniform substitution and by theorem \ref{thm:exi}
+	the result of substituting $\sigma$ for $p$ in
+	$\sBox(p\leftrightarrow\sigma)\rightarrow(p\leftrightarrow\alpha)$ is a
+	theorem of \GL. This means that
+	$\vdash_\GL\sBox(\sigma\leftrightarrow\sigma)\rightarrow(\sigma\leftrightarrow\alpha(\sigma))$.
+	$\sBox(\sigma\leftrightarrow\sigma)$ is obviously a theorem of \GL\ so
+	we get:
+	\[\vdash_\GL\sigma\leftrightarrow\alpha(\sigma)\]
 \end{proof}
 \end{document}

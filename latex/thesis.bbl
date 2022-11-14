@@ -1,116 +1,1687 @@
-\begin{thebibliography}{20}
-\providecommand{\natexlab}[1]{#1}
-\providecommand{\url}[1]{\texttt{#1}}
-\expandafter\ifx\csname urlstyle\endcsname\relax
-  \providecommand{\doi}[1]{doi: #1}\else
-  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
 
-\bibitem[Blackburn(2002)]{Blackburn2002}
-P.~Blackburn.
-\newblock \emph{{Modal logic}}.
-\newblock Cambridge tracts in theoretical computer science ; 53. Cambridge
-  University Press, Cambridge, 2002.
 
-\bibitem[Blackburn et~al.(2007)Blackburn, van Benthem, and Wolter]{handbook}
-P.~Blackburn, J.~van Benthem, and F.~Wolter, editors.
-\newblock \emph{Handbook of modal logic: 1st ed}, volume~3 of \emph{Studies in
-  logic and practical reasoning}.
-\newblock Elsevier, Amsterdam, 2007.
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global}
+    \entry{Artemov2007}{incollection}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=1841fe17ddbeb4863d02f07ce78da70b}{%
+           family={Artemov},
+           familyi={A\bibinitperiod},
+           given={Sergei},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{3}{}{%
+        {{hash=1cd00d937dca5343c428760ab90b533d}{%
+           family={Blackburn},
+           familyi={B\bibinitperiod},
+           given={P},
+           giveni={P\bibinitperiod}}}%
+        {{hash=b241ddec82f38401f9db6cc3537da2ef}{%
+           family={Benthem},
+           familyi={B\bibinitperiod},
+           given={J},
+           giveni={J\bibinitperiod},
+           prefix={van},
+           prefixi={v\bibinitperiod}}}%
+        {{hash=700371eded20b0fbaff2d775562730e7}{%
+           family={Wolter},
+           familyi={W\bibinitperiod},
+           given={F},
+           giveni={F\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{1841fe17ddbeb4863d02f07ce78da70b}
+      \strng{fullhash}{1841fe17ddbeb4863d02f07ce78da70b}
+      \strng{bibnamehash}{1841fe17ddbeb4863d02f07ce78da70b}
+      \strng{authorbibnamehash}{1841fe17ddbeb4863d02f07ce78da70b}
+      \strng{authornamehash}{1841fe17ddbeb4863d02f07ce78da70b}
+      \strng{authorfullhash}{1841fe17ddbeb4863d02f07ce78da70b}
+      \strng{editorbibnamehash}{38ee60c990236f248bab9f4155347e79}
+      \strng{editornamehash}{38ee60c990236f248bab9f4155347e79}
+      \strng{editorfullhash}{38ee60c990236f248bab9f4155347e79}
+      \field{sortinit}{A}
+      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Handbook of modal logic}
+      \field{chapter}{16}
+      \field{series}{Studies in logic and practical reasoning}
+      \field{title}{Handbook of modal logic: 1st ed}
+      \field{volume}{3}
+      \field{year}{2007}
+      \true{nocite}
+    \endentry
+    \entry{Cooper2004}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5929c3080b415a22e416074508138422}{%
+           family={Barry\bibnamedelima Cooper},
+           familyi={B\bibinitperiod\bibinitdelim C\bibinitperiod},
+           given={S},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Boca Raton}%
+      }
+      \list{publisher}{1}{%
+        {Chapman \& Hall/CRC}%
+      }
+      \strng{namehash}{5929c3080b415a22e416074508138422}
+      \strng{fullhash}{5929c3080b415a22e416074508138422}
+      \strng{bibnamehash}{5929c3080b415a22e416074508138422}
+      \strng{authorbibnamehash}{5929c3080b415a22e416074508138422}
+      \strng{authornamehash}{5929c3080b415a22e416074508138422}
+      \strng{authorfullhash}{5929c3080b415a22e416074508138422}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{series}{Studies in logic and the foundations of mathematics}
+      \field{title}{Computability Theory}
+      \field{year}{2004}
+      \true{nocite}
+    \endentry
+    \entry{Blackburn2002}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=14473cad2b160935933179834d7b5a2f}{%
+           family={Blackburn},
+           familyi={B\bibinitperiod},
+           given={Patrick},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=ce8500c4435316ca20758d1f88f330bb}{%
+           family={Rijke},
+           familyi={R\bibinitperiod},
+           given={Maarten},
+           giveni={M\bibinitperiod},
+           prefix={de.},
+           prefixi={d\bibinitperiod}}}%
+        {{hash=d40c7fca50733ae2aa48d6a98d45a016}{%
+           family={Venema},
+           familyi={V\bibinitperiod},
+           given={Yde},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cambridge}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{14473cad2b160935933179834d7b5a2f}
+      \strng{fullhash}{14473cad2b160935933179834d7b5a2f}
+      \strng{bibnamehash}{14473cad2b160935933179834d7b5a2f}
+      \strng{authorbibnamehash}{14473cad2b160935933179834d7b5a2f}
+      \strng{authornamehash}{14473cad2b160935933179834d7b5a2f}
+      \strng{authorfullhash}{14473cad2b160935933179834d7b5a2f}
+      \strng{editorbibnamehash}{3c45c92836d6fdca91545dc82b67f8b3}
+      \strng{editornamehash}{3c45c92836d6fdca91545dc82b67f8b3}
+      \strng{editorfullhash}{3c45c92836d6fdca91545dc82b67f8b3}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{series}{Cambridge tracts in theoretical computer science ; 53.}
+      \field{title}{{Modal logic}}
+      \field{year}{2002}
+    \endentry
+    \entry{handbook}{book}{}
+      \name{editor}{3}{}{%
+        {{un=0,uniquepart=base,hash=14473cad2b160935933179834d7b5a2f}{%
+           family={Blackburn},
+           familyi={B\bibinitperiod},
+           given={Patrick},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f255bfca9dfd795ab9b555ed71486b14}{%
+           family={Benthem},
+           familyi={B\bibinitperiod},
+           given={Johan},
+           giveni={J\bibinitperiod},
+           givenun=0,
+           prefix={van},
+           prefixi={v\bibinitperiod},
+           prefixun=0}}%
+        {{un=0,uniquepart=base,hash=feac505bad30d5bd2b8e65b72656d06e}{%
+           family={Wolter},
+           familyi={W\bibinitperiod},
+           given={Frank},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \list{location}{1}{%
+        {Amsterdam}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{6868491f9551a166414e55a5e1646d51}
+      \strng{fullhash}{6868491f9551a166414e55a5e1646d51}
+      \strng{bibnamehash}{6868491f9551a166414e55a5e1646d51}
+      \strng{editorbibnamehash}{6868491f9551a166414e55a5e1646d51}
+      \strng{editornamehash}{6868491f9551a166414e55a5e1646d51}
+      \strng{editorfullhash}{6868491f9551a166414e55a5e1646d51}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{editor}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Handbook of modal logic}
+      \field{series}{Studies in logic and practical reasoning}
+      \field{title}{Handbook of modal logic: 1st ed}
+      \field{volume}{3}
+      \field{year}{2007}
+      \true{nocite}
+    \endentry
+    \entry{Boolos2007}{book}{}
+      \name{author}{3}{}{%
+        {{un=2,uniquepart=given,hash=ad4890bbbf6b4bde8eeb2a07ed59ed21}{%
+           family={Boolos},
+           familyi={B\bibinitperiod},
+           given={George\bibnamedelima S.},
+           giveni={G\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=2}}%
+        {{un=0,uniquepart=base,hash=6acd9a561a4ca3e950354728436201fd}{%
+           family={P.\bibnamedelimi Burgess},
+           familyi={P\bibinitperiod\bibinitdelim B\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=490c8095bcacb336f847a71f14433e35}{%
+           family={C.\bibnamedelimi Jeffrey},
+           familyi={C\bibinitperiod\bibinitdelim J\bibinitperiod},
+           given={Richard},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Cambridge}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{fbd6b8037b5ad539f2f6e718335a5320}
+      \strng{fullhash}{fbd6b8037b5ad539f2f6e718335a5320}
+      \strng{bibnamehash}{fbd6b8037b5ad539f2f6e718335a5320}
+      \strng{authorbibnamehash}{fbd6b8037b5ad539f2f6e718335a5320}
+      \strng{authornamehash}{fbd6b8037b5ad539f2f6e718335a5320}
+      \strng{authorfullhash}{fbd6b8037b5ad539f2f6e718335a5320}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{5}
+      \field{title}{Comptability and logic}
+      \field{year}{2007}
+      \true{nocite}
+    \endentry
+    \entry{Boolos1979}{book}{}
+      \name{author}{1}{}{%
+        {{un=2,uniquepart=given,hash=ad4890bbbf6b4bde8eeb2a07ed59ed21}{%
+           family={Boolos},
+           familyi={B\bibinitperiod},
+           given={George.\bibnamedelimi S},
+           giveni={G\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=2}}%
+      }
+      \list{location}{1}{%
+        {Cambridge}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{ad4890bbbf6b4bde8eeb2a07ed59ed21}
+      \strng{fullhash}{ad4890bbbf6b4bde8eeb2a07ed59ed21}
+      \strng{bibnamehash}{ad4890bbbf6b4bde8eeb2a07ed59ed21}
+      \strng{authorbibnamehash}{ad4890bbbf6b4bde8eeb2a07ed59ed21}
+      \strng{authornamehash}{ad4890bbbf6b4bde8eeb2a07ed59ed21}
+      \strng{authorfullhash}{ad4890bbbf6b4bde8eeb2a07ed59ed21}
+      \field{extraname}{1}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The unprovability of consistency : an essay in modal logic.}
+      \field{year}{1979}
+    \endentry
+    \entry{Boolos1993}{book}{}
+      \name{author}{1}{}{%
+        {{un=2,uniquepart=given,hash=ad4890bbbf6b4bde8eeb2a07ed59ed21}{%
+           family={Boolos},
+           familyi={B\bibinitperiod},
+           given={George.\bibnamedelimi S},
+           giveni={G\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=2}}%
+      }
+      \list{location}{1}{%
+        {Cambridge}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{ad4890bbbf6b4bde8eeb2a07ed59ed21}
+      \strng{fullhash}{ad4890bbbf6b4bde8eeb2a07ed59ed21}
+      \strng{bibnamehash}{ad4890bbbf6b4bde8eeb2a07ed59ed21}
+      \strng{authorbibnamehash}{ad4890bbbf6b4bde8eeb2a07ed59ed21}
+      \strng{authornamehash}{ad4890bbbf6b4bde8eeb2a07ed59ed21}
+      \strng{authorfullhash}{ad4890bbbf6b4bde8eeb2a07ed59ed21}
+      \field{extraname}{2}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{The logic of provability /}
+      \field{title}{The logic of provability}
+      \field{year}{1993}
+      \true{nocite}
+    \endentry
+    \entry{Chang2012}{book}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=7b1f8e34ca9a7357bc8fa2c374550720}{%
+           family={Chang},
+           familyi={C\bibinitperiod},
+           given={C.\bibnamedelimi C.},
+           giveni={C\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2c98f05fd5b4dd9914e8072796219b69}{%
+           family={Jerome\bibnamedelima Keisler},
+           familyi={J\bibinitperiod\bibinitdelim K\bibinitperiod},
+           given={H},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Mineola}%
+      }
+      \list{publisher}{1}{%
+        {Dover Publications, inc}%
+      }
+      \strng{namehash}{873278f78b309a4677bd01675795852f}
+      \strng{fullhash}{873278f78b309a4677bd01675795852f}
+      \strng{bibnamehash}{873278f78b309a4677bd01675795852f}
+      \strng{authorbibnamehash}{873278f78b309a4677bd01675795852f}
+      \strng{authornamehash}{873278f78b309a4677bd01675795852f}
+      \strng{authorfullhash}{873278f78b309a4677bd01675795852f}
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{3. th}
+      \field{title}{Model Theory}
+      \field{year}{2012}
+      \true{nocite}
+    \endentry
+    \entry{Cohen1966}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=3676bd8b5a6758a014b490225ec91475}{%
+           family={Cohen},
+           familyi={C\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {W. A. Benjamin, Inc.}%
+      }
+      \strng{namehash}{3676bd8b5a6758a014b490225ec91475}
+      \strng{fullhash}{3676bd8b5a6758a014b490225ec91475}
+      \strng{bibnamehash}{3676bd8b5a6758a014b490225ec91475}
+      \strng{authorbibnamehash}{3676bd8b5a6758a014b490225ec91475}
+      \strng{authornamehash}{3676bd8b5a6758a014b490225ec91475}
+      \strng{authorfullhash}{3676bd8b5a6758a014b490225ec91475}
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Set Theory and the Continuum Hypothesis}
+      \field{year}{1966}
+      \true{nocite}
+    \endentry
+    \entry{sep-church-turing}{incollection}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b527972a3908282d5e4210325e3022c0}{%
+           family={Copeland},
+           familyi={C\bibinitperiod},
+           given={B.\bibnamedelimi Jack},
+           giveni={B\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=5ff1c29ff1cc8f6336533b0ffd842a79}{%
+           family={Zalta},
+           familyi={Z\bibinitperiod},
+           given={Edward\bibnamedelima N.},
+           giveni={E\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Metaphysics Research Lab, Stanford University}%
+      }
+      \strng{namehash}{b527972a3908282d5e4210325e3022c0}
+      \strng{fullhash}{b527972a3908282d5e4210325e3022c0}
+      \strng{bibnamehash}{b527972a3908282d5e4210325e3022c0}
+      \strng{authorbibnamehash}{b527972a3908282d5e4210325e3022c0}
+      \strng{authornamehash}{b527972a3908282d5e4210325e3022c0}
+      \strng{authorfullhash}{b527972a3908282d5e4210325e3022c0}
+      \strng{editorbibnamehash}{5ff1c29ff1cc8f6336533b0ffd842a79}
+      \strng{editornamehash}{5ff1c29ff1cc8f6336533b0ffd842a79}
+      \strng{editorfullhash}{5ff1c29ff1cc8f6336533b0ffd842a79}
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{The {Stanford} Encyclopedia of Philosophy}
+      \field{edition}{{S}ummer 2020}
+      \field{howpublished}{\url{https://plato.stanford.edu/archives/sum2020/entries/church-turing/}}
+      \field{title}{{The Church-Turing Thesis}}
+      \field{year}{2020}
+      \true{nocite}
+    \endentry
+    \entry{Cutland1980}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b5e38cb44435e6bba1a34fc2f7f62ca0}{%
+           family={Cutland},
+           familyi={C\bibinitperiod},
+           given={N.J},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Cambridge}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{b5e38cb44435e6bba1a34fc2f7f62ca0}
+      \strng{fullhash}{b5e38cb44435e6bba1a34fc2f7f62ca0}
+      \strng{bibnamehash}{b5e38cb44435e6bba1a34fc2f7f62ca0}
+      \strng{authorbibnamehash}{b5e38cb44435e6bba1a34fc2f7f62ca0}
+      \strng{authornamehash}{b5e38cb44435e6bba1a34fc2f7f62ca0}
+      \strng{authorfullhash}{b5e38cb44435e6bba1a34fc2f7f62ca0}
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Computability : an introduction to recursive function theory /}
+      \field{title}{Computability : an introduction to recursive function theory}
+      \field{year}{1980}
+      \true{nocite}
+      \keyw{Mathematics Recursive functions}
+    \endentry
+    \entry{Davis1965}{book}{}
+      \name{editor}{1}{}{%
+        {{un=0,uniquepart=base,hash=3030b497304f96b07639c080bd40073a}{%
+           family={Davis},
+           familyi={D\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Hewlett, N. Y}%
+      }
+      \list{publisher}{1}{%
+        {Raven Press}%
+      }
+      \strng{namehash}{3030b497304f96b07639c080bd40073a}
+      \strng{fullhash}{3030b497304f96b07639c080bd40073a}
+      \strng{bibnamehash}{3030b497304f96b07639c080bd40073a}
+      \strng{editorbibnamehash}{3030b497304f96b07639c080bd40073a}
+      \strng{editornamehash}{3030b497304f96b07639c080bd40073a}
+      \strng{editorfullhash}{3030b497304f96b07639c080bd40073a}
+      \field{sortinit}{D}
+      \field{sortinithash}{c438b3d5d027251ba63f5ed538d98af5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{editor}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{The undecidable : basic papers on undecidable propositions, unsolvable problems and computable functions /}
+      \field{title}{The undecidable : basic papers on undecidable propositions, unsolvable problems and computable functions}
+      \field{year}{1965}
+      \true{nocite}
+    \endentry
+    \entry{Ender2001}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b50c15602a78b51cbc6946ab32488502}{%
+           family={Enderton},
+           familyi={E\bibinitperiod},
+           given={Herbert\bibnamedelima B.},
+           giveni={H\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Academic Press}%
+      }
+      \strng{namehash}{b50c15602a78b51cbc6946ab32488502}
+      \strng{fullhash}{b50c15602a78b51cbc6946ab32488502}
+      \strng{bibnamehash}{b50c15602a78b51cbc6946ab32488502}
+      \strng{authorbibnamehash}{b50c15602a78b51cbc6946ab32488502}
+      \strng{authornamehash}{b50c15602a78b51cbc6946ab32488502}
+      \strng{authorfullhash}{b50c15602a78b51cbc6946ab32488502}
+      \field{sortinit}{E}
+      \field{sortinithash}{c554bd1a0b76ea92b9f105fe36d9c7b0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{A Mathematical Introduction to Logic}
+      \field{year}{2001}
+      \true{nocite}
+    \endentry
+    \entry{Garson2006}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=8963c32d932474127a18c5a77c50a124}{%
+           family={Garson},
+           familyi={G\bibinitperiod},
+           given={James\bibnamedelima W},
+           giveni={J\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \list{location}{1}{%
+        {Cambridge}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{8963c32d932474127a18c5a77c50a124}
+      \strng{fullhash}{8963c32d932474127a18c5a77c50a124}
+      \strng{bibnamehash}{8963c32d932474127a18c5a77c50a124}
+      \strng{authorbibnamehash}{8963c32d932474127a18c5a77c50a124}
+      \strng{authornamehash}{8963c32d932474127a18c5a77c50a124}
+      \strng{authorfullhash}{8963c32d932474127a18c5a77c50a124}
+      \field{sortinit}{G}
+      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Modal Logic for Philosophers}}
+      \field{year}{2006}
+      \true{nocite}
+    \endentry
+    \entry{Goldblatt2003}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=605f14b2a5c387a9fd5377749cc00b69}{%
+           family={Goldblatt},
+           familyi={G\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier B.V}%
+      }
+      \strng{namehash}{605f14b2a5c387a9fd5377749cc00b69}
+      \strng{fullhash}{605f14b2a5c387a9fd5377749cc00b69}
+      \strng{bibnamehash}{605f14b2a5c387a9fd5377749cc00b69}
+      \strng{authorbibnamehash}{605f14b2a5c387a9fd5377749cc00b69}
+      \strng{authornamehash}{605f14b2a5c387a9fd5377749cc00b69}
+      \strng{authorfullhash}{605f14b2a5c387a9fd5377749cc00b69}
+      \field{sortinit}{G}
+      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of applied logic}
+      \field{title}{{Mathematical modal logic: A view of its evolution}}
+      \field{volume}{1}
+      \field{year}{2003}
+      \keyw{Boolean algebra}
+    \endentry
+    \entry{HajPud1998}{book}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=2f28578598e1ccab15e82e5c4a988c4e}{%
+           family={Hájek},
+           familyi={H\bibinitperiod},
+           given={Petr.},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7b9f68fdc4a884e36ca728bfb878cd83}{%
+           family={Pudlak},
+           familyi={P\bibinitperiod},
+           given={P},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \list{location}{1}{%
+        {Berlin}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{362c1c59f763edcf1c118b471a98c75d}
+      \strng{fullhash}{362c1c59f763edcf1c118b471a98c75d}
+      \strng{bibnamehash}{362c1c59f763edcf1c118b471a98c75d}
+      \strng{authorbibnamehash}{362c1c59f763edcf1c118b471a98c75d}
+      \strng{authornamehash}{362c1c59f763edcf1c118b471a98c75d}
+      \strng{authorfullhash}{362c1c59f763edcf1c118b471a98c75d}
+      \field{sortinit}{H}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{354063648X}
+      \field{series}{Perspectives in Mathematical Logic}
+      \field{title}{Metamathematics of First-Order Arithmetic.}
+      \field{year}{1998}
+      \true{nocite}
+    \endentry
+    \entry{Hendricks2011}{book}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=d360b6c6fbdb3b2d70a1d0e0b39a6500}{%
+           family={Hendricks},
+           familyi={H\bibinitperiod},
+           given={Vincent\bibnamedelima Fella},
+           giveni={V\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e943f6d49bc7e576a365faa1609ad849}{%
+           family={Andur\bibnamedelima Pedersen},
+           familyi={A\bibinitperiod\bibinitdelim P\bibinitperiod},
+           given={Stig},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=d360b6c6fbdb3b2d70a1d0e0b39a6500}{%
+           family={Hendricks},
+           familyi={H\bibinitperiod},
+           given={Vincent\bibnamedelima Fella},
+           giveni={V\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=e943f6d49bc7e576a365faa1609ad849}{%
+           family={{Andur Pedersen}},
+           familyi={A\bibinitperiod},
+           given={Stig},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {dan}%
+      }
+      \list{location}{1}{%
+        {Kbh}%
+      }
+      \list{publisher}{1}{%
+        {Automatic Press}%
+      }
+      \strng{namehash}{be4d163e70153c39a3917a674fcc79cc}
+      \strng{fullhash}{be4d163e70153c39a3917a674fcc79cc}
+      \strng{bibnamehash}{be4d163e70153c39a3917a674fcc79cc}
+      \strng{authorbibnamehash}{be4d163e70153c39a3917a674fcc79cc}
+      \strng{authornamehash}{be4d163e70153c39a3917a674fcc79cc}
+      \strng{authorfullhash}{be4d163e70153c39a3917a674fcc79cc}
+      \strng{editorbibnamehash}{be4d163e70153c39a3917a674fcc79cc}
+      \strng{editornamehash}{be4d163e70153c39a3917a674fcc79cc}
+      \strng{editorfullhash}{be4d163e70153c39a3917a674fcc79cc}
+      \field{sortinit}{H}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2. revider}
+      \field{title}{{Moderne element{æ}r logik.}}
+      \field{year}{2011}
+      \true{nocite}
+      \keyw{logik}
+    \endentry
+    \entry{Hintikka1962}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=cd95458c98ada526a0c3956f70c1804b}{%
+           family={Hintikka},
+           familyi={H\bibinitperiod},
+           given={K.\bibnamedelimi Jaakko\bibnamedelima J.},
+           giveni={K\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=257a1bb9e271078512e6dc9debe5d424}{%
+           family={Hintikka},
+           familyi={H\bibinitperiod},
+           given={Jaakko.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Ithaca, N. J}%
+      }
+      \list{publisher}{1}{%
+        {Cornell Univ. Press}%
+      }
+      \strng{namehash}{cd95458c98ada526a0c3956f70c1804b}
+      \strng{fullhash}{cd95458c98ada526a0c3956f70c1804b}
+      \strng{bibnamehash}{cd95458c98ada526a0c3956f70c1804b}
+      \strng{authorbibnamehash}{cd95458c98ada526a0c3956f70c1804b}
+      \strng{authornamehash}{cd95458c98ada526a0c3956f70c1804b}
+      \strng{authorfullhash}{cd95458c98ada526a0c3956f70c1804b}
+      \strng{editorbibnamehash}{257a1bb9e271078512e6dc9debe5d424}
+      \strng{editornamehash}{257a1bb9e271078512e6dc9debe5d424}
+      \strng{editorfullhash}{257a1bb9e271078512e6dc9debe5d424}
+      \field{extraname}{1}
+      \field{sortinit}{H}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{series}{Contemporary philosophy.}
+      \field{title}{{Knowledge and belief}}
+      \field{year}{1962}
+      \true{nocite}
+      \keyw{Belief and doubt}
+    \endentry
+    \entry{Hintikka1969}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=cd95458c98ada526a0c3956f70c1804b}{%
+           family={Hintikka},
+           familyi={H\bibinitperiod},
+           given={K.\bibnamedelimi Jaakko\bibnamedelima J.},
+           giveni={K\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=257a1bb9e271078512e6dc9debe5d424}{%
+           family={Hintikka},
+           familyi={H\bibinitperiod},
+           given={Jaakko.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {dut}%
+      }
+      \list{location}{1}{%
+        {Dordrecht}%
+      }
+      \list{publisher}{1}{%
+        {D. Reidel}%
+      }
+      \strng{namehash}{cd95458c98ada526a0c3956f70c1804b}
+      \strng{fullhash}{cd95458c98ada526a0c3956f70c1804b}
+      \strng{bibnamehash}{cd95458c98ada526a0c3956f70c1804b}
+      \strng{authorbibnamehash}{cd95458c98ada526a0c3956f70c1804b}
+      \strng{authornamehash}{cd95458c98ada526a0c3956f70c1804b}
+      \strng{authorfullhash}{cd95458c98ada526a0c3956f70c1804b}
+      \strng{editorbibnamehash}{257a1bb9e271078512e6dc9debe5d424}
+      \strng{editornamehash}{257a1bb9e271078512e6dc9debe5d424}
+      \strng{editorfullhash}{257a1bb9e271078512e6dc9debe5d424}
+      \field{extraname}{2}
+      \field{sortinit}{H}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Models for modalities : Selected essays.}}
+      \field{year}{1969}
+      \true{nocite}
+    \endentry
+    \entry{Hughes1971}{book}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=a587315f4659ffbe813916749e6f2fea}{%
+           family={Hughes},
+           familyi={H\bibinitperiod},
+           given={G.E},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4024bf341349cb041fb0e4b7066d21e2}{%
+           family={Cresswell},
+           familyi={C\bibinitperiod},
+           given={M.J},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Methuen}%
+      }
+      \strng{namehash}{c2d1f7d160cf18eea8d3e7d47f8d17bf}
+      \strng{fullhash}{c2d1f7d160cf18eea8d3e7d47f8d17bf}
+      \strng{bibnamehash}{c2d1f7d160cf18eea8d3e7d47f8d17bf}
+      \strng{authorbibnamehash}{c2d1f7d160cf18eea8d3e7d47f8d17bf}
+      \strng{authornamehash}{c2d1f7d160cf18eea8d3e7d47f8d17bf}
+      \strng{authorfullhash}{c2d1f7d160cf18eea8d3e7d47f8d17bf}
+      \field{sortinit}{H}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{An introduction to modal logic}
+      \field{year}{1971}
+      \true{nocite}
+    \endentry
+    \entry{Dick1998}{incollection}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=e842a16e5b6781824279e4225c58d441}{%
+           family={Japaridze},
+           familyi={J\bibinitperiod},
+           given={G},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6f8f3d993543d9f1fdcbbe4b73d74c7d}{%
+           family={Jongh},
+           familyi={J\bibinitperiod},
+           given={Dick},
+           giveni={D\bibinitperiod},
+           givenun=0,
+           prefix={de},
+           prefixi={d\bibinitperiod},
+           prefixun=0}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=b73b9e73d636d6fabcbfb62d50cb64f9}{%
+           family={R.\bibnamedelimi Buus},
+           familyi={R\bibinitperiod\bibinitdelim B\bibinitperiod},
+           given={Samuel},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \list{location}{1}{%
+        {Amsterdam ;}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{37300b69c72ab12532ab356fd978a307}
+      \strng{fullhash}{37300b69c72ab12532ab356fd978a307}
+      \strng{bibnamehash}{37300b69c72ab12532ab356fd978a307}
+      \strng{authorbibnamehash}{37300b69c72ab12532ab356fd978a307}
+      \strng{authornamehash}{37300b69c72ab12532ab356fd978a307}
+      \strng{authorfullhash}{37300b69c72ab12532ab356fd978a307}
+      \strng{editorbibnamehash}{b73b9e73d636d6fabcbfb62d50cb64f9}
+      \strng{editornamehash}{b73b9e73d636d6fabcbfb62d50cb64f9}
+      \strng{editorfullhash}{b73b9e73d636d6fabcbfb62d50cb64f9}
+      \field{sortinit}{J}
+      \field{sortinithash}{c45040a764d616897e7f5b30174d7b92}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Handbook of proof theory}
+      \field{chapter}{7}
+      \field{isbn}{1-281-03918-7}
+      \field{series}{Studies in logic and the foundations of mathematics}
+      \field{title}{Handbook of proof theory}
+      \field{year}{1998}
+      \true{nocite}
+      \field{pages}{475\bibrangedash 546}
+      \range{pages}{72}
+      \keyw{Proof theory}
+    \endentry
+    \entry{Kleene1952}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9221bb2b4da6f0b8a90f42245abdf6d7}{%
+           family={Klenne},
+           familyi={K\bibinitperiod},
+           given={S.C.},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Groningen}%
+      }
+      \list{publisher}{1}{%
+        {Wolters-Noordhoff}%
+      }
+      \strng{namehash}{9221bb2b4da6f0b8a90f42245abdf6d7}
+      \strng{fullhash}{9221bb2b4da6f0b8a90f42245abdf6d7}
+      \strng{bibnamehash}{9221bb2b4da6f0b8a90f42245abdf6d7}
+      \strng{authorbibnamehash}{9221bb2b4da6f0b8a90f42245abdf6d7}
+      \strng{authornamehash}{9221bb2b4da6f0b8a90f42245abdf6d7}
+      \strng{authorfullhash}{9221bb2b4da6f0b8a90f42245abdf6d7}
+      \field{sortinit}{K}
+      \field{sortinithash}{d3edc18d54b9438a72c24c925bfb38f4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Introduction to metamathematics /}
+      \field{edition}{8. repr.}
+      \field{series}{Bibliotheca mathematica ; vol. 1.}
+      \field{title}{Introduction to metamathematics}
+      \field{year}{1952}
+      \true{nocite}
+    \endentry
+    \entry{Kripke1963}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a3de81ce95d09b9915d1be05f9970108}{%
+           family={Kripke},
+           familyi={K\bibinitperiod},
+           given={Saul\bibnamedelima A},
+           giveni={S\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \list{location}{1}{%
+        {Berlin}%
+      }
+      \list{publisher}{1}{%
+        {WILEY-VCH Verlag Berlin GmbH}%
+      }
+      \strng{namehash}{a3de81ce95d09b9915d1be05f9970108}
+      \strng{fullhash}{a3de81ce95d09b9915d1be05f9970108}
+      \strng{bibnamehash}{a3de81ce95d09b9915d1be05f9970108}
+      \strng{authorbibnamehash}{a3de81ce95d09b9915d1be05f9970108}
+      \strng{authornamehash}{a3de81ce95d09b9915d1be05f9970108}
+      \strng{authorfullhash}{a3de81ce95d09b9915d1be05f9970108}
+      \field{sortinit}{K}
+      \field{sortinithash}{d3edc18d54b9438a72c24c925bfb38f4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Mathematical logic quarterly}
+      \field{title}{{Semantical Analysis of Modal Logic I Normal Modal Propositional Calculi}}
+      \field{volume}{9}
+      \field{year}{1963}
+      \true{nocite}
+    \endentry
+    \entry{Laka1976}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=67394518e7d074783c9d162210b2db78}{%
+           family={Lakatos},
+           familyi={L\bibinitperiod},
+           given={Imre.},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \list{location}{1}{%
+        {Cambridge}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{67394518e7d074783c9d162210b2db78}
+      \strng{fullhash}{67394518e7d074783c9d162210b2db78}
+      \strng{bibnamehash}{67394518e7d074783c9d162210b2db78}
+      \strng{authorbibnamehash}{67394518e7d074783c9d162210b2db78}
+      \strng{authornamehash}{67394518e7d074783c9d162210b2db78}
+      \strng{authorfullhash}{67394518e7d074783c9d162210b2db78}
+      \field{sortinit}{L}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Proofs and refutations.}
+      \field{year}{1976}
+      \true{nocite}
+    \endentry
+    \entry{Lemmon1977}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=0424632afeaf4ebaf5a825126ab10806}{%
+           family={Lemmon},
+           familyi={L\bibinitperiod},
+           given={E.\bibnamedelimi J.},
+           giveni={E\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=2c2cafc6a1ce2bce5dbc56e02b0bfb8e}{%
+           family={Scot},
+           familyi={S\bibinitperiod},
+           given={Dana.},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \list{location}{1}{%
+        {Oxford}%
+      }
+      \list{publisher}{1}{%
+        {Basil Blackwell}%
+      }
+      \strng{namehash}{0424632afeaf4ebaf5a825126ab10806}
+      \strng{fullhash}{0424632afeaf4ebaf5a825126ab10806}
+      \strng{bibnamehash}{0424632afeaf4ebaf5a825126ab10806}
+      \strng{authorbibnamehash}{0424632afeaf4ebaf5a825126ab10806}
+      \strng{authornamehash}{0424632afeaf4ebaf5a825126ab10806}
+      \strng{authorfullhash}{0424632afeaf4ebaf5a825126ab10806}
+      \strng{editorbibnamehash}{2c2cafc6a1ce2bce5dbc56e02b0bfb8e}
+      \strng{editornamehash}{2c2cafc6a1ce2bce5dbc56e02b0bfb8e}
+      \strng{editorfullhash}{2c2cafc6a1ce2bce5dbc56e02b0bfb8e}
+      \field{sortinit}{L}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{series}{American philosophical quarterly. Monograph series ; monograph no. 11.}
+      \field{title}{{An introduction to modal logic : the "Lemmon notes" }}
+      \field{year}{1977}
+    \endentry
+    \entry{Lind1996}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=2570b04d71aa58636e61120b2efc7d8a}{%
+           family={Lindström},
+           familyi={L\bibinitperiod},
+           given={Per},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \list{location}{1}{%
+        {Oxford, UK}%
+      }
+      \list{publisher}{1}{%
+        {Blackwell Publishing Ltd}%
+      }
+      \strng{namehash}{2570b04d71aa58636e61120b2efc7d8a}
+      \strng{fullhash}{2570b04d71aa58636e61120b2efc7d8a}
+      \strng{bibnamehash}{2570b04d71aa58636e61120b2efc7d8a}
+      \strng{authorbibnamehash}{2570b04d71aa58636e61120b2efc7d8a}
+      \strng{authornamehash}{2570b04d71aa58636e61120b2efc7d8a}
+      \strng{authorfullhash}{2570b04d71aa58636e61120b2efc7d8a}
+      \field{extraname}{1}
+      \field{sortinit}{L}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0040-5825}
+      \field{journaltitle}{Theoria (Lund, Sweden)}
+      \field{number}{1-2}
+      \field{title}{Provability logic-a short introduction}
+      \field{volume}{62}
+      \field{year}{1996}
+      \true{nocite}
+      \field{pages}{19\bibrangedash 61}
+      \range{pages}{43}
+      \keyw{Philosophical logics. Philosophy of language ; Philosophy}
+    \endentry
+    \entry{Lind1997}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=2570b04d71aa58636e61120b2efc7d8a}{%
+           family={Lindström},
+           familyi={L\bibinitperiod},
+           given={Per},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \list{location}{1}{%
+        {Berlin/Heidelberg}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{2570b04d71aa58636e61120b2efc7d8a}
+      \strng{fullhash}{2570b04d71aa58636e61120b2efc7d8a}
+      \strng{bibnamehash}{2570b04d71aa58636e61120b2efc7d8a}
+      \strng{authorbibnamehash}{2570b04d71aa58636e61120b2efc7d8a}
+      \strng{authornamehash}{2570b04d71aa58636e61120b2efc7d8a}
+      \strng{authorfullhash}{2570b04d71aa58636e61120b2efc7d8a}
+      \field{extraname}{2}
+      \field{sortinit}{L}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9783540632139}
+      \field{title}{Aspects of Incompleteness}
+      \field{year}{1997}
+      \true{nocite}
+    \endentry
+    \entry{Liu}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=621013bf54d3546375ad71f17f020b5b}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Yang},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{621013bf54d3546375ad71f17f020b5b}
+      \strng{fullhash}{621013bf54d3546375ad71f17f020b5b}
+      \strng{bibnamehash}{621013bf54d3546375ad71f17f020b5b}
+      \strng{authorbibnamehash}{621013bf54d3546375ad71f17f020b5b}
+      \strng{authornamehash}{621013bf54d3546375ad71f17f020b5b}
+      \strng{authorfullhash}{621013bf54d3546375ad71f17f020b5b}
+      \field{sortinit}{L}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Incompleteness result and provability logic}
+      \field{year}{2013}
+      \true{nocite}
+    \endentry
+    \entry{Mendel1964}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=e2bc277a7dd2d160f77afac91061dca9}{%
+           family={Mendelson},
+           familyi={M\bibinitperiod},
+           given={Elliott},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Van Norstrand}%
+      }
+      \strng{namehash}{e2bc277a7dd2d160f77afac91061dca9}
+      \strng{fullhash}{e2bc277a7dd2d160f77afac91061dca9}
+      \strng{bibnamehash}{e2bc277a7dd2d160f77afac91061dca9}
+      \strng{authorbibnamehash}{e2bc277a7dd2d160f77afac91061dca9}
+      \strng{authornamehash}{e2bc277a7dd2d160f77afac91061dca9}
+      \strng{authorfullhash}{e2bc277a7dd2d160f77afac91061dca9}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Introduction to Mathematical Logic}
+      \field{year}{1964}
+      \true{nocite}
+    \endentry
+    \entry{Quine}{incollection}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9c9299d851aa969452f97be782202d35}{%
+           family={Quine},
+           familyi={Q\bibinitperiod},
+           given={W.\bibnamedelimi V},
+           giveni={W\bibinitperiod\bibinitdelim V\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {New York}%
+      }
+      \list{publisher}{1}{%
+        {Random House}%
+      }
+      \strng{namehash}{9c9299d851aa969452f97be782202d35}
+      \strng{fullhash}{9c9299d851aa969452f97be782202d35}
+      \strng{bibnamehash}{9c9299d851aa969452f97be782202d35}
+      \strng{authorbibnamehash}{9c9299d851aa969452f97be782202d35}
+      \strng{authornamehash}{9c9299d851aa969452f97be782202d35}
+      \strng{authorfullhash}{9c9299d851aa969452f97be782202d35}
+      \field{sortinit}{Q}
+      \field{sortinithash}{c54e16deb53fc904a621fa8fd8703b5a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{The Ways of Paradox and other essays}
+      \field{title}{Neccasry Truth}
+      \field{year}{1966}
+      \true{nocite}
+      \field{pages}{48\bibrangedash 56}
+      \range{pages}{9}
+    \endentry
+    \entry{ProofHandbook}{book}{}
+      \name{editor}{1}{}{%
+        {{un=0,uniquepart=base,hash=f06e5e2875bdeb99c3877f7516cadb16}{%
+           family={R.\bibnamedelimi Buss},
+           familyi={R\bibinitperiod\bibinitdelim B\bibinitperiod},
+           given={Samuel},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \list{location}{1}{%
+        {Amsterdam ;}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{f06e5e2875bdeb99c3877f7516cadb16}
+      \strng{fullhash}{f06e5e2875bdeb99c3877f7516cadb16}
+      \strng{bibnamehash}{f06e5e2875bdeb99c3877f7516cadb16}
+      \strng{editorbibnamehash}{f06e5e2875bdeb99c3877f7516cadb16}
+      \strng{editornamehash}{f06e5e2875bdeb99c3877f7516cadb16}
+      \strng{editorfullhash}{f06e5e2875bdeb99c3877f7516cadb16}
+      \field{extraname}{1}
+      \field{sortinit}{R}
+      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{editor}
+      \field{labeltitlesource}{title}
+      \field{isbn}{1-281-03918-7}
+      \field{series}{Studies in logic and the foundations of mathematics}
+      \field{title}{Handbook of proof theory}
+      \field{year}{1998}
+      \true{nocite}
+      \keyw{Proof theory}
+    \endentry
+    \entry{Buss1998}{incollection}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f06e5e2875bdeb99c3877f7516cadb16}{%
+           family={R.\bibnamedelimi Buss},
+           familyi={R\bibinitperiod\bibinitdelim B\bibinitperiod},
+           given={Samuel},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=b73b9e73d636d6fabcbfb62d50cb64f9}{%
+           family={R.\bibnamedelimi Buus},
+           familyi={R\bibinitperiod\bibinitdelim B\bibinitperiod},
+           given={Samuel},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \list{location}{1}{%
+        {Amsterdam ;}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{f06e5e2875bdeb99c3877f7516cadb16}
+      \strng{fullhash}{f06e5e2875bdeb99c3877f7516cadb16}
+      \strng{bibnamehash}{f06e5e2875bdeb99c3877f7516cadb16}
+      \strng{authorbibnamehash}{f06e5e2875bdeb99c3877f7516cadb16}
+      \strng{authornamehash}{f06e5e2875bdeb99c3877f7516cadb16}
+      \strng{authorfullhash}{f06e5e2875bdeb99c3877f7516cadb16}
+      \strng{editorbibnamehash}{b73b9e73d636d6fabcbfb62d50cb64f9}
+      \strng{editornamehash}{b73b9e73d636d6fabcbfb62d50cb64f9}
+      \strng{editorfullhash}{b73b9e73d636d6fabcbfb62d50cb64f9}
+      \field{extraname}{2}
+      \field{sortinit}{R}
+      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Handbook of proof theory}
+      \field{chapter}{1}
+      \field{isbn}{1-281-03918-7}
+      \field{series}{Studies in logic and the foundations of mathematics}
+      \field{title}{Handbook of proof theory}
+      \field{year}{1998}
+      \true{nocite}
+      \field{pages}{79\bibrangedash 147}
+      \range{pages}{69}
+      \keyw{Proof theory}
+    \endentry
+    \entry{sep-goedel-incompleteness}{incollection}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a9dd0fc2d310e3e2118ede23fff02f66}{%
+           family={Raatikainen},
+           familyi={R\bibinitperiod},
+           given={Panu},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=5ff1c29ff1cc8f6336533b0ffd842a79}{%
+           family={Zalta},
+           familyi={Z\bibinitperiod},
+           given={Edward\bibnamedelima N.},
+           giveni={E\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Metaphysics Research Lab, Stanford University}%
+      }
+      \strng{namehash}{a9dd0fc2d310e3e2118ede23fff02f66}
+      \strng{fullhash}{a9dd0fc2d310e3e2118ede23fff02f66}
+      \strng{bibnamehash}{a9dd0fc2d310e3e2118ede23fff02f66}
+      \strng{authorbibnamehash}{a9dd0fc2d310e3e2118ede23fff02f66}
+      \strng{authornamehash}{a9dd0fc2d310e3e2118ede23fff02f66}
+      \strng{authorfullhash}{a9dd0fc2d310e3e2118ede23fff02f66}
+      \strng{editorbibnamehash}{5ff1c29ff1cc8f6336533b0ffd842a79}
+      \strng{editornamehash}{5ff1c29ff1cc8f6336533b0ffd842a79}
+      \strng{editorfullhash}{5ff1c29ff1cc8f6336533b0ffd842a79}
+      \field{sortinit}{R}
+      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{The {Stanford} Encyclopedia of Philosophy}
+      \field{edition}{{S}pring 2022}
+      \field{howpublished}{\url{https://plato.stanford.edu/archives/spr2022/entries/goedel-incompleteness/}}
+      \field{title}{{Gödel’s Incompleteness Theorems}}
+      \field{year}{2022}
+      \true{nocite}
+    \endentry
+    \entry{Olson1990}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5fc9c56ba8c0c7647e2ceb499ed1b123}{%
+           family={Reidhaar-Olson},
+           familyi={R\bibinithyphendelim O\bibinitperiod},
+           given={L},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \list{location}{1}{%
+        {Notre Dame, IN}%
+      }
+      \list{publisher}{1}{%
+        {University of Notre Dame Press}%
+      }
+      \strng{namehash}{5fc9c56ba8c0c7647e2ceb499ed1b123}
+      \strng{fullhash}{5fc9c56ba8c0c7647e2ceb499ed1b123}
+      \strng{bibnamehash}{5fc9c56ba8c0c7647e2ceb499ed1b123}
+      \strng{authorbibnamehash}{5fc9c56ba8c0c7647e2ceb499ed1b123}
+      \strng{authornamehash}{5fc9c56ba8c0c7647e2ceb499ed1b123}
+      \strng{authorfullhash}{5fc9c56ba8c0c7647e2ceb499ed1b123}
+      \field{sortinit}{R}
+      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0029-4527}
+      \field{journaltitle}{Notre Dame journal of formal logic}
+      \field{number}{1}
+      \field{title}{A new proof of the fixed-point theorem of provability logic}
+      \field{volume}{31}
+      \field{year}{1990}
+      \field{pages}{37\bibrangedash 43}
+      \range{pages}{7}
+      \keyw{03B45 ; 03F40 ; Exact sciences and technology ; Logic and foundations ; Mathematical logic,foundations,set theory ; Mathematics ; Model theory ; Sciences and techniques of general use}
+    \endentry
+    \entry{Sgerberg1971}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=d7abbe80329c2fd25304dc3e42d04fca}{%
+           family={Segerberg},
+           familyi={S\bibinitperiod},
+           given={Krister},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Uppsala Universitet}%
+      }
+      \strng{namehash}{d7abbe80329c2fd25304dc3e42d04fca}
+      \strng{fullhash}{d7abbe80329c2fd25304dc3e42d04fca}
+      \strng{bibnamehash}{d7abbe80329c2fd25304dc3e42d04fca}
+      \strng{authorbibnamehash}{d7abbe80329c2fd25304dc3e42d04fca}
+      \strng{authornamehash}{d7abbe80329c2fd25304dc3e42d04fca}
+      \strng{authorfullhash}{d7abbe80329c2fd25304dc3e42d04fca}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{series}{Filosofska Studier, vol.13}
+      \field{title}{An Essay in Classical Modal Logic}
+      \field{year}{1971}
+      \true{nocite}
+    \endentry
+    \entry{Sipser2013}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=13b9c16a9de2bb891eb8aa2a768eb2a8}{%
+           family={Sipser},
+           familyi={S\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Boston}%
+      }
+      \list{publisher}{1}{%
+        {Thomson Course Technology}%
+      }
+      \strng{namehash}{13b9c16a9de2bb891eb8aa2a768eb2a8}
+      \strng{fullhash}{13b9c16a9de2bb891eb8aa2a768eb2a8}
+      \strng{bibnamehash}{13b9c16a9de2bb891eb8aa2a768eb2a8}
+      \strng{authorbibnamehash}{13b9c16a9de2bb891eb8aa2a768eb2a8}
+      \strng{authornamehash}{13b9c16a9de2bb891eb8aa2a768eb2a8}
+      \strng{authorfullhash}{13b9c16a9de2bb891eb8aa2a768eb2a8}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Introduction to the theory of computation /}
+      \field{edition}{3. ed.}
+      \field{title}{Introduction to the theory of computation}
+      \field{year}{2013}
+      \true{nocite}
+    \endentry
+    \entry{Smor1977b}{incollection}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=86c956cd896ae9717be9fd5bdf59a6a5}{%
+           family={Smorynski},
+           familyi={S\bibinitperiod},
+           given={C},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{3}{}{%
+        {{hash=4d51dd95da9e5f67c416aff664ce3192}{%
+           family={Macintyre},
+           familyi={M\bibinitperiod},
+           given={A},
+           giveni={A\bibinitperiod}}}%
+        {{hash=9b1967f1b2e2e0021b253f21a21f23c5}{%
+           family={Pacholksi},
+           familyi={P\bibinitperiod},
+           given={L},
+           giveni={L\bibinitperiod}}}%
+        {{hash=48384eca688e7e836c345aaeefc5f072}{%
+           family={Paris},
+           familyi={P\bibinitperiod},
+           given={J},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Amsterdam, New York, Oxford}%
+      }
+      \list{publisher}{1}{%
+        {North.Holland Publishing Company}%
+      }
+      \strng{namehash}{86c956cd896ae9717be9fd5bdf59a6a5}
+      \strng{fullhash}{86c956cd896ae9717be9fd5bdf59a6a5}
+      \strng{bibnamehash}{86c956cd896ae9717be9fd5bdf59a6a5}
+      \strng{authorbibnamehash}{86c956cd896ae9717be9fd5bdf59a6a5}
+      \strng{authornamehash}{86c956cd896ae9717be9fd5bdf59a6a5}
+      \strng{authorfullhash}{86c956cd896ae9717be9fd5bdf59a6a5}
+      \strng{editorbibnamehash}{0970011ebe21931f0686da183e7d8dae}
+      \strng{editornamehash}{0970011ebe21931f0686da183e7d8dae}
+      \strng{editorfullhash}{0970011ebe21931f0686da183e7d8dae}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Logic Colloguim 77}
+      \field{series}{Studies in logic and the foundations of mathematics}
+      \field{title}{Beth's theorem and self-referential sentences}
+      \field{year}{1977}
+      \true{nocite}
+      \field{pages}{253\bibrangedash 261}
+      \range{pages}{9}
+    \endentry
+    \entry{SmorHand}{incollection}{}
+      \name{author}{1}{}{%
+        {{un=2,uniquepart=given,hash=aa347a8abe37c910f2de21ad961273f9}{%
+           family={Smorynski},
+           familyi={S\bibinitperiod},
+           given={Craig},
+           giveni={C\bibinitperiod},
+           givenun=2}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=faa3cca850326b0f6e3378937dd3b66d}{%
+           family={Barwise},
+           familyi={B\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {North-Holland Publishing Company}%
+      }
+      \strng{namehash}{aa347a8abe37c910f2de21ad961273f9}
+      \strng{fullhash}{aa347a8abe37c910f2de21ad961273f9}
+      \strng{bibnamehash}{aa347a8abe37c910f2de21ad961273f9}
+      \strng{authorbibnamehash}{aa347a8abe37c910f2de21ad961273f9}
+      \strng{authornamehash}{aa347a8abe37c910f2de21ad961273f9}
+      \strng{authorfullhash}{aa347a8abe37c910f2de21ad961273f9}
+      \strng{editorbibnamehash}{faa3cca850326b0f6e3378937dd3b66d}
+      \strng{editornamehash}{faa3cca850326b0f6e3378937dd3b66d}
+      \strng{editorfullhash}{faa3cca850326b0f6e3378937dd3b66d}
+      \field{extraname}{1}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{The Handbook of Mathematical logic}
+      \field{title}{The Incompleteness Theorems}
+      \field{year}{1977}
+      \true{nocite}
+    \endentry
+    \entry{Smor1985}{book}{}
+      \name{author}{1}{}{%
+        {{un=2,uniquepart=given,hash=aa347a8abe37c910f2de21ad961273f9}{%
+           family={Smorynski},
+           familyi={S\bibinitperiod},
+           given={Craig},
+           giveni={C\bibinitperiod},
+           givenun=2}}%
+      }
+      \list{publisher}{1}{%
+        {Springer-verlag}%
+      }
+      \strng{namehash}{aa347a8abe37c910f2de21ad961273f9}
+      \strng{fullhash}{aa347a8abe37c910f2de21ad961273f9}
+      \strng{bibnamehash}{aa347a8abe37c910f2de21ad961273f9}
+      \strng{authorbibnamehash}{aa347a8abe37c910f2de21ad961273f9}
+      \strng{authornamehash}{aa347a8abe37c910f2de21ad961273f9}
+      \strng{authorfullhash}{aa347a8abe37c910f2de21ad961273f9}
+      \field{extraname}{2}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Self-Rference and modal logic}
+      \field{year}{1985}
+    \endentry
+    \entry{Soare1987}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=44e91051976de07ef7699c7f8cd5cfa0}{%
+           family={Soare},
+           familyi={S\bibinitperiod},
+           given={Robert\bibnamedelima I},
+           giveni={R\bibinitperiod\bibinitdelim I\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Berlin ;}%
+      }
+      \list{publisher}{1}{%
+        {Springer-Verlag}%
+      }
+      \strng{namehash}{44e91051976de07ef7699c7f8cd5cfa0}
+      \strng{fullhash}{44e91051976de07ef7699c7f8cd5cfa0}
+      \strng{bibnamehash}{44e91051976de07ef7699c7f8cd5cfa0}
+      \strng{authorbibnamehash}{44e91051976de07ef7699c7f8cd5cfa0}
+      \strng{authornamehash}{44e91051976de07ef7699c7f8cd5cfa0}
+      \strng{authorfullhash}{44e91051976de07ef7699c7f8cd5cfa0}
+      \field{extraname}{1}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{series}{Perspectives in Mathematical Logic.}
+      \field{title}{Recursively Enumerable Sets and Degrees : A Study of Computable Functions and Computably : Generated Sets.}
+      \field{year}{1987}
+      \keyw{Recursively enumerable sets}
+    \endentry
+    \entry{Soare2016}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=44e91051976de07ef7699c7f8cd5cfa0}{%
+           family={Soare},
+           familyi={S\bibinitperiod},
+           given={Robert\bibnamedelima I},
+           giveni={R\bibinitperiod\bibinitdelim I\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \list{location}{1}{%
+        {Berlin, Heidelberg}%
+      }
+      \list{publisher}{1}{%
+        {Springer Berlin / Heidelberg}%
+      }
+      \strng{namehash}{44e91051976de07ef7699c7f8cd5cfa0}
+      \strng{fullhash}{44e91051976de07ef7699c7f8cd5cfa0}
+      \strng{bibnamehash}{44e91051976de07ef7699c7f8cd5cfa0}
+      \strng{authorbibnamehash}{44e91051976de07ef7699c7f8cd5cfa0}
+      \strng{authornamehash}{44e91051976de07ef7699c7f8cd5cfa0}
+      \strng{authorfullhash}{44e91051976de07ef7699c7f8cd5cfa0}
+      \field{extraname}{2}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This book emphasizes three very important concepts: computability, as opposed to recursion or induction; classical computability; and the art of computability, a skill to be practiced but also important in an esthetic sense of beauty and taste in mathematics.}
+      \field{booktitle}{Turing Computability}
+      \field{isbn}{9783642319327}
+      \field{issn}{2190-619X}
+      \field{series}{Theory and Applications of Computability}
+      \field{title}{Turing Computability: Theory and Applications}
+      \field{year}{2016}
+      \keyw{Computable functions ; Computer Science ; Computer science-Mathematics ; Computers ; Logic,Symbolic and mathematical ; Mathematical Logic and Foundations ; Mathematics of Computing ; Theory of Computation}
+    \endentry
+    \entry{solovay976}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f48640301c2ee285cda30fb82c1ed107}{%
+           family={Solovay},
+           familyi={S\bibinitperiod},
+           given={Robert\bibnamedelima M},
+           giveni={R\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \strng{namehash}{f48640301c2ee285cda30fb82c1ed107}
+      \strng{fullhash}{f48640301c2ee285cda30fb82c1ed107}
+      \strng{bibnamehash}{f48640301c2ee285cda30fb82c1ed107}
+      \strng{authorbibnamehash}{f48640301c2ee285cda30fb82c1ed107}
+      \strng{authornamehash}{f48640301c2ee285cda30fb82c1ed107}
+      \strng{authorfullhash}{f48640301c2ee285cda30fb82c1ed107}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Israel journal of mathematics}
+      \field{number}{3-4}
+      \field{title}{Provability interpretations of modal logic}
+      \field{volume}{25}
+      \field{year}{1976}
+      \true{nocite}
+    \endentry
+    \entry{sep-logic-provability}{incollection}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=50c25a6fc1ac93f35f95cda5c5adf929}{%
+           family={Verbrugge},
+           familyi={V\bibinitperiod},
+           given={Rineke\bibnamedelima (L.C.)},
+           giveni={R\bibinitperiod\bibinitdelim (\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=5ff1c29ff1cc8f6336533b0ffd842a79}{%
+           family={Zalta},
+           familyi={Z\bibinitperiod},
+           given={Edward\bibnamedelima N.},
+           giveni={E\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Metaphysics Research Lab, Stanford University}%
+      }
+      \strng{namehash}{50c25a6fc1ac93f35f95cda5c5adf929}
+      \strng{fullhash}{50c25a6fc1ac93f35f95cda5c5adf929}
+      \strng{bibnamehash}{50c25a6fc1ac93f35f95cda5c5adf929}
+      \strng{authorbibnamehash}{50c25a6fc1ac93f35f95cda5c5adf929}
+      \strng{authornamehash}{50c25a6fc1ac93f35f95cda5c5adf929}
+      \strng{authorfullhash}{50c25a6fc1ac93f35f95cda5c5adf929}
+      \strng{editorbibnamehash}{5ff1c29ff1cc8f6336533b0ffd842a79}
+      \strng{editornamehash}{5ff1c29ff1cc8f6336533b0ffd842a79}
+      \strng{editorfullhash}{5ff1c29ff1cc8f6336533b0ffd842a79}
+      \field{sortinit}{V}
+      \field{sortinithash}{02432525618c08e2b03cac47c19764af}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{The {Stanford} Encyclopedia of Philosophy}
+      \field{edition}{{F}all 2017}
+      \field{howpublished}{\url{https://plato.stanford.edu/archives/fall2017/entries/logic-provability/}}
+      \field{title}{{Provability Logic}}
+      \field{year}{2017}
+      \true{nocite}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
 
-\bibitem[Cohen(1966)]{Cohen1966}
-P.~Cohen.
-\newblock \emph{Set Theory and the Continuum Hypothesis}.
-\newblock W. A. Benjamin, Inc., 1966.
-
-\bibitem[Enderton(2001)]{Ender2001}
-H.~B. Enderton.
-\newblock \emph{A Mathematical Introduction to Logic}.
-\newblock Academic Press, 2001.
-
-\bibitem[Garson(2006)]{Garson2006}
-J.~W. Garson.
-\newblock \emph{{Modal Logic for Philosophers}}.
-\newblock Cambridge University Press, Cambridge, 2006.
-
-\bibitem[Goldblatt(2003)]{Goldblatt2003}
-R.~Goldblatt.
-\newblock {Mathematical modal logic: A view of its evolution}.
-\newblock \emph{Journal of applied logic}, 1, 2003.
-
-\bibitem[Hendricks and Andur~Pedersen(2011)]{Hendricks2011}
-V.~F. Hendricks and S.~Andur~Pedersen.
-\newblock \emph{{Moderne element{\ae}r logik.}}
-\newblock Automatic Press, Kbh, 2. revider edition, 2011.
-
-\bibitem[Hintikka(1962)]{Hintikka1962}
-K.~J.~J. Hintikka.
-\newblock \emph{{Knowledge and belief}}.
-\newblock Contemporary philosophy. Cornell Univ. Press, Ithaca, N. J, 1962.
-
-\bibitem[Hintikka(1969)]{Hintikka1969}
-K.~J.~J. Hintikka.
-\newblock \emph{{Models for modalities : Selected essays.}}
-\newblock D. Reidel, Dordrecht, 1969.
-
-\bibitem[Hughes and Cresswell(1971)]{Hughes1971}
-G.~Hughes and M.~Cresswell.
-\newblock \emph{An introduction to modal logic}.
-\newblock Methuen, 1971.
-
-\bibitem[Kripke(1963)]{Kripke1963}
-S.~A. Kripke.
-\newblock {Semantical Analysis of Modal Logic I Normal Modal Propositional
-  Calculi}.
-\newblock \emph{Mathematical logic quarterly}, 9, 1963.
-
-\bibitem[Lemmon(1977)]{Lemmon1977}
-E.~J. Lemmon.
-\newblock \emph{{An introduction to modal logic : the "Lemmon notes" }}.
-\newblock American philosophical quarterly. Monograph series ; monograph no.
-  11. Basil Blackwell, Oxford, 1977.
-
-\bibitem[Liu(2013)]{Liu}
-Y.~Liu.
-\newblock Incompleteness result and provability logic, 2013.
-
-\bibitem[Mendelson(1964)]{Mendel1964}
-E.~Mendelson.
-\newblock \emph{Introduction to Mathematical Logic}.
-\newblock Van Norstrand, 1964.
-
-\bibitem[Raatikainen(2022)]{sep-goedel-incompleteness}
-P.~Raatikainen.
-\newblock {Gödel’s Incompleteness Theorems}.
-\newblock In E.~N. Zalta, editor, \emph{The {Stanford} Encyclopedia of
-  Philosophy}. Metaphysics Research Lab, Stanford University, {S}pring 2022
-  edition, 2022.
-
-\bibitem[Segerberg(1971)]{Sgerberg1971}
-K.~Segerberg.
-\newblock \emph{An Essay in Classical Modal Logic}.
-\newblock Filosofska Studier, vol.13. Uppsala Universitet, 1971.
-
-\bibitem[Smorynski(1977)]{SmorHand}
-C.~Smorynski.
-\newblock The incompleteness theorems.
-\newblock In J.~Barwise, editor, \emph{The Handbook of Mathematical logic}.
-  North-Holland Publishing Company, 1977.
-
-\bibitem[Smorynski(1985)]{Smor1985}
-C.~Smorynski.
-\newblock \emph{Self-Rference and modal logic}.
-\newblock Springer-verlag, 1985.
-
-\bibitem[Solovay(1976)]{solovay976}
-R.~M. Solovay.
-\newblock Provability interpretations of modal logic.
-\newblock \emph{Israel journal of mathematics}, 25\penalty0 (3-4), 1976.
-
-\bibitem[Verbrugge(2017)]{sep-logic-provability}
-R.~L. Verbrugge.
-\newblock {Provability Logic}.
-\newblock In E.~N. Zalta, editor, \emph{The {Stanford} Encyclopedia of
-  Philosophy}. Metaphysics Research Lab, Stanford University, {F}all 2017
-  edition, 2017.
-
-\end{thebibliography}

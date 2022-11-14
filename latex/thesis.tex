@@ -2,10 +2,11 @@
 
 \documentclass[12pt,a4paper,dvipsnames,bibliography=totocnumbered]{scrbook}
 \usepackage{silence}
-\WarningFilter{latex}{You have requested package} %For silence a strange error	
+%\WarningFilter{latex}{You have requested package} %For silence a strange error	
 \usepackage{KUstyle}				  %Front pgage
 \usepackage{geometry}				  %Page setup
 \usepackage{amsthm}				  %Theorems enviroments
+%\usepackage{mathabx}
 \usepackage{setspace}
 \usepackage{tabularx}
 \usepackage{xcolor}
@@ -20,17 +21,21 @@
 \usepackage{enumitem}
 \usepackage{multicol}
 \usepackage{lastpage}
-\usepackage{nd3}				  %Lemmon style proof
+%\usepackage{nd3}				  %Lemmon style proof
 \usepackage{proof}
 \usepackage{subfiles}				  % For subfiles	
 \usepackage{accents}
 \usepackage{bookmark}
 \usepackage{csquotes}
-
+\usepackage{epigraph}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows,positioning,calc}
+\usepackage{showlabels}
+\usepackage{scalerel}[2016/12/29]
 %Biblo
-\usepackage{natbib}
-\bibliographystyle{abbrvnat}
-\setcitestyle{authoryear,open={[},close={]}} %Citation-related commands
+\usepackage[style=authoryear, backend=biber, isbn=false, doi=false]{biblatex}
+\AtEveryBibitem{\clearlist{language}}
+\addbibresource{ThesisBib.bib}
 
 
 
@@ -83,7 +88,7 @@
 %Turnstile instead of box in end of proof
 \renewcommand\qedsymbol{$\dashv$}
 \renewcommand*{\proofname}{\color{dg}Proof}
-\newcommand*{\footcite}[1]{\footnote{\cite{#1}}}
+%\newcommand*{\footcite}[1]{\footnote{\cite{#1}}}
 
 
 %Different shortcuts for symbols
@@ -97,6 +102,7 @@
 \newcommand{\Q}{\text{\textbf{Q}}}
 \newcommand{\Con}{\text{Con}}
 \newcommand{\GL}{\text{\textbf{GL}}}
+\newcommand{\GLB}{\text{\textbf{GLB}}}
 \newcommand{\GLS}{\text{\textbf{GLS}}}
 \newcommand{\ol}{\overline}
 \newcommand{\x}{x_1,\ldots,x_n}
@@ -129,6 +135,14 @@
 \newcommand{\Bigcdot}{\raisebox{\dimexpr1.09ex- \height}{$\bigcdot$}}
 \newcommand{\sBox}{\mathrel{\Box\!\!\!\boldsymbol{\Bigcdot}}}
 
+%1 Modal Operator
+\makeatletter
+\newcommand{\1}{\raisebox{\dimexpr1.79ex- \height}{$1$}}
+\newcommand{\OneBox}{\mathrel{\Box\!\!\! \scaleobj{0.7}{\1}}}
+
+\newcommand{\oneBox}{\mathrel{\Box\!\!\! \scaleobj{0.5}{\1}}}
+
+\newcommand{\OneDiamond}{\mathrel{\Diamond\!\!\! \scaleobj{0.65}{\1}}}
 \pagenumbering{roman}
 
 
@@ -144,9 +158,10 @@
 \ptype{Master Thesis}
 \author{Thorvald Demuth Jørgensen}
 \title{Provability Logic}
-\subtitle{-}
+\subtitle{An Investigation of the Relationship Between Modal Logic and
+Arithmetics}
 \date{Date: {\today}}
-\advisor{Advisor: {Asger Dag Törnquist}}
+\advisor{Advisor: {Asger Dag Törnquist} \& Rasmus Kræmmer Rendsvig}
 
 \setlength{\headheight}{52pt}% ...at least 51.60004pt
 
@@ -160,30 +175,40 @@
 
 %Main text
 \chapter{Introduction:}
+\epigraph{If modern modal logic was conceived in sin, then it has been redeemed
+through Gödliness}{\cite{Boolos1979} page 1}
+\label{chap:intro}
 \subfile{intro}
 
 \chapter{Preliminary}
+\label{chap:Pre}
 \subfile{Pre}
 
 \chapter{Recursion Theory}
+\label{chap:Recur}
 \subfile{Recur}
 
 \chapter{Fragments of Arithmetics}
+\label{chap:PRA}
 \subfile{PRA}
 
-\chapter{General results on GL}
+\chapter{General Results on GL}
+\label{chap:GL}
 \subfile{GL}
 
-\chapter{Fixed point lemma}
+\chapter{Fixed Point Theorem}
+\label{chap:Fixed}
 \subfile{Fixed}
 
-\chapter{Solovays completeness theorems}
+\chapter{Solovays Completeness Theorems}
+\label{chap:Complete}
 \subfile{Complete}
 
-\chapter{Further results in Provability logic}
+\chapter{Further Results in Provability Logic}
+\label{chap:Further}
 \subfile{Further}
 \nocite{*}
-%\printbibliography
-\bibliography{ThesisBib}
+\printbibliography
+
 \end{document}
 

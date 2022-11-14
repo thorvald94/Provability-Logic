@@ -5,6 +5,8 @@ arithmetical theories. We will look at different axioatizable subtheories of
 first order arithmetic called fragments. These fragments can be categories in
 the following three categories:
 
+This section should be seen as overview of the subject
+
 \textbf{Strong fragments:} The fragments that can prove the arithmetized cut elimination theorem.
 
 \textbf{Weak fragments:}
@@ -15,7 +17,7 @@ axioms
 
 We will start of by defining a very weak fragment called Robinson's theory.
 This fragments was first considered in [Ref]. We
-will denote this theory with $Q$
+will denote this theory with $EA$ for elementary aritmetics.
 This theory have the following axioms:
 \begin{align*}
 	&\forall x(\neg Sx\not =0)\\
@@ -94,3 +96,80 @@ following result:
 \end{prop}
 \begin{proof}
 \end{proof}
+
+\begin{figure}[h]
+	\begin{center}
+\begin{tikzpicture}[baseline={(0,0)}]
+	\node[label={\textbf{Q}}] () at (0,-1) {};
+	\node[] (EA) at (0,0) {};
+	\node[label={$I\Sigma_1^R=$ \PRA}] at (3,-1) {};
+	\node[] (PRA) at (2,0) {};
+	\node[label={$I\Pi_1^-$}] (IPi) at (0,2) {};
+	\node[label={$I\Sigma_1^-$}] (Isig) at (1.5,2) {};
+	\node[] (Isig) at (2,2) {};
+	\node[label={$I\Sigma_1$}] at (4,1) {};
+	\node[] (ISig) at (4,2) {};
+	\node[label={$I\Pi_2^-$}] at (1.5,4) {};
+	\node[] (IPi2) at (2,4) {};
+	\node[label={$I\Sigma_1+I\Pi_2^-$}] at (3.5,4) {};
+	\node[] (ISigPi) at (4,4) {};
+	\node[label={$I\Sigma_2^R$}]  at (6,1) {};
+	\node[] (ISig2R) at (6,2) {};
+	\node[label={$I\Sigma_2^-$}] at (5.5,4) {};
+	\node[] (ISig2-) at (6,4) {};
+	\node[label={$I\Pi_3^-$}] at (5.5,6) {};
+	\node[] (IPi3) at (6,6) {};
+	\node[label={$I\Sigma_2+I\Pi_3^-$}] at (7.5,6) {};
+	\node[] (ISigPi3) at (8,6) {};
+	\node[label={$I\Sigma_2$}] at (8,3) {};
+	\node[] (ISig2) at (8,4) {};
+	\node[label={$I\Sigma_3^R$}] at (10,3) {};
+	\node[] (ISig3R) at (10,4) {};
+	\node[label={$I\Sigma_3^-$}] at (9.5,6) {};
+	\node[] (ISig3) at (10,6) {};
+	\node[] (Tom1) at (10,7) {};
+	\node[] (Tom2) at (11,6) {};
+
+	 \draw (EA) -- (PRA);
+	 \draw (EA) -- (IPi);
+	 \draw (IPi) -- (ISig2R);
+	 \draw (PRA) -- (IPi2);
+	 \draw (IPi2) -- (ISig3R);
+	 \draw (ISig2R) -- (IPi3);
+	 \draw (IPi3) -- (Tom2);
+	 \draw (ISig) -- (ISigPi);
+	 \draw (ISig2) -- (ISigPi3);
+	 \draw (ISig3R) -- (Tom1);
+
+    \node at (EA)[circle,fill,inner sep=1.5pt]{};
+    \node at (PRA)[circle,fill,inner sep=1.5pt]{};
+    \node at (IPi)[circle,fill,inner sep=1.5pt]{};
+    \node at (ISig)[circle,fill,inner sep=1.5pt]{};
+    \node at (Isig)[circle,fill,inner sep=1.5pt]{};
+    \node at (IPi2)[circle,fill,inner sep=1.5pt]{};
+    \node at (ISigPi)[circle,fill,inner sep=1.5pt]{};
+    \node at (ISig2R)[circle,fill,inner sep=1.5pt]{};
+    \node at (ISig2)[circle,fill,inner sep=1.5pt]{};
+    \node at (IPi3)[circle,fill,inner sep=1.5pt]{};
+    \node at (ISigPi3)[circle,fill,inner sep=1.5pt]{};
+    \node at (IPi3)[circle,fill,inner sep=1.5pt]{};
+    \node at (ISig2-)[circle,fill,inner sep=1.5pt]{};
+    \node at (ISig3R)[circle,fill,inner sep=1.5pt]{};
+    \node at (ISig3)[circle,fill,inner sep=1.5pt]{};
+\end{tikzpicture}
+\end{center}
+\caption{How the fragments relate to each other.}
+\end{figure}
+
+\section{Expotential}
+
+If we have that $I\Gamma$  is a fragment of Peano Arithmetics, then we can look
+at the fragment
+$I\Gamma+\text{EXP}$ which proves induction over $\Gamma$-formulas and proves
+that for all $x$ the its power $2^x$ exists. We can also look at
+$I\Gamma+\Omega_1$ which is a weaker theory than $I\Gamma+\text{EXP}$.  Here
+$\Omega_1$ is a axiom that asserts that for all $x$ its power
+$x^{\text{log}(x)}$ exists. It is also clear that since $\PRA=I\Sigma_1^R$ that
+these two fragments are weaker than \PRA.  We will return to these two
+fragments later on in chapter \ref{chap:Complete}.
+

@@ -2,18 +2,23 @@
 
 \begin{document}
 
+\textbf{Skriv kort hvad projektet omhandler og opris de vigtisge resultater}
+
 \section{Notation}
 
 We denote the non-negative integers with $\omega$; i.e
 $\omega=\{0,1,2,3,\ldots\}$, and $\omega\times\omega=\omega^2$ and so on.
-Subsets of $\omega$ will be denoted by $A,B,C\ldots$ and arbitrary 
+Subsets of $\omega$ will be denoted by $A,B,C\ldots$ and arbitrary sets will be
+denoted by
 $\Gamma,\Phi,\Theta\ldots$. Lower case Latin letter $a,b,c$ and $x,y,z$ will
-denote integers. Further recursive functions will be denoted by
-$F,G,H,\ldots$, and other functions that are not recursive will be denoted by
-$f,g,h,\ldots$. $F(x)\downarrow$ will denote that $F(x)$ is defined and
-$F(x)=y$ denotes that $F(x)$ is defined and has value $y$. $F(x)\uparrow$
-denotes that $F(x)$ is undefined. $\text{dom}F$ and $\text{im} F$ deontes the
-domain and image of $F(x)$.
+denote integers, and $\vec{x}$ will be shorthand for $x_1,\ldots,x_n$. Further recursive functions will be denoted by
+$\varphi,\psi,\vartheta,\ldots$, and other functions that are not recursive will be denoted by
+$f,g,h,\ldots$. $\varphi(x)\downarrow$ will denote that $\varphi(x)$ is defined and
+$\varphi(x)\downarrow=y$ denotes that $\varphi(x)$ is defined and has value $y$.
+$\varphi(x)\uparrow$
+denotes that $\varphi(x)$ is undefined. $\text{dom}\ \varphi$ and $\text{im}
+\varphi$ denotes the
+domain and image of $\varphi(x)$.
 A few special functions have their own symbols: $S$ for the
 successor function, $C$ for the constant function and $P$ for the projection.
 Relations will be denoted by $R$ and $<,>,\leq,\geq$ will be used in the usual
@@ -25,7 +30,7 @@ $\forall$ in the metalanguage of modal logic, and use them in the language of
 first-order arithmetics. The differences of these two uses should be clear
 from the context. We will argument the propositional logic with the modal unary
 connective $\Box$ and its dual $\Diamond:=\neg\Box\neg$. We will denote modal
-formulas by the greek letters $\varphi,\psi,\theta,\ldots$. The symbol
+formulas by the greek letters $\alpha,\beta,\gamma,\sigma$. The symbol
 $\mathcal{H}$ will denote a
 Hintikka frame  which is a tuple $\la W,R\ra$ where $W$ is a set of "nodes" and
 $R$ is a relation on $W$and
@@ -33,14 +38,119 @@ $\mathcal{K}$ will denote a Kripke model, which is a Hintikka frame with a
 valuation $\phi$ on.
 
 \section{Historical Introduction}
-Both the studies of arithmetics and modal logic can be traced back to the
-accent Greeks.\footnote{The study of arithmetics can be traced even further
-back}
+Humans have been interested in numbers and calculation with these since before
+the beginning of history; i.e arithmetics. 
 
+\subsection{Modal Logic}
+The Greek philosopher Aristotle did try to develop some kind of modal logic
+about necessary and possibility in both his logical works and in his
+work about the \textit{First Philosophy}.{textbf{Ref til de rigtige steder} }
+
+With our modern eyes his thoughts about nesscaration and possibility seems a
+bit confusing. But he gets something right:j
+
+\[\text{Eksempel på noget han forstår}\]
+
+The next big step for modal logic came in the enlightenment when the
+rationalist philosopher Gottfried W. Leibniz came up with the idea of possible
+worlds.  Leibniz thought that we live in the best possible world, since it is
+this world God has chosen to create. With this idea of a metaphysical possible
+worlds, it was possible to make a clear definition of when a proposition is
+necessary true; and a proposition is necessary true, if it is true in all
+possible worlds.
+
+\textbf{Hvad sker der mellem Leibniz og Kripke; især udviklingen indenfor
+syntax}
+
+In the 1950s there had been a lot of research into the syntax of modal logic.
+But there was still not a clear definition of the semantics of modal logic,
+even though philosophers and logicians still had the intuitive definition of
+necessary true from Leibniz. The answer came in the late 1950s, when the
+philosophers and logicians Jaako Hintikka
+and Saul Kripke developed the concept of a Kripke model.\footnote{They were not
+	alone in this development. But for simplicity sake \textbf{ja}}
+Hintikka came up with the idea of a frame; i.e a pair $\la W,R\ra$ where $W$ is
+a set of worlds and $R$ is an arbitrary relation on these. With this
+construction it was possible to explain for a given world, what other worlds
+was accessible to it; i.e possible worlds for it. Kripke came up with the same
+idea, but added a valuation function to the frame, which to each formula of the
+language ascribed a set of worlds in which it was true.  This construction made
+it possible for Kripke to prove some completeness results about modal logics.
+
+When the concept of the Kripke model became wider known, it started a
+\textit{Golden} age of research in modal logic. A lot of completeness results
+about different modal logic was proven in the 1960s and early 1970s; including
+the weak completeness theorem for the logic that would later be known as
+provability logic; this was done by Krister Segerberg without him having
+knowledge of what the interpretation of this logic could be.
+
+A deeper look into the development of modal logic can be found in
+\cite{Goldblatt2003}.
+\subsection{Arithmetics and Recursion Theory}
+
+\textbf{Skriv noget om axiomer systemer og historie}
+
+In the second half of the 1800s there was a development in the axiomatization
+of aritmethics. Dedeking and Peano developed axioms system for arimethics,
+these was later evovled into was today is known as the Peano axioms for
+arithmetics. 
+\textbf{Hilberts program}
+\textbf{Primitive Recursive arithmetics (Skolem)}
+\textbf{Russels Principia}
+In 1931 Kurt Gödel's paper: \textit{Title} showed that no mathematical system that
+is strong enough to do simple arithemtic can't shown its own consistency. The
+original proof was build on the system of Russel and Whitehead and had a
+assumption of $\omega$-consistency. This
+was a blow to the Hilbert program, since the result showed that the goal of it
+could not be fulfilled. Later on Rosser improved the result so that it used
+normal consistency.
+
+Later on in the 1930s Gödel extended the primitive recursive function to the  recursive
+functions. A few different definitions of intuitively computable functions was
+set forward by Kleene, Turing and Church and it was shown that all these
+different notions of intuitively computable functions gave rise to the same
+class of functions.
+
+This lead Church to state the so called \textit{Church-Turing Thesis}, that
+states that this class of functions are the computable functions.
+
+
+Gödels Incompleteness Theorems is one of the major results in recursive theory.
+
+\subsection{Provability Logic}
 The first time that someone made a connection between these two different areas
-of mathematics was Kurt Gödel in his paper: \{ªsdf\} To actually understand how
-this connection was made, a bit of the back story is needed. 
+of mathematics was Kurt Gödel in his very short  paper: \{ªsdf\}. Here we saw
+the intuitionist's laog, bla bla.
 
+After Löb's derivability conditions was found and after the develpment of the
+semantics of modal in the 1960s, it became clear that there was a connection
+between the logic that Segerberg had proven to be weakly complete and the proof
+predicate from arithmetics.
 
-A deeper look into the development of modal logic can be found in [reffff].W
+This lead to research done in different places around the from, from The
+Netherlands, Italy and the United States. It was clear early on that if
+$\alpha$ was a theorem of provability logic, then for all interpretations of
+$\alpha$ in a fragment of arithmetics was also a theorem of this fragment; but
+the other way was harder to show. In the same time there was proven a number of
+important theorems about provability; one of these, called the Fixed Point
+Theorem,  will be proven in chapter
+\ref{chap:Fixed}.
+A short overview of this early
+development can be found in \textbf{Ref:Sambin Boolos}
+
+It was proven in 1976 by Solovay that the modal
+logic now known as provability logic, is the logic of the provability predicate
+in Peano Arithemics; i.e if for all interpretations
+of a formula $\alpha$, if this interpretation was a theorem of Peano
+arithmetics,
+then the formula $\alpha$ was a theorem of provability logic. This also means that
+provability logic can be seen as an axiomataxion of the proof predicate.
+Solovays result will be the main result in this project; it will be stated
+precisely and proven in Chapter \ref{chap:Complete}.
+
+After Solovay's article was published, the research focus of provability logic
+was to generalize Solovay's result to other fragments of arithmetics and if
+it did also hold for multi-modal provability logic and quantified provability
+logic. The results of these results will be commented on in the last part of
+chapter \ref{chap:Complete} and in chapter \ref{chap:Further}
 \end{document}

@@ -2,6 +2,111 @@
 \documentclass[../main.tex]{subfiles}
 
 \begin{document}
-asd
+\section{Multi-modal provability logic}
+\textbf{Evt. bare forklar kort hvad de vigtige definitioner og resultater er i
+dette kapitel}
+
+We can extend our language $\mathcal{L}_\Box$ with more modality operators. We
+will start of by extending it with the modal operator:
+$\OneBox$ and its dual $\OneDiamond$. In the next subsection it will be
+explained what we will mean with the $\OneBox$. Latter on we will extend the language
+with even more modal operators.
+\subsection{The system \GLB}
+
+\begin{defi}
+We will say that a theory \textbf{T} is $\omega$-inconsitsent iff for some
+formula $\alpha(x)$, $\textbf{T}\vdash\exists x\alpha(x)$ and for every
+$n\in\omega$ we have: $\textbf{T}\vdash\neg\alpha(x)$. \textbf{T} is called
+$\omega$-consistent iff it is not $\omega$-inconsistent.
+\end{defi}
+We have that
+if \textbf{T} is $\omega$-consistent then $\textbf{T}\not\vdash\exists x x\not
+=x$ and thus \textbf{T} is consistent. So $\omega$-consistency implies
+consistency; but the converse does not hold. \textbf{Hvis at det ikke holde}. 
+
+\begin{defi}
+	A sentence $\alpha$ is $\omega$-inconsistent in \textbf{T} if the
+	axioms of \textbf{T} plus $\alpha$ is $\omega$-inconsistent. $\alpha$
+	is $\omega$-consistent iff it is not $\omega$-inconsistent.
+
+	We further say that a sentence $\alpha$ is $\omega$-provable in
+	\textbf{T} iff $\neg\alpha$ is $\omega$-inconsistent with $\textbf{T}$.
+\end{defi}
+It is clear that if $\alpha$ is provable in \textbf{T} then it is
+$\omega$-provable in \textbf{T}. We will introduce a new modal system
+$\textbf{GLB}$, where \textbf{B} stands for bimodal, where we add two new modal
+operators: $\OneBox$ and $\OneDiamond$ to our modal language
+$\mathcal{L}_\Box$. We will call this new language for $\mathcal{L}_{\oneBox}$
+\begin{defi}
+	The langauge $\mathcal{L}_{\oneBox}$ is the language $\mathcal{L}_\Box$
+	extend with the modal operator $\OneBox$, where the syntax $\OneBox$ is
+	the same as that of $\Box$. The operator $\OneDiamond$ is defined as
+	the dual of $\OneBox$.
+\end{defi}
+We now define the system of \GLB. We will later on discuss the semantics of
+\GLB, but this is not of important right now.
+
+\begin{defi}
+	The axioms of \GLB\ are all tautologies and all sentences of the
+	following kind:
+	\begin{enumerate}
+		\item[A1]
+			$\Box(\alpha\rightarrow\beta)\rightarrow(\Box\alpha\rightarrow\Box\beta)$
+		\item[A2]
+			$\OneBox(\alpha\rightarrow\beta)\rightarrow(\OneBox\alpha\rightarrow\OneBox\beta)$
+		\item[A3] $\Box(\Box\alpha\rightarrow\alpha)\Box\alpha$
+		\item[A4] $\OneBox(\OneBox\alpha\rightarrow\alpha)\OneBox\alpha$
+		\item[A5] $\Box\alpha\rightarrow\OneBox\alpha$
+		\item[A6] $\neg\Box\alpha\rightarrow\OneBox\neg\Box\alpha$
+		\item[R1] Modus ponens
+		\item[R2] $\Box$  -necessitation; from $\alpha$ infer
+			$\Box\alpha$.
+	\end{enumerate}
+\end{defi}
+\textbf{Kommenter på disse regler}
+
+It is clear that $\OneBox$ -necessitation is a rule of \GLB, since we have that
+if $\GLB\vdash\alpha$ then $\GLB\vdash\Box$ and by A5 we then have
+$\GLB\vdash\OneBox\alpha$.
+
+The next goal is to prove an arithmetical soundness theorem for \GLB. For this
+end we need the following definition:
+
+\begin{defi}
+	We call the following rule for the  $\omega$-rule: Infer $\forall
+	x\alpha(x)$ for all $\alpha(\ol n)$, where $n\in\omega$. A sentence is
+	provable under the $\omega$-rule in \textbf{T} if it belongs to all
+	classes containing the axioms of \textbf{T} and closed under R1, R2 and
+	the $\omega$-rule.
+\end{defi}
+
+\subsection{The problem with \GLB\ and its semantics}
+
+\subsection{The system \textbf{IDzh} and completeness of \GLB}
+
+\subsection{The system \textbf{GLP}}
+We will end this section by introducing the system \textbf{GLP}
+The language $\mathcal{L}_{[n]}$ of \textbf{GLP} is an extension of
+$\mathcal{L}_\Box$, where instead of $\Box$ we write $[0]$ and we furhter add
+a countable infinite amount of boxes:
+$[1],[2],\ldots$ representing provability in $\PA^+$, $\PA^{++}$ and so on. We
+define their duals $\la 0\ra,\la 1\ra, \la 2\ra,\ldots$ in the obvious way and
+these represent consistency, $\omega$-consistency,
+$\omega$-$\omega$-consistency and so on. We can now define the system
+\textbf{GLP}:
+\begin{defi}
+	The axioms and inferences rules of \textbf{GLP} are the following:
+	\begin{enumerate}
+		\item[A1]
+			$[n](\alpha\rightarrow\beta)\rightarrow([n]\alpha\rightarrow[n]\beta)$
+		\item[A2] $[n]([n]\alpha\rightarrow\alpha)\rightarrow[n]\alpha$
+		\item[A3] $[n]\alpha\rightarrow[n+1]\alpha$
+		\item[A4] $\neg[n]\alpha\rightarrow[n+1]\neg[n]\alpha$
+		\item[R1] Modus Ponens
+		\item[R2] $[0]$-necessiation
+	\end{enumerate}
+\end{defi}
+
+\section{Quantifed provability logic}
 
 \end{document}

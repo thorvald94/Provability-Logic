@@ -7,40 +7,41 @@ functions}. These two classes of functions gives rise to the same class of
 functions The idea behind these two classes of functions is to define what
 we intuitively mean with a computable function. The proofs in this section will
 be rather informal. The goal of this section will be to state and prove
-Kleene's recursion theorem, which will play a crucial role in our proof of the
-Solovay's completeness theorems. Further there will also be a few results and
-comments on the so called arithmetical hierarchy 
+Kleene's recursion theorem, which will play a crucial role in our proof of 
+Solovay's two  completeness theorems. Further there will also be a few results and
+comments on the so called arithmetical hierarchy, which will make it possible
+for us to generalize Solovay's theorems.
 
+The topic I have chosen to call recursion theory is today often know as
+computability theory. Robert Soares have stated some arguments for why this
+name is better suited for the discipline than the name recursion theory in his
+book \cite{Soare2016}.
+
+This sections will follow \cite{Soare1987}, unless stated otherwise. 
 \section{Partial Recursive Functions and Recursive Functions}
 The partial recursive functions is an enlargement of the primitive recursive
-functions. The primitive recursive functions is defined in the following way:
-\begin{defi}
-	The class of primitive recursive functions is the smallest class closed
-	under the following schemata:
-	\begin{enumerate}[label=\Roman*.]
-		\item $S(x)=x+1$ is primitive recursive.
-		\item $C(x)=k$ is primitive recursive.
-		\item $P^n_i(\x)=x_i$ is primitive recursive.
-		\item If $g,h_1,\ldots h_m$ are primitive recursive then so
-			is
-			$$f(\x)=g(h_1(\x),\ldots,h_m(\x)$$
-		\item If $g$ and $h$ are primitive recursive and $n\geq 1$ then
-			$f$ is also primitive recursive where:
-			\begin{align*}
-				f(0,\x)&=g(\x)\\
-				f(x_1+1,x_2,\ldots,x_n)&=h(x_1,f(\x),x_2,\ldots,x_n)
-			\end{align*}
-	\end{enumerate}
-\end{defi}
-In the appendix there is a collection of functions that are
-primitive recursive.
+functions. The class of primitive recursive functions capture a lot of the
+function we intuitively sees as computable. It do not contain any function that
+we would say was incomputable.
 
-The primitive recursive functions do not include all computable
-functions, so we have to expand them in the following way:
+But the primitive recursive functions do not include all intuitively computable
+functions. For example the following function that is clearly computable is not
+in the class of primitive recursive functions:
+\begin{align*}
+	A(0,n)&=n+1\\
+	A(m+1,0)&=A(m,1)\\
+	A(m+1,n+1)&=A(m,A(m+1,n))
+\end{align*}
+\textbf{Skrif uddybende om dette}
+
+So we will need to expand our class of functions, if we want to
+\textit{capture} all intuitively computable functions. 
+We will expand them in the following way:
 \begin{defi}
 		The class of \textit{partial recursive} (from now on some times
 		called (p.r) functions is the least class closed under schemata
-		I through V and the following VI schema. 
+		I through V from the definition of primitive recursive
+		functions and the following VI schema . 
 		\begin{enumerate}[label=\Roman*., start=6]
 			\item If $\theta(\x,y)$ is a partial recursive function
 				of $n+1$ variables and 
@@ -56,6 +57,10 @@ functions, so we have to expand them in the following way:
 		A partial recursive function that is total is called a total
 		recursive function; abbreviated to recursive function.
 \end{defi}
+
+This is one way in which one can define what the computable functions are. In
+the next section we will come with another definition of a type of functions,
+and it will be shown that these leads to the same class of functions.
 
 We will end this section with the following definition:
 \begin{defi}
@@ -73,8 +78,9 @@ machine.
 \begin{defi}
 	A \textit{Turing machine} $M$ consists of a two-way infinite tape that
 	is dived into different cells and a finite set of internal states $Q=\{
-	q_0,\ldots, g_n\}$, $n\geq 1$. Each is either blank: B or has a 1
-	written on them. The following three things can happen in a single
+	q_0,\ldots, g_n\}$, $n\geq 1$. Each cell  is either blank: B or has
+	value 1.
+	The following three things can happen in a single
 	step:
 	\begin{enumerate}
 		\item Change form one state to another.
@@ -87,6 +93,14 @@ machine.
 	$$\delta:Q\times S\rightarrow Q\times S\times\{R,L\}$$
 	Which may not be defined for all arguments.
 \end{defi}
+The situation can be seen in the following figure:
+\begin{center}
+	\begin{figure}[h]
+\includegraphics[width=\textwidth]{Turnig.png}
+\caption{A Turing Machine}
+\end{figure}
+\end{center}
+
 The way to understand this definition is the following: if
 $(q,s,q',s',X)\in\delta$ it means that the machine $M$ is in stage $q$ where it
 scans symbol $s$ then changes to state $q'$ and replaces $s$ by $s'$. Lastly it
@@ -95,7 +109,7 @@ Turing program if it can be views as a finite set of quintuples. If the input
 integer is $x$ then it will be represented by a string of $x+1$ consecutive
 $1's$, where all other cells are blank.
 
-Further the machine $M$ start in the state $q_1$ scanning the left-mst cell
+Further the machine $M$ start in the state $q_1$ scanning the left-most cell
 that contains a $1$. The machine stops if it reaches the halting state $q_0$,
 and it will then output the number $y$ which is the total number of $1$'s on
 the tape in the this state. If $M$ with input $x$ halts and outputs $y$ we
@@ -146,7 +160,7 @@ find any program $P_e$ by its code $e$. This gives the following definition:
 	let $a_e^{(n)}$ be the function of $n$ variables computed by $P_e$.
 	Further let $a_e$ abbreviate $a_e^{(1)}$.
 \end{defi}
-\section{Auxiliary Results}
+\section{The \textit{s-m-n}-Theorem}
 
 It can be proven that the two classes of functions; partial recursive and Turing
 computable functions gives rise to the same class of partial functions. This
@@ -172,6 +186,7 @@ The following theorem will show that each Turing computable function is in fact
 partial recursive. Latter we will prove that the converse also holds.
 
 \begin{thm}
+	\label{thm:Normalform}
 	There exist a predicate $T(e,x,y)$ and a function $U(y)$ that are
 	primitive recursive such that:
 	$$\varphi_e(x)=U(\mu yT(e,x,y))$$
@@ -200,7 +215,15 @@ This theorem also gives us that each partial recursive function can be created
 by two primitive recursive functions, with a single application of the
 $\mu$-operator.
 
-
+\begin{thm}[Enumeration Theorem]
+	\label{thm:Emu}
+	There is a partial recursive function of $2$ variables
+	$\varphi_z^{(2)}(e,x)$ such that $\varphi_z^{(2)}(e,x)=\varphi_e(x)$.
+\end{thm}
+\begin{proof}
+	By Theorem \ref{thm:Normalform} we will define
+	$\varphi_z^{(2)}(e,x)=U(\mu y T(e,x,y))=\varphi_e(x)$
+\end{proof}
 We will need the following notation in the next proof:
 \begin{defi}
 	Set $\la x,y\ra$ to be the image of $(x,y)$ under the injective
@@ -209,7 +232,7 @@ We will need the following notation in the next proof:
 	This function is from $\omega\times\omega$ onto $\omega$.[Måske let
 	mere?]
 \end{defi}
-\begin{thm}
+\begin{thm}[s-m-n theorem]
 	For every $m,n\geq 1$ there exists an injective recursive function
 	$s_n^m$ of $m+1$ variable such that for all $x,y_1,\ldots,y_m$
 	$$\varphi^{(n)}_{s^m_n(x,y_1,\ldots,y_m)}=\lambda z_1,\ldots
@@ -240,6 +263,31 @@ We will need the following notation in the next proof:
 	defining $s'(x,y)$ in increasing order of $\la x,y\ra$.
 \end{proof}
 
+A full proof of this statement can be found in Kleene. The $s-m-n$ theorem
+plays a crucial role in both the proof and the use of the recursion theorem.
+\textbf{Skriv noget om intuiton}. Therefore we will use the $s-m-n$ theorem to
+prove the following proposition:
+\begin{prop}
+	There is a recursive function $g$ of two variables such that for all
+	x,y:
+\[\varphi_{g(x,y)}=\varphi_x\varphi_y\]
+\end{prop}
+\begin{proof}
+	By Church's Thesis it is clear that $\eta=\varphi_x\varphi_y$ is a
+	partial recursive function since it is the product of two partial
+	recursive functions.
+
+	To end the proof we must show that we can find Gödel number for $\eta$
+	in an uniform effective way from $x$ and $y$ as $x$ and $y$ vary. We
+	will start of by defining:
+	\[\theta(x,y,z)=\varphi_x(\varphi_y(z))=\varphi_{x_1}(x,\varphi_{x_1}(y,z))\]
+	Where $\varphi_{x_1}$ is the function $\varphi_z^{(2)}$ from Theorem
+	\ref{thm:Emu}. By the church thesis this function is partial recursive
+	and has an index $e$. So by applying the $s-m-n$ Theorem we get:
+	\[\varphi_x\varphi_y=\lambda
+	z[\varphi_e(x,y,z)]=\varphi_{s_1^2(e,x,y)}\]
+	And thus $s_1^2(e,x,y)$ is our $g$ (i.e $\lambda xy[s_1^2)e,x,y)]$.
+\end{proof}
 \section{Recursively Enumerable sets and the Graph of a function}
 In this section we will introduce the two concepts \textit{recursive
 enumerable} sets and the \textit{graph} of a function. We will further show
@@ -339,6 +387,7 @@ It will be the following theorem we will use in our proof later on.
 	is that $R=\text{graph} f$ can only have $f$ as its selector function.
 	[Whyyy?]
 \end{proof}
+
 \section{The Recursion Theorem}
 In this section we will state and prove the recursion theorem. It will be
 crucial in the next [chapter?], since we will need it to define a function.
@@ -349,7 +398,9 @@ crucial in the next [chapter?], since we will need it to define a function.
 \begin{proof}
 	We will start of be defining the following \textit{diagonal} function
 	$d(u)$ as:
-	\begin{align}\varphi_{d(u)}(z)=\begin{cases}
+	\begin{align}
+		\label{eq:du}
+		\varphi_{d(u)}(z)=\begin{cases}
 		\varphi_{\varphi_u(u)}(z)& \text{if}\ \varphi_u(u)\
 		\text{converges}\\
 		\text{undefined} & \text{else}
@@ -360,6 +411,7 @@ crucial in the next [chapter?], since we will need it to define a function.
 
 	Given an arbitrary $f$ we will choose an index $v$ such that:
 	\begin{align}
+		\label{eq:fd}
 		\varphi_v=f\circ d
 	\end{align}
 	Now set $n=d(v)$. We will show that this is a fixed point for the
@@ -368,7 +420,8 @@ crucial in the next [chapter?], since we will need it to define a function.
 	$\varphi_{d(v)}=\varphi_{\varphi_v(v)}$. Thus we have:
 	$$\varphi_n=\varphi_{d(v)}=\varphi_{\varphi_v(v)}=\varphi_{f\circ
 	d(v)}=\varphi_{f(n)}$$
-	The second equality sign follows from (2.1) and the third follows from (2.2).
+	The second equality sign follows from \ref{eq:du} and the third follows
+	from \ref{eq:fd}.
 \end{proof}
 Following [Owens, find ref], the argument in the proof can be seen as a
 digitalization argument that fails. Commonly when we apply a digitalization
@@ -419,6 +472,37 @@ following examples will show a few uses of this theorem.
 	We start of by using the $s-m-n$ theorem to define $W_{f(x)}=\{x\}$
 	then by the recursion theorem we can choose $n$ such that we have:
 	$$W_n=W_{f(n)}=\{n\}$$
+\end{exmp}
+
+The next example will be a application of the Recursion Theorem that is in the
+same vein as the one we will use when we have to prove Solovay's completeness
+theorems.
+\begin{exmp}
+	Let $\psi:\omega^2\rightarrow\omega$ and
+	$\theta:\omega^3\rightarrow\omega$ be recursive functions and define
+	the function $\varphi:\omega^2\rightarrow\omega$ by:
+	\begin{align*}
+		\varphi(0,y)&=\psi(y)\\
+		\varphi(x+1,y)&=\theta(\varphi(x,y),x,y)
+	\end{align*}
+	We will now show that $\varphi$ is recursive by using the recursion
+	theorem.
+
+	Let $\phi_0 v_0v_1$ be an arbitrary graph and let $\phi_1v_0v_1$ be the
+	graph of $\psi$ and $\chi v_0v_1v_2$ be the graph of $\theta$. We will
+	now look at the following formula:
+	\[\Phi(\phi_0):\ (v_0=\0\wedge \phi_1v_0v_1)\vee (v_0>\0\wedge \exists
+	v(\phi_0(v_+-1,v)\wedge \chi vv_0v_1))\]
+	We can see $\Godelnum{\Phi(\phi_0)}$ as a primitive recursive function
+	of $\Godelnum{\phi_0}$. I.e we have:
+	\[\Godelnum{\Phi(\phi_0)}=\eta(\Godelnum{\phi_0})\]
+	We can now use the Recursion Theorem to chose a $n$ such that we have:
+	$\varphi^{(2)}_{\eta(n)}=\varphi^{(2)}_n$ and for
+	$varphi=\varphi^{(2)}_n$ we have:
+	\[\varphi(x,y)=z\leftrightarrow(x=0\wedge\psi(y)=z=\vee(x>0\wedge
+	\theta(\varphi(x-1,y),x,y)=z)\]
+	I.e $\varphi$ does exactly what we want it to do. WE just need to
+	define $\varphi$ and this can be done by a $\Sigma_1$ induction.
 \end{exmp}
 \section{The Arithmetical Hierarchy}
 \textbf{Noget klort her} :w
@@ -553,6 +637,28 @@ We can show a few properties of these sets.
 
 
 \section{Sigma completeness, put ind hvor dette passer i overstående}
+\textbf{Fra Soares}
+Noget meget advandceret end jeg nok har brug for.
+
+\textbf{Peter Smith}
+
+We will start of by defining the notion of $\Sigma_1$ completeness and
+soundness.
+
+\begin{defi}
+	Let $T$ be a theory such that any [FFF?] is also a sentence of $T$.
+	Then we will define the following two notions:
+	\begin{enumerate}
+		\item $T$ is $Sigma_1$-sound iff for any $\Sigma_1$-formula
+			$\alpha$, if $T\vdash\alpha$, then $\alpha$ is true.
+		\item $T$ is $Sigma_1$-complete iff for any $\Sigma_1$-formula
+			$\alpha$, if $\alpha$ is true, then $T\vdash\alpha$
+	\end{enumerate}
+\end{defi}
+We are interested in theories that extend  $I\Delta_0$ and is  
+$\Sigma_1$-complete, since for these we can show the main theorems of this
+project.
+\textbf{Fra Smorynski}
 We can make a generalization of $D3$ by using [Lemma fra fagprojekt]. We use
 these genieralization in some of our proofs later on.
 \begin{thm}

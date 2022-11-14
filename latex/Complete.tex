@@ -1,41 +1,103 @@
-%! TeX program = lualatex
+% TeX program = lualatex
 
 \documentclass[../main.tex]{subfiles}
 
 \begin{document}
 In this section we will prove Solovay's completeness theorems. The proof of
 these theorems follows a technique invented by Robert Solovay, which today is
-known as \textit{Solovay construction}. This technique is a way of embedding
-Kripke models into arithmetic
+known as a \textit{Solovay construction}. This technique is a way of embedding
+Kripke models into arithmetic. These theorems shows: \textbf{Forklar}
 
-\section{The First Theorem}
+\section{Soundness}
+For each  formula in $\mathcal{L}_\Box$ we want to assign a sentence of
+$\mathcal{L}_\PRA$.
+This can be done in the following way.
 
-\begin{lem}
+\begin{defi}
+	An interpretation of $\mathcal{L}_\Box$ in \PRA\ is a function that to
+	each formula $\alpha$ of $\mathcal{L}_\Box$ assigns a sentence
+	$\alpha^*$ of \PRA\ which satisfies the following requirements:
+	\begin{enumerate}
+		\item For atomic $p$, $p^*$ is a formula of the language of
+			arithmetic 
+		\item $(\bot)^*="0=1"$
+		\item $(\alpha\rightarrow\beta)^*="\alpha^*\rightarrow\beta^*"$
+\item $(\Box\alpha)^*="\Pr(\Godelnum{\alpha^*})"$
+	\end{enumerate}
+	We will further say that a  modal formula $\alpha$ is \PRA-valid if, in every interpretation
+	$^*$, $\alpha^*$ is a theorem of \PRA.
+\end{defi}
+
+The goal of the current section is to prove the that the set of \PRA-valid
+formulas are the theorems of \GL. I.e we want to prove the following bi-implication:
+
+\[\GL\vdash\alpha\Leftrightarrow \forall^*(\PRA\vdash\alpha^*)\]
+This formula says that \GL\ completely captures what \PRA\ can say about its own
+provability. This result can be expanded to other fragments of arithmetics. So
+the modal logic \GL\ is the modal logic that captures what a lot of  different fragments of
+arithmetics can say about its own provability. Later on in the project it will be shown for which fragments this
+is the case. 
+
+In \ref{chap:second} we will show that \GLS\ is the modal logic of provability
+in truth. This is called Solovay's second completeness theorem.
+
+We will start with proving the "$\Rightarrow$" implication; i.e that every
+theorem of \GL\ is \PRA-valid. The other way will be a bit harder to prove, and
+that is the part that is known as Solovay's first completeness theorem.
+\begin{thm}[Soundness]
 	For all modal sentences $\varphi$ we have that :
-	$$GL\vdash\varphi\Rightarrow\forall ^*(\PRA\vdash\varphi^*)$$
-\end{lem}
+	$$\GL\vdash\varphi\Rightarrow\forall ^*(\PRA\vdash\varphi^*)$$
+\end{thm}
 \begin{proof}
-	The proof will be done as an induction proof.
+	The proof will be done as an induction proof on the number of axioms
+	and rules of inference use in a \GL-proof of a formula $\alpha$. The
+	proof will be done by looking at the last rule or axiom schema used in
+	the proof of $\alpha$.
+
+	The case of A1 and R1 are clear. We further have that the theorems of
+	\PRA\ are closed under modus ponens so A2 is also clear. 
+
+	Assume that  the last step of the proof of $\alpha$ is an instance of
+	R2. We have that $\Pr(x)$ is $\Sigma_1$ formula, so it is equivalent to
+	some formula of the form $\exists y R(x,y)$, where $R$ is a primitive
+	recursive predicate. We know that if a $\Sigma_1$ sentences is true it
+	is provably, so this shows the case of R2.
+
+	The axiom A3 can be derived from the others, so this case is redudant.
+
+	We will now just have to show the case of A4. This case follows by
+	Löb's theorem.
 \end{proof}
+\section{The First Theorem}
+Having shown soundness, we will now show the completeness theorem:
 \begin{thm}[Solovay's first completeness theorem]
 	For all modal sentences $\varphi$ we have that:
-	$$\forall ^* (\PRA\vdash \varphi^*)\Rightarrow \GL\vdash \varphi$$
+	$$\forall ^* (\PRA\vdash \alpha^*)\Rightarrow \GL\vdash \alpha$$
 \end{thm}
-This theorem will be shown by contraposition: If $\GL\not\vdash \varphi$ then we
-have one $^*$ such that $\PRA\vdash\varphi^*$. This will be a rather complex
-construction, and will take the rest of this subsection to prove. So for the
-rest of this subsection fix a sentence $\varphi$ such that $GL\vdash \varphi$
-and let $\ol{K}=(W,R,\phi)$ be a Kripke model such that $w_0\vdash\varphi$.
 
-We will assume that $K=\{0,\ldots, n\}$ for some finite $n$ and that $w_0=1$.
+This theorem will be shown by contraposition. So we want to show the following:
+"If $\GL\not\vdash \alpha$ then we
+have one $^*$ such that $\PRA\not\vdash\alpha^*$". 
+The start of the proof is the following: If $\GL\not\vdash\alpha$ then
+$\GL\not\vDash\alpha$ and thus there is a finite pointed Kripke model $\mathcal{K}=\la
+W,R,\phi,w_0\ra$ in which we have $w_0\not\in\phi(\alpha)$. The goal is then to
+find an interpretation $^*$ such that $\PRA\not\vdash\alpha^*$.
+
+The construction of this
+$^*$ is rather complex, and will take the rest of this subsection to prove. So for the
+rest of this subsection fix a sentence $\varphi$ such that $\GL\not\vdash \varphi$
+and let $\mathcal{K}=\la W,R,\phi,w_0\ra$ be a pointed Kripke model such that $w_0\in\phi(\alpha)$.
+
+We will assume without loss of generality  that $W=\{0,\ldots, n\}$ for some finite $n$ and that $w_0=1$.
 $R$ can be extended by setting $0Ri$ for each $i$ in $W$. Is shall be noted
-that $0$ is not part of our Kripke model.
+that $0$ is not part of our Kripke model, but we will in section
+ref{chap:second} create a model where it is a part of the model.
 
-Further we will first intuitively define a function $F\omega\rightarrow\{0,\ldots, n\}$ in the
-following way: Set $F(0)=0$. Further we define $F(x+1)$ in the following way:
+Further we will first intuitively define a function $\varphi:\omega\rightarrow\{0,\ldots, n\}$ in the
+following way: Set $\varphi(0)=0$. Further we define $\varphi(x+1)$ in the following way:
 If $x+1$ is the code of a proof that $\lim_{k\rightarrow\infty}(k)\not =z$ for
-some $z$ accessible to $F(x)$ we set $F(x+1)=z$ otherwise we have that
-$F(x+1)=F(x)$.
+some $z$ accessible to $\varphi(x)$ we set $\varphi(x+1)=z$ otherwise we have that
+$\varphi(x+1)=\varphi(x)$.
 
 The way this function works can be explained intuitively by the following
 quote:
@@ -48,58 +110,105 @@ quote:
 	find biktex reference]
 \end{displayquote}
 
-Before we can give a formal definition of the function $F$, we will have to do
-some work, and introduce some notation. First of we will let $G$ be a partial
-recursive function with the following $\Sigma_1$ graph: $\psi v_0v_1$. From
+Before we can give a formal definition of the function $\varphi$, we will have to
+introduce some notation. First of we will let $\psi$ be an arbitrary  partial
+recursive function with the following $\Sigma_1$ graph: $\tau v_0v_1$. From
 this graph we can obtain the following $\Sigma_2$ formula:
-$$\exists v_0\forall v_1>v_0:\psi v_1v$$
+$$\exists v_0\forall v_1>v_0:\tau v_1v$$
 
-Which says that $G$ has limit $v$. We will abbreviate this as $L=v$. We will
-use this notation to define $F$ in the following way:
-$$F(v_0)=v_1\leftrightarrow\begin{cases}
+Which says that $\psi$ has limit $v$. We will abbreviate this as $L_\psi=v$. We will
+use this notation to define $\varphi$ in the following way:
+$$\varphi(v_0)=v_1\leftrightarrow\begin{cases}
 	(v_0=\0\wedge v_1=\0)\ \vee \\
-	(v_0>\0\wedge Prov(v_0,\Godelnum{L\not =\0})\wedge F(v_0-\ol 1)\ol
+	(v_0>\0\wedge Prov(v_0,\Godelnum{L\not =\dot v_1})\wedge \varphi(v_0\dot -\ol 1)\ol
 	Rv_2)\ \vee\\
-	(v_0>\0\wedge \forall v_2\leq v_0\neg(Prov(v_0,\Godelnum{\not
-	=v_2})\wedge\ol{F}(v_0-\ol{1})\ol{R}v_2\ \wedge\\
-	v_1=\ol{F}(v_0-\ol{1}))
+	(v_0>\0\wedge \forall v_2\leq v_0\neg(Prov(v_0,\Godelnum{L\not
+	=v_2})\wedge\ol{ \varphi}(v_0\dot-\ol{1})\ol{R}v_2\ \wedge\\
+	v_1=\ol{\varphi}(v_0-\ol{1}))
 	\\
 	\end{cases}
 $$
-\textbf{Mere formelt defi:}
-
-Thus we have that $F$ have the following properties:
+We will define the graph $\tau v_0v_1=\exists v_3\chi v_3v_0v_1$ of the partial
+recursive function $\varphi$. Since we have that the graph of $\varphi$ is
+$\Sigma_1$ we have that the graph $\tau$ is also $\Sigma_1$ and thus the graph
+$\chi$ is $\Delta_0$. We will define a formula $\Phi(\chi)$ as the
+disjunction of the following three formulas:
 \begin{enumerate}
-	\item $F(0)=0$
-	\item If $x+1$ proves that $L\not =\ol z$ and we have that $F(x)Rz$,
-		then $F(x+1)=z$
-	\item Else we have that $F(x+1)=F(x)$
+	\item $v_0=\0\wedge v_1=\0$
+	\item $v_0>\0\wedge \text{Prov}(v_0,\Godelnum{L_\tau\not =v_1})\wedge\exists
+		v_4(\tau(v_0\dot-\ol 1,v_4)\wedge v_4\ol Rv_1$)
+\item  $v_0>\0 \wedge \exists v_3v_4\forall v_2\leq
+	v_0\neq(\text{Prov}(v_0,\Godelnum{L_\tau\not =v_2})\wedge
+	\chi(v_3,v_0-\ol 1,v_4)\wedge v_4\ol Rv_1)\\
+	\wedge \tau(v_0-\ol 1,v_1)$
 \end{enumerate}
-By the Recursion theorem this function exists. Further it is a total function
-since it is defined by recursion.
+Thus we have that the set $\Phi(\chi)$ can be seen as a primitive recursive
+function of $\Godelnum{\chi}$; i.e we have:
+\[\Godelnum{\Phi(\chi)}=\vartheta(\Godelnum{\chi})\]
 
+Since primitive functions are recursive we have by the Recursion Theorem that
+we can pick an $n$ such that $\varphi_{\vartheta(n)}=\varphi_n$. Now set
+$\varphi=\varphi_n$. This definition of $\varphi$ is rather involved. But we
+have defined $\varphi$ by its own graph, and avoided the imperant circularity
+by using the recursion theorem to not rely on the graph.
+
+We further define the relation $\ol R$ by listing all pairs $(x,y)\in R$ (We
+can do this since the set $R$ is finite) and
+then define:
+\[v_0 \ol Rv_1: \bigvee_{(x,y)\in R)}(v_0=\ol x\wedge v_1=\ol y) \]
+Thus we have that $\varphi$ have the following properties:
+\begin{enumerate}
+	\item $\varphi(0)=0$
+	\item If $x+1$ proves that $L\not =\ol z$ and we have that $\varphi(x)Rz$,
+		then $\varphi(x+1)=z$
+	\item Else we have that $\varphi(x+1)=\varphi(x)$
+\end{enumerate}
+Further it is a total function
+since it is defined by recursion, and this can be proven in \PRA.
+\begin{prop}
+	Let $\psi$ be the $\Sigma_1$-formula that defines the graph of
+	$\varphi$. Then:
+	\[\PRA\vdash\forall v_0\exists !v_1\psi v_0v_1\]
+\end{prop}
+\begin{proof}
+	The uniqueness of $v_1$ is given by the definition of $\varphi$. The
+	existence of a value is given by induction on $v_0$ in the $\Sigma_1$ formula $\exists
+	v_1\psi v_0v_1$ in \PRA, and thus this induction is possible in \PRA. 
+
+	\textbf{Base step:} When $v_0=0$ we have that $\psi(0)=0$ by
+	definition of $\varphi$; i.e $\exists v_1\psi v_0v_1$, where $v_1=0$.
+
+	\textbf{Induction step:} Assume that $\exists v_1\psi v_0v_1$ holds for
+	$v_0=n$, i.e we have a $v_1=m$ such that $\varphi(n)=m$. Look at
+	$\varphi(n+1)$, then if $n+1$ proves that $L_\psi\not =\ol z$ and we
+	have that $\varphi(n)Rz$, then we will have that $\varphi(n+1)=z$, i.e
+	$v_1=z$ otherwise we will have that $\varphi(n+1)=\varphi(n)=m$, and
+	the induction is done.
+\end{proof}
 Further we will expand the langauge with a new function constant (This can be
-done, since $\psi$ is the graph of a total function) $\ol F$ with the following
+done, since $\psi$ is the graph of a total function) $\ol \varphi$ with the following
 defining axiom:
-$$\ol F(v_0)=v_1\leftrightarrow\psi (v_0)=v_1$$
-We will now prove and state a few lemmas before proving the main theorem.
+$$\ol \varphi(v_0)=v_1\leftrightarrow\psi (v_0)=v_1$$
 
+We will now prove and state a few lemmas about the function $\varphi$ and the
+limit of this function $L\tau=L$. These will build up the proof of Solovay's
+First Completeness Theorem. Thus we will use the function $\varphi$ and the
+limit $L$ to deduce the theorem
 
 \begin{lem}
 	\label{lem:2}
 	The following three statements holds:
 	\begin{enumerate}
-		\item $\PRA\vdash\forall v_0(\ol Fv_0\leq \ol n)$
+		\item $\PRA\vdash\forall v_0(\ol \varphi v_0\leq \ol n)$
 		\item For all $x\in\omega$ we have that:\ $$\PRA\vdash\forall
 			v_o(\ol
-			Fv_0=\ol x\rightarrow\forall v_1>v_0(\ol Fv_1=\ol x\vee
-			\ol x\ol R\ol Fv_1))$$
-		\item $\PRA\vdash\exists v_0v_1\forall v_2>v_0(\ol Fv_2=v_1)$. 
+			\varphi v_0=\ol x\rightarrow\forall v_1>v_0(\ol \varphi v_1=\ol x\vee
+			\ol x\ol R\ol \varphi v_1))$$
+		\item $\PRA\vdash\exists v_0v_1\forall v_2>v_0(\ol \varphi v_2=v_1)$. 
 	\end{enumerate}
 	Where (3) just means that $\PRA\vdash\exists v_1(L=v_1)$.
 \end{lem}
 \begin{proof}
-	\textbf{Dette bevis er ikke helt "færdigt". Færdiggør det selv senere}
 
 	We will prove each part separately 
 
@@ -107,32 +216,70 @@ We will now prove and state a few lemmas before proving the main theorem.
 
 		\item We will prove this part by induction.
 
-			\textbf{Base case:} $F(0)=0\leq n$ is is clearly true.
+			\textbf{Base case:} $\varphi(0)=0\leq n$ is is clearly true.
 
-			\textbf{Induction step:} Assume that $F(x)\leq n$ is
-			true.Then we have that $F(x+1)$ is in the range of $F$
-			and this $\leq n$ or we have that $F(x+1)\leq n$ so the
+			\textbf{Induction step:} Assume that $\varphi(x)\leq n$ is
+			true.Then we have that $\varphi(x+1)$ is in the range
+			of $\varphi$
+			and this $\leq n$ or we have that $\varphi(x+1)\leq n$ so the
 			induction is complete.
 		\item We will start of by write the formula we have to prove as
 			the following equivalent formula:
-			$$\forall v_1\forall v_0(\ol{F}v_0=\ol x\rightarrow
-			F(v_0 + v_1+\ol 1)=\ol x\vee \ol x\ol R\ol
-			F(v_0+v_1+1))$$
+			$$\forall v_1\forall v_0(\ol{\varphi}v_0=\ol x\rightarrow
+			\varphi(v_0 + v_1+\ol 1)=\ol x\vee \ol x\ol R\ol
+			\varphi(v_0+v_1+1))$$
 			To prove this we will use induction on $v_1$. This is
 			an induction on a $\Pi_1$ formula; which is a possible
 			induction for \PRA\ by [Ref] 
 
-			\textbf{Base case} if $v_1=0$ then we have that 
+			\textbf{Base case:} if $v_1=0$ then clearly we have that
+			$\varphi(v_0+1)=\ol x$ or $\ol x\ol R\ol
+			\varphi(v_0+1)$ by the definition of $\varphi$.
 
-			\textbf{Induction step} bla
+			\textbf{Induction step:} Assume that it holds for
+			$v_1=n-1$, i.e that we for all $v_0$ have that:
+			\[\varphi(v_0+\ol n)=\ol x\ \text{or}\ \ol x\ol
+			R\ol\varphi(v_0+\ol n)\]
+			We will split the rest of this proof up in two parts;
+			one where the first disjunct is true, and one where the
+			second is true.
 
-			\textbf{Kom tilabe til dette sted}
+			\textbf{The first disjunct is true:}. Assume that both
+			$v_0+n+1$ codes a proof that $L\not =z$ and
+			$\varphi(v_0+\ol n) Rz$ is true. This means that
+			$\varphi(v_0+\ol n+1)=z$. But this is just that $x\ol
+			R\varphi(v_0+\ol n+1)$, and the lemma is true in this case.
+			If these assumptions are not true, we will then have
+			that $\varphi(v_0+\ol n+1)=\varphi(v_0+\ol n)$. But
+			then we have that $\varphi(v_0+\ol n+1)=\ol x$, and the
+			lemma holds.
+			
+			\textbf{The second disjunct is true:} We will again
+			start of by assuming that $L\not =z$ and
+			$\varphi(v_0+n)Rz$; i.e $\varphi(v_0+n+1)=z$. We then
+			get that $\varphi(v_0+n)R\varphi(v_0+n+1)$ and by the
+			transitivity of $R$ we get: $x\ol R\varphi(v_0+n+1)$.
+			If we otherwise have that
+			$\varphi(v_0+n)=\varphi(v_0+n+1)$ we clearly have that
+			$\ol x\ol R\varphi(v_0+n+1)$.
 
 		\item Here we will first prove the following:
 			$$\forall v_0(\exists v_1(\ol
 			Fv_1=v_0)\rightarrow\exists v_1(L=v_1))$$
-			This is clearly true for $v_0\leq n$. \textbf{Kig på
-			dette senere}.
+			This is clearly true for $v_0> n$. For $v_0\leq n$ we
+			will use induction on the converse of $R$. By 2) from
+			this lemma it holds for maximal nodes $y$ in $W$. If
+			$y$ is not a maximal note and $\exists v_1(\ol
+			\varphi(v_1)=\ol x)$ then again by 2) we either get
+			that $L=\ol x$ or that for some $y$ such that $xRy$:
+			$\exists v_1(\ol \varphi(v_1)=\ol y)$, and the induction
+			hypothesis gives us that $\exists v_1(L=v_1)$. But
+			since the set $W$ is finite we will end up with
+			getting:
+			\[\PRA\vdash\exists v_1(\ol\varphi(v_1)=\ol
+			0)\rightarrow\exists v_1(L=v_1)\]
+			But we have that $\PRA\vdash \ol \varphi(\ol 0)=\ol 0$
+			so clearly: $\PRA\vdash\exists v_1(L=v_1)$
 \end{enumerate}
 \end{proof}
 \textbf{Kommenter på Inductionen brugt ovenover.}
@@ -150,10 +297,10 @@ We will now prove and state a few lemmas before proving the main theorem.
 	\begin{enumerate}
 		\item $L=\ol x\wedge \ol x \ol R\ol y\rightarrow
 			\Con_{\PRA+L=\ol y}$
-		\item $\PRA\vdash L=\ol x\wedge \ol x\not = \ol y\wedge \neq
-			\ol x \ol R\ol y\rightarrow\neg \Con_{\PRA+L=\ol y}$
+		\item $\PRA\vdash L=\ol x\wedge \ol x\not = \ol y\wedge \neg
+			(\ol x \ol R\ol y)\rightarrow\neg \Con_{\PRA+L=\ol y}$
 		\item $\PRA\vdash L=\ol x\wedge \ol x >\0\rightarrow
-			\Pr(\Godelnum{L=\neg x})$
+			\Pr(\Godelnum{L\not=\ol x})$
 	\end{enumerate}
 
 \end{lem}
@@ -237,9 +384,9 @@ We will now prove and state a few lemmas before proving the main theorem.
 			$$\PRA\vdash L=\ol x\wedge \ol x> \ol 0\rightarrow
 			\text{Pr}(\Godelnum{L\not =\ol x})$$
 \end{proof}
-Lemma \ref{lem:2} and \ref{lem:4} gives us the most of the basic fact we need
-about $L$ and $F$; at least the facts about them that we can prove in $\PRA$.
-We will also need the following result, which cannot be proven i $\PRA$.
+Lemma \ref{lem:2} and \ref{lem:4} gives us the moss of the  facts that we need
+about $L$ and $\varphi$; at least the facts about them that we can prove in $\PRA$.
+We will also need the following result, which cannot be proven in $\PRA$.
 \begin{lem}
 	\label{lem:5}
 	The following two statements are true, but they cannot be proven in
@@ -252,7 +399,7 @@ We will also need the following result, which cannot be proven i $\PRA$.
 \end{lem}
 \begin{proof}
 	\textbf{1)} By lemma \ref{lem:2}.3 the limit $L$ exists. If $x>0$ we have by lemma
-	\ref{lem:5} that:
+	\ref{lem:4} that:
 	\begin{align*}
 		L=\ol x &\Rightarrow \PRA\vdash L\not =\ol x\\
 		     &\Rightarrow L\not = \ol x
@@ -262,7 +409,7 @@ We will also need the following result, which cannot be proven i $\PRA$.
 
 	\textbf{2)} Since we have that $L=\ol 0$ is true and we have that \PRA\
 	is sound, we have  that $\PRA+L=\ol 0$ is consistent. For $x>0$ we will
-	apply lemma \ref{lem:5}.1 and get:
+	apply lemma \ref{lem:4}.1 and get:
 	$$\PRA\vdash L=\ol 0\wedge \ol 0\ol R\ol x\rightarrow
 	\text{Con}_{\PRA+L=\ol x}$$
 	We have that the antecedent is true and hence that
@@ -270,57 +417,62 @@ We will also need the following result, which cannot be proven i $\PRA$.
 	lemma.
 \end{proof}
 
-We have now shown all the important basic properties that $F$ and $L$ holds. In
+We have now shown all the important basic properties that $\varphi$ and $L$ holds. In
 the next part of the proof we will simulate the Kripke model $\mathcal{K}=\la
-W,R,\phi\ra$, where $\mathcal{K}_1\not\vdash \varphi$. For this end we will let $L=\ol x$ assume the nodes of
-$W=\{1,\ldots n\}$. We will start of by defining the interpretation $^*$.We
-will start of by defining the interpretation $^*$.  So for any $p$ let:
+W,R,\phi\ra$, where $1\not\in\phi(\alpha)$. For this end we will let $L=\ol x$,
+for $x>0$, assume the rule nodes of
+$W=\{1,\ldots n\}$. We will start of by defining the interpretation $^*$. So for any $p$ let:
 $$p^*=\bigvee\{L=\ol x:1\leq x\leq n\ \text{and}\ x\in \phi(p)\}$$
 If this disjunction is empty, we will set it to be $\ol 0=\ol 1$. Further we
-are only interested the sentence $\varphi$; i.e the set:
-$$S(\varphi)=\{\psi:\ \psi\ \text{is a subformula of }\ \varphi\}$$
-We will not look at $p\not\in S(\varphi)$
+are only interested the sentence $\alpha$; i.e the set:
+$$S(\alpha)=\{\beta:\ \beta\ \text{is a subformula of }\ \alpha\}$$
+We will not look at $p\not\in S(\alpha)$
 
 The following lemma is the crucial result about this interpretation, and the
 theorem will follow easily from this result:
 \begin{lem}
 	\label{lem:10}
-	Let $1\leq x\leq n$. For any $\psi$ and $^*$ as defined just above we
+	Let $1\leq x\leq n$. For any $\beta$ and $^*$ as defined just above we
 	have that:
 	\begin{enumerate}
-		\item $x\vdash \psi\Rightarrow\PRA\vdash L=\ol x\rightarrow
-			\psi^*$
-		\item $x\not\vdash\psi\Rightarrow\PRA\vdash L=\ol
-			x\rightarrow \neg \psi^*$
+		\item $x\in\phi(\beta)\Rightarrow\PRA\vdash L=\ol x\rightarrow
+			\beta^*$
+		\item $x\not\in\phi(\beta)\Rightarrow\PRA\vdash L=\ol
+			x\rightarrow \neg \beta^*$
 	\end{enumerate}
 \end{lem}
 \begin{proof}
-We will use induction on complexity of $\psi$. If $\psi=p$, then since $p$ is a
+We will use induction on complexity of $\psi$. If $\beta=p$, then since $L=\ol
+x$ is a
 disjunct of $p^*$ we get:
-$$\vdash_x\varphi\Rightarrow\PRA\vdash L=\ol x\rightarrow p^*$$
-Which proves 1, for $\psi$ atomic. For 2 observe that if $\not\vdash_x p$, then
-$L=\ol x$ contradicts over disjunct of $p^*$ and thus:
-$$\not\vdash_x p\rightarrow\PRA\vdash L=\ol x\rightarrow\neg p^*$$
-The cases where  $\psi$ is $\neg\theta,\theta\wedge\sigma,\theta\vee\sigma$ and
-$\theta\rightarrow\sigma$ are trivial. So we will just look at the case where
-$\psi=\Box\theta$. Here we make the following deductions:
+
+$$x\in\phi(\varphi)\Rightarrow\PRA\vdash L=\ol x\rightarrow p^*$$
+
+Which proves 1, for $\psi$ atomic. For 2 observe that if $x\not\in\phi( p)$, then
+$L=\ol x$ contradicts all the  disjuncts of $p^*$ and thus:
+
+$$x\not\in\phi(p)\rightarrow\PRA\vdash L=\ol x\rightarrow\neg p^*$$
+
+The cases where  $\psi$ is $\neg\gamma,\gamma\wedge\sigma,\gamma\vee\sigma$ and
+$\gamma\rightarrow\sigma$ are trivial. So we will just look at the case where
+$\psi=\Box\gamma$. Here we make the following deductions:
 \begin{align*}
-	\vdash_x\Box\theta&\Rightarrow \forall
-	y(xRy\Rightarrow\vdash_y\theta)\\
+	x\in\phi(\Box\theta)&\Rightarrow \forall
+	y(xRy\Rightarrow y\in\phi(\gamma))\\
 			  &\Rightarrow \forall(xR\Rightarrow\PRA\vdash L=\ol
-			  y\rightarrow\theta^*)\\
+			  y\rightarrow\gamma^*)\\
 			  &\Rightarrow\bigwedge_{xRy}(\PRA\vdash L=\ol
-			  y\rightarrow\theta^*)\\
+			  y\rightarrow\gamma^*)\\
 			  &\Rightarrow\PRA\vdash\bigvee_{xRy} L=\ol
-			  y\rightarrow \theta^*\\
+			  y\rightarrow \gamma^*\\
 			  &\Rightarrow\PRA\vdash\text{Pr}(\Godelnum{\bigvee_{xRy} L=\ol
-			  y})\rightarrow\text{Pr}(\Godelnum{\theta^*})
+			  y})\rightarrow\text{Pr}(\Godelnum{\gamma^*})
 \end{align*}
 And by the last line we can get the following by using the axioms of \GL
 \begin{equation}
 	\label{eq:1}
-			 \vdash_x\Box\theta\Rightarrow \PRA\vdash\text{Pr}(\Godelnum{\bigvee_{xRy} L=\ol
-			  y})\rightarrow\text{Pr}(\Godelnum{\theta^*})
+	x\in\phi(\Box\gamma)\Rightarrow \PRA\vdash\text{Pr}(\Godelnum{\bigvee_{xRy} L=\ol
+			  y})\rightarrow\text{Pr}(\Godelnum{\gamma^*})
 \end{equation}
 We can now invoke lemma \ref{lem:5} 2 and 3 and get:
 \begin{equation}
@@ -328,7 +480,7 @@ We can now invoke lemma \ref{lem:5} 2 and 3 and get:
 	\PRA\vdash L=\ol
 	x\rightarrow\bigwedge_{\neg(xRz)}\text{Pr}(\Godelnum{L\not =z})
 \end{equation}
-and therfore [Hvorfor?]
+and therfore we have that:
 \begin{equation}
 	\label{eq:3}
 	\PRA\vdash L=\ol x\rightarrow \text{Pr}(\Godelnum{\bigvee_{xRy}L=\ol y})
@@ -336,52 +488,53 @@ and therfore [Hvorfor?]
 Now by \ref{eq:1} and \ref{eq:3} we get that:
 \begin{align*}
 	\vdash_x\Box\theta&\Rightarrow\PRA\vdash L=\ol x\rightarrow
-	\text{Pr(\Godelnum{\theta^*})}\\
+	\text{Pr(\Godelnum{\gamma^*})}\\
 			  &\Rightarrow\PRA\vdash L=\ol x\rightarrow
-			  (\Box\theta)^*
+			  (\Box\gamma)^*
 \end{align*}
 I.e we have proven part 1 of the lemma. Similarly we can do the following
 deduction:
 \begin{align*}
-	\not\vdash_x\Box\theta&\Rightarrow\exists y(xRy\wedge
-	\not\vdash_y\theta)\\
+	x\not\in\phi(\Box\gamma)&\Rightarrow\exists y(xRy\wedge
+	y\not \in\phi(\gamma))\\
 			      &\Rightarrow \exists y(xRy\wedge\PRA\vdash L=\ol
-			      y\rightarrow\neg\theta^*)\\
+			      y\rightarrow\neg\gamma^*)\\
 			      &\Rightarrow\exists y(xRy\wedge\PRA\vdash
-			      \theta^*\rightarrow L \not =\ol y)\\
+			      \gamma^*\rightarrow L \not =\ol y)\\
 			      &\Rightarrow\exists
 			      y(xRy\wedge\PRA\vdash\text{Pr}(\Godelnum{
-			      \theta^*})\rightarrow\text{Pr}(\Godelnum{L\not
+			      \gamma^*})\rightarrow\text{Pr}(\Godelnum{L\not
 		      =\ol y})
 \end{align*}
 But by lemma \ref{lem:5} we get that if $xRy$:
 $$\PRA\vdash L=\ol x\rightarrow\neg \text{Pr}(\Godelnum{L\not =\ol y})$$
 all in all this gives us:
-$$\PRA\vdash L=\ol x\rightarrow\neg\text{Pr}(\Godelnum{\theta^*})$$
-Which just is the following we where trying to show:
-$$\PRA\vdash L=\ol x\rightarrow\neg(\Box\theta)^*$$
+$$\PRA\vdash L=\ol x\rightarrow\neg\text{Pr}(\Godelnum{\gamma^*})$$
+Which is just just  the following we where trying to show:
+$$\PRA\vdash L=\ol x\rightarrow\neg(\Box\gamma)^*$$
 \end{proof}
 We can now finally prove Solovay's first completeness theorem:
 \begin{proof}[Proof of Solovay's first completeness theorem]
 	By lemma \ref{lem:10} we have that
-	$$\vdash_1\varphi\Rightarrow\PRA\vdash L=\ol 1\rightarrow\varphi^*$$
-	But by lemma [Hvad?] we have that $\PRA\ +L=1$ is consistent, from
+	$$1\not\in\phi(\alpha)\Rightarrow\PRA\vdash L=\ol 1\rightarrow\not\alpha^*$$
+	But by lemma \ref{lem:5} we have that $\PRA\ +L=1$ is consistent, from
 	which it follows that $\PRA+\neg\varphi^*$ is consistent; so $\varphi^*$
 	is not a theorem af $\PRA$ and thus we have:
 	$\PRA\not\vdash\varphi^*$ and the theorem follows by contraposition.
 \end{proof}
 
 \section{The Second Theorem}
+\label{chap:second}
 Solovay's Second Completeness Theorem is a strengthening of the first one,
 [How?]
 \begin{thm}
 	For all modal sentences $\varphi$, the following is equivalent:
 	\begin{enumerate}
-		\item $\textbf{GLS}\vdash\varphi$
-		\item $\GL\vdash\displaystyle\bigwedge_{\Box \psi\in
-			S(\varphi)}(\Box\psi\rightarrow\psi)\varphi$
-		\item $\varphi$ is true in all $\varphi$-sound Kripke models
-		\item $\forall^*(\varphi^*\ \text{is true})$
+		\item $\textbf{GLS}\vdash\alpha$
+		\item $\GL\vdash\displaystyle\bigwedge_{\Box \beta\in
+			S(\alpha)}(\Box\beta\rightarrow\beta)\rightarrow\alpha$
+		\item $\alpha$ is true in all $\alpha$-sound Kripke models
+		\item $\forall^*(\alpha^*\ \text{is true})$
 	\end{enumerate}
 \end{thm}
 Some parts of this theorem has already been proven. We have
@@ -389,133 +542,127 @@ $(1)\Leftrightarrow(2)$ by theorem [asd?] and we have $(2)\Leftrightarrow(3)$
 by theorem [asd?]. \textbf{Udbyd dette senere}
 
 For proving $(4)\Rightarrow(3)$ we will again make use of contraposition. Let
-$\mathcal{\ol K}=((1,\ldots,n),R,\phi)$ be given and let $1$ be the root.
-Further let $\varphi$ be such that $\not\vdash_1\varphi$.
+$\mathcal{K}=\la(1,\ldots,n),R,\phi)\ra$ be given and let $1$ be the root.
+Further let $\alpha$ be such that $1\not\in\phi(\alpha))$.
 We
-will assume that $\mathcal{\ol K}$ is $\varphi$-sound. This means that we have:
-$\vdash_1\Box\psi\rightarrow\psi$ for all $\psi\in S(\varphi)$
+will assume that $\mathcal{K}$ is $\alpha$-sound. This means that we have:
+$1\in\phi(\Box\beta\rightarrow\beta)$ for all $\beta\in S(\alpha)$
 
 We will set $0Rw$ for all $w\in W$. We will now create a new model
-$\mathcal{K'}$ where we have added $0$. We will create this new model in the
+$\mathcal{K'}$ where we have added $0$, so in this proof it is part of the
+Kripke model we will look at. We will create this new model in the
 following way:
 \begin{align*}
 	&W'=\{0,1\ldots,n\}\\
 	&R'\ \text{extends}\ R\ \text{by assuming that}\ 0R'x\ \text{for all}\
 	x\in W\\
 	&\alpha_0=0\\
-	&\phi'\ \text{extends}\ \phi\ \text{by putting}\ 0\in\phi(p)\
+	&\phi'\ \text{extends}\ \phi\ \text{by putting}\ 0\in\phi'(p)\
 	\text{iff}\ 1\in\phi(p)\ \text{for all}\ p\in S(\varphi)
 \end{align*}
 We will abuse notation and let $R$ denote $R'$ and $\phi$ denote $\phi'$.
 \begin{lem}
-	For all $\psi\in S(\varphi)$ we have that:
-	$$0\vdash\psi\ \text{iff}\ 1\vdash \psi$$
+	For all $\beta\in S(\alpha)$ we have that:
+	$$0\in\phi(\beta)\ \text{iff}\ 1\in\phi(\beta) $$
 \end{lem}
 \begin{proof}
-\end{proof}
-\begin{lem}
-	Let $0\leq x\leq n$. For any $\psi\in S(\varphi)$ and any $^*$ as
-	defined we have that:
-	\begin{enumerate}
-		\item $x\vdash\psi\Rightarrow\PRA\vdash L=\ol
-			x\rightarrow\psi^*$
-		\item $x\not\vdash\varphi\Rightarrow \PRA\vdash \ol x\rightarrow
-			\neg\psi^*$
-	\end{enumerate}
-\end{lem}
-\begin{proof}
+	Kig på intro af GLS.
 \end{proof}
 
-We will now define a function $F$ in the same way as before.
+We will now define a function $varphi$ in the same way as before.
 \begin{align*}
-	F(0)&=0\\
-	F(x+1)&=\begin{cases}
+	\varphi(0)&=0\\
+	\varphi(x+1)&=\begin{cases}
 		y &\ \text{Prov}(\ol x+\ol 1,\Godelnum{L\not =\ol y})\wedge
 			xRy\\
-			F(x) &\ \text{else}
+			\varphi(x) &\ \text{else}
 		\end{cases}
 \end{align*}
-All the Lemmas about $F$ and $L$ still holds. But the behavior $\phi$ has
+All the Lemmas about $\varphi$ and $L$ still holds, since the function $\varphi$ is
+only determined by the frame $\la W,R\ra$ and not the Kripke model that we are
+looking at. But the behavior of $\phi$ has
 changed, since we must added the node  $0$ and we can only use sub formulas of
-$\varphi$. So we define:
+$\alpha$. So we define:
 $$p^*=\bigvee\{L=\ol x: 0\leq x\leq n\wedge x\in\phi(p)\}$$
-For $p\in S(\varphi)$ and let $p^*$ be random for all $p$'s that is not a
-subformula of $\varphi$. We now prove and state the following lemma (that
-reminds of what?):
+For $p\in S(\alpha)$ and let $p^*$ be random for all $p$'s that is not a
+subformula of $\alpha$. We now prove and state the following lemma is analogies
+to lemma \ref{lem:5}:
 \begin{lem}
-	Let $0\leq x\leq n$. For any $\psi\in S(\varphi)$ and $^*$ as defined
+	Let $0\leq x\leq n$. For any $\beta\in S(\alpha)$ and $^*$ as defined
 	above we have:
 	\begin{enumerate}
-		\item $\vdash_x\psi\Rightarrow\PRA\vdash L=\ol
-			x\rightarrow\psi^*$
-		\item $\not\vdash_x\psi\Rightarrow\PRA\not\vdash L=\ol
-			x\rightarrow\psi^*$
+		\item $x\in\phi(\beta)\Rightarrow\PRA\vdash L=\ol
+			x\rightarrow\beta^*$
+		\item $x\not\in\phi(\beta)\Rightarrow\PRA\vdash L=\ol
+			x\rightarrow\neg\beta^*$
 	\end{enumerate}
 \end{lem}
 \begin{proof}
 	For $0<x$ the proof is identical to the proof of [ref?]. So we will
 	only prove the case where $x=0$. The is again an induction on the
-	complexity of $\psi$. We will only prove the cases where
-	$\psi=\Box\theta$.
+	complexity of $\beta$. We will only prove the cases where
+	$\beta=\Box\gamma$.
 
-	Let $\psi=\Box\theta$. We then have:
+	Let $\beta=\Box\gamma$. We then have:
 	\begin{align*}
-		\vdash_0\Box\theta&\Rightarrow\forall x(1\leq x\leq
-		n\Rightarrow \vdash_x\theta)\\
+		0\in\phi(\Box\gamma)&\Rightarrow\forall x(1\leq x\leq
+		n\Rightarrow x\in\phi(\gamma))\\
 				  &\Rightarrow \forall x(1\leq x\leq
 				  n\Rightarrow \PRA\vdash L=\ol
-				  x\rightarrow\theta^*)
+				  x\rightarrow\gamma^*)
 	\end{align*}
-	Since $x>1$ and this case of the lemma has been proven. We can also
+	Since $x>1$ and this case of the lemma has been proven, when we proved
+	the lemma for the first completeness theorem. We can also
 	make the following deduction by the induction hypothesis:
 	\begin{align*}
-		\vdash_0\Box\theta&\Rightarrow\vdash_1\theta\\
-				  &\Rightarrow\vdash_0\theta\\
+		0\in\phi(\Box\gamma)&\Rightarrow 1\in(\gamma)\\
+				    &\Rightarrow 0\in\gamma)\\
 				  &\Rightarrow\PRA\vdash L=\ol
-				  0\rightarrow\theta^*
+				  0\rightarrow\gamma^*
 	\end{align*}
 	By combing these two we get:
 	\begin{align*}
-		\vdash_0\Box\theta&\Rightarrow\bigwedge_{x\leq n}(\PRA\vdash
-		L=\ol x\rightarrow\theta^*)\\
+		0\in\phi(\Box\gamma)&\Rightarrow\bigwedge_{x\leq n}(\PRA\vdash
+		L=\ol x\rightarrow\gamma^*)\\
 				  &\Rightarrow\PRA\vdash(\bigvee_{x\leq n}L=\ol
-				  x)\rightarrow\theta^*\\
+				  x)\rightarrow\gamma^*\\
 				  &=\PRA\vdash\text{Pr}(\Godelnum{\bigvee L=\ol
-				  x})\rightarrow\text{Pr}(\Godelnum{\theta^*})
+				  x})\rightarrow\text{Pr}(\Godelnum{\gamma^*})
 	\end{align*}
 	But by corollary [<ref?] we have that $\PRA\vdash\bigvee L=\ol x$ and
 	thus $\PRA\vdash\text{Pr}(\Godelnum{\bigvee L=\ol x})$ so all in all we
 	have:
 	\begin{align*}
-		\vdash_0\Box\theta&\Rightarrow \PRA\vdash
-		\text{Pr}(\Godelnum{\theta^*})
+		0\in(\Box\gamma)&\Rightarrow \PRA\vdash
+		\text{Pr}(\Godelnum{\gamma^*})\\
 				  &\Rightarrow\PRA\vdash L=\ol
-				  0\rightarrow\text{Pr}(\Godelnum{\theta^*})
+				  0\rightarrow\text{Pr}(\Godelnum{\gamma^*})
 	\end{align*}
 	This proves (1). The proof of (2) is a bit easier. We have:
 	\begin{align*}
-		\not\vdash_0\Box\theta&\Rightarrow\exists x(1\leq x\leq n\wedge
-		\not\vdash_x\theta)\\
+		0\not\in\phi(\Box\gamma)&\Rightarrow\exists x(1\leq x\leq n\wedge
+		x\not\in\phi(\gamma))\\
 				      &\Rightarrow\exists x(1\leq x\leq
 				      n\wedge\PRA\vdash L=\ol x\rightarrow
-				      \neg\theta^*)\\
+				      \neg\gamma^*)\\
 				      &\Rightarrow\exists x(1\leq x\leq n\wedge
-				      \PRA\vdash\theta^*\rightarrow L\not =\ol
+				      \PRA\vdash\gamma^*\rightarrow L\not =\ol
 				      x)\\
 				      &\Rightarrow\PRA\vdash L=\ol 0\rightarrow
-				      \neg \text{Pr}(\Godelnum{\theta^*})
+				      \neg \text{Pr}(\Godelnum{\gamma^*})
 	\end{align*}
 	And thus by Lemma [Ref?] we have that $\PRA\vdash L=\ol
 	0\rightarrow\neg\text{Pr}(\Godelnum{L\not =\ol x})$ for $x>0$
 \end{proof}
 We thus have that $L=\ol 0$ is true, and we  can now finally prove the second completeness theorem:
 \begin{proof}[Proof of the Second Completeness theorem]
-	Assume that $\varphi$ is false in $\mathcal{\ol K}$ i.e
-	$\not\vdash_1\varphi$. Then by lemma [asd] we get $\not\vdash_0\varphi$
+	Assume that $\alpha$ is false in $\mathcal{K}$ i.e
+	$1\not\in\phi(\alpha)$. Then by lemma [asd] we get
+	$0\not\in\phi(\alpha)$
 	and the just proven lemma gives:
-	$$\PRA\vdash L=\ol 0\rightarrow\neg\varphi^*$$
-	Since we have that $L=\ol 0$ is true we then get $\neg\varphi^*$ which
-	just means that $\varphi^*$ is false.
+	$$\PRA\vdash L=\ol 0\rightarrow\neg\alpha^*$$
+	Since we have that $L=\ol 0$ is true we then get $\neg\alpha^*$ which
+	just means that $\alpha^*$ is false.
 \end{proof}
 \subsection{Using the Second Completeness Theorem}
 We can use the second completeness theorem to prove the following theorem named
@@ -530,5 +677,34 @@ after Rosser:
 			PPr(\Godelnum{\neg\varphi})$
 	\end{enumerate}
 \end{thm}
-\section{Further Completeness Results}
+\section{Generalisations  of the Completeness Theorems}
+
+In this section we have shown the Solovay's Completeness Theorems for \PRA.
+But these theorems holds for a much wider class of fragments of Peano
+Arithmetics. It can be shown \textbf{REf De joghn} that the theorem holds for
+theories $T$ that fulfills the following to conditions:
+\begin{enumerate}
+	\item $T$ extends $I\Delta_0+\text{EXP}$
+	\item Let $\alpha(x)$ be $ \Delta_0$ formula, then $T$ does not prove any
+		false sentences of the form $\exists x\alpha(x)$
+\end{enumerate}
+
+This proof does not use the Recursion theorem for creating the function
+$\varphi$, but instead uses the diagonalization lemma (i.e Lemma 2.1). The
+proof of this will not this will not be given here, but it can be found in
+\textbf{Ref artiklen}.
+
+It is not known if Solovays theorems holds for weaker conditions than
+$I\Delta_0+\text{EXP}$; i.e we do not know if it holds for example for the theory
+$I\Delta_0+\Omega_1$.
+
+
+Solovay's theorems can also be proven for some fragments without the use of
+fixed points. The two different proof strategies seen so fair each uses fixed
+points. Either by using the recursion theorem or by using the digitalization
+theorem for a given arithmetic theory. \textbf{Ref den russiske artikle}. This
+newer proof might be able to giver a specific lower bound on the strength of
+the fragments Solovays theorems holds for.
+
+\section{Implications of Solovays Theorems}
 \end{document}
