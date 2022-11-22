@@ -31,6 +31,7 @@
 \usepackage{tikz}
 \usetikzlibrary{shapes,arrows,positioning,calc}
 \usepackage{showlabels}
+\usepackage{capt-of}
 \usepackage{scalerel}[2016/12/29]
 %Biblo
 \usepackage[style=authoryear, backend=biber, isbn=false, doi=false]{biblatex}
@@ -63,6 +64,9 @@
 
 \theoremstyle{dotlessS}
 \newtheorem{prop}{Proposition}[chapter]
+
+\theoremstyle{dotlessS}
+\newtheorem{axiom}{Axiom}[chapter]
 
 \theoremstyle{dotlessS}
 \newtheorem{cor}{Corollary}[chapter]
@@ -174,7 +178,7 @@ Arithmetics}
 \pagenumbering{arabic}
 
 %Main text
-\chapter{Introduction:}
+\chapter{Introduction}
 \epigraph{If modern modal logic was conceived in sin, then it has been redeemed
 through Gödliness}{\cite{Boolos1979} page 1}
 \label{chap:intro}

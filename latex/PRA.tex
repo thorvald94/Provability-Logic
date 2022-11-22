@@ -62,6 +62,11 @@ of arithmetics. We will define the following theories:
 			$I\Delta_0$ plus the $\Sigma_n$-MIN axioms
 		\item The theory $B\Sigma_n$ is defined by the theory
 			$I\Delta_0$ plus the $\Sigma_n$-REPL axioms.
+			The theory $I\Sigma_n^R$ is defined as the closure of
+			$Q_\leq$ under the $\Sigma_n$ induction rule:
+			\[\frac{F(0),\ \forall
+					x(F(x)\rightarrow\varphi(x+1))}{\forall
+			x F(x)}\]
 		\item 
 	Lastly the theory Peano arithmetics is defined as the theory $Q$ plus
 	induction for all first order formulas.
@@ -72,18 +77,118 @@ role. It can be shown that in $Q$ a lot of the basic facts about arithmetic can
 be shown. These facts will not be shown here, but a list of them can be found
 in [Buss].
 
+\textbf{Overvej om dette skal med}
 \begin{defi}
 	A predicate symbol
 \end{defi}
 \begin{defi}
 	A function symbol.
 \end{defi}
+
+
+
 \section{\PRA}
+A interesting result about \PRA\ is the following:
 \begin{prop}
-	\PRA\ is the thoery?
+	\PRA\ is the equivalent to the theory $I\Sigma_1^R$?
 \end{prop}
+
+The proof of this is non-trivial and will go way beyond the scope of this
+project. The statement will not be used going forward, and its just included
+to give some intuition about the placement of \PRA\ in the arithmetical hierarchy.
+The proof can be found in Artev \& Bekle. This makes it possible to place \PRA\
+in the arithmetical hierarchy:
+
+\begin{figure}[h]
+	\begin{center}
+\begin{tikzpicture}[baseline={(0,0)}]
+	\node[label={\textbf{Q}}] () at (0,-1) {};
+	\node[] (EA) at (0,0) {};
+	\node[label={$I\Sigma_1^R=$ \PRA}] at (3,-1) {};
+	\node[] (PRA) at (2,0) {};
+	\node[label={$I\Pi_1^-$}] (IPi) at (0,2) {};
+	\node[label={$I\Sigma_1^-$}] (Isig) at (1.5,2) {};
+	\node[] (Isig) at (2,2) {};
+	\node[label={$I\Sigma_1$}] at (4,1) {};
+	\node[] (ISig) at (4,2) {};
+	\node[label={$I\Pi_2^-$}] at (1.5,4) {};
+	\node[] (IPi2) at (2,4) {};
+	\node[label={$I\Sigma_1+I\Pi_2^-$}] at (3.5,4) {};
+	\node[] (ISigPi) at (4,4) {};
+	\node[label={$I\Sigma_2^R$}]  at (6,1) {};
+	\node[] (ISig2R) at (6,2) {};
+	\node[label={$I\Sigma_2^-$}] at (5.5,4) {};
+	\node[] (ISig2-) at (6,4) {};
+	\node[label={$I\Pi_3^-$}] at (5.5,6) {};
+	\node[] (IPi3) at (6,6) {};
+	\node[label={$I\Sigma_2+I\Pi_3^-$}] at (7.5,6) {};
+	\node[] (ISigPi3) at (8,6) {};
+	\node[label={$I\Sigma_2$}] at (8,3) {};
+	\node[] (ISig2) at (8,4) {};
+	\node[label={$I\Sigma_3^R$}] at (10,3) {};
+	\node[] (ISig3R) at (10,4) {};
+	\node[label={$I\Sigma_3^-$}] at (9.5,6) {};
+	\node[] (ISig3) at (10,6) {};
+	\node[] (Tom1) at (10,7) {};
+	\node[] (Tom2) at (11,6) {};
+
+	 \draw (EA) -- (PRA);
+	 \draw (EA) -- (IPi);
+	 \draw (IPi) -- (ISig2R);
+	 \draw (PRA) -- (IPi2);
+	 \draw (IPi2) -- (ISig3R);
+	 \draw (ISig2R) -- (IPi3);
+	 \draw (IPi3) -- (Tom2);
+	 \draw (ISig) -- (ISigPi);
+	 \draw (ISig2) -- (ISigPi3);
+	 \draw (ISig3R) -- (Tom1);
+
+    \node at (EA)[circle,fill,inner sep=1.5pt]{};
+    \node at (PRA)[circle,fill,inner sep=1.5pt]{};
+    \node at (IPi)[circle,fill,inner sep=1.5pt]{};
+    \node at (ISig)[circle,fill,inner sep=1.5pt]{};
+    \node at (Isig)[circle,fill,inner sep=1.5pt]{};
+    \node at (IPi2)[circle,fill,inner sep=1.5pt]{};
+    \node at (ISigPi)[circle,fill,inner sep=1.5pt]{};
+    \node at (ISig2R)[circle,fill,inner sep=1.5pt]{};
+    \node at (ISig2)[circle,fill,inner sep=1.5pt]{};
+    \node at (IPi3)[circle,fill,inner sep=1.5pt]{};
+    \node at (ISigPi3)[circle,fill,inner sep=1.5pt]{};
+    \node at (IPi3)[circle,fill,inner sep=1.5pt]{};
+    \node at (ISig2-)[circle,fill,inner sep=1.5pt]{};
+    \node at (ISig3R)[circle,fill,inner sep=1.5pt]{};
+    \node at (ISig3)[circle,fill,inner sep=1.5pt]{};
+\end{tikzpicture}
+\end{center}
+\caption{How the fragments relate to each other.}
+\end{figure}
+
+We will now turn to another version of the Selection Theorem. 
+\begin{thm}\label{thm:sel}
+	Let $\tau v_0\ldots v_{n-1}v_n$ be $\Sigma_1$. There is then a
+	$\Sigma_1$-formula $\text{Sel}(\tau)$ with exactly the same free
+	variables such that:
+	\begin{enumerate}
+		\item $\text{Sel}(\tau)v_0\ldots v_n\rightarrow\tau v_0\ldots
+			v_n$
+		\item $\text{Sel}(\tau)v_0\ldots
+			v_{n-1}v_n\wedge\text{Sel}(\tau)v_0\ldots
+			v_{n-1}v^*\rightarrow v_n=v^*$
+		\item $\exists v_n\tau v_0\ldots v_{n-1}v_n\rightarrow \exists
+			v_n\text{Sel}(\tau v_0\ldots v_{n-1}v_n$
+	\end{enumerate}
+	Further this can be proven in \PRA.
+\end{thm}
+\begin{proof}
+	Since $\tau$ is $\Sigma_1$ it is recursively enumerable. So we have
+	that:
+	\[\tau v_0\ldots v_n:\ \exists v(fvv_0\ldots v_n=\ol 0)\]
+\end{proof}
+
+\subsection{Induction In \PRA}
 We will further define $\PRA^-$ as being the sub-theory of \PRA\ where we
-restrict us self to only having induction for p.r formulas. Then we get the
+restrict us self to only having induction for p.r formulae and not $\Sigma_1$
+formulae. Then we get the
 following result:
 \begin{prop}
 	Over $\PRA^-$ the following schemata are equivalent:
@@ -94,9 +199,53 @@ following result:
 		\item $\Pi_n$-\textit{LNP}
 	\end{enumerate}
 \end{prop}
+It shall be noted that we will only use the case of $n=1$ going forward.
+
 \begin{proof}
+	The implications $(1)\Rightarrow(4)$ and $(2)\Rightarrow(3)$ was proven
+	in proof of theorem \ref{thm:sel}. The converse of these are done in
+	the same way.
+
+	We will now show that $(1)\Rightarrow (2)$. The $(2)\Rightarrow (1)$ is
+	similar. We will prove the case where $n=1$, and the cases where $n>1$
+	is identical, \textit{modulo} the closure of $\Sigma_n$ under bounded
+	quantification.
+
+	So assume $\Sigma_1$-IND and suppose for $Fv\in\Sigma_1$ that the
+	following instance of $\Pi_1$-IND fails:
+	\[(\neg F(\0)\wedge\forall v(\neg F(v)\rightarrow\neg
+	F(Sv)))\rightarrow\forall v\neg F(v)\]
+	This means that we have $\neg F(\ol 0)$, $\forall v(\neg
+	F(v)\rightarrow\neg F(Sv)$ and $\exists v F(v)$. We chose $v_0$ such
+	that $F(v_0)$. We will use $\Sigma_1$ induction on the variable $v$ in
+	$F(v_0\dot - v)$ to prove that $F(\ol 0)$ and get a contradiction. 
+
+	\textbf{Base step:} It
+	is clear that $F(v_0\dot -\ol 0)$, since this is just $F(v_0)$.
+
+	\textbf{Induction step:} Assume that $F(v_0\dot - v)$ is true. We have
+	that $S(v_0\dot - S(v))=v_0\dot -v$ unless we already have that
+	$v=v_0$, in which case we have that $v_0\dot - S(v)=v_0-v$. So we can
+	conclude that $\forall v F(v_0\dot -v)$ and thus we have $F(\ol 0)$ and
+	get our contradiction.
+
+	The converse of i,e $(2)\Rightarrow(1)$ is done in a similar  way.
 \end{proof}
 
+This means that \PRA\ can do induction on $\Pi_1$ formulas, since it has
+induction for $\Sigma_1$ induction. It also tells us that \PRA\ has the least
+number principle for $\Sigma_1$ and $\Pi_1$ formulas.
+For \PRA\ the following theorem can be proven, but the proof will not be given
+here. But we will use theorem.
+
+\begin{thm}
+	$\PRA\vdash\text{Bool}(\Sigma_1)-Ind$ where $\text{Bool}(\Sigma_1)$ is
+	the class of combinations of $\Sigma_1$ formulae.
+\end{thm}
+
+
+
+\newpage
 \begin{figure}[h]
 	\begin{center}
 \begin{tikzpicture}[baseline={(0,0)}]
@@ -173,3 +322,20 @@ $x^{\text{log}(x)}$ exists. It is also clear that since $\PRA=I\Sigma_1^R$ that
 these two fragments are weaker than \PRA.  We will return to these two
 fragments later on in chapter \ref{chap:Complete}.
 
+It should here be stated that if look at theories $T$ such that
+$Q_\leq\subseteq T$, then it will be possible to encode the
+syntax of that theory in a similar way to what we have done with \PRA; i.e in a
+way such that the proof predicate of that theory $\text{PR}_T(x)$ is a
+$\Sigma_1$ formula. We will call such a theory for a \textit{RE}-theory. We can then derive all the incompleteness result that we
+have obtained for \PRA\ in that theory. Sometimes a little \textit{tweaking} of
+the encode should be made, but we can get the following result that will not be
+proven here:
+\begin{thm}
+	Let $T$ be a \textit{RE}-theory such that $Q_\leq\subseteq T$. Then the
+	following holds:
+	\begin{enumerate}
+		\item For any sentences $F$ and $G$ we get Löbs derivability
+		conditions:
+
+	\end{enumerate}
+\end{thm}

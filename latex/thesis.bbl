@@ -19,6 +19,66 @@
 
 \refsection{0}
   \datalist[entry]{nyt/global//global/global}
+    \entry{ArisMeta}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=be054ac4ab49a541d162854116e0f44c}{%
+           family={Aristoteles},
+           familyi={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Forlaget Klim}%
+      }
+      \strng{namehash}{be054ac4ab49a541d162854116e0f44c}
+      \strng{fullhash}{be054ac4ab49a541d162854116e0f44c}
+      \strng{bibnamehash}{be054ac4ab49a541d162854116e0f44c}
+      \strng{authorbibnamehash}{be054ac4ab49a541d162854116e0f44c}
+      \strng{authornamehash}{be054ac4ab49a541d162854116e0f44c}
+      \strng{authorfullhash}{be054ac4ab49a541d162854116e0f44c}
+      \field{extraname}{1}
+      \field{sortinit}{A}
+      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Metafysik}
+      \field{year}{2021}
+      \true{nocite}
+    \endentry
+    \entry{ArisDe}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=be054ac4ab49a541d162854116e0f44c}{%
+           family={Aristoteles.},
+           familyi={A\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \list{location}{1}{%
+        {Oxford}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press}%
+      }
+      \strng{namehash}{be054ac4ab49a541d162854116e0f44c}
+      \strng{fullhash}{be054ac4ab49a541d162854116e0f44c}
+      \strng{bibnamehash}{be054ac4ab49a541d162854116e0f44c}
+      \strng{authorbibnamehash}{be054ac4ab49a541d162854116e0f44c}
+      \strng{authornamehash}{be054ac4ab49a541d162854116e0f44c}
+      \strng{authorfullhash}{be054ac4ab49a541d162854116e0f44c}
+      \field{extraname}{2}
+      \field{sortinit}{A}
+      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Aristotle's Categories and De interpretatione /}
+      \field{series}{Clarendon Aristotle series.}
+      \field{title}{Aristotle's Categories and De interpretatione}
+      \field{year}{1971}
+      \true{nocite}
+    \endentry
     \entry{Artemov2007}{incollection}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=1841fe17ddbeb4863d02f07ce78da70b}{%
@@ -314,7 +374,6 @@
       \field{booktitle}{The logic of provability /}
       \field{title}{The logic of provability}
       \field{year}{1993}
-      \true{nocite}
     \endentry
     \entry{Chang2012}{book}{}
       \name{author}{2}{}{%
@@ -549,6 +608,92 @@
       \field{title}{{Modal Logic for Philosophers}}
       \field{year}{2006}
       \true{nocite}
+    \endentry
+    \entry{God1933}{incollection}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=741b5eae8f0486fe4cfb19725eb596a0}{%
+           family={Gödel},
+           familyi={G\bibinitperiod},
+           given={Kurt},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=4882f9cf8c157580b3191115697f529b}{%
+           family={Feferman},
+           familyi={F\bibinitperiod},
+           given={Solomon},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press}%
+      }
+      \strng{namehash}{741b5eae8f0486fe4cfb19725eb596a0}
+      \strng{fullhash}{741b5eae8f0486fe4cfb19725eb596a0}
+      \strng{bibnamehash}{741b5eae8f0486fe4cfb19725eb596a0}
+      \strng{authorbibnamehash}{741b5eae8f0486fe4cfb19725eb596a0}
+      \strng{authornamehash}{741b5eae8f0486fe4cfb19725eb596a0}
+      \strng{authorfullhash}{741b5eae8f0486fe4cfb19725eb596a0}
+      \strng{editorbibnamehash}{4882f9cf8c157580b3191115697f529b}
+      \strng{editornamehash}{4882f9cf8c157580b3191115697f529b}
+      \strng{editorfullhash}{4882f9cf8c157580b3191115697f529b}
+      \field{extraname}{1}
+      \field{sortinit}{G}
+      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Collected works}
+      \field{title}{Eine Interpretation des intuitionistschen Aussagenkalküls}
+      \field{year}{1986}
+      \true{nocite}
+      \field{pages}{300\bibrangedash 301}
+      \range{pages}{2}
+    \endentry
+    \entry{God1931}{incollection}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=741b5eae8f0486fe4cfb19725eb596a0}{%
+           family={Gödel},
+           familyi={G\bibinitperiod},
+           given={Kurt},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=4882f9cf8c157580b3191115697f529b}{%
+           family={Feferman},
+           familyi={F\bibinitperiod},
+           given={Solomon},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press}%
+      }
+      \strng{namehash}{741b5eae8f0486fe4cfb19725eb596a0}
+      \strng{fullhash}{741b5eae8f0486fe4cfb19725eb596a0}
+      \strng{bibnamehash}{741b5eae8f0486fe4cfb19725eb596a0}
+      \strng{authorbibnamehash}{741b5eae8f0486fe4cfb19725eb596a0}
+      \strng{authornamehash}{741b5eae8f0486fe4cfb19725eb596a0}
+      \strng{authorfullhash}{741b5eae8f0486fe4cfb19725eb596a0}
+      \strng{editorbibnamehash}{4882f9cf8c157580b3191115697f529b}
+      \strng{editornamehash}{4882f9cf8c157580b3191115697f529b}
+      \strng{editorfullhash}{4882f9cf8c157580b3191115697f529b}
+      \field{extraname}{2}
+      \field{sortinit}{G}
+      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Collected works}
+      \field{title}{Über formal unentschiedbare Sätze der Principia Mathematica und verwandter System I}
+      \field{year}{1986}
+      \true{nocite}
+      \field{pages}{144\bibrangedash 195}
+      \range{pages}{52}
     \endentry
     \entry{Goldblatt2003}{article}{}
       \name{author}{1}{}{%
@@ -897,7 +1042,6 @@
       \field{series}{Bibliotheca mathematica ; vol. 1.}
       \field{title}{Introduction to metamathematics}
       \field{year}{1952}
-      \true{nocite}
     \endentry
     \entry{Kripke1963}{article}{}
       \name{author}{1}{}{%
@@ -1143,6 +1287,36 @@
       \field{title}{Introduction to Mathematical Logic}
       \field{year}{1964}
       \true{nocite}
+    \endentry
+    \entry{Ownes1973}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=6f9896f44f33cedec248db1ce74b0c3e}{%
+           family={Owens},
+           familyi={O\bibinitperiod},
+           given={James.\bibnamedelimi C},
+           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{6f9896f44f33cedec248db1ce74b0c3e}
+      \strng{fullhash}{6f9896f44f33cedec248db1ce74b0c3e}
+      \strng{bibnamehash}{6f9896f44f33cedec248db1ce74b0c3e}
+      \strng{authorbibnamehash}{6f9896f44f33cedec248db1ce74b0c3e}
+      \strng{authornamehash}{6f9896f44f33cedec248db1ce74b0c3e}
+      \strng{authorfullhash}{6f9896f44f33cedec248db1ce74b0c3e}
+      \field{sortinit}{O}
+      \field{sortinithash}{ff8d4eeb5101e3cf3809959b3592d942}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Notre Dame Journal of Formal Logic}
+      \field{number}{No 1}
+      \field{title}{Diagonalization and the Recursion Theorem}
+      \field{volume}{XIV}
+      \field{year}{1973}
+      \true{nocite}
+      \field{pages}{95\bibrangedash 99}
+      \range{pages}{5}
     \endentry
     \entry{Quine}{incollection}{}
       \name{author}{1}{}{%
@@ -1413,12 +1587,48 @@
       \field{year}{2013}
       \true{nocite}
     \endentry
+    \entry{Skolem1923}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=943720db360840023e62aa2912d7fbb7}{%
+           family={Skolem},
+           familyi={S\bibinitperiod},
+           given={Th.},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {ger}%
+      }
+      \list{location}{1}{%
+        {Kristiania}%
+      }
+      \list{publisher}{1}{%
+        {Jacob Dybwad}%
+      }
+      \strng{namehash}{943720db360840023e62aa2912d7fbb7}
+      \strng{fullhash}{943720db360840023e62aa2912d7fbb7}
+      \strng{bibnamehash}{943720db360840023e62aa2912d7fbb7}
+      \strng{authorbibnamehash}{943720db360840023e62aa2912d7fbb7}
+      \strng{authornamehash}{943720db360840023e62aa2912d7fbb7}
+      \strng{authorfullhash}{943720db360840023e62aa2912d7fbb7}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Begründung der elementaren Arithmetik durch die rekurrierende Denkweise ohne Anwendung scheinbarer veränderlichen mit unendlichem Ausdehnungsbereich /}
+      \field{series}{Videnskapsselskapets skrifter. Mat.-naturv. klasse ; 1923:6.}
+      \field{title}{Begründung der elementaren Arithmetik durch die rekurrierende Denkweise ohne Anwendung scheinbarer veränderlichen mit unendlichem Ausdehnungsbereich}
+      \field{year}{1923}
+      \true{nocite}
+    \endentry
     \entry{Smor1977b}{incollection}{}
       \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=86c956cd896ae9717be9fd5bdf59a6a5}{%
+        {{un=0,uniquepart=base,hash=aa347a8abe37c910f2de21ad961273f9}{%
            family={Smorynski},
            familyi={S\bibinitperiod},
-           given={C},
+           given={Craig},
            giveni={C\bibinitperiod},
            givenun=0}}%
       }
@@ -1445,17 +1655,19 @@
       \list{publisher}{1}{%
         {North.Holland Publishing Company}%
       }
-      \strng{namehash}{86c956cd896ae9717be9fd5bdf59a6a5}
-      \strng{fullhash}{86c956cd896ae9717be9fd5bdf59a6a5}
-      \strng{bibnamehash}{86c956cd896ae9717be9fd5bdf59a6a5}
-      \strng{authorbibnamehash}{86c956cd896ae9717be9fd5bdf59a6a5}
-      \strng{authornamehash}{86c956cd896ae9717be9fd5bdf59a6a5}
-      \strng{authorfullhash}{86c956cd896ae9717be9fd5bdf59a6a5}
+      \strng{namehash}{aa347a8abe37c910f2de21ad961273f9}
+      \strng{fullhash}{aa347a8abe37c910f2de21ad961273f9}
+      \strng{bibnamehash}{aa347a8abe37c910f2de21ad961273f9}
+      \strng{authorbibnamehash}{aa347a8abe37c910f2de21ad961273f9}
+      \strng{authornamehash}{aa347a8abe37c910f2de21ad961273f9}
+      \strng{authorfullhash}{aa347a8abe37c910f2de21ad961273f9}
       \strng{editorbibnamehash}{0970011ebe21931f0686da183e7d8dae}
       \strng{editornamehash}{0970011ebe21931f0686da183e7d8dae}
       \strng{editorfullhash}{0970011ebe21931f0686da183e7d8dae}
+      \field{extraname}{1}
       \field{sortinit}{S}
       \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{extradate}{1}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{year}
       \field{labelnamesource}{author}
@@ -1470,12 +1682,12 @@
     \endentry
     \entry{SmorHand}{incollection}{}
       \name{author}{1}{}{%
-        {{un=2,uniquepart=given,hash=aa347a8abe37c910f2de21ad961273f9}{%
+        {{un=0,uniquepart=base,hash=aa347a8abe37c910f2de21ad961273f9}{%
            family={Smorynski},
            familyi={S\bibinitperiod},
            given={Craig},
            giveni={C\bibinitperiod},
-           givenun=2}}%
+           givenun=0}}%
       }
       \name{editor}{1}{}{%
         {{hash=faa3cca850326b0f6e3378937dd3b66d}{%
@@ -1496,9 +1708,10 @@
       \strng{editorbibnamehash}{faa3cca850326b0f6e3378937dd3b66d}
       \strng{editornamehash}{faa3cca850326b0f6e3378937dd3b66d}
       \strng{editorfullhash}{faa3cca850326b0f6e3378937dd3b66d}
-      \field{extraname}{1}
+      \field{extraname}{2}
       \field{sortinit}{S}
       \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{extradate}{2}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{year}
       \field{labelnamesource}{author}
@@ -1510,12 +1723,12 @@
     \endentry
     \entry{Smor1985}{book}{}
       \name{author}{1}{}{%
-        {{un=2,uniquepart=given,hash=aa347a8abe37c910f2de21ad961273f9}{%
+        {{un=0,uniquepart=base,hash=aa347a8abe37c910f2de21ad961273f9}{%
            family={Smorynski},
            familyi={S\bibinitperiod},
            given={Craig},
            giveni={C\bibinitperiod},
-           givenun=2}}%
+           givenun=0}}%
       }
       \list{publisher}{1}{%
         {Springer-verlag}%
@@ -1526,7 +1739,7 @@
       \strng{authorbibnamehash}{aa347a8abe37c910f2de21ad961273f9}
       \strng{authornamehash}{aa347a8abe37c910f2de21ad961273f9}
       \strng{authorfullhash}{aa347a8abe37c910f2de21ad961273f9}
-      \field{extraname}{2}
+      \field{extraname}{3}
       \field{sortinit}{S}
       \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
       \field{extradatescope}{labelyear}
@@ -1578,9 +1791,6 @@
            giveni={R\bibinitperiod\bibinitdelim I\bibinitperiod},
            givenun=0}}%
       }
-      \list{language}{1}{%
-        {eng}%
-      }
       \list{location}{1}{%
         {Berlin, Heidelberg}%
       }
@@ -1600,14 +1810,10 @@
       \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{This book emphasizes three very important concepts: computability, as opposed to recursion or induction; classical computability; and the art of computability, a skill to be practiced but also important in an esthetic sense of beauty and taste in mathematics.}
       \field{booktitle}{Turing Computability}
-      \field{isbn}{9783642319327}
-      \field{issn}{2190-619X}
       \field{series}{Theory and Applications of Computability}
       \field{title}{Turing Computability: Theory and Applications}
       \field{year}{2016}
-      \keyw{Computable functions ; Computer Science ; Computer science-Mathematics ; Computers ; Logic,Symbolic and mathematical ; Mathematical Logic and Foundations ; Mathematics of Computing ; Theory of Computation}
     \endentry
     \entry{solovay976}{article}{}
       \name{author}{1}{}{%
@@ -1679,6 +1885,49 @@
       \field{howpublished}{\url{https://plato.stanford.edu/archives/fall2017/entries/logic-provability/}}
       \field{title}{{Provability Logic}}
       \field{year}{2017}
+      \true{nocite}
+    \endentry
+    \entry{alma99122693854105763}{book}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=9131dcc0b7c52c07d7d95e489ba0a0f6}{%
+           family={Whitehead},
+           familyi={W\bibinitperiod},
+           given={Alfred\bibnamedelima North.},
+           giveni={A\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c58c42b6f7e7e1f78dbbdc65ed8e5384}{%
+           family={Russell},
+           familyi={R\bibinitperiod},
+           given={Bertrand},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \list{location}{1}{%
+        {Cambridge}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{048cf9054c2e7dc9fef3172a79679690}
+      \strng{fullhash}{048cf9054c2e7dc9fef3172a79679690}
+      \strng{bibnamehash}{048cf9054c2e7dc9fef3172a79679690}
+      \strng{authorbibnamehash}{048cf9054c2e7dc9fef3172a79679690}
+      \strng{authornamehash}{048cf9054c2e7dc9fef3172a79679690}
+      \strng{authorfullhash}{048cf9054c2e7dc9fef3172a79679690}
+      \field{sortinit}{W}
+      \field{sortinithash}{1af34bd8c148ffb32de1494636b49713}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Principia mathematica /}
+      \field{edition}{2. ed., reprinted.}
+      \field{isbn}{052106791x}
+      \field{title}{Principia mathematica}
+      \field{year}{1973}
       \true{nocite}
     \endentry
   \enddatalist

@@ -5,7 +5,8 @@
 In this section I will state a few results and definitions from my two project
 I have written; one about modal logic and one about Gödel's incompleteness
 theorems.
-These results will be given without proof.
+These results will be given without proof. The proofs can be found in
+\textbf{Indsæt ref}.
 
 The main points of this section will be the definition of the predicate
 $\text{Pr}(\cdot)$ which is constructed in the proof of  Gödel's Incompleteness
@@ -38,9 +39,6 @@ $\mathcal{L}_\Box$:
 		\item The modal operator $\Box$ (unary).
 	\end{enumerate}
 \end{defi}
-We will read $\Box\alpha$ as "$\alpha$ is provable. Normally in the alethic modal logic the
-$\Box$ reads "$\alpha$ is necessarily true. Further the symbol $\bot$ stands
-for falsehood.
 We can now define the well formed formulas of $\mathcal{L}_\Box$, or as we will
 call them for the: \textit{modal formulas}.
 
@@ -58,7 +56,10 @@ call them for the: \textit{modal formulas}.
 \end{defi}
 Further we will define the connectives $\wedge,\neg,\vee,\leftrightarrow,
 \Diamond, \Box^n,\Diamond^n$ and $\top$
-in the usual way. We will read $\Diamond \alpha$ as "$\alpha$" is consistent.
+in the usual way. 
+We will read $\Box\alpha$ as "$\alpha$ is provable. Normally in the alethic modal logic the
+$\Box$ reads "$\alpha$ is necessarily true. Further the symbol $\bot$ stands
+for falsehood. We will read $\Diamond \alpha$ as "$\alpha$" is consistent.
 \subsection{Semantics}
 In this section we will define the notation of truth for our modal logic. We
 will begin by defining a Hintikka frame and a Kripke model
@@ -120,9 +121,18 @@ $\mathcal{H}$, if this is the case we simply write $\vDash\alpha$. $\alpha$ is
 called \textit{satisfiable} if and only if $\alpha$ is satisfiable on all frames
 $\mathcal{H}$.
 
+$A$ formula $\alpha$ is called valid on a class of frames $\mathcal{C}$ if for
+all $\mathcal{H}\in\mathcal{C}$ we have that $\vDash^\mathcal{H}\alpha$. We
+write this as $\vdash^\mathcal{C}\alpha$.
+
 A formula $\alpha$ is \textit{valid} in a Kripke model $\mathcal{K}=\la
 W,R,\phi\ra$ if and only if $\vDash^\mathcal{K}_w\alpha$ for all notes $w\in
 W$. We write this as $\vDash^\mathcal{K}\alpha$
+
+If a Kripke model $\mathcal{K}$ has a \textit{minimal node} $w_0$, i.e a node
+such that for all $v\in W$ we have $w_0Rv$, then a modal formula $\alpha$ is
+called  \textit{true} in $\mathcal{K}$ if we have that
+$\vDash_{w_0}^\mathcal{K}\alpha$.
 \end{defi}
 \subsection{The modal logic GL}
 In this section we will define the notion of a modal logic and define the modal
@@ -141,7 +151,8 @@ logic \GL, which will be our base modal logic in this project.
 We will further define when a given modal formula is deducible in a modal
 logic:
 \begin{defi}
-	Let $\beta_1,\ldots,\beta_n,\alpha$ be modal formulas. We say that
+	Let $\Lambda$ be a modal logic, let $\beta_1,\ldots,\beta_n$
+	be modal formulas in $\Lambda$ and let $\alpha$ be a modal formula. We say that
 	$\alpha$ is \textit{deducible} from $\beta_1,\ldots,\beta_n$ if
 	$(\beta_1\wedge\cdots\wedge\beta_n)\rightarrow\alpha$ is a tautology.
 
@@ -222,7 +233,7 @@ weak completeness.
 		implies $\vDash^\mathcal{S}\alpha$ for all $\mathcal{S}\in S$.
 	\item A modal logic $\Lambda$ is strongly complete with respect to $S$
 		if for any set of formulas $\Gamma\cup\{\alpha\}$, if
-		$\Gamma\vDash^\mathcal{S}_\Lambda\alpha$ then
+		$\Gamma\vDash^\mathcal{S}\alpha$ then
 		$\Gamma\vdash_\Lambda\alpha$ for all $\mathcal{S}\in S$ and it
 		is weakly complete with respect to $S$ if for any formula
 		$\alpha$ if $\vDash^\mathcal{S}\alpha$ then
@@ -270,7 +281,7 @@ chapter
 \begin{prop}\label{prop:GL}
 	$\vdash_\GL\Box(\alpha\leftrightarrow\beta)\rightarrow(\Box\alpha\leftrightarrow\Box\beta)$
 \end{prop}
-\textbf{Bevis evt. nogle få deduktions former der vil blive brugt senere}
+\textbf{Pris evt. nogle få deduktions former der vil blive brugt senere}
 
 
 
@@ -289,7 +300,7 @@ project.
 	under the following schemata:
 	\begin{enumerate}[label=\Roman*.]
 		\item $S(x)=x+1$ is primitive recursive.
-		\item $C(x)=k$ is primitive recursive.
+		\item $Z(x)=0$ is primitive recursive.
 		\item $P^n_i(\x)=x_i$ is primitive recursive.
 		\item If $g,h_1,\ldots h_m$ are primitive recursive then so
 			is
@@ -363,6 +374,44 @@ will define the language $\mathcal{L}_\PRA$ of \PRA.
 			\text{Quantifiers} &: \forall,\exists
 	\end{align*}
 \end{defi}
+We will now define the notions of terms and formulae of \PRA. This part is
+mostly done to settle notations.
+
+\begin{defi}
+	\begin{enumerate}
+		\item The set of \textit{terms} of the langauge of \PRA\ is
+			defined inductively by:
+			\begin{enumerate}
+				\item $\ol 0$ is a term and each $v_i$ is a
+					term.
+				\item If $f$ is an $n$-ary function symbol and
+					$t_1,\ldots t_n$ are terms then $\ol
+					f t_1\ldots t_n$ is a term.
+			\end{enumerate}
+		\item The set of \textit{formulae} of the language of  \PRA\ is
+			defined inductively by:
+			\begin{enumerate}
+				\item If $t_1$ and $t_2$ are terms then 
+					$=t_1t_2$ is a formula.
+				\item If $F$ and $ G$ are formulae,
+					so are
+					$\neg F,\wedge F G,\vee F G$
+					and $\rightarrow F G$.
+				\item If $F$ is a formula and $v$ is a
+					variable, then $\exists vF$ and
+					$\forall vF$ are also formulae.
+			\end{enumerate}
+	\end{enumerate}
+\end{defi}
+We use Polish notation so we do not have parentheses in our language. In
+practices we will use parentheses and infix notation. We will also need the
+definition of a \textit{sentence}.
+
+\begin{defi}
+	A formula $F$ of \PRA\ is called a sentence if it has no free
+	variables; i.e if all variables $v$ that occurs in $F$ are bound.
+\end{defi}
+
 Having defined the language of \PRA\ we can now state the different axioms of
 \PRA:
 \begin{defi}
@@ -371,37 +420,38 @@ Having defined the language of \PRA\ we can now state the different axioms of
 		\item Propositional axioms
 			\begin{enumerate}
 				\item
-					$\varphi\rightarrow(\psi\rightarrow\varphi)$
+					$F\rightarrow( G\rightarrow F)$
 				\item
-					$(\varphi\rightarrow(\psi\rightarrow\vartheta)
-					)\rightarrow((\varphi\rightarrow\psi)\rightarrow
-					(\varphi\rightarrow\vartheta))$
-				\item $\varphi\wedge\psi\rightarrow\varphi$
-				\item $\varphi\wedge\psi\rightarrow\psi$
-				\item $\varphi\rightarrow
-					(\psi\rightarrow\varphi\wedge\psi)$
-				\item $\varphi\rightarrow\varphi\vee\psi$
-				\item $\psi\rightarrow\varphi\vee\psi$
+					$(F\rightarrow( G\rightarrow H)
+					)\rightarrow((F\rightarrow G)\rightarrow
+					(F\rightarrow H))$
+				\item $F\wedge G\rightarrow F$
+				\item $F\wedge G\rightarrow G$
+				\item $F\rightarrow
+					( G\rightarrow F\wedge G)$
+				\item $F\rightarrow F\vee G$
+				\item $ G\rightarrow F\vee G$
 				\item
-					$(\varphi\rightarrow\vartheta)\rightarrow((\psi\rightarrow
-					\vartheta)\rightarrow(\varphi\vee\psi\rightarrow\vartheta))$
+					$(F\rightarrow H)\rightarrow(( G\rightarrow
+					 H)\rightarrow(F\vee G\rightarrow H))$
 				\item
-					$(\varphi\rightarrow\psi)\rightarrow((\varphi\rightarrow\neg\psi)
-					\rightarrow\neg\varphi)$
-				\item $\neg\neg\varphi\rightarrow\varphi$
+					$(F\rightarrow
+					G)\rightarrow((F\rightarrow\neg G)
+					\rightarrow\neg F)$
+				\item $\neg\neg F\rightarrow F$
 			\end{enumerate}
 		\item Quantifier axioms
 			\begin{enumerate}
-				\item $\forall v\varphi v\rightarrow \varphi t$
-				\item $\varphi t\rightarrow \exists v\varphi
+				\item $\forall vF v\rightarrow F t$
+				\item $F t\rightarrow \exists v F
 					v$
 			\end{enumerate}
-			Where $t$ is substitutable for $v$ in $\varphi v$ in
+			Where $t$ is substitutable for $v$ in $F v$ in
 			both cases.
 		\item Equality axioms
 			\begin{enumerate}
 				\item $v_0=v_0$
-				\item $v_0=v_0\rightarrow v_1=v_0$
+				\item $v_0=v_1\rightarrow v_1=v_0$
 				\item $v_0=v_1\wedge v_1=v_2\rightarrow v_0=v_2$
 				\item $v_i=w\rightarrow \bar{f}(v_1,\ldots,
 					v_i,\ldots,v_n)=\bar{f}(v_1,\ldots,
@@ -449,11 +499,12 @@ Having defined the language of \PRA\ we can now state the different axioms of
 							f(v_01,v_1,\ldots,v_n),v_0,v_1,\ldots,v_n)$
 					\end{enumerate}
 				\item Induction\\
-					$\psi\0\wedge\forall v(\psi
-					v\rightarrow \psi (\ol Sv))\rightarrow
-					\forall v\psi v$ where $\psi$ is
-					$\exists v_n(\ol
-					f(v,v_0,v_1,\ldots,v_n)=\ol 0)$
+					$F(\0)\wedge\forall v(\delta
+					v\rightarrow F (\ol Sv))\rightarrow
+					\forall vF( v)$ where $F( v)$ is
+
+					\[\exists v_n(\ol
+					f(v,v_0,v_1,\ldots,v_n)=\ol 0)\]
 			\end{enumerate}
 	\end{enumerate}
 \end{defi}
@@ -464,18 +515,18 @@ inference rules of \PRA.
 \begin{defi}
 	The inference rules of \PRA\ are the following:
 	\begin{enumerate}
-		\item From $\alpha,\alpha\rightarrow\beta,$ derive $\beta$.
+		\item From $F,F\rightarrow G,$ derive $G$.
 			(modus ponens)
-		\item From $\alpha v\rightarrow \beta$ derive $\exists
-			\alpha\rightarrow \beta$, under the assumption that no
-			$v$ occurs free in $\beta$.
-		\item From $\beta\rightarrow \alpha v$ derive $\beta\rightarrow
-			\forall v\alpha v$, under the assumption that no
-			$v$ occurs free in $\beta$.
+		\item From $F v\rightarrow G$ derive $\exists
+			F\rightarrow G$, under the assumption that no
+			$v$ occurs free in $G$.
+		\item From $G\rightarrow F v$ derive $G\rightarrow
+			\forall v F v$, under the assumption that no
+			$v$ occurs free in $G$.
 	\end{enumerate}
 	A formal derivation in \PRA\ is a sequence of formulas of \PRA\
-	$\alpha_0,\alpha_1,\ldots,\alpha_k$ such that each $\alpha_i$ is either
-	an axiom of \PRA\ or follows from two other formulas $\alpha_j,\alpha_l$
+	$F_0,F_1,\ldots,F_k$ such that each $F_i$ is either
+	an axiom of \PRA\ or follows from two other formulas $F_j,F_l$
 	where $j,l<i$ by one of the three inferences rules.
 \end{defi}
 We will end this section with a theorem that states that \PRA\ can compute the
@@ -491,8 +542,8 @@ That \PRA\ can compute the primitive recursive functions makes it possible to
 encode the syntax of \PRA. This will be explained in the next section.
 \subsection{Arithmetication of the syntax}
 
-In this section we will discus how each expression in the language $\alpha$ of \PRA\ can
-be given a unique code-number $\Godelnum{\alpha}$ called the Gödel number. This makes it possible for \PRA\ to express
+In this section we will discus how each expression in the language $F$ of \PRA\ can
+be given a unique code-number $\Godelnum{F}$ called the Gödel number. This makes it possible for \PRA\ to express
 things about it self. For this encoding to work we will need the fundamental
 theorem of arithmetic that states that every natural number $a\geq 2$ has a
 unique representation:
@@ -549,35 +600,34 @@ formula" as: $\text{Pr}(x)\leftrightarrow\exists y(\text{Prov}(y,x))$
 The relation $\text{Pr}(x)$ has the following properties called Löbs
 derivability conditions:
 \begin{enumerate}
-	\item $\vdash\alpha\Rightarrow\vdash\text{Pr}(\Godelnum{\alpha})$
-	\item
-		$\vdash\Pr(\Godelnum{\alpha})\wedge\Pr(\Godelnum{\alpha\rightarrow\beta})\rightarrow
-		\Pr(\Godelnum{\beta})$
-	\item
-		$\vdash\Pr(\Godelnum{\alpha})\rightarrow\Pr(\Godelnum{\Pr(\Godelnum{\alpha})})$
+	\item[D1] $\PRA\vdash F\Rightarrow\vdash\text{Pr}(\Godelnum{F})$
+	\item[D2] $\PRA\vdash\text{Pr}(\Godelnum{F\rightarrow
+		G})\rightarrow(\text{Pr}(\Godelnum{F})\rightarrow\text{Pr}(\Godelnum{G}))$
+	\item[D3]
+		$\PRA\vdash\Pr(\Godelnum{F})\rightarrow\Pr(\Godelnum{\Pr(\Godelnum{F})})$
 \end{enumerate}
 it is also clear that $\neg\Pr(\bot)$, where $\bot$ is some false statement
 expresses consistence. We will denote this by $\text{Con}$.
 We can further with the use of the $subst$ function prove the following
 important lemma:
 \begin{lem}[The fixed point lemma]
-	Given any formula $\beta$ where the only free variable is $v$, we can
-	find a sentence $\alpha$ such that:
-	\[\PRA\vdash\alpha\leftrightarrow\beta(\Godelnum{\alpha})\]
+	Given any formula $G$ where the only free variable is $v$, we can
+	find a sentence $F$ such that:
+	\[\PRA\vdash F\leftrightarrow G(\Godelnum{F})\]
 \end{lem}
 This lemma makes it possible for us to show the first incompleteness theorem:
 \begin{thm}[The First Incompleteness Theorem]
 	The predicate $\Pr(\cdot)$ have the following properties for all
-	formulas $\beta$:
+	formulas $G$:
 	\begin{enumerate}
-		\item $\vdash\beta\Rightarrow\ \vdash\Pr(\Godelnum{\beta})$
-		\item $\vdash\Pr(\Godelnum{\beta})\Rightarrow\ \vdash\beta$
+		\item $\PRA\vdash G\Rightarrow\ \vdash\Pr(\Godelnum{G})$
+		\item $\PRA\vdash\Pr(\Godelnum{G})\Rightarrow\ \vdash G$
 	\end{enumerate}
-	If we let $\vdash\alpha\leftrightarrow\neg\Pr(\Godelnum{\alpha})$, we
+	If we let $\PRA\vdash\ F\leftrightarrow\neg\Pr(\Godelnum{F})$, we
 	then have:
 	\begin{enumerate}
-		\item $\not\vdash\alpha$
-		\item $\not\vdash\neg\alpha$
+		\item $\PRA\not\vdash F$
+		\item $\PRA\not\vdash\neg F$
 	\end{enumerate}
 	I.e we have a sentence where neither it or its negation can be proven.
 	So our system is incomplete.
@@ -585,11 +635,74 @@ This lemma makes it possible for us to show the first incompleteness theorem:
 Since $\Pr(\cdot)$ fullfills the derivability conditions the second theorem can
 also be proven. 
 \begin{thm}[The Second Incompleteness Theorem]
-	We have that $\PRA\not\vdash\text{Con}$
+	Under the assumption that \PRA\ is consistent we have that $\PRA\not\vdash\text{Con}$
 \end{thm}
 The main goal for the rest of this project is now to prove that the $\Box$ in
 \GL "behaves" in the same way as the Pr($\cdot$) predicate from arithmetics.
 How to should be understood will be explained latter on.
 To prove this theorem we will first need a main result from Recursion Theory
 called the recursion theorem.
+
+We will need one more result about the proof predicate in the project. It is
+called the formalized Löb's  theorem, and this theorem together with the
+derivability conditions tells the full story about the predicate
+$\text{Pr}(\cdot)$
+\begin{thm}[Formalized Löb's Theorem]
+	Let $F$ be any sentence of \PRA. Then:
+	\[\PRA\vdash\text{Pr}(\Godelnum{\text{Pr}(\Godelnum{F})\rightarrow
+	F})\rightarrow\text{Pr}(\Godelnum{F})\]
+\end{thm}
+
+We will in a later section need the following lemma:
+
+\begin{lem}
+	\label{lem:Prov}
+	Let $\ol f$ be an $n$-ary primitive recursive function symbol. There is
+	a function $g$ depending on $f$, such that:
+	\[\PRA\vdash\ol fv_0\ldots v_{n-1}=v\rightarrow\text{Prov}(\ol
+		gv_0\ldots v_{n-1},\Godelnum{f\dot v_0\ldots \dot v_{n-1}=\dot
+	v_n})\]
+\end{lem}
+
+The Formalized Löb's Theorem and the derivability conditions can be shown to
+hold for a wide range of arithmetical systems. A overview over this subject
+will be given in chapter \ref{chap:PRA}. If we write $\vdash F$ instead of
+$\PRA\vdash F$ it means we have not specified the arithmetical system we are
+looking at.
+
+If we set the properties of $\text{Pr}(\cdot)$ up next to the properties of the
+$\Box$-operator of \GL, we get the following table:
+
+	\begin{table}[h]
+		\begin{tabular}{|l|l|}
+			\hline
+		$\vdash_{\textbf{GL}}\alpha\Rightarrow\
+		\vdash_{\textbf{GL}}\Box\alpha $ &
+				$\vdash F\Rightarrow\
+				\vdash\text{Pr}(\Godelnum{F})$ \\
+				\hline
+				$\vdash_{\textbf{GL}}\Box(\alpha\rightarrow\beta)\rightarrow(\Box\alpha\rightarrow\Box\beta)
+		$ &
+				$\vdash\text{Pr}(\Godelnum{F\rightarrow G})\rightarrow
+				(\text{Pr}(\Godelnum{F})\rightarrow\text{Pr}(\Godelnum{G}))$ \\
+				\hline
+				$\vdash_{\textbf{GL}}\Box\alpha\rightarrow\Box\Box\alpha
+		$ &
+				$\vdash\text{Pr}(\Godelnum{F})\rightarrow\text{Pr}
+				(\Godelnum{\text{Pr}(\Godelnum{F})})$ \\
+				\hline
+				$\vdash_{\textbf{GL}}\Box(\Box\alpha\rightarrow\alpha)\rightarrow\Box\alpha
+		$ &
+				$\vdash\text{Pr}(\Godelnum{\text{Pr}(\Godelnum{F})\rightarrow
+				F})
+				\rightarrow\text{Pr}(\Godelnum{F})$\\ \hline
+		\end{tabular}
+	\caption{The properties of $\Box$ and the predicate $\text{Pr}(\cdot)$}
+	\end{table}
+
+	It is clear from this table that the predicate $\text{Pr}(\cdot)$
+	and the $\Box$-operator of \GL\ have a lot of the same properties in common.
+	Solovay's completeness theorems shows that the modal logic \GL\ in some
+	way axiomatize the proof predicate of a wide range of different
+	arithmetical systems.
 \end{document}

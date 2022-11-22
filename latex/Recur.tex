@@ -18,21 +18,24 @@ name is better suited for the discipline than the name recursion theory in his
 book \cite{Soare2016}.
 
 This sections will follow \cite{Soare1987}, unless stated otherwise. 
+
 \section{Partial Recursive Functions and Recursive Functions}
-The partial recursive functions is an enlargement of the primitive recursive
+The class of partial recursive functions is an enlargement of the primitive recursive
 functions. The class of primitive recursive functions capture a lot of the
-function we intuitively sees as computable. It do not contain any function that
+function we intuitively sees as computable. It does not contain any function that
 we would say was incomputable.
 
 But the primitive recursive functions do not include all intuitively computable
-functions. For example the following function that is clearly computable is not
+functions. For example the following function, called the Ackermann function,  that is clearly computable is not
 in the class of primitive recursive functions:
 \begin{align*}
-	A(0,n)&=n+1\\
-	A(m+1,0)&=A(m,1)\\
-	A(m+1,n+1)&=A(m,A(m+1,n))
+	Ack(0,n)&=n+1\\
+	Ack(m+1,0)&=A(m,1)\\
+	Ack(m+1,n+1)&=A(m,A(m+1,n))
 \end{align*}
-\textbf{Skrif uddybende om dette}
+
+This function grows \textit{to fast} to be a primitive recursive function. A
+proof of this fact can be found in \textbf{Find ref}.
 
 So we will need to expand our class of functions, if we want to
 \textit{capture} all intuitively computable functions. 
@@ -171,7 +174,7 @@ is true.
 
 We will being by proving the padding lemma, which states that each partial
 function $\varphi_x$ has an infitine amount of indices.
-\begin{lem}
+\begin{lem}[The Padding Lemma]
 	Each partial recursive function $\varphi_i$ has $\aleph_0$ indicies,
 	and for each $x$ we can \textit{effectively} find an infinite set $A_x$
 	of indices for the same partial function.
@@ -183,9 +186,10 @@ function $\varphi_x$ has an infitine amount of indices.
 \end{proof}
 
 The following theorem will show that each Turing computable function is in fact
-partial recursive. Latter we will prove that the converse also holds.
+partial recursive. The converse also holds and the proof of this fact can be
+found in \cite{Kleene1952}
 
-\begin{thm}
+\begin{thm}[The Normal Form Theorem]
 	\label{thm:Normalform}
 	There exist a predicate $T(e,x,y)$ and a function $U(y)$ that are
 	primitive recursive such that:
@@ -269,7 +273,7 @@ plays a crucial role in both the proof and the use of the recursion theorem.
 prove the following proposition:
 \begin{prop}
 	There is a recursive function $g$ of two variables such that for all
-	x,y:
+	$x,y$:
 \[\varphi_{g(x,y)}=\varphi_x\varphi_y\]
 \end{prop}
 \begin{proof}
@@ -293,18 +297,54 @@ In this section we will introduce the two concepts \textit{recursive
 enumerable} sets and the \textit{graph} of a function. We will further show
 that there is connection between these two concepts.
 \begin{defi}
-	A set $A$ is recursively enumerable (r.e.) if $A$ is the domain of some
+	A set $A$ is \textit{recursively enumerable} (r.e.) if $A$ is the domain of some
 	primitive recursive function. Further we define the following two sets:
 	\begin{enumerate}
 		\item We let the $e$th r.e set be denoted by:
-			$$W_e=\text{dom}\ f_e= \{x:f(x)\downarrow\}=\{x:\exists
+			$$E_e=\text{dom}\ (\varphi_e)= \{x:f(x)\downarrow\}=\{x:\exists
 			y T(e,x,y)\}$$
-		\item $W_{e,s}=f_{e,s}$
+		\item \[E_{e,s}=\text{dom} (\varphi_{e,s})\]
 	\end{enumerate}
 \end{defi}
-We asd???
+A set can be recursively enumerable without being recursive, which the
+following two propositions shows:
+\begin{prop}
+	Let $K=\{x:\varphi_x(x)\ \text{converges}\}=\{x:x\in E_x\}$, then $K$
+	is r.e.
+\end{prop}
+\begin{proof}
+	We have that $K$ is the domain of the following primitive recursive
+	function:
+	\[\psi(x)=\begin{cases}
+		x &\text{if}\ \varphi_x(x)\ \text{converges}\\
+		\text{undefined} &\text{otherwise.}
+	\end{cases}\]
+	This function is primitive recursive by Church Thesis, since $\psi(x)$
+	can be computed by program $P_x$ on input $x$, which outputs $x$ only
+	if $\varphi_x(x)$ converges.
+\end{proof}
+\begin{prop}
+	$K$ is not recursive
+\end{prop}
+\begin{proof}
+	If $K$ where recursive we would that it had a recursive characteristic
+	function $K_\chi$, and thus the following would be recursive:
+	\[f(x)=\begin{cases}
+		\varphi_x(x)+1 & \text{if } x\in K\\
+		0 & \text{if } x\not \in K
+	\end{cases}\]
+	But we this $f$ can not be recursive since for all $x$ we have $f\not
+	=\varphi_x$.
+\end{proof}
+\textbf{Forklar kort meningen med dette}.
+
+Next goal is to show that the definition of a r.e sets is equivalent to the
+definition that there is an algorithm that enumerates the members of it. We
+will further also show that the definition of a r.e set is equivalent to the
+set being $\Sigma_1$, which is a concepts that will play a bigger role later on
+in this project.
 \begin{defi}
-	A set $A$ is the projection of some relation $R\subseteq
+	A set $A$ is the \textit{projection} of some relation $R\subseteq
 	\omega\times\omega$ if $A=\{x:\exists y: R(x,y)\}$. We further say that
 	a set $A$ is in $\Sigma_1$ form, if $A$ is the projection of some
 	recursive relation $R\subseteq\omega\times\omega$.
@@ -318,15 +358,16 @@ We can now show the following theorem:
 	for some $e$. This means that:
 	$$x\in W_e\Leftrightarrow\exists s(x\in W_{e,s})\Leftrightarrow \exists
 	s(T(e,x,s))$$
-	Since the relation $T$ is primitive recursive and have that the set $A$
+	Since the relation $T$ is primitive recursive and we have that the set $A$
 	is the projection a recursive relation.
 
 	($\Leftarrow$) Let $A=\{x:\exists y(Rx,y)\}$ where $R$ is recursive. We
 	then have that $A=\text{dom} f$ where $f(x)=\mu y(R(x,y))$ and thus $A$
 	is r.e
 \end{proof}
-We can say?
+\textbf{Skriv noget metatekst}
 \begin{thm}
+	\label{thm:RecSigma}
 	If there is a recursive relation $R\subseteq\omega^{n+1}$ and if we
 	have the following set:
 	$$A=\{x|\exists y_1\ldots\exists  y_n R(x,\y)\}$$
@@ -356,10 +397,13 @@ The next definition will also play a role in our proof of Solovay's
 completeness theorems.
 
 \begin{defi}
-	The graph of a function $f$ is the relation:
-	$$(x,y)\in\text{graph} f\Leftrightarrow f(x)=y$$
+	The graph of a (partial) function $\varphi$ is the relation:
+	$$(x,y)\in\ \text{graph} \varphi\Leftrightarrow f(x)=y$$
+	We will from now on  denote the graph of a function $\varphi(\x)=y$
+	by\\ $\tau\x
+	y$
 \end{defi}
-\textbf{Text}
+
 \begin{thm}
 	If $R\subseteq\omega^2$ is an r.e relation, then there is a p.r
 	function $\text{sel}$ called the selector function for $R$ such that:
@@ -375,23 +419,23 @@ completeness theorems.
 \end{proof}
 It will be the following theorem we will use in our proof later on.
 \begin{thm}
-	A partial function $f$ is partial recursive iff its graph is recursive
+	A partial function $\varphi$ is partial recursive iff its graph is recursive
 	enumerable.
 \end{thm}
 \begin{proof}
-	($\Rightarrow$) The graph of $f_e$ is r.e by theorem ??? and the
+	($\Rightarrow$) The graph of $\varphi_e$ is r.e by theorem \ref{thm:RecSigma} and the
 	definition of a graph.
 
-	($\Leftarrow$) Since the graph of $f$ is assumed to be r.e we can
-	conclude that $f$ is its own prmitive recursive selector function. This
-	is that $R=\text{graph} f$ can only have $f$ as its selector function.
+	($\Leftarrow$) Since the graph of $\varphi$ is assumed to be r.e we can
+	conclude that $\varphi$ is its own primitive recursive selector function. This
+	is that $R=\text{graph} \varphi$ can only have $\varphi$ as its selector function.
 	[Whyyy?]
 \end{proof}
 
 \section{The Recursion Theorem}
 In this section we will state and prove the recursion theorem. It will be
 crucial in the next [chapter?], since we will need it to define a function.
-\begin{thm}
+\begin{thm}[The Recursion Theorem]
 	For every recursive function $f$ there exists a fixed point $n$ such
 	that $\varphi_n=\varphi_{f(x)}$
 \end{thm}
@@ -505,7 +549,19 @@ theorems.
 	define $\varphi$ and this can be done by a $\Sigma_1$ induction.
 \end{exmp}
 \section{The Arithmetical Hierarchy}
-\textbf{Noget klort her} :w
+
+In this section we will introduce the so called arithmetical hierarchy. Parts
+of it has already be defined; i.e the sets $\Sigma_1$. In the arithmetical
+hierarchy, we can classify sets with respect to their quantifier
+complexity in their syntactical definition.
+
+In the next chapter about the fragments of arithmetics, we will use the
+arithmetical hierarchy as a tool to detemine the amount of induction we will
+have in a given fragment.
+
+The goal of this section is to introduce the arithmetical hierarchy and prove
+some results about it. The most of these results might not be used going
+forward.
 
 \begin{defi}
 	We define the sets $\Sigma_n$ and $\Pi_n$ in the following way:
@@ -637,30 +693,17 @@ We can show a few properties of these sets.
 
 
 \section{Sigma completeness, put ind hvor dette passer i overstående}
-\textbf{Fra Soares}
-Noget meget advandceret end jeg nok har brug for.
-
-\textbf{Peter Smith}
-
-We will start of by defining the notion of $\Sigma_1$ completeness and
-soundness.
-
-\begin{defi}
-	Let $T$ be a theory such that any [FFF?] is also a sentence of $T$.
-	Then we will define the following two notions:
-	\begin{enumerate}
-		\item $T$ is $Sigma_1$-sound iff for any $\Sigma_1$-formula
-			$\alpha$, if $T\vdash\alpha$, then $\alpha$ is true.
-		\item $T$ is $Sigma_1$-complete iff for any $\Sigma_1$-formula
-			$\alpha$, if $\alpha$ is true, then $T\vdash\alpha$
-	\end{enumerate}
-\end{defi}
-We are interested in theories that extend  $I\Delta_0$ and is  
-$\Sigma_1$-complete, since for these we can show the main theorems of this
-project.
-\textbf{Fra Smorynski}
 We can make a generalization of $D3$ by using [Lemma fra fagprojekt]. We use
-these genieralization in some of our proofs later on.
+this generalization in some of our proofs later on. We will first need to prove
+the following lemma:
+\begin{lem}
+	Let $\tau v_0\ldots v_{n-1}$ be a $\Sigma_1$. Then there is a
+	recursively enumerable formula such that 
+	\[\PRA\vdash\tau v_0\ldots v_{-n1}\leftrightarrow\exists v(fvv_0\ldots
+	v_{n-1}=\ol 0)\]
+\end{lem}
+\begin{proof}
+\end{proof}
 \begin{thm}
 	\label{thm:DemoSiga}
 	Let $fv_0\ldots v_{n-1}$ be a $\Sigma_1$ formula with free variables.
@@ -690,7 +733,7 @@ these genieralization in some of our proofs later on.
 					     &\rightarrow\exists v\text{Pr}(
 					     \Godelnum{hvv_0\ldots v_{n-1}=\ol
 					     0}
-					     &&\text{By theorem fagprojekt?})\\
+					     && \ref{lem:Prov}\\
 					     &\rightarrow\text{Pr}(\Godelnum{
 						     \exists v(hvv_0\ldots
 					     v_{n-1}=\ol 0)})

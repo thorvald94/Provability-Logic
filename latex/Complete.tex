@@ -6,7 +6,12 @@
 In this section we will prove Solovay's completeness theorems. The proof of
 these theorems follows a technique invented by Robert Solovay, which today is
 known as a \textit{Solovay construction}. This technique is a way of embedding
-Kripke models into arithmetic. These theorems shows: \textbf{Forklar}
+Kripke models into arithmetic. The first theorem show that the $\Box$-operator of
+the logic \GL\ behaves like the proof predicate $\text{Pr}$ from \PRA. The
+second theorem shows that the modal logic \GLS. 
+
+Further these theorems shows that the proof predicate of arithmetics can be
+axiomatized, by the axioms of \GL\ and \GLS.
 
 \section{Soundness}
 For each  formula in $\mathcal{L}_\Box$ we want to assign a sentence of
@@ -516,17 +521,27 @@ $$\PRA\vdash L=\ol x\rightarrow\neg(\Box\gamma)^*$$
 We can now finally prove Solovay's first completeness theorem:
 \begin{proof}[Proof of Solovay's first completeness theorem]
 	By lemma \ref{lem:10} we have that
-	$$1\not\in\phi(\alpha)\Rightarrow\PRA\vdash L=\ol 1\rightarrow\not\alpha^*$$
+	$$1\not\in\phi(\alpha)\Rightarrow\PRA\vdash L=\ol 1\rightarrow\neg\alpha^*$$
 	But by lemma \ref{lem:5} we have that $\PRA\ +L=1$ is consistent, from
 	which it follows that $\PRA+\neg\varphi^*$ is consistent; so $\varphi^*$
 	is not a theorem af $\PRA$ and thus we have:
 	$\PRA\not\vdash\varphi^*$ and the theorem follows by contraposition.
 \end{proof}
 
+With this proof we can give a interpretation of the set $W$ and relation $R$ in
+a model of \GL. The set $W$ consists of recursively axiomitized extensions of
+\PRA. And we have that $w_1Rw_2$ if and only if $w_1\vdash\text{Con}(w_2)$,
+i.e the theory $w_1$ has the consistency of theory $w_2$ as one of its
+theorems. It is clear that this relation is transitive and conversely
+well-founded.
 \section{The Second Theorem}
 \label{chap:second}
 Solovay's Second Completeness Theorem is a strengthening of the first one,
-[How?]
+since it tells about trueness of a formuae $\alpha^*$ in the standard model
+$\mathcal{N}=\la
+\omega,+,\cdot\ra$ of aritmetics. The proof will follow that of the first
+theorem, but we will look at the modal logic \GLS\ instead of the modal logic
+\GL.
 \begin{thm}
 	For all modal sentences $\varphi$, the following is equivalent:
 	\begin{enumerate}
@@ -706,5 +721,48 @@ theorem for a given arithmetic theory. \textbf{Ref den russiske artikle}. This
 newer proof might be able to giver a specific lower bound on the strength of
 the fragments Solovays theorems holds for.
 
+\section{Solovays Completeness Theorems and Fixed Points}
+
+
+
+From table \ref{Fig} we can conclude the following things:
+\begin{enumerate}
+	\item From line 3, we have that
+		$\vdash_\GL\sBox(p\leftrightarrow\Box\neg
+		p)\leftrightarrow\sBox(p\leftrightarrow\Box\bot)$; i.e a
+		sentence $F$ of \PRA\ is equivalent to its own unprovability if and only
+		if $F$ is equivalent to the assertion that \PRA is
+		inconsistent.
+		For let $^*$ be such that $F=p^*$, then we if $F$ is such that
+		$\PRA\vdash F\leftrightarrow\text{Pr}(\Godelnum{\neg F})$ which
+		is the same as $\PRA\vdash(p\leftrightarrow\Box\neg p)^*$ and
+		thus we have: $\PRA\vdash\Box(p\leftrightarrow\Box\neg p)^*$
+		and hence $\PRA\vdash\sBox(p\leftrightarrow\Box\neg p)^*$. But
+		by Solovay's first completeness theorem we get that:
+		$\PRA\vdash(\sBox(p\leftrightarrow\Box\neg
+		p)\leftrightarrow\sBox(p\leftrightarrow\Box\bot))^*$, and thus
+		$\PRA\vdash\sBox(p\leftrightarrow\Box\bot)^*$ whence
+		$\PRA\vdash(p\leftrightarrow\Box\bot)^*$ and thus $\PRA\vdash
+		F\leftrightarrow\text{Pr}(\Godelnum{\bot})$. Which shows that
+		$F$ is equivalent to the inconsistency of \PRA.
+	\item We can form line 1 and 6 infer that a sentence of arithemtic is 
+	\item Line 10 gives us
+	\item From line 6 we see
+\end{enumerate}
+
 \section{Implications of Solovays Theorems}
+
+The clearest implication of the generalized versions of Solovay's Completeness
+Theorems is that the proof predicate of arithmetics can be axiomatized;
+everything there is to say about the predicate, can be deduced from the
+derivability conditions and Löb's theorem. This can be seen both as a positive
+and negative result. Positive since the proof predicate follows some simple
+rules and these rules  does not alter even though you add more induction to the
+fragment of arithmetics you are working with. The last point can also be seen
+as a negative one; there is no way to differentiate the different fragments of
+arithmetics by looking at their proof predicate.
+
+Further the proportional provability logic is not "hit" with Quines critique of
+modal logic as being unintelligible, since it has a very clear and unambiguous
+arithmetic interpretation.
 \end{document}

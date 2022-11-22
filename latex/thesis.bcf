@@ -2184,14 +2184,19 @@
   </bcf:bibdata>
   <bcf:section number="0">
     <bcf:citekey order="1">Boolos1979</bcf:citekey>
-    <bcf:citekey order="2">Goldblatt2003</bcf:citekey>
+    <bcf:citekey order="2">Smor1985</bcf:citekey>
     <bcf:citekey order="3">Lemmon1977</bcf:citekey>
-    <bcf:citekey order="4">Lemmon1977</bcf:citekey>
-    <bcf:citekey order="5">Blackburn2002</bcf:citekey>
-    <bcf:citekey order="6">Soare2016</bcf:citekey>
-    <bcf:citekey order="7">Soare1987</bcf:citekey>
-    <bcf:citekey order="8">Smor1985</bcf:citekey>
-    <bcf:citekey order="9">Olson1990</bcf:citekey>
+    <bcf:citekey order="4">Goldblatt2003</bcf:citekey>
+    <bcf:citekey order="5">Lemmon1977</bcf:citekey>
+    <bcf:citekey order="6">Lemmon1977</bcf:citekey>
+    <bcf:citekey order="7">Blackburn2002</bcf:citekey>
+    <bcf:citekey order="8">Soare2016</bcf:citekey>
+    <bcf:citekey order="9">Soare1987</bcf:citekey>
+    <bcf:citekey order="10">Kleene1952</bcf:citekey>
+    <bcf:citekey order="11">Smor1985</bcf:citekey>
+    <bcf:citekey order="12">Boolos1993</bcf:citekey>
+    <bcf:citekey order="13">Olson1990</bcf:citekey>
+    <bcf:citekey order="14">Boolos1993</bcf:citekey>
     <bcf:citekey order="0" nocite="1">*</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->

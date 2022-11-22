@@ -4,6 +4,11 @@
 
 \textbf{Skriv kort hvad projektet omhandler og opris de vigtisge resultater}
 
+The bibliography of this project consist of a wide range of logical,
+mathematical and philosophical texts that in one way or another has a
+connection to of is referenced in the project. The main source for this project
+is \cite{Smor1985}
+
 \section{Notation}
 
 We denote the non-negative integers with $\omega$; i.e
@@ -12,15 +17,24 @@ Subsets of $\omega$ will be denoted by $A,B,C\ldots$ and arbitrary sets will be
 denoted by
 $\Gamma,\Phi,\Theta\ldots$. Lower case Latin letter $a,b,c$ and $x,y,z$ will
 denote integers, and $\vec{x}$ will be shorthand for $x_1,\ldots,x_n$. Further recursive functions will be denoted by
-$\varphi,\psi,\vartheta,\ldots$, and other functions that are not recursive will be denoted by
-$f,g,h,\ldots$. $\varphi(x)\downarrow$ will denote that $\varphi(x)$ is defined and
+$\varphi,\psi,\vartheta,\ldots$, the graphs of recursive functions will be
+denoted by $\tau,\xi$ and $\zeta$ . Functions that are primitive recursive will be denoted by
+$f,g,h,\ldots$. 
+
+We will further introduce a system of arithmetics called \textit{primitive
+recursive arithmetics} (From now on shorten to \PRA) and the formulas of this
+system will be denoted with $F,G$ and $G$.
+
+$\varphi(x)\downarrow$ will denote that $\varphi(x)$ is defined and
 $\varphi(x)\downarrow=y$ denotes that $\varphi(x)$ is defined and has value $y$.
 $\varphi(x)\uparrow$
-denotes that $\varphi(x)$ is undefined. $\text{dom}\ \varphi$ and $\text{im}
-\varphi$ denotes the
+denotes that $\varphi(x)$ is undefined. $\text{dom}(\varphi)$ and $\text{im}
+(\varphi)$ denotes the
 domain and image of $\varphi(x)$.
 A few special functions have their own symbols: $S$ for the
-successor function, $C$ for the constant function and $P$ for the projection.
+successor function, $Z$ for the zero function and $P$ for the projection.
+The formulae of the language \PRA\ will be denoted by $F,G$ and $H$.
+
 Relations will be denoted by $R$ and $<,>,\leq,\geq$ will be used in the usual
 sense on integers.
 
@@ -43,13 +57,16 @@ the beginning of history; i.e arithmetics.
 
 \subsection{Modal Logic}
 The Greek philosopher Aristotle did try to develop some kind of modal logic
-about necessary and possibility in both his logical works and in his
-work about the \textit{First Philosophy}.{textbf{Ref til de rigtige steder} }
+about necessary and possibility in both his logical work \textit{De
+Interpretatione} and in his
+ \textit{Metaphysic}.
 
-With our modern eyes his thoughts about nesscaration and possibility seems a
-bit confusing. But he gets something right:j
-
-\[\text{Eksempel på noget han forstår}\]
+With our modern eyes his thoughts about nessaration and possibility seems a
+bit confusing. But he gets some implications about these notions right. A good
+overview of this part of his logical work can be found in \cite{Lemmon1977} and
+in \textbf{det polske værk}
+In the late antiquity and the middle ages there was done some work building on 
+Aristotle earlier work. 
 
 The next big step for modal logic came in the enlightenment when the
 rationalist philosopher Gottfried W. Leibniz came up with the idea of possible
@@ -57,10 +74,18 @@ worlds.  Leibniz thought that we live in the best possible world, since it is
 this world God has chosen to create. With this idea of a metaphysical possible
 worlds, it was possible to make a clear definition of when a proposition is
 necessary true; and a proposition is necessary true, if it is true in all
-possible worlds.
+possible worlds. But Leibniz did not any further works on modal logic as a
+whole.
 
-\textbf{Hvad sker der mellem Leibniz og Kripke; især udviklingen indenfor
-syntax}
+Modern modal logic is said to be started by Clarence Irving Lewis. He set out
+to develop a formal system without the paradoxes of materiel
+implication. This led to his development of a wide range of different modal
+logical system in the first part of the 20th century. His method was
+syntactical, since there were yet to be develop a "smart" semantic for modal
+logic. But in the start of the 20th century, C. I. Lewis had started the modern
+modal logic, and a lot of other philosophers and logicians began to have an
+interest in the subject.
+
 
 In the 1950s there had been a lot of research into the syntax of modal logic.
 But there was still not a clear definition of the semantics of modal logic,
@@ -88,22 +113,51 @@ A deeper look into the development of modal logic can be found in
 \cite{Goldblatt2003}.
 \subsection{Arithmetics and Recursion Theory}
 
-\textbf{Skriv noget om axiomer systemer og historie}
 
-In the second half of the 1800s there was a development in the axiomatization
-of aritmethics. Dedeking and Peano developed axioms system for arimethics,
-these was later evovled into was today is known as the Peano axioms for
+Even though humans have been using arithmetics for millennials, it had not been
+axiomatized.
+
+It was first in  the second half of the 1800s there was a development in the axiomatization
+of aritmethics. Richard Dedeking and Giuseppe Peano developed axioms system for arithmetics,
+these was later evolved into was today is known as the Peano axioms for
 arithmetics. 
-\textbf{Hilberts program}
-\textbf{Primitive Recursive arithmetics (Skolem)}
-\textbf{Russels Principia}
-In 1931 Kurt Gödel's paper: \textit{Title} showed that no mathematical system that
-is strong enough to do simple arithemtic can't shown its own consistency. The
+
+Another important achievement at the turn of the century, was David Hilbert's
+proof that the consistency of Euclidean geometry could be proven by proving
+that arithmetics was consistent. \textbf{Hans geometri værk} This was one of the first steps in what later
+would be known as the Hilbert program. 
+The Hilbert program was not really a program until the end of 1920, where it
+became clear that its goal was to prove that the \textit{ideal} transfinite mathematics was
+consistent, and that the proof of this should be conducted in a \textit{real}
+finite mathematics system.
+
+An example of such a finite system could be the \textit{Primitive recursive
+arithmetics} that was developed by Toralf Skolem; the definition of this system
+will be given in the next chapter. This system can be seen as a
+(induction-wise) weaker version of Peano aritmetics. Tait  argues
+that such a system fulfills the finitist conditions of the Hilbert program.
+This system will be the main system of this project and the definition of it
+will come in the next chapter.
+
+Another (mostly historically) important mathematical system of arithmetics was
+the one developed by Bertrand Russell and Alfred North Whitehead in their work:
+\textit{Principia Mathematica}. The goal of this work was somewhat different
+than the one of the Hilbert program. Russell had a thesis that shortly (and not
+the most precis) says that all of mathematics could be reduce to logic. In
+Kantian terms he thought that mathematics was analytical \textit{a priori}. 
+
+In 1931 Kurt Gödel's paper: \textit{Über formal unentscheidbare Sätze der
+Principia Mathematica und verwandter Systeme I} it was shown  that the system of
+Russell and Whitehead was not complete, and under the assumption that the
+system was consistent that it could not prove its own consistency.
+This result can be generalized to systems strong enough to do simple
+arithmetic.
+The
 original proof was build on the system of Russel and Whitehead and had a
 assumption of $\omega$-consistency. This
 was a blow to the Hilbert program, since the result showed that the goal of it
-could not be fulfilled. Later on Rosser improved the result so that it used
-normal consistency.
+could not be fulfilled. Later on John Barkley Rosser\textbf{Ref} improved the
+result so that it  consistency was enough.
 
 Later on in the 1930s Gödel extended the primitive recursive function to the  recursive
 functions. A few different definitions of intuitively computable functions was
@@ -114,8 +168,6 @@ class of functions.
 This lead Church to state the so called \textit{Church-Turing Thesis}, that
 states that this class of functions are the computable functions.
 
-
-Gödels Incompleteness Theorems is one of the major results in recursive theory.
 
 \subsection{Provability Logic}
 The first time that someone made a connection between these two different areas

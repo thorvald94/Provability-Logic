@@ -3,7 +3,8 @@
 \begin{document}
 In this section we will prove the so called \textit{fixed point theorem} for
 \GL.  This theorems says that there for some sentences of \GL\ exists fixed
-points. There has been a lot of different ways to prove this theorem. Here we
+points. There has been a lot of different ways to prove this theorem; Boolos
+list three different ways in his book \cite{Boolos1993} Here we
 will follow the proof from \cite{Olson1990}.
 
 
@@ -33,22 +34,6 @@ $\mathcal{K}=\la W,R,\phi\ra$ of \GL\  have that $W$ is a finite set is the foll
 \end{defi}
 Since $W$ is finite and that $R$ is irreflexive we have that the for each $w\in
 W$ the $\mathcal{K}$-rank of $w$ is unique.
-\begin{defi}
-	A sentence $\alpha$ is called modalized in $p$ if every occurence of
-	$p$ in  $\alpha$ is under the scope of $\Box$.
-\end{defi}
-We will also need the following definition:
-\begin{defi}
-	A sentence $\alpha$ is said to be $n$-\textit{decomposable} iff for some
-	sequence $q_1,\ldots,q_n$ consisting of distinct senctence letters that
-	do not occur in $\alpha$ we have some sentence $\beta(q_1,\ldots,q_n)$
-	that do not contain $p$ and another sequence of distinct sentences 
-	$\gamma_1(p),\ldots,\gamma_n(p)$, which each contains $p$ that we have
-	$$\alpha=\beta(\gamma_1(p),\ldots,\gamma_n(p))$$.
-\end{defi}
-It should be noted that if $\alpha$ is modalized in $p$ that we then have that
-$\alpha$ is $n$-decomposable for some $n$.
-We can now state the following theorem:
 
 We will need the following three lemmas in our proof of the Fixed Point Theorem:
 \begin{lem}
@@ -321,4 +306,39 @@ fixed-point is appropriate:
 	we get:
 	\[\vdash_\GL\sigma\leftrightarrow\alpha(\sigma)\]
 \end{proof}
+With this theorem a lot of different fixed points can be calculated. The
+formula on the left is the formula $\alpha(p)$ and the formula on the right is
+the formula $\sigma$.
+\begin{align*}
+	1. &\ \neg\Box p & \neg\Box\bot\\
+	2. &\ \Box p & \top\\
+	3. &\ \Box\neg p & \Box\bot\\
+	4. &\ \neg\Box\neg p & \neg\Box\bot\\
+	5. &\ \neg\Box\Box\neg p & \neg\Box\Box\bot\\
+	6. &\ \Box p \rightarrow\Box\neg p & \Box\Box\bot\rightarrow\Box\bot\\
+	7. &\ \Box (\neg
+	p\rightarrow\Box\bot)\rightarrow\Box(p\rightarrow\Box\bot) &
+	\Box\Box\Box\bot\rightarrow\Box\Box\bot\\
+	8. &\ \Box p\rightarrow q & \Box q\rightarrow q\\
+	9. &\ \Box(p\rightarrow q) & \Box q\\
+	10. &\ \Box p\wedge q & \Box q\wedge q\\
+	11. &\ \Box(p\wedge q) & \Box q\wedge q\\
+	12. &\ q\vee \Box p & \top\\	
+	13. &\ \neg\Box(q\rightarrow p) & \Diamond q\\
+	14. &\ \Box(p\rightarrow q)\rightarrow\Box\neg p &
+	\Box(\Box\bot\rightarrow q)\rightarrow\Box\bot\\
+	15. &\ q\wedge(\Box(p\rightarrow q)\rightarrow\Box\neg p) &
+	q\wedge\Box\neg q\\
+	16. &\ \Diamond p\rightarrow(q\wedge\neg\Box(p\rightarrow q)) &
+	\Diamond\top \rightarrow (q\wedge\neg\Box(\Box\bot\rightarrow q))\\
+	17. &\ \Box(\Box(p\wedge q)\wedge\Box(p\wedge r)) & \Box(\Box q \wedge
+	\Box r)
+\end{align*}
+\begingroup\vspace*{-\baselineskip}
+\captionof{figure}{A Table of Fixed Points}
+\label{Fig}
+\vspace*{\baselineskip}\endgroup
+
+We will after the proof of Solovay's Completeness Theorems come back to this
+table, and make some conclutions about the fixed points.
 \end{document}

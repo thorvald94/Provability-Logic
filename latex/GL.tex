@@ -35,7 +35,7 @@ In this subsection the notion of a special type of graphs called tress will be
 introduce. The goal of this section is to prove Könings lemma about trees. We
 will start of by defining the notion of a tree.
 \begin{defi}
-	A \textit{tree} is a tuple $\mathcal{T}=(W,<,w_0)$ where $(W,<)$ where:
+	A \textit{tree} is a tuple $\mathcal{T}=\la W,R,w_0\ra$ where $(W,R)$ where:
 	\begin{enumerate}
 		\item $<$ is transitive and asymmetric.
 		\item $w_0$ is the minimal element of $<$. I.e $w_0
@@ -45,8 +45,29 @@ will start of by defining the notion of a tree.
 	\end{enumerate}
 	A tree is \textit{infinite} if the set $W$ is infinite.
 \end{defi}
-\textbf{Skriv dem ind alligevel} The definitions of edges, vertices and paths are assumed known.
-It is clear that between any two vertices are exactly one path. We will need
+
+We will state some immediate definitions, that should be known from the course
+\textit{Diskret matematik}:
+\begin{defi}
+	The \textit{nodes} of a tree $\mathcal{T}=\la W,R,w_0\ra$ are the
+	elements of the set $W$.
+
+	If $w,v\in W$ are nodes and  $wRv$ then we say that they are joined  by an \textit{edge}.
+
+
+	A \textit{walk} is an altering series of vertices and edges in
+	which for each $v$ we have that $wRv$ for the $w$ immediate before it 
+	. We call a walk for a \textit{trail}, if all the edges in
+	the walk are distinct. A \textit{path} is trail in which all the
+	nodes are different.
+\end{defi}
+
+
+It is know from the course \textit{Diskret matematik} that between any two
+vertices there are exactly one path in a tree. 
+As the concept of a tree is assumed know, we will not look at any concrete
+examples,
+We will need
 some further definitions to state and prove Könings lemma:
 \begin{defi}
 	Let $w\in W$. The \textit{degree} of of $w$ in $\mathcal{T}$ is the
@@ -88,6 +109,25 @@ It is clear that if $w$ is a leaf node, then degree of $w$ is $1$.
 	every node of $\mathcal{T}$ has finitely many child nodes.
 \end{defi}
 
+The proof of Könings lemma will depend on the following axiom:
+\begin{axiom}[Axiom of Dependent Choice]
+	Let $R$ be an relation on a set $W$ and suppose that:
+	\[\forall w\in W\exists v\in W: wRv\]
+	Then there exists a sequence $(w_n)_{n\in\omega}\in W$ such that
+	\[\forall n\in\omega: w_nRw_{n+1}\]
+\end{axiom}
+
+This axiom is a weak form of the axiom of choice, so some of the consequnces of
+the axiom of choice also follows from this axiom. \textbf{Er dette overhovedt
+vigtigt at kommentere på?}
+
+In the proof of Köning's
+lemma we will look at the subset of all nodes with infinitely many descendants
+and the relation $R$ where we have that for nodes $w,v\in W$:  $wRv$ if and only if $v$ is a child of $w$. This relation and
+set
+fulfills the conditions of the axiom and we can thus create the sequence
+$(w_n)_{n\in\omega}$.
+
 We can now state Köning's lemma:
 \begin{lemma}{Köning's lemma}
 	\label{lem:kong}
@@ -122,14 +162,17 @@ We can now state Köning's lemma:
 	same argument as before we get that $w_k$ has at least one child node
 	with finitely many descendants. Let $w_{k+1}$ be one of these. We have
 	thus shown how the sequence $w$ can be constructed, and the lemma
-	follows. \textbf{axiom of depenedsdsd choice?}
+	follows by the axiom of dependent choice
 \end{proof}
 It is clear that finite trees are conversely well-founded frames. This fact is crucial
 in the proof of theorem in the next subsection, that can be seen as strengthening of the
 weak completeness theorem of chapter \ref{chap:Pre}:
 \subsection{The Finite Tree Theorem}
 The following theorem is a strengthening of the weak completeness theorem for
-\GL. 
+\GL, since trees are a subset of the transitive conversely well-founded models
+and we by this theorem get that we can with out loss of generality assume that
+our model is finite. This last feature will be crucial in the proof of main
+theorems of the next chapter.
 \begin{thm}[The Finite Tree Theorem]
 	Let $\alpha$ be a modal formula. Then the following are equivalent:
 	\begin{enumerate}
@@ -222,9 +265,10 @@ let $\mathcal{K}$ be the following model $\mathcal{K}=\la W,R,w_0,\phi\ra $ be a
 From this theorem there follows a number of interisting corrolaies:
 
 \begin{cor}
-	\GL\ is decidable.
+	\GL\ is decidable.\textbf{Definer lige hvad dette betyder}
 \end{cor}
 \begin{cor}
+	\label{cor:Nec}
 	For all formulas $\alpha$ we have:
 	\[\vdash_\GL\alpha\Leftrightarrow\vdash_\GL\Box\alpha\]
 \end{cor}
@@ -447,7 +491,28 @@ We can reduce theorem \ref{thm:MainGLS} to the following:
 	$\GL+\bigwedge_{\Box\beta\in S_\Box(\alpha)}(\Box\beta\rightarrow\beta)=\GL^s$ and hence:
 	$$\vdash_\GLS\alpha\Leftrightarrow\vdash_{\GL^s}\alpha$$
 \end{proof}
+From theorem \ref{thm:lll} we get the following corollary:
+\begin{cor}
+	Let $\alpha$ be a modal formula. Then:
+	\[\vdash_\GL\alpha \Leftrightarrow\ \vdash_\GLS\Box\alpha\]
+\end{cor}
+\begin{proof}
+	"$\textbf{"\Rightarrow":}$ We have that
+	\begin{align*}
+		\vdash_\GL\alpha &\Rightarrow\vdash_\GL\Box\alpha, \ \text{By
+		closure under nec}\\
+				 &\Rightarrow \vdash_\GLS\Box\alpha 
+	\end{align*}
 
+	"$\textbf{"\Leftarrow":}$ We see that we have
+	\begin{align*}
+		\vdash_\GLS\Box\alpha\ &\Rightarrow\ \Box\alpha\ \text{is true
+		in all}\ \Box\alpha\text{-sound model of}\ \GL\\
+				       &\Rightarrow\ \vdash_\GL\Box\alpha\\
+				       &\Rightarrow\ \vdash_\GL\alpha
+	\end{align*}
+	Where the last deduction follows form corollary \ref{cor:Nec}.
+\end{proof}
 For the proof of \ref{thm:lll} we will make use of the following usefull
 construction:
 
@@ -466,6 +531,7 @@ $\mathcal{K}^{(n+1)}=(\mathcal{K}^{(n)})'$ and let $w_n$ denote the minimum of
 $\mathcal{K}^{(n)}$. This can graphically been seen by adding a tail of $n$
 nodes below $w_0$, as seen in the following graphs:
 
+%\newpage
 
 \begin{figure}[h]
 	\begin{center}
@@ -473,8 +539,8 @@ nodes below $w_0$, as seen in the following graphs:
 	\node[shape=circle,draw=black] (w) at (0,0) {$w_0$};
 	\node[shape=circle,draw=black] (v) at (2,2) {$v$};
 	\node[shape=circle,draw=black] (v') at (-2,2) {$v'$};
-	\path [->] (w) edge node[left] {} (v);
-	\path [->] (w) edge node[left] {} (v');
+	\path [-] (w) edge node[left] {} (v);
+	\path [-] (w) edge node[left] {} (v');
 \end{tikzpicture}
 \qquad
 \qquad
@@ -569,17 +635,21 @@ We can now return to our proof of the main theorem of this section by proving
 	$\vDash_{w_n}\Box\gamma\rightarrow\gamma$ for al $n>m$. This shows (1).
 	We will now prove (2).
 
-	\textbf{Kom tilbage til dette senere}
 	The way "$\Rightarrow$" is trivial since if $\vdash_\GL\alpha$ then
 	$\alpha$ is valid in all models of $\GL$\ and hence in all
 	$\alpha$-sound models of \GL.
 	
-	For the implication $\Leftarrow$ assume that there is a $\alpha$-sound model
-	$\mathcal{K}$ of \GL such that $\not\vDash^\mathcal{K}\alpha$, then it
-	is clear that $\not\vdash_\GL\alpha$ and the result follows by
-	contrapostion.
+	For the implication $\Leftarrow$, we will assume that $\alpha$ is valid
+	in all $\alpha$-sound models.  Again set $\GL^s$ to be
+	$\GL+\bigwedge_{\Box\beta\in S_\Box}(\Box\beta\rightarrow\beta)$. Then
+	we have that show that:
+	\[\vdash_{\GL^s}\alpha\Rightarrow\ \vdash_\GL\alpha\]
+	We show this by contraposition. So assume that $\vdash_\GL\neg\alpha$.
+	We get $\GL^s$ be adding a finite amount of formulae to $\GL$\ and thus
+	we have that $\vdash_{\GL^s}\neg\alpha$.
 \end{proof}
-In the chapter \ref{chap:Complete} it will be shown that \GL axiomatise the
-provable schemata in \PRA and \GLS will axiomatise the \textit{true} schemata
-of arithmetics.
+In the chapter \ref{chap:Complete} it will be shown that \GL\ axiomatise the
+provable schemata in \PRA\ and \GLS\ will axiomatise the \textit{true} schemata
+of arithmetics; i.e truth in the standard model $\mathcal{N}=\la
+\omega,+,\cdots\ra$ of arithmetics.
 \end{document}
