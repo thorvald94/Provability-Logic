@@ -2,14 +2,16 @@
 \documentclass[../main.tex]{subfiles}
 
 \begin{document}
+In this chapter we will enrich the language $\mathcal{L}_\Box$ with both more
+modal operators and quantifiers. For these language a number of different
+results can be proven. This chapter will skip the most of the proofs of these
+results, but the proofs can be found in \cite{Boolos1993}.
 \section{Multi-modal provability logic}
-\textbf{Evt. bare forklar kort hvad de vigtige definitioner og resultater er i
-dette kapitel}
 
 We can extend our language $\mathcal{L}_\Box$ with more modality operators. We
 will start of by extending it with the modal operator:
 $\OneBox$ and its dual $\OneDiamond$. In the next subsection it will be
-explained what we will mean with the $\OneBox$. Latter on we will extend the language
+explained what we will mean with the $\OneBox$\ . Latter on we will extend the language
 with even more modal operators.
 \subsection{The system \GLB}
 
@@ -22,7 +24,7 @@ $\omega$-consistent iff it is not $\omega$-inconsistent.
 We have that
 if \textbf{T} is $\omega$-consistent then $\textbf{T}\not\vdash\exists x x\not
 =x$ and thus \textbf{T} is consistent. So $\omega$-consistency implies
-consistency; but the converse does not hold. \textbf{Hvis at det ikke holde}. 
+consistency; but the converse does not hold. 
 
 \begin{defi}
 	A sentence $\alpha$ is $\omega$-inconsistent in \textbf{T} if the
@@ -58,13 +60,11 @@ We now define the system of \GLB. We will later on discuss the semantics of
 		\item[A4] $\OneBox(\OneBox\alpha\rightarrow\alpha)\OneBox\alpha$
 		\item[A5] $\Box\alpha\rightarrow\OneBox\alpha$
 		\item[A6] $\neg\Box\alpha\rightarrow\OneBox\neg\Box\alpha$
-		\item[R1] Modus ponens
-		\item[R2] $\Box$  -necessitation; from $\alpha$ infer
+		\item[MP] Modus ponens
+		\item[Nec] $\Box$  -necessitation; from $\alpha$ infer
 			$\Box\alpha$.
 	\end{enumerate}
 \end{defi}
-\textbf{Kommenter på disse regler}
-
 It is clear that $\OneBox$ -necessitation is a rule of \GLB, since we have that
 if $\GLB\vdash\alpha$ then $\GLB\vdash\Box$ and by A5 we then have
 $\GLB\vdash\OneBox\alpha$.
@@ -73,23 +73,185 @@ The next goal is to prove an arithmetical soundness theorem for \GLB. For this
 end we need the following definition:
 
 \begin{defi}
-	We call the following rule for the  $\omega$-rule: Infer $\forall
+	We call the following rule for the  $\omega$\textit{-rule}: Infer $\forall
 	x\alpha(x)$ for all $\alpha(\ol n)$, where $n\in\omega$. A sentence is
 	provable under the $\omega$-rule in \textbf{T} if it belongs to all
-	classes containing the axioms of \textbf{T} and closed under R1, R2 and
+	classes containing the axioms of \textbf{T} and closed under MP, Nec and
 	the $\omega$-rule.
+	We further say that a sentence $F$ is provable in \PRA\ by \textit{one
+	application of the} $\omega$\textit{-rule} if for some formula $G(x)$
+	we have that $\PRA\vdash G(\ol n)$ for all $n$ and $\PRA\vdash \forall
+	x G(x)\rightarrow F$.
+\end{defi}
+It can be shown that  a sentence $F$ is $\omega$-provable if and only if it is provable
+by one application of the $\omega$-rule. With this we can define the notion of
+an $\omega$-proof.
+
+\begin{defi}
+	A sentence $\forall x G(x)\rightarrow F$ is called an
+	$\omega$\textit{-proof} prof of $F$ if $\PRA\vdash G(\ol n)$ for all
+	$n$ and $\PRA\vdash\forall x G(x)\rightarrow S$.
+\end{defi}
+It is clear that if $F$ has an $\omega$-proof then it $\omega$-provable.
+
+We will state one last definition in the same vein as the others above:
+
+\begin{defi}
+	$\PRA^+$ is the theory extending \PRA\ with all sentences $\forall x
+	G(x)$ such that for every $n\in \omega$ we have that $\PRA\vdash G(\ol
+	n)$.
 \end{defi}
 
-\subsection{The problem with \GLB\ and its semantics}
+The following theorem can then be proven about the relationships between the
+above definitions:
+
+\begin{thm}
+	\label{thm:omega}
+	The following are equivalent:
+	\begin{enumerate}
+		\item $F$ is $\omega$-provable.
+		\item $\PRA^+\vdash F$.
+		\item $F$ is provable by one application of the $\omega$-rule.
+		\item There is an $\omega$-proof of $F$.
+	\end{enumerate}
+\end{thm}
+
+We need a few more definitions before we can state the arithmetical soundness theorem for
+\GLB:
+\begin{defi}
+	Let $\omega\text{Prov}(y,x)$ be the formula of \PRA\ the formalizes
+	that $y$ is the code of  an $\omega$-proof of $x$, and let
+	$\omega\text{Pr}(x)=\exists y\omega\text{Prov}(y,x)$
+\end{defi}
+We then have that $\omega\text{Pr}(x)$ by theorem \ref{thm:omega} is provable
+coextensive with the formulas stating in \PRA\ the following properties:
+"$\omega$-provable", "provable in $\PRA^+$ and "provable by one application of
+the $\omega$-rule". This means that for each sentence $F$ in \PRA\ that we
+have:
+\[\PRA\vdash\text{Pr}(\Godelnum{F})\rightarrow\omega\text{Pr}(\Godelnum{F})\]
+With these results we can now extend the interpretation of $\mathcal{L}_{\Box}$
+in \PRA\ to one of $\mathcal{L}_{\OneBox}$:
+\begin{defi}
+	An interpretation $^*$ of $\mathcal{L}_{\OneBox}$ in \PRA\ is an
+	extension of an
+	interpretation $\mathcal{L}_\Box$ in \PRA\ where we add the following:
+	\[\OneBox(\alpha)^*=\omega\text{Pr}(\Godelnum{\alpha^*})\]
+\end{defi}
+We can now state the arithmetical soundness theorem for \GLB:
+\begin{thm}[The aritmetical soundness theorem for \GLB]
+	For any modal formula $\alpha$ and interpretation of
+	$\mathcal{L}_{\OneBox}$ in \PRA\ we have that:
+	\[\vdash_\GLB\alpha\rightarrow\ \PRA\vdash\alpha^*\]
+\end{thm}
+We omit the proof here. We can not prove the arithmetical completeness theorem
+for \GLB\ without the help of another multi modal logic.
+
+This is because there is no good Kripke semantics for the logic \GLB. We will
+start of by defining a Kripke modal for the logic \GLB; this definitions is a
+extension of a "normal" frame, but with two relations instead of one
+
+\begin{defi}
+	A  frame for a modal logic with two modal operators is a triple
+	$\mathcal{H}=\la W,R,R_1\ra$ where both $R$ and $R_1$ are relations on
+	$W$. A model is a quadruple $\mathcal{K}=\la W, R,R_1,\phi\ra$ were
+	$\phi$ is a valuation function on $W$. The truth of modal formula
+	$\alpha$ in a given node $w\in W$ is defined in the obvious way, and
+	the two main clauses of the definition is:
+	\begin{enumerate}
+		\item $\vdash_w^\mathcal{K}\Box\alpha$ iff for all $v\in W$ such
+			that $wRv$ we have $\vdash_v^\mathcal{K}\alpha$
+		\item $\vdash_w^\mathcal{K}\OneBox\alpha$ iff for all $v\in W$ such
+			that $wR_1v$ we have $\vdash_v^\mathcal{K}\alpha$
+	\end{enumerate}
+\end{defi}
+The problem here for is that no matter what the relation $R_1$ will be the
+empty relation $W$ and therefor $\OneBox\bot$ will be valid and thus contradict
+that $\vdash_\GLB\OneBox\bot$ from the arithmetical  soundness of \GLB. Giorgie
+Dzhaparidze found a way around this by looking at another multi modal logic,
+which will be introduced in the next section. His result was improved  by
+Konstantin Ignatiev .
 
 \subsection{The system \textbf{IDzh} and completeness of \GLB}
+
+Since \GLB\ does not have any good Kripke semantic we will at a multi modal logic that
+has such a semantic; we will call this modal logic for \textbf{IDzh} Ignatiev
+and Dzhaparidze.
+
+\begin{defi}
+	The language of \textbf{IDzh} is the same as \GLB. Further the axioms
+	of \IDzh\ are all tautologies and the following modal formulas:
+	\begin{enumerate}
+		\item[A1]
+			$\Box(\alpha\rightarrow\beta)\rightarrow(\Box\alpha\rightarrow\Box\beta)$
+		\item[A2]
+			$\OneBox(\alpha\rightarrow\beta)\rightarrow(\OneBox\alpha\rightarrow\OneBox\beta)$
+		\item[A3] $\Box(\Box\alpha\rightarrow\alpha)\rightarrow\Box\alpha$
+		\item[A4] $\OneBox(\OneBox\alpha\rightarrow\alpha)\rightarrow\OneBox\alpha$
+		\item[A5] $\Box\alpha\rightarrow\OneBox\Box\alpha$
+		\item[A6] $\neg\alpha\rightarrow\OneBox\neg\Box\alpha$.
+		\item[MP] Modus pones 
+		\item[Nec] $\Box$-necessitation
+		\item[Nec$_1$] $\OneBox$-necessitation
+	\end{enumerate}
+	Here we add the inference Nec$_1$ since this rule can not be proven
+	from the other rules and axioms in this modal logic.
+\end{defi}
+The modal logic \IDzh\ can be shown to be weaker than \GLB\ and thus
+$\IDzh\subseteq\GLB$.
+
+The multi modal logic \IDzh\ has the following Kripke semantic for which a soundness and
+completeness theorem can be proven.
+\begin{defi}
+	An \IDzh-model is a quadruple $\mathcal{K}=\la W,R,R_1,\phi\ra$, where
+	$W$ is a finite non-empty set, $\phi$ is a valuation function $W$, and
+	$R$ and $R_1$ are transitive irreflexive relation on $W$ such that for
+	all $w,v_1,v_2\in W$ we have that:
+	\[\text{If}\ wR_1v_1\ \text{then}\ wRv_2\ \text{if and only if}\
+	v_1Rv_2\]
+\end{defi}
+This means that we can not have that $wRv$ and $wR_1v$ since then $vRv$;
+contradicting the irreflexivity $R$
+
+For such models the following theorem can be proven:
+\begin{thm}
+	$\alpha$ is valid in all \IDzh-models if and only if
+	$\vdash_\IDzh\alpha$.
+\end{thm}
+This theorem shows that \IDzh\ has a natural Kripke semantic to which it is
+sound and complete.
+
+We will need the following definitions to state the theorem from which the
+arithmetical completeness theorem for \GLB\ follows:
+\begin{defi}
+	For any modal formula $\alpha$ we define $\Delta\alpha$ as the formula:
+	\[\alpha\wedge\Box\alpha\wedge\OneBox\alpha\wedge\Box\OneBox\alpha\]
+	We define the formula $\Psi\alpha$ as:
+	\[\bigwedge_{\Box\beta\in
+	S(\alpha)}\Delta(\Box\beta\rightarrow\OneBox\beta)\]
+\end{defi}
+It is clear that $\vdash_\GLB\Psi\alpha$
+To show completeness of \GLB\ the following three statements should be proven to
+be equivalent:
+\begin{enumerate}
+	\item $\vdash_{\textbf{IDzh}}\Psi\alpha\rightarrow\alpha$
+	\item $\vdash_\GLB\alpha$
+	\item $\PRA\vdash\alpha^*$ for all $^*$
+\end{enumerate}
+We have that $(1)\Rightarrow (2)$ since $\IDzh\subset\GLB$ and the fact that
+$\vdash_\GLB\Psi\alpha$. That $(2)\Leftrightarrow(3)$ is just the arithmetical
+soundness theorem for \GLB. The proof of $(3)\Rightarrow(1)$ will obviously
+prove the arithmetical completeness theorem for \GLB.
+The proof of this can be found in \cite{Boolos1993} and is beyond the scope of
+this project.
 
 \subsection{The system \textbf{GLP}}
 We will end this section by introducing the system \textbf{GLP}
 The language $\mathcal{L}_{[n]}$ of \textbf{GLP} is an extension of
 $\mathcal{L}_\Box$, where instead of $\Box$ we write $[0]$ and we furhter add
 a countable infinite amount of boxes:
-$[1],[2],\ldots$ representing provability in $\PA^+$, $\PA^{++}$ and so on. We
+$[1],[2],\ldots$ representing provability in $\PRA^+$, $\PRA^{++}$ and so on,
+where $\PRA^{++}$ is  $\PRA^+$ with all formulas of the form $\forall x G(x)$
+such that for every $n\in\omega$ such that $\PRA^+\vdash G(\ol n)$ added. We
 define their duals $\la 0\ra,\la 1\ra, \la 2\ra,\ldots$ in the obvious way and
 these represent consistency, $\omega$-consistency,
 $\omega$-$\omega$-consistency and so on. We can now define the system
@@ -102,10 +264,14 @@ $\omega$-$\omega$-consistency and so on. We can now define the system
 		\item[A2] $[n]([n]\alpha\rightarrow\alpha)\rightarrow[n]\alpha$
 		\item[A3] $[n]\alpha\rightarrow[n+1]\alpha$
 		\item[A4] $\neg[n]\alpha\rightarrow[n+1]\neg[n]\alpha$
-		\item[R1] Modus Ponens
-		\item[R2] $[0]$-necessiation
+		\item[MP] Modus Ponens
+		\item[Nec$_0$] $[0]$-necessiation
 	\end{enumerate}
 \end{defi}
+
+Following Dzhaparidze the arithmetical completeness theorem can be proven for
+this system of multi modal logic. The proof follows that of the proof of the
+arithmetical completeness theorem for \GLB.
 
 \section{Quantifed provability logic}
 There is another way to extend the logic \GL; we can add quantifiers to the
