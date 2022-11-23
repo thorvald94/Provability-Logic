@@ -291,8 +291,8 @@ proven. This section applies to all Kripke model, and thus is not only about
 
 We will first need to definitions:
 \begin{defi}
-	We define $d(\alpha$ in the following way: $d(p)=d(\bot)=0$,
-	$d(\alpha\rightarrow\beta)=\text{max}(d(alpha),d(\beta))$ and
+	We define $d(\alpha)$ in the following way: $d(p)=d(\bot)=0$,
+	$d(\alpha\rightarrow\beta)=\text{max}(d(\alpha),d(\beta))$ and
 	$d(\Box(\alpha)=d(\alpha)+1$. So $d(\alpha)$ is the maximal number of
 	nested occurences of $\Box$ in $\alpha$. We call $d(\alpha)$ the modal
 	degree of $\alpha$.
@@ -305,6 +305,7 @@ We will first need to definitions:
 	and only if $\exists v_0,\ldots v_n(w=v_0R\ldots Rv_n=v)$.
 \end{defi}
 \begin{thm}[The Continuity Theorem]
+	\label{thm:conti}
 	Let $\mathcal{K}=\la W,R,\phi\ra$ and $\mathcal{K}'=\la V,S,\phi'\ra$
 	be models and let $w\in W$. Let $P\subseteq \Phi$ be a set of proportional letters.
 	Suppose that $d(\alpha)=n$, that all proportional letters that occur in 
@@ -377,9 +378,9 @@ We will further define the following set for any set $\Gamma$:
 This set allows us to avoid Nec by the axioms of \textbf{K4}, which the
 following lemma shows:
 \begin{lem}
-	Let $\Gamma$ include all the instanceses of $A1-A3$. THen:
+	Let $\Gamma$ include all the instances  of axioms of \textbf{K4}. Then:
 	\[
-		\Gamma\vdash_{\textbf{Nec}}\alpha\Leftrightarrow\Gamma^{\textbf{Nec}}\vdash\alpha
+		\Gamma\vdash_{\textbf{Nec}}\alpha\Leftrightarrow\Gamma^{\textbf{Nec}}\vdash_{\textbf{MP}}\alpha
 	\]
 \end{lem}
 \begin{proof}
@@ -387,9 +388,9 @@ following lemma shows:
 	To prove this, it is enough to show that the set of theorems of
 	$\Gamma^{\textbf{Nec}}$ is closed under $R2$; i.e to show that:
 
-	$$\Gamma^{\textbf{Nec}}\vdash\alpha\Rightarrow\Gamma^{\textbf{Nec}}\vdash\Box\alpha$$
+\[\Gamma^{\textbf{Nec}}\vdash\alpha\Rightarrow\Gamma^{\textbf{Nec}}\vdash_{\textbf{MP}}\Box\alpha\]
 
-	Let $\Gamma^{\textbf{Nec}}\vdash\alpha$. Then we have a sequence
+Let $\Gamma^{\textbf{Nec}}\vdash_{\textbf{MP}}\alpha$. Then we have a sequence
 	$\alpha_1,\ldots,\alpha_n=\alpha$, where for each $1\leq i\leq n$ we
 	have that $\alpha_i$ is one of the following three:
 	\begin{enumerate}
@@ -401,31 +402,32 @@ following lemma shows:
 			where $j,k<i$.
 	\end{enumerate}
 	We will show  by induction on the length $i$ of a 'initial' segment
-	$\alpha_1,\ldots,\alpha_i$ that $\Gamma^{\textbf{Nec}}\vdash \Box\alpha_i$. 
+	$\alpha_1,\ldots,\alpha_i$ that
+	$\Gamma^{\textbf{Nec}}\vdash_{\textbf{MP}}\Box\alpha_i$. 
 	\begin{enumerate}
 		\item If we have that $\alpha_i\in\Gamma$. Then by definition
 			we have that $\Box\alpha_i\in\Gamma^{\textbf{Nec}}$ and thus
-			$\Gamma^{\textbf{Nec}}\vdash\Box\alpha_i$.
+			$\Gamma^{\textbf{Nec}}\vdash_{\textbf{MP}}\Box\alpha_i$.
 		\item If $\alpha_i=\Box\beta_i$ for some $\beta_i\in\Gamma$,
 			then we can make the following deduction:
 			\begin{align*}
-				\Gamma^{\textbf{Nec}}&\vdash\Box\beta_i &\text{Since}\
+				\Gamma^{\textbf{Nec}}&\vdash_{\textbf{MP}}\Box\beta_i &\text{Since}\
 				\Box\beta_i\in\Gamma^{\textbf{Nec}}\\
-					&\vdash\Box\beta_i\rightarrow\Box\Box\beta_i
+						     &\vdash_{\textbf{NP}}\Box\beta_i\rightarrow\Box\Box\beta_i
 					&\text{By}\ \textbf{4}\\
-					&\vdash\Box\Box\beta_i\ (=\Box\alpha_i) 
+					&\vdash_{\textbf{MP}}\Box\Box\beta_i\ (=\Box\alpha_i) 
 					&\text{By}\ \textbf{MP}
 			\end{align*}
 			Which shows the result.
 		\item If $\alpha_i$ follows form
 			$\alpha_j,\alpha_k=\alpha_j\rightarrow\alpha_i$ by
 			\textbf{MP} we have by the induction hypothesis that
-			$\Gamma^{\textbf{Nec}}\vdash\Box\alpha_j$ and
-			$\Gamma^{\textbf{Nec}}\vdash\Box(\alpha_j\rightarrow\alpha_i)$. By
+			$\Gamma^{\textbf{Nec}}\vdash_{\textbf{MP}}\Box\alpha_j$ and
+			$\Gamma^{\textbf{Nec}}\vdash_{\textbf{MP}}\Box(\alpha_j\rightarrow\alpha_i)$. By
 			\textbf{K} we also have that
-			$\Gamma^2\vdash\Box\alpha_j\wedge\Box(\alpha_j\rightarrow\alpha_i)\rightarrow\Box\alpha_i$
+			$\Gamma^2\vdash_{\textbf{MP}}\Box\alpha_j\wedge\Box(\alpha_j\rightarrow\alpha_i)\rightarrow\Box\alpha_i$
 			and by propositional logic we get that:
-			$\Gamma^2\vdash\Box\alpha_i$.
+			$\Gamma^2\vdash_{\textbf{MP}}\Box\alpha_i$.
 	\end{enumerate}
 	This ends the induction and the lemma will follow.
 \end{proof}
