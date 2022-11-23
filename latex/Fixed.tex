@@ -116,6 +116,7 @@ $\alpha$ is $n$-decomposable for some $n$.
 
 We can now state the fixed point theorem.
 \begin{thm}
+	\label{thm:Fixed}
 	If $\alpha$ is modalized in $p$, then there exists a formula $\sigma$
 	in which the only sentence letters that occurs are these other than $p$
 	that occur in $\alpha$, and such that:
@@ -306,7 +307,19 @@ fixed-point is appropriate:
 	we get:
 	\[\vdash_\GL\sigma\leftrightarrow\alpha(\sigma)\]
 \end{proof}
-With this theorem a lot of different fixed points can be calculated. The
+We can also state  (by theorem \ref{thm:exi} and \ref{thm:Fixed})the fixed
+point theorem in the following form:
+
+\begin{cor}
+	\label{cor:Fixed}
+	For every modal formula $\alpha$ modalized in $p$, there is a modal formula
+	$\sigma$ only contaning propostional letters contained in $\alpha$ not
+	contaning $p$ such that:
+	\[\vdash_\GL\sBox(p\leftrightarrow\alpha)\leftrightarrow\sBox(p\leftrightarrow\sigma)\]
+\end{cor}
+
+
+With the fixed theorem a lot of different fixed points can be calculated. The
 formula on the left is the formula $\alpha(p)$ and the formula on the right is
 the formula $\sigma$.
 \begin{align*}
@@ -340,5 +353,5 @@ the formula $\sigma$.
 \vspace*{\baselineskip}\endgroup
 
 We will after the proof of Solovay's Completeness Theorems come back to this
-table, and make some conclutions about the fixed points.
+table, and make some conclusions about the fixed points.
 \end{document}

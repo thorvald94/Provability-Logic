@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.10.0 (TeX Live 2019/Debian)  (format=lualatex 2022.10.24)  22 NOV 2022 15:03
+This is LuaTeX, Version 1.10.0 (TeX Live 2019/Debian)  (format=lualatex 2022.10.24)  23 NOV 2022 10:45
  restricted system commands enabled.
  file:line:error style messages enabled.
 **thesis.tex
@@ -1416,12 +1416,12 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 217.
 )
 
 Here is how much of LuaTeX's memory you used:
- 41385 strings out of 481365
+ 41389 strings out of 481365
  100000,1977958 words of node,token memory allocated
- 1708 words of node memory still in use:
-   8 hlist, 2 vlist, 2 rule, 2 math, 6 glue, 4 kern, 2 glyph, 343 attribute, 81 glue_spec, 172 attribute_list, 3 write nodes
-   avail lists: 1:4,2:4584,3:783,4:28,5:407,6:113,7:3626,8:80,9:816,10:16,11:227
- 56604 multiletter control sequences out of 65536+600000
+ 1714 words of node memory still in use:
+   8 hlist, 2 vlist, 2 rule, 2 math, 6 glue, 4 kern, 2 glyph, 345 attribute, 81 glue_spec, 173 attribute_list, 3 write nodes
+   avail lists: 1:4,2:4581,3:783,4:28,5:402,6:113,7:3626,8:80,9:705,10:16,11:227
+ 56606 multiletter control sequences out of 65536+600000
  101 fonts using 9711379 bytes
  64i,21n,89p,10120b,1418s stack positions out of 5000i,500n,10000p,200000b,100000s
 
@@ -1433,10 +1433,10 @@ warning  (pdf backend): unreferenced destination with name 'Hfootnote.2'
 
 warning  (pdf backend): unreferenced destination with name 'Hfootnote.1'
 </usr/share/texmf/fonts/opentype/public/lm/lmsans10-boldoblique.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman8-bold.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman10-bold.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman7-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman8-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmmono10-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman10-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman12-italic.otf></usr/share/texmf/fonts/opentype/public/lm/lmsans10-bold.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman12-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman12-bold.otf></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb>
-Output written on thesis.pdf (87 pages, 548690 bytes).
+Output written on thesis.pdf (87 pages, 550658 bytes).
 
-PDF statistics: 1324 PDF objects out of 1440 (max. 8388607)
- 1159 compressed objects within 12 object streams
- 520 named destinations out of 1000 (max. 131072)
+PDF statistics: 1328 PDF objects out of 1440 (max. 8388607)
+ 1163 compressed objects within 12 object streams
+ 522 named destinations out of 1000 (max. 131072)
  448 words of extra memory for PDF output out of 10000 (max. 100000000)
 
