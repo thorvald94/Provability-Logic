@@ -1079,40 +1079,6 @@
       \field{year}{1963}
       \true{nocite}
     \endentry
-    \entry{Laka1976}{book}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=67394518e7d074783c9d162210b2db78}{%
-           family={Lakatos},
-           familyi={L\bibinitperiod},
-           given={Imre.},
-           giveni={I\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{language}{1}{%
-        {eng}%
-      }
-      \list{location}{1}{%
-        {Cambridge}%
-      }
-      \list{publisher}{1}{%
-        {Cambridge University Press}%
-      }
-      \strng{namehash}{67394518e7d074783c9d162210b2db78}
-      \strng{fullhash}{67394518e7d074783c9d162210b2db78}
-      \strng{bibnamehash}{67394518e7d074783c9d162210b2db78}
-      \strng{authorbibnamehash}{67394518e7d074783c9d162210b2db78}
-      \strng{authornamehash}{67394518e7d074783c9d162210b2db78}
-      \strng{authorfullhash}{67394518e7d074783c9d162210b2db78}
-      \field{sortinit}{L}
-      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Proofs and refutations.}
-      \field{year}{1976}
-      \true{nocite}
-    \endentry
     \entry{Lemmon1977}{book}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=0424632afeaf4ebaf5a825126ab10806}{%
@@ -1194,7 +1160,6 @@
       \field{title}{Provability logic-a short introduction}
       \field{volume}{62}
       \field{year}{1996}
-      \true{nocite}
       \field{pages}{19\bibrangedash 61}
       \range{pages}{43}
       \keyw{Philosophical logics. Philosophy of language ; Philosophy}
@@ -1233,7 +1198,6 @@
       \field{isbn}{9783540632139}
       \field{title}{Aspects of Incompleteness}
       \field{year}{1997}
-      \true{nocite}
     \endentry
     \entry{Liu}{misc}{}
       \name{author}{1}{}{%

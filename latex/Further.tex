@@ -16,7 +16,7 @@ with even more modal operators.
 \subsection{The system \GLB}
 
 \begin{defi}
-We will say that a theory \textbf{T} is $\omega$-inconsitsent iff for some
+We will say that a theory \textbf{T} is $\omega$-inconsistent iff for some
 formula $\alpha(x)$, $\textbf{T}\vdash\exists x\alpha(x)$ and for every
 $n\in\omega$ we have: $\textbf{T}\vdash\neg\alpha(x)$. \textbf{T} is called
 $\omega$-consistent iff it is not $\omega$-inconsistent.
@@ -40,7 +40,7 @@ $\textbf{GLB}$, where \textbf{B} stands for bimodal, where we add two new modal
 operators: $\OneBox$ and $\OneDiamond$ to our modal language
 $\mathcal{L}_\Box$. We will call this new language for $\mathcal{L}_{\oneBox}$
 \begin{defi}
-	The langauge $\mathcal{L}_{\oneBox}$ is the language $\mathcal{L}_\Box$
+	The language $\mathcal{L}_{\oneBox}$ is the language $\mathcal{L}_\Box$
 	extend with the modal operator $\OneBox$, where the syntax $\OneBox$ is
 	the same as that of $\Box$. The operator $\OneDiamond$ is defined as
 	the dual of $\OneBox$.
@@ -244,6 +244,12 @@ prove the arithmetical completeness theorem for \GLB.
 The proof of this can be found in \cite{Boolos1993} and is beyond the scope of
 this project.
 
+We can also look at the multi modal logic \textbf{GLSB} which is the modal logic that have all
+the theorems of \GLB  and all formulas:
+$\OneBox\alpha\rightarrow\alpha$ as axioms, and which only have modus ponens as
+its rule of inference. A variant of Solovay's second completeness theorem can
+be shown for this multi modal logic.
+
 \subsection{The system \textbf{GLP}}
 We will end this section by introducing the system \textbf{GLP}
 The language $\mathcal{L}_{[n]}$ of \textbf{GLP} is an extension of
@@ -273,6 +279,14 @@ Following Dzhaparidze the arithmetical completeness theorem can be proven for
 this system of multi modal logic. The proof follows that of the proof of the
 arithmetical completeness theorem for \GLB.
 
+Again we can look at the multi modal logic \textbf{GLSP} which is has all
+theorems and sentences $[n]\alpha\rightarrow\alpha$ as its axioms and which
+only have modus ponens as it inference rule. Again a variant of Solovay's
+second completeness theorem holds for this logic.
+
+So Solovay's completeness theorems generalizes nicely to multi modal logics;
+i.e the concept of $\omega$-provability (and beyond) can also be axiomatized.
+
 \section{Quantifed provability logic}
 There is another way to extend the logic \GL; we can add quantifiers to the
 language. We will call this logic for quantified modal logic (QML). The first
@@ -287,5 +301,7 @@ goal is to define what a formula is:
 	There is not a version of Solovay's completeness theorems for this
 	logic; i.e it is not arithmetically complete with respect to any
 	fragment of arithmetics. Furthermore this logic  do not have the fixed point property and
-	is not complete with respect to any class of Hintikka frames. Further information on this topic can be found i \cite{Boolos1993}
+	is not complete with respect to any class of Hintikka frames. Further
+	information on this topic and proofs of these statements can be found
+	in \cite{Boolos1993}.
 \end{document}

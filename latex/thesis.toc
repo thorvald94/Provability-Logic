@@ -72,7 +72,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {5.3.1}Avoiding Nec}{49}{subsection.5.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.3.2}Definition of \textbf {GLS}}{50}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.2}Definition of \textbf {GLS}}{51}{subsection.5.3.2}%
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {6}Fixed Point Theorem}{55}{chapter.6}%
 \defcounter {refsection}{0}\relax 
@@ -88,9 +88,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {7.4}Generalisations of the Completeness Theorems}{74}{section.7.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.5}Solovays Completeness Theorems and Fixed Points}{74}{section.7.5}%
+\contentsline {section}{\numberline {7.5}Solovays Completeness Theorems and Fixed Points}{75}{section.7.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.6}Implications of Solovays Theorems}{75}{section.7.6}%
+\contentsline {section}{\numberline {7.6}Implications of Solovays Theorems}{76}{section.7.6}%
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {8}Further Results in Provability Logic}{77}{chapter.8}%
 \defcounter {refsection}{0}\relax 
@@ -102,6 +102,6 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {8.1.3}The system \textbf {GLP}}{82}{subsection.8.1.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.2}Quantifed provability logic}{82}{section.8.2}%
+\contentsline {section}{\numberline {8.2}Quantifed provability logic}{83}{section.8.2}%
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {9}Bibliography}{85}{chapter.9}%

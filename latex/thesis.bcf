@@ -2194,11 +2194,14 @@
     <bcf:citekey order="9">Soare1987</bcf:citekey>
     <bcf:citekey order="10">Kleene1952</bcf:citekey>
     <bcf:citekey order="11">Smor1985</bcf:citekey>
-    <bcf:citekey order="12">Boolos1993</bcf:citekey>
-    <bcf:citekey order="13">Olson1990</bcf:citekey>
-    <bcf:citekey order="14">Boolos1993</bcf:citekey>
-    <bcf:citekey order="15">Boolos1993</bcf:citekey>
-    <bcf:citekey order="16">Boolos1993</bcf:citekey>
+    <bcf:citekey order="12">Lind1997</bcf:citekey>
+    <bcf:citekey order="13">Boolos1993</bcf:citekey>
+    <bcf:citekey order="14">Lind1996</bcf:citekey>
+    <bcf:citekey order="15">Olson1990</bcf:citekey>
+    <bcf:citekey order="16">Smor1985</bcf:citekey>
+    <bcf:citekey order="17">Boolos1993</bcf:citekey>
+    <bcf:citekey order="18">Boolos1993</bcf:citekey>
+    <bcf:citekey order="19">Boolos1993</bcf:citekey>
     <bcf:citekey order="0" nocite="1">*</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->

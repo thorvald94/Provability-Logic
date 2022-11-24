@@ -548,19 +548,20 @@ theorem, but we will look at the modal logic \GLS\ instead of the modal logic
 		\item $\textbf{GLS}\vdash\alpha$
 		\item $\GL\vdash\displaystyle\bigwedge_{\Box \beta\in
 			S(\alpha)}(\Box\beta\rightarrow\beta)\rightarrow\alpha$
-		\item $\alpha$ is true in all $\alpha$-sound Kripke models
+		\item $\alpha$ is true in all $\alpha$-reflexive FT Kripke models
 		\item $\forall^*(\alpha^*\ \text{is true})$
 	\end{enumerate}
 \end{thm}
 Some parts of this theorem has already been proven. We have
-$(1)\Leftrightarrow(2)$ by theorem [asd?] and we have $(2)\Leftrightarrow(3)$
-by theorem [asd?]. \textbf{Udbyd dette senere}
+$(1)\Leftrightarrow(2)\Leftrightarrow(3)$ by theorem \ref{thm:MainGLS}. The
+implication $(1)\Rightarrow(4)$ is clear, so we just have to prove
+$(4)\Rightarrow(3)$
 
 For proving $(4)\Rightarrow(3)$ we will again make use of contraposition. Let
 $\mathcal{K}=\la(1,\ldots,n),R,\phi)\ra$ be given and let $1$ be the root.
 Further let $\alpha$ be such that $1\not\in\phi(\alpha))$.
 We
-will assume that $\mathcal{K}$ is $\alpha$-sound. This means that we have:
+will assume that $\mathcal{K}$ is $\alpha$-reflexive. This means that we have:
 $1\in\phi(\Box\beta\rightarrow\beta)$ for all $\beta\in S(\alpha)$
 
 We will set $0Rw$ for all $w\in W$. We will now create a new model
@@ -683,15 +684,49 @@ We thus have that $L=\ol 0$ is true, and we  can now finally prove the second co
 We can use the second completeness theorem to prove the following theorem named
 after Rosser:
 \begin{thm}
-	There is a $\Sigma_1$-sentences $\varphi$ such that:
+	There is a arithmetical sentences $F$ such that:
 	\begin{enumerate}
-		\item $\PRA\not\vdash\varphi$
-		\item $\PRA\not\vdash\not\varphi$
-		\item $\PRA\vdash \Con\rightarrow\neg \Pr(\Godelnum{\varphi})$
+		\item $\PRA\not\vdash F$
+		\item $\PRA\not\vdash\neg F$
+		\item $\PRA\vdash \Con\rightarrow\neg \Pr(\Godelnum{F})$
 		\item $\PRA\vdash \Con\rightarrow\neg
-			PPr(\Godelnum{\neg\varphi})$
+			\text{Pr}(\Godelnum{\neg F
+			})$
 	\end{enumerate}
 \end{thm}
+
+\begin{proof}
+	We define the following pointed Kripke model:
+	\[\mathcal{K}=\la \{1,2,3\},\{(1,2),(1,3)\},\{(1,p),(2,p)\},1\ra\]
+	it can be visualized by the following graph:
+\begin{figure}[h]
+	\begin{center}
+\begin{tikzpicture}[baseline={(0,0)}]
+	\node[shape=circle,draw=black] (1) at (0,0) {$1$};
+	\node[shape=circle,draw=black] (2) at (2,2) {$2$};
+	\node[shape=circle,draw=black] (3) at (-2,2) {$3$};
+	\path [-] (1) edge node[left] {} (2);
+	\path [-] (1) edge node[left] {} (3);
+\end{tikzpicture}
+\end{center}
+\end{figure}
+Where $p$ is true in world $2$. We will further let $\alpha$ be the
+following formula:
+\[\neg\Box p\wedge\neg\Box\neg p\wedge\Box(\neg\Box\bot\rightarrow\neg\Box
+p\wedge\neg\Box\neg p)\]
+We have that $\alpha$ is true in $\mathcal{K}$. Since we have that:
+\begin{enumerate}
+	\item $1\in\phi(\neg\Box p)$ since we have that $1R3$ and that
+		$3\not\in\phi(p)$
+	\item $1\in\phi(\neg\Box\neg p)$ since we have that $1R2$ and that
+		$2\in\phi(p)$
+	\item $1\in\phi(\Box(\neg\Box\bot\rightarrow\neg\Box
+		p\wedge\neg\Box\neg p)$ since we have that
+		$2,3\in\phi(\Box\bot)$
+\end{enumerate}
+It can be shown that this modal is $\alpha$-reflexive; the proof of this can be
+found in \cite{Smor1985}
+\end{proof}
 \section{Generalisations  of the Completeness Theorems}
 
 In this section we have shown the Solovay's Completeness Theorems for \PRA.
@@ -723,9 +758,7 @@ the fragments Solovays theorems holds for.
 
 \section{Solovays Completeness Theorems and Fixed Points}
 
-
-
-From table \ref{Fig} we can conclude the following things:
+From table \ref{Fig} and the arithmetical soundness theorem, we can conclude the following things:
 \begin{enumerate}
 	\item From line 3, we have that
 		$\vdash_\GL\sBox(p\leftrightarrow\Box\neg
@@ -738,7 +771,7 @@ From table \ref{Fig} we can conclude the following things:
 		is the same as $\PRA\vdash(p\leftrightarrow\Box\neg p)^*$ and
 		thus we have: $\PRA\vdash\Box(p\leftrightarrow\Box\neg p)^*$
 		and hence $\PRA\vdash\sBox(p\leftrightarrow\Box\neg p)^*$. But
-		by Solovay's first completeness theorem we get that:
+		by the soundness theorem we get that:
 		$\PRA\vdash(\sBox(p\leftrightarrow\Box\neg
 		p)\leftrightarrow\sBox(p\leftrightarrow\Box\bot))^*$, and thus
 		$\PRA\vdash\sBox(p\leftrightarrow\Box\bot)^*$ whence
