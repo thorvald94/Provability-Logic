@@ -395,10 +395,10 @@ INPUT ./nat-farve.pdf
 INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
 INPUT /home/thorvald/.texlive2019/texmf-var/luatex-cache/generic-dev/fonts/otl/lmsans12-regular.luc
 INPUT /home/thorvald/.texlive2019/texmf-var/luatex-cache/generic-dev/fonts/otl/lmsans10-bold.luc
-INPUT ./thesis.toc
-INPUT ./thesis.toc
 INPUT /home/thorvald/.texlive2019/texmf-var/luatex-cache/generic-dev/fonts/otl/lmroman8-regular.luc
 INPUT /home/thorvald/.texlive2019/texmf-var/luatex-cache/generic-dev/fonts/otl/lmroman6-regular.luc
+INPUT ./thesis.toc
+INPUT ./thesis.toc
 INPUT /home/thorvald/.texlive2019/texmf-var/luatex-cache/generic-dev/fonts/otl/lmroman12-italic.luc
 OUTPUT thesis.toc
 INPUT /home/thorvald/.texlive2019/texmf-var/luatex-cache/generic-dev/fonts/otl/lmroman10-regular.luc
