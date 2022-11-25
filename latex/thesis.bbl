@@ -18,7 +18,7 @@
 
 
 \refsection{0}
-  \datalist[entry]{nyt/global//global/global}
+  \datalist[entry]{nty/global//global/global}
     \entry{ArisMeta}{book}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=be054ac4ab49a541d162854116e0f44c}{%
@@ -37,8 +37,6 @@
       \field{extraname}{1}
       \field{sortinit}{A}
       \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Metafysik}
@@ -69,8 +67,6 @@
       \field{extraname}{2}
       \field{sortinit}{A}
       \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Aristotle's Categories and De interpretatione /}
@@ -124,8 +120,6 @@
       \strng{editorfullhash}{38ee60c990236f248bab9f4155347e79}
       \field{sortinit}{A}
       \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Handbook of modal logic}
@@ -159,8 +153,6 @@
       \strng{authorfullhash}{5929c3080b415a22e416074508138422}
       \field{sortinit}{B}
       \field{sortinithash}{8de16967003c7207dae369d874f1456e}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{series}{Studies in logic and the foundations of mathematics}
@@ -208,8 +200,6 @@
       \strng{editorfullhash}{3c45c92836d6fdca91545dc82b67f8b3}
       \field{sortinit}{B}
       \field{sortinithash}{8de16967003c7207dae369d874f1456e}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{series}{Cambridge tracts in theoretical computer science ; 53.}
@@ -257,8 +247,6 @@
       \strng{editorfullhash}{6868491f9551a166414e55a5e1646d51}
       \field{sortinit}{B}
       \field{sortinithash}{8de16967003c7207dae369d874f1456e}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
       \field{labelnamesource}{editor}
       \field{labeltitlesource}{title}
       \field{booktitle}{Handbook of modal logic}
@@ -303,8 +291,6 @@
       \strng{authorfullhash}{fbd6b8037b5ad539f2f6e718335a5320}
       \field{sortinit}{B}
       \field{sortinithash}{8de16967003c7207dae369d874f1456e}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{5}
@@ -312,7 +298,7 @@
       \field{year}{2007}
       \true{nocite}
     \endentry
-    \entry{Boolos1979}{book}{}
+    \entry{Boolos1993}{book}{}
       \name{author}{1}{}{%
         {{un=2,uniquepart=given,hash=ad4890bbbf6b4bde8eeb2a07ed59ed21}{%
            family={Boolos},
@@ -336,14 +322,13 @@
       \field{extraname}{1}
       \field{sortinit}{B}
       \field{sortinithash}{8de16967003c7207dae369d874f1456e}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{The unprovability of consistency : an essay in modal logic.}
-      \field{year}{1979}
+      \field{booktitle}{The logic of provability /}
+      \field{title}{The logic of provability}
+      \field{year}{1993}
     \endentry
-    \entry{Boolos1993}{book}{}
+    \entry{Boolos1979}{book}{}
       \name{author}{1}{}{%
         {{un=2,uniquepart=given,hash=ad4890bbbf6b4bde8eeb2a07ed59ed21}{%
            family={Boolos},
@@ -367,13 +352,10 @@
       \field{extraname}{2}
       \field{sortinit}{B}
       \field{sortinithash}{8de16967003c7207dae369d874f1456e}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{booktitle}{The logic of provability /}
-      \field{title}{The logic of provability}
-      \field{year}{1993}
+      \field{title}{The unprovability of consistency : an essay in modal logic.}
+      \field{year}{1979}
     \endentry
     \entry{Chang2012}{book}{}
       \name{author}{2}{}{%
@@ -404,8 +386,6 @@
       \strng{authorfullhash}{873278f78b309a4677bd01675795852f}
       \field{sortinit}{C}
       \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{3. th}
@@ -433,8 +413,6 @@
       \strng{authorfullhash}{3676bd8b5a6758a014b490225ec91475}
       \field{sortinit}{C}
       \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Set Theory and the Continuum Hypothesis}
@@ -471,8 +449,6 @@
       \strng{editorfullhash}{5ff1c29ff1cc8f6336533b0ffd842a79}
       \field{sortinit}{C}
       \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{The {Stanford} Encyclopedia of Philosophy}
@@ -505,8 +481,6 @@
       \strng{authorfullhash}{b5e38cb44435e6bba1a34fc2f7f62ca0}
       \field{sortinit}{C}
       \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Computability : an introduction to recursive function theory /}
@@ -538,8 +512,6 @@
       \strng{editorfullhash}{3030b497304f96b07639c080bd40073a}
       \field{sortinit}{D}
       \field{sortinithash}{c438b3d5d027251ba63f5ed538d98af5}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
       \field{labelnamesource}{editor}
       \field{labeltitlesource}{title}
       \field{booktitle}{The undecidable : basic papers on undecidable propositions, unsolvable problems and computable functions /}
@@ -567,8 +539,6 @@
       \strng{authorfullhash}{b50c15602a78b51cbc6946ab32488502}
       \field{sortinit}{E}
       \field{sortinithash}{c554bd1a0b76ea92b9f105fe36d9c7b0}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{A Mathematical Introduction to Logic}
@@ -601,8 +571,6 @@
       \strng{authorfullhash}{8963c32d932474127a18c5a77c50a124}
       \field{sortinit}{G}
       \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{{Modal Logic for Philosophers}}
@@ -640,9 +608,6 @@
       \field{extraname}{1}
       \field{sortinit}{G}
       \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
-      \field{extradate}{1}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Collected works}
@@ -683,9 +648,6 @@
       \field{extraname}{2}
       \field{sortinit}{G}
       \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
-      \field{extradate}{2}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Collected works}
@@ -718,8 +680,6 @@
       \strng{authorfullhash}{605f14b2a5c387a9fd5377749cc00b69}
       \field{sortinit}{G}
       \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Journal of applied logic}
@@ -760,8 +720,6 @@
       \strng{authorfullhash}{362c1c59f763edcf1c118b471a98c75d}
       \field{sortinit}{H}
       \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{354063648X}
@@ -817,8 +775,6 @@
       \strng{editorfullhash}{be4d163e70153c39a3917a674fcc79cc}
       \field{sortinit}{H}
       \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{2. revider}
@@ -861,8 +817,6 @@
       \field{extraname}{1}
       \field{sortinit}{H}
       \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{series}{Contemporary philosophy.}
@@ -908,8 +862,6 @@
       \field{extraname}{2}
       \field{sortinit}{H}
       \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{{Models for modalities : Selected essays.}}
@@ -942,8 +894,6 @@
       \strng{authorfullhash}{c2d1f7d160cf18eea8d3e7d47f8d17bf}
       \field{sortinit}{H}
       \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{An introduction to modal logic}
@@ -995,8 +945,6 @@
       \strng{editorfullhash}{b73b9e73d636d6fabcbfb62d50cb64f9}
       \field{sortinit}{J}
       \field{sortinithash}{c45040a764d616897e7f5b30174d7b92}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Handbook of proof theory}
@@ -1010,7 +958,7 @@
       \range{pages}{72}
       \keyw{Proof theory}
     \endentry
-    \entry{Thor2021}{article}{}
+    \entry{Thor2022}{article}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=5f7d7de2eb0f8ade1e867e4291f0787b}{%
            family={Jørgensen},
@@ -1028,20 +976,18 @@
       \field{extraname}{1}
       \field{sortinit}{J}
       \field{sortinithash}{c45040a764d616897e7f5b30174d7b92}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Project outside the course scope: Introduction to Modal Logic}
-      \field{year}{2021}
+      \field{title}{Project outside the course scope: Gödel' Incompleteness Theorems}
+      \field{year}{2022}
       \verb{urlraw}
-      \verb https://github.com/thorvald94/Modal-logic/blob/main/FagProjekt.pdf
+      \verb https://github.com/thorvald94/GodelIncompleteness/blob/main/project.pdf
       \endverb
       \verb{url}
-      \verb https://github.com/thorvald94/Modal-logic/blob/main/FagProjekt.pdf
+      \verb https://github.com/thorvald94/GodelIncompleteness/blob/main/project.pdf
       \endverb
     \endentry
-    \entry{Thor2022}{article}{}
+    \entry{Thor2021}{article}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=5f7d7de2eb0f8ade1e867e4291f0787b}{%
            family={Jørgensen},
@@ -1059,17 +1005,15 @@
       \field{extraname}{2}
       \field{sortinit}{J}
       \field{sortinithash}{c45040a764d616897e7f5b30174d7b92}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Project outside the course scope: Gödel' Incompleteness Theorems}
-      \field{year}{2022}
+      \field{title}{Project outside the course scope: Introduction to Modal Logic}
+      \field{year}{2021}
       \verb{urlraw}
-      \verb https://github.com/thorvald94/GodelIncompleteness/blob/main/project.pdf
+      \verb https://github.com/thorvald94/Modal-logic/blob/main/FagProjekt.pdf
       \endverb
       \verb{url}
-      \verb https://github.com/thorvald94/GodelIncompleteness/blob/main/project.pdf
+      \verb https://github.com/thorvald94/Modal-logic/blob/main/FagProjekt.pdf
       \endverb
     \endentry
     \entry{Kleene1952}{book}{}
@@ -1095,8 +1039,6 @@
       \strng{authorfullhash}{9221bb2b4da6f0b8a90f42245abdf6d7}
       \field{sortinit}{K}
       \field{sortinithash}{d3edc18d54b9438a72c24c925bfb38f4}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Introduction to metamathematics /}
@@ -1131,8 +1073,6 @@
       \strng{authorfullhash}{a3de81ce95d09b9915d1be05f9970108}
       \field{sortinit}{K}
       \field{sortinithash}{d3edc18d54b9438a72c24c925bfb38f4}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Mathematical logic quarterly}
@@ -1177,54 +1117,11 @@
       \strng{editorfullhash}{2c2cafc6a1ce2bce5dbc56e02b0bfb8e}
       \field{sortinit}{L}
       \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{series}{American philosophical quarterly. Monograph series ; monograph no. 11.}
       \field{title}{{An introduction to modal logic : the "Lemmon notes" }}
       \field{year}{1977}
-    \endentry
-    \entry{Lind1996}{article}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=2570b04d71aa58636e61120b2efc7d8a}{%
-           family={Lindström},
-           familyi={L\bibinitperiod},
-           given={Per},
-           giveni={P\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{language}{1}{%
-        {eng}%
-      }
-      \list{location}{1}{%
-        {Oxford, UK}%
-      }
-      \list{publisher}{1}{%
-        {Blackwell Publishing Ltd}%
-      }
-      \strng{namehash}{2570b04d71aa58636e61120b2efc7d8a}
-      \strng{fullhash}{2570b04d71aa58636e61120b2efc7d8a}
-      \strng{bibnamehash}{2570b04d71aa58636e61120b2efc7d8a}
-      \strng{authorbibnamehash}{2570b04d71aa58636e61120b2efc7d8a}
-      \strng{authornamehash}{2570b04d71aa58636e61120b2efc7d8a}
-      \strng{authorfullhash}{2570b04d71aa58636e61120b2efc7d8a}
-      \field{extraname}{1}
-      \field{sortinit}{L}
-      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{issn}{0040-5825}
-      \field{journaltitle}{Theoria (Lund, Sweden)}
-      \field{number}{1-2}
-      \field{title}{Provability logic-a short introduction}
-      \field{volume}{62}
-      \field{year}{1996}
-      \field{pages}{19\bibrangedash 61}
-      \range{pages}{43}
-      \keyw{Philosophical logics. Philosophy of language ; Philosophy}
     \endentry
     \entry{Lind1997}{book}{}
       \name{author}{1}{}{%
@@ -1250,16 +1147,53 @@
       \strng{authorbibnamehash}{2570b04d71aa58636e61120b2efc7d8a}
       \strng{authornamehash}{2570b04d71aa58636e61120b2efc7d8a}
       \strng{authorfullhash}{2570b04d71aa58636e61120b2efc7d8a}
-      \field{extraname}{2}
+      \field{extraname}{1}
       \field{sortinit}{L}
       \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{9783540632139}
       \field{title}{Aspects of Incompleteness}
       \field{year}{1997}
+    \endentry
+    \entry{Lind1996}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=2570b04d71aa58636e61120b2efc7d8a}{%
+           family={Lindström},
+           familyi={L\bibinitperiod},
+           given={Per},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \list{location}{1}{%
+        {Oxford, UK}%
+      }
+      \list{publisher}{1}{%
+        {Blackwell Publishing Ltd}%
+      }
+      \strng{namehash}{2570b04d71aa58636e61120b2efc7d8a}
+      \strng{fullhash}{2570b04d71aa58636e61120b2efc7d8a}
+      \strng{bibnamehash}{2570b04d71aa58636e61120b2efc7d8a}
+      \strng{authorbibnamehash}{2570b04d71aa58636e61120b2efc7d8a}
+      \strng{authornamehash}{2570b04d71aa58636e61120b2efc7d8a}
+      \strng{authorfullhash}{2570b04d71aa58636e61120b2efc7d8a}
+      \field{extraname}{2}
+      \field{sortinit}{L}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0040-5825}
+      \field{journaltitle}{Theoria (Lund, Sweden)}
+      \field{number}{1-2}
+      \field{title}{Provability logic-a short introduction}
+      \field{volume}{62}
+      \field{year}{1996}
+      \field{pages}{19\bibrangedash 61}
+      \range{pages}{43}
+      \keyw{Philosophical logics. Philosophy of language ; Philosophy}
     \endentry
     \entry{Liu}{misc}{}
       \name{author}{1}{}{%
@@ -1278,8 +1212,6 @@
       \strng{authorfullhash}{621013bf54d3546375ad71f17f020b5b}
       \field{sortinit}{L}
       \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Incompleteness result and provability logic}
@@ -1306,8 +1238,6 @@
       \strng{authorfullhash}{e2bc277a7dd2d160f77afac91061dca9}
       \field{sortinit}{M}
       \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Introduction to Mathematical Logic}
@@ -1331,8 +1261,6 @@
       \strng{authorfullhash}{6f9896f44f33cedec248db1ce74b0c3e}
       \field{sortinit}{O}
       \field{sortinithash}{ff8d4eeb5101e3cf3809959b3592d942}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Notre Dame Journal of Formal Logic}
@@ -1343,6 +1271,37 @@
       \true{nocite}
       \field{pages}{95\bibrangedash 99}
       \range{pages}{5}
+    \endentry
+    \entry{Fedo2017}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=07e08091a2a804148e1f82b7b3e16e28}{%
+           family={Pakhomov},
+           familyi={P\bibinitperiod},
+           given={Fedor},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \strng{namehash}{07e08091a2a804148e1f82b7b3e16e28}
+      \strng{fullhash}{07e08091a2a804148e1f82b7b3e16e28}
+      \strng{bibnamehash}{07e08091a2a804148e1f82b7b3e16e28}
+      \strng{authorbibnamehash}{07e08091a2a804148e1f82b7b3e16e28}
+      \strng{authornamehash}{07e08091a2a804148e1f82b7b3e16e28}
+      \strng{authorfullhash}{07e08091a2a804148e1f82b7b3e16e28}
+      \field{sortinit}{P}
+      \field{sortinithash}{bb5b15f2db90f7aef79bb9e83defefcb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Solovay's completeness without fixed points}
+      \field{year}{2017}
+      \verb{urlraw}
+      \verb http://arxiv.org/licenses/nonexclusive-distrib/1.0
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/licenses/nonexclusive-distrib/1.0
+      \endverb
     \endentry
     \entry{Quine}{incollection}{}
       \name{author}{1}{}{%
@@ -1367,8 +1326,6 @@
       \strng{authorfullhash}{9c9299d851aa969452f97be782202d35}
       \field{sortinit}{Q}
       \field{sortinithash}{c54e16deb53fc904a621fa8fd8703b5a}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{The Ways of Paradox and other essays}
@@ -1405,9 +1362,6 @@
       \field{extraname}{1}
       \field{sortinit}{R}
       \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
-      \field{extradate}{1}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
       \field{labelnamesource}{editor}
       \field{labeltitlesource}{title}
       \field{isbn}{1-281-03918-7}
@@ -1454,9 +1408,6 @@
       \field{extraname}{2}
       \field{sortinit}{R}
       \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
-      \field{extradate}{2}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Handbook of proof theory}
@@ -1500,8 +1451,6 @@
       \strng{editorfullhash}{5ff1c29ff1cc8f6336533b0ffd842a79}
       \field{sortinit}{R}
       \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{The {Stanford} Encyclopedia of Philosophy}
@@ -1537,8 +1486,6 @@
       \strng{authorfullhash}{5fc9c56ba8c0c7647e2ceb499ed1b123}
       \field{sortinit}{R}
       \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0029-4527}
@@ -1571,8 +1518,6 @@
       \strng{authorfullhash}{d7abbe80329c2fd25304dc3e42d04fca}
       \field{sortinit}{S}
       \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{series}{Filosofska Studier, vol.13}
@@ -1603,8 +1548,6 @@
       \strng{authorfullhash}{13b9c16a9de2bb891eb8aa2a768eb2a8}
       \field{sortinit}{S}
       \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Introduction to the theory of computation /}
@@ -1639,8 +1582,6 @@
       \strng{authorfullhash}{943720db360840023e62aa2912d7fbb7}
       \field{sortinit}{S}
       \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Begründung der elementaren Arithmetik durch die rekurrierende Denkweise ohne Anwendung scheinbarer veränderlichen mit unendlichem Ausdehnungsbereich /}
@@ -1693,9 +1634,6 @@
       \field{extraname}{1}
       \field{sortinit}{S}
       \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
-      \field{extradate}{1}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Logic Colloguim 77}
@@ -1705,6 +1643,32 @@
       \true{nocite}
       \field{pages}{253\bibrangedash 261}
       \range{pages}{9}
+    \endentry
+    \entry{Smor1985}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=aa347a8abe37c910f2de21ad961273f9}{%
+           family={Smorynski},
+           familyi={S\bibinitperiod},
+           given={Craig},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer-verlag}%
+      }
+      \strng{namehash}{aa347a8abe37c910f2de21ad961273f9}
+      \strng{fullhash}{aa347a8abe37c910f2de21ad961273f9}
+      \strng{bibnamehash}{aa347a8abe37c910f2de21ad961273f9}
+      \strng{authorbibnamehash}{aa347a8abe37c910f2de21ad961273f9}
+      \strng{authornamehash}{aa347a8abe37c910f2de21ad961273f9}
+      \strng{authorfullhash}{aa347a8abe37c910f2de21ad961273f9}
+      \field{extraname}{2}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Self-Rference and modal logic}
+      \field{year}{1985}
     \endentry
     \entry{SmorHand}{incollection}{}
       \name{author}{1}{}{%
@@ -1734,46 +1698,15 @@
       \strng{editorbibnamehash}{faa3cca850326b0f6e3378937dd3b66d}
       \strng{editornamehash}{faa3cca850326b0f6e3378937dd3b66d}
       \strng{editorfullhash}{faa3cca850326b0f6e3378937dd3b66d}
-      \field{extraname}{2}
+      \field{extraname}{3}
       \field{sortinit}{S}
       \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
-      \field{extradate}{2}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{The Handbook of Mathematical logic}
       \field{title}{The Incompleteness Theorems}
       \field{year}{1977}
       \true{nocite}
-    \endentry
-    \entry{Smor1985}{book}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=aa347a8abe37c910f2de21ad961273f9}{%
-           family={Smorynski},
-           familyi={S\bibinitperiod},
-           given={Craig},
-           giveni={C\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{publisher}{1}{%
-        {Springer-verlag}%
-      }
-      \strng{namehash}{aa347a8abe37c910f2de21ad961273f9}
-      \strng{fullhash}{aa347a8abe37c910f2de21ad961273f9}
-      \strng{bibnamehash}{aa347a8abe37c910f2de21ad961273f9}
-      \strng{authorbibnamehash}{aa347a8abe37c910f2de21ad961273f9}
-      \strng{authornamehash}{aa347a8abe37c910f2de21ad961273f9}
-      \strng{authorfullhash}{aa347a8abe37c910f2de21ad961273f9}
-      \field{extraname}{3}
-      \field{sortinit}{S}
-      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Self-Rference and modal logic}
-      \field{year}{1985}
     \endentry
     \entry{Soare1987}{book}{}
       \name{author}{1}{}{%
@@ -1799,8 +1732,6 @@
       \field{extraname}{1}
       \field{sortinit}{S}
       \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{series}{Perspectives in Mathematical Logic.}
@@ -1832,8 +1763,6 @@
       \field{extraname}{2}
       \field{sortinit}{S}
       \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Turing Computability}
@@ -1861,8 +1790,6 @@
       \strng{authorfullhash}{f48640301c2ee285cda30fb82c1ed107}
       \field{sortinit}{S}
       \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Israel journal of mathematics}
@@ -1898,8 +1825,6 @@
       \strng{authorfullhash}{8bc22602a5dd8102ada78c5e1dd78cd6}
       \field{sortinit}{U}
       \field{sortinithash}{77a6935510e008adcf5b555e7b4f0711}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Introduction to Formal Philosophy}
@@ -1940,8 +1865,6 @@
       \strng{editorfullhash}{5ff1c29ff1cc8f6336533b0ffd842a79}
       \field{sortinit}{V}
       \field{sortinithash}{02432525618c08e2b03cac47c19764af}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{The {Stanford} Encyclopedia of Philosophy}
@@ -1983,8 +1906,6 @@
       \strng{authorfullhash}{048cf9054c2e7dc9fef3172a79679690}
       \field{sortinit}{W}
       \field{sortinithash}{1af34bd8c148ffb32de1494636b49713}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Principia mathematica /}

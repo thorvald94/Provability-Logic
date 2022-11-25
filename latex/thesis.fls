@@ -332,12 +332,12 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-compat.def
 INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-compat.def
 INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.def
 INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.def
-INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/authoryear.bbx
-INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/authoryear.bbx
+INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/authortitle.bbx
+INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/authortitle.bbx
 INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
 INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
-INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/cbx/authoryear.cbx
-INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/cbx/authoryear.cbx
+INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/cbx/authortitle.cbx
+INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/cbx/authortitle.cbx
 INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.cfg
 INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.cfg
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
@@ -408,6 +408,7 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
+INPUT /home/thorvald/.texlive2019/texmf-var/luatex-cache/generic-dev/fonts/otl/lmroman10-italic.luc
 INPUT /home/thorvald/.texlive2019/texmf-var/luatex-cache/generic-dev/fonts/otl/lmmono10-regular.luc
 INPUT ./intro.tex
 INPUT ./intro.tex

@@ -55,8 +55,8 @@
       <file>blx-compat.def</file>
       <file>biblatex.def</file>
       <file>standard.bbx</file>
-      <file>authoryear.bbx</file>
-      <file>authoryear.cbx</file>
+      <file>authortitle.bbx</file>
+      <file>authortitle.cbx</file>
       <file>biblatex.cfg</file>
       <file>english.lbx</file>
     </requires>

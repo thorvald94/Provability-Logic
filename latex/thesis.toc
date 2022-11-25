@@ -102,4 +102,4 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {9}Bibliography}{83}{chapter.9}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}Neccesation free definition of \text {\textbf {GL}}\ and \text {\textbf {GLS}}}{87}{appendix.A}%
+\contentsline {chapter}{\numberline {A}Necessitation free definition of \text {\textbf {GL}}\ and \text {\textbf {GLS}}}{87}{appendix.A}%
