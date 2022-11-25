@@ -48,7 +48,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.6}The Arithmetical Hierarchy}{32}{section.3.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.7}Sigma completeness, put ind hvor dette passer i overstående}{35}{section.3.7}%
+\contentsline {section}{\numberline {3.7}Sigma Completeness}{35}{section.3.7}%
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {4}Fragments of Arithmetics}{37}{chapter.4}%
 \defcounter {refsection}{0}\relax 

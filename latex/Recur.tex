@@ -1,6 +1,8 @@
 \documentclass[../main.tex]{subfiles}
 
 \begin{document}
+\textbf{Note: grafer kan ses som formler fra \PRA, så bare brug F, G og H for
+disse}
 We will begin this section with define two classes of functions;
 the \textit{Partial Recursive Functions} and  the \textit{Turing Computable
 functions}. These two classes of functions gives rise to the same class of
@@ -398,11 +400,12 @@ completeness theorems.
 
 \begin{defi}
 	The graph of a (partial) function $\varphi$ is the relation:
-	$$(x,y)\in\ \text{graph} \varphi\Leftrightarrow f(x)=y$$
-	We will from now on  denote the graph of a function $\varphi(\x)=y$
-	by\\ $\tau\x
-	y$
+	\[(x,y)\in\ \text{graph} \varphi\Leftrightarrow f(x)=y\]
 \end{defi}
+The relation of a graph can also be seen as a function in the language of
+$\PRA$; so we will often denote the graph of a function $\varphi(x)=y$ with the
+following notation: $Fxy$, and say that $(x,y)\in\ \text{graph}(\varphi$ if and
+only if $Fxy$ is true.
 
 \begin{thm}
 	If $R\subseteq\omega^2$ is an r.e relation, then there is a p.r
@@ -692,8 +695,8 @@ We can show a few properties of these sets.
 \end{proof}
 
 
-\section{Sigma completeness, put ind hvor dette passer i overstående}
-We can make a generalization of $D3$ by using [Lemma fra fagprojekt]. We use
+\section{Sigma Completeness}
+We can make a generalization of $D3$. We use
 this generalization in some of our proofs later on. We will first need to prove
 the following lemma:
 \begin{lem}
@@ -704,13 +707,16 @@ the following lemma:
 \end{lem}
 \begin{proof}
 \end{proof}
-\begin{thm}
+\begin{thm}[Demonstrable $\Sigma_1$ completeness]
 	\label{thm:DemoSiga}
-	Let $fv_0\ldots v_{n-1}$ be a $\Sigma_1$ formula with free variables.
+	Let $Fv_0\ldots v_{n-1}$ be a $\Sigma_1$ formula with free variables.
 	Then:
-	$$\PRA\vdash fv_0\ldots
-	v_{n-1}\rightarrow\text{Pr}(\Godelnum{fv_0\ldots v_{n-1}})$$
+	$$\PRA\vdash Fv_0\ldots
+	v_{n-1}\rightarrow\text{Pr}(\Godelnum{f\dot v_0\ldots\dot v_{n-1}})$$
 \end{thm}
+This theorem states that if a $\Sigma_1$ formula $F$ is true, then it can be
+proven to be true in \PRA\; i.e \PRA\ is complete with respect to $\Sigma_1$
+formulae.
 \begin{proof}
 	By [ja, fra hvad?] we have that there is a $\Sigma_1$ formula $\exists
 	v(gvv_0\ldots v_{n-1}=\ol 0$ such that we have:
@@ -743,4 +749,8 @@ the following lemma:
 					     &&\text{By \ref{eq:Com2}}
 	\end{align*}
 \end{proof}
+This theorem gives a difference between $\Sigma_1$ and $\Pi_1$ sentences in
+\PRA. If $F$ is $\Pi_1$ we can have that both $F+\text{Con}(\PRA+F)$ and
+$F+\text{Con}(\PRA+\neg F)$ are consistent, but if $F$ is $\Sigma_1$ we get
+that $F+\text{Con}(\PRA+\neg F)$ is inconsistent.
 \end{document}
