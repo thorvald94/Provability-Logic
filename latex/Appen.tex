@@ -1,0 +1,100 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+\chapter{Neccesation free definition of \GL\ and \GLS}
+
+There is another way to define the modal logic \GLS. The definition of this
+section is the one Smorynski uses in \cite{Smor1985}
+
+In this section we will take \textbf{K4} as our base logic and see \GL\  as an
+extension of this.
+We will need the following notation to
+define this. Given a set $\Gamma$:
+\begin{enumerate}
+	\item $\Gamma\vdash_{\textbf{MP}}\alpha$ if $\alpha$ is derivable form $\Gamma$ by
+		only using $R1$
+	\item $\Gamma\vdash_{\textbf{Nec}}\alpha$ if $\alpha$ is derivable form $\Gamma$ by
+		using $R1$ and $R2$.
+\end{enumerate}
+We will further define the following set for any set $\Gamma$:
+\[
+	\Gamma^{\textbf{Nec}}=\Gamma\cup\{\Box\beta:\beta\in\Gamma\}
+\]
+This set allows us to avoid Nec by the axioms of \textbf{K4}, which the
+following lemma shows:
+\begin{lem}
+	Let $\Gamma$ include all the instances  of axioms of \textbf{K4}. Then:
+	\[
+		\Gamma\vdash_{\textbf{Nec}}\alpha\Leftrightarrow\Gamma^{\textbf{Nec}}\vdash_{\textbf{MP}}\alpha
+	\]
+\end{lem}
+\begin{proof}
+	The way $\Leftarrow$ is trivial. So we will only show $\Rightarrow$.
+	To prove this, it is enough to show that the set of theorems of
+	$\Gamma^{\textbf{Nec}}$ is closed under $R2$; i.e to show that:
+
+\[\Gamma^{\textbf{Nec}}\vdash\alpha\Rightarrow\Gamma^{\textbf{Nec}}\vdash_{\textbf{MP}}\Box\alpha\]
+
+Let $\Gamma^{\textbf{Nec}}\vdash_{\textbf{MP}}\alpha$. Then we have a sequence
+	$\alpha_1,\ldots,\alpha_n=\alpha$, where for each $1\leq i\leq n$ we
+	have that $\alpha_i$ is one of the following three:
+	\begin{enumerate}
+		\item We have that it is an axiom $\alpha_i\in\Gamma$ 
+		\item It is the necessitation  $\Box\beta_1$ of an axiom
+			$\beta_1\in\Gamma$
+		\item It is a consequence of \textbf{MP} of
+			$\alpha_j,\alpha_k=\alpha_j\rightarrow\alpha_i$
+			where $j,k<i$.
+	\end{enumerate}
+	We will show  by induction on the length $i$ of a 'initial' segment
+	$\alpha_1,\ldots,\alpha_i$ that
+	$\Gamma^{\textbf{Nec}}\vdash_{\textbf{MP}}\Box\alpha_i$. 
+	\begin{enumerate}
+		\item If we have that $\alpha_i\in\Gamma$. Then by definition
+			we have that $\Box\alpha_i\in\Gamma^{\textbf{Nec}}$ and thus
+			$\Gamma^{\textbf{Nec}}\vdash_{\textbf{MP}}\Box\alpha_i$.
+		\item If $\alpha_i=\Box\beta_i$ for some $\beta_i\in\Gamma$,
+			then we can make the following deduction:
+			\begin{align*}
+				\Gamma^{\textbf{Nec}}&\vdash_{\textbf{MP}}\Box\beta_i &\text{Since}\
+				\Box\beta_i\in\Gamma^{\textbf{Nec}}\\
+						     &\vdash_{\textbf{NP}}\Box\beta_i\rightarrow\Box\Box\beta_i
+					&\text{By}\ \textbf{4}\\
+					&\vdash_{\textbf{MP}}\Box\Box\beta_i\ (=\Box\alpha_i) 
+					&\text{By}\ \textbf{MP}
+			\end{align*}
+			Which shows the result.
+		\item If $\alpha_i$ follows form
+			$\alpha_j,\alpha_k=\alpha_j\rightarrow\alpha_i$ by
+			\textbf{MP} we have by the induction hypothesis that
+			$\Gamma^{\textbf{Nec}}\vdash_{\textbf{MP}}\Box\alpha_j$ and
+			$\Gamma^{\textbf{Nec}}\vdash_{\textbf{MP}}\Box(\alpha_j\rightarrow\alpha_i)$. By
+			\textbf{K} we also have that
+			$\Gamma^2\vdash_{\textbf{MP}}\Box\alpha_j\wedge\Box(\alpha_j\rightarrow\alpha_i)\rightarrow\Box\alpha_i$
+			and by propositional logic we get that:
+			$\Gamma^2\vdash_{\textbf{MP}}\Box\alpha_i$.
+	\end{enumerate}
+	This ends the induction and the lemma will follow.
+\end{proof}
+By this lemma we can get a \textbf{Nec}-free definition of \textbf{K4} and \GL\  that we will call
+$\textbf{K4}^{\textbf{Nec}}$ and $\GL^{\textbf{Nec}}$. We can further by the deduction theorem from propositional logic get
+the following:
+
+\begin{lem}
+	$\Gamma\vdash\alpha$ iff there is a finite set
+$\{\gamma_0,\ldots,\gamma_{n-1}\}\subseteq \Gamma$ such that:
+$K\vdash\wedge\gamma_i\rightarrow\alpha$
+\end{lem}
+
+From all this we can define \GLS\ in an alternative way:
+\begin{defi}
+	The system of modal logic \text{\textbf{GLS}} is defined as the system
+	of propositional modal logic that have all the theorems of
+	$\GL^{\textbf{nec}}$\ and
+	 addition of the axiom of reflexion: 
+	 \begin{enumerate}
+		 \item[\textit{Refl}:]$\Box\alpha\rightarrow\alpha$ 
+ 	\end{enumerate}
+	and which sole rule of inference is \textit{modus ponens}. 
+\end{defi}
+\end{document}

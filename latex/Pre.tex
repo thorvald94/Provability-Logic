@@ -6,7 +6,7 @@ In this section I will state a few results and definitions from my two project
 I have written; one about modal logic and one about Gödel's incompleteness
 theorems.
 These results will be given without proof. The proofs can be found in
-\textbf{Indsæt ref}.
+two projects I have earlier written \cite{Thor2021} and \cite{Thor2022}.
 
 The main points of this section will be the definition of the predicate
 $\text{Pr}(\cdot)$ which is constructed in the proof of  Gödel's Incompleteness
@@ -272,7 +272,7 @@ state this we first need some definitions concerning relations:
 	on $\mathcal{H}$ if the converse $R^{-1}$ of $R$ is well-founded; i.e
 	if there is no infinite sequence such that $w_0Rw_1Rw_2R\ldots$
 \end{defi}
-We can now state the following theor::
+We can now state the following theorem:
 \begin{thm}
 	\label{thm:GLcomplete}
 	\GL\ is sound and weakly complete with respect to the class of
@@ -281,18 +281,16 @@ We can now state the following theor::
 In chapter \ref{chap:GL} we will show some further results about \GL\ and in
 chapter
 \ref{chap:Fixed} we will show a fixed point theorem about \GL.
-
+We will end this section with the following proposition that will be needed
+later:
 \begin{prop}\label{prop:GL}
 	$\vdash_\GL\Box(\alpha\leftrightarrow\beta)\rightarrow(\Box\alpha\leftrightarrow\Box\beta)$
 \end{prop}
-\textbf{Pris evt. nogle få deduktions former der vil blive brugt senere}
-
-
 
 \section{Gödels Incompleteness Theorems}
 In this section we will state and sketch the proof of Gödels incompleteness
 theorems. In this sketch we will define a predicate $\text{Pr}(\cdot)$ that
-says a given formula has a proof in arithemteics.
+says a given formula has a proof in arithmetics.
 
 
 \subsection{Primitive Recursive Functions}
@@ -327,8 +325,9 @@ We can also define relations as being primitive recursive:
 	\end{cases}\]
 \end{defi}
 So with these definitions we can show that some well known functions are
-primitive recursive.
-
+primitive recursive. The proofs of these can be rather tiresome and have been
+left out.
+\newpage
 \begin{prop}
 	The following list of functions are all primitive recursive:
 \begin{table}[!ht]
@@ -668,13 +667,17 @@ We will in a later section need the following lemma:
 	v_n})\]
 \end{lem}
 
+Where $\Godelnum{f\dot v_0\ldots\dot v_{n-1}=\dot v_n}$ denotes the code of the
+formula where we have substituted the variables with the nummerals: $\ol
+v_0,\ldots ,\ol v_{n-1}$.
+
 The Formalized Löb's Theorem and the derivability conditions can be shown to
 hold for a wide range of arithmetical systems. A overview over this subject
 will be given in chapter \ref{chap:PRA}. If we write $\vdash F$ instead of
 $\PRA\vdash F$ it means we have not specified the arithmetical system we are
 looking at.
 
-If we set the properties of $\text{Pr}(\cdot)$ up next to the properties of the
+If we compare the properties of $\text{Pr}(\cdot)$ with the properties of the
 $\Box$-operator of \GL, we get the following table:
 
 	\begin{table}[h]

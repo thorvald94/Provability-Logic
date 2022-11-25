@@ -2187,21 +2187,23 @@
     <bcf:citekey order="2">Smor1985</bcf:citekey>
     <bcf:citekey order="3">Lemmon1977</bcf:citekey>
     <bcf:citekey order="4">Goldblatt2003</bcf:citekey>
-    <bcf:citekey order="5">Lemmon1977</bcf:citekey>
-    <bcf:citekey order="6">Lemmon1977</bcf:citekey>
-    <bcf:citekey order="7">Blackburn2002</bcf:citekey>
-    <bcf:citekey order="8">Soare2016</bcf:citekey>
-    <bcf:citekey order="9">Soare1987</bcf:citekey>
-    <bcf:citekey order="10">Kleene1952</bcf:citekey>
-    <bcf:citekey order="11">Smor1985</bcf:citekey>
-    <bcf:citekey order="12">Lind1997</bcf:citekey>
-    <bcf:citekey order="13">Boolos1993</bcf:citekey>
-    <bcf:citekey order="14">Lind1996</bcf:citekey>
-    <bcf:citekey order="15">Olson1990</bcf:citekey>
-    <bcf:citekey order="16">Smor1985</bcf:citekey>
-    <bcf:citekey order="17">Boolos1993</bcf:citekey>
-    <bcf:citekey order="18">Boolos1993</bcf:citekey>
+    <bcf:citekey order="5">Thor2021</bcf:citekey>
+    <bcf:citekey order="6">Thor2022</bcf:citekey>
+    <bcf:citekey order="7">Lemmon1977</bcf:citekey>
+    <bcf:citekey order="8">Lemmon1977</bcf:citekey>
+    <bcf:citekey order="9">Blackburn2002</bcf:citekey>
+    <bcf:citekey order="10">Soare2016</bcf:citekey>
+    <bcf:citekey order="11">Soare1987</bcf:citekey>
+    <bcf:citekey order="12">Kleene1952</bcf:citekey>
+    <bcf:citekey order="13">Smor1985</bcf:citekey>
+    <bcf:citekey order="14">Lind1997</bcf:citekey>
+    <bcf:citekey order="15">Boolos1993</bcf:citekey>
+    <bcf:citekey order="16">Lind1996</bcf:citekey>
+    <bcf:citekey order="17">Olson1990</bcf:citekey>
+    <bcf:citekey order="18">Smor1985</bcf:citekey>
     <bcf:citekey order="19">Boolos1993</bcf:citekey>
+    <bcf:citekey order="20">Boolos1993</bcf:citekey>
+    <bcf:citekey order="21">Boolos1993</bcf:citekey>
     <bcf:citekey order="0" nocite="1">*</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->

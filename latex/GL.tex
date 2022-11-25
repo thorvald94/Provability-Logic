@@ -353,112 +353,32 @@ will use it to prove parts of the main theorem of the next chapter:
 	$\vDash_w^{\mathcal{K}'}\alpha$.
 \end{cor}
 
-\section{The system \text{\textbf{GLS}}}
+\section{The Modal Logic \text{\textbf{GLS}}}
 
 In this section we will define the modal logic \textbf{GLS} (The "S" is for
-Solovay). Before we can do
-this in a smart way, we will define the notion of a Nec free axiomation; i.e a
-system that is not closed under the rule Nec. We have to do this, since the
-system \GLS\ will extend \GL\ but is not closed under the rule nec.
+Solovay). This logic is an extension of \GL, but it is not as well behaved as
+\GL.
 
-\subsection{Avoiding Nec}
-
-In this section we will take \textbf{K4} as our base logic and see \GL\  as an
-extension of this.
-We will need the following notation to
-define this. Given a set $\Gamma$:
-\begin{enumerate}
-	\item $\Gamma\vdash_{\textbf{MP}}\alpha$ if $\alpha$ is derivable form $\Gamma$ by
-		only using $R1$
-	\item $\Gamma\vdash_{\textbf{Nec}}\alpha$ if $\alpha$ is derivable form $\Gamma$ by
-		using $R1$ and $R2$.
-\end{enumerate}
-We will further define the following set for any set $\Gamma$:
-\[
-	\Gamma^{\textbf{Nec}}=\Gamma\cup\{\Box\beta:\beta\in\Gamma\}
-\]
-This set allows us to avoid Nec by the axioms of \textbf{K4}, which the
-following lemma shows:
-\begin{lem}
-	Let $\Gamma$ include all the instances  of axioms of \textbf{K4}. Then:
-	\[
-		\Gamma\vdash_{\textbf{Nec}}\alpha\Leftrightarrow\Gamma^{\textbf{Nec}}\vdash_{\textbf{MP}}\alpha
-	\]
-\end{lem}
-\begin{proof}
-	The way $\Leftarrow$ is trivial. So we will only show $\Rightarrow$.
-	To prove this, it is enough to show that the set of theorems of
-	$\Gamma^{\textbf{Nec}}$ is closed under $R2$; i.e to show that:
-
-\[\Gamma^{\textbf{Nec}}\vdash\alpha\Rightarrow\Gamma^{\textbf{Nec}}\vdash_{\textbf{MP}}\Box\alpha\]
-
-Let $\Gamma^{\textbf{Nec}}\vdash_{\textbf{MP}}\alpha$. Then we have a sequence
-	$\alpha_1,\ldots,\alpha_n=\alpha$, where for each $1\leq i\leq n$ we
-	have that $\alpha_i$ is one of the following three:
-	\begin{enumerate}
-		\item We have that it is an axiom $\alpha_i\in\Gamma$ 
-		\item It is the necessitation  $\Box\beta_1$ of an axiom
-			$\beta_1\in\Gamma$
-		\item It is a consequence of \textbf{MP} of
-			$\alpha_j,\alpha_k=\alpha_j\rightarrow\alpha_i$
-			where $j,k<i$.
-	\end{enumerate}
-	We will show  by induction on the length $i$ of a 'initial' segment
-	$\alpha_1,\ldots,\alpha_i$ that
-	$\Gamma^{\textbf{Nec}}\vdash_{\textbf{MP}}\Box\alpha_i$. 
-	\begin{enumerate}
-		\item If we have that $\alpha_i\in\Gamma$. Then by definition
-			we have that $\Box\alpha_i\in\Gamma^{\textbf{Nec}}$ and thus
-			$\Gamma^{\textbf{Nec}}\vdash_{\textbf{MP}}\Box\alpha_i$.
-		\item If $\alpha_i=\Box\beta_i$ for some $\beta_i\in\Gamma$,
-			then we can make the following deduction:
-			\begin{align*}
-				\Gamma^{\textbf{Nec}}&\vdash_{\textbf{MP}}\Box\beta_i &\text{Since}\
-				\Box\beta_i\in\Gamma^{\textbf{Nec}}\\
-						     &\vdash_{\textbf{NP}}\Box\beta_i\rightarrow\Box\Box\beta_i
-					&\text{By}\ \textbf{4}\\
-					&\vdash_{\textbf{MP}}\Box\Box\beta_i\ (=\Box\alpha_i) 
-					&\text{By}\ \textbf{MP}
-			\end{align*}
-			Which shows the result.
-		\item If $\alpha_i$ follows form
-			$\alpha_j,\alpha_k=\alpha_j\rightarrow\alpha_i$ by
-			\textbf{MP} we have by the induction hypothesis that
-			$\Gamma^{\textbf{Nec}}\vdash_{\textbf{MP}}\Box\alpha_j$ and
-			$\Gamma^{\textbf{Nec}}\vdash_{\textbf{MP}}\Box(\alpha_j\rightarrow\alpha_i)$. By
-			\textbf{K} we also have that
-			$\Gamma^2\vdash_{\textbf{MP}}\Box\alpha_j\wedge\Box(\alpha_j\rightarrow\alpha_i)\rightarrow\Box\alpha_i$
-			and by propositional logic we get that:
-			$\Gamma^2\vdash_{\textbf{MP}}\Box\alpha_i$.
-	\end{enumerate}
-	This ends the induction and the lemma will follow.
-\end{proof}
-By this lemma we can get a \textbf{Nec}-free definition of \textbf{K4} and \GL\  that we will call
-$\textbf{K4}^{\textbf{Nec}}$ and $\GL^{\textbf{Nec}}$. We can further by the deduction theorem from propositional logic get
-the following:
-
-\begin{lem}
-	$\Gamma\vdash\alpha$ iff there is a finite set
-$\{\gamma_0,\ldots,\gamma_{n-1}\}\subseteq \Gamma$ such that:
-$K\vdash\wedge\gamma_i\rightarrow\alpha$
-\end{lem}
-
-\subsection{Definition of \textbf{GLS}}
 \begin{defi}
-	The system of modal logic \text{\textbf{GLS}} is defined as the system
-	of propositional modal logic that have all the theorems of
-	$\GL^{\textbf{Nec}}$\ and
-	 addition of the axiom of Reflexion: 
-	 \begin{enumerate}
-		 \item[\textit{Refl}:]$\Box\alpha\rightarrow\alpha$ 
- 	\end{enumerate}
-	and which sole rule of inference is \textit{modus ponens}. 
+	\textbf{Dobbelt tjek i Per}
+
+	The modal logic \GLS\ is the logic which has the following axioms 
+	\begin{enumerate}
+		\item[GL] All theorems of \GL.
+		\item[Refl] $\Box p\rightarrow p $
+	\end{enumerate}
+	and which sole rule of inference is modus ponens.
 \end{defi}
+
+Another more cumbersome definition of this modal logic can be found in
+Appendix A.
+
 It should be noted that this modal logic is not a \textit{normal} one, since it
-do not have  necessitation as rule of inference. If a modal logic just extended
+do not have  necessitation as a rule of inference. If a modal logic just extended
 \GL\ with the axiom \textit{Refl} then this logic would prove both
-$\neg\Box\bot$ and $\Box\bot$ and thus be inconsistent; this is why we have
-done all the work prior to make a definition without the necessitation rule.
+$\neg\Box\bot$ and $\Box\bot$ and thus be inconsistent; this is why we have not
+included it as rule. But in some way it still has necessitation as a rule,
+since it contains all the theorems of \GL.
 
 There is no completeness theorem for \GLS\ in the same vein as the finite tree
 theorem for \GL (This theorem is found in \cite{Lind1997}). But there is another similar result we will now state and
@@ -470,7 +390,7 @@ Then $w$ is $\alpha$-\textit{reflexive} in $\mathcal{K}$ if
 $\Box\beta\rightarrow\beta\in\phi(w)$ for all $\Box\beta\in S(\alpha)$.
 $\mathcal{K}$ is $\alpha$-reflexive if $w_0$ is $\alpha$-reflexive. Let
 $\mathcal{F}$ be a class of Kripke models; a formula $\alpha$ is
-\textit{r-valid} in $\mathcal{F}$ if $\vdash^\mathcal{K}\alpha$ for all
+\textit{r-valid} in $\mathcal{F}$ if $\vDash^\mathcal{K}\alpha$ for all
 $\alpha$-reflexive $\mathcal{K}\in\mathcal{F}$.
 \end{defi}
 
@@ -535,7 +455,7 @@ $\mathcal{K}^{(n+1)}=(\mathcal{K}^{(n)})'$ and let $w_n$ denote the minimum of
 $\mathcal{K}^{(n)}$. This can graphically been seen by adding a tail of $n$
 nodes below $w_0$, as seen in the following graphs:
 
-%\newpage
+\newpage
 
 \begin{figure}[h]
 	\begin{center}

@@ -1010,6 +1010,68 @@
       \range{pages}{72}
       \keyw{Proof theory}
     \endentry
+    \entry{Thor2021}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5f7d7de2eb0f8ade1e867e4291f0787b}{%
+           family={Jørgensen},
+           familyi={J\bibinitperiod},
+           given={Thorvald},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{5f7d7de2eb0f8ade1e867e4291f0787b}
+      \strng{fullhash}{5f7d7de2eb0f8ade1e867e4291f0787b}
+      \strng{bibnamehash}{5f7d7de2eb0f8ade1e867e4291f0787b}
+      \strng{authorbibnamehash}{5f7d7de2eb0f8ade1e867e4291f0787b}
+      \strng{authornamehash}{5f7d7de2eb0f8ade1e867e4291f0787b}
+      \strng{authorfullhash}{5f7d7de2eb0f8ade1e867e4291f0787b}
+      \field{extraname}{1}
+      \field{sortinit}{J}
+      \field{sortinithash}{c45040a764d616897e7f5b30174d7b92}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Project outside the course scope: Introduction to Modal Logic}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://github.com/thorvald94/Modal-logic/blob/main/FagProjekt.pdf
+      \endverb
+      \verb{url}
+      \verb https://github.com/thorvald94/Modal-logic/blob/main/FagProjekt.pdf
+      \endverb
+    \endentry
+    \entry{Thor2022}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5f7d7de2eb0f8ade1e867e4291f0787b}{%
+           family={Jørgensen},
+           familyi={J\bibinitperiod},
+           given={Thorvald},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{5f7d7de2eb0f8ade1e867e4291f0787b}
+      \strng{fullhash}{5f7d7de2eb0f8ade1e867e4291f0787b}
+      \strng{bibnamehash}{5f7d7de2eb0f8ade1e867e4291f0787b}
+      \strng{authorbibnamehash}{5f7d7de2eb0f8ade1e867e4291f0787b}
+      \strng{authornamehash}{5f7d7de2eb0f8ade1e867e4291f0787b}
+      \strng{authorfullhash}{5f7d7de2eb0f8ade1e867e4291f0787b}
+      \field{extraname}{2}
+      \field{sortinit}{J}
+      \field{sortinithash}{c45040a764d616897e7f5b30174d7b92}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Project outside the course scope: Gödel' Incompleteness Theorems}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://github.com/thorvald94/GodelIncompleteness/blob/main/project.pdf
+      \endverb
+      \verb{url}
+      \verb https://github.com/thorvald94/GodelIncompleteness/blob/main/project.pdf
+      \endverb
+    \endentry
     \entry{Kleene1952}{book}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=9221bb2b4da6f0b8a90f42245abdf6d7}{%
@@ -1809,6 +1871,44 @@
       \field{volume}{25}
       \field{year}{1976}
       \true{nocite}
+    \endentry
+    \entry{Urba2018}{incollection}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=777ba046fdd4d714b967e228be3b8811}{%
+           family={Urbaniak},
+           familyi={U\bibinitperiod},
+           given={Rafal},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3da2e0d8bda6240bf55d6526d0c1fdb8}{%
+           family={Pawlowski},
+           familyi={P\bibinitperiod},
+           given={Pawel},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer International Publishing}%
+      }
+      \strng{namehash}{8bc22602a5dd8102ada78c5e1dd78cd6}
+      \strng{fullhash}{8bc22602a5dd8102ada78c5e1dd78cd6}
+      \strng{bibnamehash}{8bc22602a5dd8102ada78c5e1dd78cd6}
+      \strng{authorbibnamehash}{8bc22602a5dd8102ada78c5e1dd78cd6}
+      \strng{authornamehash}{8bc22602a5dd8102ada78c5e1dd78cd6}
+      \strng{authorfullhash}{8bc22602a5dd8102ada78c5e1dd78cd6}
+      \field{sortinit}{U}
+      \field{sortinithash}{77a6935510e008adcf5b555e7b4f0711}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Introduction to Formal Philosophy}
+      \field{series}{Springer Undergraduate Texts in Philosophy}
+      \field{title}{Logics of (Formal and Informal) Provability}
+      \field{year}{2018}
+      \true{nocite}
+      \field{pages}{191\bibrangedash 237}
+      \range{pages}{47}
     \endentry
     \entry{sep-logic-provability}{incollection}{}
       \name{author}{1}{}{%
