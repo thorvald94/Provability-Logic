@@ -1,20 +1,20 @@
 [0] Config.pm:304> INFO - This is Biber 2.14 (beta)
 [0] Config.pm:307> INFO - Logfile is 'thesis.blg'
-[61] biber:322> INFO - === Fri Nov 25, 2022, 12:54:10
-[73] Biber.pm:415> INFO - Reading 'thesis.bcf'
-[132] Biber.pm:940> INFO - Using all citekeys in bib section 0
-[144] Biber.pm:4256> INFO - Processing section 0
-[144] Utils.pm:75> INFO - Globbing data source 'ThesisBib.bib'
-[144] Utils.pm:91> INFO - Globbed data source 'ThesisBib.bib' to ThesisBib.bib
-[153] Biber.pm:4455> INFO - Looking for bibtex format file 'ThesisBib.bib' for section 0
-[155] bibtex.pm:1653> INFO - LaTeX decoding ...
-[213] bibtex.pm:1471> INFO - Found BibTeX data source 'ThesisBib.bib'
-[429] Utils.pm:293> WARN - BibTeX subsystem: /tmp/biber_tmp_uFyz/ThesisBib.bib_61722.utf8, line 19, warning: 2 characters of junk seen at toplevel
-[429] Utils.pm:293> WARN - BibTeX subsystem: /tmp/biber_tmp_uFyz/ThesisBib.bib_61722.utf8, line 250, warning: 1 characters of junk seen at toplevel
-[490] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[490] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[490] Biber.pm:4084> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
-[490] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
-[530] bbl.pm:652> INFO - Writing 'thesis.bbl' with encoding 'UTF-8'
-[554] bbl.pm:755> INFO - Output to thesis.bbl
-[554] Biber.pm:128> INFO - WARNINGS: 2
+[74] biber:322> INFO - === Mon Nov 28, 2022, 12:20:13
+[90] Biber.pm:415> INFO - Reading 'thesis.bcf'
+[157] Biber.pm:940> INFO - Using all citekeys in bib section 0
+[169] Biber.pm:4256> INFO - Processing section 0
+[169] Utils.pm:75> INFO - Globbing data source 'ThesisBib.bib'
+[170] Utils.pm:91> INFO - Globbed data source 'ThesisBib.bib' to ThesisBib.bib
+[181] Biber.pm:4455> INFO - Looking for bibtex format file 'ThesisBib.bib' for section 0
+[183] bibtex.pm:1653> INFO - LaTeX decoding ...
+[250] bibtex.pm:1471> INFO - Found BibTeX data source 'ThesisBib.bib'
+[504] Utils.pm:293> WARN - BibTeX subsystem: /tmp/biber_tmp_TQRH/ThesisBib.bib_111229.utf8, line 19, warning: 2 characters of junk seen at toplevel
+[505] Utils.pm:293> WARN - BibTeX subsystem: /tmp/biber_tmp_TQRH/ThesisBib.bib_111229.utf8, line 250, warning: 1 characters of junk seen at toplevel
+[560] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[560] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[560] Biber.pm:4084> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[560] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
+[601] bbl.pm:652> INFO - Writing 'thesis.bbl' with encoding 'UTF-8'
+[622] bbl.pm:755> INFO - Output to thesis.bbl
+[622] Biber.pm:128> INFO - WARNINGS: 2

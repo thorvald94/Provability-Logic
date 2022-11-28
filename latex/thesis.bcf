@@ -171,11 +171,11 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>uniquelist</bcf:key>
-      <bcf:value>true</bcf:value>
+      <bcf:value>false</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>uniquename</bcf:key>
-      <bcf:value>full</bcf:value>
+      <bcf:value>false</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>uniqueprimaryauthor</bcf:key>
@@ -412,7 +412,7 @@
     <bcf:option datatype="boolean">doi</bcf:option>
     <bcf:option datatype="boolean">eprint</bcf:option>
     <bcf:option datatype="boolean">related</bcf:option>
-    <bcf:option datatype="boolean">dashed</bcf:option>
+    <bcf:option datatype="boolean">subentry</bcf:option>
     <bcf:option datatype="integer">mincrossrefs</bcf:option>
     <bcf:option datatype="integer">minxrefs</bcf:option>
     <bcf:option datatype="integer">maxnames</bcf:option>
@@ -493,6 +493,7 @@
     <bcf:option datatype="boolean">doi</bcf:option>
     <bcf:option datatype="boolean">eprint</bcf:option>
     <bcf:option datatype="boolean">related</bcf:option>
+    <bcf:option datatype="boolean">subentry</bcf:option>
     <bcf:option datatype="xml">labelalphatemplate</bcf:option>
     <bcf:option datatype="xml">translit</bcf:option>
     <bcf:option datatype="xml">sortexclusion</bcf:option>
@@ -578,6 +579,7 @@
     <bcf:option datatype="boolean" backendout="1">doi</bcf:option>
     <bcf:option datatype="boolean" backendout="1">eprint</bcf:option>
     <bcf:option datatype="boolean" backendout="1">related</bcf:option>
+    <bcf:option datatype="boolean" backendout="1">subentry</bcf:option>
     <bcf:option datatype="integer" backendin="maxcitenames,maxbibnames,maxsortnames">maxnames</bcf:option>
     <bcf:option datatype="integer" backendin="mincitenames,minbibnames,minsortnames">minnames</bcf:option>
     <bcf:option datatype="integer" backendout="1">maxbibnames</bcf:option>
@@ -2186,26 +2188,28 @@
     <bcf:citekey order="4">Soare1987</bcf:citekey>
     <bcf:citekey order="5">Lemmon1977</bcf:citekey>
     <bcf:citekey order="6">Goldblatt2003</bcf:citekey>
-    <bcf:citekey order="7">Thor2021</bcf:citekey>
-    <bcf:citekey order="8">Thor2022</bcf:citekey>
-    <bcf:citekey order="9">Lemmon1977</bcf:citekey>
-    <bcf:citekey order="10">Lemmon1977</bcf:citekey>
-    <bcf:citekey order="11">Blackburn2002</bcf:citekey>
-    <bcf:citekey order="12">Soare2016</bcf:citekey>
-    <bcf:citekey order="13">Soare1987</bcf:citekey>
-    <bcf:citekey order="14">Kleene1952</bcf:citekey>
-    <bcf:citekey order="15">Smor1985</bcf:citekey>
-    <bcf:citekey order="16">Lind1997</bcf:citekey>
-    <bcf:citekey order="17">Boolos1993</bcf:citekey>
-    <bcf:citekey order="18">Lind1996</bcf:citekey>
-    <bcf:citekey order="19">Olson1990</bcf:citekey>
-    <bcf:citekey order="20">Smor1985</bcf:citekey>
-    <bcf:citekey order="21">Fedo2017</bcf:citekey>
-    <bcf:citekey order="22">Boolos1993</bcf:citekey>
-    <bcf:citekey order="23">Boolos1993</bcf:citekey>
+    <bcf:citekey order="7">Ross1936</bcf:citekey>
+    <bcf:citekey order="8">Bool1991</bcf:citekey>
+    <bcf:citekey order="9">Thor2021</bcf:citekey>
+    <bcf:citekey order="10">Thor2022</bcf:citekey>
+    <bcf:citekey order="11">Lemmon1977</bcf:citekey>
+    <bcf:citekey order="12">Lemmon1977</bcf:citekey>
+    <bcf:citekey order="13">Blackburn2002</bcf:citekey>
+    <bcf:citekey order="14">Soare2016</bcf:citekey>
+    <bcf:citekey order="15">Soare1987</bcf:citekey>
+    <bcf:citekey order="16">Kleene1952</bcf:citekey>
+    <bcf:citekey order="17">Smor1985</bcf:citekey>
+    <bcf:citekey order="18">Lind1997</bcf:citekey>
+    <bcf:citekey order="19">Boolos1993</bcf:citekey>
+    <bcf:citekey order="20">Lind1996</bcf:citekey>
+    <bcf:citekey order="21">Olson1990</bcf:citekey>
+    <bcf:citekey order="22">Smor1985</bcf:citekey>
+    <bcf:citekey order="23">Fedo2017</bcf:citekey>
     <bcf:citekey order="24">Boolos1993</bcf:citekey>
+    <bcf:citekey order="25">Boolos1993</bcf:citekey>
+    <bcf:citekey order="26">Boolos1993</bcf:citekey>
     <bcf:citekey order="0" nocite="1">*</bcf:citekey>
-    <bcf:citekey order="25">Smor1985</bcf:citekey>
+    <bcf:citekey order="27">Smor1985</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

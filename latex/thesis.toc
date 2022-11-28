@@ -6,7 +6,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.2}Historical Introduction}{2}{section.1.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2.1}Modal Logic}{3}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.1}Modal Logic}{2}{subsection.1.2.1}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.2.2}Arithmetics and Recursion Theory}{4}{subsection.1.2.2}%
 \defcounter {refsection}{0}\relax 

@@ -34,7 +34,7 @@
 \usepackage{capt-of}
 \usepackage{scalerel}[2016/12/29]
 %Biblo
-\usepackage[style= authortitle, backend=biber, isbn=false, doi=false]{biblatex}
+\usepackage[backend=biber, isbn=false, doi=false]{biblatex}
 \AtEveryBibitem{\clearlist{language}}
 \addbibresource{ThesisBib.bib}
 \emergencystretch=1em
@@ -88,6 +88,7 @@
   {\renewcommand{\qedsymbol}{$\dashv$}%
    \pushQED{\qed}\begin{exmp/}}
   {\popQED\end{exmp/}}
+
 
 %Turnstile instead of box in end of proof
 \renewcommand\qedsymbol{$\dashv$}
