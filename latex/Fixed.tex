@@ -13,13 +13,23 @@ list three different ways in his book \cite{Boolos1993} and Per Lindström has
 another one in his paper \cite{Lind1996}. Here we
 will follow the proof from \cite{Olson1990}.
 
-This proof of the theorem is a semantical proof; i.e it makes heavy use of the
+This proof of the theorem is a semantical proof; i.e it makes use of the
 Kripke semantics of the modal logic \GL, and it further gives a simple
 procedure for "calculating" fixed points.
 
+We will end this chapter with calculating some fixed points. This will be
+possible since our the proof of the fixed point theorem contains a algorithm,
+which can be used to calculate these. In the next chapter we will use Solovay's
+completeness theorems and the fixed point theorem to conclude a few things
+about arithmetic with the help of modal logic. This is the \textit{power} of
+the fixed point theorem; it makes it possible to study the proof predicate with
+the help of modal logic.
 
-Before stating the theorem, we will have to state the following 
-definitions:
+\section{Prerequisite Results and Definitions}
+
+We will start of by make stating some definitions and results that are crucial
+in the proof of the fixed point theorem. We will also in this section define
+the special formulae for which the fixed point theorem holds.
 
 \begin{defi}
 	We abbreviate $\Box\alpha\wedge\alpha$ as $\sBox\alpha$ for every
@@ -27,7 +37,49 @@ definitions:
 \end{defi}
 $\sBox$ is called "strong box" and for a given model $\mathcal{K}$ we have that
 $\vdash_w^\mathcal{K}\sBox \alpha$ states that $\alpha$ is both true and
-provable in note $w$.
+provable in note $w$. There are a few theorem about $\sBox$ in the modal logic
+\textbf{K4} and logics which extends this, that will be
+important in the following. These results are syntactical. We will show these
+now, and more results can be found in \cite{Smor1985} and \cite{Boolos1993}
+
+\begin{thm}
+	\label{seet}
+	Let $\alpha$ be a modal formula then:
+	\begin{enumerate}
+		\item $\vdash_{\textbf{K4}}(\sBox\Box\alpha\leftrightarrow\Box\alpha)\leftrightarrow
+	\Box\sBox \alpha$
+	\item $\vdash_{\textbf{K4}}\sBox\alpha\leftrightarrow\sBox\
+		\sBox\alpha$
+	\end{enumerate}
+\end{thm}
+\begin{proof}
+	We will prove (1). We have that $\vdash_{\textbf{K4}}\Box\alpha\rightarrow\Box\Box\alpha$
+	by the axiom \textbf{4}, and thus since it is also a normal modal logic
+	we have:
+	\[\vdash_{\textbf{K4}}((\Box\Box\alpha\wedge\Box\alpha)\leftrightarrow\Box\alpha)\leftrightarrow\Box(\Box\alpha\wedge\alpha)\]
+	And (1) is exactly this. 
+
+	The proof of (2) is similar.
+\end{proof}
+\begin{thm}
+	\label{GLsæt}
+	Suppose that \textbf{L} extends \textbf{K4}, and we have that
+	$\vdash_{\textbf{L}}\sBox\alpha\rightarrow\beta$. Then
+	$\vdash_{\textbf{L}}\Box\alpha\rightarrow\Box\beta$ and
+	$\vdash_{\textbf{L}}\sBox\alpha\rightarrow\sBox\beta$
+\end{thm}
+This theorem clearly holds for \GL, and we will use it later in this chapter.
+\begin{proof}
+	Since \textbf{L} extends \textbf{K4} we have that
+	$\vdash_{\textbf{L}}\Box\sBox\alpha\rightarrow\Box\beta$ and thus by
+	theorem \ref{seet} we have that
+	$\vdash_{\textbf{L}}\Box\alpha\rightarrow\Box\beta$ and by the
+	definition of $\sBox$ we get that
+	$\vdash_{\textbf{L}}\sBox\alpha\rightarrow\sBox\beta$
+\end{proof}
+Having shown a few results about the syntactical  properties of $\sBox$ we will now
+turn to some of the sementical properties about the relationship between $\Box$
+and $\sBox$.
 \begin{remark}
 	\label{rem:acc}
 By our semantic of modal logic,  we have that $\vDash_w\sBox\alpha$ is true iff $\vDash_v\alpha$
@@ -52,7 +104,9 @@ So rank$(w)$ simple states how many worlds that can be seen from the world $w$.
 Since $W$ is finite and that $R$ is irreflexive we have that the for each $w\in
 W$ the rank of $w$ is unique.
 
-We will need the following three lemmas in our proof of the Fixed Point Theorem:
+We will need the following three lemmas in our proof of the Fixed Point
+Theorem.
+All three of these lemmas are sementical in nature. 
 \begin{lem}
 	\label{lem:acc}
 	Given any Kripke model $\mathcal{K}=\la W,R,\phi\ra$ of \GL, $w\in W$ and
@@ -114,7 +168,7 @@ $\alpha$ with $\beta$; the meaning of $\alpha(\gamma)$ is similar.
 \end{proof}
 
 We are now almost ready to state state and prove the fixed-point theorem. We
-will just need the next to definitions:
+will just need the next two definitions:
 \begin{defi}
 	A formula $\alpha$ is called \textit{modalized in} $p$ if every occurrence of
 	$p$ in  $\alpha$ is under the scope of $\Box$.
@@ -134,11 +188,17 @@ generalization of being modalized in $p$:
 	$\gamma_1(p),\ldots,\gamma_n(p)$, which each contains $p$ that we have
 	$$\alpha=\beta(\gamma_1(p),\ldots,\gamma_n(p))$$.
 \end{defi}
+The following remark will be important in the proof of the fixed point theorem.
+\begin{remark}
 It should be noted that if $\alpha$ is modalized in $p$ that we then have that
 $\alpha$ is $n$-decomposable for some $n$.
+\end{remark}
 
+\section{Proof of the Fixed Point Theorem}
 
-We can now state the fixed point theorem.
+We can now state the fixed point theorem. But we will still need a few lemmas
+in our proof. These will be stated and proven when needed.
+
 \begin{thm}
 	\label{thm:Fixed}
 	If $\alpha$ is modalized in $p$, then there exists a formula $\sigma$
@@ -369,9 +429,38 @@ point theorem in the following form:
 	contaning $p$ such that:
 	\[\vdash_\GL\sBox(p\leftrightarrow\alpha)\leftrightarrow\sBox(p\leftrightarrow\sigma)\]
 \end{cor}
+\section{Calculation of Fixed Points}
 
+The algorithm in the proof of the fixed theorem can be used to calculate
+specific fixed points for some given formula, that fulfills the conditions of
+the theorem. Below are a few example of this.
 
-With the fixed theorem a lot of different fixed points can be calculated. The
+\begin{exmp}
+	Let $\alpha(p)=\Box \neg p$. We will calculate the fixed point for
+	$\alpha$. Let $\gamma_1 (p)=p$ and $\beta(q_1)=q_1$. We then have that
+	$\alpha(p)=\beta(\Box\gamma_1(p))$ and $\alpha_1(p)=\beta(\top)=\top$.
+	The fixed point of $\sigma_1$ of $\alpha_1$ is then $\top$, since $p$
+	does not occur in $\alpha_1$. We can thus conclude that the fixed point
+	$\sigma$ of $\alpha$ is the following:
+	\[\beta(\Box\gamma_1(\top))=\beta(\Box\neg\top)=\Box\neg\top\]
+	this formula is equivalent to $\Box\bot$.
+\end{exmp}
+\begin{exmp}
+	Let $\alpha(p)=\Box p\rightarrow\Box\neg p$. To find the fixed point,
+	let$\gamma_1(p)=p$,$\gamma_2(p)=\neg p$ and
+	$\beta(q_1,q_2)=q_1\rightarrow q_2$. Then clearly we have:
+	\[\alpha(p)=\beta(\Box\gamma_1(p),\Box\gamma_2(p))\]
+	\[\alpha_1(p)=\beta(\top,\Box\gamma_2(p))=\top\rightarrow\Box\neg p\]
+	and 
+	\[\alpha_2(p)=\beta(\Box\gamma_1(p),\top)=\Box p\rightarrow \top\]
+	It is clear that $\alpha_1$ is equivalent to $\Box\neg p$ and that
+	$\alpha_2$ is equivalent top $\top$; thus they have fixed points
+	$\sigma_1=\Box\bot$ and $\sigma_2=\top$. So the fixed point $\sigma$
+	of $\alpha$ is the following:
+	\[\beta(\Box\gamma_1(\Box\bot),\Box\gamma_2(\top))=\Box\Box\bot\rightarrow\Box\neg\top\]
+	or equivalent: $\Box\Box\bot\rightarrow\Box\bot$.
+\end{exmp}
+In figure \ref{Fig} we can see some more fixed points. 
 formula on the left is the formula $\alpha(p)$ and the formula on the right is
 the formula $\sigma$. Line (3) and (6) has already been shown.
 \begin{align*}
@@ -407,13 +496,6 @@ the formula $\sigma$. Line (3) and (6) has already been shown.
 
 We will now show that $\Box p\vee p$ has the fixed point from the table. For
 this end we will need the following theorem:
-\begin{thm}
-	\label{seet}
-	\[\vdash_\GL\sBox\alpha\leftrightarrow\sBox\ \sBox\alpha\]
-\end{thm}
-\begin{proof}
-	Overvej dette
-\end{proof}
 We will start of by showing that no $\beta$ modalized in $p$ is equivalent to
 $\Box p\vee p$. This will the following two propositions show:
 \begin{prop}

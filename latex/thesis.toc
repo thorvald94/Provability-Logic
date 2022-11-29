@@ -72,6 +72,12 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {6}Fixed Point Theorem}{53}{chapter.6}%
 \defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.1}Prerequisite Results and Definitions}{53}{section.6.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.2}Proof of the Fixed Point Theorem}{56}{section.6.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.3}Calculation of Fixed Points}{60}{section.6.3}%
+\defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {7}Solovays Completeness Theorems}{63}{chapter.7}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {7.1}Soundness}{63}{section.7.1}%

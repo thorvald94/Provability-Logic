@@ -2204,12 +2204,14 @@
     <bcf:citekey order="20">Lind1996</bcf:citekey>
     <bcf:citekey order="21">Olson1990</bcf:citekey>
     <bcf:citekey order="22">Smor1985</bcf:citekey>
-    <bcf:citekey order="23">Fedo2017</bcf:citekey>
-    <bcf:citekey order="24">Boolos1993</bcf:citekey>
-    <bcf:citekey order="25">Boolos1993</bcf:citekey>
+    <bcf:citekey order="23">Boolos1993</bcf:citekey>
+    <bcf:citekey order="24">Smor1985</bcf:citekey>
+    <bcf:citekey order="25">Fedo2017</bcf:citekey>
     <bcf:citekey order="26">Boolos1993</bcf:citekey>
+    <bcf:citekey order="27">Boolos1993</bcf:citekey>
+    <bcf:citekey order="28">Boolos1993</bcf:citekey>
     <bcf:citekey order="0" nocite="1">*</bcf:citekey>
-    <bcf:citekey order="27">Smor1985</bcf:citekey>
+    <bcf:citekey order="29">Smor1985</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">
