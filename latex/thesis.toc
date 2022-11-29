@@ -6,7 +6,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.2}Historical Introduction}{2}{section.1.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2.1}Modal Logic}{2}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.1}Modal Logic}{3}{subsection.1.2.1}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.2.2}Arithmetics and Recursion Theory}{4}{subsection.1.2.2}%
 \defcounter {refsection}{0}\relax 
@@ -72,34 +72,34 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {6}Fixed Point Theorem}{53}{chapter.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {7}Solovays Completeness Theorems}{59}{chapter.7}%
+\contentsline {chapter}{\numberline {7}Solovays Completeness Theorems}{63}{chapter.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.1}Soundness}{59}{section.7.1}%
+\contentsline {section}{\numberline {7.1}Soundness}{63}{section.7.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.2}The First Theorem}{60}{section.7.2}%
+\contentsline {section}{\numberline {7.2}The First Theorem}{64}{section.7.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.3}The Second Theorem}{69}{section.7.3}%
+\contentsline {section}{\numberline {7.3}The Second Theorem}{73}{section.7.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.3.1}Using the Second Completeness Theorem}{71}{subsection.7.3.1}%
+\contentsline {subsection}{\numberline {7.3.1}Using the Second Completeness Theorem}{75}{subsection.7.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.4}Generalisations of the Completeness Theorems}{72}{section.7.4}%
+\contentsline {section}{\numberline {7.4}Generalisations of the Completeness Theorems}{76}{section.7.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.5}Solovays Completeness Theorems and Fixed Points}{73}{section.7.5}%
+\contentsline {section}{\numberline {7.5}Solovays Completeness Theorems and Fixed Points}{77}{section.7.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.6}Implications of Solovays Theorems}{74}{section.7.6}%
+\contentsline {section}{\numberline {7.6}Implications of Solovays Theorems}{78}{section.7.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {8}Further Results in Provability Logic}{75}{chapter.8}%
+\contentsline {chapter}{\numberline {8}Further Results in Provability Logic}{79}{chapter.8}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.1}Multi-modal provability logic}{75}{section.8.1}%
+\contentsline {section}{\numberline {8.1}Multi-modal provability logic}{79}{section.8.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.1.1}The system \text {\textbf {GLB}}}{75}{subsection.8.1.1}%
+\contentsline {subsection}{\numberline {8.1.1}The system \text {\textbf {GLB}}}{79}{subsection.8.1.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.1.2}The system \textbf {IDzh} and completeness of \text {\textbf {GLB}}}{78}{subsection.8.1.2}%
+\contentsline {subsection}{\numberline {8.1.2}The system \textbf {IDzh} and completeness of \text {\textbf {GLB}}}{82}{subsection.8.1.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.1.3}The system \textbf {GLP}}{80}{subsection.8.1.3}%
+\contentsline {subsection}{\numberline {8.1.3}The system \textbf {GLP}}{84}{subsection.8.1.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.2}Quantifed provability logic}{81}{section.8.2}%
+\contentsline {section}{\numberline {8.2}Quantifed provability logic}{85}{section.8.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {9}Bibliography}{83}{chapter.9}%
+\contentsline {chapter}{\numberline {9}Bibliography}{87}{chapter.9}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}Necessitation free definition of \text {\textbf {GL}}\ and \text {\textbf {GLS}}}{87}{appendix.A}%
+\contentsline {chapter}{\numberline {A}Necessitation free definition of \text {\textbf {GL}}\ and \text {\textbf {GLS}}}{91}{appendix.A}%
