@@ -111,8 +111,7 @@ quote:
 	he/she provides a proof not to stay there forever. If the refugee is
 	also never allowed to go to one of the previously visited countries,
 	he/she must eventually stop somewhere. So, an honest refugee will never
-	be able to leave his/her country of origin. [Beklemeishev og artemov,
-	find biktex reference]
+	be able to leave his/her country of origin. \parencite{ArteBe}
 \end{displayquote}
 
 Before we can give a formal definition of the function $\varphi$, we will have to
@@ -287,7 +286,12 @@ limit $L$ to deduce the theorem
 			so clearly: $\PRA\vdash\exists v_1(L=v_1)$
 \end{enumerate}
 \end{proof}
-\textbf{Kommenter på Inductionen brugt ovenover.}
+
+The induction in the above proof was not done inside of \PRA, both was done as
+metamathematical induction outside of \PRA. This done because the formula
+$\exists v_1(L=v_1)$ is $\Sigma_2$ and thus we can not use induction on this
+formula inside of \PRA.
+
 \begin{cor}
 	$\PRA\vdash L\leq \ol n$, i.e $\PRA\vdash \bigvee_{x\leq n} L=\ol x$
 \end{cor}
@@ -724,9 +728,11 @@ We have that $\alpha$ is true in $\mathcal{K}$. Since we have that:
 		p\wedge\neg\Box\neg p)$ since we have that
 		$2,3\in\phi(\Box\bot)$
 \end{enumerate}
-It can be shown that this modal is $\alpha$-reflexive; the proof of this can be
+It can be shown that this model is $\alpha$-reflexive; the proof of this can be
 found in \parencite{Smor1985}
 \end{proof}
+This result can be strengthened and it can be shown that the found formula is
+actually $\Sigma_1$
 \section{Generalisations  of the Completeness Theorems}
 
 In this section we have shown the Solovay's Completeness Theorems for \PRA.
@@ -801,9 +807,14 @@ From table \ref{Fig} and the arithmetical soundness theorem, we can conclude the
 		has degree $2$.
 	\item The modal formula $\alpha$ has at most the same modal degree as
 		the modal formula $\sigma$.
+	\item We can further see that line 1 gives that sentences of arithmetic
+		that express their own unprovability are equivalent to the
+		assertion arithmetic is consistent. Line 2 is the same as Löb's
+		answer to Henkin's question, and line 4 gives that refutable
+		sentences are those equivalent to their own consistency.
 \end{enumerate}
 
-\section{Implications of Solovays Theorems}
+\section{Concluding remarks: Implications of Solovay's Theorems}
 
 The clearest implication of the generalized versions of Solovay's Completeness
 Theorems is that the proof predicate of arithmetics can be axiomatized;
@@ -815,7 +826,9 @@ fragment of arithmetics you are working with. The last point can also be seen
 as a negative one; there is no way to differentiate the different fragments of
 arithmetics by looking at their proof predicate.
 
-Further the proportional provability logic is not "hit" with Quines critique of
+Further the proportional provability logic is not effected by Quines critique of
 modal logic as being unintelligible, since it has a very clear and unambiguous
-arithmetic interpretation.
+arithmetic interpretation. This sets it apart from the more philosophical
+interpretations of modal logic, since these interpretations do not have a clear
+meaning.
 \end{document}

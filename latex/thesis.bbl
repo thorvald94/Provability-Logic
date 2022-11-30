@@ -81,12 +81,12 @@
     \endentry
     \entry{Artemov2007}{incollection}{}
       \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=1841fe17ddbeb4863d02f07ce78da70b}{%
+        {{un=1,uniquepart=given,hash=1841fe17ddbeb4863d02f07ce78da70b}{%
            family={Artemov},
            familyi={A\bibinitperiod},
            given={Sergei},
            giveni={S\bibinitperiod},
-           givenun=0}}%
+           givenun=1}}%
       }
       \name{editor}{3}{}{%
         {{hash=1cd00d937dca5343c428760ab90b533d}{%
@@ -135,6 +135,44 @@
       \field{volume}{3}
       \field{year}{2007}
       \true{nocite}
+    \endentry
+    \entry{ArteBe}{incollection}{}
+      \name{author}{2}{}{%
+        {{un=1,uniquepart=given,hash=c780203992c7a90972d7ae5623f48c55}{%
+           family={Artemov},
+           familyi={A\bibinitperiod},
+           given={Sergei\bibnamedelima N.},
+           giveni={S\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=dbc190d968b712170913511bb211ab1d}{%
+           family={Beklemishev},
+           familyi={B\bibinitperiod},
+           given={Lev\bibnamedelima D.},
+           giveni={L\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Dordrecht}%
+      }
+      \list{publisher}{1}{%
+        {Springer Netherlands}%
+      }
+      \strng{namehash}{2f32da79d281b52d05af860304ec5a8f}
+      \strng{fullhash}{2f32da79d281b52d05af860304ec5a8f}
+      \strng{bibnamehash}{2f32da79d281b52d05af860304ec5a8f}
+      \strng{authorbibnamehash}{2f32da79d281b52d05af860304ec5a8f}
+      \strng{authornamehash}{2f32da79d281b52d05af860304ec5a8f}
+      \strng{authorfullhash}{2f32da79d281b52d05af860304ec5a8f}
+      \field{sortinit}{A}
+      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{labeldatesource}{nodate}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Handbook of Philosophical Logic, 2nd Edition}
+      \field{series}{Handbook of Philosophical Logic}
+      \field{title}{Provability Logic}
+      \field{pages}{189\bibrangedash 360}
+      \range{pages}{172}
     \endentry
     \entry{Cooper2004}{book}{}
       \name{author}{1}{}{%
@@ -1177,8 +1215,8 @@
     \endentry
     \entry{Kleene1952}{book}{}
       \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=9221bb2b4da6f0b8a90f42245abdf6d7}{%
-           family={Klenne},
+        {{un=0,uniquepart=base,hash=a8ca9bca77a4b96b2595d31020d200bc}{%
+           family={Kleene},
            familyi={K\bibinitperiod},
            given={S.C.},
            giveni={S\bibinitperiod},
@@ -1190,12 +1228,12 @@
       \list{publisher}{1}{%
         {Wolters-Noordhoff}%
       }
-      \strng{namehash}{9221bb2b4da6f0b8a90f42245abdf6d7}
-      \strng{fullhash}{9221bb2b4da6f0b8a90f42245abdf6d7}
-      \strng{bibnamehash}{9221bb2b4da6f0b8a90f42245abdf6d7}
-      \strng{authorbibnamehash}{9221bb2b4da6f0b8a90f42245abdf6d7}
-      \strng{authornamehash}{9221bb2b4da6f0b8a90f42245abdf6d7}
-      \strng{authorfullhash}{9221bb2b4da6f0b8a90f42245abdf6d7}
+      \strng{namehash}{a8ca9bca77a4b96b2595d31020d200bc}
+      \strng{fullhash}{a8ca9bca77a4b96b2595d31020d200bc}
+      \strng{bibnamehash}{a8ca9bca77a4b96b2595d31020d200bc}
+      \strng{authorbibnamehash}{a8ca9bca77a4b96b2595d31020d200bc}
+      \strng{authornamehash}{a8ca9bca77a4b96b2595d31020d200bc}
+      \strng{authorfullhash}{a8ca9bca77a4b96b2595d31020d200bc}
       \field{sortinit}{K}
       \field{sortinithash}{d3edc18d54b9438a72c24c925bfb38f4}
       \field{extradatescope}{labelyear}

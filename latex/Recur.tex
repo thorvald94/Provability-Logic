@@ -10,9 +10,7 @@ functions The idea behind these two classes of functions is to define what
 we intuitively mean with a computable function. The proofs in this section will
 be rather informal. The goal of this section will be to state and prove
 Kleene's recursion theorem, which will play a crucial role in our proof of 
-Solovay's two  completeness theorems. Further there will also be a few results and
-comments on the so called arithmetical hierarchy, which will make it possible
-for us to generalize Solovay's theorems.
+Solovay's two  completeness theore
 
 The topic I have chosen to call \textit{recursion theory} is today often known as
 \textit{computability theory}. Robert Soares have stated some arguments for why this
@@ -36,7 +34,9 @@ in the class of primitive recursive functions:
 	Ack(m+1,n+1)&=A(m,A(m+1,n))
 \end{align*}
 
-This function grows \textit{to fast} to be a primitive recursive function. A
+This function grows \textit{to fast} to be a primitive recursive function, i.e
+we have for all primitive recursive functions $f(x)$ that for some $y$ that
+$Ack(x,y)>f(x)$ for all $x\in \omega$. 
 proof of this fact can be found in \textbf{Find ref}.
 
 So we will need to expand our class of functions, if we want to
@@ -550,206 +550,9 @@ theorems.
 	I.e $\varphi$ does exactly what we want it to do. WE just need to
 	define $\varphi$ and this can be done by a $\Sigma_1$ induction.
 \end{exmp}
-\section{The Arithmetical Hierarchy}
 
-In this section we will introduce the so called arithmetical hierarchy. Parts
-of it has already be defined; i.e the sets $\Sigma_1$. In the arithmetical
-hierarchy, we can classify sets with respect to their quantifier
-complexity in their syntactical definition.
+This ends our discussion about recursion theory. In the next chapter we will
+generalize the notion of $\Sigma_1$ sets and in chapter \ref{chap:Complete} we
+will use the recursion theorem to define a important function.
 
-In the next chapter about the fragments of arithmetics, we will use the
-arithmetical hierarchy as a tool to detemine the amount of induction we will
-have in a given fragment.
-
-The goal of this section is to introduce the arithmetical hierarchy and prove
-some results about it. The most of these results might not be used going
-forward.
-
-\begin{defi}
-	We define the sets $\Sigma_n$ and $\Pi_n$ in the following way:
-	\begin{enumerate}
-		\item A set $A$ is in $\Sigma_0$ ($\Pi_0$) if and only if $A$
-			is recursive.
-		\item For $n\geq 1$ the set $A$ is in $\Sigma_n$ if there is a
-			recursive relation $R(x,\y)$ such that:
-			$$x\in A\ \text{iff}\ \exists y_1\forall y_2\exists
-			y_3\cdots Qy_nR(x,\y)$$
-			Here $Q$ is $\exists$ if $n$ is odd and $Q$ is
-			$\forall$ if $n$ is even. We define $A$ being in
-			$\Pi_n$ likewise. $A$ is in $\Pi_n$ if:
-			$$x\in A\ \text{iff}\ \forall y_1\exists y_2\forall
-			y_3\cdots Qy_nR(x,\y)$$
-		\item $A$ is in $\Delta_n$ if $A\in\Sigma_n\cap\Pi_n$
-	\end{enumerate}
-	We further say that a formula $\varphi$ is $\Sigma_n$ ($\Pi_n$) if it
-	is $\Sigma_n$ ($\Pi_n$) as a relation of the variables that are free in
-	it. 
-\end{defi}
-In the rest of this project we will mostly look at formulas that are either
-$\Sigma_n$ or $\Pi_n$ and not sets, that have this property.
-
-We can show a few properties of these sets.
-\begin{prop}
-	\begin{enumerate}
-		\item $A\in\Sigma_n\Leftrightarrow\ol A\in\Pi_n$
-		\item $A\in\Sigma_n (\Pi_n)\Rightarrow(\forall
-			m>n)(A\in\Sigma_m\cap\Pi_m)$
-		\item $A,B\in\Sigma_n(\Pi_n)\Rightarrow A\cup B,A\cap
-			B\in\Sigma_n(\Pi_n)$
-		\item $(R\in \Sigma_n\wedge n>0\wedge A=\{x:\exists y
-			R(x,y)\})\Rightarrow A\in\Sigma_n$
-		\item $(B\leq_m A\wedge A\in\Sigma_n)\Rightarrow B\in \Sigma_n$
-		\item If $R\in\Sigma_n(\Pi_n)$ and $A$ and $B$ are defined by:
-			$$\la x,y\ra \in A \Leftrightarrow \forall z<y
-			R(x,y,z)$$
-			and
-			$$\la x,y\ra \in B \Leftrightarrow \exists z<y
-			R(x,y,z)$$
-			Then we have $A,B\in\Sigma_n(\Pi_n)$
-	\end{enumerate}
-\end{prop}
-\begin{proof}
-	\begin{enumerate}
-		\item If we have that:
-			\[
-				A=\{x:\exists y_1\forall y_2\cdots
-				R(x,y_1,\ldots)\}
-			\]
-			Then we have:
-			\[
-				\ol A=\{x:\forall y_1\exists y_2\cdots
-				\neg R(x,y_1,\ldots)\}
-			\]
-			Which is clearly $\Pi_n$.
-		\item If for example $A=\{x:\exists y_1\forall y_2
-			R(x,y_1,y_2)$\}, then we can make the following
-			reformulation of $A$:
-			\[
-				A=\{x:\exists y_1\forall y_2\exists
-				y_3(Rx,y_1,y_2)\wedge y_3=y_3)\}
-			\]
-			This kind of reformulation can be done for any set in
-			$\Sigma_n$ ($\Pi_n$)
-		\item Let the following to sets be defined:
-			\[
-				A=\{x:\exists y_1\forall y_2\cdots
-				R(x,y_1,y_2,\ldots)\}\\
-			\]
-			\[
-				B=\{x:\exists  z_1\forall z_2\cdots
-				S(x,z_1,z_2,\ldots)\}\\
-			\]
-			Then we have:
-			\begin{align*}
-				x\in A\cup B&\Leftrightarrow \exists y_1\forall
-				y_2\cdots R(x,y_1,y_2,\ldots)\vee \exists
-				z_1\forall y_2\cdots S(x,z_1,z_2\ldots)\\
-					    &\Leftrightarrow \exists y_1\exists z_1\forall
-				y_2\forall z_2\cdots (R(x,y_1,y_2,\ldots)\vee
-				S(x,z_1,z_2,\ldots))\\
-					    &\Leftrightarrow \exists u_1\forall
-					    u_2\cdots
-					    (R,(u_1)_0,(u_2)_0,\ldots)\vee
-					    S(x,(u_1)_1,(u_2)_1,\ldots))
-			\end{align*}
-			Which is clearly $\Sigma_n$. The same argument can be
-			made for
-			$A\cap B$ and for $\Pi_n$ sets.
-		\item This follows by quantifier contraction, in the same way
-			as (3)
-		\item Let 
-			\[ 
-				A=\{x:\exists y_1\forall y_2\cdots
-				R(x,y_1,y_2,\ldots)\}
-			\]
-			And let $B\leq_m A$ via the function $f$. Then we have:
-			\[
-				B=\{ x:\exists y_1\forall y_2\cdots
-				R(f(x),y_1,y_2,\ldots)\}
-			\]
-		\item We will prove this by induction on $n$.
-
-			\textbf{Base case:} Let $n=0$. Then $A$ and $B$ are
-			clearly recursive. 
-
-			\textbf{Induction step:} Now assume that $n>0$ and
-			suppose that $R\in\Sigma_n$. Our induction hypothesis
-			says that (6) is true for all $m<n$. Then by (4) we
-			have that $B\in\Sigma_n$. Further we have
-			$S\in\Pi_{n+1}$ such that the following holds:
-			\begin{align*}
-				\la x,y\ra \in A&\Leftrightarrow(\forall z<y)
-				R(x,y,z)\\
-						&\Leftrightarrow(\forall z<y)
-						\exists u S(x,y,z,u)\\
-						&\Leftrightarrow \exists
-						\sigma(\forall z<y)
-						S(x,y,z,\sigma(z))
-			\end{align*}
-			WE have that $\sigma$ range is in $\omega^{<\omega}$.
-			By the indction hypothesis we have that $(\forall
-			z<y)S\Pi_{n+1}$ but by the above deduction we must then
-			have that $A\in\Sigma_n$.
-	\end{enumerate}
-\end{proof}
-
-
-\section{Sigma Completeness}
-We can make a generalization of $D3$. We use
-this generalization in some of our proofs later on. We will first need to prove
-the following lemma:
-\begin{lem}
-	Let $F v_0\ldots v_{n-1}$ be a $\Sigma_1$. Then there is a
-	recursively enumerable formula such that 
-	\[\PRA\vdash F v_0\ldots v_{-n1}\leftrightarrow\exists v(fvv_0\ldots
-	v_{n-1}=\ol 0)\]
-\end{lem}
-\begin{proof}
-\end{proof}
-\begin{thm}[Demonstrable $\Sigma_1$ completeness]
-	\label{thm:DemoSiga}
-	Let $Fv_0\ldots v_{n-1}$ be a $\Sigma_1$ formula with free variables.
-	Then:
-	$$\PRA\vdash Fv_0\ldots
-	v_{n-1}\rightarrow\text{Pr}(\Godelnum{f\dot v_0\ldots\dot v_{n-1}})$$
-\end{thm}
-This theorem states that if a $\Sigma_1$ formula $F$ is true, then it can be
-proven to be true in \PRA\; i.e \PRA\ is complete with respect to $\Sigma_1$
-formulae.
-\begin{proof}
-	By [ja, fra hvad?] we have that there is a $\Sigma_1$ formula $\exists
-	v(gvv_0\ldots v_{n-1}=\ol 0$ such that we have:
-	\begin{equation}
-		\label{eq:Com1}
-		\PRA\vdash fv_0\ldots v_{n-1}\leftrightarrow\exists v(gvv_0\ldots
-		v_{n-1}=\ol 0)
-	\end{equation}
-	and by $D1$ we have:
-	\begin{equation}
-		\label{eq:Com2}
-		\PRA\vdash\text{Pr}(\Godelnum{fv_0\ldots
-		v_{n-1}\leftrightarrow\exists v(gvv_0\ldots v_{n-1}=\ol 0)})
-	\end{equation}
-	We can now make the following deductions:
-	\begin{align*}
-		\PRA\vdash fv_0\ldots v_{n-1}&\rightarrow\exists v (gvv_0\ldots
-		v_{n-1}=\ol 0) 
-					     &&\text{By \ref{eq:Com1}}\\
-					     &\rightarrow\exists v\text{Pr}(
-					     \Godelnum{hvv_0\ldots v_{n-1}=\ol
-					     0}
-					     && \ref{lem:Prov}\\
-					     &\rightarrow\text{Pr}(\Godelnum{
-						     \exists v(hvv_0\ldots
-					     v_{n-1}=\ol 0)})
-					     &&\text{By D1 and D2}\\
-					     &\rightarrow\text{Pr}(\Godelnum{
-					     fv_0\ldots v_{n-1}})
-					     &&\text{By \ref{eq:Com2}}
-	\end{align*}
-\end{proof}
-This theorem gives a difference between $\Sigma_1$ and $\Pi_1$ sentences in
-\PRA. If $F$ is $\Pi_1$ we can have that both $F+\text{Con}(\PRA+F)$ and
-$F+\text{Con}(\PRA+\neg F)$ are consistent, but if $F$ is $\Sigma_1$ we get
-that $F+\text{Con}(\PRA+\neg F)$ is inconsistent.
 \end{document}

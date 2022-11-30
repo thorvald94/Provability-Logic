@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.10.0 (TeX Live 2019/Debian)  (format=lualatex 2022.10.24)  30 NOV 2022 11:01
+This is LuaTeX, Version 1.10.0 (TeX Live 2019/Debian)  (format=lualatex 2022.10.24)  30 NOV 2022 14:59
  restricted system commands enabled.
  file:line:error style messages enabled.
 **thesis.tex
@@ -1337,10 +1337,7 @@ Package luatex.def Info: nat-farve.pdf  used on input line 176.
 (luatex.def)             Requested size: 597.54874pt x 845.06516pt.
  [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
-<./nat-farve.pdf>] [2] (./thesis.toc
-Underfull \vbox (badness 2617) has occurred while \output is active []
-
- [3
+<./nat-farve.pdf>] [2] (./thesis.toc [3
 
 
 ])
@@ -1363,7 +1360,7 @@ chapter 2.
 
 
 ] [22]
-<Turnig.png, id=422, 1449.415pt x 577.15625pt>
+<Turnig.png, id=424, 1449.415pt x 577.15625pt>
 File: Turnig.png Graphic file (type png)
 <use Turnig.png>
 Package luatex.def Info: Turnig.png  used on input line 104.
@@ -1371,17 +1368,17 @@ Package luatex.def Info: Turnig.png  used on input line 104.
  [23<./Turnig.png>]
 LaTeX Font Info:    Font shape `TU/lmss/bx/it' in size <17.28> not available
 (Font)              Font shape `TU/lmss/bx/sl' tried instead on input line 168.
- [24] [25] [26] [27] [28] [29] [30] [31] [32] [33] [34] [35]) [36]
+ [24] [25] [26] [27] [28] [29] [30] [31]) [32]
 chapter 3.
-(./PRA.tex [37
+(./PRA.tex [33
 
 
-] [38] [39] [40] [41]) [42]
+] [34] [35] [36] [37] [38] [39] [40]) [41] [42
+
+
+]
 chapter 4.
-(./GL.tex [43
-
-
-] [44] [45] [46]
+(./GL.tex [43] [44] [45] [46]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [47] [48] [49] [50] [51]) [52]
@@ -1389,29 +1386,32 @@ chapter 5.
 (./Fixed.tex [53
 
 
-] [54] [55] [56] [57] [58] [59] [60] [61]) [62]
+] [54] [55] [56]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [57] [58] [59] [60] [61]) [62] [63] [64
+
+
+]
 chapter 6.
-(./Complete.tex [63
+(./Complete.tex [65] [66] [67] [68] [69] [70] [71] [72] [73] [74] [75] [76] [77] [78] [79]) [80] [81] [82
 
 
-] [64] [65] [66] [67] [68] [69] [70] [71] [72] [73] [74] [75] [76] [77]) [78]
+]
 chapter 7.
-(./Further.tex [79
-
-
-] [80] [81] [82] [83] [84]) [85] [86
+(./Further.tex [83] [84] [85] [86] [87] [88]) [89] [90
 
 
 ]
 chapter 8.
-[87] [88] [89] (./Appen.tex [90]
+[91] [92] [93] (./Appen.tex [94]
 chapter A.
-[91
+[95
 
 
 ]) 
 AED: lastpage setting LastPage
-[92]
+[96]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 224.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 224.
  (./thesis.aux)
@@ -1424,14 +1424,14 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 224.
 )
 
 Here is how much of LuaTeX's memory you used:
- 41533 strings out of 481365
+ 41474 strings out of 481365
  100000,1977958 words of node,token memory allocated
  1851 words of node memory still in use:
    8 hlist, 2 vlist, 2 rule, 2 math, 6 glue, 4 kern, 2 glyph, 385 attribute, 82 glue_spec, 193 attribute_list, 3 write, 2 pdf_action nodes
-   avail lists: 1:4,2:4541,3:789,4:31,5:414,6:117,7:3737,8:89,9:706,10:18,11:231
- 56687 multiletter control sequences out of 65536+600000
+   avail lists: 1:4,2:4561,3:800,4:31,5:414,6:121,7:3737,8:90,9:706,10:18,11:231
+ 56621 multiletter control sequences out of 65536+600000
  103 fonts using 9968051 bytes
- 64i,21n,89p,10120b,1631s stack positions out of 5000i,500n,10000p,200000b,100000s
+ 64i,20n,89p,10120b,1631s stack positions out of 5000i,500n,10000p,200000b,100000s
 
 warning  (pdf backend): unreferenced destination with name 'Hfootnote.4'
 
@@ -1441,10 +1441,10 @@ warning  (pdf backend): unreferenced destination with name 'Hfootnote.2'
 
 warning  (pdf backend): unreferenced destination with name 'Hfootnote.1'
 </usr/share/texmf/fonts/opentype/public/lm/lmmono12-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmromancaps10-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmsans10-boldoblique.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman8-bold.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman10-bold.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman7-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman8-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmmono10-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman10-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman12-italic.otf></usr/share/texmf/fonts/opentype/public/lm/lmsans10-bold.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman12-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman12-bold.otf></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb>
-Output written on thesis.pdf (96 pages, 599734 bytes).
+Output written on thesis.pdf (100 pages, 603079 bytes).
 
-PDF statistics: 1470 PDF objects out of 1728 (max. 8388607)
- 1282 compressed objects within 13 object streams
- 577 named destinations out of 1000 (max. 131072)
- 456 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 1499 PDF objects out of 1728 (max. 8388607)
+ 1306 compressed objects within 14 object streams
+ 584 named destinations out of 1000 (max. 131072)
+ 464 words of extra memory for PDF output out of 10000 (max. 100000000)
 

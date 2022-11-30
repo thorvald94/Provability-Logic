@@ -1,11 +1,165 @@
 \documentclass[../main.tex]{subfiles}
 
-In this section it will be shown how much induction there is in \PRA and other
-arithmetical theories. We will look at different axioatizable subtheories of
-first order arithmetic called fragments. These fragments can be categories in
-the following three categories:
+In this section we will generalize the class of $\sigma_1$ sets to the classes
+of $\sigma_n$, $\pi_n$ and $\delta_n$ sets. These definitions will make it
+possible for us to look at different fragments of arithmetic, since we can
+distinguish these fragments by which class of sets they allow induction on. We
+will start off by defining a "base" fragment called \textbf{EA} and then
+augment it with stronger inductions axioms. 
 
-This section should be seen as overview of the subject
+We will further look at how much induction we have in \PRA; i.e which class of
+formulae from the arithmetical hierarchy we can do induction on in \PRA. Lastly
+we will prove a generalization of Löb's third derivability condition for \PRA.
+
+This section should be seen as overview of the subject, and a lot of statements
+will be left unproven; since these will not play a major role in whats is to
+come.
+
+\section{The arithmetical hierarchy}
+
+
+In this section we will introduce the so called arithmetical hierarchy. Parts
+of it has already be defined; i.e the sets $\Sigma_1$. In the arithmetical
+hierarchy, we can classify sets with respect to their quantifier
+complexity in their syntactical definition.
+
+In the next chapter about the fragments of arithmetics, we will use the
+arithmetical hierarchy as a tool to detemine the amount of induction we will
+have in a given fragment.
+
+The goal of this section is to introduce the arithmetical hierarchy and prove
+some results about it. The most of these results might not be used going
+forward.
+
+\begin{defi}
+	We define the sets $\Sigma_n$ and $\Pi_n$ in the following way:
+	\begin{enumerate}
+		\item A set $A$ is in $\Sigma_0$ ($\Pi_0$) if and only if $A$
+			is recursive.
+		\item For $n\geq 1$ the set $A$ is in $\Sigma_n$ if there is a
+			recursive relation $R(x,\y)$ such that:
+			$$x\in A\ \text{iff}\ \exists y_1\forall y_2\exists
+			y_3\cdots Qy_nR(x,\y)$$
+			Here $Q$ is $\exists$ if $n$ is odd and $Q$ is
+			$\forall$ if $n$ is even. We define $A$ being in
+			$\Pi_n$ likewise. $A$ is in $\Pi_n$ if:
+			$$x\in A\ \text{iff}\ \forall y_1\exists y_2\forall
+			y_3\cdots Qy_nR(x,\y)$$
+		\item $A$ is in $\Delta_n$ if $A\in\Sigma_n\cap\Pi_n$
+	\end{enumerate}
+	We further say that a formula $\varphi$ is $\Sigma_n$ ($\Pi_n$) if it
+	is $\Sigma_n$ ($\Pi_n$) as a relation of the variables that are free in
+	it. 
+\end{defi}
+In the rest of this project we will mostly look at formulas that are either
+$\Sigma_n$ or $\Pi_n$ and not sets, that have this property.
+
+We can show a few properties of these sets.
+\begin{prop}
+	\begin{enumerate}
+		\item $A\in\Sigma_n\Leftrightarrow\ol A\in\Pi_n$
+		\item $A\in\Sigma_n (\Pi_n)\Rightarrow(\forall
+			m>n)(A\in\Sigma_m\cap\Pi_m)$
+		\item $A,B\in\Sigma_n(\Pi_n)\Rightarrow A\cup B,A\cap
+			B\in\Sigma_n(\Pi_n)$
+		\item $(R\in \Sigma_n\wedge n>0\wedge A=\{x:\exists y
+			R(x,y)\})\Rightarrow A\in\Sigma_n$
+		\item $(B\leq_m A\wedge A\in\Sigma_n)\Rightarrow B\in \Sigma_n$
+		\item If $R\in\Sigma_n(\Pi_n)$ and $A$ and $B$ are defined by:
+			$$\la x,y\ra \in A \Leftrightarrow \forall z<y
+			R(x,y,z)$$
+			and
+			$$\la x,y\ra \in B \Leftrightarrow \exists z<y
+			R(x,y,z)$$
+			Then we have $A,B\in\Sigma_n(\Pi_n)$
+	\end{enumerate}
+\end{prop}
+\begin{proof}
+	\begin{enumerate}
+		\item If we have that:
+			\[
+				A=\{x:\exists y_1\forall y_2\cdots
+				R(x,y_1,\ldots)\}
+			\]
+			Then we have:
+			\[
+				\ol A=\{x:\forall y_1\exists y_2\cdots
+				\neg R(x,y_1,\ldots)\}
+			\]
+			Which is clearly $\Pi_n$.
+		\item If for example $A=\{x:\exists y_1\forall y_2
+			R(x,y_1,y_2)$\}, then we can make the following
+			reformulation of $A$:
+			\[
+				A=\{x:\exists y_1\forall y_2\exists
+				y_3(Rx,y_1,y_2)\wedge y_3=y_3)\}
+			\]
+			This kind of reformulation can be done for any set in
+			$\Sigma_n$ ($\Pi_n$)
+		\item Let the following to sets be defined:
+			\[
+				A=\{x:\exists y_1\forall y_2\cdots
+				R(x,y_1,y_2,\ldots)\}\\
+			\]
+			\[
+				B=\{x:\exists  z_1\forall z_2\cdots
+				S(x,z_1,z_2,\ldots)\}\\
+			\]
+			Then we have:
+			\begin{align*}
+				x\in A\cup B&\Leftrightarrow \exists y_1\forall
+				y_2\cdots R(x,y_1,y_2,\ldots)\vee \exists
+				z_1\forall y_2\cdots S(x,z_1,z_2\ldots)\\
+					    &\Leftrightarrow \exists y_1\exists z_1\forall
+				y_2\forall z_2\cdots (R(x,y_1,y_2,\ldots)\vee
+				S(x,z_1,z_2,\ldots))\\
+					    &\Leftrightarrow \exists u_1\forall
+					    u_2\cdots
+					    (R,(u_1)_0,(u_2)_0,\ldots)\vee
+					    S(x,(u_1)_1,(u_2)_1,\ldots))
+			\end{align*}
+			Which is clearly $\Sigma_n$. The same argument can be
+			made for
+			$A\cap B$ and for $\Pi_n$ sets.
+		\item This follows by quantifier contraction, in the same way
+			as (3)
+		\item Let 
+			\[ 
+				A=\{x:\exists y_1\forall y_2\cdots
+				R(x,y_1,y_2,\ldots)\}
+			\]
+			And let $B\leq_m A$ via the function $f$. Then we have:
+			\[
+				B=\{ x:\exists y_1\forall y_2\cdots
+				R(f(x),y_1,y_2,\ldots)\}
+			\]
+		\item We will prove this by induction on $n$.
+
+			\textbf{Base case:} Let $n=0$. Then $A$ and $B$ are
+			clearly recursive. 
+
+			\textbf{Induction step:} Now assume that $n>0$ and
+			suppose that $R\in\Sigma_n$. Our induction hypothesis
+			says that (6) is true for all $m<n$. Then by (4) we
+			have that $B\in\Sigma_n$. Further we have
+			$S\in\Pi_{n+1}$ such that the following holds:
+			\begin{align*}
+				\la x,y\ra \in A&\Leftrightarrow(\forall z<y)
+				R(x,y,z)\\
+						&\Leftrightarrow(\forall z<y)
+						\exists u S(x,y,z,u)\\
+						&\Leftrightarrow \exists
+						\sigma(\forall z<y)
+						S(x,y,z,\sigma(z))
+			\end{align*}
+			WE have that $\sigma$ range is in $\omega^{<\omega}$.
+			By the indction hypothesis we have that $(\forall
+			z<y)S\Pi_{n+1}$ but by the above deduction we must then
+			have that $A\in\Sigma_n$.
+	\end{enumerate}
+\end{proof}
+
+\section{Fragments of arithmetic}
 
 \textbf{Strong fragments:} The fragments that can prove the arithmetized cut elimination theorem.
 
@@ -54,20 +208,23 @@ of arithmetics. We will define the following theories:
 \begin{defi} We define the following fragments:
 
 	\begin{enumerate} 
-		\item The theory $I\Sigma_n$ is the theory that is axiomatized by the axioms
-			of $Q_\leq$ and the $\Sigma_n$-IND axioms. 
+		\item The theory $I\Sigma_n$ [$I\Pi_n$]is the theory that is axiomatized by the axioms
+			of $Q_\leq$ and the $\Sigma_n$ [$\Pi_n$]-IND axioms. 
 		\item The theory $I\Delta_0$ is
 			$Q_\leq$ plus the $\Delta_0$-IND axioms. 
 		\item The theory $L\Sigma_n$ is defined by the theory
 			$I\Delta_0$ plus the $\Sigma_n$-MIN axioms
 		\item The theory $B\Sigma_n$ is defined by the theory
 			$I\Delta_0$ plus the $\Sigma_n$-REPL axioms.
-			The theory $I\Sigma_n^R$ is defined as the closure of
+		\item The theory $I\Sigma_n^R$ is defined as the closure of
 			$Q_\leq$ under the $\Sigma_n$ induction rule:
 			\[\frac{F(0),\ \forall
 					x(F(x)\rightarrow\varphi(x+1))}{\forall
 			x F(x)}\]
-		\item 
+		\item The theory $I\Sigma_n^-$ [$\Pi_n^-$] is the theory axiomatizedbe the
+			axioms of $Q_\leq$ and the schema of induction of
+			$\Sigma_n$ [$\Pi_n^-$] functions $f(x)$, which only has $x$ as a
+			free variable.
 	Lastly the theory Peano arithmetics is defined as the theory $Q$ plus
 	induction for all first order formulas.
 	\end{enumerate}
@@ -77,28 +234,24 @@ role. It can be shown that in $Q$ a lot of the basic facts about arithmetic can
 be shown. These facts will not be shown here, but a list of them can be found
 in [Buss].
 
-\textbf{Overvej om dette skal med}
-\begin{defi}
-	A predicate symbol
-\end{defi}
-\begin{defi}
-	A function symbol.
-\end{defi}
 
 
 
-\section{\PRA}
-A interesting result about \PRA\ is the following:
+\section{\PRA s placement in the arithmetical hierarchy}
+Having introduced the arithmetical hierarchy in the previous section, it is not
+obvious where to place \PRA\ in this hierarchy. But the following theorem can
+be shown.
 \begin{prop}
-	\PRA\ is the equivalent to the theory $I\Sigma_1^R$?
+	\PRA\ is the equivalent to the theory $I\Sigma_1^R$
 \end{prop}
 
 The proof of this is non-trivial and will go way beyond the scope of this
 project. The statement will not be used going forward, and its just included
 to give some intuition about the placement of \PRA\ in the arithmetical hierarchy.
-The proof can be found in Artev \& Bekle. This makes it possible to place \PRA\
-in the arithmetical hierarchy:
-
+The proof can be found in \parencite{ArteBe}. This makes it possible to place \PRA\
+in the arithmetical hierarchy. We can make a visualization of how all the
+different fragments relate to each other:
+\newpage
 \begin{figure}[h]
 	\begin{center}
 \begin{tikzpicture}[baseline={(0,0)}]
@@ -244,73 +397,7 @@ here. But we will use theorem.
 \end{thm}
 
 
-
-\newpage
-\begin{figure}[h]
-	\begin{center}
-\begin{tikzpicture}[baseline={(0,0)}]
-	\node[label={\textbf{Q}}] () at (0,-1) {};
-	\node[] (EA) at (0,0) {};
-	\node[label={$I\Sigma_1^R=$ \PRA}] at (3,-1) {};
-	\node[] (PRA) at (2,0) {};
-	\node[label={$I\Pi_1^-$}] (IPi) at (0,2) {};
-	\node[label={$I\Sigma_1^-$}] (Isig) at (1.5,2) {};
-	\node[] (Isig) at (2,2) {};
-	\node[label={$I\Sigma_1$}] at (4,1) {};
-	\node[] (ISig) at (4,2) {};
-	\node[label={$I\Pi_2^-$}] at (1.5,4) {};
-	\node[] (IPi2) at (2,4) {};
-	\node[label={$I\Sigma_1+I\Pi_2^-$}] at (3.5,4) {};
-	\node[] (ISigPi) at (4,4) {};
-	\node[label={$I\Sigma_2^R$}]  at (6,1) {};
-	\node[] (ISig2R) at (6,2) {};
-	\node[label={$I\Sigma_2^-$}] at (5.5,4) {};
-	\node[] (ISig2-) at (6,4) {};
-	\node[label={$I\Pi_3^-$}] at (5.5,6) {};
-	\node[] (IPi3) at (6,6) {};
-	\node[label={$I\Sigma_2+I\Pi_3^-$}] at (7.5,6) {};
-	\node[] (ISigPi3) at (8,6) {};
-	\node[label={$I\Sigma_2$}] at (8,3) {};
-	\node[] (ISig2) at (8,4) {};
-	\node[label={$I\Sigma_3^R$}] at (10,3) {};
-	\node[] (ISig3R) at (10,4) {};
-	\node[label={$I\Sigma_3^-$}] at (9.5,6) {};
-	\node[] (ISig3) at (10,6) {};
-	\node[] (Tom1) at (10,7) {};
-	\node[] (Tom2) at (11,6) {};
-
-	 \draw (EA) -- (PRA);
-	 \draw (EA) -- (IPi);
-	 \draw (IPi) -- (ISig2R);
-	 \draw (PRA) -- (IPi2);
-	 \draw (IPi2) -- (ISig3R);
-	 \draw (ISig2R) -- (IPi3);
-	 \draw (IPi3) -- (Tom2);
-	 \draw (ISig) -- (ISigPi);
-	 \draw (ISig2) -- (ISigPi3);
-	 \draw (ISig3R) -- (Tom1);
-
-    \node at (EA)[circle,fill,inner sep=1.5pt]{};
-    \node at (PRA)[circle,fill,inner sep=1.5pt]{};
-    \node at (IPi)[circle,fill,inner sep=1.5pt]{};
-    \node at (ISig)[circle,fill,inner sep=1.5pt]{};
-    \node at (Isig)[circle,fill,inner sep=1.5pt]{};
-    \node at (IPi2)[circle,fill,inner sep=1.5pt]{};
-    \node at (ISigPi)[circle,fill,inner sep=1.5pt]{};
-    \node at (ISig2R)[circle,fill,inner sep=1.5pt]{};
-    \node at (ISig2)[circle,fill,inner sep=1.5pt]{};
-    \node at (IPi3)[circle,fill,inner sep=1.5pt]{};
-    \node at (ISigPi3)[circle,fill,inner sep=1.5pt]{};
-    \node at (IPi3)[circle,fill,inner sep=1.5pt]{};
-    \node at (ISig2-)[circle,fill,inner sep=1.5pt]{};
-    \node at (ISig3R)[circle,fill,inner sep=1.5pt]{};
-    \node at (ISig3)[circle,fill,inner sep=1.5pt]{};
-\end{tikzpicture}
-\end{center}
-\caption{How the fragments relate to each other.}
-\end{figure}
-
-\section{Expotential}
+\section{Further extensions of the arithmetical hierarchy}
 
 If we have that $I\Gamma$  is a fragment of Peano Arithmetics, then we can look
 at the fragment
@@ -319,7 +406,7 @@ that for all $x$ the its power $2^x$ exists. We can also look at
 $I\Gamma+\Omega_1$ which is a weaker theory than $I\Gamma+\text{EXP}$.  Here
 $\Omega_1$ is a axiom that asserts that for all $x$ its power
 $x^{\text{log}(x)}$ exists. It is also clear that since $\PRA=I\Sigma_1^R$ that
-these two fragments are weaker than \PRA.  We will return to these two
+the two fragments $I\sigma_1+\text{EXO}$ and $I\sigma_1+\Omega_1$  are weaker than \PRA.  We will return to these two
 fragments later on in chapter \ref{chap:Complete}.
 
 It should here be stated that if look at theories $T$ such that
@@ -331,11 +418,75 @@ have obtained for \PRA\ in that theory. Sometimes a little \textit{tweaking} of
 the encode should be made, but we can get the following result that will not be
 proven here:
 \begin{thm}
-	Let $T$ be a \textit{RE}-theory such that $Q_\leq\subseteq T$. Then the
+	Let $T$ be a \textit{RE}-theory such that $\PRA\leq\subseteq\textbf{EA}$. Then the
 	following holds:
 	\begin{enumerate}
 		\item For any sentences $F$ and $G$ we get Löbs derivability
-		conditions:
-
+		conditions
+	\item Gödel's incompleteness theorems for any sentence such that
+		$\PRA\vdash F\leftrightarrow\ \neg\text{Pr}_T(\Godelnum{F})$
+	\item Löb's theorem for any sentence $F$
 	\end{enumerate}
 \end{thm}
+This shows that the provability predicate of such fragments $T$ behaves in the same
+way as the one from \PRA.
+
+
+\section{Sigma Completeness}
+We can make a generalization of $D3$. We use
+this generalization in some of our proofs later on. We will first need to prove
+the following lemma:
+\begin{lem}
+	Let $F v_0\ldots v_{n-1}$ be a $\Sigma_1$. Then there is a
+	recursively enumerable formula such that 
+	\[\PRA\vdash F v_0\ldots v_{-n1}\leftrightarrow\exists v(fvv_0\ldots
+	v_{n-1}=\ol 0)\]
+\end{lem}
+\begin{proof}
+\end{proof}
+\begin{thm}[Demonstrable $\Sigma_1$ completeness]
+	\label{thm:DemoSiga}
+	Let $Fv_0\ldots v_{n-1}$ be a $\Sigma_1$ formula with free variables.
+	Then:
+	$$\PRA\vdash Fv_0\ldots
+	v_{n-1}\rightarrow\text{Pr}(\Godelnum{f\dot v_0\ldots\dot v_{n-1}})$$
+\end{thm}
+This theorem states that if a $\Sigma_1$ formula $F$ is true, then it can be
+proven to be true in \PRA\; i.e \PRA\ is complete with respect to $\Sigma_1$
+formulae.
+\begin{proof}
+	By [ja, fra hvad?] we have that there is a $\Sigma_1$ formula $\exists
+	v(gvv_0\ldots v_{n-1}=\ol 0$ such that we have:
+	\begin{equation}
+		\label{eq:Com1}
+		\PRA\vdash fv_0\ldots v_{n-1}\leftrightarrow\exists v(gvv_0\ldots
+		v_{n-1}=\ol 0)
+	\end{equation}
+	and by $D1$ we have:
+	\begin{equation}
+		\label{eq:Com2}
+		\PRA\vdash\text{Pr}(\Godelnum{fv_0\ldots
+		v_{n-1}\leftrightarrow\exists v(gvv_0\ldots v_{n-1}=\ol 0)})
+	\end{equation}
+	We can now make the following deductions:
+	\begin{align*}
+		\PRA\vdash fv_0\ldots v_{n-1}&\rightarrow\exists v (gvv_0\ldots
+		v_{n-1}=\ol 0) 
+					     &&\text{By \ref{eq:Com1}}\\
+					     &\rightarrow\exists v\text{Pr}(
+					     \Godelnum{hvv_0\ldots v_{n-1}=\ol
+					     0}
+					     && \ref{lem:Prov}\\
+					     &\rightarrow\text{Pr}(\Godelnum{
+						     \exists v(hvv_0\ldots
+					     v_{n-1}=\ol 0)})
+					     &&\text{By D1 and D2}\\
+					     &\rightarrow\text{Pr}(\Godelnum{
+					     fv_0\ldots v_{n-1}})
+					     &&\text{By \ref{eq:Com2}}
+	\end{align*}
+\end{proof}
+This theorem gives a difference between $\Sigma_1$ and $\Pi_1$ sentences in
+\PRA. If $F$ is $\Pi_1$ we can have that both $F+\text{Con}(\PRA+F)$ and
+$F+\text{Con}(\PRA+\neg F)$ are consistent, but if $F$ is $\Sigma_1$ we get
+that $F+\text{Con}(\PRA+\neg F)$ is inconsistent.
