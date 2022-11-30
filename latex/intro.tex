@@ -4,29 +4,36 @@
 
 This project is about the subject provability logic from mathematical logic,
 and the main result will be Solovay's completeness theorems. These theorems
-states that the $\Box$-operator  modal logic \GL\ axiomatizes the proof
+states that the $\Box$-operator in  modal logic \GL\  axiomatizes the proof
 predicate $\text{Pr}(\cdot)$ from a wide range of fragments of arithmetics, and
 that the modal logic \GLS\ axiomatizes the proof predicate of true arithmetics.
+For proving these theorems we will need some results from recursion theory and
+general knowledge about fragments of arithmetics and the modal logics \GL\ and
+\GLS. We will further prove the fixed point theorem for \GL.
 The project has the following structure: 
 \begin{enumerate}
-	\item In chapter 2 we will define the modal logic \GL\ and the
-		fragment of arithmetics known as primitive recursive
-		arithmetic (\PRA), and state some fundamental results about these.
-	\item In chapter 3 we will introduce recursion theory, and show
-		Kleene's recursion theorem, which will play a crucial role in
-		chapter 7. Further we will introduce the
-		arithmetical hierarchy 
-	\item Chapter 4 is a short introduction to fragments of arithmetics.
-		There will also be a few comments on how much induction we have
-		available  in \PRA.
-	\item In chapter 5 we will show some more results about the modal logic \GL\
-		and introduce the modal logic \GLS.
-	\item In chapter 6 we will prove the fixed point theorem of \GL.
-	\item In chapter 7 we will state and prove Solovays' completeness
-		theorems for \GL\ and \GLS. These are the main results of this
-		project.
-	\item In chapter 8 we will define some generalizations of the modal
-		logic \GL\ and comment on a few properties of these.
+	\item[\textbf{Chapter 1:}] This chapter will list some prerequisite results and
+		definitions about the modal logic \GL and the system primitive
+		recursive arithmetic. 
+	\item[\textbf{Chapter 2:}] In this chapter is a short introduction to recursion
+		theory and the main goal is to show the recursion theorem.
+	\item[\textbf{Chapter 3:}] Here we will introduce the arithmetical hierarchy and
+		fragments of arithmetics. We will further comment on the amount
+		of induction we have available in primitive recursive
+		arithmetics
+	\item[\textbf{Chapter 4:}] We will start of by strengthening the completeness
+		theorem for \GL, with the finite tree completeness theorem.
+		Further we will look at an expansions of \GL\ known as \GLS,
+		which we will use later on for Solovay's second completeness
+		theorem.
+	\item[\textbf{Chapter 5:}] The main goal of this chapter is to state and prove
+		the fixed point theorem. We will also use it to calculate a few fixed
+		points.
+	\item[\textbf{Chapter 6:}] In this chapter we will prove both of Solovay's
+		completeness theorems. After the proofs of these we will look
+		at applications of them.
+	\item[\textbf{Chapter 7:}] Here we will round up the project with some
+		perspective to further results in provability logic.
 \end{enumerate}
 
 In the rest of this introduction we will introduce a bit of notational
@@ -36,7 +43,7 @@ fields, that will play a role in the project.
 The bibliography of this project consist of a wide range of logical,
 mathematical and philosophical texts that in one way or another has a
 connection to of is referenced in the project. The main sources for this project
-is \cite{Smor1985}, \cite{Boolos1993} and \cite{Soare1987}.
+is \parencite{Smor1985}, \cite{Boolos1993} and \cite{Soare1987}.
 
 \section{Notation}
 
@@ -92,8 +99,8 @@ Interpretatione} and in his
 
 With our modern eyes his thoughts about nessaration and possibility seems a
 bit confusing. But he gets some implications about these notions right. A good
-overview of this part of his logical work can be found in \cite{Lemmon1977} and
-in \textbf{det polske værk}
+overview of this part of his logical work can be found in \parencite{Lemmon1977} and
+in \parencite{Luka1957}.
 In the late antiquity and the middle ages there was done some work building on 
 Aristotle earlier work. 
 
@@ -139,7 +146,7 @@ provability logic; this was done by Krister Segerberg without him having
 knowledge of what the interpretation of this logic could be.
 
 A deeper look into the development of modal logic can be found in
-\cite{Goldblatt2003}.
+\parencite{Goldblatt2003}.
 \subsection{Arithmetics and Recursion Theory}
 
 
@@ -186,7 +193,7 @@ original proof was build on the system of Russel and Whitehead and had a
 assumption of $\omega$-consistency. This
 was a blow to the Hilbert program, since the result showed that the goal of it
 could not be fulfilled. Later on John Barkley Rosser in his article
-\cite{Ross1936} improved the
+\parencite{Ross1936} improved the
 result so that it  consistency was enough.
 
 Later on in the 1930s Gödel extended the primitive recursive function to the  recursive
@@ -218,7 +225,7 @@ important theorems about provability; one of these, called the Fixed Point
 Theorem,  will be proven in chapter
 \ref{chap:Fixed}.
 A short overview of this early
-development can be found in \cite{Bool1991}.
+development can be found in \parencite{Bool1991}.
 
 It was proven in 1976 by Solovay that the modal
 logic now known as provability logic, is the logic of the provability predicate

@@ -34,7 +34,7 @@
 \usepackage{capt-of}
 \usepackage{scalerel}[2016/12/29]
 %Biblo
-\usepackage[backend=biber, isbn=false, doi=false]{biblatex}
+\usepackage[style=authoryear, backend=biber, isbn=false, doi=false]{biblatex}
 \AtEveryBibitem{\clearlist{language}}
 \addbibresource{ThesisBib.bib}
 \emergencystretch=1em
@@ -171,6 +171,7 @@ Arithmetics}
 
 \setlength{\headheight}{52pt}% ...at least 51.60004pt
 
+\setcounter{chapter}{-1} %Star chapters with 0
 \begin{document}
 \maketitle
 \tableofcontents

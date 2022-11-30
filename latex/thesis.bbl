@@ -18,10 +18,10 @@
 
 
 \refsection{0}
-  \datalist[entry]{nty/global//global/global}
+  \datalist[entry]{nyt/global//global/global}
     \entry{ArisMeta}{book}{}
       \name{author}{1}{}{%
-        {{hash=be054ac4ab49a541d162854116e0f44c}{%
+        {{un=0,uniquepart=base,hash=be054ac4ab49a541d162854116e0f44c}{%
            family={Aristoteles},
            familyi={A\bibinitperiod}}}%
       }
@@ -37,6 +37,8 @@
       \field{extraname}{1}
       \field{sortinit}{A}
       \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Metafysik}
@@ -45,7 +47,7 @@
     \endentry
     \entry{ArisDe}{book}{}
       \name{author}{1}{}{%
-        {{hash=be054ac4ab49a541d162854116e0f44c}{%
+        {{un=0,uniquepart=base,hash=be054ac4ab49a541d162854116e0f44c}{%
            family={Aristoteles.},
            familyi={A\bibinitperiod}}}%
       }
@@ -67,6 +69,8 @@
       \field{extraname}{2}
       \field{sortinit}{A}
       \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Aristotle's Categories and De interpretatione /}
@@ -77,11 +81,12 @@
     \endentry
     \entry{Artemov2007}{incollection}{}
       \name{author}{1}{}{%
-        {{hash=1841fe17ddbeb4863d02f07ce78da70b}{%
+        {{un=0,uniquepart=base,hash=1841fe17ddbeb4863d02f07ce78da70b}{%
            family={Artemov},
            familyi={A\bibinitperiod},
            given={Sergei},
-           giveni={S\bibinitperiod}}}%
+           giveni={S\bibinitperiod},
+           givenun=0}}%
       }
       \name{editor}{3}{}{%
         {{hash=1cd00d937dca5343c428760ab90b533d}{%
@@ -119,6 +124,8 @@
       \strng{editorfullhash}{38ee60c990236f248bab9f4155347e79}
       \field{sortinit}{A}
       \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Handbook of modal logic}
@@ -131,11 +138,12 @@
     \endentry
     \entry{Cooper2004}{book}{}
       \name{author}{1}{}{%
-        {{hash=5929c3080b415a22e416074508138422}{%
+        {{un=0,uniquepart=base,hash=5929c3080b415a22e416074508138422}{%
            family={Barry\bibnamedelima Cooper},
            familyi={B\bibinitperiod\bibinitdelim C\bibinitperiod},
            given={S},
-           giveni={S\bibinitperiod}}}%
+           giveni={S\bibinitperiod},
+           givenun=0}}%
       }
       \list{location}{1}{%
         {Boca Raton}%
@@ -151,6 +159,8 @@
       \strng{authorfullhash}{5929c3080b415a22e416074508138422}
       \field{sortinit}{B}
       \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{series}{Studies in logic and the foundations of mathematics}
@@ -160,11 +170,12 @@
     \endentry
     \entry{Blackburn2002}{book}{}
       \name{author}{1}{}{%
-        {{hash=14473cad2b160935933179834d7b5a2f}{%
+        {{un=0,uniquepart=base,hash=14473cad2b160935933179834d7b5a2f}{%
            family={Blackburn},
            familyi={B\bibinitperiod},
            given={Patrick},
-           giveni={P\bibinitperiod}}}%
+           giveni={P\bibinitperiod},
+           givenun=0}}%
       }
       \name{editor}{2}{}{%
         {{hash=ce8500c4435316ca20758d1f88f330bb}{%
@@ -197,6 +208,8 @@
       \strng{editorfullhash}{3c45c92836d6fdca91545dc82b67f8b3}
       \field{sortinit}{B}
       \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{series}{Cambridge tracts in theoretical computer science ; 53.}
@@ -205,23 +218,27 @@
     \endentry
     \entry{handbook}{book}{}
       \name{editor}{3}{}{%
-        {{hash=14473cad2b160935933179834d7b5a2f}{%
+        {{un=0,uniquepart=base,hash=14473cad2b160935933179834d7b5a2f}{%
            family={Blackburn},
            familyi={B\bibinitperiod},
            given={Patrick},
-           giveni={P\bibinitperiod}}}%
-        {{hash=f255bfca9dfd795ab9b555ed71486b14}{%
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f255bfca9dfd795ab9b555ed71486b14}{%
            family={Benthem},
            familyi={B\bibinitperiod},
            given={Johan},
            giveni={J\bibinitperiod},
+           givenun=0,
            prefix={van},
-           prefixi={v\bibinitperiod}}}%
-        {{hash=feac505bad30d5bd2b8e65b72656d06e}{%
+           prefixi={v\bibinitperiod},
+           prefixun=0}}%
+        {{un=0,uniquepart=base,hash=feac505bad30d5bd2b8e65b72656d06e}{%
            family={Wolter},
            familyi={W\bibinitperiod},
            given={Frank},
-           giveni={F\bibinitperiod}}}%
+           giveni={F\bibinitperiod},
+           givenun=0}}%
       }
       \list{language}{1}{%
         {eng}%
@@ -240,6 +257,8 @@
       \strng{editorfullhash}{6868491f9551a166414e55a5e1646d51}
       \field{sortinit}{B}
       \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{editor}
       \field{labeltitlesource}{title}
       \field{booktitle}{Handbook of modal logic}
@@ -251,16 +270,18 @@
     \endentry
     \entry{Bool1991}{article}{}
       \name{author}{2}{}{%
-        {{hash=48313f5636935ad9d832fb1d2393d529}{%
+        {{un=1,uniquepart=given,hash=48313f5636935ad9d832fb1d2393d529}{%
            family={Boolos},
            familyi={B\bibinitperiod},
            given={George},
-           giveni={G\bibinitperiod}}}%
-        {{hash=6bf05c3057351e6913d624f901af7cc1}{%
+           giveni={G\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=6bf05c3057351e6913d624f901af7cc1}{%
            family={Sambin},
            familyi={S\bibinitperiod},
            given={Giovanni},
-           giveni={G\bibinitperiod}}}%
+           giveni={G\bibinitperiod},
+           givenun=0}}%
       }
       \list{location}{1}{%
         {Wroclaw, Poland}%
@@ -277,6 +298,8 @@
       \strng{authorfullhash}{5894f13c1b3b2f2d0be3ab4b369c7f07}
       \field{sortinit}{B}
       \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Studia logica}
@@ -289,21 +312,24 @@
     \endentry
     \entry{Boolos2007}{book}{}
       \name{author}{3}{}{%
-        {{hash=ad4890bbbf6b4bde8eeb2a07ed59ed21}{%
+        {{un=2,uniquepart=given,hash=ad4890bbbf6b4bde8eeb2a07ed59ed21}{%
            family={Boolos},
            familyi={B\bibinitperiod},
            given={George\bibnamedelima S.},
-           giveni={G\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
-        {{hash=6acd9a561a4ca3e950354728436201fd}{%
+           giveni={G\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=2}}%
+        {{un=0,uniquepart=base,hash=6acd9a561a4ca3e950354728436201fd}{%
            family={P.\bibnamedelimi Burgess},
            familyi={P\bibinitperiod\bibinitdelim B\bibinitperiod},
            given={John},
-           giveni={J\bibinitperiod}}}%
-        {{hash=490c8095bcacb336f847a71f14433e35}{%
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=490c8095bcacb336f847a71f14433e35}{%
            family={C.\bibnamedelimi Jeffrey},
            familyi={C\bibinitperiod\bibinitdelim J\bibinitperiod},
            given={Richard},
-           giveni={R\bibinitperiod}}}%
+           giveni={R\bibinitperiod},
+           givenun=0}}%
       }
       \list{location}{1}{%
         {Cambridge}%
@@ -319,6 +345,8 @@
       \strng{authorfullhash}{fbd6b8037b5ad539f2f6e718335a5320}
       \field{sortinit}{B}
       \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{5}
@@ -326,13 +354,14 @@
       \field{year}{2007}
       \true{nocite}
     \endentry
-    \entry{Boolos1993}{book}{}
+    \entry{Boolos1979}{book}{}
       \name{author}{1}{}{%
-        {{hash=ad4890bbbf6b4bde8eeb2a07ed59ed21}{%
+        {{un=2,uniquepart=given,hash=ad4890bbbf6b4bde8eeb2a07ed59ed21}{%
            family={Boolos},
            familyi={B\bibinitperiod},
            given={George.\bibnamedelimi S},
-           giveni={G\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+           giveni={G\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=2}}%
       }
       \list{location}{1}{%
         {Cambridge}%
@@ -349,19 +378,21 @@
       \field{extraname}{1}
       \field{sortinit}{B}
       \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{booktitle}{The logic of provability /}
-      \field{title}{The logic of provability}
-      \field{year}{1993}
+      \field{title}{The unprovability of consistency : an essay in modal logic.}
+      \field{year}{1979}
     \endentry
-    \entry{Boolos1979}{book}{}
+    \entry{Boolos1993}{book}{}
       \name{author}{1}{}{%
-        {{hash=ad4890bbbf6b4bde8eeb2a07ed59ed21}{%
+        {{un=2,uniquepart=given,hash=ad4890bbbf6b4bde8eeb2a07ed59ed21}{%
            family={Boolos},
            familyi={B\bibinitperiod},
            given={George.\bibnamedelimi S},
-           giveni={G\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+           giveni={G\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=2}}%
       }
       \list{location}{1}{%
         {Cambridge}%
@@ -378,23 +409,28 @@
       \field{extraname}{2}
       \field{sortinit}{B}
       \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{The unprovability of consistency : an essay in modal logic.}
-      \field{year}{1979}
+      \field{booktitle}{The logic of provability /}
+      \field{title}{The logic of provability}
+      \field{year}{1993}
     \endentry
     \entry{Chang2012}{book}{}
       \name{author}{2}{}{%
-        {{hash=7b1f8e34ca9a7357bc8fa2c374550720}{%
+        {{un=0,uniquepart=base,hash=7b1f8e34ca9a7357bc8fa2c374550720}{%
            family={Chang},
            familyi={C\bibinitperiod},
            given={C.\bibnamedelimi C.},
-           giveni={C\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
-        {{hash=2c98f05fd5b4dd9914e8072796219b69}{%
+           giveni={C\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2c98f05fd5b4dd9914e8072796219b69}{%
            family={Jerome\bibnamedelima Keisler},
            familyi={J\bibinitperiod\bibinitdelim K\bibinitperiod},
            given={H},
-           giveni={H\bibinitperiod}}}%
+           giveni={H\bibinitperiod},
+           givenun=0}}%
       }
       \list{location}{1}{%
         {Mineola}%
@@ -410,6 +446,8 @@
       \strng{authorfullhash}{873278f78b309a4677bd01675795852f}
       \field{sortinit}{C}
       \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{3. th}
@@ -419,11 +457,12 @@
     \endentry
     \entry{Cohen1966}{book}{}
       \name{author}{1}{}{%
-        {{hash=3676bd8b5a6758a014b490225ec91475}{%
+        {{un=0,uniquepart=base,hash=3676bd8b5a6758a014b490225ec91475}{%
            family={Cohen},
            familyi={C\bibinitperiod},
            given={Paul},
-           giveni={P\bibinitperiod}}}%
+           giveni={P\bibinitperiod},
+           givenun=0}}%
       }
       \list{publisher}{1}{%
         {W. A. Benjamin, Inc.}%
@@ -436,6 +475,8 @@
       \strng{authorfullhash}{3676bd8b5a6758a014b490225ec91475}
       \field{sortinit}{C}
       \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Set Theory and the Continuum Hypothesis}
@@ -444,11 +485,12 @@
     \endentry
     \entry{sep-church-turing}{incollection}{}
       \name{author}{1}{}{%
-        {{hash=b527972a3908282d5e4210325e3022c0}{%
+        {{un=0,uniquepart=base,hash=b527972a3908282d5e4210325e3022c0}{%
            family={Copeland},
            familyi={C\bibinitperiod},
            given={B.\bibnamedelimi Jack},
-           giveni={B\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+           giveni={B\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
       }
       \name{editor}{1}{}{%
         {{hash=5ff1c29ff1cc8f6336533b0ffd842a79}{%
@@ -471,6 +513,8 @@
       \strng{editorfullhash}{5ff1c29ff1cc8f6336533b0ffd842a79}
       \field{sortinit}{C}
       \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{The {Stanford} Encyclopedia of Philosophy}
@@ -482,11 +526,12 @@
     \endentry
     \entry{Cutland1980}{book}{}
       \name{author}{1}{}{%
-        {{hash=b5e38cb44435e6bba1a34fc2f7f62ca0}{%
+        {{un=0,uniquepart=base,hash=b5e38cb44435e6bba1a34fc2f7f62ca0}{%
            family={Cutland},
            familyi={C\bibinitperiod},
            given={N.J},
-           giveni={N\bibinitperiod}}}%
+           giveni={N\bibinitperiod},
+           givenun=0}}%
       }
       \list{location}{1}{%
         {Cambridge}%
@@ -502,6 +547,8 @@
       \strng{authorfullhash}{b5e38cb44435e6bba1a34fc2f7f62ca0}
       \field{sortinit}{C}
       \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Computability : an introduction to recursive function theory /}
@@ -512,11 +559,12 @@
     \endentry
     \entry{Davis1965}{book}{}
       \name{editor}{1}{}{%
-        {{hash=3030b497304f96b07639c080bd40073a}{%
+        {{un=0,uniquepart=base,hash=3030b497304f96b07639c080bd40073a}{%
            family={Davis},
            familyi={D\bibinitperiod},
            given={Martin},
-           giveni={M\bibinitperiod}}}%
+           giveni={M\bibinitperiod},
+           givenun=0}}%
       }
       \list{location}{1}{%
         {Hewlett, N. Y}%
@@ -532,6 +580,8 @@
       \strng{editorfullhash}{3030b497304f96b07639c080bd40073a}
       \field{sortinit}{D}
       \field{sortinithash}{c438b3d5d027251ba63f5ed538d98af5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{editor}
       \field{labeltitlesource}{title}
       \field{booktitle}{The undecidable : basic papers on undecidable propositions, unsolvable problems and computable functions /}
@@ -541,11 +591,12 @@
     \endentry
     \entry{Ender2001}{book}{}
       \name{author}{1}{}{%
-        {{hash=b50c15602a78b51cbc6946ab32488502}{%
+        {{un=0,uniquepart=base,hash=b50c15602a78b51cbc6946ab32488502}{%
            family={Enderton},
            familyi={E\bibinitperiod},
            given={Herbert\bibnamedelima B.},
-           giveni={H\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+           giveni={H\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
       }
       \list{publisher}{1}{%
         {Academic Press}%
@@ -558,6 +609,8 @@
       \strng{authorfullhash}{b50c15602a78b51cbc6946ab32488502}
       \field{sortinit}{E}
       \field{sortinithash}{c554bd1a0b76ea92b9f105fe36d9c7b0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{A Mathematical Introduction to Logic}
@@ -566,11 +619,12 @@
     \endentry
     \entry{Garson2006}{book}{}
       \name{author}{1}{}{%
-        {{hash=8963c32d932474127a18c5a77c50a124}{%
+        {{un=0,uniquepart=base,hash=8963c32d932474127a18c5a77c50a124}{%
            family={Garson},
            familyi={G\bibinitperiod},
            given={James\bibnamedelima W},
-           giveni={J\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+           giveni={J\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
       }
       \list{language}{1}{%
         {eng}%
@@ -589,6 +643,8 @@
       \strng{authorfullhash}{8963c32d932474127a18c5a77c50a124}
       \field{sortinit}{G}
       \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{{Modal Logic for Philosophers}}
@@ -597,11 +653,12 @@
     \endentry
     \entry{God1933}{incollection}{}
       \name{author}{1}{}{%
-        {{hash=741b5eae8f0486fe4cfb19725eb596a0}{%
+        {{un=0,uniquepart=base,hash=741b5eae8f0486fe4cfb19725eb596a0}{%
            family={Gödel},
            familyi={G\bibinitperiod},
            given={Kurt},
-           giveni={K\bibinitperiod}}}%
+           giveni={K\bibinitperiod},
+           givenun=0}}%
       }
       \name{editor}{1}{}{%
         {{hash=4882f9cf8c157580b3191115697f529b}{%
@@ -625,6 +682,9 @@
       \field{extraname}{1}
       \field{sortinit}{G}
       \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Collected works}
@@ -636,11 +696,12 @@
     \endentry
     \entry{God1931}{incollection}{}
       \name{author}{1}{}{%
-        {{hash=741b5eae8f0486fe4cfb19725eb596a0}{%
+        {{un=0,uniquepart=base,hash=741b5eae8f0486fe4cfb19725eb596a0}{%
            family={Gödel},
            familyi={G\bibinitperiod},
            given={Kurt},
-           giveni={K\bibinitperiod}}}%
+           giveni={K\bibinitperiod},
+           givenun=0}}%
       }
       \name{editor}{1}{}{%
         {{hash=4882f9cf8c157580b3191115697f529b}{%
@@ -664,6 +725,9 @@
       \field{extraname}{2}
       \field{sortinit}{G}
       \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Collected works}
@@ -675,11 +739,12 @@
     \endentry
     \entry{Goldblatt2003}{article}{}
       \name{author}{1}{}{%
-        {{hash=605f14b2a5c387a9fd5377749cc00b69}{%
+        {{un=0,uniquepart=base,hash=605f14b2a5c387a9fd5377749cc00b69}{%
            family={Goldblatt},
            familyi={G\bibinitperiod},
            given={Robert},
-           giveni={R\bibinitperiod}}}%
+           giveni={R\bibinitperiod},
+           givenun=0}}%
       }
       \list{language}{1}{%
         {eng}%
@@ -695,6 +760,8 @@
       \strng{authorfullhash}{605f14b2a5c387a9fd5377749cc00b69}
       \field{sortinit}{G}
       \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Journal of applied logic}
@@ -705,16 +772,18 @@
     \endentry
     \entry{HajPud1998}{book}{}
       \name{author}{2}{}{%
-        {{hash=2f28578598e1ccab15e82e5c4a988c4e}{%
+        {{un=0,uniquepart=base,hash=2f28578598e1ccab15e82e5c4a988c4e}{%
            family={Hájek},
            familyi={H\bibinitperiod},
            given={Petr.},
-           giveni={P\bibinitperiod}}}%
-        {{hash=7b9f68fdc4a884e36ca728bfb878cd83}{%
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7b9f68fdc4a884e36ca728bfb878cd83}{%
            family={Pudlak},
            familyi={P\bibinitperiod},
            given={P},
-           giveni={P\bibinitperiod}}}%
+           giveni={P\bibinitperiod},
+           givenun=0}}%
       }
       \list{language}{1}{%
         {eng}%
@@ -733,6 +802,8 @@
       \strng{authorfullhash}{362c1c59f763edcf1c118b471a98c75d}
       \field{sortinit}{H}
       \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{354063648X}
@@ -743,16 +814,18 @@
     \endentry
     \entry{Hendricks2011}{book}{}
       \name{author}{2}{}{%
-        {{hash=d360b6c6fbdb3b2d70a1d0e0b39a6500}{%
+        {{un=0,uniquepart=base,hash=d360b6c6fbdb3b2d70a1d0e0b39a6500}{%
            family={Hendricks},
            familyi={H\bibinitperiod},
            given={Vincent\bibnamedelima Fella},
-           giveni={V\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
-        {{hash=e943f6d49bc7e576a365faa1609ad849}{%
+           giveni={V\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e943f6d49bc7e576a365faa1609ad849}{%
            family={Andur\bibnamedelima Pedersen},
            familyi={A\bibinitperiod\bibinitdelim P\bibinitperiod},
            given={Stig},
-           giveni={S\bibinitperiod}}}%
+           giveni={S\bibinitperiod},
+           givenun=0}}%
       }
       \name{editor}{2}{}{%
         {{hash=d360b6c6fbdb3b2d70a1d0e0b39a6500}{%
@@ -786,6 +859,8 @@
       \strng{editorfullhash}{be4d163e70153c39a3917a674fcc79cc}
       \field{sortinit}{H}
       \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{2. revider}
@@ -794,16 +869,14 @@
       \true{nocite}
       \keyw{logik}
     \endentry
-    \entry{Hilb1930}{book}{}
+    \entry{Hilb1926}{article}{}
       \name{author}{1}{}{%
-        {{hash=75b05ce956b23032ea66e4c981e8f28a}{%
+        {{un=0,uniquepart=base,hash=75b05ce956b23032ea66e4c981e8f28a}{%
            family={Hilbert},
            familyi={H\bibinitperiod},
            given={David},
-           giveni={D\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Leipzig und Berlin}%
+           giveni={D\bibinitperiod},
+           givenun=0}}%
       }
       \strng{namehash}{75b05ce956b23032ea66e4c981e8f28a}
       \strng{fullhash}{75b05ce956b23032ea66e4c981e8f28a}
@@ -814,30 +887,8 @@
       \field{extraname}{1}
       \field{sortinit}{H}
       \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{series}{Wissenschaft und Hypothese ; 7.}
-      \field{title}{Grundlagen der Geometrie, 7. umgearb. und verm. Aufl.}
-      \field{year}{1930}
-      \true{nocite}
-    \endentry
-    \entry{Hilb1926}{article}{}
-      \name{author}{1}{}{%
-        {{hash=75b05ce956b23032ea66e4c981e8f28a}{%
-           family={Hilbert},
-           familyi={H\bibinitperiod},
-           given={David},
-           giveni={D\bibinitperiod}}}%
-      }
-      \strng{namehash}{75b05ce956b23032ea66e4c981e8f28a}
-      \strng{fullhash}{75b05ce956b23032ea66e4c981e8f28a}
-      \strng{bibnamehash}{75b05ce956b23032ea66e4c981e8f28a}
-      \strng{authorbibnamehash}{75b05ce956b23032ea66e4c981e8f28a}
-      \strng{authornamehash}{75b05ce956b23032ea66e4c981e8f28a}
-      \strng{authorfullhash}{75b05ce956b23032ea66e4c981e8f28a}
-      \field{extraname}{2}
-      \field{sortinit}{H}
-      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Mathematische annalen}
@@ -849,13 +900,44 @@
       \field{pages}{161\bibrangedash 190}
       \range{pages}{30}
     \endentry
+    \entry{Hilb1930}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=75b05ce956b23032ea66e4c981e8f28a}{%
+           family={Hilbert},
+           familyi={H\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Leipzig und Berlin}%
+      }
+      \strng{namehash}{75b05ce956b23032ea66e4c981e8f28a}
+      \strng{fullhash}{75b05ce956b23032ea66e4c981e8f28a}
+      \strng{bibnamehash}{75b05ce956b23032ea66e4c981e8f28a}
+      \strng{authorbibnamehash}{75b05ce956b23032ea66e4c981e8f28a}
+      \strng{authornamehash}{75b05ce956b23032ea66e4c981e8f28a}
+      \strng{authorfullhash}{75b05ce956b23032ea66e4c981e8f28a}
+      \field{extraname}{2}
+      \field{sortinit}{H}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{series}{Wissenschaft und Hypothese ; 7.}
+      \field{title}{Grundlagen der Geometrie, 7. umgearb. und verm. Aufl.}
+      \field{year}{1930}
+      \true{nocite}
+    \endentry
     \entry{Hintikka1962}{book}{}
       \name{author}{1}{}{%
-        {{hash=cd95458c98ada526a0c3956f70c1804b}{%
+        {{un=0,uniquepart=base,hash=cd95458c98ada526a0c3956f70c1804b}{%
            family={Hintikka},
            familyi={H\bibinitperiod},
            given={K.\bibnamedelimi Jaakko\bibnamedelima J.},
-           giveni={K\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+           giveni={K\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
       }
       \name{editor}{1}{}{%
         {{hash=257a1bb9e271078512e6dc9debe5d424}{%
@@ -882,6 +964,8 @@
       \field{extraname}{1}
       \field{sortinit}{H}
       \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{series}{Contemporary philosophy.}
@@ -892,11 +976,12 @@
     \endentry
     \entry{Hintikka1969}{book}{}
       \name{author}{1}{}{%
-        {{hash=cd95458c98ada526a0c3956f70c1804b}{%
+        {{un=0,uniquepart=base,hash=cd95458c98ada526a0c3956f70c1804b}{%
            family={Hintikka},
            familyi={H\bibinitperiod},
            given={K.\bibnamedelimi Jaakko\bibnamedelima J.},
-           giveni={K\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+           giveni={K\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
       }
       \name{editor}{1}{}{%
         {{hash=257a1bb9e271078512e6dc9debe5d424}{%
@@ -926,6 +1011,8 @@
       \field{extraname}{2}
       \field{sortinit}{H}
       \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{{Models for modalities : Selected essays.}}
@@ -934,16 +1021,18 @@
     \endentry
     \entry{Hughes1971}{book}{}
       \name{author}{2}{}{%
-        {{hash=a587315f4659ffbe813916749e6f2fea}{%
+        {{un=0,uniquepart=base,hash=a587315f4659ffbe813916749e6f2fea}{%
            family={Hughes},
            familyi={H\bibinitperiod},
            given={G.E},
-           giveni={G\bibinitperiod}}}%
-        {{hash=4024bf341349cb041fb0e4b7066d21e2}{%
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4024bf341349cb041fb0e4b7066d21e2}{%
            family={Cresswell},
            familyi={C\bibinitperiod},
            given={M.J},
-           giveni={M\bibinitperiod}}}%
+           giveni={M\bibinitperiod},
+           givenun=0}}%
       }
       \list{publisher}{1}{%
         {Methuen}%
@@ -956,6 +1045,8 @@
       \strng{authorfullhash}{c2d1f7d160cf18eea8d3e7d47f8d17bf}
       \field{sortinit}{H}
       \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{An introduction to modal logic}
@@ -964,18 +1055,21 @@
     \endentry
     \entry{Dick1998}{incollection}{}
       \name{author}{2}{}{%
-        {{hash=e842a16e5b6781824279e4225c58d441}{%
+        {{un=0,uniquepart=base,hash=e842a16e5b6781824279e4225c58d441}{%
            family={Japaridze},
            familyi={J\bibinitperiod},
            given={G},
-           giveni={G\bibinitperiod}}}%
-        {{hash=6f8f3d993543d9f1fdcbbe4b73d74c7d}{%
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6f8f3d993543d9f1fdcbbe4b73d74c7d}{%
            family={Jongh},
            familyi={J\bibinitperiod},
            given={Dick},
            giveni={D\bibinitperiod},
+           givenun=0,
            prefix={de},
-           prefixi={d\bibinitperiod}}}%
+           prefixi={d\bibinitperiod},
+           prefixun=0}}%
       }
       \name{editor}{1}{}{%
         {{hash=b73b9e73d636d6fabcbfb62d50cb64f9}{%
@@ -1004,6 +1098,8 @@
       \strng{editorfullhash}{b73b9e73d636d6fabcbfb62d50cb64f9}
       \field{sortinit}{J}
       \field{sortinithash}{c45040a764d616897e7f5b30174d7b92}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Handbook of proof theory}
@@ -1017,13 +1113,14 @@
       \range{pages}{72}
       \keyw{Proof theory}
     \endentry
-    \entry{Thor2022}{article}{}
+    \entry{Thor2021}{article}{}
       \name{author}{1}{}{%
-        {{hash=5f7d7de2eb0f8ade1e867e4291f0787b}{%
+        {{un=0,uniquepart=base,hash=5f7d7de2eb0f8ade1e867e4291f0787b}{%
            family={Jørgensen},
            familyi={J\bibinitperiod},
            given={Thorvald},
-           giveni={T\bibinitperiod}}}%
+           giveni={T\bibinitperiod},
+           givenun=0}}%
       }
       \strng{namehash}{5f7d7de2eb0f8ade1e867e4291f0787b}
       \strng{fullhash}{5f7d7de2eb0f8ade1e867e4291f0787b}
@@ -1034,34 +1131,8 @@
       \field{extraname}{1}
       \field{sortinit}{J}
       \field{sortinithash}{c45040a764d616897e7f5b30174d7b92}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Project outside the course scope: Gödel's Incompleteness Theorems}
-      \field{year}{2022}
-      \verb{urlraw}
-      \verb https://github.com/thorvald94/GodelIncompleteness/blob/main/project.pdf
-      \endverb
-      \verb{url}
-      \verb https://github.com/thorvald94/GodelIncompleteness/blob/main/project.pdf
-      \endverb
-    \endentry
-    \entry{Thor2021}{article}{}
-      \name{author}{1}{}{%
-        {{hash=5f7d7de2eb0f8ade1e867e4291f0787b}{%
-           family={Jørgensen},
-           familyi={J\bibinitperiod},
-           given={Thorvald},
-           giveni={T\bibinitperiod}}}%
-      }
-      \strng{namehash}{5f7d7de2eb0f8ade1e867e4291f0787b}
-      \strng{fullhash}{5f7d7de2eb0f8ade1e867e4291f0787b}
-      \strng{bibnamehash}{5f7d7de2eb0f8ade1e867e4291f0787b}
-      \strng{authorbibnamehash}{5f7d7de2eb0f8ade1e867e4291f0787b}
-      \strng{authornamehash}{5f7d7de2eb0f8ade1e867e4291f0787b}
-      \strng{authorfullhash}{5f7d7de2eb0f8ade1e867e4291f0787b}
-      \field{extraname}{2}
-      \field{sortinit}{J}
-      \field{sortinithash}{c45040a764d616897e7f5b30174d7b92}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Project outside the course scope: Introduction to Modal Logic}
@@ -1073,13 +1144,45 @@
       \verb https://github.com/thorvald94/Modal-logic/blob/main/FagProjekt.pdf
       \endverb
     \endentry
+    \entry{Thor2022}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5f7d7de2eb0f8ade1e867e4291f0787b}{%
+           family={Jørgensen},
+           familyi={J\bibinitperiod},
+           given={Thorvald},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{5f7d7de2eb0f8ade1e867e4291f0787b}
+      \strng{fullhash}{5f7d7de2eb0f8ade1e867e4291f0787b}
+      \strng{bibnamehash}{5f7d7de2eb0f8ade1e867e4291f0787b}
+      \strng{authorbibnamehash}{5f7d7de2eb0f8ade1e867e4291f0787b}
+      \strng{authornamehash}{5f7d7de2eb0f8ade1e867e4291f0787b}
+      \strng{authorfullhash}{5f7d7de2eb0f8ade1e867e4291f0787b}
+      \field{extraname}{2}
+      \field{sortinit}{J}
+      \field{sortinithash}{c45040a764d616897e7f5b30174d7b92}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Project outside the course scope: Gödel's Incompleteness Theorems}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://github.com/thorvald94/GodelIncompleteness/blob/main/project.pdf
+      \endverb
+      \verb{url}
+      \verb https://github.com/thorvald94/GodelIncompleteness/blob/main/project.pdf
+      \endverb
+    \endentry
     \entry{Kleene1952}{book}{}
       \name{author}{1}{}{%
-        {{hash=9221bb2b4da6f0b8a90f42245abdf6d7}{%
+        {{un=0,uniquepart=base,hash=9221bb2b4da6f0b8a90f42245abdf6d7}{%
            family={Klenne},
            familyi={K\bibinitperiod},
            given={S.C.},
-           giveni={S\bibinitperiod}}}%
+           giveni={S\bibinitperiod},
+           givenun=0}}%
       }
       \list{location}{1}{%
         {Groningen}%
@@ -1095,6 +1198,8 @@
       \strng{authorfullhash}{9221bb2b4da6f0b8a90f42245abdf6d7}
       \field{sortinit}{K}
       \field{sortinithash}{d3edc18d54b9438a72c24c925bfb38f4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Introduction to metamathematics /}
@@ -1105,11 +1210,12 @@
     \endentry
     \entry{Kripke1963}{article}{}
       \name{author}{1}{}{%
-        {{hash=a3de81ce95d09b9915d1be05f9970108}{%
+        {{un=0,uniquepart=base,hash=a3de81ce95d09b9915d1be05f9970108}{%
            family={Kripke},
            familyi={K\bibinitperiod},
            given={Saul\bibnamedelima A},
-           giveni={S\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+           giveni={S\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
       }
       \list{language}{1}{%
         {eng}%
@@ -1128,6 +1234,8 @@
       \strng{authorfullhash}{a3de81ce95d09b9915d1be05f9970108}
       \field{sortinit}{K}
       \field{sortinithash}{d3edc18d54b9438a72c24c925bfb38f4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Mathematical logic quarterly}
@@ -1138,11 +1246,12 @@
     \endentry
     \entry{Lemmon1977}{book}{}
       \name{author}{1}{}{%
-        {{hash=0424632afeaf4ebaf5a825126ab10806}{%
+        {{un=0,uniquepart=base,hash=0424632afeaf4ebaf5a825126ab10806}{%
            family={Lemmon},
            familyi={L\bibinitperiod},
            given={E.\bibnamedelimi J.},
-           giveni={E\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+           giveni={E\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
       }
       \name{editor}{1}{}{%
         {{hash=2c2cafc6a1ce2bce5dbc56e02b0bfb8e}{%
@@ -1171,51 +1280,22 @@
       \strng{editorfullhash}{2c2cafc6a1ce2bce5dbc56e02b0bfb8e}
       \field{sortinit}{L}
       \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{series}{American philosophical quarterly. Monograph series ; monograph no. 11.}
       \field{title}{{An introduction to modal logic : the "Lemmon notes" }}
       \field{year}{1977}
     \endentry
-    \entry{Lind1997}{book}{}
-      \name{author}{1}{}{%
-        {{hash=2570b04d71aa58636e61120b2efc7d8a}{%
-           family={Lindström},
-           familyi={L\bibinitperiod},
-           given={Per},
-           giveni={P\bibinitperiod}}}%
-      }
-      \list{language}{1}{%
-        {eng}%
-      }
-      \list{location}{1}{%
-        {Berlin/Heidelberg}%
-      }
-      \list{publisher}{1}{%
-        {Springer}%
-      }
-      \strng{namehash}{2570b04d71aa58636e61120b2efc7d8a}
-      \strng{fullhash}{2570b04d71aa58636e61120b2efc7d8a}
-      \strng{bibnamehash}{2570b04d71aa58636e61120b2efc7d8a}
-      \strng{authorbibnamehash}{2570b04d71aa58636e61120b2efc7d8a}
-      \strng{authornamehash}{2570b04d71aa58636e61120b2efc7d8a}
-      \strng{authorfullhash}{2570b04d71aa58636e61120b2efc7d8a}
-      \field{extraname}{1}
-      \field{sortinit}{L}
-      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{isbn}{9783540632139}
-      \field{title}{Aspects of Incompleteness}
-      \field{year}{1997}
-    \endentry
     \entry{Lind1996}{article}{}
       \name{author}{1}{}{%
-        {{hash=2570b04d71aa58636e61120b2efc7d8a}{%
+        {{un=0,uniquepart=base,hash=2570b04d71aa58636e61120b2efc7d8a}{%
            family={Lindström},
            familyi={L\bibinitperiod},
            given={Per},
-           giveni={P\bibinitperiod}}}%
+           giveni={P\bibinitperiod},
+           givenun=0}}%
       }
       \list{language}{1}{%
         {eng}%
@@ -1232,9 +1312,11 @@
       \strng{authorbibnamehash}{2570b04d71aa58636e61120b2efc7d8a}
       \strng{authornamehash}{2570b04d71aa58636e61120b2efc7d8a}
       \strng{authorfullhash}{2570b04d71aa58636e61120b2efc7d8a}
-      \field{extraname}{2}
+      \field{extraname}{1}
       \field{sortinit}{L}
       \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0040-5825}
@@ -1247,13 +1329,49 @@
       \range{pages}{43}
       \keyw{Philosophical logics. Philosophy of language ; Philosophy}
     \endentry
+    \entry{Lind1997}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=2570b04d71aa58636e61120b2efc7d8a}{%
+           family={Lindström},
+           familyi={L\bibinitperiod},
+           given={Per},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \list{location}{1}{%
+        {Berlin/Heidelberg}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{2570b04d71aa58636e61120b2efc7d8a}
+      \strng{fullhash}{2570b04d71aa58636e61120b2efc7d8a}
+      \strng{bibnamehash}{2570b04d71aa58636e61120b2efc7d8a}
+      \strng{authorbibnamehash}{2570b04d71aa58636e61120b2efc7d8a}
+      \strng{authornamehash}{2570b04d71aa58636e61120b2efc7d8a}
+      \strng{authorfullhash}{2570b04d71aa58636e61120b2efc7d8a}
+      \field{extraname}{2}
+      \field{sortinit}{L}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9783540632139}
+      \field{title}{Aspects of Incompleteness}
+      \field{year}{1997}
+    \endentry
     \entry{Liu}{misc}{}
       \name{author}{1}{}{%
-        {{hash=621013bf54d3546375ad71f17f020b5b}{%
+        {{un=0,uniquepart=base,hash=621013bf54d3546375ad71f17f020b5b}{%
            family={Liu},
            familyi={L\bibinitperiod},
            given={Yang},
-           giveni={Y\bibinitperiod}}}%
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
       }
       \strng{namehash}{621013bf54d3546375ad71f17f020b5b}
       \strng{fullhash}{621013bf54d3546375ad71f17f020b5b}
@@ -1263,19 +1381,56 @@
       \strng{authorfullhash}{621013bf54d3546375ad71f17f020b5b}
       \field{sortinit}{L}
       \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Incompleteness result and provability logic}
       \field{year}{2013}
       \true{nocite}
     \endentry
+    \entry{Luka1957}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=293a545627bbb4f9a0e27a8028b3cf20}{%
+           family={Łukasiewicz},
+           familyi={Ł\bibinitperiod},
+           given={Jan.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \list{location}{1}{%
+        {Oxford}%
+      }
+      \list{publisher}{1}{%
+        {Clarendon}%
+      }
+      \strng{namehash}{293a545627bbb4f9a0e27a8028b3cf20}
+      \strng{fullhash}{293a545627bbb4f9a0e27a8028b3cf20}
+      \strng{bibnamehash}{293a545627bbb4f9a0e27a8028b3cf20}
+      \strng{authorbibnamehash}{293a545627bbb4f9a0e27a8028b3cf20}
+      \strng{authornamehash}{293a545627bbb4f9a0e27a8028b3cf20}
+      \strng{authorfullhash}{293a545627bbb4f9a0e27a8028b3cf20}
+      \field{sortinit}{Ł}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2. ed. enl.}
+      \field{title}{Aristotle's syllogistic from the standpoint of modern formal logic.}
+      \field{year}{1957}
+    \endentry
     \entry{Mendel1964}{book}{}
       \name{author}{1}{}{%
-        {{hash=e2bc277a7dd2d160f77afac91061dca9}{%
+        {{un=0,uniquepart=base,hash=e2bc277a7dd2d160f77afac91061dca9}{%
            family={Mendelson},
            familyi={M\bibinitperiod},
            given={Elliott},
-           giveni={E\bibinitperiod}}}%
+           giveni={E\bibinitperiod},
+           givenun=0}}%
       }
       \list{publisher}{1}{%
         {Van Norstrand}%
@@ -1288,6 +1443,8 @@
       \strng{authorfullhash}{e2bc277a7dd2d160f77afac91061dca9}
       \field{sortinit}{M}
       \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Introduction to Mathematical Logic}
@@ -1296,11 +1453,12 @@
     \endentry
     \entry{Ownes1973}{article}{}
       \name{author}{1}{}{%
-        {{hash=6f9896f44f33cedec248db1ce74b0c3e}{%
+        {{un=0,uniquepart=base,hash=6f9896f44f33cedec248db1ce74b0c3e}{%
            family={Owens},
            familyi={O\bibinitperiod},
            given={James.\bibnamedelimi C},
-           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
       }
       \strng{namehash}{6f9896f44f33cedec248db1ce74b0c3e}
       \strng{fullhash}{6f9896f44f33cedec248db1ce74b0c3e}
@@ -1310,6 +1468,8 @@
       \strng{authorfullhash}{6f9896f44f33cedec248db1ce74b0c3e}
       \field{sortinit}{O}
       \field{sortinithash}{ff8d4eeb5101e3cf3809959b3592d942}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Notre Dame Journal of Formal Logic}
@@ -1323,11 +1483,12 @@
     \endentry
     \entry{Fedo2017}{article}{}
       \name{author}{1}{}{%
-        {{hash=07e08091a2a804148e1f82b7b3e16e28}{%
+        {{un=0,uniquepart=base,hash=07e08091a2a804148e1f82b7b3e16e28}{%
            family={Pakhomov},
            familyi={P\bibinitperiod},
            given={Fedor},
-           giveni={F\bibinitperiod}}}%
+           giveni={F\bibinitperiod},
+           givenun=0}}%
       }
       \list{language}{1}{%
         {eng}%
@@ -1340,6 +1501,8 @@
       \strng{authorfullhash}{07e08091a2a804148e1f82b7b3e16e28}
       \field{sortinit}{P}
       \field{sortinithash}{bb5b15f2db90f7aef79bb9e83defefcb}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Solovay's completeness without fixed points}
@@ -1353,11 +1516,12 @@
     \endentry
     \entry{Quine}{incollection}{}
       \name{author}{1}{}{%
-        {{hash=9c9299d851aa969452f97be782202d35}{%
+        {{un=0,uniquepart=base,hash=9c9299d851aa969452f97be782202d35}{%
            family={Quine},
            familyi={Q\bibinitperiod},
            given={W.\bibnamedelimi V},
-           giveni={W\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+           giveni={W\bibinitperiod\bibinitdelim V\bibinitperiod},
+           givenun=0}}%
       }
       \list{location}{1}{%
         {New York}%
@@ -1373,6 +1537,8 @@
       \strng{authorfullhash}{9c9299d851aa969452f97be782202d35}
       \field{sortinit}{Q}
       \field{sortinithash}{c54e16deb53fc904a621fa8fd8703b5a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{The Ways of Paradox and other essays}
@@ -1384,11 +1550,12 @@
     \endentry
     \entry{ProofHandbook}{book}{}
       \name{editor}{1}{}{%
-        {{hash=f06e5e2875bdeb99c3877f7516cadb16}{%
+        {{un=0,uniquepart=base,hash=f06e5e2875bdeb99c3877f7516cadb16}{%
            family={R.\bibnamedelimi Buss},
            familyi={R\bibinitperiod\bibinitdelim B\bibinitperiod},
            given={Samuel},
-           giveni={S\bibinitperiod}}}%
+           giveni={S\bibinitperiod},
+           givenun=0}}%
       }
       \list{language}{1}{%
         {eng}%
@@ -1408,6 +1575,9 @@
       \field{extraname}{1}
       \field{sortinit}{R}
       \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{editor}
       \field{labeltitlesource}{title}
       \field{isbn}{1-281-03918-7}
@@ -1419,11 +1589,12 @@
     \endentry
     \entry{Buss1998}{incollection}{}
       \name{author}{1}{}{%
-        {{hash=f06e5e2875bdeb99c3877f7516cadb16}{%
+        {{un=0,uniquepart=base,hash=f06e5e2875bdeb99c3877f7516cadb16}{%
            family={R.\bibnamedelimi Buss},
            familyi={R\bibinitperiod\bibinitdelim B\bibinitperiod},
            given={Samuel},
-           giveni={S\bibinitperiod}}}%
+           giveni={S\bibinitperiod},
+           givenun=0}}%
       }
       \name{editor}{1}{}{%
         {{hash=b73b9e73d636d6fabcbfb62d50cb64f9}{%
@@ -1453,6 +1624,9 @@
       \field{extraname}{2}
       \field{sortinit}{R}
       \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Handbook of proof theory}
@@ -1468,11 +1642,12 @@
     \endentry
     \entry{sep-goedel-incompleteness}{incollection}{}
       \name{author}{1}{}{%
-        {{hash=a9dd0fc2d310e3e2118ede23fff02f66}{%
+        {{un=0,uniquepart=base,hash=a9dd0fc2d310e3e2118ede23fff02f66}{%
            family={Raatikainen},
            familyi={R\bibinitperiod},
            given={Panu},
-           giveni={P\bibinitperiod}}}%
+           giveni={P\bibinitperiod},
+           givenun=0}}%
       }
       \name{editor}{1}{}{%
         {{hash=5ff1c29ff1cc8f6336533b0ffd842a79}{%
@@ -1495,6 +1670,8 @@
       \strng{editorfullhash}{5ff1c29ff1cc8f6336533b0ffd842a79}
       \field{sortinit}{R}
       \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{The {Stanford} Encyclopedia of Philosophy}
@@ -1506,11 +1683,12 @@
     \endentry
     \entry{Olson1990}{article}{}
       \name{author}{1}{}{%
-        {{hash=5fc9c56ba8c0c7647e2ceb499ed1b123}{%
+        {{un=0,uniquepart=base,hash=5fc9c56ba8c0c7647e2ceb499ed1b123}{%
            family={Reidhaar-Olson},
            familyi={R\bibinithyphendelim O\bibinitperiod},
            given={L},
-           giveni={L\bibinitperiod}}}%
+           giveni={L\bibinitperiod},
+           givenun=0}}%
       }
       \list{language}{1}{%
         {eng}%
@@ -1529,6 +1707,8 @@
       \strng{authorfullhash}{5fc9c56ba8c0c7647e2ceb499ed1b123}
       \field{sortinit}{R}
       \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0029-4527}
@@ -1543,11 +1723,12 @@
     \endentry
     \entry{Ross1936}{article}{}
       \name{author}{1}{}{%
-        {{hash=2f291ad78928a5164c16b7632177cba6}{%
+        {{un=0,uniquepart=base,hash=2f291ad78928a5164c16b7632177cba6}{%
            family={Rosser},
            familyi={R\bibinitperiod},
            given={John\bibnamedelima Barkley},
-           giveni={J\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+           giveni={J\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
       }
       \strng{namehash}{2f291ad78928a5164c16b7632177cba6}
       \strng{fullhash}{2f291ad78928a5164c16b7632177cba6}
@@ -1557,6 +1738,8 @@
       \strng{authorfullhash}{2f291ad78928a5164c16b7632177cba6}
       \field{sortinit}{R}
       \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Journal of Symbolic Logic}
@@ -1565,11 +1748,12 @@
     \endentry
     \entry{Sgerberg1971}{book}{}
       \name{author}{1}{}{%
-        {{hash=d7abbe80329c2fd25304dc3e42d04fca}{%
+        {{un=0,uniquepart=base,hash=d7abbe80329c2fd25304dc3e42d04fca}{%
            family={Segerberg},
            familyi={S\bibinitperiod},
            given={Krister},
-           giveni={K\bibinitperiod}}}%
+           giveni={K\bibinitperiod},
+           givenun=0}}%
       }
       \list{publisher}{1}{%
         {Uppsala Universitet}%
@@ -1582,6 +1766,8 @@
       \strng{authorfullhash}{d7abbe80329c2fd25304dc3e42d04fca}
       \field{sortinit}{S}
       \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{series}{Filosofska Studier, vol.13}
@@ -1591,11 +1777,12 @@
     \endentry
     \entry{Sipser2013}{book}{}
       \name{author}{1}{}{%
-        {{hash=13b9c16a9de2bb891eb8aa2a768eb2a8}{%
+        {{un=0,uniquepart=base,hash=13b9c16a9de2bb891eb8aa2a768eb2a8}{%
            family={Sipser},
            familyi={S\bibinitperiod},
            given={Michael},
-           giveni={M\bibinitperiod}}}%
+           giveni={M\bibinitperiod},
+           givenun=0}}%
       }
       \list{location}{1}{%
         {Boston}%
@@ -1611,6 +1798,8 @@
       \strng{authorfullhash}{13b9c16a9de2bb891eb8aa2a768eb2a8}
       \field{sortinit}{S}
       \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Introduction to the theory of computation /}
@@ -1621,11 +1810,12 @@
     \endentry
     \entry{Skolem1923}{book}{}
       \name{author}{1}{}{%
-        {{hash=943720db360840023e62aa2912d7fbb7}{%
+        {{un=0,uniquepart=base,hash=943720db360840023e62aa2912d7fbb7}{%
            family={Skolem},
            familyi={S\bibinitperiod},
            given={Th.},
-           giveni={T\bibinitperiod}}}%
+           giveni={T\bibinitperiod},
+           givenun=0}}%
       }
       \list{language}{1}{%
         {ger}%
@@ -1644,6 +1834,8 @@
       \strng{authorfullhash}{943720db360840023e62aa2912d7fbb7}
       \field{sortinit}{S}
       \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Begründung der elementaren Arithmetik durch die rekurrierende Denkweise ohne Anwendung scheinbarer veränderlichen mit unendlichem Ausdehnungsbereich /}
@@ -1654,11 +1846,12 @@
     \endentry
     \entry{Smor1977b}{incollection}{}
       \name{author}{1}{}{%
-        {{hash=aa347a8abe37c910f2de21ad961273f9}{%
+        {{un=0,uniquepart=base,hash=aa347a8abe37c910f2de21ad961273f9}{%
            family={Smorynski},
            familyi={S\bibinitperiod},
            given={Craig},
-           giveni={C\bibinitperiod}}}%
+           giveni={C\bibinitperiod},
+           givenun=0}}%
       }
       \name{editor}{3}{}{%
         {{hash=4d51dd95da9e5f67c416aff664ce3192}{%
@@ -1695,6 +1888,9 @@
       \field{extraname}{1}
       \field{sortinit}{S}
       \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Logic Colloguim 77}
@@ -1705,38 +1901,14 @@
       \field{pages}{253\bibrangedash 261}
       \range{pages}{9}
     \endentry
-    \entry{Smor1985}{book}{}
-      \name{author}{1}{}{%
-        {{hash=aa347a8abe37c910f2de21ad961273f9}{%
-           family={Smorynski},
-           familyi={S\bibinitperiod},
-           given={Craig},
-           giveni={C\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Springer-verlag}%
-      }
-      \strng{namehash}{aa347a8abe37c910f2de21ad961273f9}
-      \strng{fullhash}{aa347a8abe37c910f2de21ad961273f9}
-      \strng{bibnamehash}{aa347a8abe37c910f2de21ad961273f9}
-      \strng{authorbibnamehash}{aa347a8abe37c910f2de21ad961273f9}
-      \strng{authornamehash}{aa347a8abe37c910f2de21ad961273f9}
-      \strng{authorfullhash}{aa347a8abe37c910f2de21ad961273f9}
-      \field{extraname}{2}
-      \field{sortinit}{S}
-      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Self-Rference and modal logic}
-      \field{year}{1985}
-    \endentry
     \entry{SmorHand}{incollection}{}
       \name{author}{1}{}{%
-        {{hash=aa347a8abe37c910f2de21ad961273f9}{%
+        {{un=0,uniquepart=base,hash=aa347a8abe37c910f2de21ad961273f9}{%
            family={Smorynski},
            familyi={S\bibinitperiod},
            given={Craig},
-           giveni={C\bibinitperiod}}}%
+           giveni={C\bibinitperiod},
+           givenun=0}}%
       }
       \name{editor}{1}{}{%
         {{hash=faa3cca850326b0f6e3378937dd3b66d}{%
@@ -1757,9 +1929,12 @@
       \strng{editorbibnamehash}{faa3cca850326b0f6e3378937dd3b66d}
       \strng{editornamehash}{faa3cca850326b0f6e3378937dd3b66d}
       \strng{editorfullhash}{faa3cca850326b0f6e3378937dd3b66d}
-      \field{extraname}{3}
+      \field{extraname}{2}
       \field{sortinit}{S}
       \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{The Handbook of Mathematical logic}
@@ -1767,13 +1942,42 @@
       \field{year}{1977}
       \true{nocite}
     \endentry
+    \entry{Smor1985}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=aa347a8abe37c910f2de21ad961273f9}{%
+           family={Smorynski},
+           familyi={S\bibinitperiod},
+           given={Craig},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer-verlag}%
+      }
+      \strng{namehash}{aa347a8abe37c910f2de21ad961273f9}
+      \strng{fullhash}{aa347a8abe37c910f2de21ad961273f9}
+      \strng{bibnamehash}{aa347a8abe37c910f2de21ad961273f9}
+      \strng{authorbibnamehash}{aa347a8abe37c910f2de21ad961273f9}
+      \strng{authornamehash}{aa347a8abe37c910f2de21ad961273f9}
+      \strng{authorfullhash}{aa347a8abe37c910f2de21ad961273f9}
+      \field{extraname}{3}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Self-Rference and modal logic}
+      \field{year}{1985}
+    \endentry
     \entry{Soare1987}{book}{}
       \name{author}{1}{}{%
-        {{hash=44e91051976de07ef7699c7f8cd5cfa0}{%
+        {{un=0,uniquepart=base,hash=44e91051976de07ef7699c7f8cd5cfa0}{%
            family={Soare},
            familyi={S\bibinitperiod},
            given={Robert\bibnamedelima I},
-           giveni={R\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+           giveni={R\bibinitperiod\bibinitdelim I\bibinitperiod},
+           givenun=0}}%
       }
       \list{location}{1}{%
         {Berlin ;}%
@@ -1790,6 +1994,8 @@
       \field{extraname}{1}
       \field{sortinit}{S}
       \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{series}{Perspectives in Mathematical Logic.}
@@ -1799,11 +2005,12 @@
     \endentry
     \entry{Soare2016}{book}{}
       \name{author}{1}{}{%
-        {{hash=44e91051976de07ef7699c7f8cd5cfa0}{%
+        {{un=0,uniquepart=base,hash=44e91051976de07ef7699c7f8cd5cfa0}{%
            family={Soare},
            familyi={S\bibinitperiod},
            given={Robert\bibnamedelima I},
-           giveni={R\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+           giveni={R\bibinitperiod\bibinitdelim I\bibinitperiod},
+           givenun=0}}%
       }
       \list{location}{1}{%
         {Berlin, Heidelberg}%
@@ -1820,6 +2027,8 @@
       \field{extraname}{2}
       \field{sortinit}{S}
       \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Turing Computability}
@@ -1829,11 +2038,12 @@
     \endentry
     \entry{solovay976}{article}{}
       \name{author}{1}{}{%
-        {{hash=f48640301c2ee285cda30fb82c1ed107}{%
+        {{un=0,uniquepart=base,hash=f48640301c2ee285cda30fb82c1ed107}{%
            family={Solovay},
            familyi={S\bibinitperiod},
            given={Robert\bibnamedelima M},
-           giveni={R\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+           giveni={R\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
       }
       \list{language}{1}{%
         {eng}%
@@ -1846,6 +2056,8 @@
       \strng{authorfullhash}{f48640301c2ee285cda30fb82c1ed107}
       \field{sortinit}{S}
       \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Israel journal of mathematics}
@@ -1857,16 +2069,18 @@
     \endentry
     \entry{Urba2018}{incollection}{}
       \name{author}{2}{}{%
-        {{hash=777ba046fdd4d714b967e228be3b8811}{%
+        {{un=0,uniquepart=base,hash=777ba046fdd4d714b967e228be3b8811}{%
            family={Urbaniak},
            familyi={U\bibinitperiod},
            given={Rafal},
-           giveni={R\bibinitperiod}}}%
-        {{hash=3da2e0d8bda6240bf55d6526d0c1fdb8}{%
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3da2e0d8bda6240bf55d6526d0c1fdb8}{%
            family={Pawlowski},
            familyi={P\bibinitperiod},
            given={Pawel},
-           giveni={P\bibinitperiod}}}%
+           giveni={P\bibinitperiod},
+           givenun=0}}%
       }
       \list{publisher}{1}{%
         {Springer International Publishing}%
@@ -1879,6 +2093,8 @@
       \strng{authorfullhash}{8bc22602a5dd8102ada78c5e1dd78cd6}
       \field{sortinit}{U}
       \field{sortinithash}{77a6935510e008adcf5b555e7b4f0711}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Introduction to Formal Philosophy}
@@ -1891,11 +2107,12 @@
     \endentry
     \entry{sep-logic-provability}{incollection}{}
       \name{author}{1}{}{%
-        {{hash=50c25a6fc1ac93f35f95cda5c5adf929}{%
+        {{un=0,uniquepart=base,hash=50c25a6fc1ac93f35f95cda5c5adf929}{%
            family={Verbrugge},
            familyi={V\bibinitperiod},
            given={Rineke\bibnamedelima (L.C.)},
-           giveni={R\bibinitperiod\bibinitdelim (\bibinitperiod}}}%
+           giveni={R\bibinitperiod\bibinitdelim (\bibinitperiod},
+           givenun=0}}%
       }
       \name{editor}{1}{}{%
         {{hash=5ff1c29ff1cc8f6336533b0ffd842a79}{%
@@ -1918,6 +2135,8 @@
       \strng{editorfullhash}{5ff1c29ff1cc8f6336533b0ffd842a79}
       \field{sortinit}{V}
       \field{sortinithash}{02432525618c08e2b03cac47c19764af}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{The {Stanford} Encyclopedia of Philosophy}
@@ -1929,16 +2148,18 @@
     \endentry
     \entry{alma99122693854105763}{book}{}
       \name{author}{2}{}{%
-        {{hash=9131dcc0b7c52c07d7d95e489ba0a0f6}{%
+        {{un=0,uniquepart=base,hash=9131dcc0b7c52c07d7d95e489ba0a0f6}{%
            family={Whitehead},
            familyi={W\bibinitperiod},
            given={Alfred\bibnamedelima North.},
-           giveni={A\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
-        {{hash=c58c42b6f7e7e1f78dbbdc65ed8e5384}{%
+           giveni={A\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c58c42b6f7e7e1f78dbbdc65ed8e5384}{%
            family={Russell},
            familyi={R\bibinitperiod},
            given={Bertrand},
-           giveni={B\bibinitperiod}}}%
+           giveni={B\bibinitperiod},
+           givenun=0}}%
       }
       \list{language}{1}{%
         {eng}%
@@ -1957,6 +2178,8 @@
       \strng{authorfullhash}{048cf9054c2e7dc9fef3172a79679690}
       \field{sortinit}{W}
       \field{sortinithash}{1af34bd8c148ffb32de1494636b49713}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Principia mathematica /}
