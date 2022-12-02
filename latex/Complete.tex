@@ -538,6 +538,13 @@ a model of \GL. The set $W$ consists of recursively axiomitized extensions of
 i.e the theory $w_1$ has the consistency of theory $w_2$ as one of its
 theorems. It is clear that this relation is transitive and conversely
 well-founded.
+
+Lastly we can give an uniform version of Solovay's first completeness theorem:
+\begin{thm}
+	There is an arithmetical interpretations $^*$ such that for each modal
+	formula $\alpha$ we have that:
+	\[\PRA\vdash\alpha^*\ \text{iff}\ \vdash_\GL\alpha\]
+\end{thm}
 \section{The Second Theorem}
 \label{chap:second}
 Solovay's Second Completeness Theorem is a strengthening of the first one,
@@ -737,7 +744,7 @@ actually $\Sigma_1$
 
 In this section we have shown the Solovay's Completeness Theorems for \PRA.
 But these theorems holds for a much wider class of fragments of Peano
-Arithmetics. It can be shown \textbf{REf De joghn} that the theorem holds for
+Arithmetics. It can be shown that the theorem holds for
 theories $T$ that fulfills the following to conditions:
 \begin{enumerate}
 	\item $T$ extends $I\Delta_0+\text{EXP}$
@@ -746,13 +753,16 @@ theories $T$ that fulfills the following to conditions:
 \end{enumerate}
 
 This proof does not use the Recursion theorem for creating the function
-$\varphi$, but instead uses the diagonalization lemma (i.e Lemma 2.1). The
+$\varphi$, but instead uses the diagonalization lemma. The
 proof of this will not this will not be given here, but it can be found in
-\textbf{Ref artiklen}.
+\parencite{Dick1991}. This generalization shows that \GL\ axiomatize a very big
+range of different fragments of arithetmics; i.e the proof predicate in all of
+these fragments behaves in the same way.
 
 It is not known if Solovays theorems holds for weaker conditions than
 $I\Delta_0+\text{EXP}$; i.e we do not know if it holds for example for the theory
 $I\Delta_0+\Omega_1$.
+
 
 
 Solovay's theorems can also be proven for some fragments without the use of
@@ -763,6 +773,8 @@ without the use of the fixed point lemma or the recursion theorem in
 \parencite{Fedo2017}. This
 newer proof might be able to giver a specific lower bound on the strength of
 the fragments Solovays theorems holds for.
+
+
 
 \section{Solovays Completeness Theorems and Fixed Points}
 
@@ -824,11 +836,19 @@ and negative result. Positive since the proof predicate follows some simple
 rules and these rules  does not alter even though you add more induction to the
 fragment of arithmetics you are working with. The last point can also be seen
 as a negative one; there is no way to differentiate the different fragments of
-arithmetics by looking at their proof predicate.
+arithmetics by looking at their proof predicate, since the proof predicates are
+all axiomatized by the same modal logic.
 
 Further the proportional provability logic is not effected by Quines critique of
 modal logic as being unintelligible, since it has a very clear and unambiguous
 arithmetic interpretation. This sets it apart from the more philosophical
 interpretations of modal logic, since these interpretations do not have a clear
 meaning.
+
+Lastly the theorems also show that modal logic can be interesting for
+mathematicians that are not interested in the philosophical part of logic. The
+theorems shows that modal logic can be used to get further knowledge about
+mathematical systems and it can probably be used in other areas of mathematics.
+Modal logic also have some uses in both topology and set theory
+\parencite{Artemov2007}.
 \end{document}

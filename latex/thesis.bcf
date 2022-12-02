@@ -2211,12 +2211,14 @@
     <bcf:citekey order="26">Boolos1993</bcf:citekey>
     <bcf:citekey order="27">ArteBe</bcf:citekey>
     <bcf:citekey order="28">Smor1985</bcf:citekey>
-    <bcf:citekey order="29">Fedo2017</bcf:citekey>
-    <bcf:citekey order="30">Boolos1993</bcf:citekey>
-    <bcf:citekey order="31">Boolos1993</bcf:citekey>
+    <bcf:citekey order="29">Dick1991</bcf:citekey>
+    <bcf:citekey order="30">Fedo2017</bcf:citekey>
+    <bcf:citekey order="31">Artemov2007</bcf:citekey>
     <bcf:citekey order="32">Boolos1993</bcf:citekey>
+    <bcf:citekey order="33">Boolos1993</bcf:citekey>
+    <bcf:citekey order="34">Boolos1993</bcf:citekey>
     <bcf:citekey order="0" nocite="1">*</bcf:citekey>
-    <bcf:citekey order="33">Smor1985</bcf:citekey>
+    <bcf:citekey order="35">Smor1985</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">
