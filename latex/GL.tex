@@ -15,8 +15,20 @@ stands for \textit{Pr}ovability \textit{L}ogic, and he denotes the logic we
 have called \textbf{GLS} by $\textbf{PRL}^\omega$.\footnote{He also have a
 slightly different definition of a Kripke model.}
 
+We start of by proving the finite tree theorem for \GL. This theorem makes it
+possible for us to assume that for a Kripke model $\mathcal{K}=\la W,R,\phi\ra$ of
+\GL, that the set $W$ is finite. For proving this theorem we will first need
+the to prove this theorem we will first need some knowledge about trees and
+prove König's lemma.
+
+After this we will prove the continuity theorem which we will use a lot in
+chapter 5, for the proof of the fixed point theorem.
+
+We will end this chapter by defining the logic \GLS\ and show some few results
+about this logic.
+
 This section (and the next one) dose not use the preceding sections about recursive functions. We will only
-focus on modal logic or anything about Gödel's Incompleteness Theorems. In
+focus on modal logic. In
 chapter \ref{chap:Complete} we will combine all three parts; the recursion
 theory, the arithmetics and the modal logic.
 
@@ -117,9 +129,8 @@ The proof of Könings lemma will depend on the following axiom:
 	\[\forall n\in\omega: w_nRw_{n+1}\]
 \end{axiom}
 
-This axiom is a weak form of the axiom of choice, so some of the consequnces of
-the axiom of choice also follows from this axiom. \textbf{Er dette overhovedt
-vigtigt at kommentere på?}
+This axiom is a weak form of the axiom of choice. 
+
 
 In the proof of Köning's
 lemma we will look at the subset of all nodes with infinitely many descendants
@@ -129,7 +140,7 @@ fulfills the conditions of the axiom and we can thus create the sequence
 $(w_n)_{n\in\omega}$.
 
 We can now state Köning's lemma:
-\begin{lemma}{Köning's lemma}
+\begin{lemma}[Köning's lemma]
 	\label{lem:kong}
 	Let $\mathcal{T}$ be a finitely branching tree. Then it is infinite if
 	and only if has an infinite path.
@@ -267,7 +278,9 @@ let $\mathcal{K}$ be the following model $\mathcal{K}=\la W,R,w_0,\phi\ra $ be a
 From this theorem there follows a number of interisting corrolaies:
 
 \begin{cor}
-	\GL\ is decidable.\textbf{Definer lige hvad dette betyder}
+	\GL\ is decidable, i.e there is an effective procedure for each modal formula
+	$\alpha$ that detemines if $\vdash_\GL\alpha$ or
+	$\not\vdash_\GL\alpha$.
 \end{cor}
 \begin{cor}
 	\label{cor:Nec}
@@ -357,7 +370,9 @@ will use it to prove parts of the main theorem of the next chapter:
 
 In this section we will define the modal logic \textbf{GLS} (The "S" is for
 Solovay). This logic is an extension of \GL, but it is not as well behaved as
-\GL.
+\GL. It is this logic we will use in the statement of Solovay's second
+completeness theorem, so it is important for each to know a few basic results
+about it.
 
 \begin{defi}
 	\textbf{Dobbelt tjek i Per}
@@ -545,5 +560,5 @@ Since the models used in this proof is finite we get the following corollary:
 In the chapter \ref{chap:Complete} it will be shown that \GL\ axiomatise the
 provable schemata in \PRA\ and \GLS\ will axiomatise the \textit{true} schemata
 of arithmetics; i.e truth in the standard model $\mathcal{N}=\la
-\omega,+,\cdots\ra$ of arithmetics.
+\omega,+,\cdot\ra$ of arithmetics.
 \end{document}
