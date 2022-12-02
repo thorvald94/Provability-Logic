@@ -1882,6 +1882,40 @@
       \field{year}{1923}
       \true{nocite}
     \endentry
+    \entry{Smil1963}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f1e2fd42bbf699fc273bed39a5eb88e0}{%
+           family={Smiley},
+           familyi={S\bibinitperiod},
+           given={T\bibnamedelima J},
+           giveni={T\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Helsinki}%
+      }
+      \list{publisher}{1}{%
+        {Edidit Societas Philosophica}%
+      }
+      \strng{namehash}{f1e2fd42bbf699fc273bed39a5eb88e0}
+      \strng{fullhash}{f1e2fd42bbf699fc273bed39a5eb88e0}
+      \strng{bibnamehash}{f1e2fd42bbf699fc273bed39a5eb88e0}
+      \strng{authorbibnamehash}{f1e2fd42bbf699fc273bed39a5eb88e0}
+      \strng{authornamehash}{f1e2fd42bbf699fc273bed39a5eb88e0}
+      \strng{authorfullhash}{f1e2fd42bbf699fc273bed39a5eb88e0}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Acta Philosophica Fennica}
+      \field{title}{The Logical Basis of Ethics}
+      \field{volume}{16}
+      \field{year}{1963}
+      \field{pages}{237\bibrangedash}
+      \range{pages}{-1}
+    \endentry
     \entry{Smor1977b}{incollection}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=aa347a8abe37c910f2de21ad961273f9}{%

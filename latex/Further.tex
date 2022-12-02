@@ -4,8 +4,17 @@
 \begin{document}
 In this chapter we will enrich the language $\mathcal{L}_\Box$ with both more
 modal operators and quantifiers. For these language a number of different
-results can be proven. This chapter will skip the most of the proofs of these
+results can be proven. We will also state some results about provability logic
+where we enrich our language $\mathcal{L}$ with quantifiers. 
+In the case with more modal operators the results will be positive; i.e there
+are versions of Solovay's completeness theorems for these kinds of modal logic.
+But in the case where we enrich our language with quantifiers our results will
+be negative; i.e we cant prove versions of Solovay's completeness theorems for
+these kinds of modal logic.
+
+This chapter will skip the most of the proofs of these
 results, but the proofs can be found in \parencite{Boolos1993}.
+
 \section{Multi-modal provability logic}
 
 We can extend our language $\mathcal{L}_\Box$ with more modality operators. We
@@ -287,6 +296,11 @@ second completeness theorem holds for this logic.
 So Solovay's completeness theorems generalizes nicely to multi modal logics;
 i.e the concept of $\omega$-provability (and beyond) can also be axiomatized.
 
+The proofs of these results are rather involved, but they still follow the same
+idea as Solovay's original idea. This shows how deep the concept of embedding
+modal logic into arithmetic is. But this fundamental idea do not generalize to
+all extensions of \GL, which will be discussed in the next section.
+
 \section{Quantifed provability logic}
 There is another way to extend the logic \GL; we can add quantifiers to the
 language. We will call this logic for quantified modal logic (QML). The first
@@ -301,7 +315,11 @@ goal is to define what a formula is:
 	There is not a version of Solovay's completeness theorems for this
 	logic; i.e it is not arithmetically complete with respect to any
 	fragment of arithmetics. Furthermore this logic  do not have the fixed point property and
-	is not complete with respect to any class of Hintikka frames. Further
+	is not complete with respect to any class of Hintikka frames. These
+	results can actually be shown to hold for an even more conservative
+	extension of \GL: one where we only always one place predicates are
+	allowed and where we do not permit nestings of the $\Box$-operator. Further
 	information on this topic and proofs of these statements can be found
-	in \parencite{Boolos1993}.
-\end{document}
+	in \parencite{Boolos1993}, but this goes way beyond the scope of this
+	project and are left out.
+	\end{document}
