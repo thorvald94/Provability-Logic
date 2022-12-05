@@ -360,15 +360,52 @@ We will now turn to another version of the Selection Theorem.
 	Since $\tau$ is $\Sigma_1$ it is recursively enumerable. So we have
 	that:
 	\[\tau v_0\ldots v_n:\ \exists v(fvv_0\ldots v_n=\ol 0)\]
+	We will want to set $\text{Sel}(\tau)$ to be the function that chooses
+	the least $v_n$:
+	\[\exists v(fvv_0\ldots v_n=\ol 0)\wedge\forall v_{n+1}\leq v_n\neg
+	\exists v(fvv_0\ldots v_{n-1}v_{n+1}=\ol 0)\]
+	This formula is not $\Sigma_1$.
+
+	We can get a $\Sigma_1$ formula, if we minimise the pair $(v,v_n)$. For
+	this end we will first define $\tau^*$:
+	\[\tau^* vv_0\ldots v_{n-1}:\ f((v)_0,v_0,\ldots v_{n-1},(v)_1=\ol
+	0\]
+	We can then minimise $v$ in $\tau^*$:
+	\[\tau^{**}vv_0\ldots v_{n-1}:\ \tau^*vv_0\ldots v_{n-1}\wedge\forall
+	v^*\leq v\neg\tau^*v^*v_0\ldots v_{n-1}\]
+	We can then define $\text{Sel}(\tau)$ by $\tau^{**}$ in the following
+	way:
+	\[\text{Sel}(\tau)v_0\ldots v_{n-1}v_n:\ \exists v(\tau^{**}vv_0\ldots
+	v_{n-1}\wedge (v)_1=v_n)\]
+	$\text{Sel}(\tau)$ is then $\Sigma_1$. The next goal is the show that
+	it ratifies 1-3. The least number principle gives us that there exists
+	a unique least $v=((v)_0,v_n)$ that satisfies $\tau^*$, for any given
+	$v_0,\ldots,v_{n-1}$.
+
+	Further this can be done with the amount of induction of \PRA. The
+	least number principle applied to $\zeta v$ is the same as the strong
+	form of induction applied to $\neg\zeta:$
+	\[\forall v(\forall v^*<v\neg\zeta v^*\rightarrow\neg\zeta
+	v)\rightarrow v\neg\zeta v\]
+
+	And this principle follows form ordinary induction applied to $\forall
+	v^*<v\neg\zeta v^*$:
+	\[\forall v^*<\ol 0\neg\zeta v^*\wedge\forall v(\forall v^*<v\neg\zeta
+		v^* \rightarrow\forall v^*<v+1\neg\zeta v^*)\rightarrow \forall
+	v\forall v^*<v\neg\zeta v^*\]
+	Thus for a \textbf{Hvad mener Smor med PR} relation $\zeta$ we have
+	that $\forall v^*<v\neg \zeta v^*$ is also PR, and thus since \PRA\ has
+	RE-induction we have the least number principle for $\zeta$.
 \end{proof}
 
-\subsection{Induction In \PRA}
+\subsection{Induction in \PRA}
 We know that we can de induction on $\Sigma_1$ formulae in \PRA. A natural
 question to ask is then what other kinds of formulae can we do induction on in
-\PRA? The following prop will give an answer to this question:
+\PRA? We will define $\PRA^-$ as the subtheory of \PRA obtained by restricting
+induction PR-formulae. The following prop will give an answer to this question:
 
 \begin{prop}
-	Over \textbf{EA} the following schemata are equivalent:
+	Over $\textbf{PRA}^-$ the following schemata are equivalent:
 	\begin{enumerate}
 		\item $\Sigma_n$-\textit{Ind}
 		\item $\Pi_n$-\textit{Ind}

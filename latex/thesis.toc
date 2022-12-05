@@ -54,9 +54,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.3}\text {\textbf {PRA}}\ and the other fragments of Arithmetics}{39}{section.3.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.1}Induction In \text {\textbf {PRA}}}{41}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.1}Induction in \text {\textbf {PRA}}}{41}{subsection.3.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.4}Further extensions of the arithmetical hierarchy}{42}{section.3.4}%
+\contentsline {section}{\numberline {3.4}Further extensions of the arithmetical hierarchy}{43}{section.3.4}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.5}Sigma Completeness}{43}{section.3.5}%
 \defcounter {refsection}{0}\relax 
