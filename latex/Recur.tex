@@ -1,8 +1,6 @@
 \documentclass[../main.tex]{subfiles}
 
 \begin{document}
-\textbf{Note: grafer kan ses som formler fra \PRA, så bare brug F, G og H for
-disse}
 We will begin this section with define two classes of functions;
 the \textit{Partial Recursive Functions} and  the \textit{Turing Computable
 functions}. These two classes of functions gives rise to the same class of
@@ -120,7 +118,9 @@ and it will then output the number $y$ which is the total number of $1$'s on
 the tape in the this state. If $M$ with input $x$ halts and outputs $y$ we
 say that $M$ computes the partial function $\psi(x)=y$
 
-The conditi [Indfør noget mere tekst her]on a is determined by:
+The conditions at $M$ for each step of a Turing calculation is determined by
+the following:
+
 \begin{enumerate}
 	\item The current state $q_i$
 	\item The symbol $s_0$ that is being scanned.
@@ -133,12 +133,17 @@ This is called the configuration of the machine and we can write it as follows:
 $$s_{-m}\cdots s_{-1}q_0s_0s_1\cdots c_n$$
 
 \begin{defi}
-	A Turing computation according to to the Turing program $P$ with input
+	A \textit{Turing computation} according to the Turing program $P$ with input
 	$x$ is a sequence of configurations $c_0,c_1,\ldots, c_n$ such that
 	$c_0$ represent the machine in the halting state $q_0$, and the
 	transition $c_i\rightarrow c_{i+1}$ for all $i<n$ is giving by the
 	Turing program $P$.
 \end{defi}
+
+These definitions makes it possible to list all the Turing programs, by giving
+them a Gödel number. This is because each Turing program is a finite set of
+quintuples, and thus we can effectively find its Gödel number on a list. We
+will now show how to give each Turing program a Gödel number:
 
 \begin{prop}
 	Each Turing program $P_e$ can be assigned a Gödel number $e$.
@@ -162,8 +167,8 @@ Since each Turing program has a unique code we can list them and be able to
 find any program $P_e$ by its code $e$. This gives the following definition:
 \begin{defi}
 	The $P_e$ be the Turing program with Gödel number $e$ in the list and
-	let $a_e^{(n)}$ be the function of $n$ variables computed by $P_e$.
-	Further let $a_e$ abbreviate $a_e^{(1)}$.
+	let $\varphi_e^{(n)}$ be the function of $n$ variables computed by $P_e$.
+	Further let $\varphi_e$ abbreviate $\varphi_e^{(1)}$.
 \end{defi}
 \section{The \textit{s-m-n}-Theorem}
 
@@ -172,12 +177,14 @@ computable functions gives rise to the same class of partial functions. This
 can be seen as evidence for \textit{Church's Thesis} which states that this
 class of functions coincide with the function that we see as intuitively
 computable. In the rest of this project we will assume that the Church's Thesis
-is true.
+is true. There are some other definitions of computable functions that gives
+rise to exactly the same class of functions; a list of these can be found in
+\parencite{Cutland1980}
 
 We will being by proving the padding lemma, which states that each partial
 function $\varphi_x$ has an infitine amount of indices.
 \begin{lem}[The Padding Lemma]
-	Each partial recursive function $\varphi_i$ has $\aleph_0$ indicies,
+	Each partial recursive function $\varphi_x$ has $\aleph_0$ indicies,
 	and for each $x$ we can \textit{effectively} find an infinite set $A_x$
 	of indices for the same partial function.
 \end{lem}
@@ -189,7 +196,8 @@ function $\varphi_x$ has an infitine amount of indices.
 
 The following theorem will show that each Turing computable function is in fact
 partial recursive. The converse also holds and the proof of this fact can be
-found in \parencite{Kleene1952}
+found in \parencite{Kleene1952}. The proof of that fact is left out since it is
+very tedious.
 
 \begin{thm}[The Normal Form Theorem]
 	\label{thm:Normalform}
@@ -270,7 +278,8 @@ We will need the following notation in the next proof:
 
 A full proof of this statement can be found in Kleene. The $s-m-n$ theorem
 plays a crucial role in both the proof and the use of the recursion theorem.
-\textbf{Skriv noget om intuiton}. Therefore we will use the $s-m-n$ theorem to
+The theorem is not the most intuitive to use, and takes a bit of work to get
+used to.. Therefore we will use the $s-m-n$ theorem to
 prove the following proposition:
 \begin{prop}
 	There is a recursive function $g$ of two variables such that for all
@@ -291,12 +300,17 @@ prove the following proposition:
 	and has an index $e$. So by applying the $s-m-n$ Theorem we get:
 	\[\varphi_x\varphi_y=\lambda
 	z[\varphi_e(x,y,z)]=\varphi_{s_1^2(e,x,y)}\]
-	And thus $s_1^2(e,x,y)$ is our $g$ (i.e $\lambda xy[s_1^2)e,x,y)]$.
+	And thus $s_1^2(e,x,y)$ is our $g$ (i.e $\lambda xy[(s_1^2)e,x,y)]$.
 \end{proof}
+
 \section{Recursively Enumerable sets and the Graph of a function}
 In this section we will introduce the two concepts \textit{recursive
 enumerable} sets and the \textit{graph} of a function. We will further show
 that there is connection between these two concepts.
+
+The idea behind a recursively enumerable set is that we can have an algorithm
+that can enumerate the members of the set.
+
 \begin{defi}
 	A set $A$ is \textit{recursively enumerable} (r.e.) if $A$ is the domain of some
 	primitive recursive function. Further we define the following two sets:
@@ -337,7 +351,10 @@ following two propositions shows:
 	But we this $f$ can not be recursive since for all $x$ we have $f\not
 	=\varphi_x$.
 \end{proof}
-\textbf{Forklar kort meningen med dette}.
+
+So even though we have a algorithm that can enumerate all the members of the
+set $K$, we can not for a given $x$ decide whether $x\in K$, so we can not
+solve for a given $x$ that $\varphi_x(x)$ converges or not.
 
 Next goal is to show that the definition of a r.e sets is equivalent to the
 definition that there is an algorithm that enumerates the members of it. We
@@ -351,7 +368,7 @@ in this project.
 	recursive relation $R\subseteq\omega\times\omega$.
 \end{defi}
 We can now show the following theorem:
-\begin{thm}
+\begin{thm}[Normal Form Theorem for r.e sets]
 	A set $A$ is r.e iff $A$ is $\Sigma_1$.
 \end{thm}
 \begin{proof}
@@ -366,8 +383,10 @@ We can now show the following theorem:
 	then have that $A=\text{dom} f$ where $f(x)=\mu y(R(x,y))$ and thus $A$
 	is r.e
 \end{proof}
-\textbf{Skriv noget metatekst}
-\begin{thm}
+This theorem is equivalent to the normal form theorem for partial recursive
+functions. The next theorem shows a way to determine whether a given set is
+$\Sigma_1$.
+\begin{thm}[Qunatifier Contraction Theorem]
 	\label{thm:RecSigma}
 	If there is a recursive relation $R\subseteq\omega^{n+1}$ and if we
 	have the following set:
@@ -404,9 +423,11 @@ completeness theorems.
 The relation of a graph can also be seen as a function in the language of
 $\PRA$; so we will often denote the graph of a function $\varphi(x)=y$ with the
 following notation: $Fxy$, and say that $(x,y)\in\ \text{graph}(\varphi$ if and
-only if $Fxy$ is true.
+only if $Fxy$ is true. We will use this notation in chapter 6, since Smorinsky
+uses this notation, and we will follow his book \parencite{Smor1985} in that
+chapter.
 
-\begin{thm}
+\begin{thm}[Uniformaization Theorem]
 	If $R\subseteq\omega^2$ is an r.e relation, then there is a p.r
 	function $\text{sel}$ called the selector function for $R$ such that:
 	$$\text{sel}(x)\ \text{is defined}\ \Leftrightarrow\ \exists y(R(x,y))$$
@@ -420,7 +441,7 @@ only if $Fxy$ is true.
 	And now we put $f(x)=(g(x))_1$
 \end{proof}
 It will be the following theorem we will use in our proof later on.
-\begin{thm}
+\begin{thm}[Graph Theorem]
 	A partial function $\varphi$ is partial recursive iff its graph is recursive
 	enumerable.
 \end{thm}
@@ -431,12 +452,38 @@ It will be the following theorem we will use in our proof later on.
 	($\Leftarrow$) Since the graph of $\varphi$ is assumed to be r.e we can
 	conclude that $\varphi$ is its own primitive recursive selector function. This
 	is that $R=\text{graph} \varphi$ can only have $\varphi$ as its selector function.
-	[Whyyy?]
+\end{proof}
+
+We will end this section with the next theorem. It justifies the notion of a
+r.e set $A$ as one where we can effectivel enumerate its members;
+$A=\{a_0,a_1,a_2,\ldots\}$
+
+\begin{thm}[Listning Theorem]
+	A set $A$ is r.e if and only if $A=\emptyset$ or $A$ is in the range of
+	a total recursive function $f$. 
+\end{thm}
+\begin{proof}
+	($\Leftarrow$) If $A=\emptyset$ then $A$ is clearly r.e. Now
+	assume that $A=im(f)$, where $f$ is a total recursive function. Then
+	$A$ is r.e by corollary 2.1
+
+	($\Rightarrow$)
+	Let $A=E_e=\emptyset$. We will find the least integer $\la a,t\ra$ such
+	that $a\in E_{e,t}$. We will now define the following recursive
+	function $f$ as:
+	\[f(\la s,x\ra)=\begin{cases}
+		x &\ \text{if}\ x\in E_{e,s-1}\setminus E_{e,s}\\
+		a &\ \text{otherwise}
+	\end{cases}\]
+	WE have that $A= im (f)$, since if $x\in E_e$, we can choose the least
+	$s$ such that $x\in E_{e,s+1}$, and thus $f(\la s,x\ra)=x$ and hence
+	$x\in im(f)$
 \end{proof}
 
 \section{The Recursion Theorem}
 In this section we will state and prove the recursion theorem. It will be
-crucial in the next [chapter?], since we will need it to define a function.
+crucial in chapter 6, since we will need it to define a function, which will be
+used to embed a Kripke model in \PRA.
 \begin{thm}[The Recursion Theorem]
 	For every recursive function $f$ there exists a fixed point $n$ such
 	that $\varphi_n=\varphi_{f(x)}$

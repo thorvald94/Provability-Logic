@@ -591,7 +591,6 @@
       \field{booktitle}{Computability : an introduction to recursive function theory /}
       \field{title}{Computability : an introduction to recursive function theory}
       \field{year}{1980}
-      \true{nocite}
       \keyw{Mathematics Recursive functions}
     \endentry
     \entry{Davis1965}{book}{}
