@@ -1,30 +1,31 @@
 \documentclass[../main.tex]{subfiles}
 
 \begin{document}
-We will begin this section with define two classes of functions;
+We will begin this section by defining two classes of functions;
 the \textit{Partial Recursive Functions} and  the \textit{Turing Computable
-functions}. These two classes of functions gives rise to the same class of
-functions The idea behind these two classes of functions is to define what
+Functions}. These two classes of functions give rise to the same class of
+functions. The idea behind these two classes of functions is to define what
 we intuitively mean with a computable function. The proofs in this section will
 be rather informal. The goal of this section will be to state and prove
 Kleene's recursion theorem, which will play a crucial role in our proof of 
-Solovay's two  completeness theore
+Solovay's two  completeness theorems.
 
 The topic I have chosen to call \textit{recursion theory} is today often known as
-\textit{computability theory}. Robert Soares have stated some arguments for why this
-name is better suited for the discipline than the name recursion theory in his
-book \parencite{Soare2016}.
+\textit{computability theory}. In his
+book \parencite{Soare2016}, Robert Soares has put forth, some arguments for why
+this named is better suited for the discipline than recursion theory.
 
-This sections will follow \parencite{Soare1987}, unless stated otherwise. 
+This chapter will follow \parencite{Soare1987}, unless stated otherwise. 
 
 \section{Partial Recursive Functions and Recursive Functions}
 The class of partial recursive functions is an enlargement of the primitive recursive
-functions. The class of primitive recursive functions capture a lot of the
-function we intuitively sees as computable. It does not contain any function that
+functions. The class of primitive recursive functions captures a lot of the
+functions we intuitively see as computable. It does not contain any functions that
 we would say was incomputable.
 
 But the primitive recursive functions do not include all intuitively computable
-functions. For example the following function, called the Ackermann function,  that is clearly computable is not
+functions. For example the following function, called the Ackermann function,
+which is clearly computable, is not
 in the class of primitive recursive functions:
 \begin{align*}
 	Ack(0,n)&=n+1\\
@@ -32,7 +33,7 @@ in the class of primitive recursive functions:
 	Ack(m+1,n+1)&=A(m,A(m+1,n))
 \end{align*}
 
-This function grows \textit{to fast} to be a primitive recursive function, i.e
+This function grows too fast to be a primitive recursive function, i.e
 we have for all primitive recursive functions $f(x)$ that for some $y$ that
 $Ack(x,y)>f(x)$ for all $x\in \omega$. 
 proof of this fact can be found in \textbf{Find ref}.
@@ -44,7 +45,8 @@ We will expand them in the following way:
 		The class of \textit{partial recursive} (from now on some times
 		called (p.r) functions is the least class closed under schemata
 		I through V from the definition of primitive recursive
-		functions and the following VI schema . 
+		(definition \ref{def:Recur})
+		functions and the following VI schema. 
 		\begin{enumerate}[label=\Roman*., start=6]
 			\item If $\theta(\x,y)$ is a partial recursive function
 				of $n+1$ variables and 
@@ -55,22 +57,22 @@ We will expand them in the following way:
 					[\theta(\x,z)\downarrow]
 				\end{align*}
 				Then $\psi$ is a partial recursive function of
-				$n$ variables
+				$n$ variables.
 		\end{enumerate}
 		A partial recursive function that is total is called a total
 		recursive function; abbreviated to recursive function.
 \end{defi}
 
 This is one way in which one can define what the computable functions are. In
-the next section we will come with another definition of a type of functions,
-and it will be shown that these leads to the same class of functions.
+the next section we will present another definition of a type of functions,
+and it will be shown that these lead to the same class of functions.
 
 We will end this section with the following definition:
 \begin{defi}
-	A relation $R\subset\omega^n$ where $n\geq 1$, is recursive (primtive
+	A relation $R\subset\omega^n$ where $n\geq 1$ is recursive (primitive
 	recursive) if its characteristic function $\chi_R$ is recursive
 	(primitive recursive). The case where $n=1$ is the case where $R$ is a
-	set $A\subset\omega$ so we also have the definition of a set being
+	set $A\subset\omega$, so we also have the definition of a set being
 	recursive.
 \end{defi}
 
@@ -80,13 +82,13 @@ Another way to describe the intuitively computable functions is via a Turing
 machine. 
 \begin{defi}
 	A \textit{Turing machine} $M$ consists of a two-way infinite tape that
-	is dived into different cells and a finite set of internal states $Q=\{
+	is divided into different cells and a finite set of internal states $Q=\{
 	q_0,\ldots, g_n\}$, $n\geq 1$. Each cell  is either blank: B or has
 	value 1.
-	The following three things can happen in a single
+	The following three things can happen simultaneously in a single
 	step:
 	\begin{enumerate}
-		\item Change form one state to another.
+		\item Change from one state to another.
 		\item Change the scanned symbol $s$ to another symbol
 			$s'\in S=\{1,B\}$
 		\item Move the reading head one cell to the right R or the left
@@ -105,29 +107,29 @@ The situation can be seen in the following figure:
 \end{center}
 
 The way to understand this definition is the following: if
-$(q,s,q',s',X)\in\delta$ it means that the machine $M$ is in stage $q$ where it
+$(q,s,q',s',X)\in\delta$, it means that the machine $M$ is in stage $q$ where it
 scans symbol $s$ then changes to state $q'$ and replaces $s$ by $s'$. Lastly it
 moves to the right if $X=R$ and the left if $X=L$. The map $\delta$ is called a
-Turing program if it can be views as a finite set of quintuples. If the input
+Turing program if it can be viewed as a finite set of quintuples. If the input
 integer is $x$ then it will be represented by a string of $x+1$ consecutive
 $1's$, where all other cells are blank.
 
-Further the machine $M$ start in the state $q_1$ scanning the left-most cell
+Further the machine $M$ starts in the state $q_1$ by scanning the leftmost cell
 that contains a $1$. The machine stops if it reaches the halting state $q_0$,
-and it will then output the number $y$ which is the total number of $1$'s on
-the tape in the this state. If $M$ with input $x$ halts and outputs $y$ we
-say that $M$ computes the partial function $\psi(x)=y$
+and it will then output the number $y$, which is the total number of $1$'s on
+the tape in this state. If $M$ with input $x$ halts and outputs $y$ we,
+say that $M$ computes the partial function $\psi(x)=y$.
 
 The conditions at $M$ for each step of a Turing calculation is determined by
 the following:
 
 \begin{enumerate}
-	\item The current state $q_i$
+	\item The current state $q_i$.
 	\item The symbol $s_0$ that is being scanned.
 	\item The symbols on the tape to the right of $s_0$ up to the last $1$.
 		Denote this sequence by $s_1,s_2,\ldots s_n$
 	\item The symbols on the tape to the left of $s_0$ op to the first $1$.
-		Denote this sequence by $s_{-1},s_{-2},\ldots s_{-m}$
+		Denote this sequence by $s_{-1},s_{-2},\ldots s_{-m}$.
 \end{enumerate}
 This is called the configuration of the machine and we can write it as follows:
 $$s_{-m}\cdots s_{-1}q_0s_0s_1\cdots c_n$$
@@ -135,8 +137,8 @@ $$s_{-m}\cdots s_{-1}q_0s_0s_1\cdots c_n$$
 \begin{defi}
 	A \textit{Turing computation} according to the Turing program $P$ with input
 	$x$ is a sequence of configurations $c_0,c_1,\ldots, c_n$ such that
-	$c_0$ represent the machine in the halting state $q_0$, and the
-	transition $c_i\rightarrow c_{i+1}$ for all $i<n$ is giving by the
+	$c_0$ represents the machine in the halting state $q_0$, and the
+	transition $c_i\rightarrow c_{i+1}$ for all $i<n$ is given by the
 	Turing program $P$.
 \end{defi}
 
@@ -153,12 +155,14 @@ will now show how to give each Turing program a Gödel number:
 	prime decomposition:
 	$$x=p_0^{x_0}\cdots p_n^{x_n}\cdots$$
 	We can assign a number to each quintuple $(q_i,_j,q_k,s_l,r_m)$ in a
-	Turing program $P$ in the following way[Omformuler denne sætning]:
+	Turing program $P$ in the following way:
 	$$p_0^{1+i}p_1^{1+j}p_2^{1+k}p_3^{1+l}p_4^{1+m}$$
-	Where we have that $r_0=R$ and $r_1=L$. Since the prime decomposition
+	Where we have that $r_0=R$ and $r_1=L$. 
+
+	Since the prime decomposition
 	is unique, each different state of the program has a unique code. Each Turing
 	is a sequence of different states and we can thus for an arbitrary
-	Turing program $P_e$ we let $e_0,\ldots e_n$ denote the Gödel number of
+	Turing program $P_e$ let $e_0,\ldots e_n$ denote the Gödel number of
 	each different state and set:
 	$$e=p_0^{e_0}\cdots p_n^{e_n}$$
 	Thus each Turing program $P_e$ has a unique Gödel number $e$.
@@ -166,60 +170,62 @@ will now show how to give each Turing program a Gödel number:
 Since each Turing program has a unique code we can list them and be able to
 find any program $P_e$ by its code $e$. This gives the following definition:
 \begin{defi}
-	The $P_e$ be the Turing program with Gödel number $e$ in the list and
+	Let $P_e$ be the Turing program with Gödel number $e$ in the list and
 	let $\varphi_e^{(n)}$ be the function of $n$ variables computed by $P_e$.
 	Further let $\varphi_e$ abbreviate $\varphi_e^{(1)}$.
 \end{defi}
 \section{The \textit{s-m-n}-Theorem}
 
 It can be proven that the two classes of functions; partial recursive and Turing
-computable functions gives rise to the same class of partial functions. This
-can be seen as evidence for \textit{Church's Thesis} which states that this
-class of functions coincide with the function that we see as intuitively
-computable. In the rest of this project we will assume that the Church's Thesis
+computable functions give rise to the same class of partial functions. This
+can be seen as evidence for \textit{Church's Thesis}, which states that this
+class of functions coincides with the function that we see as intuitively
+computable. In the rest of this project we will assume that Church's Thesis
 is true. There are some other definitions of computable functions that gives
 rise to exactly the same class of functions; a list of these can be found in
 \parencite{Cutland1980}
 
-We will being by proving the padding lemma, which states that each partial
-function $\varphi_x$ has an infitine amount of indices.
+We will begin by proving the padding lemma, which states that each partial
+function $\varphi_x$ has an infinite amount of indices.
 \begin{lem}[The Padding Lemma]
 	Each partial recursive function $\varphi_x$ has $\aleph_0$ indicies,
 	and for each $x$ we can \textit{effectively} find an infinite set $A_x$
 	of indices for the same partial function.
 \end{lem}
 \begin{proof}
-	For any program $P_x$ that have internal states: $\{q_0,\ldots, q_n\}$
+	For any program $P_x$ that has internal states: $\{q_0,\ldots, q_n\}$
 	we can add extra instructions $q_{n+1}B\ R ,q_{n+2}B\ R,\ldots$ such
 	that we get a new program for the same computation.
 \end{proof}
 
 The following theorem will show that each Turing computable function is in fact
-partial recursive. The converse also holds and the proof of this fact can be
+partial recursive. The converse also holds, and the proof of this fact can be
 found in \parencite{Kleene1952}. The proof of that fact is left out since it is
 very tedious.
 
 \begin{thm}[The Normal Form Theorem]
 	\label{thm:Normalform}
-	There exist a predicate $T(e,x,y)$ and a function $U(y)$ that are
+	There exists a predicate $T(e,x,y)$ and a function $U(y)$ that are
 	primitive recursive such that:
 	$$\varphi_e(x)=U(\mu yT(e,x,y))$$
 \end{thm}
 \begin{proof}
-	We showing that the predicate $T(e,x,y)$ exists and is primitive
+	We show that the predicate $T(e,x,y)$ exists and is primitive
 	recursive. This predicate informally
 	states that $y$ is the code of Turing program $P_e$ with input $x$. For
 	each possible configuration $c$, we can assign a code:
 	$$\#(c)=2^{1+i}3^{1+\#(s_0)}5^r7^l$$
 	Where $\#(s)=0$ if $s=B$ and is equal to $1$ otherwise, $r=\prod_{j\geq
-	1}p_j^{\#(s_j)}$ and $l=\prod_{j\leq -1}p_j^{\#(s_j)}$
+	1}p_j^{\#(s_j)}$ and $l=\prod_{j\leq -1}p_j^{\#(s_j)}$.
+
+
 	 We can now define the code of a Turing computation
 	$c_0,c_1,\ldots c_n$ according to $P_e$ to be:
 	$$y=2^e\prod_{i\leq n}p_{i+1}^{\#(s_i)}$$
 	We can now define $T(e,x,y)$ to be [Læs i Kleene]
 	Having defined the predicate $T$ we can check if it holds. By
-	proposition 2.1 we can "recover" the program $P_e$ form $e$. Then we
-	can recover the computation $c_0,c_1,\ldots c_n$ form $y$ if $y$ codes
+	proposition 2.1 we can "recover" the program $P_e$ from $e$. Then we
+	can recover the computation $c_0,c_1,\ldots c_n$ from $y$, if $y$ codes
 	such a thing. We can now check if $c_0,c_1,\ldots,c_n$ is a computation
 	according to $P_e$ with $x$ as the input in the first configuration
 	$c_0$. If this is true, then $U(y)$ just outputs the number of $1$'s in
@@ -252,13 +258,13 @@ We will need the following notation in the next proof:
 	z_n[\varphi^{(m+n)}_x(y_1,\ldots,y_m,z_1,\ldots,z_n)]$$
 \end{thm}
 \begin{proof}
-	I will follow Soare and only proof the case where $m=n=1$. I.e the case
-	where we have to proof:
-	$$a_{s^1_1(x,y)}(z)=[a_x^{2}(y,z)]$$
-	Let $x$ and $y$ på given. Then $s^1_1(x,y)$ can be described as
+	I will follow Soare and only prove the case where $m=n=1$. I.e the case
+	where we have to prove:
+	\[\varphi_{s^1_1(x,y)}(z)=[\varphi_x^{2}(y,z)]\]
+	Let $x$ and $y$ be given. Then $s^1_1(x,y)$ can be described as
 	follows:
 	\begin{enumerate}
-		\item Let $P_x$ the Turing program with code $x$.
+		\item Let $P_x$ be the Turing program with code $x$.
 		\item Change $P_x$ into another Turing program $P_{x'}$ such
 			that: $P_{x'}$ writes $y+1$ "1" left of the input, such
 			that there is a B between these 1 and the other input.
@@ -268,9 +274,9 @@ We will need the following notation in the next proof:
 	\end{enumerate}
 	it is clear that $P_{x'}$ on input $z$ compute the same as $p_e$ would
 	on input $(x,y)$; i.e $\varphi_{x'}=\varphi_x^{(2)}(y,z)$. Further we
-	have that $x'=s^1_s(x,y)$
+	have that $x'=s^1_s(x,y)$.
 	By Church's Thesis the function $s=s^1_1$ is recursive, since it can be
-	computed effectively. If it is not injective it can be replaced by a
+	computed effectively. If it is not injective it can be replaced by an
 	injective recursive function $s'$ such that
 	$\varphi_{s(x,y)}=\varphi_{s'(x,y)}$ by using the padding lemma and by
 	defining $s'(x,y)$ in increasing order of $\la x,y\ra$.
@@ -291,12 +297,14 @@ prove the following proposition:
 	partial recursive function since it is the product of two partial
 	recursive functions.
 
-	To end the proof we must show that we can find Gödel number for $\eta$
+	To end the proof we must show that we can the find Gödel number for $\eta$
 	in an uniform effective way from $x$ and $y$ as $x$ and $y$ vary. We
-	will start of by defining:
+	will begin by defining:
 	\[\theta(x,y,z)=\varphi_x(\varphi_y(z))=\varphi_{x_1}(x,\varphi_{x_1}(y,z))\]
 	Where $\varphi_{x_1}$ is the function $\varphi_z^{(2)}$ from Theorem
-	\ref{thm:Emu}. By the church thesis this function is partial recursive
+	\ref{thm:Emu}.
+
+	By the church thesis this function is partial recursive
 	and has an index $e$. So by applying the $s-m-n$ Theorem we get:
 	\[\varphi_x\varphi_y=\lambda
 	z[\varphi_e(x,y,z)]=\varphi_{s_1^2(e,x,y)}\]
@@ -306,7 +314,7 @@ prove the following proposition:
 \section{Recursively Enumerable sets and the Graph of a function}
 In this section we will introduce the two concepts \textit{recursive
 enumerable} sets and the \textit{graph} of a function. We will further show
-that there is connection between these two concepts.
+that there is a connection between these two concepts.
 
 The idea behind a recursively enumerable set is that we can have an algorithm
 that can enumerate the members of the set.
@@ -334,21 +342,21 @@ following two propositions shows:
 		x &\text{if}\ \varphi_x(x)\ \text{converges}\\
 		\text{undefined} &\text{otherwise.}
 	\end{cases}\]
-	This function is primitive recursive by Church Thesis, since $\psi(x)$
+	This function is primitive recursive by Church's Thesis, since $\psi(x)$
 	can be computed by program $P_x$ on input $x$, which outputs $x$ only
 	if $\varphi_x(x)$ converges.
 \end{proof}
 \begin{prop}
-	$K$ is not recursive
+	$K$ is not recursive.
 \end{prop}
 \begin{proof}
-	If $K$ where recursive we would that it had a recursive characteristic
+	If $K$ was recursive we would have that it had a recursive characteristic
 	function $K_\chi$, and thus the following would be recursive:
 	\[f(x)=\begin{cases}
 		\varphi_x(x)+1 & \text{if } x\in K\\
 		0 & \text{if } x\not \in K
 	\end{cases}\]
-	But we this $f$ can not be recursive since for all $x$ we have $f\not
+	But this $f$ can not be recursive, since for all $x$ we have $f\not
 	=\varphi_x$.
 \end{proof}
 
@@ -391,7 +399,7 @@ $\Sigma_1$.
 	If there is a recursive relation $R\subseteq\omega^{n+1}$ and if we
 	have the following set:
 	$$A=\{x|\exists y_1\ldots\exists  y_n R(x,\y)\}$$
-	Then the set $A$ is $\Sigma_1$
+	Then the set $A$ is $\Sigma_1$.
 \end{thm}
 \begin{proof}
 	We will start of by defining the relation $S\subseteq\omega^2$ as
@@ -399,7 +407,7 @@ $\Sigma_1$.
 	$$S(x,z)\Leftrightarrow R(x,(z)_1,\ldots,(z)_n)$$
 	Where we have the following prime decomposition of $z$:
 	$$z=p_1^{(z)_1}\cdots p_k^{(z)_k}$$
-	Then the following equivalences holds:
+	Then the following equivalences hold:
 	\begin{align*}
 		\exists zS(x,z)&\Leftrightarrow \exists z R(x,(z)_1,\ldots
 		(z)_n)\\
@@ -408,9 +416,9 @@ $\Sigma_1$.
 	\end{align*}
 	And thus the set $A$ is clearly $\Sigma_1$.
 \end{proof}
-From this theorem we can easily get the following corollary:
+From this theorem, we can easily get the following corollary:
 \begin{cor}
-	The projection of an r.e relation is r.e
+	The projection of an r.e relation is r.e.
 \end{cor}
 
 The next definition will also play a role in our proof of Solovay's
@@ -418,11 +426,11 @@ completeness theorems.
 
 \begin{defi}
 	The graph of a (partial) function $\varphi$ is the relation:
-	\[(x,y)\in\ \text{graph} \varphi\Leftrightarrow f(x)=y\]
+	\[(x,y)\in\ \text{graph} (\varphi)\Leftrightarrow f(x)=y\]
 \end{defi}
 The relation of a graph can also be seen as a function in the language of
 $\PRA$; so we will often denote the graph of a function $\varphi(x)=y$ with the
-following notation: $Fxy$, and say that $(x,y)\in\ \text{graph}(\varphi$ if and
+following notation: $Fxy$, and say that $(x,y)\in\ \text{graph}(\varphi)$ if and
 only if $Fxy$ is true. We will use this notation in chapter 6, since Smorinsky
 uses this notation, and we will follow his book \parencite{Smor1985} in that
 chapter.
@@ -455,7 +463,7 @@ It will be the following theorem we will use in our proof later on.
 \end{proof}
 
 We will end this section with the next theorem. It justifies the notion of a
-r.e set $A$ as one where we can effectivel enumerate its members;
+r.e set $A$ as one where we can effectively enumerate its members;
 $A=\{a_0,a_1,a_2,\ldots\}$
 
 \begin{thm}[Listning Theorem]
@@ -516,7 +524,7 @@ used to embed a Kripke model in \PRA.
 	The second equality sign follows from \ref{eq:du} and the third follows
 	from \ref{eq:fd}.
 \end{proof}
-Following [Owens, find ref], the argument in the proof can be seen as a
+Following \parencite{Owen1973}, the argument in the proof can be seen as a
 digitalization argument that fails. Commonly when we apply a digitalization
 argument, we have a class of sequences, with terms from an set $A$, that we arranges as the rows in a square
 matrix. We then have a map $h:A\rightarrow A$ that induces a operation $h^*$ on

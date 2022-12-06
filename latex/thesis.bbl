@@ -1538,7 +1538,7 @@
       \field{year}{1964}
       \true{nocite}
     \endentry
-    \entry{Ownes1973}{article}{}
+    \entry{Owen1973}{article}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=6f9896f44f33cedec248db1ce74b0c3e}{%
            family={Owens},
@@ -1564,7 +1564,6 @@
       \field{title}{Diagonalization and the Recursion Theorem}
       \field{volume}{XIV}
       \field{year}{1973}
-      \true{nocite}
       \field{pages}{95\bibrangedash 99}
       \range{pages}{5}
     \endentry
