@@ -2,30 +2,32 @@
 
 \begin{document}
 
-In this section I will state a few results and definitions from my two project
-I have written; one about modal logic and one about Gödel's incompleteness
+In this section, I will state a few results and definitions from two projects that I have written; one about modal logic and one about Gödel's incompleteness
 theorems.
-These results will be given without proof. The proofs can be found in
-two projects I have earlier written \parencite{Thor2021} and \parencite{Thor2022}.
+These results will be given without proof. The proofs can be found in the
+original 
+two projects  \parencite{Thor2021} and \parencite{Thor2022}.
 
 The main points of this section will be the definition of the predicate
 $\text{Pr}(\cdot)$ which is constructed in the proof of  Gödel's Incompleteness
 Theorems, and the definition of the modal logic \GL\
-(The name comes from Gödel and Löb) and a few of the properties of this modal
+(the name comes from Gödel and Löb) and a few of the properties of this modal
 logic. The
 main result of this project will be Solovay's arithmetic completeness theorem,
-that simply put states that these two predicates (from different mathematical
-systems) "behaves" in the
+which simply put states that these two predicates (from different mathematical
+systems) "behave" in the
 same way.
 
 \section{Modal Logic}
-Modal logic will play an important rule in this project. The main point here,
-is that provability can be seen as a modality. This will be swhon later on in
-the project.
+Modal logic will play an important role in this project. The main point here,
+is that provability can be seen as modality. This will be shown later on in
+the project. This section will introduce a lot of basic definitions and results
+about modal logic.
 
 \subsection{The language of modal logic}
 In this subsection we will define our language $\mathcal{L}_\Box$ of modal logic. 
-We will have start of with a  set called $\Phi$, which consists of propositional letter
+We will start off  a  set called $\Phi$, which consists of propositional
+letters
 $p,q,\ldots$. We can further define the primitive symbols of our modal language
 $\mathcal{L}_\Box$:
 
@@ -35,16 +37,16 @@ $\mathcal{L}_\Box$:
 	\begin{enumerate}
 		\item Every letter from the set $\Phi$.
 		\item The logical constants $\bot$ (zero-ary) and $\rightarrow$
-			(binary)
+			(binary).
 		\item The modal operator $\Box$ (unary).
 	\end{enumerate}
 \end{defi}
-We can now define the well formed formulas of $\mathcal{L}_\Box$, or as we will
-call them for the: \textit{modal formulas}.
+We can now define the well-formed formulas of $\mathcal{L}_\Box$, or as we will
+call them: \textit{modal formulas}.
 
 \begin{defi}
 	We define a \textit{modal formula} recursively in the following way:
-	\begin{enumerate}[label=\roman*]
+	\begin{enumerate}[label=\roman*.]
 		\item Each $p\in\Phi$ is a modal formula
 		\item $\bot$ is a modal formula
 		\item If $\alpha$ and $\beta$ are modal formulas then so is
@@ -57,22 +59,22 @@ call them for the: \textit{modal formulas}.
 Further we will define the connectives $\wedge,\neg,\vee,\leftrightarrow,
 \Diamond, \Box^n,\Diamond^n$ and $\top$
 in the usual way. 
-We will read $\Box\alpha$ as "$\alpha$ is provable. Normally in the alethic modal logic the
-$\Box$ reads "$\alpha$ is necessarily true. Further the symbol $\bot$ stands
+We will read $\Box\alpha$ as "$\alpha$ is provable". Normally in the alethic modal logic the
+$\Box\alpha$ reads "$\alpha$ is necessarily true". Further the symbol $\bot$ stands
 for falsehood. We will read $\Diamond \alpha$ as "$\alpha$" is consistent.
 \subsection{Semantics}
 In this section we will define the notation of truth for our modal logic. We
-will begin by defining a Hintikka frame and a Kripke model
+will begin by defining a Hintikka frame and a Kripke model.
 \begin{defi}[Hintikka frame]
 	A \textit{Hintikka frame} is a tuple $\mathcal{H}=\la W,R\ra$ where is $W$ is
-	non-empty set (we will call its members for nodes\footnote{Normally
+	a non-empty set (we will call its members for nodes\footnote{Normally
 		the members of this set will be called worlds, but this
-	interpretation do not make senses in provability logic}) and where $R\subset
+	interpretation does not make senses in provability logic}) and where $R\subset
 	W\times W$ is a relation that we will call the accessibility relation.
 	We will use the notation $wRv$ to denote that the note $w$ sees the note
 	$v$; i.e $(w,v)\in R$.
 \end{defi}
-We do not at the given time give the relation $R$ any properties. It could be
+We do not at this time give the relation $R$ any properties. It could be
 reflexive, transitive or anti-symmetric.
 \begin{defi}[Kripke model]
 	A \textit{Kripke model} is a tuple $\mathcal{K}=\la \mathcal{H},\phi\ra$ where
@@ -83,9 +85,9 @@ reflexive, transitive or anti-symmetric.
 \end{defi}
 We can now define the notion of truth in a given Kripke model $\mathcal{K}=\la
 \mathcal{H},\phi\ra$. If a modal formula $\alpha$ is true at a node $w$ in a
-Kripke model $\mathcal{K}=\la \mathcal{H},\phi\ra$ we will write:
+Kripke model $\mathcal{K}=\la \mathcal{H},\phi\ra$, we will write:
 \[\vDash_w^\mathcal{K}\alpha\]
-This notation is taken from \parencite{Lemmon1977}. Another notation instead of
+This notation is taken from \parencite{Lemmon1977}. An alternative notation for
 $\vDash^\mathcal{K}_w\alpha$ is $\mathcal{K},w\vDash\alpha$.
 \begin{defi}[Truth definition]
 	We define the notion of \textit{truth} in a Kripke modal $\mathcal{K}=\la
@@ -109,7 +111,7 @@ $\vDash^\mathcal{K}_w\alpha$ is $\mathcal{K},w\vDash\alpha$.
 We will end this section with definitions of a \textit{valid} and
 \textit{satisfiable} formula.
 \begin{defi}
-For a given Hintikka frame $\mathcal{H}=\la W,R\ra$ we say that $\alpha$ is
+For a given Hintikka frame $\mathcal{H}=\la W,R\ra$, we say that $\alpha$ is
 \textit{valid} in $\mathcal{H}$ and write $\vDash^\mathcal{H}\alpha$ if and only if
 $\vDash^\mathcal{K}_w\alpha$ for all Kripke models on our frame $\mathcal{H}$ and all
 notes $w\in W$. Further we say that $\alpha$ is \textit{satisfiable} in $\mathcal{H}$
@@ -121,21 +123,21 @@ $\mathcal{H}$, if this is the case we simply write $\vDash\alpha$. $\alpha$ is
 called \textit{satisfiable} if and only if $\alpha$ is satisfiable on all frames
 $\mathcal{H}$.
 
-$A$ formula $\alpha$ is called valid on a class of frames $\mathcal{C}$ if for
+$A$ formula $\alpha$ is called valid on a class of frames $\mathcal{C}$, if for
 all $\mathcal{H}\in\mathcal{C}$ we have that $\vDash^\mathcal{H}\alpha$. We
 write this as $\vdash^\mathcal{C}\alpha$.
 
 A formula $\alpha$ is \textit{valid} in a Kripke model $\mathcal{K}=\la
 W,R,\phi\ra$ if and only if $\vDash^\mathcal{K}_w\alpha$ for all notes $w\in
-W$. We write this as $\vDash^\mathcal{K}\alpha$
+W$. We write this as $\vDash^\mathcal{K}\alpha$.
 
 If a Kripke model $\mathcal{K}$ has a \textit{minimal node} $w_0$, i.e a node
 such that for all $v\in W$ we have $w_0Rv$, then a modal formula $\alpha$ is
 called  \textit{true} in $\mathcal{K}$ if we have that
 $\vDash_{w_0}^\mathcal{K}\alpha$.
 \end{defi}
-\subsection{The modal logic GL}
-In this section we will define the notion of a modal logic and define the modal
+\subsection{The modal logic \GL}
+In this section, we will define the notion of a modal logic and define the modal
 logic \GL, which will be our base modal logic in this project.
 \begin{defi}
 	A \textit{modal logic} $\Lambda$ is a set of modal formulas that contains all
@@ -145,7 +147,7 @@ logic \GL, which will be our base modal logic in this project.
 	else we write $\not\vdash_\Lambda\alpha$.
 
 	We will also define the set
-	$\Lambda_S=\{\alpha\vDash^\mathcal{S}\alpha,\ \text{for al structures}\
+	$\Lambda_S=\{\alpha\vDash^\mathcal{S}\alpha,\ \text{for all structures}\
 	\mathcal{S}\in S\}$. Where $S$ is any class of frames.
 \end{defi}
 We will further define when a given modal formula is deducible in a modal
@@ -160,8 +162,8 @@ logic:
 	\textit{deducible} in $\Lambda$ from $\Gamma$ if $\vdash_\Lambda\alpha$ or if
 	there are formulas $\beta_1,\ldots,\beta_n\in\Gamma$ such that:
 	\[\vdash_\Lambda(\beta_1\wedge\cdots\wedge\beta_n)\rightarrow\alpha\]
-	In this case we write $\Gamma\vdash_\Lambda\alpha$ else we write
-	$\Gamma\not\vdash_\Lambda\alpha$	
+	In this case we write $\Gamma\vdash_\Lambda\alpha$, else we write
+	$\Gamma\not\vdash_\Lambda\alpha$.
 \end{defi}
 
 We will now define what a \textit{normal modal logic} is. We will later look at
@@ -172,26 +174,26 @@ a modal logic that is not normal. But the modal logic \GL\ is a normal one.
 	\begin{enumerate}
 		\item[Tau] All propositional tautologies. 
 		\item[K] $\Box(p\rightarrow q)\rightarrow(\Box p\rightarrow\Box
-			q)$
+			q)$.
 		\item[MP] $p,\ p\rightarrow q \vdash_\Lambda q$
-			(\textit{modus ponens} )
-		\item[Nec] $p \vdash_\Lambda\Box p$ (\textit{necessitation})
+			(\textit{modus ponens}.
+		\item[Nec] $p \vdash_\Lambda\Box p$ (\textit{necessitation}).
 	\end{enumerate}
 	If $\Gamma$ is a set of modal formulas we call the smallest normal
-	logic contanting $\Gamma$ the normal modal logic axiomatized by
-	$\Gamma$. The normal modal logic axiomatized by empty set is called
-	\textbf{K} and
+	logic containing $\Gamma$ the normal modal logic axiomatized by
+	$\Gamma$. The normal modal logic axiomatized by the empty-set is called
+	\textbf{K}, and
 	this is the smallest normal modal logic.\footnote{Here \textbf{K}
-	stands for Kripke}
+	stands for Kripke.}
 \end{defi}
-A few standard results follows from these definitions:
+A few standard results follow from these definitions:
 \begin{prop}
 	If $\Lambda$ is a normal modal logic then:
 	\begin{enumerate}
 		\item If $\vdash_\Lambda\alpha\rightarrow\beta$ then
-		$\vdash_\Lambda\Box\alpha\rightarrow\Box\beta$
+		$\vdash_\Lambda\Box\alpha\rightarrow\Box\beta$.
 	\item
-		$\vdash_\Lambda\Box(\alpha\wedge\beta)\leftrightarrow\Box\alpha\wedge\Box\beta$
+		$\vdash_\Lambda\Box(\alpha\wedge\beta)\leftrightarrow\Box\alpha\wedge\Box\beta$.
 	\item
 		$\vdash_\Lambda\Box(\alpha_1\wedge\cdots\wedge\alpha_n)\leftrightarrow
 		\Box\alpha_1\wedge\cdots\wedge\Box\alpha_n$ for $n\geq 2$.
@@ -209,26 +211,26 @@ Smorynski uses this formula as an axiom instead of the axiom \textbf{K}.
 We can extend the logic \textbf{K} in the following way, to get the logic
 \textbf{GL} and the logic \textbf{4}.
 \begin{defi}
-	\textbf{K4} is the modal logic extending \textbf{K} by adding the
+	\textbf{K4} is the modal logic that extends \textbf{K} by adding the
 	following axiom:
 	\begin{enumerate}
-		\item[4] $\Box\alpha\rightarrow\Box\Box\alpha$
+		\item[4] $\Box\alpha\rightarrow\Box\Box\alpha$.
 	\end{enumerate}
 	\GL\ is the modal logic extending \textbf{K} by adding the two following
 	axioms:
 	\begin{enumerate}
-		\item[4] $\Box p\rightarrow\Box\Box p$
+		\item[4] $\Box p\rightarrow\Box\Box p$.
 		\item[L]
-			$\Box(\Box p\rightarrow p)\rightarrow\Box p$
+			$\Box(\Box p\rightarrow p)\rightarrow\Box p$.
 	\end{enumerate}
 \end{defi}
 \begin{remark}
-	Smorynski calls the modal logic \textbf{K4} for \textbf{BML} (Basic modal
-logic).
+	Smorynski calls the modal logic \textbf{K4} for \textbf{BML} (Basic
+	modal Æogic).
 \end{remark}
 
 
-It can be shown that the axiom 4 is redundant. k
+It can be shown that the axiom 4 is redundant.
 It is now possible to define the notions of soundness, strong completeness and
 weak completeness.
 \begin{defi}
@@ -259,7 +261,7 @@ the results about \GL.
 \end{thm}
 
 There is another result concerning the completeness and soundness of \GL. To
-state this we first need some definitions concerning relations:
+state this, we first need some definitions concerning relations:
 \begin{defi}
 	A relation $R$ on frame $\mathcal{H}=\la W,R\ra$ is said to be
 	\textit{transitive} if for all $w_1,w_2,w_3\in W$, whenever $w_1Rw_2$
@@ -296,10 +298,11 @@ says a given formula has a proof in arithmetics.
 
 
 \subsection{Primitive Recursive Functions}
-We will start of by defining a class of function that will both play a crucial
-role in the proof of Gödels Incompleteness Theorems, and in the rest of this
+We will begin by defining a class of functions that will both play a crucial
+role in the proof of Gödel's Incompleteness Theorems and in the rest of this
 project. 
 \begin{defi}
+	\label{def:Recur}
 	The class of primitive recursive functions is the smallest class closed
 	under the following schemata:
 	\begin{enumerate}[label=\Roman*.]
@@ -320,14 +323,15 @@ project.
 We can also define relations as being primitive recursive:
 \begin{defi}
 	A relation $R\subseteq \omega^n$ is primitive recursive if its
-	chararestic function :
+	characteristic function is:
 	\[\chi_R(\vec{x})=\begin{cases}
 		0 &\text{if}\ R(\vec{x})\\
 		1 &\text{if}\ R(\vec x)
 	\end{cases}\]
 \end{defi}
 So with these definitions we can show that some well known functions are
-primitive recursive. The proofs of these can be rather tiresome and have been
+primitive recursive. The proofs of these can be rather tiresome and have
+therefor been
 left out.
 \newpage
 \begin{prop}
@@ -357,24 +361,24 @@ left out.
 				9.& $|x-y|=\begin{cases}
 				x-y,&x\geq y\\
 				y-x,& x<y
-			\end{cases}$& absolute value  \\
+			\end{cases}$& Absolute value  \\
 \end{tabular}
 \end{table}
 \end{prop}
 
 \subsection{\PRA}
-In this section we will specify the rules and language of \PRA. First of we
+In this section we will specify the rules and language of \PRA. First, we
 will define the language $\mathcal{L}_\PRA$ of \PRA.
 
 \begin{defi}
 	The language $\mathcal{L}_\PRA$ consists of the following symbols:
 	\begin{align*}
 		\text{Variables}&: v_0,v_1,\ldots \\
-		\text{Constant} &: \0\\
+		\text{Constants} &: \0\\
 		\text{Function symbols} &: \ol f\ \text{for each primitive
 		recursive function}\ f\\
 			\text{Relation symbols} &:\ =\\
-			\text{propositional connectives:} &:\
+			\text{Propositional connectives:} &:\
 			\neg,\wedge,\vee,\rightarrow\\
 			\text{Quantifiers} &: \forall,\exists
 	\end{align*}
@@ -409,12 +413,13 @@ mostly done to settle notations.
 	\end{enumerate}
 \end{defi}
 We use Polish notation so we do not have parentheses in our language. In
-practices we will use parentheses and infix notation. We will also need the
+practice we will use parentheses and infix notation, by defining the
+connectives in the classic way. We will also need the
 definition of a \textit{sentence}.
 
 \begin{defi}
 	A formula $F$ of \PRA\ is called a sentence if it has no free
-	variables; i.e if all variables $v$ that occurs in $F$ are bound.
+	variables; i.e if all variables $v$ that occur in $F$ are bound.
 \end{defi}
 
 Having defined the language of \PRA\ we can now state the different axioms of
@@ -489,7 +494,7 @@ Having defined the language of \PRA\ we can now state the different axioms of
 							$g,h_1,\ldots, h_m$
 						\item Let $f$ be defined by
 							primitive recursion
-							form the primitive
+							from the primitive
 							recursive function $g$
 							and $h$, then the
 							following to things
@@ -515,13 +520,14 @@ Having defined the language of \PRA\ we can now state the different axioms of
 \end{defi}
 The induction axiom seems a bit strange at first. If we had allowed full
 induction; i.e induction on every formula, the system we would have defined
-would be know as \textbf{PA}; Peano Arithmetics.  Having written down the axioms we will move on to the
+would be known as \textbf{PA}; Peano Arithmetics.  Having written down the
+axioms, we will move on to the
 inference rules of \PRA.
 \begin{defi}
 	The inference rules of \PRA\ are the following:
 	\begin{enumerate}
-		\item From $F,F\rightarrow G,$ derive $G$.
-			(modus ponens)
+		\item From $F,F\rightarrow G,$ derive $G$
+			(modus ponens).
 		\item From $F v\rightarrow G$ derive $\exists
 			F\rightarrow G$, under the assumption that no
 			$v$ occurs free in $G$.
@@ -545,20 +551,20 @@ primitive recursive functions.
 \end{thm}
 That \PRA\ can compute the primitive recursive functions makes it possible to
 encode the syntax of \PRA. This will be explained in the next section.
-\subsection{Arithmetication of the syntax}
+\subsection{Arithmetization of the syntax}
 
 In this section we will discus how each expression in the language $F$ of \PRA\ can
 be given a unique code-number $\Godelnum{F}$ called the Gödel number. This makes it possible for \PRA\ to express
-things about it self. For this encoding to work we will need the fundamental
+things about itself. For this encoding to work we will need the fundamental
 theorem of arithmetic that states that every natural number $a\geq 2$ has a
 unique representation:
 \[a=p^{n_0}_{i_0}\cdots p^{n_k}_{i_k}\]
 Where each $p$ is a distinct prime and all the $n_i$ are positive. If given a
-sequence $(j_0,\ldots j_t)$ we can coded it with a unique code in the following
+sequence $(j_0,\ldots j_t)$ we can encode it with a unique code in the following
 way:
 $$c=2^{j_0+1}3^{j_1+1}\cdots p^{j_t+1}$$
-So by this it is possible to give each formula of \PRA\ a unique code. We will
-start of by listing the codes for some of our symbols of \PRA:
+By encoding them like this it is possible to give each formula of \PRA\ a unique code. We will
+begin by listing the codes for some of our symbols of \PRA:
 
 \begin{enumerate}
 	\item $\Godelnum{\0}$ is $(0)$.
@@ -569,7 +575,7 @@ start of by listing the codes for some of our symbols of \PRA:
 	\item $\Godelnum{\forall}$ is $(6)$ and $\Godelnum{\exists}$ is $(7)$.
 	\item $\Godelnum{v_i}$ is $(8,i)$.
 \end{enumerate}
-These are the easy one to gives. The hard ones are the codes for the functions
+These are the easy one to gives. The hard ones are the codes for the function
 symbols. We will define the codes for these inductively as seen in the
 following table:
 
@@ -590,10 +596,10 @@ following table:
 \end{table}
 
 This encoding is primitive recursive so \PRA, can do this encoding. But the proof of that is very tedious, so
-it is left out.
+it will be left out.
 A lot of different relations and functions can be shown to be primitive recursive, one of the
-important ones is the function $subst(x;y,z)$ which substitutes $z$ for $y$
-in the formula $x$. With this it is possible to show primitive recursively
+important ones is the function $subst(x;y,z)$, which substitutes $z$ for $y$
+in the formula $x$. With this, it is possible to show that we can  primitive recursively
 define our axioms of \PRA. This means that \PRA\ is capable of identifying its
 own axioms. Further it can also identify that if a given sequence of formulas
 is a proof of another given formula; i.e the relation that says "y codes a
@@ -605,15 +611,15 @@ formula" as: $\text{Pr}(x)\leftrightarrow\exists y(\text{Prov}(y,x))$
 The relation $\text{Pr}(x)$ has the following properties called Löbs
 derivability conditions:
 \begin{enumerate}
-	\item[D1] $\PRA\vdash F\Rightarrow\vdash\text{Pr}(\Godelnum{F})$
+	\item[D1] $\PRA\vdash F\Rightarrow\vdash\text{Pr}(\Godelnum{F})$.
 	\item[D2] $\PRA\vdash\text{Pr}(\Godelnum{F\rightarrow
-		G})\rightarrow(\text{Pr}(\Godelnum{F})\rightarrow\text{Pr}(\Godelnum{G}))$
+		G})\rightarrow(\text{Pr}(\Godelnum{F})\rightarrow\text{Pr}(\Godelnum{G}))$.
 	\item[D3]
-		$\PRA\vdash\Pr(\Godelnum{F})\rightarrow\Pr(\Godelnum{\Pr(\Godelnum{F})})$
+		$\PRA\vdash\Pr(\Godelnum{F})\rightarrow\Pr(\Godelnum{\Pr(\Godelnum{F})})$.
 \end{enumerate}
-it is also clear that $\neg\Pr(\bot)$, where $\bot$ is some false statement
+It is also clear that $\neg\Pr(\bot)$, where $\bot$ is some false statement,
 expresses consistence. We will denote this by $\text{Con}$.
-We can further with the use of the $subst$ function prove the following
+With the use of the $subst$ function, we can further  prove the following
 important lemma:
 \begin{lem}[The fixed point lemma]
 	Given any formula $G$ where the only free variable is $v$, we can
@@ -637,15 +643,16 @@ This lemma makes it possible for us to show the first incompleteness theorem:
 	I.e we have a sentence where neither it or its negation can be proven.
 	So our system is incomplete.
 \end{thm}
-Since $\Pr(\cdot)$ fullfills the derivability conditions the second theorem can
+Since $\Pr(\cdot)$ fulfills the derivability conditions, the second theorem can
 also be proven. 
 \begin{thm}[The Second Incompleteness Theorem]
-	Under the assumption that \PRA\ is consistent we have that $\PRA\not\vdash\text{Con}$
+	Under the assumption that \PRA\ is consistent we have that
+	$\PRA\not\vdash\text{Con}$.
 \end{thm}
 The main goal for the rest of this project is now to prove that the $\Box$ in
 \GL "behaves" in the same way as the Pr($\cdot$) predicate from arithmetics.
-How to should be understood will be explained latter on.
-To prove this theorem we will first need a main result from Recursion Theory
+How this should be understood will be explained latter on.
+To prove this theorem, we will first need a main result from Recursion Theory
 called the recursion theorem.
 
 We will need one more result about the proof predicate in the project. It is
@@ -665,7 +672,7 @@ $\text{Pr}(\Godelnum{G}\rightarrow G$ in the case where \PRA\ proves $G$
 itself.
 
 We will in a later chapter need the following lemma:
-
+\newpage
 \begin{lem}
 	\label{lem:Prov}
 	Let $\ol f$ be an $n$-ary primitive recursive function symbol. There is
@@ -680,9 +687,9 @@ formula where we have substituted the variables with the nummerals: $\ol
 v_0,\ldots ,\ol v_{n-1}$.
 
 The Formalized Löb's Theorem and the derivability conditions can be shown to
-hold for a wide range of arithmetical systems. A overview over this subject
+hold for a wide range of arithmetical systems. A short overview of this subject
 will be given in chapter \ref{chap:PRA}. If we write $\vdash F$ instead of
-$\PRA\vdash F$ it means we have not specified the arithmetical system we are
+$\PRA\vdash F$, it means we have not specified the arithmetical system we are
 looking at.
 
 If we compare the properties of $\text{Pr}(\cdot)$ with the properties of the
@@ -717,8 +724,8 @@ $\Box$-operator of \GL, we get the following table:
 
 	It is clear from this table that the predicate $\text{Pr}(\cdot)$
 	and the $\Box$-operator of \GL\ have a lot of the same properties in common.
-	Solovay's completeness theorems shows that the modal logic \GL\ in some
-	way axiomatize the proof predicate of a wide range of different
+	Solovay's completeness theorems show that the modal logic \GL\ in some
+	way axiomatizes the proof predicate of a wide range of different
 	arithmetical systems. A somewhat fun fact is, that the first time the
 	principle $\Box(\Box\alpha\rightarrow\alpha)\rightarrow\Box\alpha$ was
 	used in modal logic, was in 1963 in a paper by Timothy John Smiley

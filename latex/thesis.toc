@@ -20,7 +20,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.1.2}Semantics}{8}{subsection.1.1.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.1.3}The modal logic GL}{10}{subsection.1.1.3}%
+\contentsline {subsection}{\numberline {1.1.3}The modal logic \text {\textbf {GL}}}{10}{subsection.1.1.3}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.2}Gödels Incompleteness Theorems}{12}{section.1.2}%
 \defcounter {refsection}{0}\relax 
@@ -28,7 +28,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.2.2}\text {\textbf {PRA}}}{14}{subsection.1.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2.3}Arithmetication of the syntax}{17}{subsection.1.2.3}%
+\contentsline {subsection}{\numberline {1.2.3}Arithmetization of the syntax}{17}{subsection.1.2.3}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.2.4}The proof predicate and the theorems}{18}{subsection.1.2.4}%
 \defcounter {refsection}{0}\relax 
