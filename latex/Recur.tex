@@ -519,24 +519,24 @@ used to embed a Kripke model in \PRA.
 	function $f$. Since $f$ is total we also have that $f\circ d$ is total.
 	This means that $\varphi_v(v)$ converges and that
 	$\varphi_{d(v)}=\varphi_{\varphi_v(v)}$. Thus we have:
-	$$\varphi_n=\varphi_{d(v)}=\varphi_{\varphi_v(v)}=\varphi_{f\circ
-	d(v)}=\varphi_{f(n)}$$
+	\[\varphi_n=\varphi_{d(v)}=\varphi_{\varphi_v(v)}=\varphi_{f\circ
+	d(v)}=\varphi_{f(n)}\]
 	The second equality sign follows from \ref{eq:du} and the third follows
 	from \ref{eq:fd}.
 \end{proof}
 Following \parencite{Owen1973}, the argument in the proof can be seen as a
 digitalization argument that fails. Commonly when we apply a digitalization
-argument, we have a class of sequences, with terms from an set $A$, that we arranges as the rows in a square
-matrix. We then have a map $h:A\rightarrow A$ that induces a operation $h^*$ on
-the set of sequences such that if $\la s(i),i\in I\ra$ is a sequences in our
+argument, we have a class of sequences, with terms from a set $A$, that we arrange as the rows in a square
+matrix. We then have a map $h:A\rightarrow A$ that induces an operation $h^*$ on
+the set of sequences such that if $\la s(i),i\in I\ra$ is a sequence in our
 matrix then 
-$$h^*(\la s(i),i\in I\ra)=\la h(s(i)),i\in I\ra$$
-After having defined this map we will use it on the sequences that consists of
+\[h^*(\la s(i),i\in I\ra)=\la h(s(i)),i\in I\ra\]
+After having defined this map we will use it on the sequences that consist of
 the elements of the  diagonal of the matrix and
-show that the resulting sequences is not one of the original sequences. 
+show that the resulting sequence is not one of the original sequences. 
 
 The digitalization argument "fails" in our case, since the sequences of the
-diagonal is already already one of the rows and thus the image $h^*$ of this
+diagonal is already one of the rows and thus the image $h^*$ of this
 sequences will also be one of the rows; i.e the $h$ has a fixed point.
 
 The start of the proof can be seen as the following lemma:
@@ -550,33 +550,33 @@ The start of the proof can be seen as the following lemma:
 	\end{align}
 \end{lem}
 
-Most of the times where one uses the Recursion Theorem, one actually uses this
+Most of the time where one uses the Recursion Theorem, one actually uses this
 lemma to construct the given function.
 
 \subsection{Application of the Recursion Theorem}
 The recursion theorem is a "powerful" tool. It enables us to define a partial
-recursive function, which uses its own index as part of its definition. This
-The recursion theorem overrides this "self-reference" because we are using the
+recursive function, which uses its own index as part of its definition. 
+The recursion theorem overrides this "self-reference", because we are using the
 $s-m-n$ theorem to define a function $f(x)$ and
 $\varphi_{f(x)}(z)=(\ldots,x\ldots)$ and then taking a fixed point:
-$\varphi_n=\varphi_{f(n)}$.  When we are making constructions like this the
+$\varphi_n=\varphi_{f(n)}$.  When we are making constructions like this, the
 only thing we cannot do is use specific properties of the function $\varphi_n$.
 We will use the theorem in this way in our proof of Solovay's Completeness
-Theorems to define a function with help of the functions own Gödel number; and
+Theorems to define a function with the help of the function own Gödel number; and
 the recursion theorem makes this a viable tactic.
 
 The
 following examples will show a few uses of this theorem.
 \begin{exmp}
-	We will show that there is a $n$ such that:
+	We will show that there is an $n$ such that:
 	$$W_n=\{n\}$$
-	We start of by using the $s-m-n$ theorem to define $W_{f(x)}=\{x\}$
+	We start of by using the $s-m-n$ theorem to define $W_{f(x)}=\{x\}$,
 	then by the recursion theorem we can choose $n$ such that we have:
 	$$W_n=W_{f(n)}=\{n\}$$
 \end{exmp}
 
-The next example will be a application of the Recursion Theorem that is in the
-same vein as the one we will use when we have to prove Solovay's completeness
+The next example will be an application of the Recursion Theorem that is in the
+same vein as the one we will use proving Solovay's completeness
 theorems.
 \begin{exmp}
 	Let $\psi:\omega^2\rightarrow\omega$ and
@@ -597,17 +597,17 @@ theorems.
 	We can see $\Godelnum{\Phi(\phi_0)}$ as a primitive recursive function
 	of $\Godelnum{\phi_0}$. I.e we have:
 	\[\Godelnum{\Phi(\phi_0)}=\eta(\Godelnum{\phi_0})\]
-	We can now use the Recursion Theorem to chose a $n$ such that we have:
+	We can now use the Recursion Theorem to chose an $n$ such that we have:
 	$\varphi^{(2)}_{\eta(n)}=\varphi^{(2)}_n$ and for
 	$varphi=\varphi^{(2)}_n$ we have:
 	\[\varphi(x,y)=z\leftrightarrow(x=0\wedge\psi(y)=z=\vee(x>0\wedge
 	\theta(\varphi(x-1,y),x,y)=z)\]
-	I.e $\varphi$ does exactly what we want it to do. WE just need to
+	I.e $\varphi$ does exactly what we want it to do. W just need to
 	define $\varphi$ and this can be done by a $\Sigma_1$ induction.
 \end{exmp}
 
-This ends our discussion about recursion theory. In the next chapter we will
+This end our discussion about recursion theory. In the next chapter, we will
 generalize the notion of $\Sigma_1$ sets and in chapter \ref{chap:Complete} we
-will use the recursion theorem to define a important function.
+will use the recursion theorem to define an important function.
 
 \end{document}
