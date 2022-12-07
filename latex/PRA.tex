@@ -6,7 +6,7 @@ chapters, since they make it possible for us to classify different arithmetical
 formulas. These definitions will make it
 possible for us to look at different fragments of arithmetic, since we can
 distinguish these fragments by which class of sets they allow induction on. We
-will start off by defining a "base" fragment called \textbf{EA} and then
+will start off by defining a "base" fragment called \textbf{Q} and then
 augment it with stronger inductions axioms. This means that some of these
 fragments contains the other fragments.  With this knowledge it will be
 possible for us to place \PRA\ in this hierarchy.
@@ -14,7 +14,7 @@ possible for us to place \PRA\ in this hierarchy.
 
 
 We will further look at how much induction we have in \PRA; i.e which class of
-formulae from the arithmetical hierarchy we can do induction on in \PRA. 
+formulae from the arithmetical hierarchy we can perform induction on in \PRA. 
 
 We will also introduce a two other ways to augment the different fragments
 without the adding more induction. These will play a role in the generalization
@@ -25,14 +25,14 @@ we will prove a generalization of Löb's third derivability condition for \PRA.
 
 
 
-This chapter should be seen as overview of the subject, and a lot of statements
-will be left unproven; since these will not play a major role in whats is to
+This chapter should be seen as an overview of the subject, and a lot of statements
+will be left unproven; since they will not play a major role in what is to
 come.
 
-\section{The arithmetical hierarchy}
+\section{The Arithmetical Hierarchy}
 
 
-In this section we will introduce the so called arithmetical hierarchy. Parts
+In this section we will introduce the so-called arithmetical hierarchy. Parts
 of it has already be defined; i.e the sets $\Sigma_1$. In the arithmetical
 hierarchy, we can classify sets with respect to their quantifier
 complexity in their syntactical definition.
@@ -42,7 +42,7 @@ arithmetical hierarchy as a tool to determine the amount of induction we will
 have in a given fragment.
 
 The goal of this section is to introduce the arithmetical hierarchy and prove
-some results about it. The most of these results might not be used going
+some results about it. Most of these results might not be used going
 forward.
 
 \begin{defi}
@@ -56,7 +56,7 @@ forward.
 			y_3\cdots Qy_nR(x,\y)$$
 			Here $Q$ is $\exists$ if $n$ is odd and $Q$ is
 			$\forall$ if $n$ is even. We define $A$ being in
-			$\Pi_n$ likewise. $A$ is in $\Pi_n$ if:
+			$\Pi_n$ in a similar way. $A$ is in $\Pi_n$ if:
 			$$x\in A\ \text{iff}\ \forall y_1\exists y_2\forall
 			y_3\cdots Qy_nR(x,\y)$$
 		\item $A$ is in $\Delta_n$ if $A\in\Sigma_n\cap\Pi_n$
@@ -65,8 +65,8 @@ forward.
 	is $\Sigma_n$ ($\Pi_n$) as a relation of the variables that are free in
 	it. 
 \end{defi}
-In the rest of this project we will mostly look at formulas that are either
-$\Sigma_n$ or $\Pi_n$ and not sets, that have this property. Furthermore we
+In the rest of this project, we will mostly look at formulae that are either
+$\Sigma_n$ or $\Pi_n$ and not the sets of these classes. Furthermore we
 have that $\Sigma_0=\Pi_0=\Delta_0$, and a formula $F$ that is $\Delta_0$ is
 also called a bounded formula.
 
@@ -111,7 +111,7 @@ We can show a few properties of these sets.
 			\]
 			This kind of reformulation can be done for any set in
 			$\Sigma_n$ ($\Pi_n$)
-		\item Let the following to sets be defined:
+		\item Let the following two sets be defined:
 			\[
 				A=\{x:\exists y_1\forall y_2\cdots
 				R(x,y_1,y_2,\ldots)\}\\
@@ -157,8 +157,8 @@ We can show a few properties of these sets.
 						\sigma(\forall z<y)
 						S(x,y,z,\sigma(z))
 			\end{align*}
-			WE have that $\sigma$ range is in $\omega^{<\omega}$.
-			By the indction hypothesis we have that $(\forall
+			We have that $\sigma$ range is in $\omega^{<\omega}$.
+			By the induction hypothesis we have that $(\forall
 			z<y)S\Pi_{n+1}$ but by the above deduction we must then
 			have that $A\in\Sigma_n$.
 	\end{enumerate}
@@ -169,8 +169,9 @@ We can show a few properties of these sets.
 In this section we will use the previous section to look at different fragments
 of arithmetic. These can be seen as different sub-theories of \textit{Peano
 Arithemtics}. These different fragments are important, since a natural
-question to ask is; "is which axioms of arithmetic do we need for proving Gödel's
-incompleteness theorems or Solovay's completeness theorems?" We will comment on
+question to ask is; "which axioms of arithmetic do we need for proving Gödel's
+incompleteness theorems and Solovay's completeness theorems for the proof
+predicate of the given theory?" We will comment on
 the bit about Solovay's completeness theorem going forward.
 
 We will split the different fragments up in two categories:\footnote{These
@@ -186,9 +187,9 @@ axioms.
 
 
 We will start of by defining a very weak fragment called Robinson's theory.
-This fragments was first considered in [Ref]. We
+This fragment was first considered in \parencite{Rob1950}. We
 will denote this theory with \textbf{Q}.
-This theory have the following axioms:
+This theory has the following axioms:
 \begin{align*}
 	&\forall x(\neg Sx\not =0)\\
 	&\forall x\forall y (Sx=Sy\rightarrow x=y)\\
@@ -200,24 +201,24 @@ This theory have the following axioms:
 \end{align*}
 This theory dose not have the inequality symbol. We will extend $\textbf{Q}$ with the
 following axiom:
-$$x\leq y\leftrightarrow \exists z(x+z=y)$$
+\[x\leq y\leftrightarrow \exists z(x+z=y)\]
 This extension of $\textbf{Q}$ is denoted by $\textbf{Q}_\leq$. Both
 $\textbf{Q}$ and $\textbf{Q}_\leq$ are very weak fragments since they do not
 contain any induction schemas.
 \begin{defi}
-	Giving a class $\Gamma$ of either $\Sigma_n$ or $\Pi_n$ formulas we define
+	Giving a class $\Gamma$ of either $\Sigma_n$ or $\Pi_n$ formulae we define
 	$\Gamma$-\textit{induction} ($\Gamma$-\textit{IND}) to be the following
 	schema:
-	$$\varphi(0)\wedge\forall v(\varphi (x)\rightarrow\varphi(Sx))\rightarrow \forall
-	v\varphi (v)$$
+	\[\varphi(0)\wedge\forall v(\varphi (x)\rightarrow\varphi(Sx))\rightarrow \forall
+v\varphi (v)\]
 	for $\varphi\in\Gamma$. Further we define $\Gamma$-\textit{Least Number
 	Principle} ($\Gamma$-\textit{LNP}) to be the following schema:
-	$$\exists x\varphi(x)\rightarrow\exists(\varphi(x)\wedge\neg\exists
-	y(y<x\wedge\varphi(y)))$$
-	For $\varphi\in\Gamma$. Lastly we will define the replacement axioms
+	\[\exists x\varphi(x)\rightarrow\exists(\varphi(x)\wedge\neg\exists
+y(y<x\wedge\varphi(y)))\]
+	For $\varphi\in\Gamma$. Lastly we define the replacement axioms
 	for $\Gamma$, ($\Gamma$-REPL) as the following formulas:
-	$$(\forall x\leq t)\exists y\varphi(x,y)\rightarrow\exists z(\forall
-	x\leq t)(\exists y\leq z)\varphi(x,y)$$?
+	\[(\forall x\leq t)\exists y\varphi(x,y)\rightarrow\exists z(\forall
+	x\leq t)(\exists y\leq z)\varphi(x,y)\]
 \end{defi}
 
 From the above axioms we can create a hierarchy of different strong fragments
@@ -234,30 +235,32 @@ of arithmetics. We will define the following theories:
 		\item The theory $I\Delta_0$ is
 			$Q_\leq$ plus the $\Delta_0$-IND axioms. 
 		\item The theory $L\Sigma_n$ is defined by the theory
-			$I\Delta_0$ plus the $\Sigma_n$-LNP axioms
+			$I\Delta_0$ plus the $\Sigma_n$-LNP axioms.
 		\item The theory $B\Sigma_n$ is defined by the theory
 			$I\Delta_0$ plus the $\Sigma_n$-REPL axioms.
 		\item The theory $I\Sigma_n^R$ is defined as the closure of
-			$Q_\leq$ under the $\Sigma_n$ induction rule:
+			$\textbf{Q}_\leq$ under the $\Sigma_n$ induction rule:
 			\[\frac{F(0),\ \forall
 					x(F(x)\rightarrow\varphi(x+1))}{\forall
 			x F(x)}\]
-		\item The theory $I\Sigma_n^-$ [$\Pi_n^-$] is the theory axiomatizedbe the
-			axioms of $Q_\leq$ and the schema of induction of
+		\item The theory $I\Sigma_n^-$ [$\Pi_n^-$] is the theory
+			axiomatized by the
+			axioms of $\textbf{Q}_\leq$ and the schema of induction of
 			$\Sigma_n$ [$\Pi_n$] functions $f(x)$, which only has $x$ as a
 			free variable.
-	Lastly the theory Peano arithmetics is defined as the theory $Q$ plus
-	induction for all first order formulas.
+		\item The theory Peano arithmetics is defined as the theory
+			$\textbf{Q}_\leq$ plus
+	induction for all first order formulae.
 	\end{enumerate}
 \end{defi}
 Going forward the most important of these theories is $I\delta_0$, since we
 will later augment and for this agumention it can be shown that Solovay's
 completeness theorems holds. It can be shown that in $\textbf{Q}Q$ a lot of the basic facts about arithmetic can
 be shown, and these facts holds in all the exetions of \textbf{Q}. These facts will not be shown here, but a list of them can be found
-in [Buss].
+in \parencite{Buss1998}.
 
 
-\section{\PRA\ and the other fragments of Arithmetics}
+\section{\PRA's and the other fragments of Arithmetics}
 Having introduced the arithmetical hierarchy in the previous section, it is not
 obvious where to place \PRA\ in this hierarchy. We know that \PRA\ has
 $\Sigma_1$ induction by axiom 1.18.2.c, so it.  But the following theorem can
@@ -266,8 +269,8 @@ be shown.
 	\PRA\ is the equivalent to the theory $I\Sigma_1^R$
 \end{prop}
 
-The proof of this is non-trivial and will go way beyond the scope of this
-project. The statement will not be used going forward, and its just included
+The proof of this is non-trivial and would go much  beyond the scope of this
+project. The statement will not be used going forward, and it is just included
 to give some intuition about the placement of \PRA\ in the arithmetical hierarchy.
 The proof can be found in \parencite{ArteBe}. This makes it possible to place \PRA\
 in the arithmetical hierarchy. We can make a visualization of how all the
@@ -401,7 +404,7 @@ We will now turn to another version of the Selection Theorem.
 \subsection{Induction in \PRA}
 We know that we can de induction on $\Sigma_1$ formulae in \PRA. A natural
 question to ask is then what other kinds of formulae can we do induction on in
-\PRA? We will define $\PRA^-$ as the subtheory of \PRA obtained by restricting
+\PRA? We will define $\PRA^-$ as the sub-theory of \PRA obtained by restricting
 induction PR-formulae. The following prop will give an answer to this question:
 
 \begin{prop}
@@ -422,7 +425,7 @@ It shall be noted that we will only use the case of $n=1$ going forward.
 
 	We will now show that $(1)\Rightarrow (2)$. The $(2)\Rightarrow (1)$ is
 	similar. We will prove the case where $n=1$, and the cases where $n>1$
-	is identical, \textit{modulo} the closure of $\Sigma_n$ under bounded
+	are identical, \textit{modulo} the closure of $\Sigma_n$ under bounded
 	quantification.
 
 	So assume $\Sigma_1$-IND and suppose for $Fv\in\Sigma_1$ that the
@@ -443,14 +446,14 @@ It shall be noted that we will only use the case of $n=1$ going forward.
 	conclude that $\forall v F(v_0\dot -v)$ and thus we have $F(\ol 0)$ and
 	get our contradiction.
 
-	The converse of i,e $(2)\Rightarrow(1)$ is done in a similar  way.
+	The converse of i.e. $(2)\Rightarrow(1)$ is done in a similar  way.
 \end{proof}
 
 This means that \PRA\ can do induction on $\Pi_1$ formulas, since it has
 induction for $\Sigma_1$ induction. It also tells us that \PRA\ has the least
 number principle for $\Sigma_1$ and $\Pi_1$ formulas.
-For \PRA\ the following theorem can be proven, but the proof will not be given
-here. But we will use theorem.
+For \PRA\ the following theorem can be proven, though the proof will not be given
+here. But we will use  the theorem.
 
 \begin{thm}
 	$\PRA\vdash\text{Bool}(\Sigma_1)-Ind$ where $\text{Bool}(\Sigma_1)$ is
@@ -465,18 +468,19 @@ do induction on a few complicated formulae inside of \PRA.
 If we have that $I\Gamma$  is a fragment of Peano Arithmetics, then we can look
 at the fragment
 $I\Gamma+\text{EXP}$ which proves induction over $\Gamma$-formulas and proves
-that for all $x$ the its power $2^x$ exists. We can also look at
+that for all $x$ the power $2^x$ exists. We can also look at
 $I\Gamma+\Omega_1$ which is a weaker theory than $I\Gamma+\text{EXP}$.  Here
-$\Omega_1$ is a axiom that asserts that for all $x$ its power
-$x^{\text{log}(x)}$ exists. It is also clear that since $\PRA=I\Sigma_1^R$ that
+$\Omega_1$ is an axiom that asserts that for all $x$, its power
+$x^{\text{log}(x)}$ exists. It is also clear that since $\PRA=I\Sigma_1^R$
 the two fragments $I\sigma_1+\text{EXO}$ and $I\sigma_1+\Omega_1$  are weaker than \PRA.  We will return to these two
 fragments later on in chapter \ref{chap:Complete}.
 
 It should here be stated that if look at theories $T$ such that
-$Q_\leq\subseteq T$, then it will be possible to encode the
+$\textbf{EA}\subseteq T$, then it will be possible to encode the
 syntax of that theory in a similar way to what we have done with \PRA; i.e in a
 way such that the proof predicate of that theory $\text{PR}_T(x)$ is a
-$\Sigma_1$ formula. We will call such a theory for a \textit{RE}-theory. We can then derive all the incompleteness result that we
+$\Sigma_1$ formula. We will call such a theory for a \textit{RE}-theory. We can
+then derive all the incompleteness results that we
 have obtained for \PRA\ in that theory. Sometimes a little \textit{tweaking} of
 the encode should be made, but we can get the following result that will not be
 proven here:
@@ -485,10 +489,10 @@ proven here:
 	following holds:
 	\begin{enumerate}
 		\item For any sentences $F$ and $G$ we get Löbs derivability
-		conditions
+		conditions.
 	\item Gödel's incompleteness theorems for any sentence such that
-		$\PRA\vdash F\leftrightarrow\ \neg\text{Pr}_T(\Godelnum{F})$
-	\item Löb's theorem for any sentence $F$
+		$\PRA\vdash F\leftrightarrow\ \neg\text{Pr}_T(\Godelnum{F})$.
+	\item Löb's theorem for any sentence $F$.
 	\end{enumerate}
 \end{thm}
 This shows that the provability predicate of such fragments $T$ behaves in the same

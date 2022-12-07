@@ -2202,26 +2202,29 @@
     <bcf:citekey order="17">Soare1987</bcf:citekey>
     <bcf:citekey order="18">Cutland1980</bcf:citekey>
     <bcf:citekey order="19">Kleene1952</bcf:citekey>
-    <bcf:citekey order="20">Smor1985</bcf:citekey>
-    <bcf:citekey order="21">Owen1973</bcf:citekey>
-    <bcf:citekey order="22">ArteBe</bcf:citekey>
-    <bcf:citekey order="23">Smor1985</bcf:citekey>
-    <bcf:citekey order="24">Lind1997</bcf:citekey>
-    <bcf:citekey order="25">Boolos1993</bcf:citekey>
-    <bcf:citekey order="26">Lind1996</bcf:citekey>
-    <bcf:citekey order="27">Olson1990</bcf:citekey>
-    <bcf:citekey order="28">Smor1985</bcf:citekey>
-    <bcf:citekey order="29">Boolos1993</bcf:citekey>
-    <bcf:citekey order="30">ArteBe</bcf:citekey>
+    <bcf:citekey order="20">Kleene1952</bcf:citekey>
+    <bcf:citekey order="21">Smor1985</bcf:citekey>
+    <bcf:citekey order="22">Owen1973</bcf:citekey>
+    <bcf:citekey order="23">Rob1950</bcf:citekey>
+    <bcf:citekey order="24">Buss1998</bcf:citekey>
+    <bcf:citekey order="25">ArteBe</bcf:citekey>
+    <bcf:citekey order="26">Smor1985</bcf:citekey>
+    <bcf:citekey order="27">Lind1997</bcf:citekey>
+    <bcf:citekey order="28">Boolos1993</bcf:citekey>
+    <bcf:citekey order="29">Lind1996</bcf:citekey>
+    <bcf:citekey order="30">Olson1990</bcf:citekey>
     <bcf:citekey order="31">Smor1985</bcf:citekey>
-    <bcf:citekey order="32">Dick1991</bcf:citekey>
-    <bcf:citekey order="33">Fedo2017</bcf:citekey>
-    <bcf:citekey order="34">Artemov2007</bcf:citekey>
-    <bcf:citekey order="35">Boolos1993</bcf:citekey>
-    <bcf:citekey order="36">Boolos1993</bcf:citekey>
-    <bcf:citekey order="37">Boolos1993</bcf:citekey>
+    <bcf:citekey order="32">Boolos1993</bcf:citekey>
+    <bcf:citekey order="33">ArteBe</bcf:citekey>
+    <bcf:citekey order="34">Smor1985</bcf:citekey>
+    <bcf:citekey order="35">Dick1991</bcf:citekey>
+    <bcf:citekey order="36">Fedo2017</bcf:citekey>
+    <bcf:citekey order="37">Artemov2007</bcf:citekey>
+    <bcf:citekey order="38">Boolos1993</bcf:citekey>
+    <bcf:citekey order="39">Boolos1993</bcf:citekey>
+    <bcf:citekey order="40">Boolos1993</bcf:citekey>
     <bcf:citekey order="0" nocite="1">*</bcf:citekey>
-    <bcf:citekey order="38">Smor1985</bcf:citekey>
+    <bcf:citekey order="41">Smor1985</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">

@@ -7,12 +7,12 @@ In this section we will prove some different properties about the modal logic
 These properties will be used in the following chapters. Some of these properties might
 hold in other modal logics, but we will look at \GL\ as our base logic,
 instead of a more common modal logic like \textbf{K}.
-Further in the end we will introduce the system $\text{\textbf{GLS}}$.
+Further, in the end we will introduce the system $\text{\textbf{GLS}}$.
 
 This section will follow \parencite{Smor1985}. But there will be a some small
 differences. Smorynski calls the logic \textbf{GL} for \textbf{PRL} which
 stands for \textit{Pr}ovability \textit{L}ogic, and he denotes the logic we
-have called \textbf{GLS} by $\textbf{PRL}^\omega$.\footnote{He also have a
+have called \textbf{GLS} by $\textbf{PRL}^\omega$.\footnote{Smorinsky also has a
 slightly different definition of a Kripke model.}
 
 We start of by proving the finite tree theorem for \GL. This theorem makes it
@@ -27,24 +27,23 @@ chapter 5, for the proof of the fixed point theorem.
 We will end this chapter by defining the logic \GLS\ and show some few results
 about this logic.
 
-This section (and the next one) dose not use the preceding sections about recursive functions. We will only
-focus on modal logic. In
+This chapter (and the following one) does not use the preceding sections about recursive functions. We will only
+focus on modal logic and not anything that has to do with arithmetic. In
 chapter \ref{chap:Complete} we will combine all three parts; the recursion
 theory, the arithmetics and the modal logic.
 
 
-Finiteness of $W$ in such a model?
-\section{Tress and \GL}
+\section{Trees and \GL}
 
 It is known that \textbf{GL} is weakly complete with resect to conversely
 well-founded transitive frames. There is another result that is in the same
-vein; \textbf{GL} is complete with respect to finite tress. The goal of this
-section is to prove this result. We will first start of by defining the notion
+vein; \textbf{GL} is complete with respect to finite trees. The goal of this
+section is to prove this result. We will first start out by defining the notion
 of a tree and a few results about these.
 
 \subsection{Trees}
-In this subsection the notion of a special type of graphs called tress will be
-introduce. The goal of this section is to prove Könings lemma about trees. We
+In this subsection the notion of a special type of graphs called trees will be
+introduced. The goal of this section is to prove König's lemma about trees. We
 will start of by defining the notion of a tree.
 \begin{defi}
 	A \textit{tree} is a tuple $\mathcal{T}=\la W,R,w_0\ra$ where $(W,R)$ where:
@@ -58,7 +57,7 @@ will start of by defining the notion of a tree.
 	A tree is \textit{infinite} if the set $W$ is infinite.
 \end{defi}
 
-We will state some immediate definitions, that should be known from the course
+We will state some immediate definitions that should be known from the course
 \textit{Diskret matematik}:
 \begin{defi}
 	The \textit{nodes} of a tree $\mathcal{T}=\la W,R,w_0\ra$ are the
@@ -68,19 +67,19 @@ We will state some immediate definitions, that should be known from the course
 
 
 	A \textit{walk} is an altering series of vertices and edges in
-	which for each $v$ we have that $wRv$ for the $w$ immediate before it 
-	. We call a walk for a \textit{trail}, if all the edges in
-	the walk are distinct. A \textit{path} is trail in which all the
+	which for each $v$ we have that $wRv$ for the $w$ immediately before it 
+	. We call a walk for a \textit{trail}, if all the edges of
+	the walk are distinct. A \textit{path}, is trail in which all the
 	nodes are different.
 \end{defi}
 
 
-It is know from the course \textit{Diskret matematik} that between any two
-vertices there are exactly one path in a tree. 
-As the concept of a tree is assumed know, we will not look at any concrete
-examples,
+It is known from the course \textit{Diskret matematik} that between any two
+vertices there is exactly one path in a tree. 
+As the concept of a tree is assumed to be known, we will not look at any concrete
+examples.
 We will need
-some further definitions to state and prove Könings lemma:
+some further definitions to state and prove König's lemma:
 \begin{defi}
 	Let $w\in W$. The \textit{degree} of of $w$ in $\mathcal{T}$ is the
 	number of edges incident to it.
@@ -97,14 +96,14 @@ some further definitions to state and prove Könings lemma:
 	nodes of $\mathcal{T}$ to which $w$ is the parent. If $w$ has no child
 	nodes it is called a \textit{leaf node}.
 \end{defi}
-It is clear that if $w$ is a leaf node, then degree of $w$ is $1$.
+It is clear that if $w$ is a leaf node, then the degree of $w$ is $1$.
 \begin{defi}
 	A subset $\Gamma$ of a tree $\mathcal{T}$ is called a
-	\textit{branch} if and only if all the following conditions holds:
+	\textit{branch} if and only if all the following conditions hold:
 	\begin{enumerate}
-		\item $w_0\in\Gamma$
+		\item $w_0\in\Gamma$.
 		\item The parent node of each $w\in\Gamma\setminus\{w_0\}$ is
-			in $\Gamma$
+			in $\Gamma$.
 		\item Each node in $\Gamma$ is either a leaf node in
 			$\mathcal{T}$ or has exactly one child node in
 			$\Gamma$.
@@ -121,41 +120,43 @@ It is clear that if $w$ is a leaf node, then degree of $w$ is $1$.
 	every node of $\mathcal{T}$ has finitely many child nodes.
 \end{defi}
 
-The proof of Könings lemma will depend on the following axiom:
+The proof of König's lemma will depend on the following axiom:
 \begin{axiom}[Axiom of Dependent Choice]
-	Let $R$ be an relation on a set $W$ and suppose that:
+	Let $R$ be a relation on a set $W$ and suppose that:
 	\[\forall w\in W\exists v\in W: wRv\]
 	Then there exists a sequence $(w_n)_{n\in\omega}\in W$ such that
 	\[\forall n\in\omega: w_nRw_{n+1}\]
 \end{axiom}
 
-This axiom is a weak form of the axiom of choice. 
+This axiom is a weak form of the axiom of choice. So it there might be some
+controversies about the use of it. These will not be commented on here.
 
 
-In the proof of Köning's
+In the proof of König's,
 lemma we will look at the subset of all nodes with infinitely many descendants
 and the relation $R$ where we have that for nodes $w,v\in W$:  $wRv$ if and only if $v$ is a child of $w$. This relation and
 set
 fulfills the conditions of the axiom and we can thus create the sequence
 $(w_n)_{n\in\omega}$.
 
-We can now state Köning's lemma:
-\begin{lemma}[Köning's lemma]
+We can now state König's lemma:
+\begin{lemma}[König's lemma]
 	\label{lem:kong}
 	Let $\mathcal{T}$ be a finitely branching tree. Then it is infinite if
 	and only if has an infinite path.
 \end{lemma}
 \begin{proof}
-	If $\mathcal{T}$ has an infinite path, then it is trivial true that
+	($\Leftarrow$)
+	If $\mathcal{T}$ has an infinite path, then it is trivially true that
 	$\mathcal{T}$ is infinite. 
 
-	For the other way, assume that $\mathcal{T}$ is infinite. To show that
+	($\Rightarrow$) Assume that $\mathcal{T}$ is infinite. To show that
 	$\mathcal{T}$ has an infinite path is the same as showing that it has
 	an infinite branch. We will show that there is a sequence of nodes
 	$w=(w_0,w_1,w_2,\ldots)$ in $\mathcal{T}$ such that the following holds:
 	\begin{enumerate}
-		\item $w_0$ is the root node
-		\item $w_{n+1}$ is a child node of $t_n$
+		\item $w_0$ is the root node.
+		\item $w_{n+1}$ is a child node of $t_n$.
 		\item each $w_n$ has infinitely many descendants (definer
 			dette, selvom det giver god mening).
 	\end{enumerate}
@@ -164,50 +165,56 @@ We can now state Köning's lemma:
 
 	We start with the root node $w_0$. It has a finite number of child
 	nodes. Suppose for contradiction that each of these child nodes had a
-	finite number of descendants, but thus would mean that $w_0$ would have
-	a finite number of descendants and thus that $\mathcal{T}$ would be
+	finite number of descendants, but this would mean that $w_0$ would have
+	a finite number of descendants, and thus that $\mathcal{T}$ would be
 	finite. Therefore $w_0$ has a child node with infinitely many
 	descendants; let $w_1$ be one of those.
 
 	Now suppose that node $w_k$ has infinitely many descendants. By the
-	same argument as before we get that $w_k$ has at least one child node
+	same argument as before, we get that $w_k$ has at least one child node
 	with finitely many descendants. Let $w_{k+1}$ be one of these. We have
 	thus shown how the sequence $w$ can be constructed, and the lemma
-	follows by the axiom of dependent choice
+	follows by the axiom of dependent choice.
 \end{proof}
+
 It is clear that finite trees are conversely well-founded frames. This fact is crucial
-in the proof of theorem in the next subsection, that can be seen as strengthening of the
-weak completeness theorem of chapter \ref{chap:Pre}:
+in the proof of the theorem in the next subsection, which can be seen as strengthening the
+weak completeness theorem of chapter \ref{chap:Pre}.
+
 \subsection{The Finite Tree Theorem}
+
 The following theorem is a strengthening of the weak completeness theorem for
 \GL, since trees are a subset of the transitive conversely well-founded models
-and we by this theorem get that we can with out loss of generality assume that
+. Due to this theorem get that we can without loss of generality assume that
 our model is finite. This last feature will be crucial in the proof of main
 theorems of the next chapter.
+
 \begin{thm}[The Finite Tree Theorem]
 	Let $\alpha$ be a modal formula. Then the following are equivalent:
 	\begin{enumerate}
-		\item $\vdash_\GL\alpha$
-		\item $\alpha$ is true in all models on finite trees
-		\item $\alpha$ is valid in all models on finite trees
+		\item $\vdash_\GL\alpha$.
+		\item $\alpha$ is true in all models on finite trees.
+		\item $\alpha$ is valid in all models on finite trees.
 	\end{enumerate}
 \end{thm}
-With this theorem it is possible to only consider finite frames. This will make
+With this theorem, it is possible to only consider finite frames. This will make
 the proof of our main theorem of chapter \ref{chap:Complete} possible. We will
 call the class of finite trees for FT, and call a formula valid in this class
 of models for FT-valid.
 \begin{proof}
-	The implications $(1)\Rightarrow (2)$ and $(1)\Rightarrow(3)$ follows
+	The implications $(1)\Rightarrow (2)$ and $(1)\Rightarrow(3)$ follow
 	by the completeness theorem. We also have that $(2)\Leftrightarrow (3)$
-	is true [Kom med et kort argument]. Thus we will just have to show $(2)\Rightarrow(1)$
+	is true since $(3)\Rightarrow(2)$ is trivial and $(2)\Rightarrow(3)$
+	follows since finite trees  are transitive.. Thus we will just have to show $(2)\Rightarrow(1)$
 
 	We will show this by contraposition, i.e $\neg(1)\Rightarrow\neg(2)$.
 	Assume that $\not\vdash_{\GL}\alpha$ and
-let $\mathcal{K}$ be the following model $\mathcal{K}=\la W,R,w_0,\phi\ra $ be a counter model i.e
-	$\not\vDash_{w_0}^{K'}\alpha$. Let $S$ be the set of subformulas of
+let $\mathcal{K}$ be the following model $\mathcal{K}=\la W,R,w_0,\phi\ra $
+which we assume to be  a counter model i.e
+	$\not\vDash_{w_0}^{K}\alpha$. Let $S$ be the set of subformulae of
 	$\alpha$ The goal is now to define a finite tree
 	model: $\mathcal{K}_T=\la W_T,<_T,\phi_T\ra$. We will do this be
-	letting $W_T$ consists of finite $R$-increasing sequences form $K$.
+	letting $W_T$ consist of finite $R$-increasing sequences form $K$.
 
 	\textbf{Stage 0:} Let the sequence $w_0$ be a part of $K_T$.
 
@@ -216,25 +223,30 @@ let $\mathcal{K}$ be the following model $\mathcal{K}=\la W,R,w_0,\phi\ra $ be a
 	w_n\in\phi(\Box\beta)\}$.
 	If $\Gamma=\emptyset$ then we do not extend the sequence $(w_0,\ldots
 	w_n)$. Otherwise we will for each $\Box\beta\in\Gamma$ choose a node
-	$v\in W$ such that $w_0Rv$ and such that we have:
-	$$v\in\phi(\Box\beta),\ v\not\in\phi(\beta)$$
+	$v\in W$ such that $w_0Rv$, and such that we have:
+	\[v\in\phi(\Box\beta),\ v\not\in\phi(\beta)\]
 	We can do this because of axiom 3. We will then add the sequence
-	$(w_0,\ldots w_n,v)$ to the set $W_T$
+	$(w_0,\ldots w_n,v)$ to the set $W_T$.
 
-	The model $\mathcal{K}_T$ then further consists of $<_T$ is the strict
-	ordering by extension of finite sequences. $\phi_T$ is the defined in
-	the following way:
-	$$(w_0,\ldots,w_n)\in \phi_T(p)\Leftrightarrow w_n\in\phi(p)$$
-	This leads way to the following notation that we will use in the rest
+	The model $\mathcal{K}_T$ then further consists of:
+	\begin{enumerate}
+		\item $<_T$ is the usual strict
+	ordering by extension of finite sequences. 
+		\item	The world $w_0$ which is the root node.
+		\item$\phi_T$ is the defined in
+		the following way:
+		$$(w_0,\ldots,w_n)\in \phi_T(p)\Leftrightarrow w_n\in\phi(p)$$
+	\end{enumerate}
+	This leads to the following notation that we will use for the rest
 	of the proof:
 	$$\vDash_{(w_0,\ldots,w_n)}^{\mathcal{K}_T}p\Leftrightarrow\vDash_{w_n}^\mathcal{K} p$$
-	We will now prove two claims, by which the theorem will follow 
+	We will now prove two claims, by which the theorem will follow:
 
 	\textbf{Claim 1:} $\mathcal{T}=(W_T,<_T,w_0)$ is a finite tree with origin $(w_0)$.
 	Finiteness follows from lemma \ref{lem:kong}, since the $\mathcal{T}$
-	is finitely branching since the branches correlated with the elements
+	is finitely branching as the branches correlate with the elements
 	of $S$. Further there is no infinite paths in $\mathcal{T}$, since when
-	we go from $(w_0,\ldots w_n)$ to $(w_0,\ldots, w_n,w_{n+1})$ we one
+	we go from $(w_0,\ldots w_n)$ to $(w_0,\ldots, w_n,w_{n+1})$ we are one
 	sentence from $\Box\beta\in S$ gets forced by $w_{n+1 }$ and since
 	these are finite, the process will stop at some point, and thus the
 	path will be finite.
@@ -243,8 +255,8 @@ let $\mathcal{K}$ be the following model $\mathcal{K}=\la W,R,w_0,\phi\ra $ be a
 	w_n)\in W_T$ we have:
 	$$\vDash^{\mathcal{K}_T}_{(w_0,\ldots,w_n)}\beta\Leftrightarrow\ \vDash_{w_n}^\mathcal{K}\beta$$
 	This proof is done by induction on the complexity of $\beta$. We will
-	only look at the case $\beta=\Box\gamma$. So we have by the induction
-	hypothesis:
+	only look at the case $\beta=\Box\gamma$. So, by the induction
+	hypothesis we have:
 	\begin{align*}
 		\vDash_{w_0}\Box\gamma&\Rightarrow\forall v(w_0Rv\Rightarrow\ 
 		\vDash_v\gamma)\\
@@ -255,7 +267,7 @@ let $\mathcal{K}$ be the following model $\mathcal{K}=\la W,R,w_0,\phi\ra $ be a
 				      w_n,v)\in W_T\Rightarrow\
 				      \vDash_{(w_0,\ldots w_n,v)}^{\mathcal{K}_T}\gamma)
 	\end{align*}
-	And the last line is the same as $\vDash_{(w_0,\ldots,w_n)}\Box\gamma$
+	And the last line is the same as $\vDash_{(w_0,\ldots,w_n)}\Box\gamma$.
 	For the other way, we will use contraposition:
 	\begin{align*}
 		\not\vDash_{w_0}\Box\gamma&\Rightarrow \exists v(w_0Rv\ \&\
@@ -275,7 +287,7 @@ let $\mathcal{K}$ be the following model $\mathcal{K}=\la W,R,w_0,\phi\ra $ be a
 	\not\vDash_{[w_0)}^{\mathcal{K}_T}\alpha$$
 \end{proof}
 
-From this theorem there follows a number of interisting corrolaies:
+From this theorem a number of intereseting corroloais follows: 
 
 \begin{cor}
 	\GL\ is decidable, i.e there is an effective procedure for each modal formula
@@ -294,9 +306,9 @@ From this theorem, we can also find the minimum element of a Kripke model of
 \begin{defi}
 	Let $\mathcal{K}=\la W,R,\phi\ra$ be a Kripke model. A \textit{pointed
 	Kripke model} is a pair $\la \mathcal{K},w_0\ra$ where $w_0$ is a node
-	of $W$. In the rest of this project we will have that $w_0$ is the
+	of $W$. In the rest of this, project we will have that $w_0$ is the
 	minimum node of the tree of \GL. We will often just define a pointed
-	Kripke as $\mathcal{K}=\la W,R,\phi,w_0\ra$.
+	Kripke, as $\mathcal{K}=\la W,R,\phi,w_0\ra$.
 \end{defi}
 
 \section{The Continuity Theorem}
@@ -304,7 +316,7 @@ In this section the continuity theorem and a corollary of it will be stated and
 proven. This section applies to all Kripke model, and thus is not only about
 \GL.
 
-We will first need to definitions:
+We will first need two definitions:
 \begin{defi}
 	We define $d(\alpha)$ in the following way: $d(p)=d(\bot)=0$,
 	$d(\alpha\rightarrow\beta)=\text{max}(d(\alpha),d(\beta))$ and

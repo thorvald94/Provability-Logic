@@ -207,29 +207,34 @@ very tedious.
 	\label{thm:Normalform}
 	There exists a predicate $T(e,x,y)$ and a function $U(y)$ that are
 	primitive recursive such that:
-	$$\varphi_e(x)=U(\mu yT(e,x,y))$$
+	\[\varphi_e(x)=U(\mu yT(e,x,y))\]
 \end{thm}
 \begin{proof}
 	We show that the predicate $T(e,x,y)$ exists and is primitive
 	recursive. This predicate informally
 	states that $y$ is the code of Turing program $P_e$ with input $x$. For
 	each possible configuration $c$, we can assign a code:
-	$$\#(c)=2^{1+i}3^{1+\#(s_0)}5^r7^l$$
-	Where $\#(s)=0$ if $s=B$ and is equal to $1$ otherwise, $r=\prod_{j\geq
-	1}p_j^{\#(s_j)}$ and $l=\prod_{j\leq -1}p_j^{\#(s_j)}$.
+	\[\Godelnum{c}=2^{1+i}\cdot 3^{1+\Godelnum{s_0}}\cdot 5^r\cdot7^l\]
+	Where $\Godelnum{s}=0$ if $s=B$ and is equal to $1$ otherwise, $r=\prod_{j\geq
+	1}p_j^{\Godelnum{s_j}}$ and $l=\prod_{j\leq -1}p_j^{\Godelnum{s_j}}$.
 
 
 	 We can now define the code of a Turing computation
 	$c_0,c_1,\ldots c_n$ according to $P_e$ to be:
-	$$y=2^e\prod_{i\leq n}p_{i+1}^{\#(s_i)}$$
-	We can now define $T(e,x,y)$ to be [Læs i Kleene]
+	\[y=2^e\prod_{i\leq n}p_{i+1}^{\Godelnum{s_i}}\]
+	From this it follows that $T(e,x,y)$ is computable in the intuitive
+	sens.
+
 	Having defined the predicate $T$ we can check if it holds. By
 	proposition 2.1 we can "recover" the program $P_e$ from $e$. Then we
 	can recover the computation $c_0,c_1,\ldots c_n$ from $y$, if $y$ codes
 	such a thing. We can now check if $c_0,c_1,\ldots,c_n$ is a computation
 	according to $P_e$ with $x$ as the input in the first configuration
 	$c_0$. If this is true, then $U(y)$ just outputs the number of $1$'s in
-	the final configuration $c_n$. [Læs mere i Klenne]
+	the final configuration $c_n$. 
+
+	Further the encoding we have made makes it so that $T$ and $U$ are
+	primitive recursive. This is shown in \parencite[p. 376]{Kleene1952}.
 \end{proof}
 This theorem also gives us that each partial recursive function can be created
 by two primitive recursive functions, with a single application of the

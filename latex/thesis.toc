@@ -46,13 +46,13 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.5.1}Application of the Recursion Theorem}{32}{subsection.2.5.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}The Arithmetical Hierarchy and Fragments of Arithmetics}{35}{chapter.3}%
+\contentsline {chapter}{\numberline {3}The Arithmetical Hierarchy and Fragments of Arithmetic}{35}{chapter.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}The arithmetical hierarchy}{35}{section.3.1}%
+\contentsline {section}{\numberline {3.1}The Arithmetical Hierarchy}{35}{section.3.1}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.2}Fragments of arithmetic}{37}{section.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}\text {\textbf {PRA}}\ and the other fragments of Arithmetics}{39}{section.3.3}%
+\contentsline {section}{\numberline {3.3}\text {\textbf {PRA}}'s and the other fragments of Arithmetics}{39}{section.3.3}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.3.1}Induction in \text {\textbf {PRA}}}{41}{subsection.3.3.1}%
 \defcounter {refsection}{0}\relax 
@@ -62,7 +62,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {4}General Results on GL}{45}{chapter.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Tress and \text {\textbf {GL}}}{45}{section.4.1}%
+\contentsline {section}{\numberline {4.1}Trees and \text {\textbf {GL}}}{45}{section.4.1}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.1.1}Trees}{45}{subsection.4.1.1}%
 \defcounter {refsection}{0}\relax 

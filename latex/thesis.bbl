@@ -107,9 +107,6 @@
            given={F},
            giveni={F\bibinitperiod}}}%
       }
-      \list{language}{1}{%
-        {eng}%
-      }
       \list{publisher}{1}{%
         {Elsevier}%
       }
@@ -164,12 +161,14 @@
       \strng{authorfullhash}{2f32da79d281b52d05af860304ec5a8f}
       \field{sortinit}{A}
       \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
-      \field{labeldatesource}{nodate}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Handbook of Philosophical Logic, 2nd Edition}
       \field{series}{Handbook of Philosophical Logic}
       \field{title}{Provability Logic}
+      \field{year}{2005}
       \field{pages}{189\bibrangedash 360}
       \range{pages}{172}
     \endentry
@@ -305,48 +304,6 @@
       \field{year}{2007}
       \true{nocite}
     \endentry
-    \entry{Bool1991}{article}{}
-      \name{author}{2}{}{%
-        {{un=1,uniquepart=given,hash=48313f5636935ad9d832fb1d2393d529}{%
-           family={Boolos},
-           familyi={B\bibinitperiod},
-           given={George},
-           giveni={G\bibinitperiod},
-           givenun=1}}%
-        {{un=0,uniquepart=base,hash=6bf05c3057351e6913d624f901af7cc1}{%
-           family={Sambin},
-           familyi={S\bibinitperiod},
-           given={Giovanni},
-           giveni={G\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{location}{1}{%
-        {Wroclaw, Poland}%
-      }
-      \list{publisher}{2}{%
-        {Ossolineum}%
-        {Kluwer Academic Publishers}%
-      }
-      \strng{namehash}{5894f13c1b3b2f2d0be3ab4b369c7f07}
-      \strng{fullhash}{5894f13c1b3b2f2d0be3ab4b369c7f07}
-      \strng{bibnamehash}{5894f13c1b3b2f2d0be3ab4b369c7f07}
-      \strng{authorbibnamehash}{5894f13c1b3b2f2d0be3ab4b369c7f07}
-      \strng{authornamehash}{5894f13c1b3b2f2d0be3ab4b369c7f07}
-      \strng{authorfullhash}{5894f13c1b3b2f2d0be3ab4b369c7f07}
-      \field{sortinit}{B}
-      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Studia logica}
-      \field{number}{1}
-      \field{title}{Provability: The Emergence of a Mathematical Modality}
-      \field{volume}{50}
-      \field{year}{1991}
-      \field{pages}{1\bibrangedash 23}
-      \range{pages}{23}
-    \endentry
     \entry{Boolos2007}{book}{}
       \name{author}{3}{}{%
         {{un=2,uniquepart=given,hash=ad4890bbbf6b4bde8eeb2a07ed59ed21}{%
@@ -391,12 +348,54 @@
       \field{year}{2007}
       \true{nocite}
     \endentry
+    \entry{Bool1991}{article}{}
+      \name{author}{2}{}{%
+        {{un=2,uniquepart=given,hash=ad4890bbbf6b4bde8eeb2a07ed59ed21}{%
+           family={Boolos},
+           familyi={B\bibinitperiod},
+           given={George\bibnamedelima S.},
+           giveni={G\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=2}}%
+        {{un=0,uniquepart=base,hash=6bf05c3057351e6913d624f901af7cc1}{%
+           family={Sambin},
+           familyi={S\bibinitperiod},
+           given={Giovanni},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Wroclaw, Poland}%
+      }
+      \list{publisher}{2}{%
+        {Ossolineum}%
+        {Kluwer Academic Publishers}%
+      }
+      \strng{namehash}{e679173add5052611154a838ed0adcbf}
+      \strng{fullhash}{e679173add5052611154a838ed0adcbf}
+      \strng{bibnamehash}{e679173add5052611154a838ed0adcbf}
+      \strng{authorbibnamehash}{e679173add5052611154a838ed0adcbf}
+      \strng{authornamehash}{e679173add5052611154a838ed0adcbf}
+      \strng{authorfullhash}{e679173add5052611154a838ed0adcbf}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Studia logica}
+      \field{number}{1}
+      \field{title}{Provability: The Emergence of a Mathematical Modality}
+      \field{volume}{50}
+      \field{year}{1991}
+      \field{pages}{1\bibrangedash 23}
+      \range{pages}{23}
+    \endentry
     \entry{Boolos1979}{book}{}
       \name{author}{1}{}{%
         {{un=2,uniquepart=given,hash=ad4890bbbf6b4bde8eeb2a07ed59ed21}{%
            family={Boolos},
            familyi={B\bibinitperiod},
-           given={George.\bibnamedelimi S},
+           given={George.\bibnamedelimi S.},
            giveni={G\bibinitperiod\bibinitdelim S\bibinitperiod},
            givenun=2}}%
       }
@@ -427,7 +426,7 @@
         {{un=2,uniquepart=given,hash=ad4890bbbf6b4bde8eeb2a07ed59ed21}{%
            family={Boolos},
            familyi={B\bibinitperiod},
-           given={George.\bibnamedelimi S},
+           given={George.\bibnamedelimi S.},
            giveni={G\bibinitperiod\bibinitdelim S\bibinitperiod},
            givenun=2}}%
       }
@@ -453,6 +452,92 @@
       \field{booktitle}{The logic of provability /}
       \field{title}{The logic of provability}
       \field{year}{1993}
+    \endentry
+    \entry{ProofHandbook}{book}{}
+      \name{editor}{1}{}{%
+        {{un=0,uniquepart=base,hash=fdb35f8cb8d96afe96b6c8bcf69467b5}{%
+           family={Buss},
+           familyi={B\bibinitperiod},
+           given={Samuel\bibnamedelima R.},
+           giveni={S\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \list{location}{1}{%
+        {Amsterdam ;}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{fdb35f8cb8d96afe96b6c8bcf69467b5}
+      \strng{fullhash}{fdb35f8cb8d96afe96b6c8bcf69467b5}
+      \strng{bibnamehash}{fdb35f8cb8d96afe96b6c8bcf69467b5}
+      \strng{editorbibnamehash}{fdb35f8cb8d96afe96b6c8bcf69467b5}
+      \strng{editornamehash}{fdb35f8cb8d96afe96b6c8bcf69467b5}
+      \strng{editorfullhash}{fdb35f8cb8d96afe96b6c8bcf69467b5}
+      \field{extraname}{1}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{editor}
+      \field{labeltitlesource}{title}
+      \field{isbn}{1-281-03918-7}
+      \field{series}{Studies in logic and the foundations of mathematics}
+      \field{title}{Handbook of proof theory}
+      \field{year}{1998}
+      \true{nocite}
+      \keyw{Proof theory}
+    \endentry
+    \entry{Buss1998}{incollection}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=fdb35f8cb8d96afe96b6c8bcf69467b5}{%
+           family={Buss},
+           familyi={B\bibinitperiod},
+           given={Samuel\bibnamedelima R.},
+           giveni={S\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=b73b9e73d636d6fabcbfb62d50cb64f9}{%
+           family={R.\bibnamedelimi Buus},
+           familyi={R\bibinitperiod\bibinitdelim B\bibinitperiod},
+           given={Samuel},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Amsterdam ;}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{fdb35f8cb8d96afe96b6c8bcf69467b5}
+      \strng{fullhash}{fdb35f8cb8d96afe96b6c8bcf69467b5}
+      \strng{bibnamehash}{fdb35f8cb8d96afe96b6c8bcf69467b5}
+      \strng{authorbibnamehash}{fdb35f8cb8d96afe96b6c8bcf69467b5}
+      \strng{authornamehash}{fdb35f8cb8d96afe96b6c8bcf69467b5}
+      \strng{authorfullhash}{fdb35f8cb8d96afe96b6c8bcf69467b5}
+      \strng{editorbibnamehash}{b73b9e73d636d6fabcbfb62d50cb64f9}
+      \strng{editornamehash}{b73b9e73d636d6fabcbfb62d50cb64f9}
+      \strng{editorfullhash}{b73b9e73d636d6fabcbfb62d50cb64f9}
+      \field{extraname}{2}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Handbook of proof theory}
+      \field{chapter}{1}
+      \field{series}{Studies in logic and the foundations of mathematics}
+      \field{title}{Handbook of proof theory}
+      \field{year}{1998}
+      \field{pages}{79\bibrangedash 147}
+      \range{pages}{69}
     \endentry
     \entry{Chang2012}{book}{}
       \name{author}{2}{}{%
@@ -1634,98 +1719,6 @@
       \field{pages}{48\bibrangedash 56}
       \range{pages}{9}
     \endentry
-    \entry{ProofHandbook}{book}{}
-      \name{editor}{1}{}{%
-        {{un=0,uniquepart=base,hash=f06e5e2875bdeb99c3877f7516cadb16}{%
-           family={R.\bibnamedelimi Buss},
-           familyi={R\bibinitperiod\bibinitdelim B\bibinitperiod},
-           given={Samuel},
-           giveni={S\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{language}{1}{%
-        {eng}%
-      }
-      \list{location}{1}{%
-        {Amsterdam ;}%
-      }
-      \list{publisher}{1}{%
-        {Elsevier}%
-      }
-      \strng{namehash}{f06e5e2875bdeb99c3877f7516cadb16}
-      \strng{fullhash}{f06e5e2875bdeb99c3877f7516cadb16}
-      \strng{bibnamehash}{f06e5e2875bdeb99c3877f7516cadb16}
-      \strng{editorbibnamehash}{f06e5e2875bdeb99c3877f7516cadb16}
-      \strng{editornamehash}{f06e5e2875bdeb99c3877f7516cadb16}
-      \strng{editorfullhash}{f06e5e2875bdeb99c3877f7516cadb16}
-      \field{extraname}{1}
-      \field{sortinit}{R}
-      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
-      \field{extradate}{1}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
-      \field{labelnamesource}{editor}
-      \field{labeltitlesource}{title}
-      \field{isbn}{1-281-03918-7}
-      \field{series}{Studies in logic and the foundations of mathematics}
-      \field{title}{Handbook of proof theory}
-      \field{year}{1998}
-      \true{nocite}
-      \keyw{Proof theory}
-    \endentry
-    \entry{Buss1998}{incollection}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=f06e5e2875bdeb99c3877f7516cadb16}{%
-           family={R.\bibnamedelimi Buss},
-           familyi={R\bibinitperiod\bibinitdelim B\bibinitperiod},
-           given={Samuel},
-           giveni={S\bibinitperiod},
-           givenun=0}}%
-      }
-      \name{editor}{1}{}{%
-        {{hash=b73b9e73d636d6fabcbfb62d50cb64f9}{%
-           family={R.\bibnamedelimi Buus},
-           familyi={R\bibinitperiod\bibinitdelim B\bibinitperiod},
-           given={Samuel},
-           giveni={S\bibinitperiod}}}%
-      }
-      \list{language}{1}{%
-        {eng}%
-      }
-      \list{location}{1}{%
-        {Amsterdam ;}%
-      }
-      \list{publisher}{1}{%
-        {Elsevier}%
-      }
-      \strng{namehash}{f06e5e2875bdeb99c3877f7516cadb16}
-      \strng{fullhash}{f06e5e2875bdeb99c3877f7516cadb16}
-      \strng{bibnamehash}{f06e5e2875bdeb99c3877f7516cadb16}
-      \strng{authorbibnamehash}{f06e5e2875bdeb99c3877f7516cadb16}
-      \strng{authornamehash}{f06e5e2875bdeb99c3877f7516cadb16}
-      \strng{authorfullhash}{f06e5e2875bdeb99c3877f7516cadb16}
-      \strng{editorbibnamehash}{b73b9e73d636d6fabcbfb62d50cb64f9}
-      \strng{editornamehash}{b73b9e73d636d6fabcbfb62d50cb64f9}
-      \strng{editorfullhash}{b73b9e73d636d6fabcbfb62d50cb64f9}
-      \field{extraname}{2}
-      \field{sortinit}{R}
-      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
-      \field{extradate}{2}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{Handbook of proof theory}
-      \field{chapter}{1}
-      \field{isbn}{1-281-03918-7}
-      \field{series}{Studies in logic and the foundations of mathematics}
-      \field{title}{Handbook of proof theory}
-      \field{year}{1998}
-      \true{nocite}
-      \field{pages}{79\bibrangedash 147}
-      \range{pages}{69}
-      \keyw{Proof theory}
-    \endentry
     \entry{sep-goedel-incompleteness}{incollection}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=a9dd0fc2d310e3e2118ede23fff02f66}{%
@@ -1806,6 +1799,33 @@
       \field{pages}{37\bibrangedash 43}
       \range{pages}{7}
       \keyw{03B45 ; 03F40 ; Exact sciences and technology ; Logic and foundations ; Mathematical logic,foundations,set theory ; Mathematics ; Model theory ; Sciences and techniques of general use}
+    \endentry
+    \entry{Rob1950}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=246ed971d2df692ed10d5bcc44d0d39b}{%
+           family={Robinson},
+           familyi={R\bibinitperiod},
+           given={R.\bibnamedelimi M.},
+           giveni={R\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{246ed971d2df692ed10d5bcc44d0d39b}
+      \strng{fullhash}{246ed971d2df692ed10d5bcc44d0d39b}
+      \strng{bibnamehash}{246ed971d2df692ed10d5bcc44d0d39b}
+      \strng{authorbibnamehash}{246ed971d2df692ed10d5bcc44d0d39b}
+      \strng{authornamehash}{246ed971d2df692ed10d5bcc44d0d39b}
+      \strng{authorfullhash}{246ed971d2df692ed10d5bcc44d0d39b}
+      \field{sortinit}{R}
+      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of the International Congress of Mathematics}
+      \field{title}{An Essentially Undecidable Axiom System}
+      \field{year}{1950}
+      \field{pages}{729\bibrangedash 730}
+      \range{pages}{2}
     \endentry
     \entry{Ross1936}{article}{}
       \name{author}{1}{}{%
