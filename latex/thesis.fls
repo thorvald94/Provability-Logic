@@ -461,8 +461,6 @@ INPUT ./Further.tex
 INPUT ./Further.tex
 INPUT /home/thorvald/.texlive2019/texmf-var/luatex-cache/generic-dev/fonts/otl/lmromancaps10-regular.luc
 INPUT /home/thorvald/.texlive2019/texmf-var/luatex-cache/generic-dev/fonts/otl/lmmono12-regular.luc
-INPUT ./Appen.tex
-INPUT ./Appen.tex
 INPUT ./thesis.aux
 INPUT ./thesis.run.xml
 OUTPUT thesis.run.xml

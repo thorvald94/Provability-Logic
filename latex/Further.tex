@@ -5,7 +5,7 @@
 In this chapter we will enrich the language $\mathcal{L}_\Box$ with both more
 modal operators and quantifiers. For these language a number of different
 results can be proven. We will also state some results about provability logic
-where we enrich our language $\mathcal{L}$ with quantifiers. 
+where we enrich our language $\mathcal{L}_\Box$ with quantifiers. 
 In the case with more modal operators the results will be positive; i.e there
 are versions of Solovay's completeness theorems for these kinds of modal logic.
 But in the case where we enrich our language with quantifiers our results will
@@ -13,7 +13,9 @@ be negative; i.e we cant prove versions of Solovay's completeness theorems for
 these kinds of modal logic.
 
 This chapter will skip the most of the proofs of these
-results, but the proofs can be found in \parencite{Boolos1993}.
+results, but the proofs can be found in \parencite{Boolos1993}. The part about
+multi-modal logic will also be more explained more in depth than the part about
+the quantified modal logic.
 
 \section{Multi-modal provability logic}
 
@@ -25,7 +27,7 @@ with even more modal operators.
 \subsection{The system \GLB}
 
 \begin{defi}
-We will say that a theory \textbf{T} is $\omega$-inconsistent iff for some
+We will say that a arithmetical theory \textbf{T} is $\omega$-inconsistent iff for some
 formula $\alpha(x)$, $\textbf{T}\vdash\exists x\alpha(x)$ and for every
 $n\in\omega$ we have: $\textbf{T}\vdash\neg\alpha(x)$. \textbf{T} is called
 $\omega$-consistent iff it is not $\omega$-inconsistent.
@@ -47,7 +49,7 @@ It is clear that if $\alpha$ is provable in \textbf{T} then it is
 $\omega$-provable in \textbf{T}. We will introduce a new modal system
 $\textbf{GLB}$, where \textbf{B} stands for bimodal, where we add two new modal
 operators: $\OneBox$ and $\OneDiamond$ to our modal language
-$\mathcal{L}_\Box$. We will call this new language for $\mathcal{L}_{\oneBox}$
+$\mathcal{L}_\Box$. We will call this new language $\mathcal{L}_{\oneBox}$
 \begin{defi}
 	The language $\mathcal{L}_{\oneBox}$ is the language $\mathcal{L}_\Box$
 	extend with the modal operator $\OneBox$, where the syntax $\OneBox$ is
@@ -61,28 +63,31 @@ We now define the system of \GLB. We will later on discuss the semantics of
 	The axioms of \GLB\ are all tautologies and all sentences of the
 	following kind:
 	\begin{enumerate}
-		\item[A1]
+		\item[AB1]
 			$\Box(\alpha\rightarrow\beta)\rightarrow(\Box\alpha\rightarrow\Box\beta)$
-		\item[A2]
+		\item[AB2]
 			$\OneBox(\alpha\rightarrow\beta)\rightarrow(\OneBox\alpha\rightarrow\OneBox\beta)$
-		\item[A3] $\Box(\Box\alpha\rightarrow\alpha)\Box\alpha$
-		\item[A4] $\OneBox(\OneBox\alpha\rightarrow\alpha)\OneBox\alpha$
-		\item[A5] $\Box\alpha\rightarrow\OneBox\alpha$
-		\item[A6] $\neg\Box\alpha\rightarrow\OneBox\neg\Box\alpha$
+		\item[AB3] $\Box(\Box\alpha\rightarrow\alpha)\Box\alpha$
+		\item[AB4] $\OneBox(\OneBox\alpha\rightarrow\alpha)\OneBox\alpha$
+		\item[AB5] $\Box\alpha\rightarrow\OneBox\alpha$
+		\item[AB6] $\neg\Box\alpha\rightarrow\OneBox\neg\Box\alpha$
+	\end{enumerate}
+	The deduction rules are the following:
+	\begin{enumerate}
 		\item[MP] Modus ponens
 		\item[Nec] $\Box$  -necessitation; from $\alpha$ infer
 			$\Box\alpha$.
 	\end{enumerate}
 \end{defi}
 It is clear that $\OneBox$ -necessitation is a rule of \GLB, since we have that
-if $\GLB\vdash\alpha$ then $\GLB\vdash\Box$ and by A5 we then have
+if $\GLB\vdash\alpha$ then $\GLB\vdash\Box$ and by AB5 we then have
 $\GLB\vdash\OneBox\alpha$.
 
 The next goal is to prove an arithmetical soundness theorem for \GLB. For this
 end we need the following definition:
 
 \begin{defi}
-	We call the following rule for the  $\omega$\textit{-rule}: Infer $\forall
+	We call the following rule the  $\omega$\textit{-rule}: Infer $\forall
 	x\alpha(x)$ for all $\alpha(\ol n)$, where $n\in\omega$. A sentence is
 	provable under the $\omega$-rule in \textbf{T} if it belongs to all
 	classes containing the axioms of \textbf{T} and closed under MP, Nec and
@@ -99,7 +104,7 @@ an $\omega$-proof.
 \begin{defi}
 	A sentence $\forall x G(x)\rightarrow F$ is called an
 	$\omega$\textit{-proof} prof of $F$ if $\PRA\vdash G(\ol n)$ for all
-	$n$ and $\PRA\vdash\forall x G(x)\rightarrow S$.
+	$n$ and $\PRA\vdash\forall x G(x)\rightarrow F$.
 \end{defi}
 It is clear that if $F$ has an $\omega$-proof then it $\omega$-provable.
 
@@ -173,7 +178,7 @@ extension of a "normal" frame, but with two relations instead of one
 			that $wR_1v$ we have $\vdash_v^\mathcal{K}\alpha$
 	\end{enumerate}
 \end{defi}
-The problem here for is that no matter what the relation $R_1$ will be the
+The problem here for is that it can be shown, no matter what the relation $R_1$ will be the
 empty relation $W$ and therefor $\OneBox\bot$ will be valid and thus contradict
 that $\vdash_\GLB\OneBox\bot$ from the arithmetical  soundness of \GLB. Giorgie
 Dzhaparidze found a way around this by looking at another multi modal logic,
@@ -190,14 +195,17 @@ and Dzhaparidze.
 	The language of \textbf{IDzh} is the same as \GLB. Further the axioms
 	of \IDzh\ are all tautologies and the following modal formulas:
 	\begin{enumerate}
-		\item[A1]
+		\item[AI1]
 			$\Box(\alpha\rightarrow\beta)\rightarrow(\Box\alpha\rightarrow\Box\beta)$
-		\item[A2]
+		\item[AI2]
 			$\OneBox(\alpha\rightarrow\beta)\rightarrow(\OneBox\alpha\rightarrow\OneBox\beta)$
-		\item[A3] $\Box(\Box\alpha\rightarrow\alpha)\rightarrow\Box\alpha$
-		\item[A4] $\OneBox(\OneBox\alpha\rightarrow\alpha)\rightarrow\OneBox\alpha$
-		\item[A5] $\Box\alpha\rightarrow\OneBox\Box\alpha$
-		\item[A6] $\neg\alpha\rightarrow\OneBox\neg\Box\alpha$.
+		\item[AI3] $\Box(\Box\alpha\rightarrow\alpha)\rightarrow\Box\alpha$
+		\item[AI4] $\OneBox(\OneBox\alpha\rightarrow\alpha)\rightarrow\OneBox\alpha$
+		\item[AI5] $\Box\alpha\rightarrow\OneBox\Box\alpha$
+		\item[AI6] $\neg\alpha\rightarrow\OneBox\neg\Box\alpha$.
+	\end{enumerate}
+	The deduction rules are the following:
+	\begin{enumerate}
 		\item[MP] Modus pones 
 		\item[Nec] $\Box$-necessitation
 		\item[Nec$_1$] $\OneBox$-necessitation
@@ -238,7 +246,7 @@ arithmetical completeness theorem for \GLB\ follows:
 	\[\bigwedge_{\Box\beta\in
 	S(\alpha)}\Delta(\Box\beta\rightarrow\OneBox\beta)\]
 \end{defi}
-It is clear that $\vdash_\GLB\Psi\alpha$
+It can be shown that $\vdash_\GLB\Psi\alpha$.
 To show completeness of \GLB\ the following three statements should be proven to
 be equivalent:
 \begin{enumerate}

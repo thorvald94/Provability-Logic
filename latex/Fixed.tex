@@ -37,7 +37,7 @@ the special formulae for which the fixed point theorem holds.
 \end{defi}
 $\sBox$ is called "strong box" and for a given model $\mathcal{K}$ we have that
 $\vdash_w^\mathcal{K}\sBox \alpha$ states that $\alpha$ is both true and
-provable in note $w$. There are a few theorem about $\sBox$ in the modal logic
+provable in node $w$. There are a few theorem about $\sBox$ in the modal logic
 \textbf{K4} and logics which extends this, that will be
 important in the following. These results are syntactical. We will show these
 now, and more results can be found in \parencite{Smor1985} and \cite{Boolos1993}
@@ -52,15 +52,7 @@ now, and more results can be found in \parencite{Smor1985} and \cite{Boolos1993}
 		\sBox\alpha$
 	\end{enumerate}
 \end{thm}
-\begin{proof}
-	We will prove (1). We have that $\vdash_{\textbf{K4}}\Box\alpha\rightarrow\Box\Box\alpha$
-	by the axiom \textbf{4}, and thus since it is also a normal modal logic
-	we have:
-	\[\vdash_{\textbf{K4}}((\Box\Box\alpha\wedge\Box\alpha)\leftrightarrow\Box\alpha)\leftrightarrow\Box(\Box\alpha\wedge\alpha)\]
-	And (1) is exactly this. 
-
-	The proof of (2) is similar.
-\end{proof}
+The proof of this is syntactical and is left out.
 \begin{thm}
 	\label{GLsæt}
 	Suppose that \textbf{L} extends \textbf{K4}, and we have that
@@ -68,8 +60,10 @@ now, and more results can be found in \parencite{Smor1985} and \cite{Boolos1993}
 	$\vdash_{\textbf{L}}\Box\alpha\rightarrow\Box\beta$ and
 	$\vdash_{\textbf{L}}\sBox\alpha\rightarrow\sBox\beta$
 \end{thm}
-This theorem clearly holds for \GL, and we will use it later in this chapter.
+This theorem clearly holds for \GL, since it is an extension of \textbf{K4} and we will use it later in this chapter.
 \begin{proof}
+	\textbf{Dobbelt tjek dette}
+
 	Since \textbf{L} extends \textbf{K4} we have that
 	$\vdash_{\textbf{L}}\Box\sBox\alpha\rightarrow\Box\beta$ and thus by
 	theorem \ref{seet} we have that
@@ -85,23 +79,26 @@ and $\sBox$.
 By our semantic of modal logic,  we have that $\vDash_w\sBox\alpha$ is true iff $\vDash_v\alpha$
 for all $v\in\{w\}\cup\text{acc}(w)$, where $\text{acc}(w)$ are $\text{acc}(w)$
 is the collection of notes that are accessible  from $w$, i.e:
-$\text{acc}=\{v\in W:wRv\}$
+$\text{acc}(w)=\{v\in W:wRv\}$.
 \end{remark}
 
 This remark gives us an easy way to determine if $\sBox \alpha$ is true.
 
 
-Another useful definition that we can make, since we for every Kripke model
-$\mathcal{K}=\la W,R,\phi\ra$ of \GL\  have that $W$ is a finite set is the following:
+Another useful definition that we can make, since we can with loss of
+generality issue that  for the  Kripke model 
+$\mathcal{K}=\la W,R,\phi\ra$ of \GL\  we look at that the set $W$ is finite,
+is the following:
 \begin{defi}
 	Let $\mathcal{K}=\la W,R,\phi\ra$ be a Kripke model of \GL. The
-	\textit{rank} of the notes $w\in W$ is defined in the following
+	\textit{rank} of the nodes $w\in W$ is defined in the following
 	way: $\text{rank}(w)=0$ iff there is no world $v$ such that
 	$wRv$. Otherwise we have that
 	$\text{rank}(w)=1+\text{max}\{\text{rank}(v):wRv\}$.
 \end{defi}
-So rank$(w)$ simple states how many worlds that can be seen from the world $w$.
-Since $W$ is finite and that $R$ is irreflexive we have that the for each $w\in
+So rank$(w)$ simple states how how long the longest path from $w$ is, and the
+rank is finite since $W$ is finite.
+Further since $W$ is finite and that $R$ is irreflexive we have that the for each $w\in
 W$ the rank of $w$ is unique.
 
 We will need the following three lemmas in our proof of the Fixed Point
@@ -116,21 +113,20 @@ All three of these lemmas are sementical in nature.
 \end{lem}
 \begin{proof}
 	Assume that we have $\vDash_w\Box\alpha$, $w$ sees  $v$ and
-	$v$ sees $v'$. Since $R$ is transitive we have that $w$ is also
-	connected to $v'$ and thus we have that $\vDash_{v'}\alpha$. Since
-	$v'$ was chosen at random we have that $\vDash_v\Box\alpha$. We also
+	$v$ sees $v'$. Since $R$ is transitive we have that $w$ also sees $v'$ and thus we have that $\vDash_{v'}\alpha$. Since
+	$v'$ was chosen arbitraily we have that $\vDash_v\Box\alpha$. We also
 	have that $\vDash_v\alpha$ and thus we have $\vDash_v\sBox\alpha$.
 \end{proof}
 \begin{lem}
 	\label{lem:con}
-	Given any Kripke model $\mathcal{K}=\la W,R,\phi\ra$, $w\in W$ and
+	Given any Kripke model $\mathcal{K}=\la W,R,\phi\ra$ of \GL, $w\in W$ and
 	sentence $\alpha$, if $\not\vDash_w\Box\alpha$ then there is "notes"
 	$v$ seen by  $w$ such that $\vDash_v\Box\alpha$ and
 	$\not\vDash_v\alpha$.
 \end{lem}
 \begin{proof}
-	Assume that $\not\vDash_w\Box\alpha$ then there is a notes $v$
-	connected to $w$ such that $\not\vDash_v\alpha$. Let $v$ be the notes
+	Assume that $\not\vDash_w\Box\alpha$ then there is a note $v$
+	that sees  $w$ such that $\not\vDash_v\alpha$. Let $v$ be the notes
 	with the least rank with this property and suppose that $vRv'$. Since
 	$v'$ is of less rank than $v$ we have that $\vDash_{v'}\alpha$. Now
 	since $v'$ was chosen arbitrarily we have that $\vDash_v\Box\alpha$ and
@@ -164,7 +160,8 @@ $\alpha$ with $\beta$; the meaning of $\alpha(\gamma)$ is similar.
 	$v$ was chosen arbitrary we get
 	$\vDash_w\Box(\sigma(\beta)\leftrightarrow\sigma(\gamma))$. By
 	proposition \ref{prop:GL} and weak completeness we can conclude
-	$\vDash_w\Box\sigma(\beta)\leftrightarrow\sigma(\gamma)$.
+	$\vDash_w\Box\sigma(\beta)\leftrightarrow\sigma(\gamma)$.\textbf{Dobbelt
+	tjek om nota er rigtig}.
 \end{proof}
 
 We are now almost ready to state state and prove the fixed-point theorem. We
@@ -227,16 +224,16 @@ such a $\sigma$ and thus the name fixed point is appropriate.
 	We now have to show that every sentence that is $(n+1)$-decomposable
 	also has a fixed point. To show this we will assume the following:
 	$$\alpha(P)=\beta(\Box\gamma_1(p),\ldots,\Box_{n+1}(p))$$
-	Further for each $i$ let:
-	$$\alpha_i(p)=\beta(\Box\gamma_1(p),\ldots,\Box\gamma_{i-1},\top,\Box\gamma_{i+1},\ldots,\Box\gamma_{n+1}(p))$$
-	Thus we have that for each $i$ that $\alpha(p)$ is $n$-decomposable,
+	Further for each $i$ such that $1\leq i\leq n+1$ let:
+	\[\alpha_i(p)=\beta(\Box\gamma_1(p),\ldots,\Box\gamma_{i-1},\top,\Box\gamma_{i+1},\ldots,\Box\gamma_{n+1}(p))\]
+	Thus we have that for each $i$ such that $1\leq i\leq n+1$ that $\alpha(p)$ is $n$-decomposable,
 	so it has a fixed point, that we call $\sigma_i$. Lastly we define:
-	$$\sigma=\beta(\Box\gamma_1(\sigma_1),\ldots,\Box\gamma_{n+1}(\sigma_{n+1}))$$
+	\[\sigma=\beta(\Box\gamma_1(\sigma_1),\ldots,\Box\gamma_{n+1}(\sigma_{n+1}))\]
 	Our goal is to show that $\sigma$ is a fixed point of $\alpha$, and for
 	that we will need the following lemma:
 	\begin{lem}
 		\label{lem:fix}
-		For each $i$ we have that:
+		For each $i$ such that $1\leq i\leq n+1$ we have that:
 		$$\vdash_\GL\sBox(p\leftrightarrow\alpha)\rightarrow\sBox\Box\gamma_i(p)\leftrightarrow\gamma_i(\sigma_i))$$
 	\end{lem}
 	\begin{proof}
@@ -245,7 +242,7 @@ such a $\sigma$ and thus the name fixed point is appropriate.
 		that:
 		\begin{equation}
 		\label{eqn:1}
-			\mathcal{K}\vDash\sBox(p\leftrightarrow\alpha)\rightarrow\sBox(\Box\gamma_i(p)\leftrightarrow
+		\mathcal{K}\vDash\sBox(p\leftrightarrow\alpha)\rightarrow(\sBox(\Box\gamma_i(p)\leftrightarrow
 		\Box\gamma_i(\sigma_i))
 	\end{equation}
 		So we will start of by fixing $i$, $\mathcal{K}$ and $w\in W$.
@@ -254,15 +251,15 @@ such a $\sigma$ and thus the name fixed point is appropriate.
 		$\vDash_w\sBox(\Box\gamma_i(p)\leftrightarrow\Box\gamma_i(\sigma_i))$;
 		this is equivalent to $\vDash_v\Box
 		\gamma_i(p)\leftrightarrow\Box\gamma_i(\sigma_i)$ for all
-		$v\in\{w\}\sup\text{acc}(w)$ by remark \ref{rem:acc}. So let
+		$v\in\{w\}\cup\text{acc}(w)$ by remark \ref{rem:acc}. So let
 		$v\in\{w\}\cup\text{acc}(w)$ and assume that
 		$\vDash\Box\gamma_i(p)$, i.e
 		$\vDash_v\Box\gamma_i(p)\leftrightarrow\top$. By lemma
 		\ref{lem:acc} we have that for any $v'\in\text{acc}(v)$ that
 		$\vDash_{v'}\Box\gamma_i(p)$ and thus
-		$\vDash_{v'}(\Box\gamma_i(p)\leftrightarrow\top$. This means
+		$\vDash_{v'}(\Box\gamma_i(p)\leftrightarrow\top$). This means
 		that we have:
-		$$\vDash_v\sBox(\Box\gamma_i(p)\leftrightarrow\top)$$
+		\[\vDash_v\sBox(\Box\gamma_i(p)\leftrightarrow\top)\]
 		And thus by lemma \ref{lem:sem} we get that
 		$\vDash_v\alpha_i\leftrightarrow\alpha$ and since our $v$ was
 		chosen arbitrarily we have that
@@ -323,7 +320,7 @@ such a $\sigma$ and thus the name fixed point is appropriate.
 	Since we have $\vDash_w p\leftrightarrow\alpha$ we get $\vDash_w
 	p\leftrightarrow\sigma$, we can obtain
 	$\vDash_w\sBox(p\leftrightarrow\alpha)\rightarrow(p\leftrightarrow\sigma)$.
-	Since our $\mathcal{K}$ and $w$ was chosen at random we have that
+	Since our $\mathcal{K}$ and $w$ was chosen arbitrarily we have that
 	$\sBox(p\leftrightarrow\alpha)\rightarrow(p\leftrightarrow\sigma)$ is
 	valid. By completeness we then have:
 	$\vdash_\GL\sBox(p\leftrightarrow\alpha)\rightarrow(p\leftrightarrow
@@ -413,7 +410,7 @@ fixed-point is appropriate:
 \begin{cor}
 	Let $\alpha(p)$ be modalized in $p$ and let $\sigma$ be a fixed-point
 	of $\alpha$. Then:
-	\[\vdash_G\sigma\leftrightarrow\alpha(\sigma)\]
+	\[\vdash_\GL\sigma\leftrightarrow\alpha(\sigma)\]
 \end{cor}
 \begin{proof}
 	Since we have assumed uniform substitution and by theorem \ref{thm:exi}
