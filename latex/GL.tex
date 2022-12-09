@@ -3,7 +3,7 @@
 \begin{document}
 
 In this section we will prove some different properties about the modal logic
-\textbf{GL}, that was introduced in chapter \ref{chap:Pre}.
+\textbf{GL}, that was introduced in Chapter \ref{chap:Pre}.
 These properties will be used in the following chapters. Some of these properties might
 hold in other modal logics, but we will look at \GL\ as our base logic,
 instead of a more common modal logic like \textbf{K}.
@@ -46,7 +46,7 @@ In this subsection the notion of a special type of graphs called trees will be
 introduced. The goal of this section is to prove König's lemma about trees. We
 will start of by defining the notion of a tree.
 \begin{defi}
-	A \textit{tree} is a tuple $\mathcal{T}=\la W,R,w_0\ra$ where $(W,R)$ where:
+	A \textit{tree} is a tuple $\mathcal{T}=\la W,<,w_0\ra$ where $(W,<)$ where:
 	\begin{enumerate}
 		\item $<$ is transitive and asymmetric.
 		\item $w_0$ is the minimal element of $<$. I.e $w_0
@@ -56,6 +56,8 @@ will start of by defining the notion of a tree.
 	\end{enumerate}
 	A tree is \textit{infinite} if the set $W$ is infinite.
 \end{defi}
+
+It is clear that trees can be seen as a special form of frames.
 
 We will state some immediate definitions that should be known from the course
 \textit{Diskret matematik}:
@@ -156,9 +158,9 @@ We can now state König's lemma:
 	$w=(w_0,w_1,w_2,\ldots)$ in $\mathcal{T}$ such that the following holds:
 	\begin{enumerate}
 		\item $w_0$ is the root node.
-		\item $w_{n+1}$ is a child node of $t_n$.
-		\item each $w_n$ has infinitely many descendants (definer
-			dette, selvom det giver god mening).
+		\item $w_{n+1}$ is a child node of $w_n$.
+		\item each $w_n$ has infinitely many descendants i.e. that the
+			set $\{v\in W:w_nRv\}$ is a infinite set.
 	\end{enumerate}
 	Then $w$ is a branch of infinite length, and thus $\mathcal{T}$ has an
 	infinite path.
@@ -172,7 +174,7 @@ We can now state König's lemma:
 
 	Now suppose that node $w_k$ has infinitely many descendants. By the
 	same argument as before, we get that $w_k$ has at least one child node
-	with finitely many descendants. Let $w_{k+1}$ be one of these. We have
+	with infinitely many descendants. Let $w_{k+1}$ be one of these. We have
 	thus shown how the sequence $w$ can be constructed, and the lemma
 	follows by the axiom of dependent choice.
 \end{proof}
@@ -202,8 +204,9 @@ the proof of our main theorem of chapter \ref{chap:Complete} possible. We will
 call the class of finite trees for FT, and call a formula valid in this class
 of models for FT-valid.
 \begin{proof}
+	\textbf{Ændre alle T til mathcal{T}}
 	The implications $(1)\Rightarrow (2)$ and $(1)\Rightarrow(3)$ follow
-	by the completeness theorem. We also have that $(2)\Leftrightarrow (3)$
+	by the completeness theorem \textbf{Kryds ref}. We also have that $(2)\Leftrightarrow (3)$
 	is true since $(3)\Rightarrow(2)$ is trivial and $(2)\Rightarrow(3)$
 	follows since finite trees  are transitive.. Thus we will just have to show $(2)\Rightarrow(1)$
 
@@ -211,12 +214,13 @@ of models for FT-valid.
 	Assume that $\not\vdash_{\GL}\alpha$ and
 let $\mathcal{K}$ be the following model $\mathcal{K}=\la W,R,w_0,\phi\ra $
 which we assume to be  a counter model i.e
-	$\not\vDash_{w_0}^{K}\alpha$. Let $S$ be the set of subformulae of
+	$\not\vDash_{w_0}^{K}\alpha$. We can know that such a counter-model
+	exists by the completeness theorem for \GL. Let $S$ be the set of subformulae of
 	$\alpha$ The goal is now to define a finite tree
 	model: $\mathcal{K}_T=\la W_T,<_T,\phi_T\ra$. We will do this be
-	letting $W_T$ consist of finite $R$-increasing sequences form $K$.
+	letting $W_T$ consist of finite $R$-increasing sequences from $K$.
 
-	\textbf{Stage 0:} Let the sequence $w_0$ be a part of $K_T$.
+	\textbf{Stage 0:} Let the sequence $(w_0)$ be a part of $K_T$.
 
 	\textbf{Stage $n+1$:} For each sequence $(w_0,\ldots w_n)\in W_T$ we
 	will look at $\Gamma=\{\Box\beta\in S(\alpha):\
@@ -225,7 +229,7 @@ which we assume to be  a counter model i.e
 	w_n)$. Otherwise we will for each $\Box\beta\in\Gamma$ choose a node
 	$v\in W$ such that $w_0Rv$, and such that we have:
 	\[v\in\phi(\Box\beta),\ v\not\in\phi(\beta)\]
-	We can do this because of axiom 3. We will then add the sequence
+	We can do this because of axiom \textbf{L}. We will then add the sequence
 	$(w_0,\ldots w_n,v)$ to the set $W_T$.
 
 	The model $\mathcal{K}_T$ then further consists of:
@@ -258,29 +262,30 @@ which we assume to be  a counter model i.e
 	only look at the case $\beta=\Box\gamma$. So, by the induction
 	hypothesis we have:
 	\begin{align*}
-		\vDash_{w_0}\Box\gamma&\Rightarrow\forall v(w_0Rv\Rightarrow\ 
-		\vDash_v\gamma)\\
+		\vDash^{\mathcal{K}}_{w_0}\Box\gamma&\Rightarrow\forall v(w_0Rv\Rightarrow\ 
+		\vDash^{\mathcal{K}}_v\gamma)\\
 				      &\Rightarrow\forall v((w_0,\ldots
 				      w_n,v)\in W_T\Rightarrow\
-				      \vDash_v\gamma)\\
+				      \vDash^{\mathcal{K}}_v\gamma)\\
 				      &\Rightarrow\forall v((w_0,\ldots
-				      w_n,v)\in W_T\Rightarrow\
-				      \vDash_{(w_0,\ldots w_n,v)}^{\mathcal{K}_T}\gamma)
+				      w_n,v)\in W_{\mathcal{T}}\Rightarrow\
+				      \vDash_{(w_0,\ldots
+				      w_n,v)}^{\mathcal{K}_\mathcal{T}}\gamma)
 	\end{align*}
-	And the last line is the same as $\vDash_{(w_0,\ldots,w_n)}\Box\gamma$.
+	And the last line is the same as $\vDash^{\mathcal{T}}_{(w_0,\ldots,w_n)}\Box\gamma$.
 	For the other way, we will use contraposition:
 	\begin{align*}
-		\not\vDash_{w_0}\Box\gamma&\Rightarrow \exists v(w_0Rv\ \&\
-		\not\vDash_v\gamma)\\
+		\not\vDash^{\mathcal{K}}_{w_0}\Box\gamma&\Rightarrow \exists v(w_0Rv\ \&\
+		\not\vDash^{\mathcal{K}}_v\gamma)\\
 					  &\Rightarrow\exists v((w_0,\ldots
 					  w_n,v)\in W_T\ \&\
-					  \not\vDash_v\gamma)\\
+					  \not\vDash^{\mathcal{K}}_v\gamma)\\
 					  &\Rightarrow\exists v((w_0,\ldots
 					  w_n,v)\in W_T\ \&\
-					  \not\vDash_{(w_0,\ldots,w_n,v)}^{\mathcal{K}_T}\gamma)
+					  \not\vDash_{(w_0,\ldots,w_n,v)}^{\mathcal{K}_\mathcal{T}}\gamma)
 	\end{align*}
 	And the last line is the same as
-	$\not\vDash_{(w_0,\ldots,w_n)}\Box\gamma$. 
+	$\not\vDash^\mathcal{K}_{(w_0,\ldots,w_n)}\Box\gamma$. 
 
 	The theorem now follows since we have:
 	$$\not\vDash_{w_0}\alpha\Rightarrow\
@@ -316,6 +321,9 @@ In this section the continuity theorem and a corollary of it will be stated and
 proven. This section applies to all Kripke model, and thus is not only about
 \GL.
 
+The name of this theorem comes from \parencite{Boolos1993}, he does not give
+any deeper explenation for the name.
+
 We will first need two definitions:
 \begin{defi}
 	We define $d(\alpha)$ in the following way: $d(p)=d(\bot)=0$,
@@ -333,11 +341,11 @@ We will first need two definitions:
 \end{defi}
 \begin{thm}[The Continuity Theorem]
 	\label{thm:conti}
-	Let $\mathcal{K}=\la W,R,\phi\ra$ and $\mathcal{K}'=\la V,S,\phi'\ra$
+	Let $\mathcal{K}=\la W,R,\phi\ra$ and $\mathcal{K}'=\la V,R',\phi'\ra$
 	be models and let $w\in W$. Let $P\subseteq \Phi$ be a set of proportional letters.
 	Suppose that $d(\alpha)=n$, that all proportional letters that occur in 
-	$\alpha$ are in $P$, $\{v:\exists i\leq n\ wR^iv\}$, $S=\{\la
-	v,v'\ra:x,y\in V\wedge vRv'\}$, and $p\in \phi'(v)$ if and only if
+	$\alpha$ are in $P$, $\{v:\exists i\leq n\ wR^iv\}\subseteq V$, $R'=\{\la
+	v,v'\ra:v,v'\in V\wedge vRv'\}$, and $p\in \phi'(v)$ if and only if
 	$p\in\phi(v)$ for all $v\in V$ and all proportional letters in $P$. 
 	Then $\vDash_w^\mathcal{K}\alpha$ if and only if
 	$\vDash_w^{\mathcal{K'}}\alpha$.
@@ -346,14 +354,14 @@ We will first need two definitions:
 	We will show that for all subformulas $\beta$ of $\alpha$, if we for some
 	$i$ have that $wR^iv$ and $d(\beta)+i\leq n$ such that $i\leq n$ and
 	$v\in V$, then $\vDash_v^\mathcal{K}\beta$ if and only if
-	$\vDash_v^{\mathcal{K}'}\beta$. Since $wR^0w$ and $d(\alpha)=0$ the
+	$\vDash_v^{\mathcal{K}'}\beta$. Since $wR^0w$ and $d(\alpha)=n$ the
 	theorem will follow.
 
 	The proof will be induction on the complexity if $\beta$. 
 	The cases where $\beta$ is $\bot$ or a $p\in P$ is trivial. If $\beta$
 	is $\gamma\rightarrow\sigma$ then $d(\gamma),d(\sigma)\leq d(\beta)$
 	and the result follows the induction hypothesis.
-	If $\beta$ is $\box\gamma$, $WR^iv$ and $d(\beta)+i\leq n$. Then $v\in
+	If $\beta$ is $\box\gamma$, $wR^iv$ and $d(\beta)+i\leq n$. Then $v\in
 	V$ and $d(\beta)=d(\gamma)+1$. If $vRv'$ then $wR^{i+1}v'$,
 	$d(\gamma)+i+1\leq n$, $v'\in V$ and therefore $vSv'$ and by the
 	induction hypothesis we get $\vDash_{v'}^\mathcal{K}\Gamma$ if and only
@@ -386,6 +394,9 @@ Solovay). This logic is an extension of \GL, but it is not as well behaved as
 completeness theorem, so it is important for each to know a few basic results
 about it.
 
+Further, this section will follow \parencite{Lind1997}, since the  version of
+the main theorem found in that work is a bit better stated than the one found in \parencite{Smor1985}.
+
 \begin{defi}
 	The modal logic \GLS\ is the logic which has the following axioms 
 	\begin{enumerate}
@@ -396,14 +407,14 @@ about it.
 \end{defi}
 
 Another more cumbersome definition of this modal logic can be found in
-Appendix A.
+\parencite{Smor1985}. We follow the definition form \parencite{Boolos1993} and
+\parencite{Lind1997} since it is a lot easier to understand and work with.
 
 It should be noted that this modal logic is not a \textit{normal} one, since it
 do not have  necessitation as a rule of inference. If a modal logic just extended
 \GL\ with the axiom \textit{Refl} then this logic would prove both
 $\neg\Box\bot$ and $\Box\bot$ and thus be inconsistent; this is why we have not
-included it as rule. But in some way it still has necessitation as a rule,
-since it contains all the theorems of \GL.
+included it as rule. 
 
 There is no completeness theorem for \GLS\ in the same vein as the finite tree
 theorem for \GL (This theorem is found in \parencite{Lind1997}). But there is another similar result we will now state and
@@ -423,12 +434,12 @@ If we want to show that a formula $\alpha$ is not r-valid in the class of
 finite tree Kripke models, it is enough to find a $\mathcal{K}$ in this class
 and a $\alpha$-reflexive $w\in W$ such that $\alpha\not\in\phi(w)$.
 
-The main theorem about this modal logic is the following, which gives a sort of
-model theory for \GLS. 
+The main theorem about \GLS\ is the following, which gives a sort of
+model theory for this modal logic. 
 
 \begin{thm}
 	\label{thm:MainGLS}
-	Let $\alpha$ be a modal formulas. Define the following set: $S_\Box(\alpha)=\{\Box\beta:\
+	Let $\alpha$ be a modal formula. Define the following set: $S_\Box(\alpha)=\{\Box\beta:\
 	\Box\beta\ \text{ is a subformula of}\ \alpha\}$ the set of
 	subformulas of $\alpha$ that is boxed. Then the following to
 	statements are equivalent:
@@ -440,20 +451,21 @@ model theory for \GLS.
 			models
 	\end{enumerate}
 \end{thm}
+\textbf{Forklar noget intuiton omkring dette}
 This theorem reduces the decidability of \GLS\ to the decidability of \GL\ and
 describes a model theory for \GLS.
 
 	We have that $(2)\Leftrightarrow(3)$ by the finite tree theorem, and
-	that $(2)\Rightarrow(1)$ is trivial.
+	that $(2)\Rightarrow(1)$ is follows by the definitions of \GLS.
 
 	The proof that $(1)\Rightarrow(2)$ is non trivial, and for this proof
 	we need the following lemma:
 	\begin{lem}
 		\label{lem:hvad}
-		Let $\mathcal{K}=\la W,R,\phi,w_0\ra$ and soppuse that
+		Let $\mathcal{K}=\la W,R,\phi,w_0\ra$ and suppose that
 		$w_0Rw_1R\ldots Rw_{n+1}$. Let $\vartheta_n$ be the following
 		formulas:
-		\[(\Box p_1\rightarrow p)\wedge\cdots\wedge(\Box p_n\rightarrow
+		\[(\Box p_1\rightarrow p_1)\wedge\cdots\wedge(\Box p_n\rightarrow
 		p_n)\]
 		Then there is an $i$; $1\leq i\leq n+1$, such that
 		$\vartheta_n\in\phi(w_i)$, and thus
@@ -469,9 +481,9 @@ Further for the proof we will make use of the operation on Kripke models:
 	Let $\mathcal{K}=\la W,R,\phi\ra$ be a Kripke Model. The derived model
 	$\mathcal{K'}$ is defined as follows: $W'=W\cup \{w'\}$, where
 	$w'\not\in W$. We further have that $R'$ is defined as $wR'v$ iff $WRv$
-	for $w,v\in W$; $w'$ is the new minimum element. Lastly we have that
+	for $w,v\in W$; $w'$ is the new minimum element. Further we have that
 	$w\in\phi'(p)$ iff $w\in\phi(p)$ for $w\in K$, where $p$ is any atomic
-	formula. Further we have that $w'\in\phi'(p)$ iff $w_0\in\phi(p)$.
+	formula. Lastly we have that $w'\in\phi'(p)$ iff $w_0\in\phi(p)$.
 \end{defi}
 We can further define the notion of a sequences of successive derived models:
 $\mathcal{K}^{(1)},\mathcal{K}^{(2)},\ldots$ that have $w_1,w_2,\ldots$ as
@@ -508,7 +520,13 @@ nodes below $w_0$, as seen in the following graphs:
 $\mathcal{K}^{(n)}$ (right)}
 \end{figure}
 
-
+\begin{remark}
+	We have for $w\in W$ and for any formula $\gamma$ that:
+	\[\vDash^{\mathcal{K}}\gamma\ \text{iff}\
+	\vDash^{\mathcal{K^{(n)}}}\gamma\]
+	So we can remove the superscript without consequences for the
+	understanding. We will do so going forward.
+\end{remark}
 
 The following lemma will explain a bit deeper how these derived models works,
 and will be used in the proof of theorem.
@@ -518,7 +536,7 @@ and will be used in the proof of theorem.
 	Let $\mathcal{K}$ be a $\alpha$-reflexive model, $S(\alpha)$ the set of
 	subformulas of $\alpha$ and $\mathcal{K}^{(n)}$ be the $n$-derived
 	model. Then for all $\beta\in S(\alpha)$ we have:
-	$$\vDash_{w_0}\beta\Leftrightarrow\vDash_{w_n}\beta$$
+	$$\vDash_{w_0}\beta\Leftrightarrow\ \vDash_{w_n}\beta$$
 \end{lem}
 \begin{proof}
 	We will prove this by induction on $n$. The lemma will follow from the
@@ -556,13 +574,13 @@ We can now return to our proof of the main theorem of this section by proving
 	\[\bigwedge\{\Box\gamma_i\rightarrow\gamma_i:i<n\}\rightarrow\alpha\]
 	is provable in \GL\ and therefor $\sigma$ is FT-valid. The theorem
 	follows if we can show that $\sigma$ is not FT-valid. We will look at
-	the derived model $\mathcal{K}^{n+1}$, and by \ref{lem:hvad} there is a
+	the derived model $\mathcal{K}^{n+1}$, and by Lemma \ref{lem:hvad} there is a
 	$j\leq n$ such that
 	\[w_{j+1}\in\phi^{n+1}(\bigwedge\{\Box\gamma_i\rightarrow\gamma_i:i<n\})\]
 	Since we have that $w_{j+1}\in\phi^{n+1}\neg\alpha$ and thus
 	$a_{j+1}\in\phi(\neg\sigma)$ and thus $\sigma$ is not FT-valid
 \end{proof}
-Since the models used in this proof is finite we get the following corollary:
+Since the models used in this proof is finite and since \GL\ is decidable we get the following corollary:
 \begin{cor}
 	\GLS\ is decidable 
 \end{cor}

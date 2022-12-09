@@ -1,49 +1,51 @@
 \documentclass[../main.tex]{subfiles}
 
 \begin{document}
-
 This project is about the subject provability logic from mathematical logic,
 and the main result will be Solovay's completeness theorems. These theorems
-states that the $\Box$-operator in  modal logic \GL\  axiomatizes the proof
+state that the $\Box$-operator in  modal logic \GL\  axiomatizes the proof
 predicate $\text{Pr}(\cdot)$ from a wide range of fragments of arithmetics, and
 that the modal logic \GLS\ axiomatizes the proof predicate of true arithmetics.
-For proving these theorems we will need some results from recursion theory and
+TO prove these theorems we will need some results from recursion theory and
 general knowledge about fragments of arithmetics and the modal logics \GL\ and
 \GLS. We will further prove the fixed point theorem for \GL.
 The project has the following structure: 
 \begin{enumerate}
 	\item[\textbf{Chapter 1:}] This chapter will list some prerequisite results and
-		definitions about the modal logic \GL\ and the arithmetical system primitive
-		recursive arithmetic. 
+		definitions about the modal logic \GL\ and the arithmetical
+		theory  \textit{primitive
+		recursive arithmetic}. 
 	\item[\textbf{Chapter 2:}] In this chapter there will be a short introduction to recursion
-		theory and the main goal is to show the recursion theorem.
+		theory, and the main goal is to show Kleene's recursion theorem.
 	\item[\textbf{Chapter 3:}] Here we will introduce the arithmetical hierarchy and
 		fragments of arithmetics. We will further comment on the amount
 		of induction we have available in primitive recursive
 		arithmetics
-	\item[\textbf{Chapter 4:}] We will start of by strengthening the completeness
+	\item[\textbf{Chapter 4:}] We will start out by strengthening the completeness
 		theorem for \GL, with the finite tree completeness theorem.
-		Further we will look at an expansions of \GL\ known as \GLS,
-		which we will use later on for Solovay's second completeness
+		Further, we will look at an expansion of \GL\ known as \GLS,
+		which we will later use  for proving and state nine Solovay's second completeness
 		theorem.
 	\item[\textbf{Chapter 5:}] The main goal of this chapter is to state and prove
 		the fixed point theorem. We will also use it to calculate a few fixed
 		points.
-	\item[\textbf{Chapter 6:}] In this chapter we will prove both of Solovay's
-		completeness theorems. After the proofs of these we will look
-		at applications of them.
+	\item[\textbf{Chapter 6:}] In this chapter, we will prove both of Solovay's
+		completeness theorems. Next will look
+		at applications of these theorem, and how they can be used
+		together with the fixed point theorem.
 	\item[\textbf{Chapter 7:}] Here we will round up the project with some
 		perspective to further results in provability logic.
 \end{enumerate}
 
-In the rest of this introduction we will introduce a bit of notational
+In the rest of this introduction we will introduce some notational
 conventions and give a short historical overview of the different logical
 fields, that will play a role in the project.
 
-The bibliography of this project consist of a wide range of logical,
-mathematical and philosophical texts that in one way or another has a
-connection to of is referenced in the project. The main sources for this project
-is \parencite{Smor1985}, \parencite{Boolos1993} and \parencite{Soare1987}.
+The bibliography of this project consists of a wide range of logical,
+mathematical and philosophical texts that are, in one way or another, connected to or referenced in the project.. The main sources for this project
+are \parencite{Smor1985}, \parencite{Boolos1993} and \parencite{Soare1987}. A
+few minor sources are also used through the project, and they will be stated
+explicitly when used.
 
 \section{Notation}
 
@@ -52,14 +54,14 @@ $\omega=\{0,1,2,3,\ldots\}$, and $\omega\times\omega=\omega^2$ and so on.
 Subsets of $\omega$ will be denoted by $A,B,C\ldots$ and arbitrary sets will be
 denoted by
 $\Gamma,\Phi,\Theta\ldots$. Lower case Latin letter $a,b,c$ and $x,y,z$ will
-denote integers, and $\vec{x}$ will be shorthand for a finite sequences, e.g.$x_1,\ldots,x_n$.
+denote integers, and $\vec{x}$ will be shorthand for a finite sequences e.g.$x_1,\ldots,x_n$.
 We will let $\omega^{<\omega}$ denote the finite sequences over $\omega$.
-Further recursive functions will be denoted by
+Further, recursive functions will be denoted by
 $\varphi,\psi,\vartheta,\ldots$, the graphs of recursive functions will be
 denoted by $\tau,\xi$ and $\zeta$ . Functions that are primitive recursive will be denoted by
 $f,g,h,\ldots$. 
 
-We will further introduce a system of arithmetic called \textit{primitive
+Additionally, we  will introduce a system of arithmetic called \textit{primitive
 recursive arithmetic} (\PRA, for short) and the formulas of this
 system will be denoted with $F,G$ and $G$.
 
@@ -73,21 +75,34 @@ A few special functions have their own symbols: $S$ for the
 successor function, $Z$ for the zero function and $P$ for the projection.
 The formulae of the language \PRA\ will be denoted by $F,G$ and $H$.
 
-Relations will be denoted by $R$ and $<,>,\leq,\geq$ will be used in the usual
-sense on integers.
+Relations will be denoted by $R$, and $<,>,\leq,\geq$ will be used in the usual
+sense on integers. For a binary relation $R$, we will write that $x$ is related
+to $y$ as $xRy$ or $(x,y)\in R$, and if $\vec x$ is related to each other, we
+will write $R(\vec x)$.
 
 We will use the standard symbols of propositional  logic
-$\wedge,\vee,\rightarrow,\neg$. Further we will sometimes use $\exists$ and
-$\forall$ in the metalanguage of modal logic, and use them in the language of
-first-order arithmetics. The differences of these two uses should be clear
-from the context. We will argument the propositional logic with the modal unary
+$\wedge,\vee,\rightarrow,\neg$. Further, we will sometimes use $\exists$ and
+$\forall$ in the metalanguage of modal logic and use them in the language of
+first-order arithmetics. The differences of these two usages should be clear
+from the context. We will augment the propositional logic with the modal unary
 connective $\Box$ and its dual $\Diamond:=\neg\Box\neg$. We will denote modal
-formulas by the greek letters $\alpha,\beta,\gamma,\sigma$. The symbol
+formulas by the Greek letters $\alpha,\beta,\gamma,\sigma$. The symbol
 $\mathcal{H}$ will denote a
-Hintikka frame  which is a tuple $\la W,R\ra$ where $W$ is a set of "nodes" and
-$R$ is a relation on $W$and
+Hintikka frame,  which is a tuple $\la W,R\ra$ where $W$ is a set of "nodes" and
+$R$ is a relation on $W$, and
 $\mathcal{K}$ will denote a Kripke model, which is a Hintikka frame with a
-valuation $\phi$ on.
+valuation $\phi$ on. We will use superscript to distinguish different frames
+and models for each other.
+A tree will be denoted by $\mathcal{T}$.
+
+That $\alpha$ is a theorem of a modal logic $\Lambda$ will be denoted by
+$\vdash_\Lambda\alpha$ and that $F$ is a theorem of \PRA\ will be denoted by
+$\PRA\vdash F$. We will later define a special modal logic called $\GL$ and for
+this modal logic will define an interpretation of its formulae into \PRA\ by
+$^*$. With this notation we can state Solovay's first completeness theorem:
+\[\vdash_\GL\alpha\Leftrightarrow\ \forall ^*(\PRA\vdash\alpha^*)\]
+I.e a formula $\alpha$ is a theorem of \GL\ if and only if for all
+interpretations $^*$ we have that $\alpha^*$ is a theorem of \PRA.
 
 \section{Historical Introduction}
 Humans have been interested in numbers and calculation with these since before

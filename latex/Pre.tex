@@ -294,7 +294,7 @@ later:
 \section{Gödels Incompleteness Theorems}
 In this section we will state and sketch the proof of Gödels incompleteness
 theorems. In this sketch we will define a predicate $\text{Pr}(\cdot)$ that
-says a given formula has a proof in arithmetics.
+says a given formula has a proof in arithmetic.
 
 
 \subsection{Primitive Recursive Functions}
@@ -326,7 +326,7 @@ We can also define relations as being primitive recursive:
 	characteristic function is:
 	\[\chi_R(\vec{x})=\begin{cases}
 		0 &\text{if}\ R(\vec{x})\\
-		1 &\text{if}\ R(\vec x)
+		1 &\text{if}\ R\neg(\vec x)
 	\end{cases}\]
 \end{defi}
 So with these definitions we can show that some well known functions are
@@ -367,7 +367,12 @@ left out.
 \end{prop}
 
 \subsection{\PRA}
-In this section we will specify the rules and language of \PRA. First, we
+In this section we will specify the rules and language of the arithmetical
+theory \PRA\ . This theory will be the one we will later will use to prove
+Solovay's completeness theorems for. We could have picked a different theory
+like \textit{Peano Arithmetic}, but the axioms of \PRA\ makes it a lot easier
+to show that the theory can compute the functions known as primitive functions,
+which are crucial for the proof of Gödel's completeness theorems. First, we
 will define the language $\mathcal{L}_\PRA$ of \PRA.
 
 \begin{defi}
@@ -388,7 +393,7 @@ mostly done to settle notations.
 
 \begin{defi}
 	\begin{enumerate}
-		\item The set of \textit{terms} of the langauge of \PRA\ is
+		\item The set of \textit{terms} of the language of \PRA\ is
 			defined inductively by:
 			\begin{enumerate}
 				\item $\ol 0$ is a term and each $v_i$ is a
@@ -509,7 +514,7 @@ Having defined the language of \PRA\ we can now state the different axioms of
 							f(v_01,v_1,\ldots,v_n),v_0,v_1,\ldots,v_n)$
 					\end{enumerate}
 				\item Induction\\
-					$F(\0)\wedge\forall v(\delta
+					$F(\0)\wedge\forall v(F
 					v\rightarrow F (\ol Sv))\rightarrow
 					\forall vF( v)$ where $F( v)$ is
 
@@ -518,9 +523,16 @@ Having defined the language of \PRA\ we can now state the different axioms of
 			\end{enumerate}
 	\end{enumerate}
 \end{defi}
-The induction axiom seems a bit strange at first. If we had allowed full
+The only of these axioms that are a bit strange is the induction one. The axiom
+gives a bit more induction than necessary for the proof of Gödel's
+incompleteness theorem; but we will need a bit more induction for the proof of
+Solovay's completeness theorems. On the other hand, if we had allowed full
 induction; i.e induction on every formula, the system we would have defined
-would be known as \textbf{PA}; Peano Arithmetics.  Having written down the
+would be known as \textbf{PA}; Peano Arithmetics, and this system is a lot
+stronger than what is needed for the proof of Gödel's incompleteness theorems
+and Solovay's completeness theorems. We will in Chapter \ref{chap:PRA} comment
+a bit more about different arithmetical theories and the amount of induction in
+them.  Having written down the
 axioms, we will move on to the
 inference rules of \PRA.
 \begin{defi}
@@ -528,8 +540,8 @@ inference rules of \PRA.
 	\begin{enumerate}
 		\item From $F,F\rightarrow G,$ derive $G$
 			(modus ponens).
-		\item From $F v\rightarrow G$ derive $\exists
-			F\rightarrow G$, under the assumption that no
+		\item From $F v\rightarrow G$ derive $\exists v
+			Fv \rightarrow G$, under the assumption that no
 			$v$ occurs free in $G$.
 		\item From $G\rightarrow F v$ derive $G\rightarrow
 			\forall v F v$, under the assumption that no
@@ -560,9 +572,10 @@ theorem of arithmetic that states that every natural number $a\geq 2$ has a
 unique representation:
 \[a=p^{n_0}_{i_0}\cdots p^{n_k}_{i_k}\]
 Where each $p$ is a distinct prime and all the $n_i$ are positive. If given a
-sequence $(j_0,\ldots j_t)$ we can encode it with a unique code in the following
+sequence of natural numbers $(j_0,\ldots j_t)$ we can encode it with a unique code in the following
 way:
-$$c=2^{j_0+1}3^{j_1+1}\cdots p^{j_t+1}$$
+\[c=2^{j_0+1}3^{j_1+1}\cdots p^{j_t+1}\]
+
 By encoding them like this it is possible to give each formula of \PRA\ a unique code. We will
 begin by listing the codes for some of our symbols of \PRA:
 
@@ -606,22 +619,23 @@ is a proof of another given formula; i.e the relation that says "y codes a
 derivation of the formula with code x". We shorten this as $\text{Prov}(x,y)$
 and we further define the non primitive recursive relation "x codes a provable
 formula" as: $\text{Pr}(x)\leftrightarrow\exists y(\text{Prov}(y,x))$
-\subsection{The proof predicate and the theorems}
+
+\subsection{The Proof Predicate and the Theorems}
 
 The relation $\text{Pr}(x)$ has the following properties called Löbs
 derivability conditions:
 \begin{enumerate}
-	\item[D1] $\PRA\vdash F\Rightarrow\vdash\text{Pr}(\Godelnum{F})$.
-	\item[D2] $\PRA\vdash\text{Pr}(\Godelnum{F\rightarrow
+	\item[D1:] $\PRA\vdash F\Rightarrow\ \PRA\vdash\text{Pr}(\Godelnum{F})$.
+	\item[D2:] $\PRA\vdash\text{Pr}(\Godelnum{F\rightarrow
 		G})\rightarrow(\text{Pr}(\Godelnum{F})\rightarrow\text{Pr}(\Godelnum{G}))$.
-	\item[D3]
+	\item[D3:]
 		$\PRA\vdash\Pr(\Godelnum{F})\rightarrow\Pr(\Godelnum{\Pr(\Godelnum{F})})$.
 \end{enumerate}
 It is also clear that $\neg\Pr(\bot)$, where $\bot$ is some false statement,
 expresses consistence. We will denote this by $\text{Con}$.
 With the use of the $subst$ function, we can further  prove the following
 important lemma:
-\begin{lem}[The fixed point lemma]
+\begin{lem}[The Fixed Point Lemma]
 	Given any formula $G$ where the only free variable is $v$, we can
 	find a sentence $F$ such that:
 	\[\PRA\vdash F\leftrightarrow G(\Godelnum{F})\]
@@ -631,10 +645,10 @@ This lemma makes it possible for us to show the first incompleteness theorem:
 	The predicate $\Pr(\cdot)$ have the following properties for all
 	formulas $G$:
 	\begin{enumerate}
-		\item $\PRA\vdash G\Rightarrow\ \vdash\Pr(\Godelnum{G})$
-		\item $\PRA\vdash\Pr(\Godelnum{G})\Rightarrow\ \vdash G$
+		\item $\PRA\vdash G\Rightarrow\ \PRA\vdash\Pr(\Godelnum{G})$
+		\item $\PRA\vdash\Pr(\Godelnum{G})\Rightarrow\ \PRA\vdash G$
 	\end{enumerate}
-	If we let $\PRA\vdash\ F\leftrightarrow\neg\Pr(\Godelnum{F})$, we
+	If we let $F$ be as follows, by the fixed point lemma: $\PRA\vdash\ F\leftrightarrow\neg\Pr(\Godelnum{F})$, we
 	then have:
 	\begin{enumerate}
 		\item $\PRA\not\vdash F$
@@ -650,10 +664,11 @@ also be proven.
 	$\PRA\not\vdash\text{Con}$.
 \end{thm}
 The main goal for the rest of this project is now to prove that the $\Box$ in
-\GL "behaves" in the same way as the Pr($\cdot$) predicate from arithmetics.
+\GL "behaves" in the same way as the Pr($\cdot$) predicate from \PRA.
 How this should be understood will be explained latter on.
 To prove this theorem, we will first need a main result from Recursion Theory
-called the recursion theorem.
+called the recursion theorem, which will be introduced in Chapter
+\ref{chap:Complete}.
 
 We will need one more result about the proof predicate in the project. It is
 called the formalized Löb's  theorem, and this theorem together with the
@@ -666,13 +681,12 @@ $\text{Pr}(\cdot)$
 \end{thm}
 
 This theorem was an original an answer to a question asked by Leon Henkin: "If
-\PRA\ proves that $G\leftrightarrow\text{Pr}(\Godelnum{G}$ what does this say
-about $G$? Löb's answer is then that if \PRA\ can only  that
-$\text{Pr}(\Godelnum{G}\rightarrow G$ in the case where \PRA\ proves $G$
+\PRA\ proves that $G\leftrightarrow\text{Pr}(\Godelnum{G})$ what does this say
+about $G$? Löb's answer is then that if \PRA\ can only prove  that
+$\text{Pr}(\Godelnum{G})\rightarrow G$ in the case where \PRA\ proves $G$
 itself.
 
 We will in a later chapter need the following lemma:
-\newpage
 \begin{lem}
 	\label{lem:Prov}
 	Let $\ol f$ be an $n$-ary primitive recursive function symbol. There is
@@ -688,9 +702,12 @@ v_0,\ldots ,\ol v_{n-1}$.
 
 The Formalized Löb's Theorem and the derivability conditions can be shown to
 hold for a wide range of arithmetical systems. A short overview of this subject
-will be given in chapter \ref{chap:PRA}. If we write $\vdash F$ instead of
+will be given in chapter \ref{chap:PRA}. 
+\begin{remark}
+If we write $\vdash F$ instead of
 $\PRA\vdash F$, it means we have not specified the arithmetical system we are
 looking at.
+\end{remark}
 
 If we compare the properties of $\text{Pr}(\cdot)$ with the properties of the
 $\Box$-operator of \GL, we get the following table:

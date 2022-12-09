@@ -39,6 +39,7 @@
 \addbibresource{ThesisBib.bib}
 \emergencystretch=1em
 
+\hfuzz=5.002pt %ignore hbox overflow.
 
 %Koma options
 \addtokomafont{headsepline}{\color{OliveGreen}}
@@ -57,24 +58,24 @@
 \newtheorem{defi/}{Definition}[chapter]
 
 \theoremstyle{dotlessS}
-\newtheorem{thm}{Theorem}[chapter]
+\newtheorem{thm}[defi/]{Theorem}
 
 \theoremstyle{dotlessS}
-\newtheorem{lem}{Lemma}[chapter]
+\newtheorem{lem}[defi/]{Lemma}
 
 \theoremstyle{dotlessS}
-\newtheorem{prop}{Proposition}[chapter]
+\newtheorem{prop}[defi/]{Proposition}
 
 \theoremstyle{dotlessS}
-\newtheorem{axiom}{Axiom}[chapter]
+\newtheorem{axiom}[defi/]{Axiom}
 
 \theoremstyle{dotlessS}
-\newtheorem{cor}{Corollary}[chapter]
-\newtheorem{lemma}[thm]{Lemma}
-\newtheorem{remark}{Remark}[chapter]
+\newtheorem{cor}[defi/]{Corollary}
+\newtheorem{lemma}[defi/]{Lemma}
+\newtheorem{remark}[defi/]{Remark}
 
 \theoremstyle{dotlessS}
-\newtheorem{exmp/}{Example}[chapter]
+\newtheorem{exmp/}[defi/]{Example}
 
 %\theoremstyle{definition}
 %\newtheorem{defi/}{Definition}
@@ -183,7 +184,7 @@ Arithmetics}
 %Main text
 \chapter{Introduction}
 \epigraph{If modern modal logic was conceived in sin, then it has been redeemed
-through Gödliness.}{\cite{Boolos1979} page 1}
+through Gödliness.}{\parencite[Page 1]{Boolos1979}}
 \label{chap:intro}
 \subfile{intro}
 
