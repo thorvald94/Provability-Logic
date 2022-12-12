@@ -8,104 +8,106 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {0.2.1}Modal Logic}{3}{subsection.0.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {0.2.2}Arithmetics and Recursion Theory}{4}{subsection.0.2.2}%
+\contentsline {subsection}{\numberline {0.2.2}Arithmetics and Recursion Theory}{5}{subsection.0.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {0.2.3}Provability Logic}{5}{subsection.0.2.3}%
+\contentsline {subsection}{\numberline {0.2.3}Provability Logic}{6}{subsection.0.2.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {1}Preliminary}{7}{chapter.1}%
+\contentsline {chapter}{\numberline {1}Preliminary}{9}{chapter.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.1}Modal Logic}{7}{section.1.1}%
+\contentsline {section}{\numberline {1.1}Modal Logic}{9}{section.1.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.1.1}The language of modal logic}{7}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}The language of modal logic}{9}{subsection.1.1.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.1.2}Semantics}{8}{subsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.1.2}Semantics}{10}{subsection.1.1.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.1.3}The modal logic \text {\textbf {GL}}}{10}{subsection.1.1.3}%
+\contentsline {subsection}{\numberline {1.1.3}The modal logic \text {\textbf {GL}}}{12}{subsection.1.1.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.2}Gödels Incompleteness Theorems}{12}{section.1.2}%
+\contentsline {section}{\numberline {1.2}Gödels Incompleteness Theorems}{14}{section.1.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2.1}Primitive Recursive Functions}{12}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.1}Primitive Recursive Functions}{14}{subsection.1.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2.2}\text {\textbf {PRA}}}{14}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.2}\text {\textbf {PRA}}}{16}{subsection.1.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2.3}Arithmetization of the syntax}{17}{subsection.1.2.3}%
+\contentsline {subsection}{\numberline {1.2.3}Arithmetization of the syntax}{19}{subsection.1.2.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2.4}The Proof Predicate and the Theorems}{19}{subsection.1.2.4}%
+\contentsline {subsection}{\numberline {1.2.4}The Proof Predicate and the Theorems}{21}{subsection.1.2.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {2}Recursion Theory}{23}{chapter.2}%
+\contentsline {chapter}{\numberline {2}Recursion Theory}{25}{chapter.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.1}Partial Recursive Functions and Recursive Functions}{23}{section.2.1}%
+\contentsline {section}{\numberline {2.1}Partial Recursive Functions and Recursive Functions}{25}{section.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Turing Computable Functions}{24}{section.2.2}%
+\contentsline {section}{\numberline {2.2}Turing Computable Functions}{26}{section.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}The \textit {s-m-n}-Theorem}{27}{section.2.3}%
+\contentsline {section}{\numberline {2.3}The \textit {s-m-n}-Theorem}{29}{section.2.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.4}Recursively Enumerable sets and the Graph of a function}{29}{section.2.4}%
+\contentsline {section}{\numberline {2.4}Recursively Enumerable sets and the Graph of a function}{31}{section.2.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.5}The Recursion Theorem}{33}{section.2.5}%
+\contentsline {section}{\numberline {2.5}The Recursion Theorem}{35}{section.2.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.5.1}Application of the Recursion Theorem}{34}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.1}Application of the Recursion Theorem}{36}{subsection.2.5.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}The Arithmetical Hierarchy and Fragments of Arithmetic}{37}{chapter.3}%
+\contentsline {chapter}{\numberline {3}The Arithmetical Hierarchy and Fragments of Arithmetic}{39}{chapter.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}The Arithmetical Hierarchy}{37}{section.3.1}%
+\contentsline {section}{\numberline {3.1}The Arithmetical Hierarchy}{39}{section.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Fragments of arithmetic}{39}{section.3.2}%
+\contentsline {section}{\numberline {3.2}Fragments of arithmetic}{41}{section.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}\text {\textbf {PRA}}'s and the other fragments of Arithmetics}{41}{section.3.3}%
+\contentsline {section}{\numberline {3.3}\text {\textbf {PRA}}'s and the other fragments of Arithmetics}{43}{section.3.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.1}Induction in \text {\textbf {PRA}}}{43}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.1}Induction in \text {\textbf {PRA}}}{45}{subsection.3.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.4}Further extensions of the arithmetical hierarchy}{45}{section.3.4}%
+\contentsline {section}{\numberline {3.4}Further extensions of the arithmetical hierarchy}{47}{section.3.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.5}Sigma Completeness}{45}{section.3.5}%
+\contentsline {section}{\numberline {3.5}Sigma Completeness}{47}{section.3.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}General Results on GL}{47}{chapter.4}%
+\contentsline {chapter}{\numberline {4}General Results on GL}{49}{chapter.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Trees and \text {\textbf {GL}}}{47}{section.4.1}%
+\contentsline {section}{\numberline {4.1}Trees and \text {\textbf {GL}}}{49}{section.4.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.1}Trees}{47}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.1}Trees}{49}{subsection.4.1.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.2}The Finite Tree Theorem}{50}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.2}The Finite Tree Theorem}{52}{subsection.4.1.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}The Continuity Theorem}{52}{section.4.2}%
+\contentsline {section}{\numberline {4.2}The Continuity Theorem}{54}{section.4.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}The Modal Logic \text {\textbf {GLS}}}{53}{section.4.3}%
+\contentsline {section}{\numberline {4.3}The Modal Logic \text {\textbf {GLS}}}{55}{section.4.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Fixed Point Theorem}{59}{chapter.5}%
+\contentsline {chapter}{\numberline {5}Fixed Point Theorem}{61}{chapter.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Prerequisite Results and Definitions}{59}{section.5.1}%
+\contentsline {section}{\numberline {5.1}Prerequisite Results and Definitions}{61}{section.5.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}Proof of the Fixed Point Theorem}{62}{section.5.2}%
+\contentsline {section}{\numberline {5.2}Proof of the Fixed Point Theorem}{64}{section.5.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.3}Calculation of Fixed Points}{66}{section.5.3}%
+\contentsline {section}{\numberline {5.3}Calculation of Fixed Points}{67}{section.5.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Solovays Completeness Theorems}{69}{chapter.6}%
+\contentsline {subsection}{\numberline {5.3.1}Calculation of a Non-Modalized Fixed Point}{68}{subsection.5.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.1}Soundness}{69}{section.6.1}%
+\contentsline {chapter}{\numberline {6}Solovays Completeness Theorems}{71}{chapter.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.2}The First Theorem}{70}{section.6.2}%
+\contentsline {section}{\numberline {6.1}Soundness}{71}{section.6.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.3}The Second Theorem}{79}{section.6.3}%
+\contentsline {section}{\numberline {6.2}Solovay's Soundness Theorem and Fixed Points}{72}{section.6.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.3.1}Using the Second Completeness Theorem}{82}{subsection.6.3.1}%
+\contentsline {section}{\numberline {6.3}The First Theorem}{73}{section.6.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.4}Generalisations of the Completeness Theorems}{83}{section.6.4}%
+\contentsline {section}{\numberline {6.4}The Second Theorem}{82}{section.6.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.5}Solovays Completeness Theorems and Fixed Points}{83}{section.6.5}%
+\contentsline {subsection}{\numberline {6.4.1}Using the Second Completeness Theorem}{85}{subsection.6.4.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.6}Concluding remarks: Implications of Solovay's Theorems}{84}{section.6.6}%
+\contentsline {section}{\numberline {6.5}Generalisations of the Completeness Theorems}{86}{section.6.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {7}Further Results in Provability Logic}{87}{chapter.7}%
+\contentsline {section}{\numberline {6.6}Concluding remarks: Implications of Solovay's Theorems}{87}{section.6.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.1}Multi-modal provability logic}{87}{section.7.1}%
+\contentsline {chapter}{\numberline {7}Further Results in Provability Logic}{89}{chapter.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.1.1}The system \text {\textbf {GLB}}}{87}{subsection.7.1.1}%
+\contentsline {section}{\numberline {7.1}Multi-modal provability logic}{89}{section.7.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.1.2}The system \textbf {IDzh} and completeness of \text {\textbf {GLB}}}{90}{subsection.7.1.2}%
+\contentsline {subsection}{\numberline {7.1.1}The system \text {\textbf {GLB}}}{89}{subsection.7.1.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.1.3}The system \textbf {GLP}}{92}{subsection.7.1.3}%
+\contentsline {subsection}{\numberline {7.1.2}The system \textbf {IDzh} and completeness of \text {\textbf {GLB}}}{92}{subsection.7.1.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.2}Quantifed provability logic}{93}{section.7.2}%
+\contentsline {subsection}{\numberline {7.1.3}The system \textbf {GLP}}{94}{subsection.7.1.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {8}Bibliography}{95}{chapter.8}%
+\contentsline {section}{\numberline {7.2}Quantifed provability logic}{95}{section.7.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {8}Bibliography}{97}{chapter.8}%

@@ -1561,6 +1561,33 @@
       \field{year}{2013}
       \true{nocite}
     \endentry
+    \entry{Lob1995}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=955dccb08d80d7028aa31ac51499a6bb}{%
+           family={Löb},
+           familyi={L\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{955dccb08d80d7028aa31ac51499a6bb}
+      \strng{fullhash}{955dccb08d80d7028aa31ac51499a6bb}
+      \strng{bibnamehash}{955dccb08d80d7028aa31ac51499a6bb}
+      \strng{authorbibnamehash}{955dccb08d80d7028aa31ac51499a6bb}
+      \strng{authornamehash}{955dccb08d80d7028aa31ac51499a6bb}
+      \strng{authorfullhash}{955dccb08d80d7028aa31ac51499a6bb}
+      \field{sortinit}{L}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{journaltitle}{Journal of Symbolic Logic}
+      \field{volume}{20}
+      \field{year}{1955}
+      \true{nocite}
+      \field{pages}{115\bibrangedash 118}
+      \range{pages}{4}
+    \endentry
     \entry{Luka1957}{book}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=293a545627bbb4f9a0e27a8028b3cf20}{%

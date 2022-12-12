@@ -7,7 +7,8 @@ In this section we will prove some different properties about the modal logic
 These properties will be used in the following chapters. Some of these properties might
 hold in other modal logics, but we will look at \GL\ as our base logic,
 instead of a more common modal logic like \textbf{K}.
-Further, in the end we will introduce the system $\text{\textbf{GLS}}$.
+Further, in the end we will introduce the system $\text{\textbf{GLS}}$ (the
+"\textbf{S}" stands for Solovay).
 
 This section will follow \parencite{Smor1985}. But there will be a some small
 differences. Smorynski calls the logic \textbf{GL} for \textbf{PRL} which
@@ -406,6 +407,15 @@ the main theorem found in that work is a bit better stated than the one found in
 	and which sole rule of inference is modus ponens.
 \end{defi}
 
+The axiom Refl is added since we for \PRA\ can add the following principle called
+\textit{local reflexion principle} (Rfn) for any formula:
+\[\text{Pr}(\Godelnum{F})\rightarrow F\]
+We will further define $\text{Con}^n$ for $n>0$ in the following way:
+$\text{Con}^1=\text{Con}$, $\text{Con}^{n+1}=\text{Con}_{\PRA+\text{Con}^n}$,
+where $\text{Con}_{\PRA+text{Con}^n}$ is the consistent of \PRA\ with
+$\text{Con}^n$ added. It can then be shown that $\PRA +\text{Rfn}$ is a proper
+extension of $\PRA+\{\text{Con}^n,n\in \omega\}$. So we add the axiom Refl to
+simulate the local reflexion principle in \GLS.
 Another more cumbersome definition of this modal logic can be found in
 \parencite{Smor1985}. We follow the definition form \parencite{Boolos1993} and
 \parencite{Lind1997} since it is a lot easier to understand and work with.
@@ -421,7 +431,7 @@ theorem for \GL (This theorem is found in \parencite{Lind1997}). But there is an
 prove.
 \begin{defi}
 	Let $\alpha$ be any modal formula, let $\mathcal{K}=\la
-W,R,\phi,w_0\ra$ be a pointed Kripke model and soppues that $w\in W$.
+W,R,\phi,w_0\ra$ be a pointed Kripke model and suppose that $w\in W$.
 Then $w$ is $\alpha$-\textit{reflexive} in $\mathcal{K}$ if
 $\Box\beta\rightarrow\beta\in\phi(w)$ for all $\Box\beta\in S(\alpha)$.
 $\mathcal{K}$ is $\alpha$-reflexive if $w_0$ is $\alpha$-reflexive. Let
@@ -441,7 +451,7 @@ model theory for this modal logic.
 	\label{thm:MainGLS}
 	Let $\alpha$ be a modal formula. Define the following set: $S_\Box(\alpha)=\{\Box\beta:\
 	\Box\beta\ \text{ is a subformula of}\ \alpha\}$ the set of
-	subformulas of $\alpha$ that is boxed. Then the following to
+	subformulae of $\alpha$ that is boxed. Then the following to
 	statements are equivalent:
 	\begin{enumerate}
 		\item $\vdash_\GLS\alpha$
@@ -451,7 +461,10 @@ model theory for this modal logic.
 			models
 	\end{enumerate}
 \end{thm}
-\textbf{Forklar noget intuiton omkring dette}
+The equivalences of (1) and (2) makes since we have added the axiom Refl; i.e.
+the r-valid class of finite tree Kripke models are the models where the local
+reflexion principle is true.
+
 This theorem reduces the decidability of \GLS\ to the decidability of \GL\ and
 describes a model theory for \GLS.
 
@@ -491,7 +504,7 @@ their minima. We define $\mathcal{K}^{(1)}=\mathcal{K}$ and
 $\mathcal{K}^{(n+1)}=(\mathcal{K}^{(n)})'$ and let $w_n$ denote the minimum of
 $\mathcal{K}^{(n)}$. This can graphically been seen by adding a tail of $n$
 nodes below $w_0$, as seen in the following graphs:
-
+\newpage
 
 \begin{figure}[h]
 	\begin{center}

@@ -2223,12 +2223,13 @@
     <bcf:citekey order="38">Boolos1993</bcf:citekey>
     <bcf:citekey order="39">ArteBe</bcf:citekey>
     <bcf:citekey order="40">Smor1985</bcf:citekey>
-    <bcf:citekey order="41">Dick1991</bcf:citekey>
-    <bcf:citekey order="42">Fedo2017</bcf:citekey>
-    <bcf:citekey order="43">Artemov2007</bcf:citekey>
-    <bcf:citekey order="44">Boolos1993</bcf:citekey>
+    <bcf:citekey order="41">Smor1985</bcf:citekey>
+    <bcf:citekey order="42">Dick1991</bcf:citekey>
+    <bcf:citekey order="43">Fedo2017</bcf:citekey>
+    <bcf:citekey order="44">Artemov2007</bcf:citekey>
     <bcf:citekey order="45">Boolos1993</bcf:citekey>
     <bcf:citekey order="46">Boolos1993</bcf:citekey>
+    <bcf:citekey order="47">Boolos1993</bcf:citekey>
     <bcf:citekey order="0" nocite="1">*</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->

@@ -38,21 +38,21 @@ The goal of the current section is to prove the that the set of \PRA-valid
 formulas are the theorems of \GL. I.e we want to prove the following bi-implication:
 
 \[\GL\vdash\alpha\Leftrightarrow \forall^*(\PRA\vdash\alpha^*)\]
-This formula says that \GL\ completely captures what \PRA\ can say about its own
+This statement says that \GL\ completely captures what \PRA\ can say about its own
 provability. This result can be expanded to other fragments of arithmetics. So
 the modal logic \GL\ is the modal logic that captures what a lot of  different fragments of
 arithmetics can say about its own provability. Later on in the project it will be shown for which fragments this
 is the case. 
 
-In \ref{chap:second} we will show that \GLS\ is the modal logic of provability
-in truth. This is called Solovay's second completeness theorem.
+In \ref{chap:second} we will show that \GLS\ is the modal logic of the proof
+predicate of the standard modal $\mathcal{N}$. This is called Solovay's second completeness theorem.
 
 We will start with proving the "$\Rightarrow$" implication; i.e that every
 theorem of \GL\ is \PRA-valid. The other way will be a bit harder to prove, and
 that is the part that is known as Solovay's first completeness theorem.
 \begin{thm}[Soundness]
 	For all modal sentences $\varphi$ we have that :
-	$$\GL\vdash\varphi\Rightarrow\forall ^*(\PRA\vdash\varphi^*)$$
+	$$\GL\vdash\alpha\Rightarrow\forall ^*(\PRA\vdash\alpha^*)$$
 \end{thm}
 \begin{proof}
 	The proof will be done as an induction proof on the number of axioms
@@ -74,11 +74,63 @@ that is the part that is known as Solovay's first completeness theorem.
 	We will now just have to show the case of A4. This case follows by
 	Löb's theorem.
 \end{proof}
+We can immediately use this theorem in conjecture with the fixed point theorem
+to deduce some things about formulae of \PRA.
+\section{Solovay's Soundness Theorem and Fixed Points}
+
+We will now comment a bit about the implications of the soundness theorem and
+the fixed point theorem.
+
+From table \ref{Fig} and the arithmetical soundness theorem, we can conclude the following things:
+\begin{enumerate}
+	\item From line 3, we have that
+		$\vdash_\GL\sBox(p\leftrightarrow\Box\neg
+		p)\leftrightarrow\sBox(p\leftrightarrow\Box\bot)$; i.e a
+		sentence $F$ of \PRA\ is equivalent to its own unprovability if and only
+		if $F$ is equivalent to the assertion that \PRA is
+		inconsistent.
+		For let $^*$ be such that $F=p^*$, then we if $F$ is such that
+		$\PRA\vdash F\leftrightarrow\text{Pr}(\Godelnum{\neg F})$ which
+		is the same as $\PRA\vdash(p\leftrightarrow\Box\neg p)^*$ and
+		thus we have: $\PRA\vdash\Box(p\leftrightarrow\Box\neg p)^*$
+		and hence $\PRA\vdash\sBox(p\leftrightarrow\Box\neg p)^*$. But
+		by the soundness theorem we get that:
+		$\PRA\vdash(\sBox(p\leftrightarrow\Box\neg
+		p)\leftrightarrow\sBox(p\leftrightarrow\Box\bot))^*$, and thus
+		$\PRA\vdash\sBox(p\leftrightarrow\Box\bot)^*$ whence
+		$\PRA\vdash(p\leftrightarrow\Box\bot)^*$ and thus $\PRA\vdash
+		F\leftrightarrow\text{Pr}(\Godelnum{\bot})$. Which shows that
+		$F$ is equivalent to the inconsistency of \PRA.
+	\item We can from line 1 and 6 infer that a sentence of \PRA\ is
+		equivalent to its own unprovability if and only if it is
+		equivalent to the assertion that \PRA\ is consistent and that a
+		sentence of \PRA\ that is equivalent to the assertion that it
+		is unprovable if it is provable if and only if it is equivalent
+		to the assertion that if the inconsistency of \PRA\ is provable
+		then \PRA\ is provable.
+	\item From line 10 we can conclude that for arbitrary sentence $F$ and $G$ of \PRA\ that: $F$ is equivalent to the conduction of $F$ is provable and $G$ is true if and only if $F$ is equivalent to
+		the conduction of $G$ is provable and true. Here we take $^*$
+		such that $p^*=F$ and $q^*=G$.
+	\item From line 6 again we can conclude that a fixed point may have a
+		bigger modal degree, than formula of which it is a fixed
+		point: the formula $\Box p\rightarrow\Box\neg p$ has modal degree $1$
+		and the formula $\Box\Box\bot\rightarrow\Box\bot$ has degree
+		$2$. We can conclude the same for line 7, where the fixed point
+		has modal degree $3$ and the formula it is a fixed point for
+		has degree $2$.
+	\item The modal formula $\alpha$ has at most the same modal degree as
+		the modal formula $\sigma$.
+	\item We can further see that line 1 gives that sentences of arithmetic
+		that express their own unprovability are equivalent to the
+		assertion arithmetic is consistent. Line 2 is the same as Löb's
+		answer to Henkin's question, and line 4 gives that refutable
+		sentences are those equivalent to their own consistency.
+\end{enumerate}
 \section{The First Theorem}
 Having shown soundness, we will now show the completeness theorem:
 \begin{thm}[Solovay's first completeness theorem]
-	For all modal sentences $\varphi$ we have that:
-	$$\forall ^* (\PRA\vdash \alpha^*)\Rightarrow \GL\vdash \alpha$$
+	For all modal sentences $\alpha$ we have that:
+	\[\forall ^* (\PRA\vdash \alpha^*)\Rightarrow \GL\vdash \alpha\]
 \end{thm}
 
 This theorem will be shown by contraposition. So we want to show the following:
@@ -91,17 +143,19 @@ find an interpretation $^*$ such that $\PRA\not\vdash\alpha^*$.
 
 The construction of this
 $^*$ is rather complex, and will take the rest of this subsection to prove. So for the
-rest of this subsection fix a sentence $\varphi$ such that $\GL\not\vdash \varphi$
-and let $\mathcal{K}=\la W,R,\phi,w_0\ra$ be a pointed Kripke model such that $w_0\in\phi(\alpha)$.
+rest of this subsection fix a modal formula $\alpha$ such that $\GL\not\vdash
+\alpha$
+and let $\mathcal{K}=\la W,R,\phi,w_0\ra$ be a pointed Kripke model such that
+$w_0\not\in\phi(\alpha)$.
 
-We will assume without loss of generality  that $W=\{0,\ldots, n\}$ for some finite $n$ and that $w_0=1$.
+We will assume without loss of generality  that $W=\{1,\ldots, n\}$ for some finite $n$ and that $w_0=1$.
 $R$ can be extended by setting $0Ri$ for each $i$ in $W$. Is shall be noted
 that $0$ is not part of our Kripke model, but we will in section
-ref{chap:second} create a model where it is a part of the model.
+\ref{chap:second} create a model where it is a part of the model.
 
 Further we will first intuitively define a function $\varphi:\omega\rightarrow\{0,\ldots, n\}$ in the
 following way: Set $\varphi(0)=0$. Further we define $\varphi(x+1)$ in the following way:
-If $x+1$ is the code of a proof that $\lim_{k\rightarrow\infty}(k)\not =z$ for
+If $x+1$ is the code of a proof that $\lim_{k\rightarrow\infty}\varphi(k)\not =z$ for
 some $z$ accessible to $\varphi(x)$ we set $\varphi(x+1)=z$ otherwise we have that
 $\varphi(x+1)=\varphi(x)$.
 
@@ -121,22 +175,24 @@ recursive function with the following $\Sigma_1$ graph: $\tau v_0v_1$. From
 this graph we can obtain the following $\Sigma_2$ formula:
 $$\exists v_0\forall v_1>v_0:\tau v_1v$$
 
-Which says that $\psi$ has limit $v$. We will abbreviate this as $L_\psi=v$. We will
+Which says that $\psi$ has limit $v$. We will abbreviate this as $L_\tau=L$. We will
 use this notation to define $\varphi$ in the following way:
-$$\varphi(v_0)=v_1\leftrightarrow\begin{cases}
-	(v_0=\0\wedge v_1=\0)\ \vee \\
-	(v_0>\0\wedge Prov(v_0,\Godelnum{L\not =\dot v_1})\wedge \varphi(v_0\dot -\ol 1)\ol
+\[\varphi(v_0)=v_1\leftrightarrow\Vast(	
+\begin{aligned}
+	&(v_0=\0\wedge v_1=\0)\ \vee \\
+	&(v_0>\0\wedge Prov(v_0,\Godelnum{L\not =\dot v_1})\wedge \varphi(v_0\dot -\ol 1)\ol
 	Rv_2)\ \vee\\
-	(v_0>\0\wedge \forall v_2\leq v_0\neg(Prov(v_0,\Godelnum{L\not
-	=v_2})\wedge\ol{ \varphi}(v_0\dot-\ol{1})\ol{R}v_2\ \wedge\\
-	v_1=\ol{\varphi}(v_0-\ol{1}))
+	&(v_0>\0\wedge \forall v_2\leq v_0\neg(Prov(v_0,\Godelnum{L\not
+	=v_2}))\wedge\ol{ \varphi}(v_0\dot-\ol{1})\ol{R}v_2\ \wedge\\
+	&v_1=\ol{\varphi}(v_0-\ol{1}))
 	\\
-	\end{cases}
-$$
-We will define the graph $\tau v_0v_1=\exists v_3\chi v_3v_0v_1$ of the partial
+\end{aligned}
+\Vast)
+\]
+We will define the graph $\tau v_0v_1=\exists v_3\zeta v_3v_0v_1$ of the partial
 recursive function $\varphi$. Since we have that the graph of $\varphi$ is
 $\Sigma_1$ we have that the graph $\tau$ is also $\Sigma_1$ and thus the graph
-$\chi$ is $\Delta_0$. We will define a formula $\Phi(\chi)$ as the
+$\zeta$ is $\Delta_0$. We will define a formula $\Xi(\zeta)$ as the
 disjunction of the following three formulas:
 \begin{enumerate}
 	\item $v_0=\0\wedge v_1=\0$
@@ -147,9 +203,9 @@ disjunction of the following three formulas:
 	\chi(v_3,v_0-\ol 1,v_4)\wedge v_4\ol Rv_1)\\
 	\wedge \tau(v_0-\ol 1,v_1)$
 \end{enumerate}
-Thus we have that the set $\Phi(\chi)$ can be seen as a primitive recursive
-function of $\Godelnum{\chi}$; i.e we have:
-\[\Godelnum{\Phi(\chi)}=\vartheta(\Godelnum{\chi})\]
+Thus we have that the set $\Xi(\zeta)$ can be seen as a primitive recursive
+function of $\Godelnum{\zeta}$; i.e we have:
+\[\Godelnum{\Xi(\zeta)}=\vartheta(\Godelnum{\zeta})\]
 
 Since primitive functions are recursive we have by the Recursion Theorem that
 we can pick an $n$ such that $\varphi_{\vartheta(n)}=\varphi_n$. Now set
@@ -160,7 +216,7 @@ by using the recursion theorem to not rely on the graph.
 We further define the relation $\ol R$ by listing all pairs $(x,y)\in R$ (We
 can do this since the set $R$ is finite) and
 then define:
-\[v_0 \ol Rv_1: \bigvee_{(x,y)\in R)}(v_0=\ol x\wedge v_1=\ol y) \]
+\[v_0 \ol Rv_1: \bigvee_{(x,y)\in R}(v_0=\ol x\wedge v_1=\ol y) \]
 Thus we have that $\varphi$ have the following properties:
 \begin{enumerate}
 	\item $\varphi(0)=0$
@@ -171,17 +227,17 @@ Thus we have that $\varphi$ have the following properties:
 Further it is a total function
 since it is defined by recursion, and this can be proven in \PRA.
 \begin{prop}
-	Let $\psi$ be the $\Sigma_1$-formula that defines the graph of
+	Let $\xi$ be the $\Sigma_1$-formula that defines the graph of
 	$\varphi$. Then:
-	\[\PRA\vdash\forall v_0\exists !v_1\psi v_0v_1\]
+	\[\PRA\vdash\forall v_0\exists !v_1\xi v_0v_1\]
 \end{prop}
 \begin{proof}
 	The uniqueness of $v_1$ is given by the definition of $\varphi$. The
 	existence of a value is given by induction on $v_0$ in the $\Sigma_1$ formula $\exists
-	v_1\psi v_0v_1$ in \PRA, and thus this induction is possible in \PRA. 
+	v_1\xi v_0v_1$ in \PRA, and thus this induction is possible in \PRA. 
 
-	\textbf{Base step:} When $v_0=0$ we have that $\psi(0)=0$ by
-	definition of $\varphi$; i.e $\exists v_1\psi v_0v_1$, where $v_1=0$.
+	\textbf{Base step:} When $v_0=0$ we have that $\xi(0)=0$ by
+	definition of $\varphi$; i.e $\exists v_1\xi v_0v_1$, where $v_1=0$.
 
 	\textbf{Induction step:} Assume that $\exists v_1\psi v_0v_1$ holds for
 	$v_0=n$, i.e we have a $v_1=m$ such that $\varphi(n)=m$. Look at
@@ -191,12 +247,12 @@ since it is defined by recursion, and this can be proven in \PRA.
 	the induction is done.
 \end{proof}
 Further we will expand the langauge with a new function constant (This can be
-done, since $\psi$ is the graph of a total function) $\ol \varphi$ with the following
+done, since $\xi$ is the graph of a total function) $\ol \varphi$ with the following
 defining axiom:
-$$\ol \varphi(v_0)=v_1\leftrightarrow\psi (v_0)=v_1$$
+$$\ol \varphi(v_0)=v_1\leftrightarrow\xi (v_0)=v_1$$
 
 We will now prove and state a few lemmas about the function $\varphi$ and the
-limit of this function $L\tau=L$. These will build up the proof of Solovay's
+limit of this function $L_\tau=L$. These will build up the proof of Solovay's
 First Completeness Theorem. Thus we will use the function $\varphi$ and the
 limit $L$ to deduce the theorem
 
@@ -235,7 +291,7 @@ limit $L$ to deduce the theorem
 			\varphi(v_0+v_1+1))$$
 			To prove this we will use induction on $v_1$. This is
 			an induction on a $\Pi_1$ formula; which is a possible
-			induction for \PRA\ by [Ref] 
+			induction for \PRA\ by Propostion \ref{prop:indu}
 
 			\textbf{Base case:} if $v_1=0$ then clearly we have that
 			$\varphi(v_0+1)=\ol x$ or $\ol x\ol R\ol
@@ -288,19 +344,26 @@ limit $L$ to deduce the theorem
 \end{enumerate}
 \end{proof}
 
-The induction in the above proof was not done inside of \PRA, both was done as
+The induction in the above proof was not done inside of \PRA, but was done as
 metamathematical induction outside of \PRA. This done because the formula
 $\exists v_1(L=v_1)$ is $\Sigma_2$ and thus we can not use induction on this
-formula inside of \PRA.
+formula inside of \PRA. 
 
 \begin{cor}
+	\label{cor:disjunct}
 	$\PRA\vdash L\leq \ol n$, i.e $\PRA\vdash \bigvee_{x\leq n} L=\ol x$
 \end{cor}
 \begin{proof}
-	By lemma \ref{lem:2} 1) and 3) and the following implication:
+	By lemma \ref{lem:2} part 1) and 3) and the following implication:
 	$$\PRA\vdash v \leq \ol n\rightarrow \bigvee_{x\leq n} v=\ol x$$
 	The corollary follows.
 \end{proof}
+\begin{remark}
+	In the rest of this section we will use the notation
+	$\text{Con}_{\PRA+F}$
+	where $F$ is a formula of \PRA. This notation is just shorthand for
+	"\PRA\ plus the formula $F$ is consistent".
+\end{remark}
 \begin{lem}
 	\label{lem:4}
 	For all $x,y\leq n$ we have that:
@@ -337,7 +400,8 @@ formula inside of \PRA.
 			follows.
 
 			\textbf{2)}
-		  By [ref???] We have the following deduction:
+			By demonstrable $\Sigma_1$ completeness \ref{thm:DemoSiga} 
+			we can do the following deduction:
 			\begin{align}
 				\PRA\vdash L=\ol x&\rightarrow \exists v_0(\ol
 				Fv_0=\ol x)\\
@@ -345,7 +409,7 @@ formula inside of \PRA.
 						  \exists v_0(\ol
 					  Fv_0=\ol x)})\label{eq:21}
 			\end{align} 
-			Further we have from lemma \ref{lem:2}.2 and [D2, lob?]  that:
+			Further we have from lemma \ref{lem:2}.2 and D2  that:
 			\begin{align}
 				\PRA&\vdash\forall v_0(\ol Fv_0=\ol
 				x\rightarrow(L=\ol x\vee \ol x\ol RL))\\
@@ -360,12 +424,13 @@ formula inside of \PRA.
 				\rightarrow\text{Pr}(\Godelnum{L=\ol x\vee \ol
 				x\ol RL})
 			\end{equation}
-			asd?
+			
 
-			Which gives us [Why?]
-			$$\PRA\vdash \ol x\not =\ol y\wedge \neg (\ol x\ol R\ol
+			The following statement is also clearly true by
+			demonstrable $\Sigma_1$ completeness:
+			\[\PRA\vdash \ol x\not =\ol y\wedge \neg (\ol x\ol R\ol
 			y)\rightarrow \text{Pr}(\Godelnum{\ol x\not =y\wedge
-			\neg (\ol x\ol R\ol y)})$$
+		\neg (\ol x\ol R\ol y)})\]
 			This with \ref{eq:23} gives us:
 			
 			$$
@@ -380,21 +445,21 @@ formula inside of \PRA.
 			=\ol y})$$
 			Which gives us 2)
 
-			\textbf{3)} From the least number princible we have
+			\textbf{3)} From the least number principle we have
 			that:
-			$$\PRA\vdash L=\ol x\wedge\ol x>\ol 0\rightarrow
-			\exists v(\ol F(v+\ol 1)=\ol x\wedge \ol Fv\not =\ol
-			x)$$
-			By the definition of $F$ we have for such a $v$ the
+			\[\PRA\vdash L=\ol x\wedge\ol x>\ol 0\rightarrow
+			\exists v(\ol \varphi(v+\ol 1)=\ol x\wedge \ol \varphi v\not =\ol
+			x)\]
+			By the definition of $\varphi$ we have for such a $v$ the
 			following:
-			$$\PRA\vdash \ol F(v+\ol 1)=\ol x\ol Fv\not =\ol
+			\[\PRA\vdash \ol \varphi(v+\ol 1)=\ol x\wedge\ol \varphi v\not =\ol
 			x\rightarrow \text{Prov}(v+\ol 1,\Godelnum{L\not =\ol
-			x})$$
+		x})\]
 			And thus we have the following:
 			$$\PRA\vdash L=\ol x\wedge \ol x> \ol 0\rightarrow
 			\text{Pr}(\Godelnum{L\not =\ol x})$$
 \end{proof}
-Lemma \ref{lem:2} and \ref{lem:4} gives us the moss of the  facts that we need
+Lemma \ref{lem:2} and \ref{lem:4} gives us a few of the  facts that we need
 about $L$ and $\varphi$; at least the facts about them that we can prove in $\PRA$.
 We will also need the following result, which cannot be proven in $\PRA$.
 \begin{lem}
@@ -467,7 +532,7 @@ The cases where  $\psi$ is $\neg\gamma,\gamma\wedge\sigma,\gamma\vee\sigma$ and
 $\gamma\rightarrow\sigma$ are trivial. So we will just look at the case where
 $\psi=\Box\gamma$. Here we make the following deductions:
 \begin{align*}
-	x\in\phi(\Box\theta)&\Rightarrow \forall
+	x\in\phi(\Box\gamma)&\Rightarrow \forall
 	y(xRy\Rightarrow y\in\phi(\gamma))\\
 			  &\Rightarrow \forall(xR\Rightarrow\PRA\vdash L=\ol
 			  y\rightarrow\gamma^*)\\
@@ -497,7 +562,7 @@ and therfore we have that:
 \end{equation}
 Now by \ref{eq:1} and \ref{eq:3} we get that:
 \begin{align*}
-	\vdash_x\Box\theta&\Rightarrow\PRA\vdash L=\ol x\rightarrow
+	\vdash_x\Box\gamma&\Rightarrow\PRA\vdash L=\ol x\rightarrow
 	\text{Pr(\Godelnum{\gamma^*})}\\
 			  &\Rightarrow\PRA\vdash L=\ol x\rightarrow
 			  (\Box\gamma)^*
@@ -526,11 +591,12 @@ $$\PRA\vdash L=\ol x\rightarrow\neg(\Box\gamma)^*$$
 We can now finally prove Solovay's first completeness theorem:
 \begin{proof}[Proof of Solovay's first completeness theorem]
 	By lemma \ref{lem:10} we have that
-	$$1\not\in\phi(\alpha)\Rightarrow\PRA\vdash L=\ol 1\rightarrow\neg\alpha^*$$
+	\[1\not\in\phi(\alpha)\Rightarrow\PRA\vdash L=\ol
+	1\rightarrow\neg\alpha^*\]
 	But by lemma \ref{lem:5} we have that $\PRA\ +L=1$ is consistent, from
-	which it follows that $\PRA+\neg\varphi^*$ is consistent; so $\varphi^*$
+	which it follows that $\PRA+\neg\alpha^*$ is consistent; so $\alpha^*$
 	is not a theorem af $\PRA$ and thus we have:
-	$\PRA\not\vdash\varphi^*$ and the theorem follows by contraposition.
+	$\PRA\not\vdash\alpha^*$ and the theorem follows by contraposition.
 \end{proof}
 
 With this proof we can give a interpretation of the set $W$ and relation $R$ in
@@ -546,16 +612,17 @@ Lastly we can give an uniform version of Solovay's first completeness theorem:
 	formula $\alpha$ we have that:
 	\[\PRA\vdash\alpha^*\ \text{iff}\ \vdash_\GL\alpha\]
 \end{thm}
+The proof of this will be left out.
 \section{The Second Theorem}
 \label{chap:second}
 Solovay's Second Completeness Theorem is a strengthening of the first one,
-since it tells about trueness of a formuae $\alpha^*$ in the standard model
+since it tells about trueness of a formulae $\alpha^*$ in the standard model
 $\mathcal{N}=\la
-\omega,+,\cdot\ra$ of aritmetics. The proof will follow that of the first
+\omega,+,\cdot\ra$ of arithmetic. The proof will follow that of the first
 theorem, but we will look at the modal logic \GLS\ instead of the modal logic
 \GL.
 \begin{thm}
-	For all modal sentences $\varphi$, the following is equivalent:
+	For all modal sentences $\alpha$, the following is equivalent:
 	\begin{enumerate}
 		\item $\textbf{GLS}\vdash\alpha$
 		\item $\GL\vdash\displaystyle\bigwedge_{\Box \beta\in
@@ -566,7 +633,12 @@ theorem, but we will look at the modal logic \GLS\ instead of the modal logic
 \end{thm}
 Some parts of this theorem has already been proven. We have
 $(1)\Leftrightarrow(2)\Leftrightarrow(3)$ by theorem \ref{thm:MainGLS}. The
-implication $(1)\Rightarrow(4)$ is clear, so we just have to prove
+implication $(1)\Rightarrow(4)$ is true since, if $\alpha$ is a theorem of \GL\
+it is also a theorem of \PRA, and thus it is true in $\mathcal{N}$. Further
+since every theorem of \PRA\ is true in $\mathcal{N}$, then for every formula $F$ of
+arithmetic, if $\text{Pr}(F)$ is true then $F$ is a theorem and thus is true.
+This means that for every interpretation $^*$ and modal formula $\alpha$ that
+$(\Box\alpha\rightarrow\alpha)^*$ is true. So we just have to prove
 $(4)\Rightarrow(3)$
 
 For proving $(4)\Rightarrow(3)$ we will again make use of contraposition. Let
@@ -578,7 +650,7 @@ $1\in\phi(\Box\beta\rightarrow\beta)$ for all $\beta\in S(\alpha)$
 
 We will set $0Rw$ for all $w\in W$. We will now create a new model
 $\mathcal{K'}$ where we have added $0$, so in this proof it is part of the
-Kripke model we will look at. We will create this new model in the
+pointed Kripke model we will look at. We will create this new model in the
 following way:
 \begin{align*}
 	&W'=\{0,1\ldots,n\}\\
@@ -588,16 +660,19 @@ following way:
 	&\phi'\ \text{extends}\ \phi\ \text{by putting}\ 0\in\phi'(p)\
 	\text{iff}\ 1\in\phi(p)\ \text{for all}\ p\in S(\varphi)
 \end{align*}
-We will abuse notation and let $R$ denote $R'$ and $\phi$ denote $\phi'$.
+We will abuse notation and let $R$ denote $R'$, $\phi$ denote $\phi'$ and
+$\vDash$ denote $\vDash^{\mathcal{K'}}$.
+The following lemma is a special case of Lemma \ref{lem:GLS}.
 \begin{lem}
 	For all $\beta\in S(\alpha)$ we have that:
-	$$0\in\phi(\beta)\ \text{iff}\ 1\in\phi(\beta) $$
+	\[\vDash_0\beta\ \text{iff}\ \vDash_1\beta \]
+	This is the same as:
+	\[0\in\phi(\beta)\ \text{iff}\ 1\in\phi(\beta)\]
 \end{lem}
-\begin{proof}
-	Kig på intro af GLS.
-\end{proof}
+We can see the modal $\mathcal{K}'$ as a derived model of $\mathcal{K}$, so it
+makes sense to invoke the lemma here.
 
-We will now define a function $varphi$ in the same way as before.
+We will now define a function $\varphi$ in the same way as before.
 \begin{align*}
 	\varphi(0)&=0\\
 	\varphi(x+1)&=\begin{cases}
@@ -626,7 +701,7 @@ to lemma \ref{lem:5}:
 	\end{enumerate}
 \end{lem}
 \begin{proof}
-	For $0<x$ the proof is identical to the proof of [ref?]. So we will
+	For $0<x$ the proof is identical to the proof of Lemma \ref{lem:10}. So we will
 	only prove the case where $x=0$. The is again an induction on the
 	complexity of $\beta$. We will only prove the cases where
 	$\beta=\Box\gamma$.
@@ -657,7 +732,7 @@ to lemma \ref{lem:5}:
 				  &=\PRA\vdash\text{Pr}(\Godelnum{\bigvee L=\ol
 				  x})\rightarrow\text{Pr}(\Godelnum{\gamma^*})
 	\end{align*}
-	But by corollary [<ref?] we have that $\PRA\vdash\bigvee L=\ol x$ and
+	But by Corollary \ref{cor:disjunct} we have that $\PRA\vdash\bigvee L=\ol x$ and
 	thus $\PRA\vdash\text{Pr}(\Godelnum{\bigvee L=\ol x})$ so all in all we
 	have:
 	\begin{align*}
@@ -679,19 +754,21 @@ to lemma \ref{lem:5}:
 				      &\Rightarrow\PRA\vdash L=\ol 0\rightarrow
 				      \neg \text{Pr}(\Godelnum{\gamma^*})
 	\end{align*}
-	And thus by Lemma [Ref?] we have that $\PRA\vdash L=\ol
+	And thus by Lemma \ref{lem:4} we have that $\PRA\vdash L=\ol
 	0\rightarrow\neg\text{Pr}(\Godelnum{L\not =\ol x})$ for $x>0$
 \end{proof}
 We thus have that $L=\ol 0$ is true, and we  can now finally prove the second completeness theorem:
 \begin{proof}[Proof of the Second Completeness theorem]
 	Assume that $\alpha$ is false in $\mathcal{K}$ i.e
-	$1\not\in\phi(\alpha)$. Then by lemma [asd] we get
+	$1\not\in\phi(\alpha)$. Then by the just proven lemma we get
 	$0\not\in\phi(\alpha)$
 	and the just proven lemma gives:
-	$$\PRA\vdash L=\ol 0\rightarrow\neg\alpha^*$$
+	\[\PRA\vdash L=\ol 0\rightarrow\neg\alpha^* \]
 	Since we have that $L=\ol 0$ is true we then get $\neg\alpha^*$ which
 	just means that $\alpha^*$ is false.
 \end{proof}
+Having proved the Second Completeness Theorem, we will in the next section look
+at a use of it.
 \subsection{Using the Second Completeness Theorem}
 We can use the second completeness theorem to prove the following theorem named
 after Rosser:
@@ -706,7 +783,6 @@ after Rosser:
 			})$
 	\end{enumerate}
 \end{thm}
-
 \begin{proof}
 	We define the following pointed Kripke model:
 	\[\mathcal{K}=\la \{1,2,3\},\{(1,2),(1,3)\},\{(1,p),(2,p)\},1\ra\]
@@ -737,20 +813,23 @@ We have that $\alpha$ is true in $\mathcal{K}$. Since we have that:
 		$2,3\in\phi(\Box\bot)$
 \end{enumerate}
 It can be shown that this model is $\alpha$-reflexive; the proof of this can be
-found in \parencite{Smor1985}
+found in \parencite{Smor1985}.
 \end{proof}
 This result can be strengthened and it can be shown that the found formula is
-actually $\Sigma_1$
+actually $\Sigma_1$. This result can also be found in \parencite{Smor1985}.
+This result shows that Solovay's second theorem is a tool we can use to prove
+some results about incompleteness of \PRA, in a way where we "just" construct a
+Kripke model of \GL\ with the correct properties.
 \section{Generalisations  of the Completeness Theorems}
 
 In this section we have shown the Solovay's Completeness Theorems for \PRA.
 But these theorems holds for a much wider class of fragments of Peano
 Arithmetics. It can be shown that the theorem holds for
-theories $T$ that fulfills the following to conditions:
+theories $\textbf{T}$ that fulfills the following to conditions:
 \begin{enumerate}
-	\item $T$ extends $I\Delta_0+\text{EXP}$
-	\item Let $\alpha(x)$ be $ \Delta_0$ formula, then $T$ does not prove any
-		false sentences of the form $\exists x\alpha(x)$
+	\item $\textbf{T}$ extends $I\Delta_0+\text{EXP}$
+	\item Let $F(x)$ be $ \Delta_0$ formula, then $\textbf{T}$ does not prove any
+		false sentences of the form $\exists x F(x)$
 \end{enumerate}
 
 This proof does not use the Recursion theorem for creating the function
@@ -758,9 +837,10 @@ $\varphi$, but instead uses the diagonalization lemma. The
 proof of this will not this will not be given here, but it can be found in
 \parencite{Dick1991}. This generalization shows that \GL\ axiomatize a very big
 range of different fragments of arithetmics; i.e the proof predicate in all of
-these fragments behaves in the same way.
+these fragments behaves in the same way, as we have that the proof predicate of
+\PRA do.
 
-It is not known if Solovays theorems holds for weaker conditions than
+It is not known if Solovay's theorems holds for weaker conditions than
 $I\Delta_0+\text{EXP}$; i.e we do not know if it holds for example for the theory
 $I\Delta_0+\Omega_1$.
 
@@ -777,55 +857,6 @@ the fragments Solovays theorems holds for.
 
 
 
-\section{Solovays Completeness Theorems and Fixed Points}
-
-From table \ref{Fig} and the arithmetical soundness theorem, we can conclude the following things:
-\begin{enumerate}
-	\item From line 3, we have that
-		$\vdash_\GL\sBox(p\leftrightarrow\Box\neg
-		p)\leftrightarrow\sBox(p\leftrightarrow\Box\bot)$; i.e a
-		sentence $F$ of \PRA\ is equivalent to its own unprovability if and only
-		if $F$ is equivalent to the assertion that \PRA is
-		inconsistent.
-		For let $^*$ be such that $F=p^*$, then we if $F$ is such that
-		$\PRA\vdash F\leftrightarrow\text{Pr}(\Godelnum{\neg F})$ which
-		is the same as $\PRA\vdash(p\leftrightarrow\Box\neg p)^*$ and
-		thus we have: $\PRA\vdash\Box(p\leftrightarrow\Box\neg p)^*$
-		and hence $\PRA\vdash\sBox(p\leftrightarrow\Box\neg p)^*$. But
-		by the soundness theorem we get that:
-		$\PRA\vdash(\sBox(p\leftrightarrow\Box\neg
-		p)\leftrightarrow\sBox(p\leftrightarrow\Box\bot))^*$, and thus
-		$\PRA\vdash\sBox(p\leftrightarrow\Box\bot)^*$ whence
-		$\PRA\vdash(p\leftrightarrow\Box\bot)^*$ and thus $\PRA\vdash
-		F\leftrightarrow\text{Pr}(\Godelnum{\bot})$. Which shows that
-		$F$ is equivalent to the inconsistency of \PRA.
-	\item We can from line 1 and 6 infer that a sentence of \PRA\ is
-		equivalent to its own unprovability if and only if it is
-		equivalent to the assertion that \PRA\ is consistent and that a
-		sentence of \PRA\ that is equivalent to the assertion that it
-		is unprovable if it is provable if and only if it is equivalent
-		to the assertion that if the inconsistency of \PRA\ is provable
-		then \PRA\ is provable.
-	\item From line 10 we can conclude that for arbitrary sentence $F$ and
-		$G$ of \PRA\ that: $F$ is equivalent to the conduction of $F$ is
-		provable and $G$ is true if and only if $F$ is equivalent to
-		the conduction of $G$ is provable and true. Here we take $^*$
-		such that $p^*=F$ and $q^*=G$.
-	\item From line 6 again we can conclude that a fixed point may have a
-		bigger modal degree, than formula of which it is a fixed
-		point: the formula $\Box p\rightarrow\Box\neg p$ has modal degree $1$
-		and the formula $\Box\Box\bot\rightarrow\Box\bot$ has degree
-		$2$. We can conclude the same for line 7, where the fixed point
-		has modal degree $3$ and the formula it is a fixed point for
-		has degree $2$.
-	\item The modal formula $\alpha$ has at most the same modal degree as
-		the modal formula $\sigma$.
-	\item We can further see that line 1 gives that sentences of arithmetic
-		that express their own unprovability are equivalent to the
-		assertion arithmetic is consistent. Line 2 is the same as Löb's
-		answer to Henkin's question, and line 4 gives that refutable
-		sentences are those equivalent to their own consistency.
-\end{enumerate}
 
 \section{Concluding remarks: Implications of Solovay's Theorems}
 
@@ -844,7 +875,7 @@ Further the proportional provability logic is not effected by Quines critique of
 modal logic as being unintelligible, since it has a very clear and unambiguous
 arithmetic interpretation. This sets it apart from the more philosophical
 interpretations of modal logic, since these interpretations do not have a clear
-meaning.
+meaning in a mathematical system.
 
 Lastly the theorems also show that modal logic can be interesting for
 mathematicians that are not interested in the philosophical part of logic. The

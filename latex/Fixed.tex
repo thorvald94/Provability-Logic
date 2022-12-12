@@ -326,34 +326,6 @@ such a $\sigma$ and thus the name fixed point is appropriate.
 	$\vdash_\GL\sBox(p\leftrightarrow\alpha)\rightarrow(p\leftrightarrow
 	\sigma)$
 \end{proof}
-We can use the algorithm from this prove to find some fixed points of given
-formulae.
-
-\begin{exmp}
-	Let $\alpha(p)=\Box \neg p$. We will calculate the fixed point for
-	$\alpha$. Let $\gamma_1 (p)=p$ and $\beta(q_1)=q_1$. We then have that
-	$\alpha(p)=\beta(\Box\gamma_1(p))$ and $\alpha_1(p)=\beta(\top)=\top$.
-	The fixed point of $\sigma_1$ of $\alpha_1$ is then $\top$, since $p$
-	does not occur in $\alpha_1$. We can thus conclude that the fixed point
-	$\sigma$ of $\alpha$ is the following:
-	\[\beta(\Box\gamma_1(\top))=\beta(\Box\neg\top)=\Box\neg\top\]
-	this formula is equivalent to $\Box\bot$.
-\end{exmp}
-\begin{exmp}
-	Let $\alpha(p)=\Box p\rightarrow\Box\neg p$. To find the fixed point,
-	let$\gamma_1(p)=p$,$\gamma_2(p)=\neg p$ and
-	$\beta(q_1,q_2)=q_1\rightarrow q_2$. Then clearly we have:
-	\[\alpha(p)=\beta(\Box\gamma_1(p),\Box\gamma_2(p))\]
-	\[\alpha_1(p)=\beta(\top,\Box\gamma_2(p))=\top\rightarrow\Box\neg p\]
-	and 
-	\[\alpha_2(p)=\beta(\Box\gamma_1(p),\top)=\Box p\rightarrow \top\]
-	It is clear that $\alpha_1$ is equivalent to $\Box\neg p$ and that
-	$\alpha_2$ is equivalent top $\top$; thus they have fixed points
-	$\sigma_1=\Box\bot$ and $\sigma_2=\top$. So the fixed point $\sigma$
-	of $\alpha$ is the following:
-	\[\beta(\Box\gamma_1(\Box\bot),\Box\gamma_2(\top))=\Box\Box\bot\rightarrow\Box\neg\top\]
-	or equivalent: $\Box\Box\bot\rightarrow\Box\bot$.
-\end{exmp}
 
 The following result follows from the fixed-point theorem.
 \begin{thm}\label{thm:exi}
@@ -471,41 +443,12 @@ Below are a few example of how we can use this algorithm.
 	\[\beta(\Box\gamma_1(\Box\bot),\Box\gamma_2(\top))=\Box\Box\bot\rightarrow\Box\neg\top\]
 	or equivalent: $\Box\Box\bot\rightarrow\Box\bot$.
 \end{exmp}
-In figure \ref{Fig} we can see some more fixed points. 
-formula on the left is the formula $\alpha(p)$ and the formula on the right is
-the formula $\sigma$. Line (3) and (6) has already been shown.
-\begin{align*}
-	1. &\ \neg\Box p & \neg\Box\bot\\
-	2. &\ \Box p & \top\\
-	3. &\ \Box\neg p & \Box\bot\\
-	4. &\ \neg\Box\neg p & \neg\Box\bot\\
-	5. &\ \neg\Box\Box\neg p & \neg\Box\Box\bot\\
-	6. &\ \Box p \rightarrow\Box\neg p & \Box\Box\bot\rightarrow\Box\bot\\
-	7. &\ \Box (\neg
-	p\rightarrow\Box\bot)\rightarrow\Box(p\rightarrow\Box\bot) &
-	\Box\Box\Box\bot\rightarrow\Box\Box\bot\\
-	8. &\ \Box p\rightarrow q & \Box q\rightarrow q\\
-	9. &\ \Box(p\rightarrow q) & \Box q\\
-	10. &\ \Box p\wedge q & \Box q\wedge q\\
-	11. &\ \Box(p\wedge q) & \Box q\wedge q\\
-	12. &\ q\vee \Box p & \top\\	
-	13. &\ \neg\Box(q\rightarrow p) & \Diamond q\\
-	14. &\ \Box(p\rightarrow q)\rightarrow\Box\neg p &
-	\Box(\Box\bot\rightarrow q)\rightarrow\Box\bot\\
-	15. &\ q\wedge(\Box(p\rightarrow q)\rightarrow\Box\neg p) &
-	q\wedge\Box\neg q\\
-	16. &\ \Diamond p\rightarrow(q\wedge\neg\Box(p\rightarrow q)) &
-	\Diamond\top \rightarrow (q\wedge\neg\Box(\Box\bot\rightarrow q))\\
-	17. &\ \Box(\Box(p\wedge q)\wedge\Box(p\wedge r)) & \Box(\Box q \wedge
-	\Box r)\\
-	18. &\ \Box p\vee p & \top
-\end{align*}
-\begingroup\vspace*{-\baselineskip}
-\captionof{figure}{A Table of Fixed Points}
-\label{Fig}
-\vspace*{\baselineskip}\endgroup
+\subsection{Calculation of a Non-Modalized Fixed Point}
+We will now show that $\Box p\vee p$ has the fixed point from the table. It is
+clear that this formula is not modalized in $p$, but it can still be shown to
+have a fixed point.
 
-We will now show that $\Box p\vee p$ has the fixed point from the table. For
+For
 this end we will need the following theorem:
 We will start of by showing that no $\beta$ modalized in $p$ is equivalent to
 $\Box p\vee p$. This will the following two propositions show:
@@ -557,6 +500,41 @@ show that it has a fixed point any way:
 		  &\rightarrow (p\leftrightarrow \top)
 	\end{align*}
 \end{proof}
-We will after the proof of Solovay's Completeness Theorems come back to this
+In figure \ref{Fig} we can see some more fixed points. 
+formula on the left is the formula $\alpha(p)$ and the formula on the right is
+the formula $\sigma$. Line (3) and (6) has already been shown.
+\newpage
+\begin{align*}
+	1. &\ \neg\Box p & \neg\Box\bot\\
+	2. &\ \Box p & \top\\
+	3. &\ \Box\neg p & \Box\bot\\
+	4. &\ \neg\Box\neg p & \neg\Box\bot\\
+	5. &\ \neg\Box\Box\neg p & \neg\Box\Box\bot\\
+	6. &\ \Box p \rightarrow\Box\neg p & \Box\Box\bot\rightarrow\Box\bot\\
+	7. &\ \Box (\neg
+	p\rightarrow\Box\bot)\rightarrow\Box(p\rightarrow\Box\bot) &
+	\Box\Box\Box\bot\rightarrow\Box\Box\bot\\
+	8. &\ \Box p\rightarrow q & \Box q\rightarrow q\\
+	9. &\ \Box(p\rightarrow q) & \Box q\\
+	10. &\ \Box p\wedge q & \Box q\wedge q\\
+	11. &\ \Box(p\wedge q) & \Box q\wedge q\\
+	12. &\ q\vee \Box p & \top\\	
+	13. &\ \neg\Box(q\rightarrow p) & \Diamond q\\
+	14. &\ \Box(p\rightarrow q)\rightarrow\Box\neg p &
+	\Box(\Box\bot\rightarrow q)\rightarrow\Box\bot\\
+	15. &\ q\wedge(\Box(p\rightarrow q)\rightarrow\Box\neg p) &
+	q\wedge\Box\neg q\\
+	16. &\ \Diamond p\rightarrow(q\wedge\neg\Box(p\rightarrow q)) &
+	\Diamond\top \rightarrow (q\wedge\neg\Box(\Box\bot\rightarrow q))\\
+	17. &\ \Box(\Box(p\wedge q)\wedge\Box(p\wedge r)) & \Box(\Box q \wedge
+	\Box r)\\
+	18. &\ \Box p\vee p & \top
+\end{align*}
+\begingroup\vspace*{-\baselineskip}
+\captionof{figure}{A Table of Fixed Points}
+\label{Fig}
+\vspace*{\baselineskip}\endgroup
+
+We will after the proof of the soundness part of  Solovay's Completeness Theorems come back to this
 table, and make some conclusions about the fixed points.
 \end{document}

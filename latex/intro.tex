@@ -24,7 +24,7 @@ The project has the following structure:
 	\item[\textbf{Chapter 4:}] We will start out by strengthening the completeness
 		theorem for \GL, with the finite tree completeness theorem.
 		Further, we will look at an expansion of \GL\ known as \GLS,
-		which we will later use  for proving and state nine Solovay's second completeness
+		which we will later use  for proving and state Solovay's second completeness
 		theorem.
 	\item[\textbf{Chapter 5:}] The main goal of this chapter is to state and prove
 		the fixed point theorem. We will also use it to calculate a few fixed
@@ -106,9 +106,21 @@ interpretations $^*$ we have that $\alpha^*$ is a theorem of \PRA.
 
 \section{Historical Introduction}
 Humans have been interested in numbers and calculation with these since before
-the beginning of history; i.e arithmetics. 
+the beginning of history; i.e arithmetic. Another thing that have interested
+human since antiquity is the notions of necessity and possibility, which can be
+studied through modal logic. These two
+concepts do not have much in common, but through the development of Kripke
+semantics for modal logic, it became clear that it was possible to make a
+connection between these two seemingly different areas of mathematics.
 
 \subsection{Modal Logic}
+
+For most of the development of modal logic, philosophers and logicians tried to
+find a clear semantic for the notions possibility and necessity. These are not
+the only modalities that exists; the one we will look at in this project will
+be provability in a given arithmetical system. But the theory of modal logic
+will be a useful framework to work with.
+
 The Greek philosopher Aristotle did try to develop some kind of modal logic
 about necessary and possibility in both his logical work \textit{De
 Interpretatione} and in his
@@ -146,7 +158,10 @@ even though philosophers and logicians still had the intuitive definition of
 necessary true from Leibniz. The answer came in the late 1950s, when the
 philosophers and logicians Jaako Hintikka
 and Saul Kripke developed the concept of a Kripke model.\footnote{They were not
-	alone in this development. But for simplicity sake \textbf{ja}}
+	alone in this development.} This concept is crucial in this project,
+since it Robert Solovay showed that it was possible to embed Kripke models into
+arithmetic, in such a way that the Kripke model modeled some important features
+of arithmetic.
 Hintikka came up with the idea of a frame; i.e a pair $\la W,R\ra$ where $W$ is
 a set of worlds and $R$ is an arbitrary relation on these. With this
 construction it was possible to explain for a given world, what other worlds
@@ -155,6 +170,7 @@ idea, but added a valuation function to the frame, which to each formula of the
 language ascribed a set of worlds in which it was true.  This construction made
 it possible for Kripke to prove some completeness results about modal logics.
 
+
 When the concept of the Kripke model became wider known, it started a
 \textit{Golden} age of research in modal logic. A lot of completeness results
 about different modal logic was proven in the 1960s and early 1970s; including
@@ -162,10 +178,25 @@ the weak completeness theorem for the logic that would later be known as
 provability logic; this was done by Krister Segerberg without him having
 knowledge of what the interpretation of this logic could be.
 
+In this short period of time, modal logic became a rigorous part of
+philosophical logic, but it had not been used in mathematical logic yet. This
+changed in the 1970s when the subfield known as provability logic was created.
+Here modal logic was used to gain more mathematical knowledge, by showing that
+it could axiomatize the notion of provability in the arithmetical theory known
+as Peano Arithmetic. So even though modal logic in its early development was
+mostly used to help philosophers to gain knowledge about philosophical concepts
+like ethics, knowledge and metaphysics, the power of modal logic was also
+useful outside of philosophy.
+
 A deeper look into the development of modal logic can be found in
 \parencite{Goldblatt2003}.
 \subsection{Arithmetics and Recursion Theory}
-
+A natural question to ask about a given mathematical theory is which properties
+the notion of provability in the theory have. In this project it will be shown
+that provability in different arithmetical theories  can be seen as a modality,
+which we can modeled in a specific
+modal logic. But first we will introduce how it became clear how this was a
+possibility.
 
 Even though humans have been using arithmetics for millennials, it had not been
 axiomatized.
@@ -192,7 +223,7 @@ that such a system fulfills the finitist conditions of the Hilbert program.
 This system will be the main system of this project and the definition of it
 will come in the next chapter.
 
-Another (mostly historically) important mathematical system of arithmetics was
+Another  important mathematical system of arithmetics was
 the one developed by Bertrand Russell and Alfred North Whitehead in their work:
 \textit{Principia Mathematica}. The goal of this work was somewhat different
 than the one of the Hilbert program. Russell had a thesis that shortly (and not
@@ -204,7 +235,9 @@ Principia Mathematica und verwandter Systeme I} it was shown  that the system of
 Russell and Whitehead was not complete, and under the assumption that the
 system was consistent that it could not prove its own consistency.
 This result can be generalized to systems strong enough to do simple
-arithmetic.
+arithmetic. This was made possible by Gödel by defining a predicate inside of
+the mathematical system, which could state that if a given formula of the
+language of had a proof or not.
 The
 original proof was build on the system of Russel and Whitehead and had a
 assumption of $\omega$-consistency. This
@@ -212,6 +245,8 @@ was a blow to the Hilbert program, since the result showed that the goal of it
 could not be fulfilled. Later on John Barkley Rosser in his article
 \parencite{Ross1936} improved the
 result so that it  consistency was enough.
+
+
 
 Later on in the 1930s Gödel extended the primitive recursive function to the  recursive
 functions. A few different definitions of intuitively computable functions was
@@ -222,15 +257,22 @@ class of functions.
 This lead Church to state the so called \textit{Church-Turing Thesis}, that
 states that this class of functions are the computable functions.
 
+In 1955 Martin Löb showed that the proof predicate that Gödel had created
+fulfilled some simple conditions that now is known as Löb's derivability
+conditions. In the late 1960s and early 1970s it became clear that these
+conditions made an interpretation of the proof predicate possible in modal
+logic.
+
 
 \subsection{Provability Logic}
 The first time that someone made a connection between modal logic and the proof
-predicate of some form of arithmetic, was in 1933 when Kurt Gödel published his very short  paper: \textit{Eine
+predicate of some form of arithmetic, was in 1933 when Kurt Gödel published his very short  paper:
+\textit{Eine
 Interpretation des intuitionistischen Aussagenkalkuls}. Here Gödel
 stated a hypothesis that it was possible to axiomatize the what the
 intuitionist meant by a proof in a version of modal logic.
 
-After Löb's derivability conditions was found and after the develpment of the
+After Löb's derivability conditions was found and after the development of the
 semantics of modal in the 1960s, it became clear that there was a connection
 between the logic that Segerberg had proven to be weakly complete and the proof
 predicate from arithmetics.
@@ -248,12 +290,12 @@ development can be found in \parencite{Bool1991}.
 
 It was proven in 1976 by Solovay that the modal
 logic now known as provability logic, is the logic of the provability predicate
-in Peano Arithemics; i.e if for all interpretations
+in Peano Arithemic; i.e if for all interpretations
 of a formula $\alpha$, if this interpretation was a theorem of Peano
 arithmetics,
 then the formula $\alpha$ was a theorem of provability logic. This also means that
 provability logic can be seen as an axiomataxion of the proof predicate.
-Solovays result will be the main result in this project; it will be stated
+Solovay's result will be the main result in this project; it will be stated
 precisely and proven in Chapter \ref{chap:Complete}.
 
 After Solovay's article was published, the research focus of provability logic

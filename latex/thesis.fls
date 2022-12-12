@@ -307,6 +307,8 @@ INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries
 INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex
 INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
 INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/latex/showlabels/showlabels.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/showlabels/showlabels.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/capt-of/capt-of.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/capt-of/capt-of.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/scalerel/scalerel.sty
@@ -406,6 +408,7 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
+INPUT /home/thorvald/.texlive2019/texmf-var/luatex-cache/generic-dev/fonts/otl/lmmono10-regular.luc
 INPUT ./intro.tex
 INPUT ./intro.tex
 INPUT /home/thorvald/.texlive2019/texmf-var/luatex-cache/generic-dev/fonts/otl/lmroman8-bold.luc
@@ -430,9 +433,9 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr7.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr5.tfm
+INPUT ./Pre.tex
+INPUT ./Pre.tex
 INPUT /home/thorvald/.texlive2019/texmf-var/luatex-cache/generic-dev/fonts/otl/lmroman10-bold.luc
-INPUT ./Pre.tex
-INPUT ./Pre.tex
 INPUT ./Recur.tex
 INPUT ./Recur.tex
 INPUT ./Turnig.png
