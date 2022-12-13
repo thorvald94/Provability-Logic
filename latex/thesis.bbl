@@ -304,6 +304,38 @@
       \field{year}{2007}
       \true{nocite}
     \endentry
+    \entry{Boolos1993}{book}{}
+      \name{author}{1}{}{%
+        {{un=2,uniquepart=given,hash=ad4890bbbf6b4bde8eeb2a07ed59ed21}{%
+           family={Boolos},
+           familyi={B\bibinitperiod},
+           given={George\bibnamedelima S.},
+           giveni={G\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=2}}%
+      }
+      \list{location}{1}{%
+        {Cambridge}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{ad4890bbbf6b4bde8eeb2a07ed59ed21}
+      \strng{fullhash}{ad4890bbbf6b4bde8eeb2a07ed59ed21}
+      \strng{bibnamehash}{ad4890bbbf6b4bde8eeb2a07ed59ed21}
+      \strng{authorbibnamehash}{ad4890bbbf6b4bde8eeb2a07ed59ed21}
+      \strng{authornamehash}{ad4890bbbf6b4bde8eeb2a07ed59ed21}
+      \strng{authorfullhash}{ad4890bbbf6b4bde8eeb2a07ed59ed21}
+      \field{extraname}{1}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{The logic of provability /}
+      \field{title}{The logic of provability}
+      \field{year}{1993}
+    \endentry
     \entry{Boolos2007}{book}{}
       \name{author}{3}{}{%
         {{un=2,uniquepart=given,hash=ad4890bbbf6b4bde8eeb2a07ed59ed21}{%
@@ -411,7 +443,7 @@
       \strng{authorbibnamehash}{ad4890bbbf6b4bde8eeb2a07ed59ed21}
       \strng{authornamehash}{ad4890bbbf6b4bde8eeb2a07ed59ed21}
       \strng{authorfullhash}{ad4890bbbf6b4bde8eeb2a07ed59ed21}
-      \field{extraname}{1}
+      \field{extraname}{2}
       \field{sortinit}{B}
       \field{sortinithash}{8de16967003c7207dae369d874f1456e}
       \field{extradatescope}{labelyear}
@@ -420,38 +452,6 @@
       \field{labeltitlesource}{title}
       \field{title}{The unprovability of consistency : an essay in modal logic.}
       \field{year}{1979}
-    \endentry
-    \entry{Boolos1993}{book}{}
-      \name{author}{1}{}{%
-        {{un=2,uniquepart=given,hash=ad4890bbbf6b4bde8eeb2a07ed59ed21}{%
-           family={Boolos},
-           familyi={B\bibinitperiod},
-           given={George.\bibnamedelimi S.},
-           giveni={G\bibinitperiod\bibinitdelim S\bibinitperiod},
-           givenun=2}}%
-      }
-      \list{location}{1}{%
-        {Cambridge}%
-      }
-      \list{publisher}{1}{%
-        {Cambridge University Press}%
-      }
-      \strng{namehash}{ad4890bbbf6b4bde8eeb2a07ed59ed21}
-      \strng{fullhash}{ad4890bbbf6b4bde8eeb2a07ed59ed21}
-      \strng{bibnamehash}{ad4890bbbf6b4bde8eeb2a07ed59ed21}
-      \strng{authorbibnamehash}{ad4890bbbf6b4bde8eeb2a07ed59ed21}
-      \strng{authornamehash}{ad4890bbbf6b4bde8eeb2a07ed59ed21}
-      \strng{authorfullhash}{ad4890bbbf6b4bde8eeb2a07ed59ed21}
-      \field{extraname}{2}
-      \field{sortinit}{B}
-      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{The logic of provability /}
-      \field{title}{The logic of provability}
-      \field{year}{1993}
     \endentry
     \entry{ProofHandbook}{book}{}
       \name{editor}{1}{}{%
@@ -1581,7 +1581,9 @@
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{year}
       \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
       \field{journaltitle}{Journal of Symbolic Logic}
+      \field{title}{Solution of a Problem of Leon Henkin}
       \field{volume}{20}
       \field{year}{1955}
       \true{nocite}

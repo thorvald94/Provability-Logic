@@ -3,10 +3,12 @@
 \begin{document}
 This project is about the subject provability logic from mathematical logic,
 and the main result will be Solovay's completeness theorems. These theorems
-state that the $\Box$-operator in  modal logic \GL\  axiomatizes the proof
+state that the $\Box$-operator in the  modal logic \GL\  axiomatizes the proof
 predicate $\text{Pr}(\cdot)$ from a wide range of fragments of arithmetics, and
 that the modal logic \GLS\ axiomatizes the proof predicate of true arithmetics.
-TO prove these theorems we will need some results from recursion theory and
+We will proof the first completeness theorem for the arithmetical theory known
+as primitive recursive arithmetic.
+To prove these theorems we will need some results from recursion theory and
 general knowledge about fragments of arithmetics and the modal logics \GL\ and
 \GLS. We will further prove the fixed point theorem for \GL.
 The project has the following structure: 
@@ -42,7 +44,8 @@ conventions and give a short historical overview of the different logical
 fields, that will play a role in the project.
 
 The bibliography of this project consists of a wide range of logical,
-mathematical and philosophical texts that are, in one way or another, connected to or referenced in the project.. The main sources for this project
+mathematical and philosophical texts that are, in one way or another, connected to or referenced in the project. 
+The main sources for this project
 are \parencite{Smor1985}, \parencite{Boolos1993} and \parencite{Soare1987}. A
 few minor sources are also used through the project, and they will be stated
 explicitly when used.
@@ -126,7 +129,7 @@ about necessary and possibility in both his logical work \textit{De
 Interpretatione} and in his
  \textit{Metaphysic}.
 
-With our modern eyes his thoughts about nessaration and possibility seems a
+With our modern eyes his thoughts about necessity  and possibility seems a
 bit confusing. But he gets some implications about these notions right. A good
 overview of this part of his logical work can be found in \parencite{Lemmon1977} and
 in \parencite{Luka1957}.
@@ -148,14 +151,14 @@ implication. This led to his development of a wide range of different modal
 logical system in the first part of the 20th century. His method was
 syntactical, since there were yet to be develop a "smart" semantic for modal
 logic. But in the start of the 20th century, C. I. Lewis had started the modern
-modal logic, and a lot of other philosophers and logicians began to have an
+modal logic, and a lot of other philosophers and logicians began to take an
 interest in the subject.
 
 
 In the 1950s there had been a lot of research into the syntax of modal logic.
 But there was still not a clear definition of the semantics of modal logic,
 even though philosophers and logicians still had the intuitive definition of
-necessary true from Leibniz. The answer came in the late 1950s, when the
+necessary truth from Leibniz. The answer came in the late 1950s, when the
 philosophers and logicians Jaako Hintikka
 and Saul Kripke developed the concept of a Kripke model.\footnote{They were not
 	alone in this development.} This concept is crucial in this project,
@@ -172,8 +175,8 @@ it possible for Kripke to prove some completeness results about modal logics.
 
 
 When the concept of the Kripke model became wider known, it started a
-\textit{Golden} age of research in modal logic. A lot of completeness results
-about different modal logic was proven in the 1960s and early 1970s; including
+\textit{Golden age} of research in modal logic. A lot of completeness results
+about different modal logics was proven in the 1960s and early 1970s; including
 the weak completeness theorem for the logic that would later be known as
 provability logic; this was done by Krister Segerberg without him having
 knowledge of what the interpretation of this logic could be.
@@ -208,7 +211,7 @@ arithmetics.
 
 Another important achievement at the turn of the century, was David Hilbert's
 proof that the consistency of Euclidean geometry could be proven by proving
-that arithmetics was consistent. \textbf{Hans geometri værk} This was one of the first steps in what later
+that arithmetics was consistent in his work  \textit{Grundlagen der Geometrie} This was one of the first steps in what later
 would be known as the Hilbert program. 
 The Hilbert program was not really a program until the end of 1920, where it
 became clear that its goal was to prove that the \textit{ideal} transfinite mathematics was
@@ -244,7 +247,7 @@ assumption of $\omega$-consistency. This
 was a blow to the Hilbert program, since the result showed that the goal of it
 could not be fulfilled. Later on John Barkley Rosser in his article
 \parencite{Ross1936} improved the
-result so that it  consistency was enough.
+result so that normal  consistency was enough.
 
 
 
@@ -268,8 +271,8 @@ logic.
 The first time that someone made a connection between modal logic and the proof
 predicate of some form of arithmetic, was in 1933 when Kurt Gödel published his very short  paper:
 \textit{Eine
-Interpretation des intuitionistischen Aussagenkalkuls}. Here Gödel
-stated a hypothesis that it was possible to axiomatize the what the
+Interpretation des intuitionistischen Aussagenkalkuls}. Here, Gödel
+stated as a  hypothesis that it was possible to axiomatize what the
 intuitionist meant by a proof in a version of modal logic.
 
 After Löb's derivability conditions was found and after the development of the
@@ -277,10 +280,10 @@ semantics of modal in the 1960s, it became clear that there was a connection
 between the logic that Segerberg had proven to be weakly complete and the proof
 predicate from arithmetics.
 
-This lead to research done in different places around the from, from The
+This lead to research done in different places around the world, from The
 Netherlands, Italy and the United States. It was clear early on that if
 $\alpha$ was a theorem of provability logic, then for all interpretations of
-$\alpha$ in a fragment of arithmetics was also a theorem of this fragment; but
+$\alpha$ in a fragment of arithmetics it  was also a theorem of this fragment; but
 the other way was harder to show. In the same time there was proven a number of
 important theorems about provability; one of these, called the Fixed Point
 Theorem,  will be proven in chapter
