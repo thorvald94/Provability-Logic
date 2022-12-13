@@ -22,9 +22,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.1.3}The modal logic \text {\textbf {GL}}}{12}{subsection.1.1.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.2}Gödels Incompleteness Theorems}{14}{section.1.2}%
+\contentsline {section}{\numberline {1.2}Gödel's Incompleteness Theorems}{14}{section.1.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2.1}Primitive Recursive Functions}{14}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.1}Primitive Recursive Functions}{15}{subsection.1.2.1}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.2.2}\text {\textbf {PRA}}}{16}{subsection.1.2.2}%
 \defcounter {refsection}{0}\relax 
