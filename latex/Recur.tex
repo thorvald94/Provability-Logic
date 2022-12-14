@@ -36,7 +36,7 @@ in the class of primitive recursive functions:
 This function grows too fast to be a primitive recursive function, i.e
 we have for all primitive recursive functions $f(x)$ that for some $y$ that
 $Ack(x,y)>f(x)$ for all $x\in \omega$. 
-proof of this fact can be found in \textbf{Find ref}.
+proof of this fact can be found in \parencite{Kleene1952}
 
 So we will need to expand our class of functions, if we want to
 \textit{capture} all intuitively computable functions. 
@@ -59,7 +59,8 @@ We will expand them in the following way:
 				Then $\psi$ is a partial recursive function of
 				$n$ variables.
 		\end{enumerate}
-		A partial recursive function that is total is called a total
+		A partial recursive function that is total (define on all of
+		$\omega$) is called a total
 		recursive function; abbreviated to recursive function.
 \end{defi}
 
@@ -102,10 +103,10 @@ The situation can be seen in the following figure:
 \begin{center}
 	\begin{figure}[h]
 \includegraphics[width=\textwidth]{Turnig.png}
-\caption{A Turing Machine}
+\caption[asd]{A Turing Machine\footnotemark}
 \end{figure}
 \end{center}
-
+\footnotetext{This picture is taken from \parencite{Soare1987}}
 The way to understand this definition is the following: if
 $(q,s,q',s',X)\in\delta$, it means that the machine $M$ is in stage $q$ where it
 scans symbol $s$ then changes to state $q'$ and replaces $s$ by $s'$. Lastly it
@@ -209,9 +210,10 @@ very tedious.
 	primitive recursive such that:
 	\[\varphi_e(x)=U(\mu yT(e,x,y))\]
 \end{thm}
+The proof will not be fully rigorous.
 \begin{proof}
-	We show that the predicate $T(e,x,y)$ exists and is primitive
-	recursive. This predicate informally
+	It can be  shown that the predicate $T(e,x,y)$ exists and is primitive
+	recursive, we will only do a bit of this work. This predicate informally
 	states that $y$ is the code of Turing program $P_e$ with input $x$. For
 	each possible configuration $c$, we can assign a code:
 	\[\Godelnum{c}=2^{1+i}\cdot 3^{1+\Godelnum{s_0}}\cdot 5^r\cdot7^l\]
@@ -223,7 +225,7 @@ very tedious.
 	$c_0,c_1,\ldots c_n$ according to $P_e$ to be:
 	\[y=2^e\prod_{i\leq n}p_{i+1}^{\Godelnum{s_i}}\]
 	From this it follows that $T(e,x,y)$ is computable in the intuitive
-	sens.
+	sense.
 
 	Having defined the predicate $T$ we can check if it holds. By
 	proposition 2.1 we can "recover" the program $P_e$ from $e$. Then we
@@ -259,8 +261,8 @@ We will need the following notation in the next proof:
 \begin{thm}[s-m-n theorem]
 	For every $m,n\geq 1$ there exists an injective recursive function
 	$s_n^m$ of $m+1$ variable such that for all $x,y_1,\ldots,y_m$
-	$$\varphi^{(n)}_{s^m_n(x,y_1,\ldots,y_m)}=\lambda z_1,\ldots
-	z_n[\varphi^{(m+n)}_x(y_1,\ldots,y_m,z_1,\ldots,z_n)]$$
+	\[\varphi^{(n)}_{s^m_n(x,y_1,\ldots,y_m)}(z_1,\ldots z_n)=
+	\varphi^{(m+n)}_x(y_1,\ldots,y_m,z_1,\ldots,z_n)\]
 \end{thm}
 \begin{proof}
 	I will follow Soare and only prove the case where $m=n=1$. I.e the case
@@ -290,7 +292,7 @@ We will need the following notation in the next proof:
 A full proof of this statement can be found in Kleene. The $s-m-n$ theorem
 plays a crucial role in both the proof and the use of the recursion theorem.
 The theorem is not the most intuitive to use, and takes a bit of work to get
-used to.. Therefore we will use the $s-m-n$ theorem to
+used to. Therefore we will use the $s-m-n$ theorem to
 prove the following proposition:
 \begin{prop}
 	There is a recursive function $g$ of two variables such that for all
@@ -311,9 +313,9 @@ prove the following proposition:
 
 	By the church thesis this function is partial recursive
 	and has an index $e$. So by applying the $s-m-n$ Theorem we get:
-	\[\varphi_x\varphi_y=\lambda
-	z[\varphi_e(x,y,z)]=\varphi_{s_1^2(e,x,y)}\]
-	And thus $s_1^2(e,x,y)$ is our $g$ (i.e $\lambda xy[(s_1^2)e,x,y)]$.
+	\[\varphi_x\varphi_y(z)=
+	\varphi_e(x,y,z)=\varphi_{s_1^2(e,x,y)}\]
+	And thus $s_1^2(e,x,y)$ is our $g$.
 \end{proof}
 
 \section{Recursively Enumerable sets and the Graph of a function}
@@ -435,8 +437,8 @@ completeness theorems.
 \end{defi}
 The relation of a graph can also be seen as a function in the language of
 $\PRA$; so we will often denote the graph of a function $\varphi(x)=y$ with the
-following notation: $Fxy$, and say that $(x,y)\in\ \text{graph}(\varphi)$ if and
-only if $Fxy$ is true. We will use this notation in chapter 6, since Smorinsky
+following notation: $\tau xy$, and say that $(x,y)\in\ \text{graph}(\varphi)$ if and
+only if $\tau xy$ is true. We will use this notation in chapter 6, since Smorinsky
 uses this notation, and we will follow his book \parencite{Smor1985} in that
 chapter.
 
@@ -449,7 +451,7 @@ chapter.
 \begin{proof}
 	Since $R$ is r.e it is $\Sigma_1$. This means that there is a recursive
 	relation $S$ such that $R(x,y)$ holds iff $\exists z (S(x,y,z))$. Thus
-	we can define the following primitive recursive function:
+	we can define the following p.r function:
 	$$g(x)=\mu u(S(x,(u)_1,(u)_2))$$
 	And now we put $f(x)=(g(x))_1$
 \end{proof}
@@ -594,20 +596,20 @@ theorems.
 	We will now show that $\varphi$ is recursive by using the recursion
 	theorem.
 
-	Let $\phi_0 v_0v_1$ be an arbitrary graph and let $\phi_1v_0v_1$ be the
-	graph of $\psi$ and $\chi v_0v_1v_2$ be the graph of $\theta$. We will
+	Let $\tau_0 v_0v_1$ be an arbitrary graph and let $\tau_1v_0v_1$ be the
+	graph of $\psi$ and $\zeta v_0v_1v_2$ be the graph of $\theta$. We will
 	now look at the following formula:
-	\[\Phi(\phi_0):\ (v_0=\0\wedge \phi_1v_0v_1)\vee (v_0>\0\wedge \exists
-	v(\phi_0(v_+-1,v)\wedge \chi vv_0v_1))\]
-	We can see $\Godelnum{\Phi(\phi_0)}$ as a primitive recursive function
-	of $\Godelnum{\phi_0}$. I.e we have:
-	\[\Godelnum{\Phi(\phi_0)}=\eta(\Godelnum{\phi_0})\]
+	\[\Xi(\tau_0):\ (v_0=\0\wedge \tau_1v_0v_1)\vee (v_0>\0\wedge \exists
+	v(\tau_0(v_+-1,v)\wedge \zeta vv_0v_1))\]
+	We can see $\Godelnum{\Xi(\tau_0)}$ as a primitive recursive function
+	of $\Godelnum{\tau_0}$. I.e we have:
+	\[\Godelnum{\Xi(\tau_0)}=\eta(\Godelnum{\tau_0})\]
 	We can now use the Recursion Theorem to chose an $n$ such that we have:
 	$\varphi^{(2)}_{\eta(n)}=\varphi^{(2)}_n$ and for
-	$varphi=\varphi^{(2)}_n$ we have:
+	$\varphi=\varphi^{(2)}_n$ we have:
 	\[\varphi(x,y)=z\leftrightarrow(x=0\wedge\psi(y)=z=\vee(x>0\wedge
 	\theta(\varphi(x-1,y),x,y)=z)\]
-	I.e $\varphi$ does exactly what we want it to do. W just need to
+	I.e $\varphi$ does exactly what we want it to do. We just need to
 	define $\varphi$ and this can be done by a $\Sigma_1$ induction.
 \end{exmp}
 

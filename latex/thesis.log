@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.10.0 (TeX Live 2019/Debian)  (format=lualatex 2022.10.24)  13 DEC 2022 13:39
+This is LuaTeX, Version 1.10.0 (TeX Live 2019/Debian)  (format=lualatex 2022.10.24)  14 DEC 2022 15:08
  restricted system commands enabled.
  file:line:error style messages enabled.
 **thesis.tex
@@ -1133,11 +1133,11 @@ File: biblatex.cfg
 \c@defi/=\count463
 \gnBoxA=\box136
 \gnCornerHgt=\dimen316
-LaTeX Font Info:    Trying to load font information for U+msa on input line 125.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 126.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 125.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 126.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
@@ -1147,33 +1147,33 @@ Package csquotes Info: ... none found.
  (./thesis.aux)
 \openout1 = thesis.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 182.
-LaTeX Font Info:    ... okay on input line 182.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 182.
-LaTeX Font Info:    ... okay on input line 182.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 182.
-LaTeX Font Info:    ... okay on input line 182.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 182.
-LaTeX Font Info:    ... okay on input line 182.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 182.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 182.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 183.
+LaTeX Font Info:    ... okay on input line 183.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 183.
+LaTeX Font Info:    ... okay on input line 183.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 183.
+LaTeX Font Info:    ... okay on input line 183.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 183.
+LaTeX Font Info:    ... okay on input line 183.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 183.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 183.
  (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 182.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 182.
-LaTeX Font Info:    ... okay on input line 182.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 182.
-LaTeX Font Info:    ... okay on input line 182.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 182.
-LaTeX Font Info:    ... okay on input line 182.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 182.
-LaTeX Font Info:    ... okay on input line 182.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 182.
-LaTeX Font Info:    ... okay on input line 182.
-Package scrbase Info: activating english \contentsname on input line 182.
-Package scrbase Info: activating english \listfigurename on input line 182.
-Package scrbase Info: activating english \listtablename on input line 182.
+LaTeX Font Info:    ... okay on input line 183.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 183.
+LaTeX Font Info:    ... okay on input line 183.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 183.
+LaTeX Font Info:    ... okay on input line 183.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 183.
+LaTeX Font Info:    ... okay on input line 183.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 183.
+LaTeX Font Info:    ... okay on input line 183.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 183.
+LaTeX Font Info:    ... okay on input line 183.
+Package scrbase Info: activating english \contentsname on input line 183.
+Package scrbase Info: activating english \listfigurename on input line 183.
+Package scrbase Info: activating english \listtablename on input line 183.
 \AtBeginShipoutBox=\box137
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -1200,7 +1200,7 @@ Package grfext Info: Graphics extension search list:
  (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 )) ABD: EveryShipout initializing macros
-Package hyperref Info: Link coloring ON on input line 182.
+Package hyperref Info: Link coloring ON on input line 183.
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
  (/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
@@ -1210,9 +1210,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count470
 )
-LaTeX Info: Redefining \ref on input line 182.
-LaTeX Info: Redefining \pageref on input line 182.
-LaTeX Info: Redefining \nameref on input line 182.
+LaTeX Info: Redefining \ref on input line 183.
+LaTeX Info: Redefining \pageref on input line 183.
+LaTeX Info: Redefining \nameref on input line 183.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: luatex
@@ -1254,59 +1254,59 @@ Package fontspec Info: Adjusting the maths setup (use [no-math] to avoid
 
 \symlegacymaths=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 182.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 182.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 182.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 182.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 182.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 182.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 182.
-LaTeX Font Info:    Redeclaring math accent \check on input line 182.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 182.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 182.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 182.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 182.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 182.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 182.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 182.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 182.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 182.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 182.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 182.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 182.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 182.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 182.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 182.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 182.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 183.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 183.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 183.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 183.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 183.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 183.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 183.
+LaTeX Font Info:    Redeclaring math accent \check on input line 183.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 183.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 183.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 183.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 183.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 183.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 183.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 183.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 183.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 183.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 183.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 183.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 183.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 183.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 183.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 183.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 183.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 182.
+(Font)              `operators' in the math version `normal' on input line 183.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 182.
+(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 183.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 182.
+(Font)              `operators' in the math version `bold' on input line 183.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 182.
+(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 183.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 182.
+(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 183.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 182.
+(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 183.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/lmr/b/n on input line 182.
+(Font)                  OT1/cmr/bx/n --> TU/lmr/b/n on input line 183.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 182.
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 183.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 182.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 183.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/lmr/m/n --> TU/lmr/b/n on input line 182.
+(Font)                  TU/lmr/m/n --> TU/lmr/b/n on input line 183.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/lmr/b/it on input line 182.
+(Font)                  OT1/cmr/bx/it --> TU/lmr/b/it on input line 183.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 182.
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 183.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 182.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 183.
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 182.
+(lastpage)             ! on input line 183.
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
 (/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/english.lbx
@@ -1321,12 +1321,12 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'thesis.bbl' found.
  (./thesis.bbl)
-Package biblatex Info: Reference section=0 on input line 182.
-Package biblatex Info: Reference segment=0 on input line 182.
+Package biblatex Info: Reference section=0 on input line 183.
+Package biblatex Info: Reference segment=0 on input line 183.
 <nat-farve.pdf, id=7, 597.23125pt x 845.1575pt>
 File: nat-farve.pdf Graphic file (type pdf)
 <use nat-farve.pdf>
-Package luatex.def Info: nat-farve.pdf  used on input line 183.
+Package luatex.def Info: nat-farve.pdf  used on input line 184.
 (luatex.def)             Requested size: 597.54874pt x 845.06516pt.
  [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
@@ -1353,14 +1353,14 @@ chapter 1.
 ]
 chapter 2.
 (./Recur.tex [25] [26]
-<Turnig.png, id=451, 1449.415pt x 577.15625pt>
+<Turnig.png, id=453, 1449.415pt x 577.15625pt>
 File: Turnig.png Graphic file (type png)
 <use Turnig.png>
-Package luatex.def Info: Turnig.png  used on input line 104.
+Package luatex.def Info: Turnig.png  used on input line 105.
 (luatex.def)             Requested size: 418.25368pt x 166.5432pt.
  [27<./Turnig.png>]
 LaTeX Font Info:    Font shape `TU/lmss/bx/it' in size <17.28> not available
-(Font)              Font shape `TU/lmss/bx/sl' tried instead on input line 177.
+(Font)              Font shape `TU/lmss/bx/sl' tried instead on input line 178.
  [28] [29] [30] [31] [32] [33] [34] [35] [36]) [37] [38
 
 
@@ -1371,7 +1371,10 @@ chapter 4.
 (./GL.tex [49
 
 
-] [50] [51] [52] [53] [54] [55] [56] [57] [58]) [59] [60
+] [50] [51] [52]
+Underfull \vbox (badness 1895) has occurred while \output is active []
+
+ [53] [54] [55] [56] [57] [58]) [59] [60
 
 
 ]
@@ -1397,26 +1400,28 @@ chapter 8.
 [97] [98] [99] 
 AED: lastpage setting LastPage
 [100]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 231.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 231.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 232.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 232.
  (./thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 231.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 231.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 232.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 232.
 Package logreq Info: Writing requests to 'thesis.run.xml'.
 
 \openout1 = thesis.run.xml
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 231.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 232.
 )
 
 Here is how much of LuaTeX's memory you used:
- 41476 strings out of 481365
+ 41480 strings out of 481365
  100000,1977958 words of node,token memory allocated
- 1870 words of node memory still in use:
-   8 hlist, 2 vlist, 2 rule, 2 math, 7 glue, 4 kern, 2 glyph, 389 attribute, 82 glue_spec, 195 attribute_list, 3 write, 2 pdf_action nodes
-   avail lists: 1:4,2:4513,3:794,4:34,5:393,6:129,7:4101,8:86,9:701,10:18,11:273
- 56624 multiletter control sequences out of 65536+600000
+ 1883 words of node memory still in use:
+   8 hlist, 2 vlist, 2 rule, 2 math, 8 glue, 4 kern, 2 glyph, 391 attribute, 82 glue_spec, 196 attribute_list, 3 write, 2 pdf_action nodes
+   avail lists: 1:4,2:4514,3:795,4:37,5:394,6:129,7:4103,8:86,9:701,10:18,11:273
+ 56627 multiletter control sequences out of 65536+600000
  103 fonts using 9968051 bytes
  64i,21n,87p,10120b,1706s stack positions out of 5000i,500n,10000p,200000b,100000s
+
+warning  (pdf backend): unreferenced destination with name 'Hfootnote.6'
 
 warning  (pdf backend): unreferenced destination with name 'Hfootnote.5'
 
@@ -1428,10 +1433,10 @@ warning  (pdf backend): unreferenced destination with name 'Hfootnote.2'
 
 warning  (pdf backend): unreferenced destination with name 'Hfootnote.1'
 </usr/share/texmf/fonts/opentype/public/lm/lmmono12-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmromancaps10-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmsans10-boldoblique.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman10-bold.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman7-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman8-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman8-bold.otf></usr/share/texmf/fonts/opentype/public/lm/lmmono10-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman10-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman12-italic.otf></usr/share/texmf/fonts/opentype/public/lm/lmsans10-bold.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman12-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman12-bold.otf></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb>
-Output written on thesis.pdf (104 pages, 625619 bytes).
+Output written on thesis.pdf (104 pages, 625708 bytes).
 
-PDF statistics: 1554 PDF objects out of 1728 (max. 8388607)
- 1357 compressed objects within 14 object streams
- 589 named destinations out of 1000 (max. 131072)
+PDF statistics: 1561 PDF objects out of 1728 (max. 8388607)
+ 1363 compressed objects within 14 object streams
+ 590 named destinations out of 1000 (max. 131072)
  464 words of extra memory for PDF output out of 10000 (max. 100000000)
 

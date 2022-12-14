@@ -4,13 +4,14 @@
 
 In this section we will prove some different properties about the modal logic
 \textbf{GL}, that was introduced in Chapter \ref{chap:Pre}.
-These properties will be used in the following chapters. Some of these properties might
+These properties will be used in the following chapters. Some of these
+properties might not
 hold in other modal logics, but we will look at \GL\ as our base logic,
 instead of a more common modal logic like \textbf{K}.
 Further, in the end we will introduce the system $\text{\textbf{GLS}}$ (the
 "\textbf{S}" stands for Solovay).
 
-This section will follow \parencite{Smor1985}. But there will be a some small
+This section will follow \parencite{Smor1985}, but there will be a some small
 differences. Smorynski calls the logic \textbf{GL} for \textbf{PRL} which
 stands for \textit{Pr}ovability \textit{L}ogic, and he denotes the logic we
 have called \textbf{GLS} by $\textbf{PRL}^\omega$.\footnote{Smorinsky also has a
@@ -19,7 +20,7 @@ slightly different definition of a Kripke model.}
 We start of by proving the finite tree theorem for \GL. This theorem makes it
 possible for us to assume that for a Kripke model $\mathcal{K}=\la W,R,\phi\ra$ of
 \GL, that the set $W$ is finite. For proving this theorem we will first need
-the to prove this theorem we will first need some knowledge about trees and
+the need some knowledge about trees and
 prove König's lemma.
 
 After this we will prove the continuity theorem which we will use a lot in
@@ -28,15 +29,16 @@ chapter 5, for the proof of the fixed point theorem.
 We will end this chapter by defining the logic \GLS\ and show some few results
 about this logic.
 
-This chapter (and the following one) does not use the preceding sections about recursive functions. We will only
+This chapter (and the following one) does not use the preceding sections about
+recursive theory and the arithmetical hierarchy. We will only
 focus on modal logic and not anything that has to do with arithmetic. In
 chapter \ref{chap:Complete} we will combine all three parts; the recursion
-theory, the arithmetics and the modal logic.
+theory, the arithmetic and the modal logic.
 
 
 \section{Trees and \GL}
 
-It is known that \textbf{GL} is weakly complete with resect to conversely
+It is known that \textbf{GL} is weakly complete with respect to conversely
 well-founded transitive frames. There is another result that is in the same
 vein; \textbf{GL} is complete with respect to finite trees. The goal of this
 section is to prove this result. We will first start out by defining the notion
@@ -188,7 +190,7 @@ weak completeness theorem of chapter \ref{chap:Pre}.
 
 The following theorem is a strengthening of the weak completeness theorem for
 \GL, since trees are a subset of the transitive conversely well-founded models
-. Due to this theorem get that we can without loss of generality assume that
+. Due to this theorem we get that we can without loss of generality assume that
 our model is finite. This last feature will be crucial in the proof of main
 theorems of the next chapter.
 
@@ -205,9 +207,8 @@ the proof of our main theorem of chapter \ref{chap:Complete} possible. We will
 call the class of finite trees for FT, and call a formula valid in this class
 of models for FT-valid.
 \begin{proof}
-	\textbf{Ændre alle T til mathcal{T}}
 	The implications $(1)\Rightarrow (2)$ and $(1)\Rightarrow(3)$ follow
-	by the completeness theorem \textbf{Kryds ref}. We also have that $(2)\Leftrightarrow (3)$
+	by the completeness theorem \ref{thm:GLcomplete}. We also have that $(2)\Leftrightarrow (3)$
 	is true since $(3)\Rightarrow(2)$ is trivial and $(2)\Rightarrow(3)$
 	follows since finite trees  are transitive.. Thus we will just have to show $(2)\Rightarrow(1)$
 
@@ -215,15 +216,18 @@ of models for FT-valid.
 	Assume that $\not\vdash_{\GL}\alpha$ and
 let $\mathcal{K}$ be the following model $\mathcal{K}=\la W,R,w_0,\phi\ra $
 which we assume to be  a counter model i.e
-	$\not\vDash_{w_0}^{K}\alpha$. We can know that such a counter-model
+	$\not\vDash_{w_0}^{K}\alpha$. We know that such a counter-model
 	exists by the completeness theorem for \GL. Let $S$ be the set of subformulae of
 	$\alpha$ The goal is now to define a finite tree
-	model: $\mathcal{K}_T=\la W_T,<_T,\phi_T\ra$. We will do this be
+	model: $\mathcal{K}_{\mathcal{T}}=\la
+	W_T,<_{\mathcal{T}},\phi_{\mathcal{T}}\ra$. We will do this be
 	letting $W_T$ consist of finite $R$-increasing sequences from $K$.
 
-	\textbf{Stage 0:} Let the sequence $(w_0)$ be a part of $K_T$.
+	\textbf{Stage 0:} Let the sequence $(w_0)$ be a part of
+	$K_{\mathcal{T}}$.
 
-	\textbf{Stage $n+1$:} For each sequence $(w_0,\ldots w_n)\in W_T$ we
+	\textbf{Stage $n+1$:} For each sequence $(w_0,\ldots w_n)\in
+	W_{\mathcal{T}}$ we
 	will look at $\Gamma=\{\Box\beta\in S(\alpha):\
 	w_n\in\phi(\Box\beta)\}$.
 	If $\Gamma=\emptyset$ then we do not extend the sequence $(w_0,\ldots
@@ -233,31 +237,32 @@ which we assume to be  a counter model i.e
 	We can do this because of axiom \textbf{L}. We will then add the sequence
 	$(w_0,\ldots w_n,v)$ to the set $W_T$.
 
-	The model $\mathcal{K}_T$ then further consists of:
+	The model $\mathcal{K}_{\mathcal{T}}$ then further consists of:
 	\begin{enumerate}
-		\item $<_T$ is the usual strict
+		\item The relation $<_{\mathcal{T}}$ which is the usual strict
 	ordering by extension of finite sequences. 
 		\item	The world $w_0$ which is the root node.
-		\item$\phi_T$ is the defined in
+		\item The valuation$\phi_{\mathcal{T}}$ that is the defined in
 		the following way:
-		$$(w_0,\ldots,w_n)\in \phi_T(p)\Leftrightarrow w_n\in\phi(p)$$
+		\[(w_0,\ldots,w_n)\in \phi_{\mathcal{T}}(p)\Leftrightarrow w_n\in\phi(p)\]
 	\end{enumerate}
 	This leads to the following notation that we will use for the rest
 	of the proof:
-	$$\vDash_{(w_0,\ldots,w_n)}^{\mathcal{K}_T}p\Leftrightarrow\vDash_{w_n}^\mathcal{K} p$$
+	\[\vDash_{(w_0,\ldots,w_n)}^{\mathcal{K}_{\mathcal{T}}}p\Leftrightarrow\vDash_{w_n}^\mathcal{K}
+	p\]
 	We will now prove two claims, by which the theorem will follow:
 
-	\textbf{Claim 1:} $\mathcal{T}=(W_T,<_T,w_0)$ is a finite tree with origin $(w_0)$.
-	Finiteness follows from lemma \ref{lem:kong}, since the $\mathcal{T}$
+	\textbf{Claim 1:} $\mathcal{T}=(W_{\mathcal{T}},<_{\mathcal{T}},w_0)$ is a finite tree with origin $(w_0)$
+	Finiteness follows from Lemma \ref{lem:kong}, since the tree $\mathcal{T}$
 	is finitely branching as the branches correlate with the elements
 	of $S$. Further there is no infinite paths in $\mathcal{T}$, since when
-	we go from $(w_0,\ldots w_n)$ to $(w_0,\ldots, w_n,w_{n+1})$ we are one
+	we go from $(w_0,\ldots w_n)$ to $(w_0,\ldots, w_n,w_{n+1})$ one
 	sentence from $\Box\beta\in S$ gets forced by $w_{n+1 }$ and since
 	these are finite, the process will stop at some point, and thus the
 	path will be finite.
 
 	\textbf{Claim 2:} For all $\beta\in S(\alpha)$ and for all $(w_0,\ldots
-	w_n)\in W_T$ we have:
+	w_n)\in W_{\mathcal{T}}$ we have:
 	$$\vDash^{\mathcal{K}_T}_{(w_0,\ldots,w_n)}\beta\Leftrightarrow\ \vDash_{w_n}^\mathcal{K}\beta$$
 	This proof is done by induction on the complexity of $\beta$. We will
 	only look at the case $\beta=\Box\gamma$. So, by the induction
@@ -266,31 +271,31 @@ which we assume to be  a counter model i.e
 		\vDash^{\mathcal{K}}_{w_0}\Box\gamma&\Rightarrow\forall v(w_0Rv\Rightarrow\ 
 		\vDash^{\mathcal{K}}_v\gamma)\\
 				      &\Rightarrow\forall v((w_0,\ldots
-				      w_n,v)\in W_T\Rightarrow\
+				      w_n,v)\in W_\T\Rightarrow\
 				      \vDash^{\mathcal{K}}_v\gamma)\\
 				      &\Rightarrow\forall v((w_0,\ldots
 				      w_n,v)\in W_{\mathcal{T}}\Rightarrow\
 				      \vDash_{(w_0,\ldots
 				      w_n,v)}^{\mathcal{K}_\mathcal{T}}\gamma)
 	\end{align*}
-	And the last line is the same as $\vDash^{\mathcal{T}}_{(w_0,\ldots,w_n)}\Box\gamma$.
+	And the last line is the same as $\vDash^{\mathcal{K}_\mathcal{T}}_{(w_0,\ldots,w_n)}\Box\gamma$.
 	For the other way, we will use contraposition:
 	\begin{align*}
 		\not\vDash^{\mathcal{K}}_{w_0}\Box\gamma&\Rightarrow \exists v(w_0Rv\ \&\
 		\not\vDash^{\mathcal{K}}_v\gamma)\\
 					  &\Rightarrow\exists v((w_0,\ldots
-					  w_n,v)\in W_T\ \&\
+					  w_n,v)\in W_\T\ \&\
 					  \not\vDash^{\mathcal{K}}_v\gamma)\\
 					  &\Rightarrow\exists v((w_0,\ldots
-					  w_n,v)\in W_T\ \&\
+					  w_n,v)\in W_\T\ \&\
 					  \not\vDash_{(w_0,\ldots,w_n,v)}^{\mathcal{K}_\mathcal{T}}\gamma)
 	\end{align*}
 	And the last line is the same as
-	$\not\vDash^\mathcal{K}_{(w_0,\ldots,w_n)}\Box\gamma$. 
+	$\not\vDash^{\mathcal{K}_\T}_{(w_0,\ldots,w_n)}\Box\gamma$. 
 
 	The theorem now follows since we have:
-	$$\not\vDash_{w_0}\alpha\Rightarrow\
-	\not\vDash_{[w_0)}^{\mathcal{K}_T}\alpha$$
+	\[\not\vDash_{w_0}\alpha\Rightarrow\
+	\not\vDash_{(w_0)}^{\mathcal{K}_\T}\alpha\]
 \end{proof}
 
 From this theorem a number of intereseting corroloais follows: 
@@ -314,7 +319,7 @@ From this theorem, we can also find the minimum element of a Kripke model of
 	Kripke model} is a pair $\la \mathcal{K},w_0\ra$ where $w_0$ is a node
 	of $W$. In the rest of this, project we will have that $w_0$ is the
 	minimum node of the tree of \GL. We will often just define a pointed
-	Kripke, as $\mathcal{K}=\la W,R,\phi,w_0\ra$.
+	Kripke model, as $\mathcal{K}=\la W,R,\phi,w_0\ra$.
 \end{defi}
 
 \section{The Continuity Theorem}
@@ -323,21 +328,22 @@ proven. This section applies to all Kripke model, and thus is not only about
 \GL.
 
 The name of this theorem comes from \parencite{Boolos1993}, he does not give
-any deeper explenation for the name.
+any deeper explanation for the name.
 
 We will first need two definitions:
 \begin{defi}
 	We define $d(\alpha)$ in the following way: $d(p)=d(\bot)=0$,
 	$d(\alpha\rightarrow\beta)=\text{max}(d(\alpha),d(\beta))$ and
 	$d(\Box(\alpha)=d(\alpha)+1$. So $d(\alpha)$ is the maximal number of
-	nested occurences of $\Box$ in $\alpha$. We call $d(\alpha)$ the modal
-	degree of $\alpha$.
+	nested occurrences of $\Box$ in $\alpha$. We call $d(\alpha)$ the
+	\textit{modal
+	degree} of $\alpha$.
 \end{defi}
 
 \begin{defi}
 	Let $R$ be a relation on a set $W$. For each $i\in\omega$ define $R^i$
 	as follows: $R^0$ is the identity relation on $W$. $R^{i+1}=\{\la
-	w,v\ra: \exists v'(wR^iv'\wedge v'Rv\}$. This $R^1=R$ and $wR^nv$ if
+	w,v\ra: \exists v'(wR^iv'\wedge v'Rv\}$. Thus $R^1=R$ and $wR^nv$ if
 	and only if $\exists v_0,\ldots v_n(w=v_0R\ldots Rv_n=v)$.
 \end{defi}
 \begin{thm}[The Continuity Theorem]
@@ -352,7 +358,7 @@ We will first need two definitions:
 	$\vDash_w^{\mathcal{K'}}\alpha$.
 \end{thm}
 \begin{proof}
-	We will show that for all subformulas $\beta$ of $\alpha$, if we for some
+	We will show that for all subformulae $\beta$ of $\alpha$, if we for some
 	$i$ have that $wR^iv$ and $d(\beta)+i\leq n$ such that $i\leq n$ and
 	$v\in V$, then $\vDash_v^\mathcal{K}\beta$ if and only if
 	$\vDash_v^{\mathcal{K}'}\beta$. Since $wR^0w$ and $d(\alpha)=n$ the
@@ -380,7 +386,7 @@ From this theorem the following corollary is a immediate consequence and we
 will use it to prove parts of the main theorem of the next chapter:
 \begin{cor}\label{cor:conti}
 	Let $\alpha$ be a formula. Let $\mathcal{K}=\la W,R,\phi\ra$ and
-	$\mathcal{K}'=\la V,R,\phi'\ra$ be models, and $p\in\phi(w)$ if and
+	$\mathcal{K}'=\la W,R,\phi'\ra$ be models, and $p\in\phi(w)$ if and
 	only if $p\in\phi'(w)$ for all $w\in W$ and all $p$ contained in
 	$\alpha$.
 	Then $\vDash_w^\mathcal{K}\alpha$ if and only if
@@ -392,7 +398,7 @@ will use it to prove parts of the main theorem of the next chapter:
 In this section we will define the modal logic \textbf{GLS} (The "S" is for
 Solovay). This logic is an extension of \GL, but it is not as well behaved as
 \GL. It is this logic we will use in the statement of Solovay's second
-completeness theorem, so it is important for each to know a few basic results
+completeness theorem, so it is important to know a few basic results
 about it.
 
 Further, this section will follow \parencite{Lind1997}, since the  version of
@@ -418,7 +424,8 @@ extension of $\PRA+\{\text{Con}^n,n\in \omega\}$. So we add the axiom Refl to
 simulate the local reflexion principle in \GLS.
 Another more cumbersome definition of this modal logic can be found in
 \parencite{Smor1985}. We follow the definition form \parencite{Boolos1993} and
-\parencite{Lind1997} since it is a lot easier to understand and work with.
+\parencite{Lind1997} since it is a lot easier to understand and work with. It
+is also the original definition from \parencite{solovay976}
 
 It should be noted that this modal logic is not a \textit{normal} one, since it
 do not have  necessitation as a rule of inference. If a modal logic just extended
@@ -427,8 +434,8 @@ $\neg\Box\bot$ and $\Box\bot$ and thus be inconsistent; this is why we have not
 included it as rule. 
 
 There is no completeness theorem for \GLS\ in the same vein as the finite tree
-theorem for \GL (This theorem is found in \parencite{Lind1997}). But there is another similar result we will now state and
-prove.
+theorem for \GL. But there is another similar result we will now state and
+prove (This theorem is found in \parencite{Lind1997}).
 \begin{defi}
 	Let $\alpha$ be any modal formula, let $\mathcal{K}=\la
 W,R,\phi,w_0\ra$ be a pointed Kripke model and suppose that $w\in W$.
@@ -451,13 +458,13 @@ model theory for this modal logic.
 	\label{thm:MainGLS}
 	Let $\alpha$ be a modal formula. Define the following set: $S_\Box(\alpha)=\{\Box\beta:\
 	\Box\beta\ \text{ is a subformula of}\ \alpha\}$ the set of
-	subformulae of $\alpha$ that is boxed. Then the following to
+	subformulae of $\alpha$ that is boxed. Then the following three
 	statements are equivalent:
 	\begin{enumerate}
 		\item $\vdash_\GLS\alpha$
 		\item $\vdash_\GL\bigwedge_{\Box\beta\in
 			S_\Box(\alpha)}(\Box\beta\rightarrow\beta)\rightarrow\alpha$
-		\item $\alpha$ is r-valid in the class of finite tree Kripke
+		\item $\alpha$ is r-valid in the class of FT Kripke
 			models
 	\end{enumerate}
 \end{thm}
@@ -489,11 +496,11 @@ describes a model theory for \GLS.
 		n$, there is at most one $j$; $1\leq j\leq n+1$, such that
 		$\neg(\Box p_k\rightarrow p_k)\in\phi(w_j)$
 	\end{proof}
-Further for the proof we will make use of the operation on Kripke models:
+Further for the proof we will make use of the following operation on Kripke models:
 \begin{defi}
 	Let $\mathcal{K}=\la W,R,\phi\ra$ be a Kripke Model. The derived model
 	$\mathcal{K'}$ is defined as follows: $W'=W\cup \{w'\}$, where
-	$w'\not\in W$. We further have that $R'$ is defined as $wR'v$ iff $WRv$
+	$w'\not\in W$. We further have that $R'$ is defined as $wR'v$ iff $wRv$
 	for $w,v\in W$; $w'$ is the new minimum element. Further we have that
 	$w\in\phi'(p)$ iff $w\in\phi(p)$ for $w\in K$, where $p$ is any atomic
 	formula. Lastly we have that $w'\in\phi'(p)$ iff $w_0\in\phi(p)$.
@@ -536,13 +543,14 @@ $\mathcal{K}^{(n)}$ (right)}
 \begin{remark}
 	We have for $w\in W$ and for any formula $\gamma$ that:
 	\[\vDash^{\mathcal{K}}\gamma\ \text{iff}\
-	\vDash^{\mathcal{K^{(n)}}}\gamma\]
+	\vDash^{\mathcal{K}^{(n)}}\gamma\]
 	So we can remove the superscript without consequences for the
 	understanding. We will do so going forward.
 \end{remark}
 
 The following lemma will explain a bit deeper how these derived models works,
-and will be used in the proof of theorem.
+and will be used in the proof of theorem and later on in the proof of Solovay's
+second completeness theorem.
 
 \begin{lem}
 	\label{lem:GLS}
@@ -561,16 +569,16 @@ and will be used in the proof of theorem.
 
 	\textbf{($\Rightarrow$)}\ The following is clear for
 	$\Box\gamma\in S(\alpha)$:
-	$$\vDash_{w_0}\Box\gamma\Rightarrow\vDash_{w_0}\gamma$$
-	This follows since our model is $\alpha$-sound. Therefore we have:
-	$\forall v>w_1(\vDash_{w_1}\gamma)$ and thus $\vDash_{w_1}\Box\gamma$
+	\[\vDash_{w_0}\Box\gamma\Rightarrow\vDash_{w_0}\gamma\]
+	This follows since our model is $\alpha$-reflexive. Therefore we have:
+	$\forall v:w_1Rv(\vDash_{v}\gamma)$ and thus $\vDash_{w_1}\Box\gamma$
 
 	\textbf{($\Leftarrow$)} Here we can make the following deduction:
 	\begin{align*}
 		\vDash_{w_1}\Box\gamma&\Rightarrow\forall
-		v>w_1(\vDash_v\gamma)\\
+		v:w_1Rv(\vDash_v\gamma)\\
 				      &\Rightarrow\forall
-				      v>w_0(\vDash_v\gamma)\\
+				      v:w_0Rv(\vDash_v\gamma)\\
 				      &\Rightarrow\vDash_{w_0}\Box\gamma
 	\end{align*}
 \end{proof}

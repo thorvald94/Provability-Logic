@@ -1,7 +1,7 @@
 \documentclass[../main.tex]{subfiles}
 
 In this section we will generalize the class of $\sigma_1$ sets to the classes
-of $\sigma_n$, $\pi_n$ and $\delta_n$ sets. We will use this sets in later
+of $\sigma_n$, $\pi_n$ and $\delta_n$ sets. We will use these sets in later
 chapters, since they make it possible for us to classify different arithmetical
 formulas. These definitions will make it
 possible for us to look at different fragments of arithmetic, since we can
@@ -16,7 +16,7 @@ possible for us to place \PRA\ in this hierarchy.
 We will further look at how much induction we have in \PRA; i.e which class of
 formulae from the arithmetical hierarchy we can perform induction on in \PRA. 
 
-We will also introduce a two other ways to augment the different fragments
+We will also introduce two other ways to augment the different fragments
 without the adding more induction. These will play a role in the generalization
 of Solovay's completeness theorems to other fragments than \PRA.
 
@@ -37,12 +37,12 @@ of it has already be defined; i.e the sets $\Sigma_1$. In the arithmetical
 hierarchy, we can classify sets with respect to their quantifier
 complexity in their syntactical definition.
 
-In the next section about the fragments of arithmetics, we will use the
+In the next section concerning the fragments of arithmetics, we will use the
 arithmetical hierarchy as a tool to determine the amount of induction we will
 have in a given fragment.
 
 The goal of this section is to introduce the arithmetical hierarchy and prove
-some results about it. Most of these results might not be used going
+some results concerning it. Most of these results might not be used going
 forward.
 
 \begin{defi}
@@ -263,7 +263,8 @@ in \parencite{Buss1998}.
 \section{\PRA's and the other fragments of Arithmetics}
 Having introduced the arithmetical hierarchy in the previous section, it is not
 obvious where to place \PRA\ in this hierarchy. We know that \PRA\ has
-$\Sigma_1$ induction by axiom 1.18.2.c, so it.  But the following theorem can
+$\Sigma_1$ induction by axiom 1.18.2.c, so it is natural to ask whether \PRA\
+has induction on other sets.  But the following theorem can
 be shown.
 \begin{prop}
 	\PRA\ is the equivalent to the theory $I\Sigma_1^R$
@@ -271,7 +272,7 @@ be shown.
 
 The proof of this is non-trivial and would go much  beyond the scope of this
 project. The statement will not be used going forward, and it is just included
-to give some intuition about the placement of \PRA\ in the arithmetical hierarchy.
+to give some intuition concerning the placement of \PRA\ in the arithmetical hierarchy.
 The proof can be found in \parencite{ArteBe}. This makes it possible to place \PRA\
 in the arithmetical hierarchy. We can make a visualization of how all the
 different fragments relate to each other:
@@ -340,7 +341,7 @@ different fragments relate to each other:
 \caption{How the fragments relate to each other.}
 \end{figure}
 
-The figure also how the other fragments relate to each other, this will not be
+The figure shows how the other fragments relate to each other, this will not be
 shown.
 
 We will now turn to another version of the Selection Theorem. 
@@ -396,16 +397,16 @@ We will now turn to another version of the Selection Theorem.
 	\[\forall v^*<\ol 0\neg\zeta v^*\wedge\forall v(\forall v^*<v\neg\zeta
 		v^* \rightarrow\forall v^*<v+1\neg\zeta v^*)\rightarrow \forall
 	v\forall v^*<v\neg\zeta v^*\]
-	Thus for a \textbf{Hvad mener Smor med PR} relation $\zeta$ we have
-	that $\forall v^*<v\neg \zeta v^*$ is also PR, and thus since \PRA\ has
-	RE-induction we have the least number principle for $\zeta$.
+	Thus for a p.r relation $\zeta$ we have
+	that $\forall v^*<v\neg \zeta v^*$ is also p.r, and thus since \PRA\ has
+	$\Sigma_1$-induction we have the least number principle for $\zeta$.
 \end{proof}
 
 \subsection{Induction in \PRA}
 We know that we can de induction on $\Sigma_1$ formulae in \PRA. A natural
 question to ask is then what other kinds of formulae can we do induction on in
 \PRA? We will define $\PRA^-$ as the sub-theory of \PRA obtained by restricting
-induction PR-formulae. The following prop will give an answer to this question:
+induction PR-formulae. The following proposition will give an answer to this question:
 
 \begin{prop}
 	\label{prop:indu}
@@ -521,34 +522,35 @@ This theorem states that if a $\Sigma_1$ formula $F$ is true, then it can be
 proven to be true in \PRA\; i.e \PRA\ is complete with respect to $\Sigma_1$
 formulae.
 \begin{proof}
-	By [ja, fra hvad?] we have that there is a $\Sigma_1$ formula $\exists
+	By the lemma we have that there is a $\Sigma_1$ formula $\exists
 	v(gvv_0\ldots v_{n-1}=\ol 0$ such that we have:
 	\begin{equation}
 		\label{eq:Com1}
-		\PRA\vdash fv_0\ldots v_{n-1}\leftrightarrow\exists v(gvv_0\ldots
+		\PRA\vdash Fv_0\ldots v_{n-1}\leftrightarrow\exists v(fvv_0\ldots
 		v_{n-1}=\ol 0)
 	\end{equation}
 	and by $D1$ we have:
 	\begin{equation}
 		\label{eq:Com2}
-		\PRA\vdash\text{Pr}(\Godelnum{fv_0\ldots
-		v_{n-1}\leftrightarrow\exists v(gvv_0\ldots v_{n-1}=\ol 0)})
+		\PRA\vdash\text{Pr}(\Godelnum{F \dot v_0\ldots
+		\dot v_{n-1}\leftrightarrow\exists v(f\dot v\dot v_0\ldots \dot v_{n-1}=\ol 0)})
 	\end{equation}
 	We can now make the following deductions:
 	\begin{align*}
-		\PRA\vdash fv_0\ldots v_{n-1}&\rightarrow\exists v (gvv_0\ldots
+		\PRA\vdash fv_0\ldots v_{n-1}&\rightarrow\exists v (fvv_0\ldots
 		v_{n-1}=\ol 0) 
 					     &&\text{By \ref{eq:Com1}}\\
 					     &\rightarrow\exists v\text{Pr}(
-					     \Godelnum{hvv_0\ldots v_{n-1}=\ol
+					     \Godelnum{f \dot v\dot
+						     v_0\ldots\dot v_{n-1}=\ol
 					     0}
 					     && \ref{lem:Prov}\\
 					     &\rightarrow\text{Pr}(\Godelnum{
-						     \exists v(hvv_0\ldots
-					     v_{n-1}=\ol 0)})
+						     \exists v(f\dot v\dot v_0\ldots
+					     \dot v_{n-1}=\ol 0)})
 					     &&\text{By D1 and D2}\\
 					     &\rightarrow\text{Pr}(\Godelnum{
-					     fv_0\ldots v_{n-1}})
+					     F\dot v_0\ldots \dot v_{n-1}})
 					     &&\text{By \ref{eq:Com2}}
 	\end{align*}
 \end{proof}

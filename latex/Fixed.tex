@@ -2,11 +2,11 @@
 
 \begin{document}
 In this section we will prove the so called \textit{fixed point theorem} for
-\GL.  This theorems says that there for some formulae $\alpha$  of \GL\ exists fixed
-points $\sigma$, i.e that for these formuale:
+\GL.  This theorem says that there for some formulae $\alpha$  of \GL\ exists fixed
+points $\sigma$, i.e that for these formulae:
 \[\vdash_\GL\sigma\leftrightarrow\alpha(\sigma)\]
 This theorem gives is one of the most striking applications of modal logic in
-the study of provability in arithemtic; it says that self-reference is not
+the study of provability in arithmetic; it says that self-reference is not
 necessary in the proofs of Gödel's incompleteness theorems.
 There has been a lot of different ways to prove this theorem; Boolos
 list three different ways in his book \parencite{Boolos1993} and Per Lindström has
@@ -18,7 +18,7 @@ Kripke semantics of the modal logic \GL, and it further gives a simple
 procedure for "calculating" fixed points.
 
 We will end this chapter with calculating some fixed points. This will be
-possible since our the proof of the fixed point theorem contains a algorithm,
+possible since the proof of the fixed point theorem contains a algorithm,
 which can be used to calculate these. In the next chapter we will use Solovay's
 completeness theorems and the fixed point theorem to conclude a few things
 about arithmetic with the help of modal logic. This is the \textit{power} of
@@ -33,14 +33,14 @@ the special formulae for which the fixed point theorem holds.
 
 \begin{defi}
 	We abbreviate $\Box\alpha\wedge\alpha$ as $\sBox\alpha$ for every
-	$\alpha$ in our langauge.
+	$\alpha$ in our language.
 \end{defi}
 $\sBox$ is called "strong box" and for a given model $\mathcal{K}$ we have that
 $\vdash_w^\mathcal{K}\sBox \alpha$ states that $\alpha$ is both true and
 provable in node $w$. There are a few theorem about $\sBox$ in the modal logic
 \textbf{K4} and logics which extends this, that will be
 important in the following. These results are syntactical. We will show these
-now, and more results can be found in \parencite{Smor1985} and \cite{Boolos1993}
+now, and more results can be found in \parencite{Smor1985} and \parencite{Boolos1993}
 
 \begin{thm}
 	\label{seet}
@@ -62,8 +62,6 @@ The proof of this is syntactical and is left out.
 \end{thm}
 This theorem clearly holds for \GL, since it is an extension of \textbf{K4} and we will use it later in this chapter.
 \begin{proof}
-	\textbf{Dobbelt tjek dette}
-
 	Since \textbf{L} extends \textbf{K4} we have that
 	$\vdash_{\textbf{L}}\Box\sBox\alpha\rightarrow\Box\beta$ and thus by
 	theorem \ref{seet} we have that
@@ -114,7 +112,7 @@ All three of these lemmas are sementical in nature.
 \begin{proof}
 	Assume that we have $\vDash_w\Box\alpha$, $w$ sees  $v$ and
 	$v$ sees $v'$. Since $R$ is transitive we have that $w$ also sees $v'$ and thus we have that $\vDash_{v'}\alpha$. Since
-	$v'$ was chosen arbitraily we have that $\vDash_v\Box\alpha$. We also
+	$v'$ was chosen arbitrarily we have that $\vDash_v\Box\alpha$. We also
 	have that $\vDash_v\alpha$ and thus we have $\vDash_v\sBox\alpha$.
 \end{proof}
 \begin{lem}
@@ -160,8 +158,7 @@ $\alpha$ with $\beta$; the meaning of $\alpha(\gamma)$ is similar.
 	$v$ was chosen arbitrary we get
 	$\vDash_w\Box(\sigma(\beta)\leftrightarrow\sigma(\gamma))$. By
 	proposition \ref{prop:GL} and weak completeness we can conclude
-	$\vDash_w\Box\sigma(\beta)\leftrightarrow\sigma(\gamma)$.\textbf{Dobbelt
-	tjek om nota er rigtig}.
+	$\vDash_w\Box\sigma(\beta)\leftrightarrow\Box\sigma(\gamma)$.
 \end{proof}
 
 We are now almost ready to state state and prove the fixed-point theorem. We
