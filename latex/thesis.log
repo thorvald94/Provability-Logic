@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.10.0 (TeX Live 2019/Debian)  (format=lualatex 2022.10.24)  14 DEC 2022 15:45
+This is LuaTeX, Version 1.10.0 (TeX Live 2019/Debian)  (format=lualatex 2022.10.24)  15 DEC 2022 12:43
  restricted system commands enabled.
  file:line:error style messages enabled.
 **thesis.tex
@@ -1353,7 +1353,7 @@ chapter 1.
 ]
 chapter 2.
 (./Recur.tex [25] [26]
-<Turnig.png, id=453, 1449.415pt x 577.15625pt>
+<Turnig.png, id=463, 1449.415pt x 577.15625pt>
 File: Turnig.png Graphic file (type png)
 <use Turnig.png>
 Package luatex.def Info: Turnig.png  used on input line 105.
@@ -1412,14 +1412,16 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 232.
 )
 
 Here is how much of LuaTeX's memory you used:
- 41480 strings out of 481365
+ 41489 strings out of 481365
  100000,1977958 words of node,token memory allocated
- 1883 words of node memory still in use:
-   8 hlist, 2 vlist, 2 rule, 2 math, 8 glue, 4 kern, 2 glyph, 391 attribute, 82 glue_spec, 196 attribute_list, 3 write, 2 pdf_action nodes
-   avail lists: 1:4,2:4514,3:795,4:37,5:394,6:129,7:4103,8:86,9:701,10:18,11:273
- 56627 multiletter control sequences out of 65536+600000
+ 1896 words of node memory still in use:
+   8 hlist, 2 vlist, 2 rule, 2 math, 9 glue, 4 kern, 2 glyph, 393 attribute, 82 glue_spec, 197 attribute_list, 3 write, 2 pdf_action nodes
+   avail lists: 1:5,2:4515,3:795,4:40,5:394,6:129,7:4206,8:86,9:701,10:18,11:234
+ 56634 multiletter control sequences out of 65536+600000
  103 fonts using 9968051 bytes
  64i,21n,87p,10120b,1706s stack positions out of 5000i,500n,10000p,200000b,100000s
+
+warning  (pdf backend): unreferenced destination with name 'Hfootnote.7'
 
 warning  (pdf backend): unreferenced destination with name 'Hfootnote.6'
 
@@ -1433,10 +1435,10 @@ warning  (pdf backend): unreferenced destination with name 'Hfootnote.2'
 
 warning  (pdf backend): unreferenced destination with name 'Hfootnote.1'
 </usr/share/texmf/fonts/opentype/public/lm/lmmono12-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmromancaps10-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmsans10-boldoblique.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman10-bold.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman7-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman8-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman8-bold.otf></usr/share/texmf/fonts/opentype/public/lm/lmmono10-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman10-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman12-italic.otf></usr/share/texmf/fonts/opentype/public/lm/lmsans10-bold.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman12-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman12-bold.otf></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb>
-Output written on thesis.pdf (104 pages, 625809 bytes).
+Output written on thesis.pdf (104 pages, 627444 bytes).
 
-PDF statistics: 1562 PDF objects out of 1728 (max. 8388607)
- 1364 compressed objects within 14 object streams
- 590 named destinations out of 1000 (max. 131072)
+PDF statistics: 1569 PDF objects out of 1728 (max. 8388607)
+ 1371 compressed objects within 14 object streams
+ 592 named destinations out of 1000 (max. 131072)
  464 words of extra memory for PDF output out of 10000 (max. 100000000)
 

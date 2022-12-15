@@ -7,16 +7,17 @@ state that the $\Box$-operator in the  modal logic \GL\  axiomatizes the proof
 predicate $\text{Pr}(\cdot)$ from a wide range of fragments of arithmetics, and
 that the modal logic \GLS\ axiomatizes the proof predicate of true arithmetics.
 We will proof the first completeness theorem for the arithmetical theory known
-as primitive recursive arithmetic.
+as \textit{primitive recursive arithmetic}.
 To prove these theorems we will need some results from recursion theory and
 general knowledge about fragments of arithmetics and the modal logics \GL\ and
 \GLS. We will further prove the fixed point theorem for \GL.
 The project has the following structure: 
 \begin{enumerate}
-	\item[\textbf{Chapter 1:}] This chapter will list some prerequisite results and
-		definitions about the modal logic \GL\ and the arithmetical
-		theory  \textit{primitive
-		recursive arithmetic}. 
+	\item[\textbf{Chapter 1:}] This chapter lists some prerequisite results and
+		definitions about the modal logic \GL\ (one of the more
+		important results will be a completeness result for \GL)  and the arithmetical
+		theory  primitive
+		recursive arithmetic. 
 	\item[\textbf{Chapter 2:}] In this chapter there will be a short introduction to recursion
 		theory, and the main goal is to show Kleene's recursion theorem.
 	\item[\textbf{Chapter 3:}] Here we will introduce the arithmetical hierarchy and
@@ -41,7 +42,7 @@ The project has the following structure:
 
 In the rest of this introduction we will introduce some notational
 conventions and give a short historical overview of the different logical
-fields, that will play a role in the project.
+fields that will play a role in the project.
 
 The bibliography of this project consists of a wide range of logical,
 mathematical and philosophical texts that are, in one way or another, connected to or referenced in the project. 
@@ -57,7 +58,7 @@ $\omega=\{0,1,2,3,\ldots\}$, and $\omega\times\omega=\omega^2$ and so on.
 Subsets of $\omega$ will be denoted by $A,B,C\ldots$ and arbitrary sets will be
 denoted by
 $\Gamma,\Xi,\Theta\ldots$. Lower case Latin letter $a,b,c$ and $x,y,z$ will
-denote integers, and $\vec{x}$ will be shorthand for a finite sequences e.g.$x_1,\ldots,x_n$.
+denote integers, and $\vec{x}$ will be shorthand for a finite sequences e.g. $x_1,\ldots,x_n$.
 We will let $\omega^{<\omega}$ denote the finite sequences over $\omega$.
 Further, recursive functions will be denoted by
 $\varphi,\psi,\vartheta,\ldots$, the graphs of recursive functions will be
@@ -66,7 +67,7 @@ $f,g,h,\ldots$.
 
 Additionally, we  will introduce a system of arithmetic called \textit{primitive
 recursive arithmetic} (\PRA, for short) and the formulas of this
-system will be denoted with $F,G$ and $G$.
+theory and other arithmetical theories  will be denoted with $F,G$ and $H$.
 
 For a partial function $\varphi(x)\downarrow$ will denote that $\varphi(x)$ is defined and
 $\varphi(x)\downarrow=y$ denotes that $\varphi(x)$ is defined and has value $y$.
@@ -75,13 +76,12 @@ $\varphi(x)\downarrow=y$ denotes that $\varphi(x)$ is defined and has value $y$.
 domain and image of $\varphi(x)$.
 A few special functions have their own symbols: $S$ for the
 successor function, $Z$ for the zero function and $P$ for the projection.
-The formulae of the language \PRA\ and languages for other arithmetical
-theories will be denoted by $F,G$ and $H$.
 
-Relations will be denoted by $R$, and $<,>,\leq,\geq$ will be used in the usual
+
+Relations will be denoted by $R$, and $<,>$,\leq and $\geq$ will be used in the usual
 sense on integers. For a binary relation $R$, we will write that $x$ is related
-to $y$ as $xRy$ or $(x,y)\in R$, and if $\vec x$ is related to each other, we
-will write $R(\vec x)$.
+to $y$ as  $(x,y)\in R$ or just $xRy$, and if $\vec x$ is related to each other, we
+will write $(x_1,\ldots x_n)\in R$ or just $R(\vec x)$.
 
 We will use the standard symbols of propositional  logic
 $\wedge,\vee,\rightarrow,\neg$. Further, we will sometimes use $\exists$ and
@@ -91,17 +91,18 @@ from the context. We will augment the propositional logic with the modal unary
 connective $\Box$ and its dual $\Diamond:=\neg\Box\neg$. We will denote modal
 formulas by the Greek letters $\alpha,\beta,\gamma,\sigma$. The symbol
 $\mathcal{H}$ will denote a
-Hintikka frame,  which is a tuple $\la W,R\ra$ where $W$ is a set of "nodes" and
-$R$ is a relation on $W$, and
+Hintikka frame,  which is a tuple $\la W,R\ra$ where $W$ is a set of nodes and
+$R$ is a binary relation on $W$, and
 $\mathcal{K}$ will denote a Kripke model, which is a Hintikka frame with a
-valuation $\phi$ on. We will use superscript to distinguish different frames
+valuation $\phi$ on, which determines in which nodes a given proportional letter
+is true. We will use superscript to distinguish different frames
 and models for each other.
 A tree will be denoted by $\mathcal{T}$.
 
 That $\alpha$ is a theorem of a modal logic $\Lambda$ will be denoted by
 $\vdash_\Lambda\alpha$ and that $F$ is a theorem of \PRA\ will be denoted by
 $\PRA\vdash F$. We will later define a special modal logic called $\GL$ and for
-this modal logic will define an interpretation of its formulae into \PRA\ by
+this modal logic will define interpretations of its formulae into \PRA\ by
 $^*$. With this notation we can state Solovay's first completeness theorem:
 \[\vdash_\GL\alpha\Leftrightarrow\ \forall ^*(\PRA\vdash\alpha^*)\]
 I.e a formula $\alpha$ is a theorem of \GL\ if and only if for all
@@ -121,7 +122,7 @@ connection between these two seemingly different areas of mathematics.
 For most of the development of modal logic, philosophers and logicians tried to
 find a clear semantic for the notions possibility and necessity. These are not
 the only modalities that exists; the one we will look at in this project will
-be provability in a given arithmetical system. But the theory of modal logic
+be \textit{provability} in a given arithmetical system. But the theory of modal logic
 will be a useful framework to work with.
 
 The Greek philosopher Aristotle did try to develop some kind of modal logic
@@ -129,7 +130,7 @@ about necessary and possibility in both his logical work \textit{De
 Interpretatione} and in his
  \textit{Metaphysic}.
 
-With our modern eyes his thoughts about necessity  and possibility seems a
+With our modern eyes, his thoughts about necessity  and possibility seem a
 bit confusing. But he gets some implications about these notions right. A good
 overview of this part of his logical work can be found in \parencite{Lemmon1977} and
 in \parencite{Luka1957}.
@@ -137,19 +138,21 @@ In the late antiquity and the middle ages there was done some work building on
 Aristotle earlier work. 
 
 The next big step for modal logic came in the enlightenment when the
-rationalist philosopher Gottfried W. Leibniz came up with the idea of possible
-worlds.  Leibniz thought that we live in the best possible world, since it is
-this world God has chosen to create. With this idea of a metaphysical possible
-worlds, it was possible to make a clear definition of when a proposition is
+rationalist philosopher Gottfried W. Leibniz came up with the idea of \textit{possible
+worlds}.  Leibniz thought that we live in the best possible world, since it is
+this world God has chosen to create\parencite{Leibniz1760}. With this idea of metaphysical possible
+worlds it was possible to make a clear definition of when a proposition is
 necessary true; and a proposition is necessary true, if it is true in all
-possible worlds. But Leibniz did not any further works on modal logic as a
+possible worlds.\footnote{This view is attributed to Leibniz, but I couldn't
+find any original source of his where he said it.}
+But Leibniz did not do any further works on modal logic as a
 whole.
 
 Modern modal logic is said to be started by Clarence Irving Lewis. He set out
 to develop a formal system without the paradoxes of materiel
 implication. This led to his development of a wide range of different modal
-logical system in the first part of the 20th century. His method was
-syntactical, since there were yet to be develop a "smart" semantic for modal
+logical systems in the first part of the 20th century. His method was
+syntactical, since there were yet to be develop a useful semantic for modal
 logic. But in the start of the 20th century, C. I. Lewis had started the modern
 modal logic, and a lot of other philosophers and logicians began to take an
 interest in the subject.
@@ -159,17 +162,18 @@ In the 1950s there had been a lot of research into the syntax of modal logic.
 But there was still not a clear definition of the semantics of modal logic,
 even though philosophers and logicians still had the intuitive definition of
 necessary truth from Leibniz. The answer came in the late 1950s, when the
-philosophers and logicians Jaako Hintikka
-and Saul Kripke developed the concept of a Kripke model.\footnote{They were not
+philosophers and logicians Jaakko Hintikka (he devolved it in range of essays
+that can be found in \cite{Hintikka1969})
+and Saul Kripke\parencite{Kripke1963} developed the concept of a Kripke model.\footnote{They were not
 	alone in this development.} This concept is crucial in this project,
-since it Robert Solovay showed that it was possible to embed Kripke models into
+since it these models Robert Solovay showed that it was possible embed into
 arithmetic, in such a way that the Kripke model modeled some important features
 of arithmetic.
 Hintikka came up with the idea of a frame; i.e a pair $\la W,R\ra$ where $W$ is
 a set of worlds and $R$ is an arbitrary relation on these. With this
 construction it was possible to explain for a given world, what other worlds
 was accessible to it; i.e possible worlds for it. Kripke came up with the same
-idea, but added a valuation function to the frame, which to each formula of the
+idea, but added a valuation function to the frame, which to each atomic formula of the
 language ascribed a set of worlds in which it was true.  This construction made
 it possible for Kripke to prove some completeness results about modal logics.
 
@@ -178,7 +182,8 @@ When the concept of the Kripke model became wider known, it started a
 \textit{Golden age} of research in modal logic. A lot of completeness results
 about different modal logics was proven in the 1960s and early 1970s; including
 the weak completeness theorem for the logic that would later be known as
-provability logic; this was done by Krister Segerberg without him having
+\textit{provability logic}; this was done by Krister Segerberg in
+\parencite{Sgerberg1971} without him having
 knowledge of what the interpretation of this logic could be.
 
 In this short period of time, modal logic became a rigorous part of
@@ -186,7 +191,7 @@ philosophical logic, but it had not been used in mathematical logic yet. This
 changed in the 1970s when the subfield known as provability logic was created.
 Here modal logic was used to gain more mathematical knowledge, by showing that
 it could axiomatize the notion of provability in the arithmetical theory known
-as Peano Arithmetic. So even though modal logic in its early development was
+as \textit{Peano Arithmetic}. So even though modal logic in its early development was
 mostly used to help philosophers to gain knowledge about philosophical concepts
 like ethics, knowledge and metaphysics, the power of modal logic was also
 useful outside of philosophy.
@@ -197,7 +202,7 @@ A deeper look into the development of modal logic can be found in
 A natural question to ask about a given mathematical theory is which properties
 the notion of provability in the theory have. In this project it will be shown
 that provability in different arithmetical theories  can be seen as a modality,
-which we can modeled in a specific
+which we can model in a specific
 modal logic. But first we will introduce how it became clear how this was a
 possibility.
 
@@ -205,14 +210,15 @@ Even though humans have been using arithmetics for millennials, it had not been
 axiomatized.
 
 It was first in  the second half of the 1800s there was a development in the axiomatization
-of arithmetics. Richard Dedekind and Giuseppe Peano developed axioms system for arithmetics,
+of arithmetics. Richard Dedekind and Giuseppe Peano developed axioms system for arithmetic,
 these was later evolved into was today is known as the Peano axioms for
-arithmetics. 
+arithmetic. 
 
-Another important achievement at the turn of the century, was David Hilbert's
+Another important achievement at the turn of the century was David Hilbert's
 proof that the consistency of Euclidean geometry could be proven by proving
-that arithmetics was consistent in his work  \textit{Grundlagen der Geometrie} This was one of the first steps in what later
-would be known as the Hilbert program. 
+that arithmetics was consistent in his work  \textit{Grundlagen der Geometrie}.
+This was one of the first steps in what later
+would be known as the \textit{Hilbert program}. 
 The Hilbert program was not really a program until the end of 1920, where it
 became clear that its goal was to prove that the \textit{ideal} transfinite mathematics was
 consistent, and that the proof of this should be conducted in a \textit{real}
@@ -227,23 +233,23 @@ This system will be the main system of this project and the definition of it
 will come in the next chapter.
 
 Another  important mathematical system of arithmetics was
-the one developed by Bertrand Russell and Alfred North Whitehead in their work:
+the one developed by Bertrand Russell and Alfred North Whitehead in their work
 \textit{Principia Mathematica}. The goal of this work was somewhat different
 than the one of the Hilbert program. Russell had a thesis that shortly (and not
-the most precis) says that all of mathematics could be reduce to logic. In
-Kantian terms he thought that mathematics was analytical \textit{a priori}. 
+the most precise) says that all of mathematics could be reduced to logic. In
+Kantian terms, he thought that mathematics was analytical \textit{a priori}. 
 
-In 1931 Kurt Gödel's paper: \textit{Über formal unentscheidbare Sätze der
+In 1931, Kurt Gödel's paper \textit{Über formal unentscheidbare Sätze der
 Principia Mathematica und verwandter Systeme I} it was shown  that the system of
 Russell and Whitehead was not complete, and under the assumption that the
 system was consistent that it could not prove its own consistency.
 This result can be generalized to systems strong enough to do simple
 arithmetic. This was made possible by Gödel by defining a predicate inside of
-the mathematical system, which could state that if a given formula of the
+the mathematical system, which could state that wheter a given formula of the
 language of had a proof or not.
 The
 original proof was build on the system of Russel and Whitehead and had a
-assumption of $\omega$-consistency. This
+assumption of $\omega$-consistency. Gödel's incompleteness theorems
 was a blow to the Hilbert program, since the result showed that the goal of it
 could not be fulfilled. Later on John Barkley Rosser in his article
 \parencite{Ross1936} improved the
@@ -251,18 +257,18 @@ result so that normal  consistency was enough.
 
 
 
-Later on in the 1930s Gödel extended the primitive recursive function to the  recursive
+Later on in the 1930s, Gödel extended the primitive recursive function to the  recursive
 functions. A few different definitions of intuitively computable functions was
 set forward by Kleene, Turing and Church and it was shown that all these
 different notions of intuitively computable functions gave rise to the same
-class of functions.
+class of functions, called the intuitively computable functions.
 
 This lead Church to state the so called \textit{Church-Turing Thesis}, that
 states that this class of functions are the computable functions.
 
-In 1955 Martin Löb showed that the proof predicate that Gödel had created
-fulfilled some simple conditions that now is known as Löb's derivability
-conditions. In the late 1960s and early 1970s it became clear that these
+In 1955, Martin Löb showed that the proof predicate that Gödel had created
+fulfilled some simple conditions that now is known as \textit{Löb's derivability
+conditions}. In the late 1960s and early 1970s, it became clear that these
 conditions made an interpretation of the proof predicate possible in modal
 logic.
 
@@ -286,14 +292,15 @@ $\alpha$ was a theorem of provability logic, then for all interpretations of
 $\alpha$ in a fragment of arithmetics it  was also a theorem of this fragment; but
 the other way was harder to show. In the same time there was proven a number of
 important theorems about provability; one of these, called the Fixed Point
-Theorem,  will be proven in chapter
+Theorem,  will be proven in Chapter
 \ref{chap:Fixed}.
 A short overview of this early
 development can be found in \parencite{Bool1991}.
 
-It was proven in 1976 by Solovay that the modal
+It was proven in 1976 by Solovay in his paper \textit{Provability
+interpretations of modal logic} that the modal
 logic now known as provability logic, is the logic of the provability predicate
-in Peano Arithemic; i.e if for all interpretations
+in Peano arithmetic; i.e if for all interpretations
 of a formula $\alpha$, if this interpretation was a theorem of Peano
 arithmetics,
 then the formula $\alpha$ was a theorem of provability logic. This also means that
@@ -301,12 +308,15 @@ provability logic can be seen as an axiomataxion of the proof predicate.
 Solovay's result will be the main result in this project; it will be stated
 precisely and proven in Chapter \ref{chap:Complete}.
 
+
+
 After Solovay's article was published, the research focus of provability logic
-was to generalize Solovay's result to other fragments of arithmetics and if
+was to generalize Solovay's result to other fragments of arithmetics and to
+show if 
 it did also hold for multi-modal provability logic and quantified provability
-logic. The results of these results will be commented on in the last part of
-chapter \ref{chap:Complete} and in chapter \ref{chap:Further}
+logic. The some of these results will be commented on in the last part of
+Chapter \ref{chap:Complete} and in Chapter \ref{chap:Further}
 
 The majority of the main results about provability logic were proven in the late
-70s, 80s and early 90s. This project will not go beyond these early results.
+'70s, '80s and early '90s. This project will not go beyond these early results.
 \end{document}

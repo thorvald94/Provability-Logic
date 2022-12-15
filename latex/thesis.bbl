@@ -1138,7 +1138,6 @@
       \field{labeltitlesource}{title}
       \field{title}{{Models for modalities : Selected essays.}}
       \field{year}{1969}
-      \true{nocite}
     \endentry
     \entry{Hughes1971}{book}{}
       \name{author}{2}{}{%
@@ -1414,7 +1413,34 @@
       \field{title}{{Semantical Analysis of Modal Logic I Normal Modal Propositional Calculi}}
       \field{volume}{9}
       \field{year}{1963}
-      \true{nocite}
+    \endentry
+    \entry{Leibniz1760}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=43264ad0ca432941380b64791fea59f5}{%
+           family={Leibniz},
+           familyi={L\bibinitperiod},
+           given={Gottfried\bibnamedelimb Wilhelm\bibnamedelima von.},
+           giveni={G\bibinitperiod\bibinitdelim W\bibinitperiod\bibinitdelim v\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Lausanne}%
+      }
+      \strng{namehash}{43264ad0ca432941380b64791fea59f5}
+      \strng{fullhash}{43264ad0ca432941380b64791fea59f5}
+      \strng{bibnamehash}{43264ad0ca432941380b64791fea59f5}
+      \strng{authorbibnamehash}{43264ad0ca432941380b64791fea59f5}
+      \strng{authornamehash}{43264ad0ca432941380b64791fea59f5}
+      \strng{authorfullhash}{43264ad0ca432941380b64791fea59f5}
+      \field{sortinit}{L}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{Nouv. éd. augmentée de l'histoire de la vie et des oumages de l'auteur / par L. de Neufville.}
+      \field{title}{Essais de théodicée sur la bonté de dieu, la liberté de l'homme, et l'origine du mal.}
+      \field{year}{1760}
     \endentry
     \entry{Lemmon1977}{book}{}
       \name{author}{1}{}{%
@@ -1908,7 +1934,6 @@
       \field{series}{Filosofska Studier, vol.13}
       \field{title}{An Essay in Classical Modal Logic}
       \field{year}{1971}
-      \true{nocite}
     \endentry
     \entry{Sipser2013}{book}{}
       \name{author}{1}{}{%
