@@ -1381,12 +1381,12 @@
     \endentry
     \entry{Kripke1963}{article}{}
       \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=a3de81ce95d09b9915d1be05f9970108}{%
+        {{un=2,uniquepart=given,hash=a3de81ce95d09b9915d1be05f9970108}{%
            family={Kripke},
            familyi={K\bibinitperiod},
            given={Saul\bibnamedelima A},
            giveni={S\bibinitperiod\bibinitdelim A\bibinitperiod},
-           givenun=0}}%
+           givenun=2}}%
       }
       \list{language}{1}{%
         {eng}%
@@ -1403,6 +1403,7 @@
       \strng{authorbibnamehash}{a3de81ce95d09b9915d1be05f9970108}
       \strng{authornamehash}{a3de81ce95d09b9915d1be05f9970108}
       \strng{authorfullhash}{a3de81ce95d09b9915d1be05f9970108}
+      \field{extraname}{1}
       \field{sortinit}{K}
       \field{sortinithash}{d3edc18d54b9438a72c24c925bfb38f4}
       \field{extradatescope}{labelyear}
@@ -1413,6 +1414,66 @@
       \field{title}{{Semantical Analysis of Modal Logic I Normal Modal Propositional Calculi}}
       \field{volume}{9}
       \field{year}{1963}
+    \endentry
+    \entry{Kripke1959a}{article}{}
+      \name{author}{1}{}{%
+        {{un=2,uniquepart=given,hash=a3de81ce95d09b9915d1be05f9970108}{%
+           family={Kripke},
+           familyi={K\bibinitperiod},
+           given={Saul\bibnamedelima A.},
+           giveni={S\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=2}}%
+      }
+      \strng{namehash}{a3de81ce95d09b9915d1be05f9970108}
+      \strng{fullhash}{a3de81ce95d09b9915d1be05f9970108}
+      \strng{bibnamehash}{a3de81ce95d09b9915d1be05f9970108}
+      \strng{authorbibnamehash}{a3de81ce95d09b9915d1be05f9970108}
+      \strng{authornamehash}{a3de81ce95d09b9915d1be05f9970108}
+      \strng{authorfullhash}{a3de81ce95d09b9915d1be05f9970108}
+      \field{extraname}{2}
+      \field{sortinit}{K}
+      \field{sortinithash}{d3edc18d54b9438a72c24c925bfb38f4}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Symbolic Logic}
+      \field{title}{A Completeness Theorem in Modal Logic}
+      \field{volume}{24(1)}
+      \field{year}{1959}
+      \field{pages}{1\bibrangedash 14}
+      \range{pages}{14}
+    \endentry
+    \entry{Kripke1959b}{article}{}
+      \name{author}{1}{}{%
+        {{un=2,uniquepart=given,hash=a3de81ce95d09b9915d1be05f9970108}{%
+           family={Kripke},
+           familyi={K\bibinitperiod},
+           given={Saul\bibnamedelima A.},
+           giveni={S\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=2}}%
+      }
+      \strng{namehash}{a3de81ce95d09b9915d1be05f9970108}
+      \strng{fullhash}{a3de81ce95d09b9915d1be05f9970108}
+      \strng{bibnamehash}{a3de81ce95d09b9915d1be05f9970108}
+      \strng{authorbibnamehash}{a3de81ce95d09b9915d1be05f9970108}
+      \strng{authornamehash}{a3de81ce95d09b9915d1be05f9970108}
+      \strng{authorfullhash}{a3de81ce95d09b9915d1be05f9970108}
+      \field{extraname}{3}
+      \field{sortinit}{K}
+      \field{sortinithash}{d3edc18d54b9438a72c24c925bfb38f4}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Symbolic Logic}
+      \field{title}{Semantical Analysis of Modal Logic}
+      \field{volume}{24(4)}
+      \field{year}{1959}
+      \field{pages}{323\bibrangedash 324}
+      \range{pages}{2}
     \endentry
     \entry{Leibniz1760}{book}{}
       \name{author}{1}{}{%
@@ -1485,6 +1546,68 @@
       \field{series}{American philosophical quarterly. Monograph series ; monograph no. 11.}
       \field{title}{{An introduction to modal logic : the "Lemmon notes" }}
       \field{year}{1977}
+    \endentry
+    \entry{Lewis1914}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9f5e7e3f149f3985544f57ed134f88dc}{%
+           family={Lewis},
+           familyi={L\bibinitperiod},
+           given={C.\bibnamedelimi I.},
+           giveni={C\bibinitperiod\bibinitdelim I\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{9f5e7e3f149f3985544f57ed134f88dc}
+      \strng{fullhash}{9f5e7e3f149f3985544f57ed134f88dc}
+      \strng{bibnamehash}{9f5e7e3f149f3985544f57ed134f88dc}
+      \strng{authorbibnamehash}{9f5e7e3f149f3985544f57ed134f88dc}
+      \strng{authornamehash}{9f5e7e3f149f3985544f57ed134f88dc}
+      \strng{authorfullhash}{9f5e7e3f149f3985544f57ed134f88dc}
+      \field{extraname}{1}
+      \field{sortinit}{L}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Mind}
+      \field{title}{The Calculus of Strict Implication}
+      \field{volume}{23(1)}
+      \field{year}{1914}
+      \true{nocite}
+      \field{pages}{240\bibrangedash 247}
+      \range{pages}{8}
+    \endentry
+    \entry{Lewis1918}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9f5e7e3f149f3985544f57ed134f88dc}{%
+           family={Lewis},
+           familyi={L\bibinitperiod},
+           given={C.\bibnamedelimi I.},
+           giveni={C\bibinitperiod\bibinitdelim I\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Berkeley}%
+      }
+      \list{publisher}{1}{%
+        {University of California Press}%
+      }
+      \strng{namehash}{9f5e7e3f149f3985544f57ed134f88dc}
+      \strng{fullhash}{9f5e7e3f149f3985544f57ed134f88dc}
+      \strng{bibnamehash}{9f5e7e3f149f3985544f57ed134f88dc}
+      \strng{authorbibnamehash}{9f5e7e3f149f3985544f57ed134f88dc}
+      \strng{authornamehash}{9f5e7e3f149f3985544f57ed134f88dc}
+      \strng{authorfullhash}{9f5e7e3f149f3985544f57ed134f88dc}
+      \field{extraname}{2}
+      \field{sortinit}{L}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{A Survey of Symbolic Logic}
+      \field{year}{1918}
+      \true{nocite}
     \endentry
     \entry{Lind1996}{article}{}
       \name{author}{1}{}{%

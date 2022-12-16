@@ -28,7 +28,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.2.2}\text {\textbf {PRA}}}{16}{subsection.1.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2.3}Arithmetization of the syntax}{19}{subsection.1.2.3}%
+\contentsline {subsection}{\numberline {1.2.3}Arithmetization of the Syntax}{19}{subsection.1.2.3}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.2.4}The Proof Predicate and the Theorems}{21}{subsection.1.2.4}%
 \defcounter {refsection}{0}\relax 
@@ -40,7 +40,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.3}The \textit {s-m-n}-Theorem}{29}{section.2.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.4}Recursively Enumerable sets and the Graph of a function}{31}{section.2.4}%
+\contentsline {section}{\numberline {2.4}Recursively Enumerable Sets and the Graph of a Function}{31}{section.2.4}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.5}The Recursion Theorem}{35}{section.2.5}%
 \defcounter {refsection}{0}\relax 
@@ -50,13 +50,13 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.1}The Arithmetical Hierarchy}{39}{section.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Fragments of arithmetic}{41}{section.3.2}%
+\contentsline {section}{\numberline {3.2}Fragments of Arithmetic}{41}{section.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}\text {\textbf {PRA}}'s and the other fragments of Arithmetics}{43}{section.3.3}%
+\contentsline {section}{\numberline {3.3}\text {\textbf {PRA}}'s and the Other Fragments of Arithmetic}{43}{section.3.3}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.3.1}Induction in \text {\textbf {PRA}}}{45}{subsection.3.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.4}Further extensions of the arithmetical hierarchy}{47}{section.3.4}%
+\contentsline {section}{\numberline {3.4}Further Extensions of the Arithmetical Hierarchy}{47}{section.3.4}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.5}Sigma Completeness}{47}{section.3.5}%
 \defcounter {refsection}{0}\relax 

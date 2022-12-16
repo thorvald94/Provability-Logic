@@ -8,7 +8,7 @@ these theorems follows a technique invented by Robert Solovay, which today is
 known as a \textit{Solovay construction}. This technique is a way of embedding
 Kripke models into arithmetic. The first theorem show that the $\Box$-operator of
 the logic \GL\ behaves like the proof predicate $\text{Pr}$ from \PRA. The
-second theorem shows that the modal logic \GLS axiomatize the notion
+second theorem shows that the modal logic \GLS\ axiomatize the notion
 provability in the standard model of arithmetic $\mathcal{N}$.
 
 Further these theorems shows that the proof predicate of arithmetics can be
@@ -39,12 +39,14 @@ formulas are the theorems of \GL. I.e we want to prove the following bi-implicat
 
 \[\GL\vdash\alpha\Leftrightarrow \forall^*(\PRA\vdash\alpha^*)\]
 This statement says that \GL\ completely captures what \PRA\ can say about its own
-provability. This result can be expanded to other fragments of arithmetics. So
+provability; and it is known as Solovay's first completeness theorem together
+with the soundness theorem. This result can be 
+expanded to other fragments of arithmetics. So
 the modal logic \GL\ is the modal logic that captures what a lot of  different fragments of
 arithmetics can say about its own provability. Later on in the project it will be shown for which fragments this
 is the case. 
 
-In \ref{chap:second} we will show that \GLS\ is the modal logic of the proof
+In Section \ref{chap:second} we will show that \GLS\ is the modal logic of the proof
 predicate of the standard modal $\mathcal{N}$. This is called Solovay's second completeness theorem.
 
 We will start with proving the "$\Rightarrow$" implication; i.e that every
@@ -78,7 +80,7 @@ We can immediately use this theorem in conjecture with the fixed point theorem
 to deduce some things about formulae of \PRA.
 \section{Solovay's Soundness Theorem and Fixed Points}
 
-We will now comment a bit about the implications of the soundness theorem and
+We will now comment a bit on the implications of the soundness theorem and
 the fixed point theorem.
 
 From table \ref{Fig} and the arithmetical soundness theorem, we can conclude the following things:
@@ -127,7 +129,10 @@ From table \ref{Fig} and the arithmetical soundness theorem, we can conclude the
 		sentences are those equivalent to their own consistency.
 \end{enumerate}
 \section{The First Theorem}
-Having shown soundness, we will now show the completeness theorem:
+Having shown soundness, we will now show the completeness theorem. This theorem
+was proven after the soundness theorem. But it was at the time before it was
+proven conjectured that it was true. 
+
 \begin{thm}[Solovay's first completeness theorem]
 	For all modal sentences $\alpha$ we have that:
 	\[\forall ^* (\PRA\vdash \alpha^*)\Rightarrow \GL\vdash \alpha\]
@@ -142,7 +147,7 @@ W,R,\phi,w_0\ra$ in which we have $w_0\not\in\phi(\alpha)$. The goal is then to
 find an interpretation $^*$ such that $\PRA\not\vdash\alpha^*$.
 
 The construction of this
-$^*$ is rather complex, and will take the rest of this subsection to prove. So for the
+$^*$ is rather complex, and will take the rest of this section to prove. So for the
 rest of this subsection fix a modal formula $\alpha$ such that $\GL\not\vdash
 \alpha$
 and let $\mathcal{K}=\la W,R,\phi,w_0\ra$ be a pointed Kripke model such that
@@ -200,8 +205,8 @@ disjunction of the following three formulas:
 		v_4(\tau(v_0\dot-\ol 1,v_4)\wedge v_4\ol Rv_1$)
 \item  $v_0>\0 \wedge \exists v_3v_4\forall v_2\leq
 	v_0\neq(\text{Prov}(v_0,\Godelnum{L_\tau\not =v_2})\wedge
-	\chi(v_3,v_0-\ol 1,v_4)\wedge v_4\ol Rv_1)\\
-	\wedge \tau(v_0-\ol 1,v_1)$
+	\zeta(v_3,v_0\dot-\ol 1,v_4)\wedge v_4\ol Rv_1)\\
+	\wedge \tau(v_0\dot -\ol 1,v_1)$
 \end{enumerate}
 Thus we have that the set $\Xi(\zeta)$ can be seen as a primitive recursive
 function of $\Godelnum{\zeta}$; i.e we have:
@@ -834,7 +839,7 @@ theories $\textbf{T}$ that fulfills the following to conditions:
 
 This proof does not use the Recursion theorem for creating the function
 $\varphi$, but instead uses the diagonalization lemma. The
-proof of this will not this will not be given here, but it can be found in
+proof of this will will not be given here, but it can be found in
 \parencite{Dick1991}. This generalization shows that \GL\ axiomatize a very big
 range of different fragments of arithetmics; i.e the proof predicate in all of
 these fragments behaves in the same way, as we have that the proof predicate of

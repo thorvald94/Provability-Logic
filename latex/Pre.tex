@@ -542,7 +542,7 @@ induction; i.e induction on every formula, the system we would have defined
 would be known as \textbf{PA}; Peano Arithmetics, and this system is a lot
 stronger than what is needed for the proof of Gödel's incompleteness theorems
 and Solovay's completeness theorems. We will in Chapter \ref{chap:PRA} comment
-a bit more about different arithmetical theories and the amount of induction in
+a bit more on different arithmetical theories and the amount of induction in
 them.  Having written down the
 axioms, we will move on to the
 inference rules of \PRA.
@@ -574,7 +574,7 @@ primitive recursive functions.
 \end{thm}
 That \PRA\ can compute the primitive recursive functions makes it possible to
 encode the syntax of \PRA. This will be explained in the next section.
-\subsection{Arithmetization of the syntax}
+\subsection{Arithmetization of the Syntax}
 
 In this section we will discus how each expression $\rho$ in the language of \PRA\ can
 be given a unique code-number $\Godelnum{\rho}$ called the Gödel number. This makes it possible for \PRA\ to express
@@ -643,7 +643,7 @@ derivability conditions:
 	\item[D3:]
 		$\PRA\vdash\Pr(\Godelnum{F})\rightarrow\Pr(\Godelnum{\Pr(\Godelnum{F})})$.
 \end{enumerate}
-It is also clear that $\neg\Pr(\bot)$, where $\bot$ is some false statement,
+It is also clear that $\neg\Pr(\Godelnum{\bot})$, where $\bot$ is some false statement,
 expresses consistence of \PRA. We will denote this by $\text{Con}$.
 With the use of the $subst$ function, we can further  prove the following
 important lemma:
