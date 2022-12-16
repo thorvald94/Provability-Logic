@@ -47,66 +47,55 @@ of a tree and a few results about these.
 \subsection{Trees}
 In this subsection the notion of a special type of graphs called trees will be
 introduced. The goal of this section is to prove König's lemma about trees. 
-This section will be written in the language of graph theory, which is the
-language usually used to state and prove König's lemma. The section could be
-translated into the language of modal logical frames, but it is not done here.
+This section will be written in a mix of the language of graph theory and the
+language of modal logic frames. Normally König's Lemma is stated in the
+language of only graph theory.
 
 We
 will start of by defining the notion of a tree.
 \begin{defi}
-	A \textit{tree} is a tuple $\mathcal{T}=\la W,<,w_0\ra$ where $(W,<)$ where:
+	A \textit{tree} is a tuple $\mathcal{T}=\la W,R,w_0\ra$ where $(W,R)$ where:
 	\begin{enumerate}
-		\item $<$ is transitive and asymmetric.
-		\item $w_0$ is the minimal element of $<$. I.e $w_0
-			<w$ for all $w\in W$.
+		\item $R$ is transitive and asymmetric.
+		\item $w_0$ is the minimal element of $R$. I.e $w_0
+			Rw$ for all $w\in W$.
 		\item The set of predecessors of any element is finite and
-			linearly ordered by $<$.
+			linearly ordered by $R$.
 	\end{enumerate}
 	A tree is \textit{infinite} if the set $W$ is infinite.
 \end{defi}
 
 It is clear that trees can be seen as a special form of frames.
 
-We will state some immediate definitions that should be known from the course
-\textit{Diskret matematik}:
+We will state some immediate definitions some of which should be known from the course
+\textit{Diskret matematik}, these can be found in \parencite{Lutzen2015}:
 \begin{defi}
 	The \textit{nodes} of a tree $\mathcal{T}=\la W,R,w_0\ra$ are the
-	elements of the set $W$.
+	elements of the set $W$. Normally in graph theory these are called
+	vertices.
+	We say that there is a \textit{path} between node $w$ and $v$ if and only if
+	$wR^{n}v$ for some $n$.
 
-	If $w,v\in W$ are nodes and  $wRv$ then we say that they are joined  by an \textit{edge}.
-
-
-	A \textit{walk} is an altering series of vertices and edges in
-	which for each $v$ we have that $wRv$ for the $w$ immediately before it 
-	. We call a walk for a \textit{trail}, if all the edges of
-	the walk are distinct. A \textit{path}, is trail in which all the
-	nodes are different.
 \end{defi}
 
 
 It is known from the course \textit{Diskret matematik} that between any two
-vertices there is exactly one path in a tree. 
+nodes there is exactly one path in a tree. 
 As the concept of a tree is assumed to be known, we will not look at any concrete
 examples.
 We will need
 some further definitions to state and prove König's lemma:
 \begin{defi}
-	Let $w\in W$. The \textit{degree} of of $w$ in $\mathcal{T}$ is the
-	number of edges incident to it.
-\end{defi}
-\begin{defi}
-	Let $w$ be a node of a tree $\mathcal{T}$, we then define the map
-	$\pi:\mathcal{T}\setminus\{w_0\}\rightarrow\mathcal{T}$ in the
-	following way:
-	\[\pi(w)=\text{The node adjacent to}\ w\ \text{on the path to}\ w_0\]
-	We call $\pi(w)$ the \textit{parent node} of $w$. 
+	Let $w$ be a node of a tree $\mathcal{T}$, we will then call the node
+	$v$ such that $vRw$ for the \textit{parent node} of $w$. Since the
+	relation $R$ is transitive and anti-symmetric, we know that there can
+	maximal be one parent node for each $w$.
 
 	The \textit{child nodes} of $w$ are the elements of the set
-	$\{v\mathcal{T}:\pi(v)=w\}$, i.e the child nodes of $w$ are all the
+	$\{v\in W:wRv\}$, i.e the child nodes of $w$ are all the
 	nodes of $\mathcal{T}$ to which $w$ is the parent. If $w$ has no child
 	nodes it is called a \textit{leaf node}.
 \end{defi}
-It is clear that if $w$ is a leaf node, then the degree of $w$ is $1$.
 \begin{defi}
 	A subset $\Gamma$ of a tree $\mathcal{T}$ is called a
 	\textit{branch} if and only if all the following conditions hold:
@@ -120,10 +109,6 @@ It is clear that if $w$ is a leaf node, then the degree of $w$ is $1$.
 	\end{enumerate}
 	A branch $\Gamma$ is called \textit{infinite} if and only if it has no
 	leaf node at the end.
-\end{defi}
-\begin{defi}
-	A \textit{fork} of a $\mathcal{T}$ is a node of $\mathcal{T}$ which is the end
-	point of two or more branches.
 \end{defi}
 \begin{defi}
 	A tree $\mathcal{T}$ is called a \textit{finitely branching tree} if
@@ -225,8 +210,9 @@ which we assume to be  a counter model i.e
 	exists by the completeness theorem for \GL. Let $S$ be the set of subformulae of
 	$\alpha$ The goal is now to define a finite tree
 	model: $\mathcal{K}_{\mathcal{T}}=\la
-	W_T,<_{\mathcal{T}},\phi_{\mathcal{T}}\ra$. We will do this be
-	letting $W_T$ consist of finite $R$-increasing sequences from $K$.
+	W_T,R_{\mathcal{T}},\phi_{\mathcal{T}}\ra$. We will do this be
+	letting $W_\T$ consist of finite $R$-increasing sequences from
+	$\mathcal{K}$.
 
 	\textbf{Stage 0:} Let the sequence $(w_0)$ be a part of
 	$K_{\mathcal{T}}$.
@@ -240,14 +226,14 @@ which we assume to be  a counter model i.e
 	$v\in W$ such that $w_0Rv$, and such that we have:
 	\[v\in\phi(\Box\beta),\ v\not\in\phi(\beta)\]
 	We can do this because of axiom \textbf{L}. We will then add the sequence
-	$(w_0,\ldots w_n,v)$ to the set $W_T$.
+	$(w_0,\ldots w_n,v)$ to the set $W_\T$.
 
 	The model $\mathcal{K}_{\mathcal{T}}$ then further consists of:
 	\begin{enumerate}
-		\item The relation $<_{\mathcal{T}}$ which is the usual strict
+		\item The relation $R_{\mathcal{T}}$ which is the usual strict
 	ordering by extension of finite sequences. 
 		\item	The world $w_0$ which is the root node.
-		\item The valuation$\phi_{\mathcal{T}}$ that is the defined in
+		\item The valuation $\phi_{\mathcal{T}}$ that is the defined in
 		the following way:
 		\[(w_0,\ldots,w_n)\in \phi_{\mathcal{T}}(p)\Leftrightarrow w_n\in\phi(p)\]
 	\end{enumerate}
@@ -257,7 +243,7 @@ which we assume to be  a counter model i.e
 	p\]
 	We will now prove two claims, by which the theorem will follow:
 
-	\textbf{Claim 1:} $\mathcal{T}=(W_{\mathcal{T}},<_{\mathcal{T}},w_0)$ is a finite tree with origin $(w_0)$
+	\textbf{Claim 1:} $\mathcal{T}=(W_{\mathcal{T}},R_{\mathcal{T}},w_0)$ is a finite tree with origin $(w_0)$
 	Finiteness follows from Lemma \ref{lem:kong}, since the tree $\mathcal{T}$
 	is finitely branching as the branches correlate with the elements
 	of $S$. Further there is no infinite paths in $\mathcal{T}$, since when

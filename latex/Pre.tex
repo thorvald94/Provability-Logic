@@ -80,7 +80,15 @@ will begin by defining a Hintikka frame and a Kripke model.
 \end{defi}
 We do not at this time give the relation $R$ any properties. It could be
 reflexive, transitive, anti-symmetric or have any other properties that a
-relation can have.
+relation can have. But we will already now make the following definition, which
+will be used in Chapter \ref{chap:GL}
+
+\begin{defi}
+	Let $R$ be a relation on a set $W$. For each $i\in\omega$ define $R^i$
+	as follows: $R^0$ is the identity relation on $W$. $R^{i+1}=\{\la
+	w,v\ra: \exists v'(wR^iv'\wedge v'Rv\}$. Thus $R^1=R$ and $wR^nv$ if
+	and only if $\exists v_0,\ldots v_n(w=v_0R\ldots Rv_n=v)$.
+\end{defi}
 \begin{defi}[Kripke model]
 	A \textit{Kripke model} is a tuple $\mathcal{K}=\la \mathcal{H},\phi\ra$ where
 	$\mathcal{H}$ is a Hintikka frame and $\phi$ is a valuation function that to
