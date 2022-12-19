@@ -39,8 +39,8 @@ theory, the arithmetic and the modal logic.
 \section{Trees and \GL}
 
 It is known that \textbf{GL} is weakly complete with respect to conversely
-well-founded transitive frames. There is another result that is in the same
-vein; \textbf{GL} is complete with respect to finite trees. The goal of this
+well-founded transitive frames. Now, if we turn to the subject of graph theory we can observe a 
+similar result, which is that \GL is complete with respect to finite trees.  The goal of this
 section is to prove this result. We will first start out by defining the notion
 of a tree and a few results about these.
 
@@ -67,8 +67,7 @@ will start of by defining the notion of a tree.
 
 It is clear that trees can be seen as a special form of frames.
 
-We will state some immediate definitions some of which should be known from the course
-\textit{Diskret matematik}, these can be found in \parencite{Lutzen2015}:
+We will state some immediate definitions that are needed to state the lemma.
 \begin{defi}
 	The \textit{nodes} of a tree $\mathcal{T}=\la W,R,w_0\ra$ are the
 	elements of the set $W$. Normally in graph theory these are called
@@ -123,19 +122,18 @@ The proof of König's lemma will depend on the following axiom:
 	\[\forall n\in\omega: w_nRw_{n+1}\]
 \end{axiom}
 
-This axiom is a weak form of the axiom of choice. So it there might be some
-controversies about the use of it. These will not be commented on here.
+This axiom is a weak form of the axiom of choice, which makes it controversial. This controversy will not be commented on here. 
 
 
 In the proof of König's,
 lemma we will look at the subset of all nodes with infinitely many descendants
-and the relation $R$ where we have that for nodes $w,v\in W$:  $wRv$ if and only if $v$ is a child of $w$. This relation and
+and the relation $R$. This relation and
 set
 fulfills the conditions of the axiom and we can thus create the sequence
 $(w_n)_{n\in\omega}$.
 
 We can now state König's lemma:
-\begin{lemma}[König's lemma]
+\begin{lemma}[König's Lemma]
 	\label{lem:kong}
 	Let $\mathcal{T}$ be a finitely branching tree. Then it is infinite if
 	and only if has an infinite path.
@@ -152,7 +150,7 @@ We can now state König's lemma:
 	\begin{enumerate}
 		\item $w_0$ is the root node.
 		\item $w_{n+1}$ is a child node of $w_n$.
-		\item each $w_n$ has infinitely many descendants i.e. that the
+		\item each $w_n$ has infinitely many descendants i.e. the
 			set $\{v\in W:w_nRv\}$ is a infinite set.
 	\end{enumerate}
 	Then $w$ is a branch of infinite length, and thus $\mathcal{T}$ has an
@@ -177,12 +175,11 @@ in the proof of the theorem in the next subsection, which can be seen as strengt
 weak completeness theorem of chapter \ref{chap:Pre}.
 
 \subsection{The Finite Tree Theorem}
-
-The following theorem is a strengthening of the weak completeness theorem for
-\GL, since trees are a subset of the transitive conversely well-founded models
-. Due to this theorem we get that we can without loss of generality assume that
-our model is finite. This last feature will be crucial in the proof of main
-theorems of the next chapter.
+We now present the Finite Tree Theorem, which is a stronger version of the weak completeness
+theorem for \GL, because trees are a subset of the transitive conversely well-founded models. 
+The purpose is to show that we can, without loss of generality, assume that 
+our model is finite. This last feature will be a crucial 
+part in the proof of the main theorems in the next chapter. 
 
 \begin{thm}[The Finite Tree Theorem]
 	Let $\alpha$ be a modal formula. Then the following are equivalent:
@@ -289,11 +286,11 @@ which we assume to be  a counter model i.e
 	\not\vDash_{(w_0)}^{\mathcal{K}_\T}\alpha\]
 \end{proof}
 
-From this theorem a number of intereseting corroloais follows: 
+From this theorem a number of interesting corollaries follows: 
 
 \begin{cor}
 	\GL\ is decidable, i.e there is an effective procedure for each modal formula
-	$\alpha$ that detemines if $\vdash_\GL\alpha$ or
+	$\alpha$ that determines if $\vdash_\GL\alpha$ or
 	$\not\vdash_\GL\alpha$.
 \end{cor}
 \begin{cor}
@@ -309,7 +306,7 @@ From this theorem, we can also find the minimum element of a Kripke model of
 	Let $\mathcal{K}=\la W,R,\phi\ra$ be a Kripke model. A \textit{pointed
 	Kripke model} is a pair $\la \mathcal{K},w_0\ra$ where $w_0$ is a node
 	of $W$. In the rest of this, project we will have that $w_0$ is the
-	minimum node of the tree of \GL. We will often just define a pointed
+	minimum node of the pointe Kripke model. We will often just define a pointed
 	Kripke model, as $\mathcal{K}=\la W,R,\phi,w_0\ra$.
 \end{defi}
 
@@ -355,9 +352,9 @@ We will first need two definitions:
 	$\vDash_v^{\mathcal{K}'}\beta$. Since $wR^0w$ and $d(\alpha)=n$ the
 	theorem will follow.
 
-	The proof will be induction on the complexity if $\beta$. 
+	The proof will be induction on the complexity of $\beta$. 
 	The cases where $\beta$ is $\bot$ or a $p\in P$ is trivial. If $\beta$
-	is $\gamma\rightarrow\sigma$ then $d(\gamma),d(\sigma)\leq d(\beta)$
+	is $\gamma\rightarrow\sigma$ then $d(\gamma),d(\sigma)\leq d(\beta)$,
 	and the result follows the induction hypothesis.
 	If $\beta$ is $\box\gamma$, $wR^iv$ and $d(\beta)+i\leq n$. Then $v\in
 	V$ and $d(\beta)=d(\gamma)+1$. If $vRv'$ then $wR^{i+1}v'$,
@@ -373,7 +370,7 @@ We will first need two definitions:
 	$\vDash_v^{\mathcal{K}'}\beta$.
 \end{proof}
 
-From this theorem the following corollary is a immediate consequence and we
+From this theorem the following corollary is an immediate consequence, and we
 will use it to prove parts of the main theorem of the next chapter:
 \begin{cor}\label{cor:conti}
 	Let $\alpha$ be a formula. Let $\mathcal{K}=\la W,R,\phi\ra$ and
@@ -398,35 +395,36 @@ the main theorem found in that work is a bit better stated than the one found in
 \begin{defi}
 	The modal logic \GLS\ is the logic which has the following axioms 
 	\begin{enumerate}
-		\item[GL] All theorems of \GL.
-		\item[Refl] $\Box p\rightarrow p $
+		\item[\textit{GL}:] All theorems of \GL.
+		\item[\textit{Refl}:] $\Box p\rightarrow p $
 	\end{enumerate}
 	and which sole rule of inference is modus ponens.
 \end{defi}
 
-The axiom Refl is added since we for \PRA\ can add the following principle called
-\textit{local reflexion principle} (Rfn) for any formula:
+The axiom \textit{Refl} is added since for we \PRA\ can add the following principle called
+\textit{local reflexion principle} (Rfn), which  for any formula says:
 \[\text{Pr}(\Godelnum{F})\rightarrow F\]
 We will further define $\text{Con}^n$ for $n>0$ in the following way:
 $\text{Con}^1=\text{Con}$, $\text{Con}^{n+1}=\text{Con}_{\PRA+\text{Con}^n}$,
-where $\text{Con}_{\PRA+text{Con}^n}$ is the consistent of \PRA\ with
+where $\text{Con}_{\PRA+\text{Con}^n}$ is the consistency of \PRA\ with
 $\text{Con}^n$ added. It can then be shown that $\PRA +\text{Rfn}$ is a proper
 extension of $\PRA+\{\text{Con}^n,n\in \omega\}$. So we add the axiom Refl to
 simulate the local reflexion principle in \GLS.
 Another more cumbersome definition of this modal logic can be found in
-\parencite{Smor1985}. We follow the definition form \parencite{Boolos1993} and
+\parencite{Smor1985}. We follow the definition from \parencite{Boolos1993} and
 \parencite{Lind1997} since it is a lot easier to understand and work with. It
 is also the original definition from \parencite{solovay976}
 
 It should be noted that this modal logic is not a \textit{normal} one, since it
-do not have  necessitation as a rule of inference. If a modal logic just extended
-\GL\ with the axiom \textit{Refl} then this logic would prove both
+does not have  necessitation as a rule of inference. If a modal logic just extended
+\GL\ with the axiom \textit{Refl}, then this logic would prove both
 $\neg\Box\bot$ and $\Box\bot$ and thus be inconsistent; this is why we have not
 included it as rule. 
 
 There is no completeness theorem for \GLS\ in the same vein as the finite tree
 theorem for \GL. But there is another similar result we will now state and
-prove (This theorem is found in \parencite{Lind1997}).
+prove (This theorem is found in \parencite{Lind1997}). But we will first need a
+definition:
 \begin{defi}
 	Let $\alpha$ be any modal formula, let $\mathcal{K}=\la
 W,R,\phi,w_0\ra$ be a pointed Kripke model and suppose that $w\in W$.
@@ -440,9 +438,9 @@ $\alpha$-reflexive $\mathcal{K}\in\mathcal{F}$.
 
 If we want to show that a formula $\alpha$ is not r-valid in the class of
 finite tree Kripke models, it is enough to find a $\mathcal{K}$ in this class
-and a $\alpha$-reflexive $w\in W$ such that $\alpha\not\in\phi(w)$.
+and an $\alpha$-reflexive $w\in W$ such that $\alpha\not\in\phi(w)$.
 
-The main theorem about \GLS\ is the following, which gives a sort of
+The main theorem about \GLS\ is the following, which provides a sort of
 model theory for this modal logic. 
 
 \begin{thm}
@@ -459,7 +457,8 @@ model theory for this modal logic.
 			models
 	\end{enumerate}
 \end{thm}
-The equivalences of (1) and (2) makes since we have added the axiom Refl; i.e.
+The equivalence of (1) and (2) makes sense since we have added the axiom
+\textit{Refl}; i.e.
 the r-valid class of finite tree Kripke models are the models where the local
 reflexion principle is true.
 
@@ -467,7 +466,7 @@ This theorem reduces the decidability of \GLS\ to the decidability of \GL\ and
 describes a model theory for \GLS.
 
 	We have that $(2)\Leftrightarrow(3)$ by the finite tree theorem, and
-	that $(2)\Rightarrow(1)$ is follows by the definitions of \GLS.
+	that $(2)\Rightarrow(1)$  follows by the definitions of \GLS.
 
 	The proof that $(1)\Rightarrow(2)$ is non trivial, and for this proof
 	we need the following lemma:
@@ -496,11 +495,11 @@ Further for the proof we will make use of the following operation on Kripke mode
 	$w\in\phi'(p)$ iff $w\in\phi(p)$ for $w\in K$, where $p$ is any atomic
 	formula. Lastly we have that $w'\in\phi'(p)$ iff $w_0\in\phi(p)$.
 \end{defi}
-We can further define the notion of a sequences of successive derived models:
+We can further define the notion of a sequence of successive derived models:
 $\mathcal{K}^{(1)},\mathcal{K}^{(2)},\ldots$ that have $w_1,w_2,\ldots$ as
 their minima. We define $\mathcal{K}^{(1)}=\mathcal{K}$ and
 $\mathcal{K}^{(n+1)}=(\mathcal{K}^{(n)})'$ and let $w_n$ denote the minimum of
-$\mathcal{K}^{(n)}$. This can graphically been seen by adding a tail of $n$
+$\mathcal{K}^{(n)}$. This can graphically be seen by adding a tail of $n$
 nodes below $w_0$, as seen in the following graphs:
 \newpage
 
@@ -539,8 +538,8 @@ $\mathcal{K}^{(n)}$ (right)}
 	understanding. We will do so going forward.
 \end{remark}
 
-The following lemma will explain a bit deeper how these derived models works,
-and will be used in the proof of theorem and later on in the proof of Solovay's
+The following lemma will explain a bit deeper how these derived models work,
+and will be used in the proof of the theorem and later on in the proof of Solovay's
 second completeness theorem.
 
 \begin{lem}
@@ -581,23 +580,23 @@ We can now return to our proof of the main theorem of this section by proving
 	that $\vDash^\mathcal{K}\neg\alpha$. Our goal is to show that
 	$\not\vdash_\GLS\alpha$.
 
-	If we have that $\vdash_\GLS\alpha$ there are formulas $\gamma_i$,
-	$i<n$ such that if let $\sigma$ be the following formula
+	If we have that $\vdash_\GLS\alpha$, there are formulae $\gamma_i$,
+	$i<n$ such that if we let $\sigma$ be the following formula
 	\[\bigwedge\{\Box\gamma_i\rightarrow\gamma_i:i<n\}\rightarrow\alpha\]
-	is provable in \GL\ and therefor $\sigma$ is FT-valid. The theorem
+	Then $\sigma$ is provable in \GL\ and therefor $\sigma$ is FT-valid. The theorem
 	follows if we can show that $\sigma$ is not FT-valid. We will look at
-	the derived model $\mathcal{K}^{n+1}$, and by Lemma \ref{lem:hvad} there is a
+	the derived model $\mathcal{K}^{n+1}$. By Lemma \ref{lem:hvad} there is a
 	$j\leq n$ such that
 	\[w_{j+1}\in\phi^{n+1}(\bigwedge\{\Box\gamma_i\rightarrow\gamma_i:i<n\})\]
-	Since we have that $w_{j+1}\in\phi^{n+1}\neg\alpha$ and thus
-	$a_{j+1}\in\phi(\neg\sigma)$ and thus $\sigma$ is not FT-valid
+	Since we have that $w_{j+1}\in\phi^{n+1}(\neg\alpha))$ and therefore
+	$w_{j+1}\in\phi(\neg\sigma)$ and thus $\sigma$ is not FT-valid
 \end{proof}
-Since the models used in this proof is finite and since \GL\ is decidable we get the following corollary:
+Since the models used in this proof are finite and since \GL\ is decidable we get the following corollary:
 \begin{cor}
 	\GLS\ is decidable 
 \end{cor}
-In the chapter \ref{chap:Complete} it will be shown that \GL\ axiomatise the
-provable schemata in \PRA\ and \GLS\ will axiomatise the \textit{true} schemata
-of arithmetics; i.e truth in the standard model $\mathcal{N}=\la
-\omega,+,\cdot\ra$ of arithmetics.
+In the chapter \ref{chap:Complete} it will be shown that \GL\ axiomatizes the
+provable schemata in \PRA\ and \GLS\ will axiomatize the \textit{true} schemata
+of arithmetic; i.e truth in the standard model $\mathcal{N}=\la
+\omega,+,\cdot\ra$ of arithmetic.
 \end{document}

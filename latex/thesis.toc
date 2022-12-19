@@ -1,4 +1,7 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {english}{}
+\babel@toc {danish}{}
+\babel@toc {english}{}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {0}Introduction}{1}{chapter.0}%
 \defcounter {refsection}{0}\relax 
@@ -60,11 +63,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.5}Sigma Completeness}{47}{section.3.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}General Results on GL}{49}{chapter.4}%
+\contentsline {chapter}{\numberline {4}General Results on \text {\textbf {GL}}}{49}{chapter.4}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.1}Trees and \text {\textbf {GL}}}{49}{section.4.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.1}Trees}{49}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.1}Trees}{50}{subsection.4.1.1}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.1.2}The Finite Tree Theorem}{52}{subsection.4.1.2}%
 \defcounter {refsection}{0}\relax 
@@ -82,7 +85,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {5.3.1}Calculation of a Non-Modalized Fixed Point}{68}{subsection.5.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Solovays Completeness Theorems}{71}{chapter.6}%
+\contentsline {chapter}{\numberline {6}Solovay's Completeness Theorems}{71}{chapter.6}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {6.1}Soundness}{71}{section.6.1}%
 \defcounter {refsection}{0}\relax 

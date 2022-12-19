@@ -18,7 +18,7 @@ Kripke semantics of the modal logic \GL, and it further gives a simple
 procedure for "calculating" fixed points.
 
 We will end this chapter with calculating some fixed points. This will be
-possible since the proof of the fixed point theorem contains an algorithm,
+possible since the proof of the fixed point theorem contains a algorithm,
 which can be used to calculate these. In the next chapter we will use the
 soundness part of  Solovay's
 completeness theorems and the fixed point theorem to conclude a few things
@@ -28,8 +28,8 @@ the help of modal logic.
 
 \section{Prerequisite Results and Definitions}
 
-We will start out by  stating some definitions and results that are crucial
-in the proof of the fixed point theorem. In this section, we will also define
+We will start of by make stating some definitions and results that are crucial
+in the proof of the fixed point theorem. We will also in this section define
 the special formulae for which the fixed point theorem holds.
 
 \begin{defi}
@@ -38,8 +38,8 @@ the special formulae for which the fixed point theorem holds.
 \end{defi}
 $\sBox$ is called "strong box" and for a given model $\mathcal{K}$ we have that
 $\vDash_w^\mathcal{K}\sBox \alpha$ states that $\alpha$ is both true and
-provable in node $w$. There are a few theorems about $\sBox$ in the modal logic
-\textbf{K4} and logics which extend this, that will be
+provable in node $w$. There are a few theorem about $\sBox$ in the modal logic
+\textbf{K4} and logics which extends this, that will be
 important in the following. These results are syntactical. We will state these
 now, and more results can be found in \parencite{Smor1985} and \parencite{Boolos1993}
 
@@ -61,15 +61,14 @@ The proof of this is syntactical and is left out.
 	$\vdash_{\textbf{L}}\Box\alpha\rightarrow\Box\beta$ and
 	$\vdash_{\textbf{L}}\sBox\alpha\rightarrow\sBox\beta$
 \end{thm}
-This theorem clearly holds for \GL since it is an extension of \textbf{K4}, 
-and we will use it later in this chapter.
+This theorem clearly holds for \GL, since it is an extension of \textbf{K4} and we will use it later in this chapter.
 \begin{proof}
 	Since \textbf{L} extends \textbf{K4} we have that
 	$\vdash_{\textbf{L}}\Box\sBox\alpha\rightarrow\Box\beta$ and thus by
 	theorem \ref{seet} we have that
 	$\vdash_{\textbf{L}}\Box\alpha\rightarrow\Box\beta$ and by the
 	definition of $\sBox$ we get that
-	$\vdash_{\textbf{L}}\sBox\alpha\rightarrow\sBox\beta$.
+	$\vdash_{\textbf{L}}\sBox\alpha\rightarrow\sBox\beta$
 \end{proof}
 Having shown a few results about the syntactical  properties of $\sBox$ we will now
 turn to some of the sementical properties about the relationship between $\Box$
@@ -85,8 +84,8 @@ $\text{acc}(w)=\{v\in W:wRv\}$.
 This remark gives us an easy way to determine if $\sBox \alpha$ is true.
 
 
-Another useful definition that we can make, since we can assume without loss of
-generality that for the  Kripke model 
+Another useful definition that we can make, since we can without loss of
+generality assume that for the  Kripke model 
 $\mathcal{K}=\la W,R,\phi\ra$ of \GL\  we look at that the set $W$ is finite,
 is the following:
 \begin{defi}
@@ -96,9 +95,9 @@ is the following:
 	$wRv$. Otherwise we have that
 	$\text{rank}(w)=1+\text{max}\{\text{rank}(v):wRv\}$.
 \end{defi}
-So rank$(w)$ simply states how long the longest path from $w$ is, and the
+So rank$(w)$ simple states how long the longest path from $w$ is, and the
 rank is finite since $W$ is finite.
-Further since $W$ is finite and  $R$ is irreflexive we have that for each $w\in
+Further since $W$ is finite and that $R$ is irreflexive we have that the for each $w\in
 W$ the rank of $w$ is unique.
 
 We will need the following three lemmas in our proof of the Fixed Point
@@ -120,7 +119,7 @@ All three of these lemmas are sementical in nature.
 \begin{lem}
 	\label{lem:con}
 	Given any Kripke model $\mathcal{K}=\la W,R,\phi\ra$ of \GL, $w\in W$ and
-	sentence $\alpha$, if $\not\vDash_w\Box\alpha$ then there are nodes
+	sentence $\alpha$, if $\not\vDash_w\Box\alpha$ then there is nodes
 	$v$ seen by  $w$ such that $\vDash_v\Box\alpha$ and
 	$\not\vDash_v\alpha$.
 \end{lem}
@@ -133,19 +132,19 @@ All three of these lemmas are sementical in nature.
 	the lemma is proven.
 \end{proof}
 The next lemma will be crucial in the proof of the fixed-point theorem; since
-it enables us to substitute two formulae into another formula.
+it enable us to substitute two formulae into another formula.
 \begin{lem}[Semantic Substitution Lemma]
 	\label{lem:sem}
 	For any sentences $\alpha,\beta$ and $\gamma$ we have that the
 	following formula is valid in all models of \GL:
 	$$\sBox(\beta\leftrightarrow\gamma)\rightarrow(\alpha(\beta)\leftrightarrow\alpha(\gamma))$$
 \end{lem}
-The meaning of $\alpha(\beta)$ is that we replace every occurrence of $p$ in
+The meaning of $\alpha(\beta)$ is that we replace every occurrences of $p$ in
 $\alpha$ with $\beta$; the meaning of $\alpha(\gamma)$ is similar.
 
 \begin{proof}
-	We start out by fixing $\beta$ and $\gamma$. The proof will be by
-	induction on the complexity of $\alpha$. We will only prove the part
+	We start of by fixing $\beta$ and $\gamma$. The proof will be by
+	induction on the complexity of $\alpha$. We will only proof the part
 	where $\alpha$ is $\Box\sigma$.
 
 	So suppose that $\alpha$ is $\Box\sigma$, where
@@ -157,13 +156,13 @@ $\alpha$ with $\beta$; the meaning of $\alpha(\gamma)$ is similar.
 	$\sBox(\beta\leftrightarrow\gamma)\rightarrow(\sigma(\beta)\leftrightarrow\sigma(\gamma))$
 	is valid we get that
 	$\vDash_v\sigma(\beta)\leftrightarrow\sigma(\gamma)$ and since
-	$v$ was chosen arbitrarily we get
+	$v$ was chosen arbitrary we get
 	$\vDash_w\Box(\sigma(\beta)\leftrightarrow\sigma(\gamma))$. By
 	proposition \ref{prop:GL} and weak completeness we can conclude
 	$\vDash_w\Box\sigma(\beta)\leftrightarrow\Box\sigma(\gamma)$.
 \end{proof}
 
-We are now almost ready to state and prove the fixed-point theorem. We
+We are now almost ready to state state and prove the fixed-point theorem. We
 will just need the next two definitions:
 \begin{defi}
 	A formula $\alpha$ is called \textit{modalized in} $p$ if every occurrence of
@@ -172,21 +171,21 @@ will just need the next two definitions:
 That  $\alpha$ is modalized in $p$ will be a sufficient  condition for $\alpha$
 having a fixed point, but it is not a necessary condition for this. $\Box p\vee
 p$ is one example of a formula that has a fixed point, even though $p$ is not
-modalized in this formula.  This will be shown later.
+modalized in this formula.  This will be showed later.
 
-We will also need the following definition, which is in some way  a
+We will also need the following definition, which in some way is a
 generalization of being modalized in $p$:
 \begin{defi}
 	A sentence $\alpha$ is said to be $n$-\textit{decomposable} iff for some
-	sequence $q_1,\ldots,q_n$ consisting of distinct sentence letters that
+	sequence $q_1,\ldots,q_n$ consisting of distinct senctence letters that
 	do not occur in $\alpha$ we have some sentence $\beta(q_1,\ldots,q_n)$
-	that does not contain $p$ and another sequence of distinct sentences 
+	that do not contain $p$ and another sequence of distinct sentences 
 	$\gamma_1(p),\ldots,\gamma_n(p)$, which each contains $p$ that we have
 	$$\alpha=\beta(\gamma_1(p),\ldots,\gamma_n(p))$$.
 \end{defi}
 The following remark will be important in the proof of the fixed point theorem.
 \begin{remark}
-It should be noted that if $\alpha$ is modalized in $p$ we then have that
+It should be noted that if $\alpha$ is modalized in $p$ that we then have that
 $\alpha$ is $n$-decomposable for some $n$.
 \end{remark}
 
@@ -194,25 +193,25 @@ $\alpha$ is $n$-decomposable for some $n$.
 
 We can now state the fixed point theorem. But we will still need a few lemmas
 in our proof. These will be stated and proven when needed. The theorem we will
-start out by showing can be seen as a uniqueness theorem. After showing  this
-theorem, we will  state and prove a theorem that can be seen as a existence theorem.
-Lastly, we will prove a corollary that will show why the name fixed point
+start of by showing can be seen as a uniqueness theorem, we will after this
+theorem state and prove a theorem that can be seen as a existences theorem.
+Lastly we will prove a corollary that will show why the name fixed point
 theorem is appropriate; this is not clearly seen from the fixed point theorem
 itself.
 
 \begin{thm}
 	\label{thm:Fixed}
 	If $\alpha$ is modalized in $p$, then there exists a formula $\sigma$
-	in which the only sentence letters that occur are these other than $p$
+	in which the only sentence letters that occurs are these other than $p$
 	that occur in $\alpha$, and such that:
 	\[\sBox(p\leftrightarrow\alpha)\rightarrow(p\leftrightarrow\sigma)\]
 	The formula $\sigma$ is called a \textit{fixed-point} of $\alpha$.
 \end{thm}
-Later on, we will prove that $\vdash_\GL\sigma\leftrightarrow\alpha(\sigma)$ for
+We will later on prove that $\vdash_\GL\sigma\leftrightarrow\alpha(\sigma)$ for
 such a $\sigma$ and thus the name fixed point is appropriate.
 \begin{proof}
 	We will prove this by showing that if $\alpha$ is $n$-decomposable
-	then it has a fixed point. This will be shown by induction on $n$.
+	then it has a fixed point. We will show this by induction on $n$.
 
 	\textbf{Base case:} Suppose that $\alpha$ is $0$-decomposable. Then we
 	have that $p$ does not occur in $\alpha$ and it can thus itself be the
@@ -223,18 +222,17 @@ such a $\sigma$ and thus the name fixed point is appropriate.
 	We now have to show that every sentence that is $(n+1)$-decomposable
 	also has a fixed point. To show this we will assume the following:
 	\[\alpha(p)=\beta(\Box\gamma_1(p),\ldots,\Box_{n+1}(p))\]
-	Further for each $i$ where $1\leq i\leq n+1$ let:
+	Further for each $i$ such that $1\leq i\leq n+1$ let:
 	\[\alpha_i(p)=\beta(\Box\gamma_1(p),\ldots,\Box\gamma_{i-1},\top,\Box\gamma_{i+1},\ldots,\Box\gamma_{n+1}(p))\]
-	Thus we have that for each $i$ where $1\leq i\leq n+1$ that $\alpha(p)$ is $n$-decomposable,
+	Thus we have that for each $i$ such that $1\leq i\leq n+1$ that $\alpha(p)$ is $n$-decomposable,
 	so it has a fixed point, that we call $\sigma_i$. Lastly we define:
 	\[\sigma=\beta(\Box\gamma_1(\sigma_1),\ldots,\Box\gamma_{n+1}(\sigma_{n+1}))\]
 	Our goal is to show that $\sigma$ is a fixed point of $\alpha$, and for
 	that we will need the following lemma:
 	\begin{lem}
 		\label{lem:fix}
-		For each $i$ where $1\leq i\leq n+1$ we have that:
-		\[\vdash_\GL\sBox(p\leftrightarrow\alpha)\rightarrow\sBox\Box
-		\gamma_i(p)\leftrightarrow\gamma_i(\sigma_i))\]
+		For each $i$ such that $1\leq i\leq n+1$ we have that:
+		$$\vdash_\GL\sBox(p\leftrightarrow\alpha)\rightarrow\sBox\Box\gamma_i(p)\leftrightarrow\gamma_i(\sigma_i))$$
 	\end{lem}
 	\begin{proof}
 		Since we have that \GL\ is complete, we just have to show that
@@ -245,7 +243,7 @@ such a $\sigma$ and thus the name fixed point is appropriate.
 		\vDash^\mathcal{K}\sBox(p\leftrightarrow\alpha)\rightarrow(\sBox(\Box\gamma_i(p)\leftrightarrow
 		\Box\gamma_i(\sigma_i))
 	\end{equation}
-		So we will start out by fixing $i$, $\mathcal{K}$ and $w\in W$.
+		So we will start of by fixing $i$, $\mathcal{K}$ and $w\in W$.
 		We will show \ref{eqn:1} by assuming
 		$\vDash_w\sBox(p\leftrightarrow\alpha)$ and then deduce:
 		$\vDash_w\sBox(\Box\gamma_i(p)\leftrightarrow\Box\gamma_i(\sigma_i))$;
@@ -287,40 +285,41 @@ such a $\sigma$ and thus the name fixed point is appropriate.
 			\label{eqn:sub2}
 			\vDash_v\Box\gamma_i(p)\leftrightarrow\Box\gamma_i(\sigma_i)
 		\end{equation}
-		Notice that these two hold for any $v\in\{w\}\cup\text{acc}(w)$ such that
+		Notice that these two holds for any $v\in\{w\}\cup\text{acc}(w)$ such that
 		$\vDash_v\Box\gamma_i(p)$.
 		Further by \ref{eqn:sub2} we can deduce
 		$\vDash_v\Box\gamma_i(p)\rightarrow\Box\gamma_i(\sigma_i)$
 
 		For the next step of the proof of this lemma we will assume that
-		$\not\vDash_v\Box\gamma_i(p)$. According to Lemma
-		\ref{lem:con}, this means that there is some world $v'$ where
+		$\not\vDash_v\Box\gamma_i(p)$. This means by lemma
+		\ref{lem:con} that there is some world $v'$ where
 		$v'\in\text{acc}(v)$, such that $\not\vDash_{v'}\gamma_i(p)$
 		and $\vDash_{v'}\Box\gamma_i(p)$. \ref{eqn:sub1} holds for $v'$
 		since $v'\in\{w\}\cup\text{acc}(w)$ and thus we have
 		$\vDash_{v'}\gamma_i(p)\leftrightarrow\gamma_i(\sigma_i)$. This
-		gives us that $\not\vDash_{v'}\gamma_i(\sigma_i)$ and thus since
+		us
+		gives that $\not\vDash_{v'}\gamma_i(\sigma_i)$ and thus since
 		$vRv'$ we have that $\not\vDash_v\Box\gamma_i(\sigma_i)$. By
 		contraposition we then get:
 		$\vDash_v\Box\gamma_i(\sigma_i)\rightarrow\Box\gamma_i(p)$, and
 		thus we have shown that:
-		\[\vDash_v\Box\gamma_i(p)\leftrightarrow\Box\gamma_i(\sigma_i)\]
-		We have now shown the lemma.
+		$$\vDash_v\Box\gamma_i(p)\leftrightarrow\Box\gamma_i(\sigma_i)$$
+		We can now shown the lemma.
 	\end{proof}
-	We will now go back and finish our proof of the fixed point theorem. Suppose
+	We now go back and finish our proof of the fixed point theorem. Suppose
 	that $\mathcal{K}$ is a model and that $w\in W$ such that
 	$\vDash_w\sBox(p\leftrightarrow\alpha)$. By lemma \ref{lem:fix} and
 	completeness we get
 	$\vDash_w\sBox(\Box\gamma_i(p)\leftrightarrow\Box\gamma_i(\sigma_i))$.
 	By using lemma \ref{lem:sem} $(n+1)$ times we can deduce that:
-	\[\vDash_w\beta(\Box\gamma_i(p),\ldots,\Box\gamma_{n+1}(p))\leftrightarrow\beta(
-	\Box\gamma_1(\sigma_1),\ldots,\Box\gamma_{n+1}(\sigma_{n+1}))\]
+	$$\vDash_w\beta(\Box\gamma_i(p),\ldots,\Box\gamma_{n+1}(p))\leftrightarrow\beta(
+	\Box\gamma_1(\sigma_1),\ldots,\Box\gamma_{n+1}(\sigma_{n+1}))$$
 	i.e $\vDash_w\alpha\leftrightarrow\sigma$. 
 
 	Since we have $\vDash_w p\leftrightarrow\alpha$ we get $\vDash_w
 	p\leftrightarrow\sigma$, we can obtain
 	$\vDash_w\sBox(p\leftrightarrow\alpha)\rightarrow(p\leftrightarrow\sigma)$.
-	Since our $\mathcal{K}$ and $w$ were chosen arbitrarily we have that
+	Since our $\mathcal{K}$ and $w$ was chosen arbitrarily we have that
 	$\sBox(p\leftrightarrow\alpha)\rightarrow(p\leftrightarrow\sigma)$ is
 	valid. By completeness we then have:
 	$\vdash_\GL\sBox(p\leftrightarrow\alpha)\rightarrow(p\leftrightarrow
@@ -346,8 +345,8 @@ The following result follows from the fixed-point theorem.
 	not $p\in\phi(w)$. Set $\mathcal{K}'=\la W,R,\phi'\ra$, and this model
 	is clearly transitive and irreflexive.
 
-	In the rest of this proof we will us thee corollary to the continuity
-	theorem; i.e Corollary \ref{cor:conti}.
+	In the rest of this proof we will use corollary to the continuity
+	theorem; i.e corollary \ref{cor:conti}.
 
 
 	The formula $\alpha$ is a truth-functional compound  of closed formulas $\Box\beta$ and proportional letters $q$
@@ -359,8 +358,7 @@ The following result follows from the fixed-point theorem.
 	the definition of $\mathcal{K}'$ that $\vDash_w^\mathcal{K}\alpha$ if
 	and only iff $\vDash_w^{\mathcal{K}'}$ and $\vDash_w^\mathcal{K}p$ if
 	and only if not $\vDash_w^{\mathcal{K}'}p$. Thus we have
-	$\vDash_w^{\mathcal{K}'}p\leftrightarrow\alpha$ and by the continuity
-	corollary 
+	$\vDash_w^{\mathcal{K}'}p\leftrightarrow\alpha$ and b the continuity  theorem
 	we again get $\vDash_v^{\mathcal{K}'}p\leftrightarrow\alpha$ for all
 	$v$ such that $wRv$. But this means that we get
 	$\vDash_w^{\mathcal{K}'}\sBox(p\leftrightarrow\alpha)$.
@@ -379,7 +377,7 @@ The following result follows from the fixed-point theorem.
 	then
 	$\vdash_\GL\sBox(p\leftrightarrow\sigma)\rightarrow(p\leftrightarrow\alpha)$.
 \end{proof}
-From this we can prove the following corollary that shows that the name
+From this we can prove the following corollary that show that the name
 fixed-point is appropriate:
 \begin{cor}
 	Let $\alpha(p)$ be modalized in $p$ and let $\sigma$ be a fixed-point
@@ -387,13 +385,12 @@ fixed-point is appropriate:
 	\[\vdash_\GL\sigma\leftrightarrow\alpha(\sigma)\]
 \end{cor}
 \begin{proof}
-	Since we have assumed uniform substitution and by Theorem
-	\ref{thm:exi},
+	Since we have assumed uniform substitution and by theorem \ref{thm:exi}
 	the result of substituting $\sigma$ for $p$ in
 	$\sBox(p\leftrightarrow\sigma)\rightarrow(p\leftrightarrow\alpha)$ is a
 	theorem of \GL. This means that
 	$\vdash_\GL\sBox(\sigma\leftrightarrow\sigma)\rightarrow(\sigma\leftrightarrow\alpha(\sigma))$.
-	$\sBox(\sigma\leftrightarrow\sigma)$ is obviously a theorem of \GL, so
+	$\sBox(\sigma\leftrightarrow\sigma)$ is obviously a theorem of \GL\ so
 	we get:
 	\[\vdash_\GL\sigma\leftrightarrow\alpha(\sigma)\]
 \end{proof}
@@ -410,13 +407,13 @@ point theorem in the following form:
 \section{Calculation of Fixed Points}
 
 The algorithm in the proof of the fixed theorem can be used to calculate
-specific fixed points for some given formula that fulfills the conditions of
+specific fixed points for some given formula, that fulfills the conditions of
 the theorem. 
 
-When we have shown the soundness part of Solovay's first completeness theorem, the fixed point theorem
+When we have shown the soundness part of the first Solovay's completeness theorem, the fixed point theorem
 will then make it possible for us to determine the fixed point of a wide range
 of sentences of arithmetic. This is important because this way of finding these
-points is often a lot easier than finding the points only trough the help of the
+points are often a lot easier than finding the points only with the help of the
 arithmetical methods.
 
 Below are a few example of how we can use this algorithm.
@@ -429,7 +426,7 @@ Below are a few example of how we can use this algorithm.
 	does not occur in $\alpha_1$. We can thus conclude that the fixed point
 	$\sigma$ of $\alpha$ is the following:
 	\[\beta(\Box\gamma_1(\top))=\beta(\Box\neg\top)=\Box\neg\top\]
-	This formula is equivalent to $\Box\bot$.
+	this formula is equivalent to $\Box\bot$.
 \end{exmp}
 \begin{exmp}
 	Let $\alpha(p)=\Box p\rightarrow\Box\neg p$. To find the fixed point,
@@ -440,7 +437,7 @@ Below are a few example of how we can use this algorithm.
 	and 
 	\[\alpha_2(p)=\beta(\Box\gamma_1(p),\top)=\Box p\rightarrow \top\]
 	It is clear that $\alpha_1$ is equivalent to $\Box\neg p$ and that
-	$\alpha_2$ is equivalent  $\top$; thus they have fixed points
+	$\alpha_2$ is equivalent top $\top$; thus they have fixed points
 	$\sigma_1=\Box\bot$ and $\sigma_2=\top$. So the fixed point $\sigma$
 	of $\alpha$ is the following:
 	\[\beta(\Box\gamma_1(\Box\bot),\Box\gamma_2(\top))=\Box\Box\bot\rightarrow\Box\neg\top\]
@@ -449,13 +446,12 @@ Below are a few example of how we can use this algorithm.
 \subsection{Calculation of a Non-Modalized Fixed Point}
 We will now show that $\Box p\vee p$ has a fixed point. It is
 clear that this formula is not modalized in $p$, but it can still be shown to
-have a fixed point. It will also be shown that $\Box p\vee p$ is not equivalent
-to any other formula that is modalized in $p$.
+have a fixed point.
 
 For
 this end we will need the following theorem:
 We will start of by showing that no $\beta$ modalized in $p$ is equivalent to
-$\Box p\vee p$. This will be shown by the following two propositions:
+$\Box p\vee p$. This will the following two propositions show:
 \begin{prop}
 	Suppose that $\beta$ is modalized in $p$. Then we have:
 	\[\vdash_\GL p\rightarrow\beta\Rightarrow\ \vdash_\GL\beta\]
@@ -467,9 +463,9 @@ $\Box p\vee p$. This will be shown by the following two propositions:
 	otherwise it is just $\phi$ and let $\mathcal{K}'=\la W,R,\phi'\ra$. We
 	have that $\beta$ is a truth-functional compound of formulae
 	$\Box\gamma$ and proportional letters that are not $p$. By continuity
-	we have that $\not\vDash_w^{\mathcal{K}'}\beta$, but we have that
+	we have that $\not\vDash_w^{\mathcal{K}'}\beta$ but we have that
 	$\vDash_w^{\mathcal{K}'}p$. Hence we have that
-	$\vDash_w^{\mathcal{K}'}p\rightarrow\beta$, and the proposition follows.
+	$\vDash_w^{\mathcal{K}'}p\rightarrow\beta$ and the propositions follows.
 \end{proof}
 The next proposition shows that no $\beta$ equivalent to $\Box p\vee p$ is
 modalized in $p$.
@@ -481,7 +477,7 @@ modalized in $p$.
 If there was such a $\beta$ we would have that $\vdash_\GL p\rightarrow\beta$
 and thus from the just shown proposition we would have that $\vdash_\GL\beta$
 and $\vdash_\GL\Box p\vee p$. By substitution we would then have that
-$\vdash_\GL\Box\bot\vee\bot$, and this is clearly false.
+$\vdash_\GL\Box\bot\vee\bot$ and this is clearly false.
 \end{proof}
 So $\Box p\vee p$ is not equivalent to any formula modalized in $p$, but we can
 show that it has a fixed point in a another way:
@@ -504,8 +500,8 @@ show that it has a fixed point in a another way:
 		  &\rightarrow (p\leftrightarrow \top)
 	\end{align*}
 \end{proof}
-In figure \ref{Fig} we can see some more fixed points. The
-Formula on the left is the formula $\alpha(p)$, and the formula on the right is
+In figure \ref{Fig} we can see some more fixed points. 
+Formula on the left is the formula $\alpha(p)$ and the formula on the right is
 the formula $\sigma$. Line (3) and (6) has already been shown.
 \newpage
 \begin{align*}
@@ -539,7 +535,6 @@ the formula $\sigma$. Line (3) and (6) has already been shown.
 \label{Fig}
 \vspace*{\baselineskip}\endgroup
 
-After the proof of the soundness part of Solovay's first completeness theorem, we
-will come back to this
-table, and draw some conclusions about the fixed points.
+We will after the proof of the soundness part of  Solovay's Completeness Theorems come back to this
+table, and make some conclusions about the fixed points.
 \end{document}

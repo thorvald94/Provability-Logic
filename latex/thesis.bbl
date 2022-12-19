@@ -710,25 +710,6 @@
       \field{year}{1965}
       \true{nocite}
     \endentry
-    \entry{Lutzen2015}{book}{}
-      \list{language}{1}{%
-        {dan}%
-      }
-      \list{location}{1}{%
-        {Kbh}%
-      }
-      \list{publisher}{1}{%
-        {Institut for Matematiske Fag, Københavns Universitet}%
-      }
-      \field{sortinit}{D}
-      \field{sortinithash}{c438b3d5d027251ba63f5ed538d98af5}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{Diskrete matematiske metoder : [Forelæsningsnoter] /}
-      \field{title}{Diskrete matematiske metoder : [Forelæsningsnoter]}
-      \field{year}{2015}
-    \endentry
     \entry{Ender2001}{book}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=b50c15602a78b51cbc6946ab32488502}{%
@@ -1791,6 +1772,41 @@
       \field{edition}{2. ed. enl.}
       \field{title}{Aristotle's syllogistic from the standpoint of modern formal logic.}
       \field{year}{1957}
+    \endentry
+    \entry{Lutzen2015}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f8a9687f6286d1db79e8c9bb72bfc34e}{%
+           family={Lützen},
+           familyi={L\bibinitperiod},
+           given={Jesper},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {dan}%
+      }
+      \list{location}{1}{%
+        {Kbh}%
+      }
+      \list{publisher}{1}{%
+        {Institut for Matematiske Fag, Københavns Universitet}%
+      }
+      \strng{namehash}{f8a9687f6286d1db79e8c9bb72bfc34e}
+      \strng{fullhash}{f8a9687f6286d1db79e8c9bb72bfc34e}
+      \strng{bibnamehash}{f8a9687f6286d1db79e8c9bb72bfc34e}
+      \strng{authorbibnamehash}{f8a9687f6286d1db79e8c9bb72bfc34e}
+      \strng{authornamehash}{f8a9687f6286d1db79e8c9bb72bfc34e}
+      \strng{authorfullhash}{f8a9687f6286d1db79e8c9bb72bfc34e}
+      \field{sortinit}{L}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Diskrete matematiske metoder : [Forelæsningsnoter] /}
+      \field{title}{Diskrete matematiske metoder : [Forelæsningsnoter]}
+      \field{year}{2015}
+      \true{nocite}
     \endentry
     \entry{Mendel1964}{book}{}
       \name{author}{1}{}{%
