@@ -29,7 +29,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.2.1}Primitive Recursive Functions}{15}{subsection.1.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2.2}\text {\textbf {PRA}}}{16}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.2}The Arithmetical Theory \text {\textbf {PRA}}}{16}{subsection.1.2.2}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.2.3}Arithmetization of the Syntax}{19}{subsection.1.2.3}%
 \defcounter {refsection}{0}\relax 
@@ -43,7 +43,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.3}The \textit {s-m-n}-Theorem}{29}{section.2.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.4}Recursively Enumerable Sets and the Graph of a Function}{31}{section.2.4}%
+\contentsline {section}{\numberline {2.4}Recursively Enumerable Sets and the Graph of a Function}{32}{section.2.4}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.5}The Recursion Theorem}{35}{section.2.5}%
 \defcounter {refsection}{0}\relax 
@@ -53,11 +53,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.1}The Arithmetical Hierarchy}{39}{section.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Fragments of Arithmetic}{41}{section.3.2}%
+\contentsline {section}{\numberline {3.2}Fragments of Arithmetic}{42}{section.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}\text {\textbf {PRA}}'s and the Other Fragments of Arithmetic}{43}{section.3.3}%
+\contentsline {section}{\numberline {3.3}\text {\textbf {PRA}}'s and the Other Fragments of Arithmetic}{44}{section.3.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.1}Induction in \text {\textbf {PRA}}}{45}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.1}Induction in \text {\textbf {PRA}}}{46}{subsection.3.3.1}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.4}Further Extensions of the Arithmetical Hierarchy}{47}{section.3.4}%
 \defcounter {refsection}{0}\relax 
@@ -87,19 +87,21 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {6}Solovay's Completeness Theorems}{71}{chapter.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.1}Soundness}{71}{section.6.1}%
+\contentsline {section}{\numberline {6.1}The First Theorem}{71}{section.6.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.2}Solovay's Soundness Theorem and Fixed Points}{72}{section.6.2}%
+\contentsline {subsection}{\numberline {6.1.1}Soundness}{71}{subsection.6.1.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.3}The First Theorem}{73}{section.6.3}%
+\contentsline {subsection}{\numberline {6.1.2}Solovay's Soundness Theorem and Fixed Points}{72}{subsection.6.1.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.4}The Second Theorem}{82}{section.6.4}%
+\contentsline {subsection}{\numberline {6.1.3}Completeness}{73}{subsection.6.1.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.4.1}Using the Second Completeness Theorem}{85}{subsection.6.4.1}%
+\contentsline {section}{\numberline {6.2}The Second Theorem}{82}{section.6.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.5}Generalisations of the Completeness Theorems}{86}{section.6.5}%
+\contentsline {subsection}{\numberline {6.2.1}Using the Second Completeness Theorem}{85}{subsection.6.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.6}Concluding remarks: Implications of Solovay's Theorems}{87}{section.6.6}%
+\contentsline {section}{\numberline {6.3}Generalisations of the Completeness Theorems}{87}{section.6.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.4}Concluding remarks: Implications of Solovay's Theorems}{87}{section.6.4}%
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {7}Further Results in Provability Logic}{89}{chapter.7}%
 \defcounter {refsection}{0}\relax 

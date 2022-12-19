@@ -3,20 +3,29 @@
 \documentclass[../main.tex]{subfiles}
 
 \begin{document}
-In this section we will prove Solovay's completeness theorems. The proof of
+In this section we will prove Solovay's two completeness theorems. The proof of
 these theorems follows a technique invented by Robert Solovay, which today is
 known as a \textit{Solovay construction}. This technique is a way of embedding
 Kripke models into arithmetic. The first theorem shows that the $\Box$-operator of
-the logic \GL\ behaves like the proof predicate $\text{Pr}$ from \PRA. The
+the logic \GL\ behaves like the proof predicate $\text{Pr}(\cdot)$ from \PRA. The
 second theorem shows that the modal logic \GLS\ axiomatizes the notion
 provability in the standard model of arithmetic $\mathcal{N}$.
 
 Further these theorems show that the proof predicate of arithmetic can be
 axiomatized, by the axioms of \GL\ and \GLS.
 
-\section{Soundness}
-For each  formula in $\mathcal{L}_\Box$ we want to assign a sentence of
-$\mathcal{L}_\PRA$.
+\section{The First Theorem}
+
+We will start off by proving the first theorem. This theorem has two part:
+\textit{soundness} and \textit{completeness}. The soundness part is easier to
+prove and will be proven first. After proving the soundness part we will draw
+some immediate consequences of this, which can be achieved together with the
+fixed point theorem. Lastly we will prove the completeness part.
+
+\subsection{Soundness}
+We will begin by defining a method to translate formulae of the language
+$\mathcal{L}_\Box$ into formulae
+of the language $\mathcal{L}_\PRA$.
 This can be done in the following way.
 
 \begin{defi}
@@ -42,22 +51,23 @@ This statement says that \GL\ completely captures what \PRA\ can say about its o
 provability; and it is known as Solovay's first completeness theorem. This result can be 
 expanded to other fragments of arithmetic. So
 the modal logic \GL\ is the modal logic that captures what a lot of  different fragments of
-arithmetic can say about its own provability. Later on in the project it will be shown for which fragments this
-is the case. 
+arithmetic can say about their own provability. Later on in this chapter  it will
+be stated for which fragments this
+known to be  the case. 
 
 In Section \ref{chap:second} we will show that \GLS\ is the modal logic of the proof
-predicate of the standard modal $\mathcal{N}$. This is called Solovay's second completeness theorem.
+predicate of the standard model of arithmetic $\mathcal{N}$. This is called Solovay's second completeness theorem.
 
 We will start with proving the "$\Rightarrow$" implication; i.e that every
 theorem of \GL\ is \PRA-valid. The other way will be a bit harder to prove, and
 that is the part that is known as Solovay's first completeness theorem.
 \begin{thm}[Soundness]
-	For all modal sentences $\varphi$ we have that :
+	For all modal sentences $\alpha$ we have that :
 	$$\GL\vdash\alpha\Rightarrow\forall ^*(\PRA\vdash\alpha^*)$$
 \end{thm}
 \begin{proof}
 	The proof will be done as an induction proof on the number of axioms
-	and rules of inference use in a \GL-proof of a formula $\alpha$. The
+	and rules of inference used in a \GL-proof of a formula $\alpha$. The
 	proof will be done by looking at the last rule or axiom schema used in
 	the proof of $\alpha$.
 
@@ -73,11 +83,11 @@ that is the part that is known as Solovay's first completeness theorem.
 	The axiom \textbf{4} can be derived from the others, so this case is redundant.
 
 	We will now just have to show the case of \textbf{L}. This case follows by
-	Löb's theorem.
+	Löb's formalized theorem.
 \end{proof}
 We can immediately use this theorem in conjecture with the fixed point theorem
 to deduce some things about formulae of \PRA.
-\section{Solovay's Soundness Theorem and Fixed Points}
+\subsection{Solovay's Soundness Theorem and Fixed Points}
 
 We will now comment a bit on the implications of the soundness theorem and
 the fixed point theorem.
@@ -117,10 +127,10 @@ From table \ref{Fig} and the arithmetical soundness theorem, we can conclude the
 	\item From line 6 we can conclude that a fixed point may have a
 		bigger modal degree, then the formula of which it is a fixed
 		point: the formula $\Box p\rightarrow\Box\neg p$ has modal degree $1$
-		and the formula $\Box\Box\bot\rightarrow\Box\bot$ has degree
+		and the formula $\Box\Box\bot\rightarrow\Box\bot$ has modal degree
 		$2$. We can conclude the same for line 7, where the fixed point
 		has modal degree $3$ and the formula it is a fixed point for,
-		has degree $2$.
+		has modal degree $2$.
 	\item The modal formula $\alpha$ has at most the same modal degree as
 		the modal formula $\sigma$.
 	\item We can further see that line 1 gives that sentences of arithmetic
@@ -129,10 +139,11 @@ From table \ref{Fig} and the arithmetical soundness theorem, we can conclude the
 		answer to Henkin's question, and line 4 gives that refutable
 		sentences are those equivalent to their own consistency.
 \end{enumerate}
-\section{The First Theorem}
+\subsection{Completeness}
 Having shown soundness, we will now show the completeness theorem. This theorem
 was proven after the soundness theorem. But it was conjectured  before it was
-proven conjectured that it was true. 
+proven conjectured that it was true; in part because the soundness theorem had
+already been shown.
 
 \begin{thm}[Solovay's first completeness theorem]
 	For all modal sentences $\alpha$ we have that:
@@ -148,14 +159,14 @@ W,R,\phi,w_0\ra$ in which we have $w_0\not\in\phi(\alpha)$. The goal is then to
 find an interpretation $^*$ such that $\PRA\not\vdash\alpha^*$.
 
 The construction of this
-$^*$ is rather complex, and will take the rest of this section to prove. So for the
+$^*$ is rather complex, and will take the rest of this section to construct. So for the
 rest of this subsection, we will fix a modal formula $\alpha$ such that $\GL\not\vdash
 \alpha$
 and let $\mathcal{K}=\la W,R,\phi,w_0\ra$ be a pointed Kripke model such that
 $w_0\not\in\phi(\alpha)$.
 
 We will, assume without loss of generality,  
-that $W=\{1,\ldots, n\}$ for some finite $n$ and that $w_0=1$.
+that $W=\{1,\ldots, n\}$ for some finite $n$ and where $w_0=1$.
 $R$ can be extended by setting $0Ri$ for each $i$ in $W$. It shall be noted
 that $0$ is not part of our Kripke model, but  in section
 \ref{chap:second} we will create a model where it is a part of the model.
@@ -173,7 +184,7 @@ quote:
 	he/she provides a proof not to stay there forever. If the refugee is
 	also never allowed to go to one of the previously visited countries,
 	he/she must eventually stop somewhere. So, an honest refugee will never
-	be able to leave his/her country of origin. \citet{ArteBe}
+	be able to leave his/her country of origin. \parencite{ArteBe}
 \end{displayquote}
 
 Before we can give a formal definition of the function $\varphi$, we will have to
@@ -187,9 +198,9 @@ use this notation to define $\varphi$ in the following way:
 \[\varphi(v_0)=v_1\leftrightarrow\Vast(	
 \begin{aligned}
 	&(v_0=\0\wedge v_1=\0)\ \vee \\
-	&(v_0>\0\wedge Prov(v_0,\Godelnum{L\not =\dot v_1})\wedge \varphi(v_0\dot -\ol 1)\ol
+	&(v_0>\0\wedge \text{Prov}(v_0,\Godelnum{L\not =\dot v_1})\wedge \varphi(v_0\dot -\ol 1)\ol
 	Rv_2)\ \vee\\
-	&(v_0>\0\wedge \forall v_2\leq v_0\neg(Prov(v_0,\Godelnum{L\not
+	&(v_0>\0\wedge \forall v_2\leq v_0\neg(\text{Prov}(v_0,\Godelnum{L\not
 	=v_2}))\wedge\ol{ \varphi}(v_0\dot-\ol{1})\ol{R}v_2\ \wedge\\
 	&v_1=\ol{\varphi}(v_0-\ol{1}))
 	\\
@@ -246,33 +257,34 @@ since it is defined by recursion, and this can be proven in \PRA.
 	\textbf{Base step:} When $v_0=0$ we have that $\xi(0)=0$ by
 	definition of $\varphi$; i.e $\exists v_1\xi v_0v_1$, where $v_1=0$.
 
-	\textbf{Induction step:} Assume that $\exists v_1\psi v_0v_1$ holds for
+	\textbf{Induction step:} Assume that $\exists v_1\xi v_0v_1$ holds for
 	$v_0=n$, i.e we have a $v_1=m$ such that $\varphi(n)=m$. Look at
-	$\varphi(n+1)$, then if $n+1$ proves that $L_\psi\not =\ol z$ and we
+	$\varphi(n+1)$, then if $n+1$ proves that $L_\xi\not =\ol z$ and we
 	have that $\varphi(n)Rz$, then we will have that $\varphi(n+1)=z$, i.e
 	$v_1=z$ otherwise we will have that $\varphi(n+1)=\varphi(n)=m$, and
 	the induction is done.
 \end{proof}
-Further we will expand the langauge with a new function constant (This can be
+Further we will expand the language with a new function constant (This can be
 done, since $\xi$ is the graph of a total function) $\ol \varphi$ with the following
 defining axiom:
 $$\ol \varphi(v_0)=v_1\leftrightarrow\xi (v_0)=v_1$$
 
 We will now prove and state a few lemmas about the function $\varphi$ and the
 limit of this function $L_\tau=L$. These will build up the proof of Solovay's
-First Completeness Theorem. Thus we will use the function $\varphi$ and the
+first completeness theorem. Thus we will use the function $\varphi$ and the
 limit $L$ to deduce the theorem.
 
 \begin{lem}
 	\label{lem:2}
 	The following three statements hold:
 	\begin{enumerate}
-		\item $\PRA\vdash\forall v_0(\ol \varphi v_0\leq \ol n)$
+		\item $\PRA\vdash\forall v_0(\ol \varphi (v_0)\leq \ol n)$
 		\item For all $x\in\omega$ we have that:\ $$\PRA\vdash\forall
 			v_o(\ol
-			\varphi v_0=\ol x\rightarrow\forall v_1>v_0(\ol \varphi v_1=\ol x\vee
-			\ol x\ol R\ol \varphi v_1))$$
-		\item $\PRA\vdash\exists v_0v_1\forall v_2>v_0(\ol \varphi v_2=v_1)$. 
+			\varphi (v_0)=\ol x\rightarrow\forall v_1>v_0(\ol
+			\varphi (v_1)=\ol x\vee
+			\ol x\ol R\ol \varphi (v_1)))$$
+		\item $\PRA\vdash\exists v_0v_1\forall v_2>v_0(\ol \varphi (v_2)=v_1)$. 
 	\end{enumerate}
 	Where (3) just means that $\PRA\vdash\exists v_1(L=v_1)$.
 \end{lem}
@@ -293,7 +305,7 @@ limit $L$ to deduce the theorem.
 			induction is complete.
 		\item We will begin by writing the formula we have, to prove as
 			the following equivalent formula:
-			$$\forall v_1\forall v_0(\ol{\varphi}v_0=\ol x\rightarrow
+			$$\forall v_1\forall v_0(\ol{\varphi}(v_0)=\ol x\rightarrow
 			\varphi(v_0 + v_1+\ol 1)=\ol x\vee \ol x\ol R\ol
 			\varphi(v_0+v_1+1))$$
 			To prove this, we will use induction on $v_1$. This is
@@ -334,7 +346,7 @@ limit $L$ to deduce the theorem.
 
 		\item Here, we will first prove the following:
 			$$\forall v_0(\exists v_1(\ol
-			Fv_1=v_0)\rightarrow\exists v_1(L=v_1))$$
+			\varphi(v_1)=v_0)\rightarrow\exists v_1(L=v_1))$$
 			This is clearly true for $v_0> n$. For $v_0\leq n$ we
 			will use induction on the converse of $R$. By 2) from
 			this lemma it holds for maximal nodes $y$ in $W$. If
@@ -357,6 +369,8 @@ metamathematical induction outside of \PRA. This was done because the formula
 $\exists v_1(L=v_1)$ is $\Sigma_2$ and thus we cannot use induction on this
 formula inside of \PRA. 
 
+The next corollary follows easily from the lemma:
+
 \begin{cor}
 	\label{cor:disjunct}
 	$\PRA\vdash L\leq \ol n$, i.e $\PRA\vdash \bigvee_{x\leq n} L=\ol x$
@@ -376,7 +390,7 @@ formula inside of \PRA.
 	\label{lem:4}
 	For all $x,y\leq n$ we have that:
 	\begin{enumerate}
-		\item $L=\ol x\wedge \ol x \ol R\ol y\rightarrow
+		\item $\PRA \vdash L=\ol x\wedge \ol x \ol R\ol y\rightarrow
 			\Con_{\PRA+L=\ol y}$
 		\item $\PRA\vdash L=\ol x\wedge \ol x\not = \ol y\wedge \neg
 			(\ol x \ol R\ol y)\rightarrow\neg \Con_{\PRA+L=\ol y}$
@@ -391,13 +405,13 @@ formula inside of \PRA.
 		\textbf{1)} Let, $xRy$ and assume for contradiction that $L
 			=\ol x\wedge \text{Pr}(\Godelnum{L\not =\ol y})$. Since we
 			have that $L=\ol x$, we can chose a $v_0$ such that
-			$\forall v_2(v_2>v_0\rightarrow \ol Fv_2=\ol x)$ and we
+			$\forall v_2(v_2>v_0\rightarrow \ol \varphi(v_2)=\ol x)$ and we
 			can also chose $v_1+\ol 1>v_0$ such that
 			$\text{Prov}(v_1+\ol 1,\Godelnum{L\not =\ol y})$
 			But we also have the following:
 			$$\PRA\vdash\text{Prov}(v_1+\ol 1,\Godelnum{L\not
-			=y})\wedge\ol Fv_1=\ol \x\wedge \ol x\ol R\ol
-			y\rightarrow\ol F(v_1+\ol 1)=\ol y$$
+			=y})\wedge\ol \varphi(v_1)=\ol x\wedge \ol x\ol R\ol
+			y\rightarrow\ol \varphi(v_1+\ol 1)=\ol y$$
 			This contradicts with $\forall v_2>v_0(\ol Fv_0=\ol x)$
 			which resulted from the assumption that $L=\ol x$ so we can
 			conclude:
@@ -408,20 +422,22 @@ formula inside of \PRA.
 			follows.
 
 			\textbf{2)}
-			By demonstrable $\Sigma_1$ completeness \ref{thm:DemoSiga} 
+			By demonstrable $\Sigma_1$ completeness (Theorem
+			\ref{thm:DemoSiga})
 			we can do the following deduction:
 			\begin{align}
 				\PRA\vdash L=\ol x&\rightarrow \exists v_0(\ol
-				Fv_0=\ol x)\\
+				\varphi(v_0)=\ol x)\\
 						  &\rightarrow\text{Pr}(\Godelnum{
 						  \exists v_0(\ol
-					  Fv_0=\ol x)})\label{eq:21}
+					  \varphi(v_0)=\ol x)})\label{eq:21}
 			\end{align} 
 			Further we have from lemma \ref{lem:2}.2 and D2  that:
 			\begin{align}
-				\PRA&\vdash\forall v_0(\ol Fv_0=\ol
+				\PRA&\vdash\forall v_0(\ol \varphi(v_0)=\ol
 				x\rightarrow(L=\ol x\vee \ol x\ol RL))\\
-				\PRA&\vdash(\Godelnum{\forall v_0(\ol Fv_0=\ol
+				\PRA&\vdash(\Godelnum{\forall v_0(\ol
+					\varphi(v_0)=\ol
 					x\rightarrow (L=\ol x\vee \ol x\ol
 				RL))})\label{eq:22}
 			\end{align}
@@ -434,7 +450,7 @@ formula inside of \PRA.
 			\end{equation}
 			
 
-			The following statement is also clearly true by
+			The following statement is also  true by
 			demonstrable $\Sigma_1$ completeness:
 			\[\PRA\vdash \ol x\not =\ol y\wedge \neg (\ol x\ol R\ol
 			y)\rightarrow \text{Pr}(\Godelnum{\ol x\not =y\wedge
@@ -443,8 +459,8 @@ formula inside of \PRA.
 			
 			$$
 				\PRA\vdash L=\ol x\wedge \ol x\not =\ol y\wedge
-			\neg\ol x\ol R\ol
-			y\rightarrow\text{Pr}(\Godelnum{L=\ol x\vee \ol x\ol
+				\neg(\ol x\ol R\ol
+				y)\rightarrow\text{Pr}(\Godelnum{L=\ol x\vee \ol x\ol
 			RL})\wedge \text{Pr}(\Godelnum{\ol x\not =\ol y\wedge
 			\neg\ol x\ol  R\ol y})$$
 			From which we can deduce:
@@ -456,11 +472,13 @@ formula inside of \PRA.
 			\textbf{3)} From the least number principle we have
 			that:
 			\[\PRA\vdash L=\ol x\wedge\ol x>\ol 0\rightarrow
-			\exists v(\ol \varphi(v+\ol 1)=\ol x\wedge \ol \varphi v\not =\ol
+			\exists v(\ol \varphi(v+\ol 1)=\ol x\wedge \ol \varphi
+			(v)\not =\ol
 			x)\]
 			By the definition of $\varphi$, we have for such a $v$ the
 			following:
-			\[\PRA\vdash \ol \varphi(v+\ol 1)=\ol x\wedge\ol \varphi v\not =\ol
+			\[\PRA\vdash \ol \varphi(v+\ol 1)=\ol x\wedge\ol
+				\varphi (v)\not =\ol
 			x\rightarrow \text{Prov}(v+\ol 1,\Godelnum{L\not =\ol
 		x})\]
 			And thus we have the following:
@@ -525,24 +543,24 @@ theorem will follow easily from this result:
 	\end{enumerate}
 \end{lem}
 \begin{proof}
-We will use induction on complexity of $\psi$. If $\beta=p$, then since $L=\ol
+We will use induction on complexity of $\beta$. If $\beta=p$, then since $L=\ol
 x$ is a
 disjunct of $p^*$ we get:
 
-$$x\in\phi(\varphi)\Rightarrow\PRA\vdash L=\ol x\rightarrow p^*$$
+\[x\in\phi(\varphi)\Rightarrow\PRA\vdash L=\ol x\rightarrow p^*\]
 
-Which proves 1, for $\psi$ atomic. For 2 observe that if $x\not\in\phi( p)$, then
+Which proves (1), for $\beta$ atomic. For (2) observe that if $x\not\in\phi( p)$, then
 $L=\ol x$ contradicts all the  disjuncts of $p^*$ and thus:
 
-$$x\not\in\phi(p)\rightarrow\PRA\vdash L=\ol x\rightarrow\neg p^*$$
+\[x\not\in\phi(p)\rightarrow\PRA\vdash L=\ol x\rightarrow\neg p^*\]
 
-The cases where  $\psi$ is $\neg\gamma,\gamma\wedge\sigma,\gamma\vee\sigma$ and
-$\gamma\rightarrow\sigma$ are trivial. So we will just look at the case where
-$\psi=\Box\gamma$. Here we make the following deductions:
+The cases where  $\beta$ is $\neg\gamma,\gamma\wedge\sigma,\gamma\vee\sigma$ and
+$\gamma\rightarrow\sigma$ are trivial. So we will as usual only look at the case where
+$\beta=\Box\gamma$. Here we make the following deductions:
 \begin{align*}
 	x\in\phi(\Box\gamma)&\Rightarrow \forall
 	y(xRy\Rightarrow y\in\phi(\gamma))\\
-			  &\Rightarrow \forall(xR\Rightarrow\PRA\vdash L=\ol
+			  &\Rightarrow \forall y(xRy\Rightarrow\PRA\vdash L=\ol
 			  y\rightarrow\gamma^*)\\
 			  &\Rightarrow\bigwedge_{xRy}(\PRA\vdash L=\ol
 			  y\rightarrow\gamma^*)\\
@@ -551,7 +569,8 @@ $\psi=\Box\gamma$. Here we make the following deductions:
 			  &\Rightarrow\PRA\vdash\text{Pr}(\Godelnum{\bigvee_{xRy} L=\ol
 			  y})\rightarrow\text{Pr}(\Godelnum{\gamma^*})
 \end{align*}
-And by the last line we can get the following by using the axioms of \GL
+These deductions follows by D1 and D2.
+All in all we have shown:
 \begin{equation}
 	\label{eq:1}
 	x\in\phi(\Box\gamma)\Rightarrow \PRA\vdash\text{Pr}(\Godelnum{\bigvee_{xRy} L=\ol
@@ -570,12 +589,12 @@ and therefore we have that:
 \end{equation}
 Now by \ref{eq:1} and \ref{eq:3} we get that:
 \begin{align*}
-	\vdash_x\Box\gamma&\Rightarrow\PRA\vdash L=\ol x\rightarrow
+	x\in\phi(\Box\gamma)&\Rightarrow\PRA\vdash L=\ol x\rightarrow
 	\text{Pr(\Godelnum{\gamma^*})}\\
 			  &\Rightarrow\PRA\vdash L=\ol x\rightarrow
 			  (\Box\gamma)^*
 \end{align*}
-I.e we have proven part 1 of the lemma. Similarly we can do the following
+I.e we have proven (1) of the lemma. Similarly we can do the following
 deduction:
 \begin{align*}
 	x\not\in\phi(\Box\gamma)&\Rightarrow\exists y(xRy\wedge
@@ -607,7 +626,7 @@ We can now finally prove Solovay's first completeness theorem:
 	$\PRA\not\vdash\alpha^*$ and the theorem follows by contraposition.
 \end{proof}
 
-With this proof we can give an interpretation of the set $W$ and relation $R$ in
+With this proof we can give a tentative interpretation of the set $W$ and relation $R$ in
 a model of \GL. The set $W$ consists of recursively axiomitized extensions of
 \PRA. And we have that $w_1Rw_2$ if and only if $w_1\vdash\text{Con}(w_2)$,
 i.e the theory $w_1$ has the consistency of theory $w_2$ as one of its
@@ -623,10 +642,10 @@ Lastly, we can give an uniform version of Solovay's first completeness theorem:
 The proof of this will be left out.
 \section{The Second Theorem}
 \label{chap:second}
-Solovay's Second Completeness Theorem is a strengthening of the first one,
+Solovay's second completeness theorem is a strengthening of the first one,
 since it tells about trueness of formulae $\alpha^*$ in the standard model
 $\mathcal{N}=\la
-\omega,+,\cdot\ra$ of arithmetic. The proof will follow that of the proof of
+\omega,+,\cdot\ra$ of arithmetic. The proof will closely follow that of the proof of
 the first
 theorem, but we will look at the modal logic \GLS\ instead of the modal logic
 \GL.
@@ -650,7 +669,7 @@ This means that for every interpretation $^*$ and modal formula $\alpha$ that
 $(\Box\alpha\rightarrow\alpha)^*$ is true. So we just have to prove
 $(4)\Rightarrow(3)$
 
-In order $(4)\Rightarrow(3)$, we will again make use of contraposition. Let
+In order to prove $(4)\Rightarrow(3)$, we will again make use of contraposition. Let
 $\mathcal{K}=\la(1,\ldots,n),R,\phi)\ra$ be given and let $1$ be the root.
 Further let $\alpha$ be such that $1\not\in\phi(\alpha))$.
 We
@@ -665,7 +684,7 @@ following way:
 	&W'=\{0,1\ldots,n\}\\
 	&R'\ \text{extends}\ R\ \text{by assuming that}\ 0R'x\ \text{for all}\
 	x\in W\\
-	&\alpha_0=0\\
+	&w_0=0\\
 	&\phi'\ \text{extends}\ \phi\ \text{by putting}\ 0\in\phi'(p)\
 	\text{iff}\ 1\in\phi(p)\ \text{for all}\ p\in S(\varphi)
 \end{align*}
@@ -693,11 +712,11 @@ We will now define a function $\varphi$ in the same way as before.
 All the Lemmas about $\varphi$ and $L$ still holds, since the function $\varphi$ is
 only determined by the frame $\la W,R\ra$ and not the Kripke model that we are
 looking at. But the behavior of $\phi$ has
-changed, since we must added the node  $0$ and we can only use sub formulas of
+changed, since we must added the node  $0$ and we can only use subformulae of
 $\alpha$. So we define:
-$$p^*=\bigvee\{L=\ol x: 0\leq x\leq n\wedge x\in\phi(p)\}$$
+\[p^*=\bigvee\{L=\ol x: 0\leq x\leq n\wedge x\in\phi(p)\}\]
 For $p\in S(\alpha)$ and let $p^*$ be random for all $p$'s that is not a
-subformula of $\alpha$. We now prove and state the following lemma is analogous
+subformula of $\alpha$. We will now prove and state the following lemma is analogous
 to lemma \ref{lem:5}:
 \begin{lem}
 	Let $0\leq x\leq n$. For any $\beta\in S(\alpha)$ and $^*$ as defined
@@ -710,7 +729,7 @@ to lemma \ref{lem:5}:
 	\end{enumerate}
 \end{lem}
 \begin{proof}
-	For $0<x$ the proof is identical to the proof of Lemma \ref{lem:10}. So we will
+	For $x>0$ the proof is identical to the proof of Lemma \ref{lem:10}. So we will
 	only prove the case where $x=0$. This is again an induction on the
 	complexity of $\beta$. We will only prove the cases where
 	$\beta=\Box\gamma$.
@@ -727,8 +746,8 @@ to lemma \ref{lem:5}:
 	the lemma for the first completeness theorem. We can also
 	make the following deduction by the induction hypothesis:
 	\begin{align*}
-		0\in\phi(\Box\gamma)&\Rightarrow 1\in(\gamma)\\
-				    &\Rightarrow 0\in\gamma)\\
+		0\in\phi(\Box\gamma)&\Rightarrow 1\in\phi(\gamma)\\
+				    &\Rightarrow 0\in\phi(\gamma)\\
 				  &\Rightarrow\PRA\vdash L=\ol
 				  0\rightarrow\gamma^*
 	\end{align*}
@@ -768,7 +787,7 @@ to lemma \ref{lem:5}:
 \end{proof}
 We thus have that $L=\ol 0$ is true, and we  can now finally prove the second completeness theorem:
 \begin{proof}[Proof of the Second Completeness theorem]
-	Assume that $\alpha$ is false in $\mathcal{K}$ i.e
+	Assume that $\alpha$ is false in a $\alpha$-reflexive $\mathcal{K}$ i.e
 	$1\not\in\phi(\alpha)$. Then by the just proven lemma we get
 	$0\not\in\phi(\alpha)$
 	and the just proven lemma gives:
@@ -841,10 +860,10 @@ theories $\textbf{T}$ that fulfills the following two conditions:
 		false sentences of the form $\exists x F(x)$.
 \end{enumerate}
 
-This proof does not use the Recursion theorem for creating the function
-$\varphi$, but instead uses the diagonalization lemma. The
+This proof does not use the recursion theorem for creating the function
+$\varphi$, but instead uses the fixed point lemma (Lemma 1.28). The
 proof of this will will not be given here, but it can be found in
-\citet{Dick1991}. This generalization shows that \GL\ axiomatize wide
+\citet{Dick1991}. This generalization shows that \GL\ axiomatize a wide
 range of different fragments of arithetmic; i.e the proof predicate in all of
 these fragments behaves in the same way, as we have that the proof predicate of
 \PRA\ does.
@@ -857,8 +876,8 @@ $I\Delta_0+\Omega_1$.
 
 Solovay's theorems can also be proven for some fragments without the use of
 fixed points. The two different proof strategies seen so far each uses fixed
-points. Either by using the recursion theorem or by using the digitalization
-theorem for a given arithmetic theory. Fedor Pakhomov has proven the theorems
+points. Either by using the recursion theorem or by using the fixed
+point lemma for a given arithmetic theory. Fedor Pakhomov has proven the theorems
 without the use of the fixed point lemma or the recursion theorem in
 \citet{Fedo2017}. This
 newer proof might be able to give a specific lower bound on the strength of
@@ -869,8 +888,8 @@ the fragments Solovay's theorem holds for.
 
 \section{Concluding remarks: Implications of Solovay's Theorems}
 
-The clearest implication of the generalized versions of Solovay's Completeness
-Theorems is that the proof predicate of arithmetic can be axiomatized;
+The clearest implication of the generalized versions of Solovay's completeness
+theorems is that the proof predicate of arithmetic can be axiomatized;
 everything there is to say about the predicate can be deduced from the
 derivability conditions and Löb's theorem. This can be seen both as a positive
 and negative result. Positive since the proof predicate follows some simple
@@ -882,12 +901,13 @@ all axiomatized by the same modal logic.
 
 Further, the proportional provability logic is not effected by Quines critique of
 modal logic as being unintelligible, since it has a very clear and unambiguous
-arithmetic interpretation. has a very clear and unambiguous arithmetic interpretation and is therefore not rendered unintelligible by Quine's critique of modal logic.
+arithmetic interpretation,  and is therefore not rendered unintelligible by Quine's critique of modal logic.
 
 Lastly the theorems also show that modal logic can be interesting for
 mathematicians that are not interested in the philosophical part of logic. The
 theorems show that modal logic can be used to get further knowledge about
 mathematical systems, and it can probably be used in other areas of mathematics.
-Modal logic also has some uses in both topology and set theory
-\citet{Artemov2007}.
+Modal logic also has some uses in both topology and set theory, which are
+explained more in depth in 
+\parencite{Artemov2007}.
 \end{document}

@@ -2,7 +2,7 @@
 
 \begin{document}
 
-In this section, I will state a few results and definitions from two projects that I have written; one about modal logic and one about Gödel's incompleteness
+In this section, a few results and definitions will be stated, from two projects that I have written; one about modal logic and one about Gödel's incompleteness
 theorems.
 These results will be given without proof. The proofs can be found in the
 original 
@@ -14,11 +14,11 @@ Theorems, and the definition of the modal logic \GL\
 (the name comes from Gödel and Löb) and a few of the properties of this modal
 logic. The
 main result of this project will be Solovay's arithmetic completeness theorem,
-which simply put states that these two predicates (from different mathematical
+which simply put states that these two predicates $\text{Pr}(\cdot)$ and $\Box$ (from different mathematical
 systems) "behave" in the
 same way.
 
-The most definitions and results from this section will be used in the rest of
+The majority of the definitions and results from this section will be used in the rest of
 the project.
 
 \section{Modal Logic}
@@ -68,7 +68,7 @@ $\Box\alpha$ reads "$\alpha$ is necessarily true". Further the symbol $\bot$ sta
 for falsehood. We will read $\Diamond \alpha$ as "$\alpha$ is consistent".
 \subsection{Semantics}
 In this section we will define the notation of truth for our modal logic. We
-will begin by defining a Hintikka frame and a Kripke model.
+will begin by defining the notion of a Hintikka frame and a Kripke model.
 \begin{defi}[Hintikka frame]
 	A \textit{Hintikka frame} is a tuple $\mathcal{H}=\la W,R\ra$ where $W$ is
 	a non-empty set (we will call its members for nodes\footnote{Normally
@@ -108,16 +108,16 @@ more used today than the one that will be used in this project.
 	\mathcal{H},\phi\ra$ in the
 	following way:
 	\begin{enumerate}
-		\item If $\alpha$ is propositional $p$ then:
-			\[\vDash_w^\mathcal{K}\alpha\ \text{iff}\ w\in\phi(p)\]
+		\item If $\alpha$ is a propositional letter $p$ then:
+			\[\vDash_w^\mathcal{K}\alpha \Leftrightarrow w\in\phi(p)\]
 		\item If $\alpha$ is $\bot$ then:
-			\[\vDash_w^\mathcal{K}\alpha\ \text{iff never} \]
+			\[\vDash_w^\mathcal{K}\alpha\ \Leftrightarrow\ \text{never} \]
 		\item If $\alpha$ is $\beta\rightarrow\gamma$ then:
-			\[\vDash_w^\mathcal{K}\alpha\ \text{iff}\ \text{if}
+			\[\vDash_w^\mathcal{K}\alpha \Leftrightarrow \text{if}
 				\vDash_w^\mathcal{K}\beta\ \text{then}\
 			\vDash_w^\mathcal{K}\gamma\]
 		\item if $\alpha$ is $\Box\beta$ then:
-			\[\vDash_w^\mathcal{K}\alpha\ \text{iff for all}\ v\
+			\[\vDash_w^\mathcal{K}\alpha\Leftrightarrow\ \text{for all}\ v\
 				\text{such that}\ wRv\ \text{we have}\
 			\vDash_v^\mathcal{K}\beta\]
 	\end{enumerate}
@@ -162,7 +162,7 @@ logic \GL, which will be our base modal logic in this project.
 
 	We will also define the set
 	$\Lambda_S=\{\alpha\vDash^\mathcal{S}\alpha,\ \text{for all structures}\
-	\mathcal{S}\in S\}$. Where $S$ is any class of frames.
+	\mathcal{S}\in S\}$. Where $S$ is any class of frames or models.
 \end{defi}
 We will further define when a given modal formula is deducible in a modal
 logic:
@@ -186,12 +186,12 @@ a modal logic that is not normal. But the modal logic \GL\ is a normal one.
 	A modal logic $\Lambda$ is called \textit{normal} if it has the following
 	axioms and deduction rules:
 	\begin{enumerate}
-		\item[Tau] All propositional tautologies. 
-		\item[\textbf{K}] $\Box(p\rightarrow q)\rightarrow(\Box p\rightarrow\Box
+		\item[Tau:] All propositional tautologies. 
+		\item[\textbf{K}:] $\Box(p\rightarrow q)\rightarrow(\Box p\rightarrow\Box
 			q)$.
-		\item[MP] $p,\ p\rightarrow q \vdash_\Lambda q$
+		\item[MP:] $p,\ p\rightarrow q \vdash_\Lambda q$
 			(\textit{modus ponens}.
-		\item[Nec] $p \vdash_\Lambda\Box p$ (\textit{necessitation}).
+		\item[Nec:] $p \vdash_\Lambda\Box p$ (\textit{necessitation}).
 	\end{enumerate}
 	If $\Gamma$ is a set of modal formulas we call the smallest normal
 	logic containing $\Gamma$ the normal modal logic axiomatized by
@@ -228,15 +228,16 @@ We can extend the logic \textbf{K} in the following way, to get the logic
 	\textbf{K4} is the modal logic that extends \textbf{K} by adding the
 	following axiom:
 	\begin{enumerate}
-		\item[\textbf{4}] $\Box p \rightarrow\Box\Box p$.
+		\item[\textbf{4}:] $\Box p \rightarrow\Box\Box p$.
 	\end{enumerate}
 	\GL\ is the modal logic extending \textbf{K} by adding the two following
 	axioms:
 	\begin{enumerate}
-		\item[\textbf{4}] $\Box p\rightarrow\Box\Box p$.
-		\item[\textbf{L}]
+		\item[\textbf{4}:] $\Box p\rightarrow\Box\Box p$.
+		\item[\textbf{L}:]
 			$\Box(\Box p\rightarrow p)\rightarrow\Box p$.
 	\end{enumerate}
+	Where the axiom \textbf{L} stands for Löb.
 \end{defi}
 \begin{remark}
 	Smorynski calls the modal logic \textbf{K4} for \textbf{BML} (Basic
@@ -275,7 +276,7 @@ the results about \GL.
 	frames.
 \end{thm}
 
-There is another result concerning the completeness and soundness of \GL. To
+There is another (more positive) result concerning the completeness and soundness of \GL. To
 state this, we first need some definitions concerning relations:
 \begin{defi}
 	A relation $R$ on frame $\mathcal{H}=\la W,R\ra$ is said to be
@@ -311,7 +312,8 @@ In this section we will state and sketch the proof of Gödel's incompleteness
 theorems. In this sketch we will define a predicate $\text{Pr}(\cdot)$ that
 says a given formula has a proof in arithmetic. We will also introduce the
 class of primitive recursive functions, the arithmetical theory known as
-primitive recursive arithmetic and the notion of Gödel numbering.
+primitive recursive arithmetic and the notion of Gödel numbering. All of these
+will be used later on in the project.
 
 
 \subsection{Primitive Recursive Functions}
@@ -357,7 +359,7 @@ left out.
 \begin{tabular}{p{1cm}p{6cm}p{5cm}}
 	1.& $K^n_k(x_1,\ldots,x_n)=k$  & Constant  \\
 	2.& $A(x,y)=x+y$ &Addition  \\
-	3.&$M(x,y)=x\cdots y$  &Multiplication  \\
+	3.&$M(x,y)=x\cdot y$  &Multiplication  \\
 	4.&$E(x,y)=x^y$  &Exponentiation  \\
 	5.&$pd(x)=\begin{cases}
 		x-1, &x>0\\
@@ -383,14 +385,16 @@ left out.
 \end{table}
 \end{prop}
 
-\subsection{\PRA}
+\subsection{The Arithmetical Theory \PRA}
 In this section we will specify the rules and language of the arithmetical
 theory \PRA. This theory will be the one we will state Gödel's incompleteness
 theorems for, and later will  prove
 Solovay's completeness theorems for it. We could have picked a different theory
-like \textit{Peano Arithmetic}, but the axioms of \PRA\ makes it a lot easier
+like \textit{Peano Arithmetic} (\textbf{PA}), but the axioms of \PRA\ makes it a lot easier
 to show that the theory can compute the functions known as primitive functions,
-which are crucial for the proof of Gödel's completeness theorems. First, we
+which are crucial for the proof of Gödel's completeness theorems. Further it
+also contains an amount of induction that is closer to what is needed to prove
+Solovay's theorems than \textbf{PA}. First, we
 will define the language $\mathcal{L}_\PRA$ of \PRA.
 
 \begin{defi}
@@ -443,7 +447,8 @@ definition of a \textit{sentence}.
 
 \begin{defi}
 	A formula $F$ of \PRA\ is called a \textit{sentence} if it has no free
-	variables; i.e if all variables $v$ that occur in $F$ are bound.
+	variables; i.e if all variables $v$ that occur in $F$ are bound by a
+	quantifier.
 \end{defi}
 
 Having defined the language of \PRA\ we can now state the different axioms of
@@ -491,7 +496,7 @@ Having defined the language of \PRA\ we can now state the different axioms of
 					v_i,\ldots,v_n)=\bar{f}(v_1,\ldots,
 					w,\ldots,v_n)$
 			\end{enumerate}
-			Where $1\leq i\leq n$ and $\ol{f}$ is an $n$.ary
+			Where $1\leq i\leq n$ and $\ol{f}$ is an $n$-ary
 			function symbol.
 		\item Non-logical axioms
 			\begin{enumerate}
@@ -521,7 +526,7 @@ Having defined the language of \PRA\ we can now state the different axioms of
 							from the primitive
 							recursive function $g$
 							and $h$, then the
-							following to things
+							following two things
 							holds:\\
 							$\ol
 							f(\0,v_1,\ldots,v_n)=\ol
@@ -553,7 +558,7 @@ and Solovay's completeness theorems. We will in Chapter \ref{chap:PRA} comment
 a bit more on different arithmetical theories and the amount of induction in
 them.  Having written down the
 axioms, we will move on to the
-inference rules of \PRA.
+inference rules and the notion of a formal derivation of \PRA.
 \begin{defi}
 	The \textit{inference rules} of \PRA\ are the following:
 	\begin{enumerate}
@@ -566,7 +571,8 @@ inference rules of \PRA.
 			\forall v F v$, under the assumption that no
 			$v$ occurs free in $G$.
 	\end{enumerate}
-	A \textit{formal derivation} in \PRA\ is a sequence of formulas of \PRA\
+	A \textit{formal derivation} in \PRA\ is a sequence of formulas of
+	\PRA:\
 	$F_0,F_1,\ldots,F_k$ such that each $F_i$ is either
 	an axiom of \PRA\ or follows from two other formulas $F_j,F_l$
 	where $j,l<i$ by one of the three inferences rules.
@@ -627,6 +633,7 @@ following table:
 \caption{The Codes for the Function Symbols}
 \end{table}
 
+Where $g^*,h_1^*,\ldots h_n^*,h^*$ are the codes assigned to $g,h_1,\ldots h_n,h$.
 This encoding is primitive recursive so \PRA, can do this encoding. But the proof of that is very tedious, so
 it will be left out.
 A lot of different relations and functions can be shown to be primitive recursive, one of the
@@ -642,8 +649,11 @@ predicate is the one known as the proof predicate.
 
 \subsection{The Proof Predicate and the Theorems}
 
-The predicate $\text{Pr}(x)$ can been shown to having the following properties called Löb's
+The predicate $\text{Pr}(\cdot)$ can been shown to having the following properties called Löb's
 derivability conditions:
+\begin{thm}
+	The predicate $\text{Pr}(\cdot)$ has the following properties for every 
+	formulae $F$ and $G$:
 \begin{enumerate}
 	\item[D1:] $\PRA\vdash F\Rightarrow\ \PRA\vdash\text{Pr}(\Godelnum{F})$.
 	\item[D2:] $\PRA\vdash\text{Pr}(\Godelnum{F\rightarrow
@@ -651,8 +661,10 @@ derivability conditions:
 	\item[D3:]
 		$\PRA\vdash\Pr(\Godelnum{F})\rightarrow\Pr(\Godelnum{\Pr(\Godelnum{F})})$.
 \end{enumerate}
-It is also clear that $\neg\Pr(\Godelnum{\bot})$, where $\bot$ is some false statement,
-expresses consistence of \PRA. We will denote this by $\text{Con}$.
+\end{thm}
+It is also clear that $\neg\Pr(\Godelnum{\bot})$, where $\bot$ is some false
+statement (like $0=1$),
+expresses the consistence of \PRA. We will denote this by $\text{Con}$.
 With the use of the $subst$ function, we can further  prove the following
 important lemma:
 \begin{lem}[The Fixed Point Lemma]
@@ -681,7 +693,8 @@ Since $\Pr(\cdot)$ fulfills the derivability conditions, the second theorem can
 also be proven. 
 \begin{thm}[The Second Incompleteness Theorem]
 	Under the assumption that \PRA\ is consistent we have that
-	$\PRA\not\vdash\text{Con}$.
+	$\PRA\not\vdash\text{Con}$. Which states that \PRA\ cannot prove its
+	own consistency
 \end{thm}
 The main goal for the rest of this project is now to prove that the $\Box$ in
 \GL "behaves" in the same way as the Pr($\cdot$) predicate from \PRA.
@@ -700,7 +713,7 @@ $\text{Pr}(\cdot)$.
 	F})\rightarrow\text{Pr}(\Godelnum{F})\]
 \end{thm}
 
-This theorem was an original an answer to a question asked by Leon Henkin: "If
+This theorem was originally an answer to a question asked by Leon Henkin: "If
 \PRA\ proves that $G\leftrightarrow\text{Pr}(\Godelnum{G})$ what does this say
 about $G$? Löb's answer is then that \PRA\ can only prove  that
 $\text{Pr}(\Godelnum{G})\rightarrow G$ in the case where \PRA\ proves $G$
@@ -769,6 +782,6 @@ $\Box$-operator of \GL, we get the following table:
 	about the logic basis of ethics \citet{Smil1963}. Further the modal
 	logic now known as \GL\ was considered before the arithmetical
 	interpretations of it was conjectured. Segerberg actually proved that
-	it was completeness with respect to the conversely well-founded frames
+	it was weakly completeness with respect to the conversely well-founded frames
 	before he knew about its importance in arithmetic.
 \end{document}

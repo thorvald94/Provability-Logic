@@ -12,7 +12,7 @@ Solovay's two  completeness theorems.
 
 The topic I have chosen to call \textit{recursion theory} is today often known as
 \textit{computability theory}. In his
-book \citet{Soare2016}, Robert Soares has put forth, some arguments for why
+book \parencite{Soare2016}, Robert Soares has put forth, some arguments for why
 this named is better suited for the discipline than recursion theory.
 
 This chapter will follow \citet{Soare1987}, unless stated otherwise. 
@@ -38,6 +38,12 @@ we have for all primitive recursive functions $f(x)$ that for some $y$ that
 $Ack(x,y)>f(x)$ for all $x\in \omega$. 
 proof of this fact can be found in \citet{Kleene1952}
 
+For the definition of the partial recursive functions we will need the
+following operator:
+\begin{defi}
+	For an expression $P$ we will define $\mu x [P(x)]$ as "the least $x$
+	such that $P(x)$".
+\end{defi}
 So we will need to expand our class of functions, if we want to
 \textit{capture} all intuitively computable functions. 
 We will expand them in the following way:
@@ -70,7 +76,7 @@ and it will be shown that these lead to the same class of functions.
 
 We will end this section with the following definition:
 \begin{defi}
-	A relation $R\subset\omega^n$ where $n\geq 1$ is recursive (primitive
+	A relation $R\subset\omega^n$ where $n\geq 1$ is \textit{recursive} (primitive
 	recursive) if its characteristic function $\chi_R$ is recursive
 	(primitive recursive). The case where $n=1$ is the case where $R$ is a
 	set $A\subset\omega$, so we also have the definition of a set being
@@ -92,8 +98,8 @@ machine.
 		\item Change from one state to another.
 		\item Change the scanned symbol $s$ to another symbol
 			$s'\in S=\{1,B\}$
-		\item Move the reading head one cell to the right R or the left
-			L.
+		\item Move the reading head one cell to the right (R) or the left
+			(L).
 	\end{enumerate}
 	The operation of $M$ is controlled by a partial map:
 	$$\delta:Q\times S\rightarrow Q\times S\times\{R,L\}$$
@@ -111,7 +117,7 @@ The way to understand this definition is the following: if
 $(q,s,q',s',X)\in\delta$, it means that the machine $M$ is in stage $q$ where it
 scans symbol $s$ then changes to state $q'$ and replaces $s$ by $s'$. Lastly it
 moves to the right if $X=R$ and the left if $X=L$. The map $\delta$ is called a
-Turing program if it can be viewed as a finite set of quintuples. If the input
+Turing program (denoted by $P$) if it can be viewed as a finite set of quintuples. If the input
 integer is $x$ then it will be represented by a string of $x+1$ consecutive
 $1's$, where all other cells are blank.
 
@@ -184,7 +190,9 @@ class of functions coincides with the function that we see as intuitively
 computable. In the rest of this project we will assume that Church's Thesis
 is true. There are some other definitions of computable functions that gives
 rise to exactly the same class of functions; a list of these can be found in
-\citet{Cutland1980}
+\citet{Cutland1980}. This can be seen as further evidence of the correctness of
+Church's Thesis; but the thesis cannot be proven, since it is not possible to
+rigorously define the notion of an intuitively computable function.
 
 We will begin by proving the padding lemma, which states that each partial
 function $\varphi_x$ has an infinite amount of indices.
@@ -211,7 +219,7 @@ very tedious.
 	\[\varphi_e(x)=U(\mu yT(e,x,y))\]
 \end{thm}
 The proof will not be fully rigorous.
-\begin{proof}
+\begin{proof}[Proof sketch]
 	It can be  shown that the predicate $T(e,x,y)$ exists and is primitive
 	recursive, we will only do a bit of this work. This predicate informally
 	states that $y$ is the code of Turing program $P_e$ with input $x$. For
@@ -236,7 +244,8 @@ The proof will not be fully rigorous.
 	the final configuration $c_n$. 
 
 	Further the encoding we have made makes it so that $T$ and $U$ are
-	primitive recursive. This is shown in \citet[p. 376]{Kleene1952}.
+	primitive recursive. This is shown in \citet{Kleene1952} on page 376,
+	for a flighty different defined predicate $T$.
 \end{proof}
 This theorem also gives us that each partial recursive function can be created
 by two primitive recursive functions, with a single application of the
@@ -258,13 +267,14 @@ We will need the following notation in the next proof:
 	$$\frac{1}{2}(x^2+2xy+y^2+3x+y)$$
 	This function is from $\omega\times\omega$ onto $\omega$.
 \end{defi}
-\begin{thm}[s-m-n theorem]
+We can now state and prove the important $s-m-n$ theorem:
+\begin{thm}[$s-m-n$ Theorem]
 	For every $m,n\geq 1$ there exists an injective recursive function
 	$s_n^m$ of $m+1$ variable such that for all $x,y_1,\ldots,y_m$
 	\[\varphi^{(n)}_{s^m_n(x,y_1,\ldots,y_m)}(z_1,\ldots z_n)=
 	\varphi^{(m+n)}_x(y_1,\ldots,y_m,z_1,\ldots,z_n)\]
 \end{thm}
-\begin{proof}
+\begin{proof}[Proof sketch]
 	I will follow Soare and only prove the case where $m=n=1$. I.e the case
 	where we have to prove:
 	\[\varphi_{s^1_1(x,y)}(z)=[\varphi_x^{2}(y,z)]\]
@@ -311,7 +321,7 @@ prove the following proposition:
 	Where $\varphi_{x_1}$ is the function $\varphi_z^{(2)}$ from Theorem
 	\ref{thm:Emu}.
 
-	By the church thesis this function is partial recursive
+	By the Church thesis this function is partial recursive
 	and has an index $e$. So by applying the $s-m-n$ Theorem we get:
 	\[\varphi_x\varphi_y(z)=
 	\varphi_e(x,y,z)=\varphi_{s_1^2(e,x,y)}\]
@@ -323,16 +333,24 @@ In this section we will introduce the two concepts \textit{recursive
 enumerable} sets and the \textit{graph} of a function. We will further show
 that there is a connection between these two concepts.
 
+We will first need the following definition before we can define the notion of
+recursively enumerable set:
+
+\begin{defi}
+	We write $\varphi_{e,s}(x)=y$ if $x,y,e<s$ and $y$ is the output of
+	$\varphi_e(x)$ in less than $s$ steps of the Turing program $P_e$.
+\end{defi}
+
 The idea behind a recursively enumerable set is that we can have an algorithm
 that can enumerate the members of the set.
 
 \begin{defi}
 	A set $A$ is \textit{recursively enumerable} (r.e.) if $A$ is the domain of some
-	primitive recursive function. Further we define the following two sets:
+	partial recursive function. Further we define the following two sets:
 	\begin{enumerate}
 		\item We let the $e$th r.e set be denoted by:
-			$$E_e=\text{dom}\ (\varphi_e)= \{x:f(x)\downarrow\}=\{x:\exists
-			y T(e,x,y)\}$$
+			\[E_e=\text{dom}\ (\varphi_e)= \{x:\varphi_e(x)\downarrow\}=\{x:\exists
+			y T(e,x,y)\}\]
 		\item \[E_{e,s}=\text{dom} (\varphi_{e,s})\]
 	\end{enumerate}
 \end{defi}
@@ -343,13 +361,13 @@ following two propositions shows:
 	is r.e.
 \end{prop}
 \begin{proof}
-	We have that $K$ is the domain of the following primitive recursive
+	We have that $K$ is the domain of the following partial recursive
 	function:
 	\[\psi(x)=\begin{cases}
 		x &\text{if}\ \varphi_x(x)\ \text{converges}\\
 		\text{undefined} &\text{otherwise.}
 	\end{cases}\]
-	This function is primitive recursive by Church's Thesis, since $\psi(x)$
+	This function is partial recursive by Church's Thesis, since $\psi(x)$
 	can be computed by program $P_x$ on input $x$, which outputs $x$ only
 	if $\varphi_x(x)$ converges.
 \end{proof}
@@ -358,7 +376,7 @@ following two propositions shows:
 \end{prop}
 \begin{proof}
 	If $K$ was recursive we would have that it had a recursive characteristic
-	function $K_\chi$, and thus the following would be recursive:
+	function $\chi_K$, and thus the following would be recursive:
 	\[f(x)=\begin{cases}
 		\varphi_x(x)+1 & \text{if } x\in K\\
 		0 & \text{if } x\not \in K
@@ -371,7 +389,7 @@ So even though we have a algorithm that can enumerate all the members of the
 set $K$, we can not for a given $x$ decide whether $x\in K$, so we can not
 solve for a given $x$ that $\varphi_x(x)$ converges or not.
 
-Next goal is to show that the definition of a r.e sets is equivalent to the
+The next goal is to show that the definition of a r.e sets is equivalent to the
 definition that there is an algorithm that enumerates the members of it. We
 will further also show that the definition of a r.e set is equivalent to the
 set being $\Sigma_1$, which is a concepts that will play a bigger role later on
@@ -387,15 +405,15 @@ We can now show the following theorem:
 	A set $A$ is r.e iff $A$ is $\Sigma_1$.
 \end{thm}
 \begin{proof}
-	($\Rightarrow$) Since $A$ is r.e we have that $A=W_e=\text{dom} f_e$
+	($\Rightarrow$) Since $A$ is r.e we have that $A=W_e=\text{dom} \varphi_e$
 	for some $e$. This means that:
-	$$x\in W_e\Leftrightarrow\exists s(x\in W_{e,s})\Leftrightarrow \exists
+	$$x\in E_e\Leftrightarrow\exists s(x\in E_{e,s})\Leftrightarrow \exists
 	s(T(e,x,s))$$
 	Since the relation $T$ is primitive recursive and we have that the set $A$
 	is the projection a recursive relation.
 
 	($\Leftarrow$) Let $A=\{x:\exists y(Rx,y)\}$ where $R$ is recursive. We
-	then have that $A=\text{dom} f$ where $f(x)=\mu y(R(x,y))$ and thus $A$
+	then have that $A=\text{dom} (\psi)$ where $\psi(x)=\mu y(R(x,y))$ and thus $A$
 	is r.e
 \end{proof}
 This theorem is equivalent to the normal form theorem for partial recursive
@@ -405,7 +423,7 @@ $\Sigma_1$.
 	\label{thm:RecSigma}
 	If there is a recursive relation $R\subseteq\omega^{n+1}$ and if we
 	have the following set:
-	$$A=\{x|\exists y_1\ldots\exists  y_n R(x,\y)\}$$
+	$$A=\{x:\exists y_1\ldots\exists  y_n R(x,\y)\}$$
 	Then the set $A$ is $\Sigma_1$.
 \end{thm}
 \begin{proof}
@@ -444,7 +462,7 @@ chapter.
 
 \begin{thm}[Uniformaization Theorem]
 	If $R\subseteq\omega^2$ is an r.e relation, then there is a p.r
-	function $\text{sel}$ called the selector function for $R$ such that:
+	function $\psi=\text{sel}$ called the selector function for $R$ such that:
 	$$\text{sel}(x)\ \text{is defined}\ \Leftrightarrow\ \exists y(R(x,y))$$
 	and if this is the case we have that $(x,f(x))\in R$
 \end{thm}
@@ -452,8 +470,8 @@ chapter.
 	Since $R$ is r.e it is $\Sigma_1$. This means that there is a recursive
 	relation $S$ such that $R(x,y)$ holds iff $\exists z (S(x,y,z))$. Thus
 	we can define the following p.r function:
-	$$g(x)=\mu u(S(x,(u)_1,(u)_2))$$
-	And now we put $f(x)=(g(x))_1$
+	$$\theta(x)=\mu u(S(x,(u)_1,(u)_2))$$
+	And now we put $\text{sel}(x)=(g(x))_1$
 \end{proof}
 It will be the following theorem we will use in our proof later on.
 \begin{thm}[Graph Theorem]
@@ -466,7 +484,7 @@ It will be the following theorem we will use in our proof later on.
 
 	($\Leftarrow$) Since the graph of $\varphi$ is assumed to be r.e we can
 	conclude that $\varphi$ is its own primitive recursive selector function. This
-	is that $R=\text{graph} \varphi$ can only have $\varphi$ as its selector function.
+	is that $R=\text{graph} (\varphi)$ can only have $\varphi$ as its selector function.
 \end{proof}
 
 We will end this section with the next theorem. It justifies the notion of a
@@ -479,7 +497,7 @@ $A=\{a_0,a_1,a_2,\ldots\}$
 \end{thm}
 \begin{proof}
 	($\Leftarrow$) If $A=\emptyset$ then $A$ is clearly r.e. Now
-	assume that $A=im(f)$, where $f$ is a total recursive function. Then
+	assume that $A=\text{im}(f)$, where $f$ is a total recursive function. Then
 	$A$ is r.e by corollary 2.1
 
 	($\Rightarrow$)
@@ -490,7 +508,7 @@ $A=\{a_0,a_1,a_2,\ldots\}$
 		x &\ \text{if}\ x\in E_{e,s-1}\setminus E_{e,s}\\
 		a &\ \text{otherwise}
 	\end{cases}\]
-	WE have that $A= im (f)$, since if $x\in E_e$, we can choose the least
+	We have that $A= \text{im} (f)$, since if $x\in E_e$, we can choose the least
 	$s$ such that $x\in E_{e,s+1}$, and thus $f(\la s,x\ra)=x$ and hence
 	$x\in im(f)$
 \end{proof}
@@ -498,7 +516,7 @@ $A=\{a_0,a_1,a_2,\ldots\}$
 \section{The Recursion Theorem}
 In this section we will state and prove the recursion theorem. It will be
 crucial in chapter 6, since we will need it to define a function, which will be
-used to embed a Kripke model in \PRA.
+used to embed a Kripke model into \PRA.
 \begin{thm}[The Recursion Theorem]
 	For every recursive function $f$ there exists a fixed point $n$ such
 	that $\varphi_n=\varphi_{f(x)}$
@@ -568,8 +586,8 @@ $s-m-n$ theorem to define a function $f(x)$ and
 $\varphi_{f(x)}(z)=(\ldots,x\ldots)$ and then taking a fixed point:
 $\varphi_n=\varphi_{f(n)}$.  When we are making constructions like this, the
 only thing we cannot do is use specific properties of the function $\varphi_n$.
-We will use the theorem in this way in our proof of Solovay's Completeness
-Theorems to define a function with the help of the function own Gödel number; and
+We will use the theorem in this way in our proof of Solovay's completeness
+theorems to define a function with the help of the function own Gödel number; and
 the recursion theorem makes this a viable tactic.
 
 The
@@ -583,7 +601,7 @@ following examples will show a few uses of this theorem.
 \end{exmp}
 
 The next example will be an application of the Recursion Theorem that is in the
-same vein as the one we will use proving Solovay's completeness
+same vein as the one we will use for proving Solovay's completeness
 theorems.
 \begin{exmp}
 	Let $\psi:\omega^2\rightarrow\omega$ and
@@ -602,7 +620,7 @@ theorems.
 	\[\Xi(\tau_0):\ (v_0=\0\wedge \tau_1v_0v_1)\vee (v_0>\0\wedge \exists
 	v(\tau_0(v_+-1,v)\wedge \zeta vv_0v_1))\]
 	We can see $\Godelnum{\Xi(\tau_0)}$ as a primitive recursive function
-	of $\Godelnum{\tau_0}$. I.e we have:
+	representing  $\Godelnum{\tau_0}$. I.e we have:
 	\[\Godelnum{\Xi(\tau_0)}=\eta(\Godelnum{\tau_0})\]
 	We can now use the Recursion Theorem to chose an $n$ such that we have:
 	$\varphi^{(2)}_{\eta(n)}=\varphi^{(2)}_n$ and for
@@ -615,6 +633,7 @@ theorems.
 
 This end our discussion about recursion theory. In the next chapter, we will
 generalize the notion of $\Sigma_1$ sets and in chapter \ref{chap:Complete} we
-will use the recursion theorem to define an important function.
+will use the recursion theorem to define the  function that we will use to
+embed a Kripke model into \PRA.
 
 \end{document}
