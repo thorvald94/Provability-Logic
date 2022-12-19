@@ -12,10 +12,10 @@ Solovay's two  completeness theorems.
 
 The topic I have chosen to call \textit{recursion theory} is today often known as
 \textit{computability theory}. In his
-book \parencite{Soare2016}, Robert Soares has put forth, some arguments for why
+book \citet{Soare2016}, Robert Soares has put forth, some arguments for why
 this named is better suited for the discipline than recursion theory.
 
-This chapter will follow \parencite{Soare1987}, unless stated otherwise. 
+This chapter will follow \citet{Soare1987}, unless stated otherwise. 
 
 \section{Partial Recursive Functions and Recursive Functions}
 The class of partial recursive functions is an enlargement of the primitive recursive
@@ -36,7 +36,7 @@ in the class of primitive recursive functions:
 This function grows too fast to be a primitive recursive function, i.e
 we have for all primitive recursive functions $f(x)$ that for some $y$ that
 $Ack(x,y)>f(x)$ for all $x\in \omega$. 
-proof of this fact can be found in \parencite{Kleene1952}
+proof of this fact can be found in \citet{Kleene1952}
 
 So we will need to expand our class of functions, if we want to
 \textit{capture} all intuitively computable functions. 
@@ -106,7 +106,7 @@ The situation can be seen in the following figure:
 \caption[asd]{A Turing Machine\footnotemark}
 \end{figure}
 \end{center}
-\footnotetext{This picture is taken from \parencite{Soare1987}}
+\footnotetext{This picture is taken from \citet{Soare1987}}
 The way to understand this definition is the following: if
 $(q,s,q',s',X)\in\delta$, it means that the machine $M$ is in stage $q$ where it
 scans symbol $s$ then changes to state $q'$ and replaces $s$ by $s'$. Lastly it
@@ -184,7 +184,7 @@ class of functions coincides with the function that we see as intuitively
 computable. In the rest of this project we will assume that Church's Thesis
 is true. There are some other definitions of computable functions that gives
 rise to exactly the same class of functions; a list of these can be found in
-\parencite{Cutland1980}
+\citet{Cutland1980}
 
 We will begin by proving the padding lemma, which states that each partial
 function $\varphi_x$ has an infinite amount of indices.
@@ -201,7 +201,7 @@ function $\varphi_x$ has an infinite amount of indices.
 
 The following theorem will show that each Turing computable function is in fact
 partial recursive. The converse also holds, and the proof of this fact can be
-found in \parencite{Kleene1952}. The proof of that fact is left out since it is
+found in \citet{Kleene1952}. The proof of that fact is left out since it is
 very tedious.
 
 \begin{thm}[The Normal Form Theorem]
@@ -236,7 +236,7 @@ The proof will not be fully rigorous.
 	the final configuration $c_n$. 
 
 	Further the encoding we have made makes it so that $T$ and $U$ are
-	primitive recursive. This is shown in \parencite[p. 376]{Kleene1952}.
+	primitive recursive. This is shown in \citet[p. 376]{Kleene1952}.
 \end{proof}
 This theorem also gives us that each partial recursive function can be created
 by two primitive recursive functions, with a single application of the
@@ -439,7 +439,7 @@ The relation of a graph can also be seen as a function in the language of
 $\PRA$; so we will often denote the graph of a function $\varphi(x)=y$ with the
 following notation: $\tau xy$, and say that $(x,y)\in\ \text{graph}(\varphi)$ if and
 only if $\tau xy$ is true. We will use this notation in chapter 6, since Smorinsky
-uses this notation, and we will follow his book \parencite{Smor1985} in that
+uses this notation, and we will follow his book \citet{Smor1985} in that
 chapter.
 
 \begin{thm}[Uniformaization Theorem]
@@ -531,7 +531,7 @@ used to embed a Kripke model in \PRA.
 	The second equality sign follows from \ref{eq:du} and the third follows
 	from \ref{eq:fd}.
 \end{proof}
-Following \parencite{Owen1973}, the argument in the proof can be seen as a
+Following \citet{Owen1973}, the argument in the proof can be seen as a
 digitalization argument that fails. Commonly when we apply a digitalization
 argument, we have a class of sequences, with terms from a set $A$, that we arrange as the rows in a square
 matrix. We then have a map $h:A\rightarrow A$ that induces an operation $h^*$ on

@@ -6,27 +6,28 @@ In this chapter we will enrich the language $\mathcal{L}_\Box$ with both more
 modal operators or quantifiers. For these languages a number of different
 results can be proven.  
 In the case with more modal operators the results will be positive; i.e there
-are versions of Solovay's completeness theorems for these kinds of modal logic.
+are versions of Solovay's  completeness theorems for these kinds of modal logic.
 But in the case where we enrich our language with quantifiers our results will
 be negative; i.e we cant prove versions of Solovay's completeness theorems for
 these kinds of modal logic.
 
-This chapter will skip the most of the proofs of these
-results, but the proofs can be found in \parencite{Boolos1993}. The part about
-multi-modal logic will also be more explained more in depth than the part about
+This chapter will skip the majority of the proofs of these
+results, but the proofs can be found in \citet{Boolos1993}. The part about
+multi-modal logic will also be  explained more in depth than the part about
 the quantified modal logic, which will be very short.
+
 
 \section{Multi-modal provability logic}
 
 We can extend our language $\mathcal{L}_\Box$ with more modality operators. We
 will start of by extending it with the modal operator:
-$\OneBox$ and its dual $\OneDiamond$. In the next subsection it will be
-explained what we will mean with the $\OneBox$\ . Later on we will extend the language
-with even more modal operators.
+$\OneBox$ and its dual $\OneDiamond$. In the next subsection, it will be
+explained what we will mean by the $\OneBox$\ . Later on, we will extend the language
+with up to $n$ different  modal operators.
 \subsection{The system \GLB}
 
 \begin{defi}
-We will say that a arithmetical theory \textbf{T} is $\omega$-inconsistent iff for some
+	We will say that a fragment of arithmetic  \textbf{T} is $\omega$-inconsistent iff for some
 formula $\alpha(x)$, $\textbf{T}\vdash\exists x\alpha(x)$ and for every
 $n\in\omega$ we have: $\textbf{T}\vdash\neg\alpha(x)$. \textbf{T} is called
 $\omega$-consistent iff it is not $\omega$-inconsistent.
@@ -48,15 +49,15 @@ It is clear that if $\alpha$ is provable in \textbf{T} then it is
 $\omega$-provable in \textbf{T}. We will introduce a new modal system
 $\textbf{GLB}$, where \textbf{B} stands for bimodal, where we add two new modal
 operators: $\OneBox$ and $\OneDiamond$ to our modal language
-$\mathcal{L}_\Box$. We will call this new language $\mathcal{L}_{\oneBox}$
+$\mathcal{L}_\Box$. We will call this new language $\mathcal{L}_{\oneBox}$.
 \begin{defi}
 	The language $\mathcal{L}_{\oneBox}$ is the language $\mathcal{L}_\Box$
-	extend with the modal operator $\OneBox$, where the syntax $\OneBox$ is
+	extended by the modal operator $\OneBox$, where the syntax $\OneBox$ is
 	the same as that of $\Box$. The operator $\OneDiamond$ is defined as
 	the dual of $\OneBox$.
 \end{defi}
-We now define the system of \GLB. We will later on discuss the semantics of
-\GLB, but this is not of important right now.
+We now define the system of \GLB. We will later discuss the semantics of
+\GLB, but this is not of importance at this point.
 
 \begin{defi}
 	The axioms of \GLB\ are all tautologies and all sentences of the
@@ -88,7 +89,7 @@ end we need the following definition:
 \begin{defi}
 	We call the following rule the  $\omega$\textit{-rule}: Infer $\forall
 	x\alpha(x)$ for all $\alpha(\ol n)$, where $n\in\omega$. A sentence is
-	provable under the $\omega$-rule in \textbf{T} if it belongs to all
+	provable under the $\omega$-rule in \textbf{T}, if it belongs to all
 	classes containing the axioms of \textbf{T} and closed under MP, Nec and
 	the $\omega$-rule.
 	We further say that a sentence $F$ is provable in \PRA\ by \textit{one
@@ -137,7 +138,7 @@ We need a few more definitions before we can state the arithmetical soundness th
 	$\omega\text{Pr}(x)=\exists y\omega\text{Prov}(y,x)$
 \end{defi}
 We then have that $\omega\text{Pr}(x)$ by theorem \ref{thm:omega} is provable
-coextensive with the formulas stating in \PRA\ the following properties:
+coextensively with the formulas stating in \PRA\ the following properties:
 "$\omega$-provable", "provable in $\PRA^+$ and "provable by one application of
 the $\omega$-rule". This means that for each sentence $F$ in \PRA\ that we
 have:
@@ -160,8 +161,8 @@ We omit the proof here. We can not prove the arithmetical completeness theorem
 for \GLB\ without the help of another multi modal logic.
 
 This is because there is no good Kripke semantics for the logic \GLB. We will
-start of by defining a Kripke modal for the logic \GLB; this definitions is a
-extension of a "normal" frame, but with two relations instead of one
+start of by defining a Kripke modal for the logic \GLB; this definition is an
+extension of a "normal" frame, but with two relations instead of one.
 
 \begin{defi}
 	A  frame for a modal logic with two modal operators is a triple
@@ -169,7 +170,7 @@ extension of a "normal" frame, but with two relations instead of one
 	$W$. A model is a quadruple $\mathcal{K}=\la W, R,R_1,\phi\ra$ were
 	$\phi$ is a valuation function on $W$. The truth of modal formula
 	$\alpha$ in a given node $w\in W$ is defined in the obvious way, and
-	the two main clauses of the definition is:
+	the two main clauses of the definition are:
 	\begin{enumerate}
 		\item $\vdash_w^\mathcal{K}\Box\alpha$ iff for all $v\in W$ such
 			that $wRv$ we have $\vdash_v^\mathcal{K}\alpha$
@@ -177,17 +178,18 @@ extension of a "normal" frame, but with two relations instead of one
 			that $wR_1v$ we have $\vdash_v^\mathcal{K}\alpha$
 	\end{enumerate}
 \end{defi}
-The problem here for is that it can be shown, no matter what the relation $R_1$ will be the
-empty relation $W$ and therefor $\OneBox\bot$ will be valid and thus contradict
-that $\vdash_\GLB\OneBox\bot$ from the arithmetical  soundness of \GLB. Giorgie
+the problem here is that it can be shown that no matter what, the relation
+$R_1$ 
+will be the empty relation W and therefore $\OneBox\bot$  will be valid and thus be a 
+contradiction to X from the arithmetical soundness of \GLB. Giorgie
 Dzhaparidze found a way around this by looking at another multi modal logic,
 which will be introduced in the next section. His result was improved  by
-Konstantin Ignatiev .
+Konstantin Ignatiev.
 
 \subsection{The system \textbf{IDzh} and completeness of \GLB}
 
-Since \GLB\ does not have any good Kripke semantic we will at a multi modal logic that
-has such a semantic; we will call this modal logic for \textbf{IDzh} Ignatiev
+Since \GLB\ does not have any good Kripke semantic we will look at a multi modal logic that
+has such a semantic; we will call this modal logic for \textbf{IDzh} after Ignatiev
 and Dzhaparidze.
 
 \begin{defi}
@@ -205,28 +207,28 @@ and Dzhaparidze.
 	\end{enumerate}
 	The deduction rules are the following:
 	\begin{enumerate}
-		\item[MP] Modus pones 
+		\item[MP] Modus ponens 
 		\item[Nec] $\Box$-necessitation
 		\item[Nec$_1$] $\OneBox$-necessitation
 	\end{enumerate}
 	Here we add the inference Nec$_1$ since this rule can not be proven
-	from the other rules and axioms in this modal logic.
+	from the other rules and axioms of this modal logic.
 \end{defi}
 The modal logic \IDzh\ can be shown to be weaker than \GLB\ and thus
 $\IDzh\subseteq\GLB$.
 
-The multi modal logic \IDzh\ has the following Kripke semantic for which a soundness and
+The multi modal logic \IDzh\ has the following Kripke semantic, for which a soundness and
 completeness theorem can be proven.
 \begin{defi}
 	An \IDzh-model is a quadruple $\mathcal{K}=\la W,R,R_1,\phi\ra$, where
 	$W$ is a finite non-empty set, $\phi$ is a valuation function $W$, and
-	$R$ and $R_1$ are transitive irreflexive relation on $W$ such that for
+	$R$ and $R_1$ are transitive irreflexive relations on $W$ such that for
 	all $w,v_1,v_2\in W$ we have that:
 	\[\text{If}\ wR_1v_1\ \text{then}\ wRv_2\ \text{if and only if}\
 	v_1Rv_2\]
 \end{defi}
 This means that we can not have that $wRv$ and $wR_1v$ since then $vRv$;
-contradicting the irreflexivity $R$
+contradicting the irreflexivity $R$.
 
 For such models the following theorem can be proven:
 \begin{thm}
@@ -257,19 +259,19 @@ We have that $(1)\Rightarrow (2)$ since $\IDzh\subset\GLB$ and the fact that
 $\vdash_\GLB\Psi\alpha$. That $(2)\Leftrightarrow(3)$ is just the arithmetical
 soundness theorem for \GLB. The proof of $(3)\Rightarrow(1)$ will obviously
 prove the arithmetical completeness theorem for \GLB.
-The proof of this can be found in \parencite{Boolos1993} and is beyond the scope of
+The proof of this can be found in \citet{Boolos1993} and is beyond the scope of
 this project.
 
 We can also look at the multi modal logic \textbf{GLSB} which is the modal logic that have all
-the theorems of \GLB  and all formulas:
-$\OneBox\alpha\rightarrow\alpha$ as axioms, and which only have modus ponens as
+the theorems of \GLB\  and all formulas:
+$\OneBox\alpha\rightarrow\alpha$ as axioms, and which only has modus ponens as
 its rule of inference. A variant of Solovay's second completeness theorem can
 be shown for this multi modal logic.
 
 \subsection{The system \textbf{GLP}}
-We will end this section by introducing the system \textbf{GLP}
+We will end this section by introducing the system \textbf{GLP}.
 The language $\mathcal{L}_{[n]}$ of \textbf{GLP} is an extension of
-$\mathcal{L}_\Box$, where instead of $\Box$ we write $[0]$ and we furhter add
+$\mathcal{L}_\Box$, where instead of $\Box$ we write $[0]$ and we further add
 a countable infinite amount of boxes:
 $[1],[2],\ldots$ representing provability in $\PRA^+$, $\PRA^{++}$ and so on,
 where $\PRA^{++}$ is  $\PRA^+$ with all formulas of the form $\forall x G(x)$
@@ -279,7 +281,7 @@ these represent consistency, $\omega$-consistency,
 $\omega$-$\omega$-consistency and so on. We can now define the system
 \textbf{GLP}:
 \begin{defi}
-	The axioms and inferences rules of \textbf{GLP} are the following:
+	The axioms and inference rules of \textbf{GLP} are the following:
 	\begin{enumerate}
 		\item[A1]
 			$[n](\alpha\rightarrow\beta)\rightarrow([n]\alpha\rightarrow[n]\beta)$
@@ -295,25 +297,28 @@ Following Dzhaparidze the arithmetical completeness theorem can be proven for
 this system of multi modal logic. The proof follows that of the proof of the
 arithmetical completeness theorem for \GLB.
 
-Again we can look at the multi modal logic \textbf{GLSP} which is has all
+Again we can look at the multi modal logic \textbf{GLSP} which has all
 theorems and sentences $[n]\alpha\rightarrow\alpha$ as its axioms and which
-only have modus ponens as it inference rule. Again a variant of Solovay's
+only has modus ponens as it inference rule. Again a variant of Solovay's
 second completeness theorem holds for this logic.
 
-So Solovay's completeness theorems generalizes nicely to multi modal logics;
+So Solovay's completeness theorems generalize nicely to multi modal logics;
 i.e the concept of $\omega$-provability (and beyond) can also be axiomatized.
+
 
 The proofs of these results are rather involved, but they still follow the same
 idea as Solovay's original idea. This shows how deep the concept of embedding
-modal logic into arithmetic is. But this fundamental idea do not generalize to
-all extensions of \GL, which will be discussed in the next section.
+modal logic into arithmetic is.
+But this fundamental idea does not generalize to
+all extensions of \GL, something which will be discussed in the next section.
 
 \section{Quantifed provability logic}
-There is another way to extend the logic \GL; we can add quantifiers to the
-language. We will call this logic for quantified modal logic (QML). The first
+There is another way to extend the logic \GL; we can add quantifiers and
+predicates to the
+language. We will call this logic  quantified modal logic (\textbf{QML}). The first
 goal is to define what a formula is:
 \begin{defi}
-	$\alpha$ is a formula of QML if and only if it can be obtained from a
+	$\alpha$ is a formula of \textbf{QML} if and only if it can be obtained from a
 	formula of first order logic by
 	replacing occurrences of the negation sign "$\neg$" with occurrences of
 	$\Box$. 
@@ -321,12 +326,21 @@ goal is to define what a formula is:
 
 	There is not a version of Solovay's completeness theorems for this
 	logic; i.e it is not arithmetically complete with respect to any
-	fragment of arithmetic. Furthermore this logic  do not have the fixed point property and
+	fragment of arithmetic. Furthermore this logic  does not have the fixed point property and
 	is not complete with respect to any class of Hintikka frames. These
 	results can actually be shown to hold for an even more conservative
-	extension of \GL: one where we only always one place predicates are
-	allowed and where we do not permit nestings of the $\Box$-operator. Further
+	extension of \GL: one where we only one place predicates are
+	allowed and where we do not permit nestings of the $\Box$-operator.
+	These results makes sense, since first-order modal logic generally do
+	not have the same nice properties as propositional modal logic.
+	Further
 	information on this topic and proofs of these statements can be found
-	in \parencite{Boolos1993}, but this goes way beyond the scope of this
-	project and are left out.
+	in \citet{Boolos1993}, but this goes way beyond the scope of this
+	project and has been left out.
+
+	A list of even more results of provability logic can be found
+	in \citet{sep-logic-provability} and \citet{ArteBe}, and these
+	are even more beyond the scope of this project than the rest of this
+	chapter. Further areas of mathematics where modal logic is used is
+	discussed in \citet{Artemov2007}.
 	\end{document}

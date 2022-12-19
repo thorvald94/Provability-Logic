@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.10.0 (TeX Live 2019/Debian)  (format=lualatex 2022.10.24)  19 DEC 2022 01:09
+This is LuaTeX, Version 1.10.0 (TeX Live 2019/Debian)  (format=lualatex 2022.10.24)  19 DEC 2022 01:58
  restricted system commands enabled.
  file:line:error style messages enabled.
 **thesis.tex
@@ -1154,6 +1154,12 @@ File: biblatex.def 2019/12/01 v3.14 biblatex compatibility (PK/MW)
 \biburllcskip=\muskip21
 \c@smartand=\count460
 )
+Package biblatex Info: Trying to load natbib compatibility...
+Package biblatex Info: ... file 'blx-natbib.def' found.
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-natbib.def
+File: blx-natbib.def 2019/12/01 v3.14 biblatex compatibility (PK/MW)
+Package biblatex Info: Delimiter 'nameyeardelim' in context '' already defined, overwriting.
+)
 Package biblatex Info: Trying to load bibliography style 'authoryear'...
 Package biblatex Info: ... file 'authoryear.bbx' found.
  (/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/authoryear.bbx
@@ -1474,12 +1480,12 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 233.
 )
 
 Here is how much of LuaTeX's memory you used:
- 42203 strings out of 481365
+ 42248 strings out of 481365
  100000,1977958 words of node,token memory allocated
  2272 words of node memory still in use:
    8 hlist, 2 vlist, 2 rule, 2 math, 9 glue, 4 kern, 2 glyph, 582 attribute, 82 glue_spec, 196 attribute_list, 3 write, 2 pdf_action nodes
-   avail lists: 1:6,2:5989,3:794,4:50,5:397,6:135,7:4246,8:86,9:697,10:18,11:250
- 57277 multiletter control sequences out of 65536+600000
+   avail lists: 1:6,2:5984,3:795,4:51,5:397,6:135,7:4269,8:86,9:697,10:18,11:250
+ 57315 multiletter control sequences out of 65536+600000
  102 fonts using 9841955 bytes
  64i,21n,92p,10120b,2930s stack positions out of 5000i,500n,10000p,200000b,100000s
 
@@ -1497,10 +1503,10 @@ warning  (pdf backend): unreferenced destination with name 'Hfootnote.2'
 
 warning  (pdf backend): unreferenced destination with name 'Hfootnote.1'
 </usr/share/texmf/fonts/opentype/public/lm/lmmono12-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmromancaps10-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmsans10-boldoblique.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman10-bold.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman7-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman8-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman8-bold.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman10-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman12-italic.otf></usr/share/texmf/fonts/opentype/public/lm/lmsans10-bold.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman12-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman12-bold.otf></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb>
-Output written on thesis.pdf (105 pages, 621960 bytes).
+Output written on thesis.pdf (105 pages, 622419 bytes).
 
-PDF statistics: 1574 PDF objects out of 1728 (max. 8388607)
- 1378 compressed objects within 14 object streams
+PDF statistics: 1577 PDF objects out of 1728 (max. 8388607)
+ 1381 compressed objects within 14 object streams
  597 named destinations out of 1000 (max. 131072)
  464 words of extra memory for PDF output out of 10000 (max. 100000000)
 
